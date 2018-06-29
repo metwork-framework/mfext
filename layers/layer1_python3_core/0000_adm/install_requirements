@@ -1,0 +1,69 @@
+#!/bin/bash
+
+. ${MFEXT_HOME}/lib/bash_utils.sh
+
+set -eu
+
+function usage() {
+    echo "usage: install_requirements /prefix/path /path/to/requirements.txt [INDEX_DIR]"
+}
+
+if test "${1:-}" = "--help"; then
+    usage
+    exit 0
+fi
+if test "${1:-}" = ""; then
+    usage
+    exit 1
+fi
+PREFIX_PATH="$1"
+if test "${2:-}" = ""; then
+    usage
+    exit 1
+fi
+REQUIREMENTS="$2"
+if test "${3:-}" = ""; then
+    export INDEX_DIR=""
+    export FORCED_INDEX_DIR_STRING=""
+    cp -f "${REQUIREMENTS}" "${REQUIREMENTS}.tmp"
+else
+    export INDEX_DIR="$3"
+    # Hack to block autodownload
+    export http_proxy=http://127.0.0.1:9999
+    export https_proxy=http://127.0.0.1:9999
+    export HTTP_PROXY=http://127.0.0.1:9999
+    export HTTPS_PROXY=http://127.0.0.1:9999
+    export FORCED_INDEX_DIR_STRING="--no-cache-dir --no-index --find-links=$3"
+    cat "${REQUIREMENTS}" |sed 's/^-e git.*egg=\(.*\)$/\1/g' >"${REQUIREMENTS}.tmp"
+fi
+
+
+LAYER_LABEL="$(basename ${PREFIX_PATH})@${MODULE_LOWERCASE}"
+LAYER_PATH="${PREFIX_PATH}"
+
+CONSTRAINT=""
+IFS=":" read -ra PATHS <<< "${PYTHONPATH:-}"
+for P in "${PATHS[@]}"; do
+    F="${P}/requirements${METWORK_PYTHON_MODE:-}.txt"
+    if test -f "${F}"; then
+        CONSTRAINT="${CONSTRAINT} -c ${F}"
+    fi
+done
+
+bootstrap_layer.sh "${LAYER_LABEL}" "${LAYER_PATH}"
+layer_load "${LAYER_PATH}"
+
+mkdir -p "${LAYER_PATH}/tmp/install_requirements"
+export TMPDIR="${LAYER_PATH}/tmp/install_requirements"
+
+N=$(cat "${REQUIREMENTS}.tmp" |grep -c "^[^#].*[a-zA-Z0-9].*" || true)
+if test "${N}" -eq 0; then
+    rm -f "${REQUIREMENTS}.tmp"
+    rm -Rf "${LAYER_PATH}/tmp/install_requirements"
+    exit 0
+fi
+
+# shellcheck disable=SC2086
+pip install --disable-pip-version-check --src="${PREFIX_PATH}/lib/python${PYTHON_SHORT_VERSION}/src" --prefix="${LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} ${FORCED_INDEX_DIR_STRING}
+rm -f "${REQUIREMENTS}.tmp"
+rm -Rf "${LAYER_PATH}/tmp/install_requirements"

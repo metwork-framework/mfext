@@ -1,0 +1,20 @@
+-e git+https://github.com/thefab/configparser_extended.git#egg=configparser_extended
+-e git+https://github.com/Hawker65/deploycron.git#egg=deploycron
+-e git+https://github.com/thefab/envtpl.git#egg=envtpl
+-e git+https://github.com/thefab/pystatsd.git#egg=statsd
+backports.functools-lru-cache
+psutil
+redis
+requests
+requests-toolbelt
+six
+bash
+filelock
+ConfigArgParse
+netifaces
+cachetools
+inotify_simple
+enum
+# fixme: move to python3_scientific but there is a problem with GDAL build
+# gdal_array is not built if numpy is not installed before
+numpy

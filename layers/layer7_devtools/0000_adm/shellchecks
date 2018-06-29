@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function usage() {
+    echo "execute shellcheck on every shell script files found in the current directory"
+    echo "usage: shellchecks"
+}
+
+if test "$1" = "--help"; then
+    usage
+    exit 0
+fi
+
+FILES=$(find . -type f 2>/dev/null)
+
+RES=0
+for FILE in ${FILES}; do
+    N=$(file "${FILE}" |grep -c 'shell script')
+    N2=$(echo "${FILE}" |grep -c '/templates/')
+    if test "${N}" -gt 0 -a "${N2}" -eq 0; then
+        "${MFEXT_HOME}/opt/core/bin/shellcheck" "${FILE}" || RES=1
+    fi
+done
+
+exit ${RES}

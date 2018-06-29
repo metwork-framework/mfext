@@ -1,0 +1,8 @@
+root@mfext
+core@mfext
+-devtools@mfext
+-root@mfcom
+-core@mfcom
+-root@{MODULE_LOWERCASE}
+-core@{MODULE_LOWERCASE}
+python

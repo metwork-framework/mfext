@@ -1,0 +1,17 @@
+coverage
+mock
+flake8
+ipdb
+ipython
+pylint
+testfixtures
+isort
+Sphinx
+sphinx-rtd-theme
+jedi
+pydocstyle
+flake8-docstrings
+mockredispy
+unidecode
+m2r
+jupyter_client

@@ -1,0 +1,13 @@
+cftime==1.0.0
+cycler==0.10.0
+Cython==0.28.3
+GDAL==2.2.4
+h5py==2.8.0
+kiwisolver==1.0.1
+matplotlib==2.2.2
+netCDF4==1.4.0
+Pillow==5.1.0
+pngquant==1.0.6
+python-dateutil==2.7.3
+pytz==2018.4
+subprocess32==3.5.2
