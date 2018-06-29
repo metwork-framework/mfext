@@ -1,0 +1,51 @@
+#!/bin/bash
+
+. ${MFEXT_HOME}/lib/bash_utils.sh
+exit_if_root
+
+if test "${1:-}" = "--help"; then
+    echo "usage {{MODULE_LOWERCASE}}.start"
+    echo "  => test the {{MODULE_LOWERCASE}} module"
+    exit 0
+fi
+
+if test "$1" != "QUIET"; then
+    LINE="*****     CHECKING ${MODULE}     *****"
+    N=`echo "${LINE}" |wc -c`
+    HEADER=`echo "**************************************************************" |cut -c 2-${N}`
+    echo_bold "${HEADER}"
+    echo_bold "${LINE}"
+    echo_bold "${HEADER}"
+    echo "  "
+fi
+
+RES=0
+if test -f ${MODULE_HOME}/config/circus.ini; then
+    _circus.status || RES=1
+fi
+if test "${MODULE}" = "MFADMIN"; then
+    ADMIN_HOSTNAME=localhost
+else
+    ADMIN_HOSTNAME=$(env |grep "^${MODULE}_ADMIN_HOSTNAME=" |awk -F "=" '{print $2;}')
+fi
+if test "${ADMIN_HOSTNAME}" != "null"; then
+    if test "${ADMIN_HOSTNAME}" != ""; then
+        circus_status_watcher.sh telegraf || RES=1
+    fi
+fi
+
+{% block custom %}
+# Can be replaced by mfxxx.status.custom
+{% endblock %}
+
+if test ${RES} -ne 0; then
+    echo ""
+    echo_bold "ERROR(S) DETECTED DURING ${MODULE} CHECK"
+else
+    if test "$1" != "QUIET"; then
+        echo " "
+        echo_bold "OK !"
+    fi
+fi
+
+exit ${RES}

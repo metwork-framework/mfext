@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function usage()
+{
+    echo "usage: {{MODULE_HOME}}/bin/{{MODULE_LOWERCASE}}_wrapper COMMAND_TO_WRAP [COMMAND_ARG1] [COMMAND_ARG2] [...]"
+    echo "  => launch the given command within metwork/{{MODULE_LOWERCASE}} environnent"
+    echo "  => note: the current environnent is cleared before"
+    echo "  =>       (only MODULE_RUNTIME_SUFFIX and MODULE_RUNTIME_HOME env var are keeped intact"
+}
+
+if test "$1" = ""; then
+    usage
+    exit 1
+fi
+if test "$1" = "--help"; then
+    usage
+    exit 0
+fi
+
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CURRENT_BASENAME="$( basename "${0}" )"
+if test "${MODULE_RUNTIME_SUFFIX:-}" = ""; then
+    export MODULE_RUNTIME_SUFFIX="metwork/{{MODULE_LOWERCASE}}"
+fi
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+exec "{{MFEXT_HOME}}/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=MODULE_RUNTIME_HOME,MODULE_RUNTIME_SUFFIX,PATH -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"

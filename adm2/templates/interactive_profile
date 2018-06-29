@@ -1,0 +1,100 @@
+# We load the "non interactive" profile
+. {{MODULE_HOME}}/share/profile
+
+function __prompt_without_x_mode() {
+    local X_MODE=`echo $- |grep -c 'x'`
+    if test ${X_MODE} -gt 0; then
+        # we temporary remove the -x mode before loading
+        # the prompt
+        set +x
+    fi
+    _lp_set_prompt
+    if test ${X_MODE} -gt 0; then
+        set -x
+    fi
+}
+
+function plugin_env() {
+    local PLUGIN=$1
+    if test "${PLUGIN}" = ""; then
+        echo "usage: plugin_env PLUGIN_NAME"
+        return 1
+    fi
+    layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="plugin_${PLUGIN}@${MODULE_LOWERCASE}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+}
+
+# Prompt
+if test "${LIQUIDPROMPT}" != "0"; then
+    if test -f {{MFEXT_HOME}}/opt/core/share/liquidprompt/liquidprompt; then
+        # We load liquidprompt as a prompt
+        export LP_ENABLE_TEMP=0
+        export LP_ENABLE_PERM=0
+        export LP_ENABLE_LOAD=0
+        export LP_ENABLE_BATT=0
+        export LP_ENABLE_FOSSIL=0
+        export LP_ENABLE_HG=0
+        export LP_ENABLE_BZR=0
+        export LP_ENABLE_RUNTIME=0
+        export LP_ENABLE_VIRTUALENV=0
+        PLUGIN_NAME=$(env |grep "^${MODULE}_CURRENT_PLUGIN_NAME" |awk -F '=' '{print $2;}')
+        . {{MFEXT_HOME}}/opt/core/share/liquidprompt/liquidprompt >/dev/null 2>&1
+        PROMPT_COMMAND=__prompt_without_x_mode
+        if test "{{MODULE_LOWERCASE}}" != "`whoami`"; then
+            if test "${PLUGIN_NAME}" != ""; then
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MODULE}}, env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+            else
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MODULE}}${LP_MARK_BATTERY}"
+            fi
+        else
+            if test "${PLUGIN_NAME}" != ""; then
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+            fi
+        fi
+        unset PLUGIN_NAME
+    fi
+fi
+
+CLEAR=`which_or_empty clear.sh`
+if test "${CLEAR}" != ""; then
+    alias clear="${CLEAR}"
+fi
+LAUNCH_CRONTAB=`which_or_empty _launch_crontab`
+if test "${LAUNCH_CRONTAB}" != ""; then
+    alias crontab="${LAUNCH_CRONTAB}"
+fi
+alias debug="metwork_debug"
+
+{% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
+alias circusctl="_circusctl --endpoint {% raw %}${{% endraw %}{{MODULE}}{% raw %}_CIRCUS_ENDPOINT}{% endraw %} --timeout=10"
+{% endif %}
+
+if test "${PROFILE_ERROR}" = "1"; then
+    exit 1
+fi
+
+if test "${NOCLEAR}" != "1"; then
+    clear
+fi
+cat <<EOF
+           __  __      ___          __        _
+          |  \/  |    | \ \        / /       | |
+          | \  / | ___| |\ \  /\  / /__  _ __| | __
+          | |\/| |/ _ \ __\ \/  \/ / _ \| '__| |/ /
+          | |  | |  __/ |_ \  /\  / (_) | |  |   <
+          |_|  |_|\___|\__| \/  \/ \___/|_|  |_|\_\\
+
+
+EOF
+
+if test -x ${MFCOM_HOME}/bin/echo_bold; then
+    echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
+    echo "(module: ${MODULE}, version: ${MODULE_VERSION})"
+    echo
+fi
+
+uptime
+
+echo
+
+{% block custom %}
+{% endblock %}

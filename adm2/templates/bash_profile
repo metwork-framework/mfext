@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# .bash_profile
+# (loaded for interactive shells)
+#
+# see alse bashrc file
+#
+# DO NOT MODIFY THIS FILE DIRECTLY
+# USE ~/.metwork.custom_interactive_profile
+# TO OVERRIDE
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+IS_INTERACTIVE=1
+if test -f /tmp/nointeractive; then
+    IS_INTERACTIVE=0
+fi
+if test ${IS_INTERACTIVE} -eq 1; then
+    # We load the "interactive profile"
+    # shellcheck disable=SC1091
+    . "{{MODULE_HOME}}/share/interactive_profile"
+fi
+
+# Specific commands for plugin env
+PLUGIN_NAME=$(env |grep "^${MODULE}_CURRENT_PLUGIN_NAME"    |awk -F '=' '{print $2;}')
+if test "${PLUGIN_NAME}" != ""; then
+    LK=$(readlink -s "${MODULE_RUNTIME_HOME}/var/plugins/${PLUGIN_NAME}" 2>/dev/null)
+    if test "${LK}" != "" -a -d "${LK}"; then
+        function custom_cd() {
+            if test "$1" = ""; then
+                # shellcheck disable=SC2164
+                cd "${LK}"
+            else
+                # shellcheck disable=SC2164
+                "cd" "$@"
+            fi
+        }
+        alias cd=custom_cd
+    fi
+fi
+
+# We eventually override with custom module wide settings
+if test -f ~/.metwork.custom_interactive_profile; then
+    . ~/.metwork.custom_interactive_profile
+fi

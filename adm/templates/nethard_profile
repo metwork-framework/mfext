@@ -1,0 +1,31 @@
+{% if MODULE == "MFCOM" %}
+
+    # no cache
+    source <(_make_nethard_config.py)
+
+{% else %}
+
+UUID=`cat /proc/sys/kernel/random/uuid |sed 's/-//g'`
+
+cache_get ${MODULE_RUNTIME_HOME}/tmp/system.cache 1440 >${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
+if test -s ${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}; then
+    # A cache is available, let's use it
+
+    . ${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
+
+else
+    # No cache, let's compute
+    _make_nethard_config.py >${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+
+    if test "${PROFILE_ERROR}" != "1"; then
+        cache_set_from_file ${MODULE_RUNTIME_HOME}/tmp/system.cache ${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+    fi
+    . ${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+    rm -f ${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+
+fi
+rm -f ${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
+
+{% endif %}
+
+export MFCOM_HOSTNAME_FULL_IP=${MFCOM_HOSTNAME_IP}

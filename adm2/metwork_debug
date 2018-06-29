@@ -1,0 +1,108 @@
+#!/bin/bash
+
+function usage() {
+    echo "usage: metwork_debug"
+    echo "       print debug informations on stdout"
+}
+
+if test "${1:-}" = "--help"; then
+    usage
+    exit 0
+fi
+if test "${1:-}" = "-h"; then
+    usage
+    exit 0
+fi
+
+echo "========================================"
+echo "=====                              ====="
+echo "=====     METWORK DEBUG OUTPUT     ====="
+echo "=====                              ====="
+echo "========================================"
+echo
+echo
+echo "***** CURRENT ENVIRONNEMENT *****"
+echo
+echo "- date: $(date)"
+echo "- hostname: $(hostname)"
+echo "- uname -a: $(uname -a)"
+echo "- user: $(whoami)"
+if test -f /etc/redhat-release; then
+    echo "- redhat-release: $(cat /etc/redhat-release)"
+fi
+echo
+echo
+echo "***** CURRENT MODULE *****"
+echo
+echo "- module: ${MODULE:-undefined}"
+echo "- module version: ${MODULE_VERSION:-undefined}"
+echo "- module home: ${MODULE_HOME:-undefined}"
+echo "- module runtime home: ${MODULE_RUNTIME_HOME:-undefined}"
+if test "${MODULE:-}" != "MFEXT"; then
+    echo
+    echo
+    echo "***** MFEXT MODULE *****"
+    echo
+    echo "- mfext home: ${MFEXT_HOME:-undefined}"
+    echo "- mfext version: ${MFEXT_VERSION:-undefined}"
+    if test "${MODULE:-}" != "MFCOM"; then
+        echo
+        echo
+        echo "***** MFCOM MODULE *****"
+        echo
+        echo "- mfcom home: ${MFCOM_HOME:-undefined}"
+        echo "- mfcom version: ${MFCOM_VERSION:-undefined}"
+    fi
+fi
+
+echo
+echo
+echo "***** LOADED LAYERS *****"
+echo
+layers --loaded-filter=yes --raw |grep @mfext |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep @mfcom |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+
+echo
+echo
+echo "***** NOT LOADED (BUT INSTALLED) LAYERS *****"
+echo
+layers --loaded-filter=no --raw |grep @mfext |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep @mfcom |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+
+echo
+echo
+echo "***** METWORK_LAYERS_PATH *****"
+echo
+echo -n "- "
+# shellcheck disable=SC2001
+echo "${METWORK_LAYERS_PATH}" |sed 's/:/\n- /g'
+
+echo
+echo
+echo "***** PATH *****"
+echo
+echo -n "- "
+# shellcheck disable=SC2001
+echo "${PATH}" |sed 's/:/\n- /g'
+
+echo
+echo
+echo "***** LD_LIBRARY_PATH *****"
+echo
+echo -n "- "
+# shellcheck disable=SC2001
+echo "${LD_LIBRARY_PATH}" |sed 's/:/\n- /g'
+
+echo
+echo
+echo "***** PYTHONPATH *****"
+echo
+echo -n "- "
+# shellcheck disable=SC2001
+echo "${PYTHONPATH}" |sed 's/:/\n- /g'
+
+exit 0

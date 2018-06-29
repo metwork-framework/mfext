@@ -1,0 +1,214 @@
+#!/bin/bash
+
+export METWORK_PROFILE_LOADING=1
+
+# We se the umask
+umask 0022
+
+# We set MFEXT_HOME
+export MFEXT_HOME={{MFEXT_HOME}}
+export MFEXT_VERSION={{MFEXT_VERSION}}
+
+# We load bash_utils functions
+# shellcheck disable=SC1091
+. {{MFEXT_HOME}}/lib/bash_utils.sh
+
+if test -f /etc/metwork.extraprofile; then
+    # We load this extra profile if any
+    # shellcheck disable=SC1091
+    . /etc/metwork.extraprofile
+fi
+
+# Wet set MODULE, MODULE_HOME env variables
+export MODULE={{MODULE}}
+export MODULE_HOME={{MODULE_HOME}}
+export MODULE_VERSION={{MODULE_VERSION}}
+export {{MODULE}}_HOME={{MODULE_HOME}}
+export {{MODULE}}_VERSION={{MODULE_VERSION}}
+export MODULE_LOWERCASE={{MODULE|lower}}
+
+# Set MODULE_RUNTIME_HOME and PYTHON_EGG_CACHE
+{% if MODULE != "MFEXT" and MODULE != "MFCOM" %}
+    if test "${MODULE_RUNTIME_USER}" = ""; then
+        export MODULE_RUNTIME_USER=`whoami`
+    fi
+    if test "${MODULE_RUNTIME_HOME}" = ""; then
+        CMD="echo ~${MODULE_RUNTIME_USER}"
+        if test "${MODULE_RUNTIME_SUFFIX}" != ""; then
+            CMD="${CMD}/${MODULE_RUNTIME_SUFFIX}"
+        fi
+        export MODULE_RUNTIME_HOME=`eval ${CMD}`
+    fi
+    export PYTHON_EGG_CACHE=${MODULE_RUNTIME_HOME}/tmp/python_cache
+{% else %}
+    export PYTHON_EGG_CACHE="${TMPDIR:-/tmp}/metwork_python_egg_cache"
+{% endif %}
+if ! test -d "${PYTHON_EGG_CACHE}"; then
+    mkdir -p "${PYTHON_EGG_CACHE}"
+fi
+
+{% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
+    # We set MFCOM_HOME
+    export MFCOM_HOME={{MFCOM_HOME}}
+    export MFCOM_VERSION={{MFCOM_VERSION}}
+{% endif %}
+
+# Get the metwork configuration name
+MFCONFIG=$(cat /etc/metwork.config 2>/dev/null |sed 's/ //g' |grep -v '^#' |head -1)
+if test "${MFCONFIG}" = ""; then
+    MFCONFIG=GENERIC
+fi
+export MFCONFIG
+
+# We set LC_NUMERIC to C
+export LC_NUMERIC=C
+
+# We set MAGICS and GRIB_API environnement variables
+# FIXME: migrate to the layer extra_env
+export MAGPLUS_HOME={{MFEXT_HOME}}
+export MAGPLUS_QUIET=ON
+export GRIB_API_GRIBEX_BOUSTROPHEDONIC=1
+
+# We set a PROJ4 environnement variable
+# FIXME: migrate to the layer extra_env
+export PROJ_LIB={{MFEXT_HOME}}/share/proj
+
+# We modify PKG_CONFIG_PATH
+field_prepend PKG_CONFIG_PATH /usr/lib64/pkgconfig
+field_prepend PKG_CONFIG_PATH /lib64/pkgconfig
+export PKG_CONFIG_PATH
+
+# We set the MODULE_VERSION environnement variable
+MODULE_VERSION=$(cat ${MODULE_HOME}/config/version 2>/dev/null |head -1)
+if test "${MODULE_VERSION}" = ""; then
+    MODULE_VERSION=unknown
+fi
+export MODULE_VERSION
+
+# We set the MODULE_STATUS environnement variable
+MODULE_STATUS=$(cat ${MODULE_HOME}/var/status 2>/dev/null)
+if test "${MODULE_STATUS}" = ""; then
+    MODULE_STATUS=unknown
+fi
+export MODULE_STATUS
+
+# FIXME: do not hardcode this
+export PYTHON3_SHORT_VERSION=3.5
+export PYTHON2_SHORT_VERSION=2.7
+
+# We set/check METWORK_PYTHON_MODE
+if test "${METWORK_PYTHON_MODE:-}" = "2"; then
+    if ! test -d "${MFEXT_HOME}/opt/python2"; then
+        echo "ERROR: METWORK_PYTHON_MODE=2 and python2 layer not installed"
+        export PROFILE_ERROR=1
+        unset METWORK_PROFILE_LOADING
+        return 1
+    fi
+else
+    export METWORK_PYTHON_MODE=3
+fi
+
+# We configure the layers system
+field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}
+field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}/opt
+{% if MODULE != "MFEXT" %}
+    field_prepend METWORK_LAYERS_PATH {{MFCOM_HOME}}
+    field_prepend METWORK_LAYERS_PATH {{MFCOM_HOME}}/opt
+    {% if MODULE != "MFCOM" %}
+        field_prepend METWORK_LAYERS_PATH {{MODULE_HOME}}
+        field_prepend METWORK_LAYERS_PATH {{MODULE_HOME}}/opt
+        {% if MODULE == "MFSERV" or MODULE == "MFDATA" or MODULE == "MFBASE" %}
+            if test "${MODULE_RUNTIME_HOME:-}" != ""; then
+                field_prepend METWORK_LAYERS_PATH ${MODULE_RUNTIME_HOME}/var/plugins
+            fi
+        {% endif %}
+    {% endif %}
+{% endif %}
+export METWORK_LAYERS_PATH
+
+if test "${METWORK_BOOTSTRAP_MODE}" = "1"; then
+    # bootstrap mode, we load only the root and core layer
+    layer_load root@mfext >/dev/null 2>&1
+    layer_load core@mfext >/dev/null 2>&1
+    {% if MODULE != "MFEXT" %}
+        layer_load root@mfcom >/dev/null 2>&1
+        layer_load devtools@mfext >/dev/null 2>&1
+        {% if MODULE != "MFCOM" %}
+            layer_load root@{{MODULE_LOWERCASE}} >/dev/null 2>&1
+        {% endif %}
+    {% endif %}
+else
+    N=$({{MFEXT_HOME}}/bin/is_layer_installed default 2>/dev/null)
+    if test "${N}" = "1"; then
+        # We load the default layer
+        layer_load default >/dev/null
+    else
+        # We load the root and core layer (failback for developpers)
+        layer_load root@mfext >/dev/null 2>&1
+        layer_load core@mfext >/dev/null 2>&1
+    fi
+fi
+
+{% if MODULE != "MFEXT" and MODULE != "MFCOM" %}
+    if ! test -d ${MODULE_RUNTIME_HOME}; then
+        mkdir -p ${MODULE_RUNTIME_HOME} >/dev/null 2>&1
+    fi
+    if ! test -d ${MODULE_RUNTIME_HOME}; then
+        echo "ERROR: can't create ${MODULE_RUNTIME_HOME} directory"
+        export PROFILE_ERROR=1
+        unset METWORK_PROFILE_LOADING
+        return 1
+    fi
+    for SUBDIR in config tmp var log tmp/config_auto; do
+        if ! test -d ${MODULE_RUNTIME_HOME}/${SUBDIR}; then
+            mkdir -p ${MODULE_RUNTIME_HOME}/${SUBDIR} >/dev/null 2>&1
+            if ! test -d ${MODULE_RUNTIME_HOME}/${SUBDIR}; then
+                echo "ERROR: can't create ${MODULE_RUNTIME_HOME}/${SUBDIR} directory"
+                export PROFILE_ERROR=1
+                unset METWORK_PROFILE_LOADING
+                return 1
+            fi
+        fi
+    done
+    if test -f "/etc/metwork.config.d/{{MODULE|lower}}/config.ini"; then
+        if ! test -L "${MODULE_RUNTIME_HOME}/config/config.ini"; then
+            rm -f "${MODULE_RUNTIME_HOME}/config/config.ini"
+            ln -s "/etc/metwork.config.d/{{MODULE|lower}}/config.ini" "${MODULE_RUNTIME_HOME}/config/config.ini"
+        fi
+    fi
+    if ! test -f ${MODULE_RUNTIME_HOME}/config/config.ini; then
+        if test -f ${MODULE_HOME}/config/config.ini; then
+            ${MFCOM_HOME}/bin/_prepare_config.py >${MODULE_RUNTIME_HOME}/config/config.ini 2>&1
+        fi
+    else
+        if ! test -L ${MODULE_HOME}/config/config.ini; then
+            if test ${MODULE_HOME}/config/config.ini -nt ${MODULE_RUNTIME_HOME}/config/config.ini; then
+                N=`cat ${MODULE_RUNTIME_HOME}/config/config.ini |grep -v '^\[' |grep -v '^#' |grep '[a-zA-Z]' |wc -l`
+                if test "${N}" -eq 0; then
+                    # we can override
+                    ${MFCOM_HOME}/bin/_prepare_config.py >${MODULE_RUNTIME_HOME}/config/config.ini 2>&1
+                fi
+            fi
+        fi
+    fi
+    if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
+        {% set FORCED_MODULE_HOME = MFCOM_HOME %}
+        {% set FORCED_MODULE = "MFCOM" %}
+        {% include "nethard_profile" %}
+        {% set FORCED_MODULE_HOME = "${MODULE_HOME}" %}
+        {% set FORCED_MODULE = "${MODULE}" %}
+        {% include "config_profile" %}
+    fi
+{% else %}
+    {% if MODULE == "MFCOM" %}
+        if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
+            {% include "nethard_profile" %}
+        fi
+    {% endif %}
+{% endif %}
+
+{% block custom %}
+{% endblock %}
+
+unset METWORK_PROFILE_LOADING
+export METWORK_PROFILE_LOADED=1

@@ -1,0 +1,93 @@
+#!/bin/bash
+
+. ${MFEXT_HOME}/lib/bash_utils.sh
+exit_if_root
+
+if test "${1:-}" = "--help"; then
+    echo "usage {{MODULE_LOWERCASE}}.start [NOINIT]"
+    echo "  => start the {{MODULE_LOWERCASE}} module"
+    exit 0
+fi
+NOINIT=0
+if test "${1:-}" = "NOINIT"; then
+    NOINIT=1
+fi
+
+STARTUP_FLAG=`env |grep "^${MODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
+if test "${STARTUP_FLAG}" = "0"; then
+    echo_bold "${MODULE}_STARTUP_FLAG=0 => nothing to start"
+    exit 0
+fi
+
+{% if MODULE == "MFDATA" or MODULE == "MFSERV" or MODULE == "MFBASE" %}
+if test "${NOINIT}" = "0"; then
+    if ! test -d ${MODULE_RUNTIME_HOME}/var/plugins/base; then
+        {{MODULE_LOWERCASE}}.init
+    fi
+    if ! test -d ${MODULE_RUNTIME_HOME}/var/plugins/base; then
+        echo "ERROR: plugin system not initialized"
+        exit 1
+    fi
+    _install_or_update_configured_plugins.py
+fi
+{% endif %}
+
+{% if MODULE == "MFADMIN" %}
+if test "${NOINIT}" = "0"; then
+    if ! test -f "${MODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
+        {{MODULE_LOWERCASE}}.init
+    fi
+fi
+{% endif %}
+
+LINE="*****     STARTING ${MODULE}     *****"
+N=`echo "${LINE}" |wc -c`
+HEADER=`echo "**************************************************************" |cut -c 2-${N}`
+echo_bold "${HEADER}"
+echo_bold "${LINE}"
+echo_bold "${HEADER}"
+echo "  "
+
+echo STARTING >${MODULE_RUNTIME_HOME}/var/status
+
+if test -f ${MODULE_HOME}/config/logrotate.conf; then
+    echo -n "- Generating logrotate.conf..."
+    echo_running
+    cat ${MODULE_HOME}/config/logrotate.conf |envtpl >${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf
+    if test -f ${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf; then
+        echo_ok
+    else
+        echo_nok
+    fi
+fi
+{% block custom_before_circus %}
+# Can be replaced by mfxxx.start.custom
+{% endblock %}
+
+if test -f ${MODULE_HOME}/config/circus.ini; then
+    _circus.start
+fi
+
+{% block custom %}
+# Can be replaced by mfxxx.start.custom
+{% endblock %}
+
+_make_and_install_crontab.sh
+
+echo -n "- Wait 2 sec..."
+echo_running
+sleep 2
+echo_ok
+
+MODULE_LOWERCASE=`echo ${MODULE} | tr '[:upper:]' '[:lower:]'`
+${MODULE_LOWERCASE}.status QUIET
+RES=$?
+if test ${RES} -eq 0; then
+    echo RUNNING >${MODULE_RUNTIME_HOME}/var/status
+else
+    echo ERROR >${MODULE_RUNTIME_HOME}/var/status
+fi
+
+echo " "
+echo " "
+exit ${RES}

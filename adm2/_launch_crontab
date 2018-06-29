@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# We force the system vim to avoid security issues
+export EDITOR=/usr/bin/vim
+crontab "$@"
