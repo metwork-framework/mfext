@@ -2,9 +2,14 @@ pipeline:
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     commands:
+      - export BUILDCACHEHOST=localhost
+      - export BUILDCACHEDIR=/
+      - export BUILDCACHEPASS=buildcache
+      - export BUILDCACHEUSER=buildcache
       - env
       - mkdir -p /opt/metwork-mfext
       - ./bootstrap.sh /opt/metwork-mfext
+      - make
 
 matrix:
   OS_VERSION:
