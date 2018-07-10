@@ -25,7 +25,7 @@ before:
 	@if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then \
 		if test "$(MODULE)" = "MFEXT"; then \
 			if test "$(LAYER_HASH)" != "null"; then \
-				timeout 60s curl -o $(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz 'ftp://$(BUILDCACHEUSER):$(BUILDCACHEPASS)@$(BUILDCACHEHOST)$(BUILDCACHEDIR)/layer_$(LAYER_HASH).tar.gz' || echo "no cache"; \
+				cp -f /buildcache/layer_$(LAYER_HASH).tar.gz $(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz || echo "no cache"; \
 				if test -f "$(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz"; then \
 					cd $(MFEXT_HOME)/opt && zcat layer_$(LAYER_HASH).tar.gz |tar xf - ; \
 					cd $(MFEXT_HOME)/opt/$(LAYER_NAME) && touch .layerapi2_* ; \
@@ -42,7 +42,7 @@ after:
 		if test "$(LAYER_HASH)" != "null"; then \
 			if ! test -f "$(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz"; then \
 				cd $(MFEXT_HOME)/opt && tar -cf layer_$(LAYER_HASH).tar $(LAYER_NAME) && gzip -f layer_$(LAYER_HASH).tar; \
-				cd $(MFEXT_HOME)/opt && timeout 60s curl -T layer_$(LAYER_HASH).tar.gz 'ftp://$(BUILDCACHEUSER):$(BUILDCACHEPASS)@$(BUILDCACHEHOST)$(BUILDCACHEDIR)/layer_$(LAYER_HASH).tar.gz' || echo "no cache"; \
+				cd $(MFEXT_HOME)/opt && cp -f layer_$(LAYER_HASH).tar.gz /buildcache/layer_$(LAYER_HASH).tar.gz' || echo "no cache"; \
 				rm -f layer_$(LAYER_HASH).tar.gz; \
 			fi \
 		fi \

@@ -2,14 +2,14 @@ pipeline:
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     commands:
-      - export BUILDCACHEHOST=localhost
-      - export BUILDCACHEDIR=/
-      - export BUILDCACHEPASS=buildcache
-      - export BUILDCACHEUSER=buildcache
-      - env
-      - mkdir -p /opt/metwork-mfext
-      - ./bootstrap.sh /opt/metwork-mfext
+      - export MODULE=MFEXT
+      - export MODULE_LOWERCASE=mfext
+      - export RELEASE_BUILD=${DRONE_JOB_NUMBER}
+      - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
+      - ./bootstrap.sh /opt/metwork-mfext-${DRONE-BRANCH}
       - make
+    volumes:
+        - [ /buildcache:/buildcache ]
 
 matrix:
   OS_VERSION:

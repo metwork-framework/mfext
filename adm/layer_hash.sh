@@ -5,19 +5,7 @@ if test "${BRANCH}" = ""; then
     echo null
     exit 0
 fi
-if test "${BUILDCACHEUSER:-}" = ""; then
-    echo null
-    exit 0
-fi
-if test "${BUILDCACHEHOST:-}" = ""; then
-    echo null
-    exit 0
-fi
-if test "${BUILDCACHEDIR:-}" = ""; then
-    echo null
-    exit 0
-fi
-if test "${BUILDCACHEPASS:-}" = ""; then
+if ! test -d /buildcache; then
     echo null
     exit 0
 fi
