@@ -9,7 +9,7 @@ pipeline:
       - ./bootstrap.sh /opt/metwork-mfext-${DRONE-BRANCH}
       - make
     volumes:
-        - [ /buildcache:/buildcache ]
+      - /buildcache:/buildcache
 
 matrix:
   OS_VERSION:
