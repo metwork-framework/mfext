@@ -4,10 +4,11 @@ pipeline:
     commands:
       - export MODULE=MFEXT
       - export MODULE_LOWERCASE=mfext
-      - export RELEASE_BUILD=${DRONE_JOB_NUMBER}
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - ./bootstrap.sh /opt/metwork-mfext-${DRONE-BRANCH}
       - make
+    volumes:
+      - /buildcache:/buildcache
 
 matrix:
   OS_VERSION:
