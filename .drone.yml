@@ -2,6 +2,7 @@ pipeline:
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     commands:
+      - env
       - mkdir -p /opt/metwork-mfext
       - ./bootstrap.sh /opt/metwork-mfext
 
