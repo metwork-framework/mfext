@@ -42,7 +42,7 @@ after:
 		if test "$(LAYER_HASH)" != "null"; then \
 			if ! test -f "$(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz"; then \
 				cd $(MFEXT_HOME)/opt && tar -cf layer_$(LAYER_HASH).tar $(LAYER_NAME) && gzip -f layer_$(LAYER_HASH).tar; \
-				cd $(MFEXT_HOME)/opt && cp -f layer_$(LAYER_HASH).tar.gz /buildcache/layer_$(LAYER_HASH).tar.gz' || echo "no cache"; \
+				cd $(MFEXT_HOME)/opt && cp -f layer_$(LAYER_HASH).tar.gz /buildcache/layer_$(LAYER_HASH).tar.gz || echo "no cache"; \
 				rm -f layer_$(LAYER_HASH).tar.gz; \
 			fi \
 		fi \
