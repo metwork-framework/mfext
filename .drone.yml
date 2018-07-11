@@ -4,8 +4,8 @@ pipeline:
     commands:
       - export MODULE=MFEXT
       - export MODULE_LOWERCASE=mfext
-      - mkdir -p /opt/metwork-mfext
-      - ./bootstrap.sh /opt/metwork-mfext
+      - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
+      - ./bootstrap.sh /opt/metwork-mfext-${DRONE_BRANCH}
       - make
     volumes:
       - /buildcache:/buildcache
