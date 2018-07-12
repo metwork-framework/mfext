@@ -12,20 +12,20 @@ pipeline:
       - mv /opt/metwork-mfext-${DRONE_BRANCH}/*.rpm .
     volumes:
       - /buildcache:/buildcache
+    when:
+      event: [push]
   publish_ci:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     commands:
-      - cp *.rpm /pub/metwork/continuous_integration/rpms/${OS_VERSION}/
+      - mkdir -p /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
+      - cp *.rpm /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
       - yum -y install createrepo
-      - createrepo --update /pub/metwork/continuous_integration/rpms/${OS_VERSION}  
+      - createrepo --update /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}  
     volumes:
       - /pub:/pub
     when: 
       event: [push]
 
-    
-
 matrix:
   OS_VERSION:
     - centos6
-    
