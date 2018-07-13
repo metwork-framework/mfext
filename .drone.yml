@@ -1,6 +1,7 @@
 pipeline:
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    pull: true
     commands:
       - export MODULE=MFEXT
       - export MODULE_LOWERCASE=mfext
