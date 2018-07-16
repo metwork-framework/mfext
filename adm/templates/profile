@@ -126,27 +126,16 @@ field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}/opt
 {% endif %}
 export METWORK_LAYERS_PATH
 
-if test "${METWORK_BOOTSTRAP_MODE}" = "1"; then
-    # bootstrap mode, we load only the root and core layer
+# We load the default layer (if installed)
+N=$({{MFEXT_HOME}}/bin/is_layer_installed default 2>/dev/null)
+if test "${N}" = "1"; then
+    # We load the default layer
+    layer_load default >/dev/null
+else
+    # The default layer is not installed
+    # => we load the root and core layer (failback for developpers)
     layer_load root@mfext >/dev/null 2>&1
     layer_load core@mfext >/dev/null 2>&1
-    {% if MODULE != "MFEXT" %}
-        layer_load root@mfcom >/dev/null 2>&1
-        layer_load devtools@mfext >/dev/null 2>&1
-        {% if MODULE != "MFCOM" %}
-            layer_load root@{{MODULE_LOWERCASE}} >/dev/null 2>&1
-        {% endif %}
-    {% endif %}
-else
-    N=$({{MFEXT_HOME}}/bin/is_layer_installed default 2>/dev/null)
-    if test "${N}" = "1"; then
-        # We load the default layer
-        layer_load default >/dev/null
-    else
-        # We load the root and core layer (failback for developpers)
-        layer_load root@mfext >/dev/null 2>&1
-        layer_load core@mfext >/dev/null 2>&1
-    fi
 fi
 
 {% if MODULE != "MFEXT" and MODULE != "MFCOM" %}

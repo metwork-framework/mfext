@@ -76,6 +76,7 @@ echo "endif" >>adm/root.mk
 #echo "unexport PYTHON" >>adm/root.mk
 #echo "unexport PYTHONPATH" >>adm/root.mk
 
+# FIXME: do not hardcode this
 echo "export PYTHON2_SHORT_VERSION := 2.7" >>adm/root.mk
 echo "export PYTHON3_SHORT_VERSION := 3.5" >>adm/root.mk
 echo "export SRC_DIR := ${SRC_DIR}" >>adm/root.mk
