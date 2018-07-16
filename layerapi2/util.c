@@ -284,7 +284,7 @@ void field_prepend_env(const gchar *env_variable, const gchar *value,
 /**
  * Prepend the fullpath of a directory in a given environnement variable containing list of values separated with ":" separator.
  *
- * If the directory does not exist, the environnement variable is untouched.
+ * If the directory does not exist and force_prepend is FALSE, the environnement variable is untouched
  *
  * @param directory root directory
  * @param directory_name directory name (will be added to directory variable with a "/" as separator) to get the fullpath of the directory.
@@ -293,10 +293,10 @@ void field_prepend_env(const gchar *env_variable, const gchar *value,
  * @see field_prepend_env
  */
 void conditional_prepend_env(const gchar *directory, const gchar *directory_name,
-        const gchar *env_variable, GString **bash_cmds)
+        gboolean force_prepend, const gchar *env_variable, GString **bash_cmds)
 {
     gchar *full_path = g_strdup_printf("%s/%s", directory, directory_name);
-    if (g_file_test(full_path, G_FILE_TEST_IS_DIR) == TRUE) {
+    if (force_prepend || g_file_test(full_path, G_FILE_TEST_IS_DIR) == TRUE) {
         field_prepend_env(env_variable, full_path, bash_cmds);
     }
     g_free(full_path);

@@ -19,12 +19,12 @@ void layerapi2_destroy()
     flush_layers_cache();
 }
 
-LayerApi2Layer *layerapi2_layer_load(const gchar *label_or_home, GString **bash_cmds)
+LayerApi2Layer *layerapi2_layer_load(const gchar *label_or_home, gboolean force_prepend, GString **bash_cmds)
 {
     LayerApi2Layer *res = NULL;
     Layer *layer = layer_new_from_label_or_home(label_or_home);
     if (layer != NULL) {
-        gboolean tmp = layer_load(layer, bash_cmds);
+        gboolean tmp = layer_load(layer, force_prepend, bash_cmds);
         if (tmp) {
             res = (LayerApi2Layer*) layer;
         } else {

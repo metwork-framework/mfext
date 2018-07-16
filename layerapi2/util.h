@@ -27,7 +27,7 @@ void field_prepend_env(const gchar *env_variable, const gchar *value, GString **
 void conditional_add_extra_env(const gchar *directory, const gchar *filename, GString **bash_cmds);
 void conditional_remove_extra_env(const gchar *directory, const gchar *filename, GString **bash_cmds);
 void conditional_prepend_env(const gchar *directory, const gchar *directory_name,
-        const gchar *env_variable, GString **bash_cmds);
+        gboolean force_prepend, const gchar *env_variable, GString **bash_cmds);
 void conditional_source(const gchar *directory, const gchar *filename_to_source, GString **bash_cmds);
 gchar *field_prepend(const gchar *list_of_values, const gchar *value,
         const gchar *separator);

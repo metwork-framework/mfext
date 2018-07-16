@@ -262,7 +262,7 @@ void layers_free(GSList *layers)
     layers = NULL;
 }
 
-void _layer_load(Layer *layer, GString **bash_cmds)
+void _layer_load(Layer *layer, gboolean force_prepend, GString **bash_cmds)
 {
     g_debug("loading %s[%s]", layer->label, layer->home);
     if (bash_cmds != NULL) {
@@ -273,22 +273,20 @@ void _layer_load(Layer *layer, GString **bash_cmds)
     const gchar *p3rsp = get_python3_relative_site_packages();
     gchar *lp2rsp = g_strdup_printf("local/%s", p2rsp);
     gchar *lp3rsp = g_strdup_printf("local/%s", p3rsp);
-    conditional_prepend_env(layer->home, "lib/node_modules", "NODE_PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "lib/node_modules/.bin", "PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "local/lib/node_modules", "NODE_PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "local/lib/node_modules/.bin", "PATH", bash_cmds);
-    conditional_prepend_env(layer->home, lp2rsp, "PYTHONPATH", bash_cmds);
-    conditional_prepend_env(layer->home, lp3rsp, "PYTHONPATH", bash_cmds);
-    conditional_prepend_env(layer->home, p2rsp, "PYTHONPATH", bash_cmds);
-    conditional_prepend_env(layer->home, p3rsp, "PYTHONPATH", bash_cmds);
-    conditional_prepend_env(layer->home, "local/bin", "PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "bin", "PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "local/lib", "LD_LIBRARY_PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "lib", "LD_LIBRARY_PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "local/lib/pkgconfig",
-            "PKG_CONFIG_PATH", bash_cmds);
-    conditional_prepend_env(layer->home, "lib/pkgconfig",
-            "PKG_CONFIG_PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "lib/node_modules", force_prepend, "NODE_PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "lib/node_modules/.bin", force_prepend, "PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "local/lib/node_modules", force_prepend, "NODE_PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "local/lib/node_modules/.bin", force_prepend, "PATH", bash_cmds);
+    conditional_prepend_env(layer->home, lp2rsp, force_prepend, "PYTHONPATH", bash_cmds);
+    conditional_prepend_env(layer->home, lp3rsp, force_prepend, "PYTHONPATH", bash_cmds);
+    conditional_prepend_env(layer->home, p2rsp, force_prepend, "PYTHONPATH", bash_cmds);
+    conditional_prepend_env(layer->home, p3rsp, force_prepend, "PYTHONPATH", bash_cmds);
+    conditional_prepend_env(layer->home, "local/bin", force_prepend, "PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "bin", force_prepend, "PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "local/lib", force_prepend, "LD_LIBRARY_PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "lib", force_prepend, "LD_LIBRARY_PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "local/lib/pkgconfig", force_prepend, "PKG_CONFIG_PATH", bash_cmds);
+    conditional_prepend_env(layer->home, "lib/pkgconfig", force_prepend, "PKG_CONFIG_PATH", bash_cmds);
     conditional_source(layer->home, LAYER_INTERACTIVE_PROFILE_FILENAME, bash_cmds);
     conditional_add_extra_env(layer->home, LAYER_EXTRA_ENV_FILENAME, bash_cmds);
     set_layer_loaded(layer->home, bash_cmds);
@@ -365,7 +363,7 @@ gboolean _fix_missing_dependencies(GString **bash_cmds, gint recursion_level)
     return TRUE;
 }
 
-gboolean layer_load_recursive(Layer *layer, GString **bash_cmds, gint recursion_level)
+gboolean layer_load_recursive(Layer *layer, gboolean force_prepend, GString **bash_cmds, gint recursion_level)
 {
     if (recursion_level > LAYER_MAX_RECURSION_LEVEL) {
         // FIXME: shoud be a warning but we have to see what's going on with tests
@@ -420,7 +418,7 @@ gboolean layer_load_recursive(Layer *layer, GString **bash_cmds, gint recursion_
                             loading %s", layer->label, layer->home,
                             dep_layer->label, dep_layer->home,
                             dep_layer->label);
-                    gboolean load_res = layer_load_recursive(dep_layer, bash_cmds, recursion_level + 1);
+                    gboolean load_res = layer_load_recursive(dep_layer, force_prepend, bash_cmds, recursion_level + 1);
                     if (load_res == FALSE) {
                         layer_free(dep_layer);
                         return load_res;
@@ -436,7 +434,7 @@ gboolean layer_load_recursive(Layer *layer, GString **bash_cmds, gint recursion_
         }
         deps_iterator = deps_iterator->next;
     }
-    _layer_load(layer, bash_cmds);
+    _layer_load(layer, force_prepend, bash_cmds);
     deps_iterator = layer->dependencies;
     while (deps_iterator != NULL) {
         gchar *label = (gchar*) deps_iterator->data;
@@ -449,7 +447,7 @@ gboolean layer_load_recursive(Layer *layer, GString **bash_cmds, gint recursion_
                             trying to load %s", layer->label, layer->home,
                             dep_layer->label, dep_layer->home,
                             dep_layer->label);
-                    layer_load_recursive(dep_layer, bash_cmds, recursion_level + 1);
+                    layer_load_recursive(dep_layer, force_prepend, bash_cmds, recursion_level + 1);
                 }
                 layer_free(dep_layer);
             } else {
@@ -461,9 +459,9 @@ gboolean layer_load_recursive(Layer *layer, GString **bash_cmds, gint recursion_
     return TRUE;
 }
 
-gboolean layer_load(Layer *layer, GString **bash_cmds)
+gboolean layer_load(Layer *layer, gboolean force_prepend, GString **bash_cmds)
 {
-    return layer_load_recursive(layer, bash_cmds, 0);
+    return layer_load_recursive(layer, force_prepend, bash_cmds, 0);
 }
 
 

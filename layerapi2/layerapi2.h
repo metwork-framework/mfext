@@ -19,7 +19,7 @@ GSList *layerapi2_get_installed_layers();
 gboolean layerapi2_is_layer_installed(const gchar *label_or_home);
 gboolean layerapi2_is_layer_loaded(const gchar *label_or_home);
 
-LayerApi2Layer *layerapi2_layer_load(const gchar *label_or_home, GString **bash_cmds);
+LayerApi2Layer *layerapi2_layer_load(const gchar *label_or_home, gboolean force_prepend, GString **bash_cmds);
 gboolean layerapi2_layer_unload(const gchar *label_or_home, GString **bash_cmds);
 void layerapi2_layers_unload_all(GString **bash_cmds);
 

@@ -38,9 +38,9 @@ void __restore_layers_path(const gchar *old_value)
     current_dir = NULL;
 }
 
-gboolean __layer_load(const gchar *label_or_home, GString **bash_cmds)
+gboolean __layer_load(const gchar *label_or_home, gboolean force_prepend, GString **bash_cmds)
 {
-    LayerApi2Layer *tempo = layerapi2_layer_load(label_or_home, bash_cmds);
+    LayerApi2Layer *tempo = layerapi2_layer_load(label_or_home, force_prepend, bash_cmds);
     if (tempo != NULL) {
         layerapi2_layer_free(tempo);
         return TRUE;
@@ -67,12 +67,12 @@ void test_layer_load()
     g_assert_false(layerapi2_is_layer_installed("foobar"));
     g_assert_false(layerapi2_is_layer_loaded("layer1_label"));
     GString *gs = g_string_new(NULL);
-    __layer_load("layer1_label", &gs);
+    __layer_load("layer1_label", FALSE, &gs);
     gchar *bash_cmds = g_string_free(gs, FALSE);
     g_assert_true(strlen(bash_cmds) > 0);
     g_free(bash_cmds);
     g_assert_true(layerapi2_is_layer_loaded("layer1_label"));
-    __layer_load("layer1_label", NULL);
+    __layer_load("layer1_label", FALSE, NULL);
     g_assert_true(layerapi2_is_layer_loaded("layer1_label"));
     layerapi2_layer_unload("layer1_label", NULL);
     g_assert_false(layerapi2_is_layer_loaded("layer1_label"));
@@ -85,7 +85,7 @@ void test_layer_load2()
     gchar *old_value = __set_layers_path();
     g_assert_false(layerapi2_is_layer_loaded("layer1_label"));
     g_assert_false(layerapi2_is_layer_loaded("layer2_label"));
-    __layer_load("layer2_label", NULL);
+    __layer_load("layer2_label", FALSE, NULL);
     g_assert_true(layerapi2_is_layer_loaded("layer2_label"));
     g_assert_true(layerapi2_is_layer_loaded("layer1_label"));
     layerapi2_layer_unload("layer1_label", NULL);
@@ -103,13 +103,13 @@ void test_layer_load3()
     g_assert_false(layerapi2_is_layer_loaded("layer3_label"));
     g_assert_false(layerapi2_is_layer_loaded("layer4_label"));
     g_assert_false(layerapi2_is_layer_loaded("layer5_label"));
-    __layer_load("layer4_label", NULL);
+    __layer_load("layer4_label", FALSE, NULL);
     g_assert_true(layerapi2_is_layer_loaded("layer4_label"));
     g_assert_true(layerapi2_is_layer_loaded("layer3_label"));
     g_assert_true(layerapi2_is_layer_loaded("layer2_label"));
     g_assert_true(layerapi2_is_layer_loaded("layer1_label"));
     g_assert_false(layerapi2_is_layer_loaded("layer5_label"));
-    __layer_load("layer5_label", NULL);
+    __layer_load("layer5_label", FALSE, NULL);
     g_assert_false(layerapi2_is_layer_loaded("layer1_label"));
     g_assert_false(layerapi2_is_layer_loaded("layer2_label"));
     g_assert_false(layerapi2_is_layer_loaded("layer3_label"));
@@ -128,9 +128,9 @@ void test_layer_loaderror()
     g_assert_true(layerapi2_is_layer_installed("layererror7_label"));
     g_assert_false(layerapi2_is_layer_loaded("layererror6_label"));
     g_assert_false(layerapi2_is_layer_loaded("layererror7_label"));
-    g_assert_false(__layer_load("layererror6_label", NULL));
+    g_assert_false(__layer_load("layererror6_label", FALSE, NULL));
     g_assert_false(layerapi2_is_layer_loaded("layererror6_label"));
-    g_assert_false(__layer_load("layererror7_label", NULL));
+    g_assert_false(__layer_load("layererror7_label", FALSE, NULL));
     g_assert_false(layerapi2_is_layer_loaded("layererror7_label"));
     __restore_layers_path(old_value);
     g_free(old_value);
@@ -164,7 +164,7 @@ void test_layers_list()
 
 void test_conditional_prepend_env()
 {
-    conditional_prepend_env(".", "tests", "FOOBAR", FALSE);
+    conditional_prepend_env(".", "tests", FALSE, "FOOBAR", FALSE);
     g_assert_cmpstr(g_getenv("FOOBAR"), ==, "./tests");
 }
 

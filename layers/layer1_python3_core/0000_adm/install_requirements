@@ -43,12 +43,14 @@ LAYER_PATH="${PREFIX_PATH}"
 
 CONSTRAINT=""
 IFS=":" read -ra PATHS <<< "${PYTHONPATH:-}"
-for P in "${PATHS[@]}"; do
-    F="${P}/requirements${METWORK_PYTHON_MODE:-}.txt"
-    if test -f "${F}"; then
-        CONSTRAINT="${CONSTRAINT} -c ${F}"
-    fi
-done
+if test "${PATHS:-}" != ""; then
+    for P in "${PATHS[@]}"; do
+        F="${P}/requirements${METWORK_PYTHON_MODE:-}.txt"
+        if test -f "${F}"; then
+            CONSTRAINT="${CONSTRAINT} -c ${F}"
+        fi
+    done
+fi
 
 bootstrap_layer.sh "${LAYER_LABEL}" "${LAYER_PATH}"
 layer_load "${LAYER_PATH}"
@@ -64,6 +66,6 @@ if test "${N}" -eq 0; then
 fi
 
 # shellcheck disable=SC2086
-pip install --disable-pip-version-check --src="${PREFIX_PATH}/lib/python${PYTHON_SHORT_VERSION}/src" --prefix="${LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} ${FORCED_INDEX_DIR_STRING}
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --disable-pip-version-check --src="${PREFIX_PATH}/lib/python${PYTHON_SHORT_VERSION}/src" --prefix="${LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} ${FORCED_INDEX_DIR_STRING}
 rm -f "${REQUIREMENTS}.tmp"
 rm -Rf "${LAYER_PATH}/tmp/install_requirements"

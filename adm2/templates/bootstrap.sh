@@ -146,6 +146,7 @@ mkdir -p "${MODULE_HOME}/share"
     echo "export MODULE := MFEXT" >>adm/root.mk
     echo "export MODULE_LOWERCASE := mfext" >>adm/root.mk
     echo "export PATH := ${MFEXT_HOME}/bin:${PATH:-}" >>adm/root.mk
+    ROOT_PATH=${MFEXT_HOME}/bin:${PATH:-}
     echo "export LD_LIBRARY_PATH := ${MFEXT_HOME}/lib:${LD_LIBRARY_PATH:-}" >>adm/root.mk
     echo "export PKG_CONFIG_PATH := ${MFEXT_HOME}/lib/pkgconfig:${PKG_CONFIG_PATH:-}" >>adm/root.mk
     echo "export MFEXT_HOME := ${MFEXT_HOME}" >>adm/root.mk
@@ -185,15 +186,18 @@ echo "unexport MODULE_RUNTIME_USER" >>adm/root.mk
 {% endif %}echo "export MODULE := ${MODULE}" >>adm/root.mk
 echo "export MODULE_LOWERCASE := $(echo ${MODULE} | tr '[:upper:]' '[:lower:]')" >>adm/root.mk
 echo "export PATH := ${PATH}" >>adm/root.mk
-echo "export LD_LIBRARY_PATH := ${LD_LIBRARY_PATH}" >>adm/root.mk
-echo "export PKG_CONFIG_PATH := ${PKG_CONFIG_PATH}" >>adm/root.mk
 echo "export METWORK_LAYERS_PATH := ${METWORK_LAYERS_PATH}" >>adm/root.mk
 echo "export MFEXT_HOME := ${MFEXT_HOME}" >>adm/root.mk
 echo "export MFEXT_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
 echo "export MODULE_HOME := ${MODULE_HOME}" >>adm/root.mk
 echo "export MODULE_VERSION := {% raw %}${{% endraw %}{{MODULE}}{% raw %}_VERSION}{% endraw %}" >>adm/root.mk
-echo "unexport PYTHON" >>adm/root.mk
-echo "unexport PYTHONPATH" >>adm/root.mk
+echo "ifeq (\$(FORCED_PATHS),)" >>adm/root.mk
+echo "  export PATH := ${ROOT_PATH}" >>adm/root.mk
+echo "export LD_LIBRARY_PATH := ${MFEXT_HOME}/lib" >>adm/root.mk
+echo "export PKG_CONFIG_PATH := ${MFEXT_HOME}/lib/pkgconfig" >>adm/root.mk
+echo "endif" >>adm/root.mk
+#echo "unexport PYTHON" >>adm/root.mk
+#echo "unexport PYTHONPATH" >>adm/root.mk
 {% if MODULE != "MFEXT" %}
         echo "export MFCOM_HOME := ${MFCOM_HOME}" >>adm/root.mk
         echo "export MFCOM_VERSION := ${MFCOM_VERSION}" >>adm/root.mk
@@ -210,8 +214,8 @@ echo "export PYTHON2_SHORT_VERSION := ${PYTHON2_SHORT_VERSION}" >>adm/root.mk
 echo "export PYTHON3_SHORT_VERSION := ${PYTHON3_SHORT_VERSION}" >>adm/root.mk
 echo "export SRC_DIR := ${SRC_DIR}" >>adm/root.mk
 
-echo "LAYER_ENVS:=\$(shell env |grep '^METWORK_LAYER_.*_LOADED=1\$\$' |awk -F '=' '{print \$\$1;}')" >>adm/root.mk
-echo "\$(foreach LAYER_ENV, \$(LAYER_ENVS), \$(eval unexport \$(LAYER_ENV)))" >>adm/root.mk
+#echo "LAYER_ENVS:=\$(shell env |grep '^METWORK_LAYER_.*_LOADED=1\$\$' |awk -F '=' '{print \$\$1;}')" >>adm/root.mk
+#echo "\$(foreach LAYER_ENV, \$(LAYER_ENVS), \$(eval unexport \$(LAYER_ENV)))" >>adm/root.mk
 
 {% if MODULE == "MFEXT" %}
     if test "${REMOVE_CORE:-}" = "1"; then

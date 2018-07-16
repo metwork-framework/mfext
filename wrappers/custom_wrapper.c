@@ -26,12 +26,12 @@ int main(int argc, char *argv[])
         if (strlen(tmp[i]) > 0) {
             if (tmp[i][0] == '-') {
                 const gchar *label_or_home = tmp[i] + sizeof(gchar);
-                LayerApi2Layer *tempo = layerapi2_layer_load(label_or_home, NULL);
+                LayerApi2Layer *tempo = layerapi2_layer_load(label_or_home, FALSE, NULL);
                 if (tempo != NULL) {
                     layerapi2_layer_free(tempo);
                 }
             } else {
-                LayerApi2Layer *tempo = layerapi2_layer_load(tmp[i], NULL);
+                LayerApi2Layer *tempo = layerapi2_layer_load(tmp[i], FALSE, NULL);
                 if (tempo == NULL) {
                     g_warning("impossible to load the layer: %s", tmp[i]);
                     res = FALSE;

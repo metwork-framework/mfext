@@ -1,19 +1,2 @@
 include ../../../adm/root.mk
-include ../../package.mk
-
-export NAME=telegraf
-export VERSION=1.7.0-1
-export EXTENSION=tar.gz
-export CHECKTYPE=MD5
-export CHECKSUM=aa5957fb6ebfc93dfecee6d1f340b187
-export ARCHIVE=telegraf-1.7.0_linux_amd64.tar.gz
-DESCRIPTION=\
-influxdb plugin-driven server agent for collecting and reporting metrics.
-WEBSITE=https://github.com/influxdata/telegraf
-LICENSE=MIT
-
-all:: $(PREFIX)/bin/telegraf
-$(PREFIX)/bin/telegraf:
-	@mkdir -p $(PREFIX)/bin
-	$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX) download uncompress
-	cd build/$(NAME) && cp -f usr/bin/telegraf $@
+include ../../layer_wrapper.mk

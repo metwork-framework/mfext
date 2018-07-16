@@ -1,7 +1,2 @@
 include ../../../adm/root.mk
-
-all:
-	echo foo >/dev/null
-
-clean:
-	echo foo >/dev/null
+include ../../layer_wrapper.mk

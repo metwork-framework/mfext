@@ -1,7 +1,7 @@
 -include adm/root.mk
 -include adm/main_root.mk
 
-all:: directories
+all:: 
 	cd adm && $(MAKE)
 	cd config && $(MAKE)
 	cd glib2 && $(MAKE)
@@ -9,10 +9,6 @@ all:: directories
 	cd wrappers && $(MAKE)
 	cd layers && $(MAKE)
 	cd adm2 && $(MAKE)
-
-directories: $(MFEXT_HOME)/opt
-$(MFEXT_HOME)/opt:
-	for DIR in bin lib share opt config; do mkdir -p $(MFEXT_HOME)/$$DIR; done
 
 clean::
 	cd config && $(MAKE) clean

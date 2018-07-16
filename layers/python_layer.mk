@@ -5,9 +5,6 @@ unexport https_proxy
 unexport HTTP_PROXY
 unexport HTTPS_PROXY
 
-ifeq ($(LOADED_PYTHON_LAYERS),)
-LOADED_PYTHON_LAYERS=pythonPYTHONMAJORVERSION_core@mfext
-endif
 LAYER_SITE_PACKAGES=$(LAYER_HOME)/lib/python$(PYTHONPYTHONMAJORVERSION_SHORT_VERSION)/site-packages
 LAYER_SITE_REQUIREMENTS=$(LAYER_SITE_PACKAGES)/requirementsPYTHONMAJORVERSION.txt
 
@@ -18,17 +15,17 @@ before::
 after::
 
 requirementsPYTHONMAJORVERSION.txt: requirements-to-freeze.txt
-	if test -s $<; then layer_wrapper --layers=$(LOADED_PYTHON_LAYERS) -- freeze_requirements $< >$@; else touch $@; fi
+	if test -s $<; then freeze_requirements $< >$@; else touch $@; fi
 
 prerequirementsPYTHONMAJORVERSION.txt: prerequirements-to-freeze.txt
-	if test -s $<; then layer_wrapper --layers=$(LOADED_PYTHON_LAYERS) -- freeze_requirements $< >$@; else touch $@; fi
+	if test -s $<; then freeze_requirements $< >$@; else touch $@; fi
 
 $(LAYER_SITE_REQUIREMENTS): prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt src
 	mkdir -p $(PREFIX)/share/metwork_packages
-	for REQ in prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt; do if test -s $${REQ}; then layer_wrapper --layers=$(LOADED_PYTHON_LAYERS) install_requirements $(LAYER_HOME) $${REQ} ./src; fi; done
+	for REQ in prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt; do if test -s $${REQ}; then install_requirements $(LAYER_HOME) $${REQ} ./src; fi; done
 	if ! test -d $(LAYER_SITE_PACKAGES); then mkdir -p $(LAYER_SITE_PACKAGES); fi
 	cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@
-	IFS=$$'\n' ; for REQ in `cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq`; do _pip_package_to_yaml.sh "$(LOADED_PYTHON_LAYERS),$(LAYER_NAME)@$(MODULE_LOWERCASE)" "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $(LOADED_PYTHON_LAYERS),$(LAYER_NAME)@$(MODULE_LOWERCASE) $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
+	IFS=$$'\n' ; for REQ in `cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq`; do _pip_package_to_yaml.sh "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
 
 clean::
 	rm -Rf src venv.* tmp_src tempolayer* requirementsPYTHONMAJORVERSION.txt.tmp prerequirementsPYTHONMAJORVERSION.txt.tmp freezed_requirements.*
@@ -36,7 +33,7 @@ clean::
 download:: clean src
 
 src: prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt
-	for REQ in $^; do if test -s $${REQ}; then layer_wrapper --layers=$(LOADED_PYTHON_LAYERS) -- download_compile_requirements $${REQ}; fi; done
+	for REQ in $^; do if test -s $${REQ}; then download_compile_requirements $${REQ}; fi; done
 	if test -d ../../download_archive; then cp -Rf src/* ../../download_archive/ 2>/dev/null; fi
 
 freeze: superclean prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt

@@ -23,12 +23,14 @@ TEMPO_LAYER_PATH="$(pwd)/${TEMPO_LAYER_LABEL}"
 
 CONSTRAINT=""
 IFS=":" read -ra PATHS <<< "${PYTHONPATH:-}"
-for P in "${PATHS[@]}"; do
-    F="${P}/requirements${METWORK_PYTHON_MODE:-}.txt"
-    if test -f "${F}"; then
-        CONSTRAINT="${CONSTRAINT} -c ${F}"
-    fi
-done
+if test "${PATHS:-}" != ""; then
+    for P in "${PATHS[@]}"; do
+        F="${P}/requirements${METWORK_PYTHON_MODE:-}.txt"
+        if test -f "${F}"; then
+            CONSTRAINT="${CONSTRAINT} -c ${F}"
+        fi
+    done
+fi
 
 bootstrap_layer.sh "${TEMPO_LAYER_LABEL}" "${TEMPO_LAYER_PATH}"
 layer_load "${TEMPO_LAYER_PATH}" >&2
@@ -46,10 +48,10 @@ if test "${N}" -eq 0; then
 fi
 
 # shellcheck disable=SC2086
-pip install --disable-pip-version-check --src=./tmp_src --prefix="${TEMPO_LAYER_PATH}" -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --disable-pip-version-check --src=./tmp_src --prefix="${TEMPO_LAYER_PATH}" -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
 PYTHONPATH=$(echo "${PYTHONPATH}" |awk -F ":" '{print $1;}')
 export PYTHONPATH
-pip freeze --disable-pip-version-check -l |grep -v "^appdirs==" |grep -v "^packaging==" |grep -v "^pyparsing==" |grep -v "^six==" |grep -v "^virtualenv==" >${FREEZED_REQUIREMENTS}
+pip freeze --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --disable-pip-version-check -l |grep -v "^appdirs==" |grep -v "^packaging==" |grep -v "^pyparsing==" |grep -v "^six==" |grep -v "^virtualenv==" >${FREEZED_REQUIREMENTS}
 rm -Rf tmp_src src
 
 cat "${FREEZED_REQUIREMENTS}"

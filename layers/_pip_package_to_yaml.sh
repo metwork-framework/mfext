@@ -3,7 +3,7 @@
 set -eu
 
 function usage() {
-    echo "usage: _pip_package_to_yaml.sh LAYERS PACKAGE PATH_TO_METWORK_PACKAGES"
+    echo "usage: _pip_package_to_yaml.sh PACKAGE PATH_TO_METWORK_PACKAGES"
 }
 
 if test "${1:-}" = ""; then
@@ -14,13 +14,8 @@ if test "${2:-}" = ""; then
     usage
     exit 1
 fi
-if test "${3:-}" = ""; then
-    usage
-    exit 1
-fi
 
-LAYERS="$1"
-PACKAGE="$2"
+PACKAGE="$1"
 N=$(echo "${PACKAGE}" |grep -c "^\\-e git+http" || true)
 SOURCE=
 if test "${N}" -gt 0; then
@@ -39,7 +34,7 @@ else
     fi
 fi
 
-METWORK_PACKAGES="$3"
+METWORK_PACKAGES="$2"
 if ! test -d "${METWORK_PACKAGES}"; then
     echo "${METWORK_PACKAGES} is not a directory"
     usage
@@ -47,7 +42,7 @@ if ! test -d "${METWORK_PACKAGES}"; then
 fi
 
 TMPFILE="${TMPDIR:-/tmp}/pip_show.$$"
-layer_wrapper --layers="${LAYERS}" -- pip --disable-pip-version-check show "${PACKAGE}" >"${TMPFILE}"
+pip --disable-pip-version-check show "${PACKAGE}" >"${TMPFILE}"
 
 NAME=$(cat "${TMPFILE}" |grep "^Name: " |sed 's/^Name: //g')
 VERSION=$(cat "${TMPFILE}" |grep "^Version: " |sed 's/^Version: //g')
