@@ -5,9 +5,11 @@ pipeline:
     commands:
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - ./bootstrap.sh /opt/metwork-mfext-${DRONE_BRANCH}
+      - cat adm/root.mk
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     commands:
+      - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - make
       - make doc
       - rm -Rf html_doc
