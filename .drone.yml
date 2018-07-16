@@ -1,19 +1,19 @@
 pipeline:
-  build:
+  bootstrap:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     pull: true
     commands:
-      - export MODULE=MFEXT
-      - export MODULE_LOWERCASE=mfext
-      - export RELEASE_BUILD=${DRONE_BUILD_NUMBER}
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - ./bootstrap.sh /opt/metwork-mfext-${DRONE_BRANCH}
+  build:
+    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    commands:
       - make
       - make doc
       - rm -Rf html_doc
       - cp -Rf /opt/metwork-mfext-${DRONE_BRANCH}/html_doc .
       - make test
-      - make rpm
+      - make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm
       - mv /opt/metwork-mfext-${DRONE_BRANCH}/*.rpm .
     volumes:
       - /buildcache:/buildcache
