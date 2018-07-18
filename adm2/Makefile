@@ -1,3 +1,4 @@
+LIBS=bash_utils.sh
 BINS=_launch_crontab clear.sh metwork_debug _doc_layer.sh _yaml_to_md.py
 SHARES=_metwork.spec
 

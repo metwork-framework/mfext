@@ -1,4 +1,3 @@
-LIBS=bash_utils.sh
 BINS=guess_version.sh _make_file_from_template.sh envtpl
 SHARES=main_root.mk subdir_root.mk
 

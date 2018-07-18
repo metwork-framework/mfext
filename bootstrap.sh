@@ -68,23 +68,17 @@ echo "export MFEXT_HOME := ${MFEXT_HOME}" >>adm/root.mk
 echo "export MFEXT_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
 echo "export MODULE_HOME := ${MODULE_HOME}" >>adm/root.mk
 echo "export MODULE_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
+echo "export SRC_DIR := ${SRC_DIR}" >>adm/root.mk
 echo "ifeq (\$(FORCED_PATHS),)" >>adm/root.mk
 echo "	export PATH := ${ROOT_PATH}" >>adm/root.mk
 echo "	export LD_LIBRARY_PATH := ${MFEXT_HOME}/lib" >>adm/root.mk
 echo "	export PKG_CONFIG_PATH := ${MFEXT_HOME}/lib/pkgconfig" >>adm/root.mk
 echo "endif" >>adm/root.mk
-#echo "unexport PYTHON" >>adm/root.mk
-#echo "unexport PYTHONPATH" >>adm/root.mk
 
-# FIXME: do not hardcode this
+# FIXME: do not hardcode this
+# FIXME: move to layer root extra_env
 echo "export PYTHON2_SHORT_VERSION := 2.7" >>adm/root.mk
 echo "export PYTHON3_SHORT_VERSION := 3.5" >>adm/root.mk
-echo "export SRC_DIR := ${SRC_DIR}" >>adm/root.mk
-
-#echo "LAYER_ENVS:=\$(shell env |grep '^METWORK_LAYER_.*_LOADED=1\$\$' |awk -F '=' '{print \$\$1;}')" >>adm/root.mk
-#echo "\$(foreach LAYER_ENV, \$(LAYER_ENVS), \$(eval unexport \$(LAYER_ENV)))" >>adm/root.mk
-
-
 
 echo "BOOTSTRAP DONE !"
 echo "MFEXT_HOME=${MFEXT_HOME}"
