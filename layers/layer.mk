@@ -12,7 +12,7 @@ TARGET_LAYER_PROFILES := $(addprefix $(MODULE_HOME)/opt/$(LAYER_NAME)/,$(LAYER_P
 all: before layer after
 
 layer: $(TARGET_LAYER_PROFILES)
-	@if ! test -f $(MODULE_HOME)/opt/layer_$(LAYER_HASH).tar.gz; then \
+	if ! test -f $(MODULE_HOME)/opt/layer_$(LAYER_HASH).tar.gz; then \
 		for SUBDIR in $(SUBDIRS); do \
 		    OLDPWD=`pwd`; \
 			cd $$SUBDIR || exit 1; \
@@ -22,7 +22,7 @@ layer: $(TARGET_LAYER_PROFILES)
 	fi
 
 before:
-	@if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then \
+	if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then \
 		if test "$(MODULE)" = "MFEXT"; then \
 			if test "$(LAYER_HASH)" != "null"; then \
 				cp -f /buildcache/layer_$(LAYER_HASH).tar.gz $(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz || echo "no cache"; \
@@ -34,11 +34,11 @@ before:
 		fi; \
 	fi
 	if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then mkdir -p $(MODULE_HOME)/opt/$(LAYER_NAME); fi
-	@if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R u+w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
+	if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R u+w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
 
 after:
-	@if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R a-w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
-	@if test "$(MODULE)" = "MFEXT"; then \
+	if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R a-w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
+	if test "$(MODULE)" = "MFEXT"; then \
 		if test "$(LAYER_HASH)" != "null"; then \
 			if ! test -f "$(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz"; then \
 				cd $(MFEXT_HOME)/opt && tar -cf layer_$(LAYER_HASH).tar $(LAYER_NAME) && gzip -f layer_$(LAYER_HASH).tar; \
@@ -47,13 +47,13 @@ after:
 			fi \
 		fi \
 	fi
-	@if test -f $(MODULE_HOME)/opt/layer_$(LAYER_HASH).tar.gz; then rm -f $(MODULE_HOME)/opt/layer_$(LAYER_HASH).tar.gz; fi
+	if test -f $(MODULE_HOME)/opt/layer_$(LAYER_HASH).tar.gz; then rm -f $(MODULE_HOME)/opt/layer_$(LAYER_HASH).tar.gz; fi
 
 clean:
-	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) clean || exit 1; cd $${OLDPWD}; done
+	for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) clean || exit 1; cd $${OLDPWD}; done
 
 download_archive:
-	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) download || exit 1; cd $${OLDPWD}; done
+	for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) download || exit 1; cd $${OLDPWD}; done
 
 mrproper: clean
 	@if test "$(LAYER_NAME)" != ""; then \
