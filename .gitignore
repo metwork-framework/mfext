@@ -53,7 +53,6 @@ packages.md
 *.o
 *.so
 *.swp
-glib2/sources
 layerapi/coverage
 layerapi2/layer_load_bash_cmds
 layerapi2/layer_unload_bash_cmds
