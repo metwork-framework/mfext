@@ -63,16 +63,6 @@ export MFCONFIG
 # We set LC_NUMERIC to C
 export LC_NUMERIC=C
 
-# We set MAGICS and GRIB_API environnement variables
-# FIXME: migrate to the layer extra_env
-export MAGPLUS_HOME={{MFEXT_HOME}}
-export MAGPLUS_QUIET=ON
-export GRIB_API_GRIBEX_BOUSTROPHEDONIC=1
-
-# We set a PROJ4 environnement variable
-# FIXME: migrate to the layer extra_env
-export PROJ_LIB={{MFEXT_HOME}}/share/proj
-
 # We modify PKG_CONFIG_PATH
 field_prepend PKG_CONFIG_PATH /usr/lib64/pkgconfig
 field_prepend PKG_CONFIG_PATH /lib64/pkgconfig
