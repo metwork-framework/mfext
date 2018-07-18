@@ -8,9 +8,10 @@ include ../adm/subdir_root.mk
 TEMPLATES=$(shell find templates ! -type d)
 TARGET_TEMPLATES:=$(addprefix $(MFEXT_HOME)/share/,$(TEMPLATES))
 
-all:: profiles load_env $(TARGET_TEMPLATES)
+all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile
 
 test:
 	layer_wrapper --layers=devtools@mfext -- noutf8.sh
 	layer_wrapper --layers=devtools@mfext -- shellchecks
 	layer_wrapper --layers=devtools@mfext -- shellcheck _launch_crontab
+	layer_wrapper --layers=devtools@mfext -- shellcheck $(MFEXT_HOME)/share/profile
