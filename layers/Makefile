@@ -3,7 +3,7 @@
 include ../adm/root.mk
 include ../adm/subdir_root.mk
 
-SUBDIRS=$(shell ls -d layer* |grep -v layer.mk)
+SUBDIRS=$(shell ls -d layer* |grep -v "\.mk")
 
 all:: makefiles helpers
 	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) all || exit 1; cd $${OLDPWD}; done
