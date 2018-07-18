@@ -1,5 +1,7 @@
 #!/bin/bash
 
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 unset http_proxy
 unset https_proxy
 unset HTTP_PROXY
@@ -19,7 +21,7 @@ if ! test -d "${DIR}"; then
     mkdir -p "${DIR}"
 fi
 
-"${MFEXT_HOME}/bin/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
+"${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
 N=$?
 if test ${N} -eq 0; then
     exit 0
@@ -31,7 +33,7 @@ for SOURCE in $(cat "${SOURCES_FILE}"); do
     echo "Trying to download ${SOURCE}..."
     wget --no-check-certificate --tries=3 --timeout=${TIMEOUT} -O "${ARCHIVE_FILE}" "${SOURCE}"
     if test $? -eq 0; then
-        "${MFEXT_HOME}/bin/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
+        "${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
         N=$?
         if test ${N} -eq 0; then
             SUCCESS=1
