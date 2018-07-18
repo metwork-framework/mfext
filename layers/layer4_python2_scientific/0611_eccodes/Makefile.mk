@@ -19,4 +19,8 @@ SHORT_VERSION=2.7.3
 
 all:: $(PREFIX)/lib/python2.7/site-packages/eccodes-$(VERSION)-py2.7.egg-info
 $(PREFIX)/lib/python2.7/site-packages/eccodes-$(VERSION)-py2.7.egg-info:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="-DBUILD_SHARED_LIBS=ON -DENABLE_FORTRAN=OFF -DENABLE_NETCDF=OFF -DENABLE_PYTHON=OFF -DENABLE_JPG=ON -DOPENJPEG_PATH=$(PREFIX)/../scientific" download uncompress configure_cmake python2pyinstall_cmake
+	mkdir -p build/$(NAME)-$(VERSION)-Source/build/lib
+	rm -f build/$(NAME)-$(VERSION)-Source/build/lib/libeccodes.so
+	ln -s $(PREFIX)/../scientific/lib/libeccodes.so build/$(NAME)-$(VERSION)-Source/build/lib/libeccodes.so
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="-DBUILD_SHARED_LIBS=ON -DENABLE_FORTRAN=OFF -DENABLE_NETCDF=OFF -DENABLE_PYTHON=ON -DENABLE_JPG=ON -DOPENJPEG_PATH=$(PREFIX)/../scientific" download uncompress configure_cmake python2pyinstall_cmake
+	rm -f build/$(NAME)-$(VERSION)-Source/build/lib/libeccodes.so
