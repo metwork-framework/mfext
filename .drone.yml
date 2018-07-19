@@ -31,7 +31,7 @@ pipeline:
       - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}; mkdir -p /pub/metwork/continuous_integration/docs/${DRONE_BRANCH} ; cp -Rf html_doc/* /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/ ; fi
     volumes:
       - /pub:/pub
-    when: 
+    when:
       event: [push]
   trigger:
     image: plugins/downstream
@@ -46,3 +46,4 @@ pipeline:
 matrix:
   OS_VERSION:
     - centos6
+    - centos7
