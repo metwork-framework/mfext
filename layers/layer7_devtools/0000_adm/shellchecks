@@ -17,7 +17,7 @@ for FILE in ${FILES}; do
     N=$(file "${FILE}" |grep -c 'shell script')
     N2=$(echo "${FILE}" |grep -c '/templates/')
     if test "${N}" -gt 0 -a "${N2}" -eq 0; then
-        "${MFEXT_HOME}/opt/core/bin/shellcheck" "${FILE}" || RES=1
+        "${MFEXT_HOME}/opt/devtools/bin/shellcheck" "${FILE}" || RES=1
     fi
 done
 
