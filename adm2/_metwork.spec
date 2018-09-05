@@ -149,17 +149,6 @@ Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} python2 scientific layer
 {% endif %}
 
-{% if MODULE == "MFCOM" %}
-%package radartools-{{MODULE_BRANCH}}
-Summary: radartools layer
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfcom-python2-{{MODULE_BRANCH}}
-%description radartools-{{MODULE_BRANCH}}
-metwork radartools layer
-{% endif %}
-
 %prep
 cd %{_builddir} || exit 1
 rm -Rf %{name}-%{version}-%{release}
@@ -364,12 +353,4 @@ rm -fr %{buildroot}
 {% if MODULE == "MFEXT" %}
 /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/python2_core
 {% endif %}
-{% endif %}
-
-{% if MODULE == "MFCOM" %}
-%files radartools-{{MODULE_BRANCH}}
-%defattr(-,root,root,-)
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/demeter_data
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/python2_radartools
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/python3_radartools
 {% endif %}
