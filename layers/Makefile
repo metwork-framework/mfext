@@ -20,7 +20,7 @@ download_archive:
 	rm -Rf download_archive ; mkdir download_archive
 	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) download_archive || exit 1; cd $${OLDPWD}; done
 
-makefiles: python2_layer.mk python3_layer.mk $(MFEXT_HOME)/share/python3_layer.mk $(MFEXT_HOME)/share/python2_layer.mk $(MFEXT_HOME)/share/package.mk $(MFEXT_HOME)/share/layer.mk $(MFEXT_HOME)/share/Makefile.standard $(MFEXT_HOME)/share/core_layer.mk $(MFEXT_HOME)/share/simple_layer.mk
+makefiles: python2_layer.mk python3_layer.mk $(MFEXT_HOME)/share/python3_layer.mk $(MFEXT_HOME)/share/python2_layer.mk $(MFEXT_HOME)/share/package.mk $(MFEXT_HOME)/share/layer.mk $(MFEXT_HOME)/share/Makefile.standard $(MFEXT_HOME)/share/core_layer.mk $(MFEXT_HOME)/share/simple_layer.mk $(MFEXT_HOME)/share/layer_wrapper.mk
 
 helpers: $(MFEXT_HOME)/bin/_uncompress_helper.sh $(MFEXT_HOME)/bin/_download_helper.sh $(MFEXT_HOME)/bin/_checksum_helper.sh $(MFEXT_HOME)/bin/_pip_package_to_yaml.sh
 

@@ -1,6 +1,6 @@
 .PHONY: check clean all
 
-BINS=make_custom_wrapper.sh flake82.sh flake83.sh pylint2.sh pylint3.sh nosetests2.sh nosetests3.sh
+BINS=make_custom_wrapper.sh flake8.sh flake82.sh flake83.sh pylint2.sh pylint3.sh nosetests2.sh nosetests3.sh pylint.sh nosetests.sh
 
 include ../adm/root.mk
 include $(MFEXT_HOME)/share/subdir_root.mk

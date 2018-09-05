@@ -6,6 +6,8 @@ pipeline:
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - ./bootstrap.sh /opt/metwork-mfext-${DRONE_BRANCH}
       - cat adm/root.mk
+    when:
+      event: [push]
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     commands:
@@ -28,7 +30,7 @@ pipeline:
       - cp *.rpm /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
       - yum -y install createrepo
       - createrepo --update /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}
-      - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}; mkdir -p /pub/metwork/continuous_integration/docs/${DRONE_BRANCH} ; cp -Rf html_doc/* /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/ ; fi
+      - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext; mkdir -p /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext ; cp -Rf html_doc/* /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext/ ; fi
     volumes:
       - /pub:/pub
     when:

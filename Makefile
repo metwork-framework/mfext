@@ -1,7 +1,7 @@
 -include adm/root.mk
 -include adm/main_root.mk
 
-all:: 
+all::
 	cd adm && $(MAKE)
 	cd config && $(MAKE)
 	cd glib2 && $(MAKE)
