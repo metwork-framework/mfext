@@ -29,6 +29,10 @@ Documentation index
    layer_python2_devtools
    layer_python3_devtools
    layer_python3_devtools_jupyter
+   layer_scientific
+   layer_python3_scientific
+   layer_python2_scientific
+   layer_nodejs
    layer_rpm
    layer_default
    layer_python
