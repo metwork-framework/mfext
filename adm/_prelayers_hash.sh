@@ -12,3 +12,4 @@ cat "${DIR}/root.mk" |grep -v "_VERSION" |sort
 if test -f /etc/redhat-release; then
     cat /etc/redhat-release
 fi
+rpm -qa |sort
