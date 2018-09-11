@@ -63,6 +63,12 @@ Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 {% if MODULE == "MFEXT" %}
+{% if BUILD_OS|default('unknown') == "centos7" %}
+#Fixme : libgfortran because numpy is installed in layers python2[3]
+#rather than in layers python2[3]_scientific
+Requires: libgfortran
+Requires: libicu
+{% endif %}
 {% elif MODULE == "MFCOM" %}
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
 {% else %}
@@ -126,6 +132,10 @@ Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
+Requires: libX11 libXext cairo pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+{% if BUILD_OS|default('unknown') == "centos7" %}
+Requires: libquadmath
+{% endif %}
 %description scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} scientific layer
 
