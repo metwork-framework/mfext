@@ -30,7 +30,7 @@ Obsoletes: metwork-{{MODULE_LOWERCASE}}-full
 {% if MODULE == "MFEXT" %}
 Requires: which
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-python2-scientific-{{MFEXT_BRANCH}}, metwork-mfext-nodejs-{{MFEXT_BRANCH}}
-{% if BUILD_OS|default('unknown') == "centos7" %}
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 Requires: openssl >= 1.0.2
 Requires: openssl-libs >= 1.0.2
 {% else %}
@@ -63,7 +63,7 @@ Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 {% if MODULE == "MFEXT" %}
-{% if BUILD_OS|default('unknown') == "centos7" %}
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 #Fixme : libgfortran because numpy is installed in layers python2[3]
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
@@ -133,7 +133,7 @@ AutoReq: no
 AutoProv: no
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
 Requires: libX11 libXext cairo pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
-{% if BUILD_OS|default('unknown') == "centos7" %}
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 Requires: libquadmath
 {% endif %}
 %description scientific-{{MFEXT_BRANCH}}
