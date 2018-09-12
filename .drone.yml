@@ -12,7 +12,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     commands:
       - . /etc/profile.d/metwork_build_env.sh
-      - env | grep METWORK
+      - env
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - mkdir -p /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}
       - make >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
