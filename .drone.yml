@@ -1,6 +1,6 @@
 pipeline:
   bootstrap:
-    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    image: metwork/mfext-${OS_VERSION}-buildimage:master
     pull: true
     commands:
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
@@ -9,7 +9,7 @@ pipeline:
     when:
       event: [push]
   build:
-    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    image: metwork/mfext-${OS_VERSION}-buildimage:master
     commands:
       - env | grep METWORK
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
