@@ -11,6 +11,7 @@ pipeline:
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     commands:
+      - env | grep METWORK
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - mkdir -p /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}
       - make >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
