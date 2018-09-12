@@ -10,10 +10,8 @@ pipeline:
       event: [push]
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
-    environment:
-      - METWORK_BUILD_OS=${OS_VERSION}
     commands:
-      - env | grep OS
+      - export METWORK_BUILD_OS=${OS_VERSION}
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - mkdir -p /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}
       - make >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
