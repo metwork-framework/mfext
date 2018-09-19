@@ -1,0 +1,67 @@
+#!/bin/bash
+
+. ${MFEXT_HOME}/lib/bash_utils.sh
+exit_if_root
+
+if test "${1:-}" = "--help"; then
+    echo "usage {{MODULE_LOWERCASE}}.start"
+    echo "  => stop the {{MODULE_LOWERCASE}} module"
+    exit 0
+fi
+
+STARTUP_FLAG=`env |grep "^${MODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
+if test "${STARTUP_FLAG}" = "0"; then
+    echo_bold "${MODULE}_STARTUP_FLAG=0 => nothing to start"
+    exit 0
+fi
+
+LINE="*****     STOPPING ${MODULE}     *****"
+N=`echo "${LINE}" |wc -c`
+HEADER=`echo "**************************************************************" |cut -c 2-${N}`
+echo_bold "${HEADER}"
+echo_bold "${LINE}"
+echo_bold "${HEADER}"
+echo "  "
+
+echo STOPPING >${MODULE_RUNTIME_HOME}/var/status
+
+_uninstall_crontab.sh
+
+{% block custom %}
+# Can be replaced by mfxxx.stop.custom
+{% endblock %}
+
+if test -f ${MODULE_HOME}/config/circus.ini; then
+    _circus.stop
+fi
+echo -n "- Killing remainging processes (if any)..."
+KILL_OUTPUT=$(kill_remaining_processes.py --silent 2>/dev/null)
+KILL_CODE=$?
+KILLED=$(echo ${KILL_OUTPUT} |awk -F ',' '{print $1;}')
+if test "${KILLED}" = ""; then
+    KILLED=0
+fi
+STILL_HERE=$(echo ${KILL_OUTPUT} |awk -F ',' '{print $2;}')
+if test "${STILL_HERE}" = ""; then
+    STILL_HERE=0
+fi
+if test "${STILL_HERE}" = "0"; then
+    if test "${KILLED}" != "0"; then
+        if test "${KILLED}" = "1"; then
+            echo_warning "1 killed process"
+        else
+            echo_warning "${KILLED} killed processes"
+        fi
+    else
+        echo_ok
+    fi
+else
+    echo_nok "${KILLED} remaining processes"
+    echo_bold "see the output of the kill_remaining_processes.py command"
+fi
+rm -f ${MODULE_RUNTIME_HOME}/var/*.socket >/dev/null 2>&1
+
+echo STOPPED >${MODULE_RUNTIME_HOME}/var/status
+
+echo " "
+echo " "

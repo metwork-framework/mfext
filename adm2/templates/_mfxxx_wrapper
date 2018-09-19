@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if test "${1:-}" = ""; then
+    echo "MISSING ARG"
+    exit 1
+fi
+
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if test "${METWORK_PROFILE_LOADED}" != "1" -a "${METWORK_PROFILE_LOADING}" != "1"; then
+    if test -f "${CURRENT_DIR}/../share/profile"; then
+        . "${CURRENT_DIR}/../share/profile"
+    fi
+fi
+
+exec "$@"

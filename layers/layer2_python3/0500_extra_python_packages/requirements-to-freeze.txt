@@ -1,0 +1,25 @@
+-e git+https://github.com/thefab/configparser_extended.git#egg=configparser_extended
+-e git+https://github.com/thefab/cronwrapper.git#egg=cronwrapper
+-e git+https://github.com/Hawker65/deploycron.git#egg=deploycron
+-e git+https://github.com/metwork-framework/envtpl.git#egg=envtpl
+-e git+https://github.com/thefab/pystatsd.git#egg=statsd
+-e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client#egg=telegraf_unixsocket_client
+-e git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter
+psutil
+redis
+requests
+requests-toolbelt
+six
+bash
+filelock
+ConfigArgParse
+netifaces
+cachetools
+pyinotify
+inotify-simple
+PyYAML
+# fixme: move to python3_scientific but there is a problem with GDAL build
+# gdal_array is not built if numpy is not installed before
+numpy
+# pyzmq < 17 for circus (layer python3_circus)
+pyzmq<17

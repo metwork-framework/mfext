@@ -1,0 +1,12 @@
+Cython
+GDAL<2.3
+h5py
+netCDF4
+Pillow
+matplotlib
+pngquant
+pyshp
+shapely
+scipy
+dask
+toolz

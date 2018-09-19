@@ -1,0 +1,11 @@
+prefix={{MFEXT_HOME}}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: layerapi2
+Version: 0.0.1
+Description: layerapi2 lib
+Requires: glib-2.0 gobject-2.0 gthread-2.0
+Libs: -L${libdir} -llayerapi2 -L{{MFEXT_HOME}}/lib 
+Cflags: -I${includedir}

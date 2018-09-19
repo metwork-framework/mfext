@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# .bashrc
+# (loaded for all shells)
+#
+# DO NOT MODIFY THIS FILE DIRECTLY
+# USE /etc/metwork.custom_profile
+# OR ~/.metwork.custom_profile
+# TO OVERRIDE
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    # shellcheck disable=SC1091
+    . /etc/bashrc
+fi
+
+# We eventually override with system wide custom settings
+if test -f /etc/metwork.custom_profile; then
+    # shellcheck disable=SC1091
+    . /etc/metwork.custom_profile
+fi
+
+PROFILE="{{MODULE_HOME}}/share/profile"
+# We load the main profile
+if ! test -f ${PROFILE}; then
+    echo "ERROR: UNABLE TO FIND THE PROFILE ${PROFILE} !"
+    export PROFILE_ERROR=1
+else
+    . ${PROFILE}
+fi
+
+# We eventually override with module wide custom settings
+if test -f ~/.metwork.custom_profile; then
+    . ~/.metwork.custom_profile
+fi

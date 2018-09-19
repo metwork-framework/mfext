@@ -1,0 +1,10 @@
+N=$(echo ${EDITOR:-} |grep -c "${MFEXT_HOME}/opt/python2_devtools")
+if test "${N}" -gt 0; then
+    unset EDITOR
+fi
+N=$(alias vi |grep -c "${MFEXT_HOME}/opt/python2_devtools")
+if test "${N}" -gt 0; then
+    unalias vi
+    unalias vim
+    unalias vimdiff
+fi

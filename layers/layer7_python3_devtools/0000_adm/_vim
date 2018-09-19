@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if test "${VIRTUAL_ENV:-}" != ""; then
+    for ENV in $(env |grep "^METWORK_LAYER_.*_LOADED=" |awk -F '=' '{print $1;}'); do
+        unset "${ENV}"
+    done
+fi
+VIM_CMD="${MFEXT_HOME}/bin/layer_wrapper --layers=python3_devtools@mfext -- ${MFEXT_HOME}/opt/python3_devtools/bin/vim -u ${MFEXT_HOME}/opt/devtools/config/vimrc"
+exec ${VIM_CMD} "$@"

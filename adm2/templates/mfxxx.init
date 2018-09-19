@@ -1,0 +1,49 @@
+#!/bin/bash
+
+. ${MFEXT_HOME}/lib/bash_utils.sh
+exit_if_root
+
+SOFT=0
+SOFT_STRING=""
+if test "${1}" = "soft"; then
+    SOFT=1
+    SOFT_STRING="SOFT "
+fi
+
+if test "$1" != "QUIET"; then
+    LINE="*****     ${MODULE} ${SOFT_STRING}INITIALIZATION     *****"
+    N=`echo "${LINE}" |wc -c`
+    HEADER=`echo "**************************************************************" |cut -c 2-${N}`
+    echo_bold "${HEADER}"
+    echo_bold "${LINE}"
+    echo_bold "${HEADER}"
+    echo "  "
+fi
+
+MODULE_LOWERCASE=`echo ${MODULE} | tr '[:upper:]' '[:lower:]'`
+
+echo -n "- Eventually stopping ${MODULE_LOWERCASE} module..."
+echo_running
+${MODULE_LOWERCASE}.stop >/dev/null 2>&1
+echo_ok
+
+if test "${SOFT}" = "0"; then
+    cleanup_directories
+    mkdir -p ${MODULE_RUNTIME_HOME}/tmp/config_auto
+fi
+cleanup_pyc
+
+{% block custom %}
+# Can be replaced by mfxxx.init.custom
+{% endblock %}
+
+{% if MODULE == "MFDATA" or MODULE == "MFSERV" or MODULE == "MFBASE" %}
+_plugins.init
+{% endif %}
+
+{% block custom_after %}
+# Can be replaced by mfxxx.init.custom_after
+{% endblock %}
+echo " "
+echo " "
+exit 0
