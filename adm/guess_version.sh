@@ -7,9 +7,13 @@ if test "$1" = "--help" -o "$1" = "-h"; then
     exit 0
 fi
 
-BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null |sed 's/-/_/g')
-if test "${BRANCH}" = ""; then
-    BRANCH=unknown
+if test "${DRONE_BRANCH:-}" != ""; then
+    BRANCH=${DRONE_BRANCH}
+else
+    BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null |sed 's/-/_/g')
+    if test "${BRANCH}" = ""; then
+        BRANCH=unknown
+    fi
 fi
 
 NUMBER_OF_COMMITS=$(git rev-list HEAD 2>/dev/null |wc -l)
