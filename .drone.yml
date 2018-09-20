@@ -12,6 +12,8 @@ pipeline:
       - DRONE_CACHE_HASH=`cat .drone_cache_tmp |sort |md5sum |awk '{print $1;}'`
       - rm -f .drone_cache_tmp
       - if ! test -f /buildcache/build_$${DRONE_CACHE_HASH}; then echo $${DRONE_CACHE_HASH} >.drone_cache; fi
+    volumes:
+      - /buildcache:/buildcache
     when:
       event: [push]
   build:
