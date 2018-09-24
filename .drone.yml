@@ -25,11 +25,11 @@ pipeline:
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - mkdir -p /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}
       - make >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
-      - make doc
+      - make doc >>/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
       - rm -Rf html_doc
       - cp -Rf /opt/metwork-mfext-${DRONE_BRANCH}/html_doc .
-      - make test
-      - make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm
+      - make test >>/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
+      - make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm >>/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
       - mv /opt/metwork-mfext-${DRONE_BRANCH}/*.rpm .
       - echo ${DRONE_BUILD_NUMBER} >/buildcache/build_`cat .drone_cache`
     volumes:
