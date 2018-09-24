@@ -13,7 +13,7 @@ LICENSE=Python
 
 all:: $(PREFIX)/bin/python $(PREFIX)/share/python2_version $(PREFIX)/share/python2_short_version
 $(PREFIX)/bin/python:
-	make --file=../../Makefile.standard OPTIONS="--enable-shared --disable-static" download uncompress configure build install
+	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-I$(PREFIX)/../core/lib" OPTIONS="--enable-shared --disable-static" download uncompress configure build install
 
 $(PREFIX)/share/python2_version:
 	if ! test -d $(PREFIX)/share; then mkdir -p $(PREFIX)/share; fi
