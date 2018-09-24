@@ -1,11 +1,11 @@
-.PHONY: all clean download_archive makefiles helpers doc
+.PHONY: all clean download_archive makefiles helpers doc layerdir
 
 include ../adm/root.mk
 include ../adm/subdir_root.mk
 
 SUBDIRS=$(shell ls -d layer* |grep -v "\.mk")
 
-all:: makefiles helpers
+all:: layerdir makefiles helpers
 	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) all || exit 1; cd $${OLDPWD}; done
 	chmod -R u+w $(MFEXT_HOME)/opt
 
@@ -35,3 +35,6 @@ $(MFEXT_HOME)/share/python3_layer.mk: python3_layer.mk
 
 $(MFEXT_HOME)/share/python2_layer.mk: python2_layer.mk
 	cp -f $< $@
+
+layerdir:
+	@if ! test -d $(MFEXT_HOME)/opt; then mkdir $(MFEXT_HOME)/opt; fi
