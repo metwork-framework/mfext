@@ -11,6 +11,8 @@
 
 ### Features
 
+* add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
+* add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
 * first import ([00adaf7](https://github.com/metwork-framework/mfext/commit/00adaf7))
 
 
