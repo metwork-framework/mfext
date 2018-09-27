@@ -1,4 +1,4 @@
-BINS=_launch_crontab clear.sh metwork_debug _doc_layer.sh _yaml_to_md.py
+BINS=_launch_crontab clear.sh metwork_debug _doc_layer.sh _yaml_to_md.py _build_cache_hash.sh
 SHARES=_metwork.spec
 
 include ../adm/root.mk
