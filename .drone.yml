@@ -30,6 +30,7 @@ pipeline:
       - mv /opt/metwork-mfext-${DRONE_BRANCH}/*.rpm .
     volumes:
       - /pub:/pub
+      - /buildcache:/buildcache
     when:
       event: [push]
   publish_ci:
