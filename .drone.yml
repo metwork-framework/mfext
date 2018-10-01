@@ -7,11 +7,8 @@ pipeline:
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - ./bootstrap.sh /opt/metwork-mfext-${DRONE_BRANCH}
       - cat adm/root.mk
-      - cat adm/root.mk >.drone_cache_tmp
-      - rpm -qa >>.drone_cache_tmp
-      - DRONE_CACHE_HASH=`cat .drone_cache_tmp |sort |md5sum |awk '{print $1;}'`
-      - rm -f .drone_cache_tmp
-      - if ! test -f /buildcache/build_$${DRONE_CACHE_HASH}; then echo $${DRONE_CACHE_HASH} >.drone_cache; fi
+      - CACHE_HASH=`./adm2/_build_cache_hash.sh .`
+      - if ! test -f /buildcache/build_mfext_${DRONE_BRANCH}_$${CACHE_HASH}; then echo $${CACHE_HASH} >.drone_cache; fi
     volumes:
       - /buildcache:/buildcache
     when:
@@ -20,7 +17,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     commands:
       - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
-      - if ! test -f .drone_cache; then echo "publish bypass"; exit 0; fi
+      - if ! test -f .drone_cache; then echo "build bypass"; exit 0; fi
       - export METWORK_BUILD_OS=${OS_VERSION}
       - mkdir -p /opt/metwork-mfext-${DRONE_BRANCH}
       - mkdir -p /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}
@@ -31,9 +28,7 @@ pipeline:
       - make test >>/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
       - make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm >>/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make.log 2>&1
       - mv /opt/metwork-mfext-${DRONE_BRANCH}/*.rpm .
-      - echo ${DRONE_BUILD_NUMBER} >/buildcache/build_`cat .drone_cache`
     volumes:
-      - /buildcache:/buildcache
       - /pub:/pub
     when:
       event: [push]
@@ -47,8 +42,10 @@ pipeline:
       - yum -y install createrepo
       - createrepo --update /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}
       - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext; mkdir -p /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext ; cp -Rf html_doc/* /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext/ ; fi
+      - touch /buildcache/build_mfext_${DRONE_BRANCH}_`cat .drone_cache`
     volumes:
       - /pub:/pub
+      - /buildcache:/buildcache
     when:
       event: [push]
   trigger:
