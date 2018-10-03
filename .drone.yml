@@ -37,7 +37,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     commands:
       - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
-      - if ! test -f .drone_cache; then echo "publish bypass"; exit 0; fi
+      - if ! test -f .drone_cache; then echo "publish bypass"; touch .drone_downstream_bypass; exit 0; fi
       - mkdir -p /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
       - cp *.rpm /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
       - yum -y install createrepo
@@ -50,8 +50,8 @@ pipeline:
     when:
       event: [push]
   trigger:
-    image: plugins/downstream
-    fork: true
+    image: metwork/drone-downstream-specific-image:${DRONE_BRANCH}
+    pull: true
     repositories:
       - metwork-framework/docker-mfcom-${OS_VERSION}-buildimage@${DRONE_BRANCH}
     secrets: [ downstream_token, downstream_server ]
