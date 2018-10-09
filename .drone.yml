@@ -59,9 +59,9 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     when:
       event: push
-      branch: integration 
+      branch: integration
   build:
-    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    image: metwork/mfext-${OS_VERSION}-buildimage:master
     <<: *build_common
     when:
       event: push
@@ -74,7 +74,7 @@ pipeline:
       branch: integration
   publish_ci:
     <<: *publish_ci_common
-    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    image: metwork/mfext-${OS_VERSION}-buildimage:master
     when:
       event: push
       branch: [ master, pci_* ]
