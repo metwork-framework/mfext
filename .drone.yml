@@ -26,6 +26,7 @@ build_common: &build_common
     - mv /opt/metwork-mfext-${DRONE_BRANCH}/*.rpm .
   volumes:
     - /pub:/pub
+    - /buildcache:/buildcache
 
 publish_ci_common: &publish_ci_common
   commands:
