@@ -88,6 +88,16 @@ pipeline:
       status: [ success ]
       event: push
       branch: [ master, integration ]
+  trigger_tests:
+    image: metwork/drone-downstream-specific-image:${DRONE_BRANCH}
+    pull: true
+    repositories:
+      - metwork-framework/mfext-integration-tests@${DRONE_BRANCH}
+    secrets: [ downstream_token, downstream_server ]
+    when:
+      status: [ success ]
+      event: push
+      branch: [ master, integration, ci_*, pci_* ]
 
 matrix:
   OS_VERSION:
