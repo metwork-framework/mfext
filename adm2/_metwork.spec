@@ -355,11 +355,11 @@ rm -fr %{buildroot}
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 /opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python2_scientific
-{% endif %}
 
 %files integration-tests-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 /opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/integration_tests
+{% endif %}
 
 {% if MODULE == "MFSERV" %}
 %files nodejs-{{MODULE_BRANCH}}
