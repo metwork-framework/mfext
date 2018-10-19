@@ -97,7 +97,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration ]
+      branch: [ master, integration, ci_*, pci_* ]
 
 matrix:
   OS_VERSION:
