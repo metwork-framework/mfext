@@ -15,3 +15,4 @@ mockredispy
 unidecode
 m2r
 jupyter_client
+pytest
