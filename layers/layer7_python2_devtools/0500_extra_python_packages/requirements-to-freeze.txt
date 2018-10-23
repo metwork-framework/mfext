@@ -10,3 +10,4 @@ jedi
 pydocstyle
 flake8-docstrings
 mockredispy
+pytest
