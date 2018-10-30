@@ -27,7 +27,7 @@ pytz==2018.4
 PyYAML==3.12
 pyzmq==16.0.4
 redis==2.10.6
-requests==2.18.4
+requests==2.20.0
 requests-toolbelt==0.8.0
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
