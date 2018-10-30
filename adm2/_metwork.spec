@@ -29,7 +29,7 @@ AutoProv: no
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-full
 {% if MODULE == "MFEXT" %}
 Requires: which
-Requires: metwork-mfext-core-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-python2-scientific-{{MFEXT_BRANCH}}, metwork-mfext-nodejs-{{MFEXT_BRANCH}}
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-python2-scientific-{{MFEXT_BRANCH}}, metwork-mfext-nodejs-{{MFEXT_BRANCH}}, metwork-mfext-mapserver-{{MFEXT_BRANCH}}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 Requires: openssl >= 1.0.2
 Requires: openssl-libs >= 1.0.2
@@ -148,6 +148,15 @@ Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
 %description nodejs-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} nodejs layer
 
+%package mapserver-{{MFEXT_BRANCH}}
+Summary: metwork {{MODULE_LOWERCASE}} mapserver layer
+Group: Applications/Multimedia
+AutoReq: no
+AutoProv: no
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}
+%description mapserver-{{MFEXT_BRANCH}}
+metwork {{MODULE_LOWERCASE}} mapserver layer
+
 %package python2-scientific-{{MFEXT_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} python2 scientific layer
 Group: Applications/Multimedia
@@ -228,6 +237,15 @@ chmod g+rx %{buildroot}/home/{{MODULE_LOWERCASE}}
 {% endif %}
 chmod -R a+rX %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
 rm -Rf %{_builddir}/%{name}-%{version}-%{release} 2>/dev/null
+{% if MODULE == "MFCOM" %}
+mkdir -p %{buildroot}/etc/security/limits.d/
+cat >>%{buildroot}/etc/security/limits.d/50-metwork.conf <<
+@metwork    soft    nofile  100000
+@metwork    hard    nofile  100000
+@metwork    soft    nproc  100000
+@metwork    hard    nproc  100000
+EOF
+{% endif %}
 
 %post core-{{MODULE_BRANCH}}
 if test -f /etc/metwork.config; then
@@ -330,6 +348,9 @@ rm -fr %{buildroot}
 {% else %}
 /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
 {% endif %}
+{% if MODULE == "MFCOM" %}
+/etc/security/limits.d/50-metwork.conf
+{% endif %}
 
 {% if MODULE == "MFEXT" %}
 %files devtools-{{MFEXT_BRANCH}}
@@ -351,6 +372,10 @@ rm -fr %{buildroot}
 %files nodejs-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 /opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/nodejs
+
+%files mapserver-{{MFEXT_BRANCH}}
+%defattr(-,root,root,-)
+/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/mapserver
 
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
