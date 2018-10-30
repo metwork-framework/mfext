@@ -16,6 +16,7 @@
 * add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
 * add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
 * first import ([00adaf7](https://github.com/metwork-framework/mfext/commit/00adaf7))
+* mapserver introduction ([c9e796b](https://github.com/metwork-framework/mfext/commit/c9e796b)), closes [#51](https://github.com/metwork-framework/mfext/issues/51)
 
 
 
