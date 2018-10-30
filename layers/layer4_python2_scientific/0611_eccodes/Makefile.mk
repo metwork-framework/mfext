@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=eccodes
-export VERSION=2.7.3
+export VERSION=2.9.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=0d2603722bbbd6a7fe70b32cbb24b5ba
+export CHECKSUM=fab239b47a0a8a1531b68e1e76374321
 export EXPLICIT_NAME=$(NAME)-$(VERSION)-Source
 DESCRIPTION=\
 ecCodes is a package developed by ECMWF which provides an application programming interface and a set of tools for decoding and encoding messages in the following formats: \
@@ -14,7 +14,6 @@ ecCodes is a package developed by ECMWF which provides an application programmin
     WMO GTS abbreviated header (only decoding).
 WEBSITE=https://www.ecmwf.int/en/computing/software
 LICENSE=Apache 2.0 : http://www.apache.org/licenses/LICENSE-2.0
-SHORT_VERSION=2.7.3
 
 
 all:: $(PREFIX)/lib/python2.7/site-packages/eccodes-$(VERSION)-py2.7.egg-info
