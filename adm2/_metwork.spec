@@ -153,7 +153,7 @@ Summary: metwork {{MODULE_LOWERCASE}} mapserver layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Requires: metwork-mfext-core-{{MFEXT_BRANCH}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-postgresql-{{MFEXT_BRANCH}}
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}
 %description mapserver-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} mapserver layer
 
@@ -237,6 +237,15 @@ chmod g+rx %{buildroot}/home/{{MODULE_LOWERCASE}}
 {% endif %}
 chmod -R a+rX %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
 rm -Rf %{_builddir}/%{name}-%{version}-%{release} 2>/dev/null
+{% if MODULE == "MFCOM" %}
+mkdir -p %{buildroot}/etc/security/limits.d/
+cat >>%{buildroot}/etc/security/limits.d/50-metwork.conf <<
+@metwork    soft    nofile  100000
+@metwork    hard    nofile  100000
+@metwork    soft    nproc  100000
+@metwork    hard    nproc  100000
+EOF
+{% endif %}
 
 %post core-{{MODULE_BRANCH}}
 if test -f /etc/metwork.config; then
@@ -338,6 +347,9 @@ rm -fr %{buildroot}
 /opt/metwork-mfcom-{{MFCOM_BRANCH}}/share
 {% else %}
 /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
+{% endif %}
+{% if MODULE == "MFCOM" %}
+/etc/security/limits.d/50-metwork.conf
 {% endif %}
 
 {% if MODULE == "MFEXT" %}
