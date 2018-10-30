@@ -239,7 +239,7 @@ chmod -R a+rX %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
 rm -Rf %{_builddir}/%{name}-%{version}-%{release} 2>/dev/null
 {% if MODULE == "MFCOM" %}
 mkdir -p %{buildroot}/etc/security/limits.d/
-cat >>%{buildroot}/etc/security/limits.d/50-metwork.conf <<
+cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
 @metwork    soft    nofile  100000
 @metwork    hard    nofile  100000
 @metwork    soft    nproc  100000
