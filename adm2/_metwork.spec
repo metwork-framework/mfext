@@ -153,7 +153,7 @@ Summary: metwork {{MODULE_LOWERCASE}} mapserver layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Requires: metwork-mfext-core-{{MFEXT_BRANCH}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-postgresql-{{MFEXT_BRANCH}}
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}
 %description mapserver-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} mapserver layer
 
