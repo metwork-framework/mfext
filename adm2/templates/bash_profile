@@ -39,6 +39,8 @@ if test "${PLUGIN_NAME}" != ""; then
             fi
         }
         alias cd=custom_cd
+        # shellcheck disable=SC2164
+        cd "${LK}"
     fi
 fi
 
