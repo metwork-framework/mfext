@@ -5,4 +5,5 @@ core@mfext
 -core@mfcom
 -root@{MODULE_LOWERCASE}
 -core@{MODULE_LOWERCASE}
+-mapserver@mfext
 python
