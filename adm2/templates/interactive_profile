@@ -17,8 +17,26 @@ function __prompt_without_x_mode() {
 function plugin_env() {
     local PLUGIN=$1
     if test "${PLUGIN}" = ""; then
-        echo "usage: plugin_env PLUGIN_NAME"
+        if test -f .layerapi2_label; then
+            N=$(cat .layerapi2_label 2>/dev/null |grep "^plugin_" |wc -l)
+            if test ${N} -gt 0; then
+                # we are inside a plugin dir
+                field_prepend METWORK_LAYERS_PATH "$(pwd)"
+                layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="$(cat .layerapi2_label |grep '^plugin_' |head -1)" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+                return
+            fi
+        fi
+        echo "usage: plugin_env PLUGIN_NAME or plugin_env (inside a plugin dir)"
         return 1
+    fi
+    N=$(is_layer_installed "plugin_${PLUGIN}@${MODULE_LOWERCASE}")
+    if test "${N}" = "0"; then
+        echo "Error: layer: plugin_${PLUGIN}@${MODULE_LOWERCASE} is not available"
+        echo
+        echo "Maybe the plugin: ${PLUGIN} is not installed ?"
+        echo
+        echo "Install it first or use 'plugin_env' without arguments inside the plugin directory"
+        return
     fi
     layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="plugin_${PLUGIN}@${MODULE_LOWERCASE}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
 }
