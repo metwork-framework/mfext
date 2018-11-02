@@ -17,8 +17,10 @@
 * add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
 * add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
 * first import ([00adaf7](https://github.com/metwork-framework/mfext/commit/00adaf7))
+* load mapserver layer by default (if available) ([7e77a00](https://github.com/metwork-framework/mfext/commit/7e77a00))
 * mapserver introduction ([c9e796b](https://github.com/metwork-framework/mfext/commit/c9e796b)), closes [#51](https://github.com/metwork-framework/mfext/issues/51)
 * upgrade python requests because of security alert ([f8590a9](https://github.com/metwork-framework/mfext/commit/f8590a9))
+* we can now use plugin_env function in a plugin directory ([9274024](https://github.com/metwork-framework/mfext/commit/9274024))
 * we increase some system limits (nofile and nproc) ([c9632e3](https://github.com/metwork-framework/mfext/commit/c9632e3))
 
 
