@@ -10,7 +10,7 @@ fi
 SRCDIR=$(readlink -f "${SRCDIR}")
 cd "${SRCDIR}"
 
-git ls-tree HEAD |grep -v '\.git' |grep -v '.md$' |grep -v '.yml$' >/tmp/build_cache_hash.$$
+git ls-tree HEAD |grep -v '\.git' |grep -v '\.md$' |grep -v '\.yml$' |grep -v '\.metwork-framework' >/tmp/build_cache_hash.$$
 if test -f /etc/buildimage_hash; then
     cat /etc/buildimage_hash >>/tmp/build_cache_hash.$$
 fi
