@@ -14,11 +14,15 @@
 ### Features
 
 * add integration_tests layer and rpm mfext-integration-tests ([e7683f6](https://github.com/metwork-framework/mfext/commit/e7683f6))
-* add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
+* add mapserverapi library ([1cc8895](https://github.com/metwork-framework/mfext/commit/1cc8895))
+* add mapserverapi_python ([d173f3d](https://github.com/metwork-framework/mfext/commit/d173f3d))
+* add pytest package and update some other ones ([c0132d1](https://github.com/metwork-framework/mfext/commit/c0132d1))
 * add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
+* add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
 * first import ([00adaf7](https://github.com/metwork-framework/mfext/commit/00adaf7))
 * load mapserver layer by default (if available) ([7e77a00](https://github.com/metwork-framework/mfext/commit/7e77a00))
 * mapserver introduction ([c9e796b](https://github.com/metwork-framework/mfext/commit/c9e796b)), closes [#51](https://github.com/metwork-framework/mfext/issues/51)
+* upgrade eccodes to 2.9.0 ([86387bc](https://github.com/metwork-framework/mfext/commit/86387bc))
 * upgrade python requests because of security alert ([f8590a9](https://github.com/metwork-framework/mfext/commit/f8590a9))
 * we can now use plugin_env function in a plugin directory ([9274024](https://github.com/metwork-framework/mfext/commit/9274024))
 * we increase some system limits (nofile and nproc) ([c9632e3](https://github.com/metwork-framework/mfext/commit/c9632e3))
