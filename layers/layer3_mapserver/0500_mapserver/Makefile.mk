@@ -11,6 +11,6 @@ MapServer is an Open Source platform for publishing spatial data and interactive
 WEBSITE=http://mapserver.org
 LICENSE=MIT
 
-all:: $(PREFIX)/bin/mapserver
-$(PREFIX)/bin/mapserver:
+all:: $(PREFIX)/bin/mapserv
+$(PREFIX)/bin/mapserv:
 	$(MAKE) --file=../../Makefile.standard OPTIONS="-DWITH_CURL=1 -DWITH_GIF=0 -DWITH_FCGI=0 -DWITH_HARFBUZZ=0 -DWITH_FRIBIDI=0 -DWITH_PROTOBUFC=0 -DCMAKE_PREFIX_PATH='$(PREFIX);$(PREFIX)/../scientific;$(PREFIX)/../postgresql;$(PREFIX)/../core'" download uncompress configure_cmake cmake build_cmake install_cmake
