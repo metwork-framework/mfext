@@ -34,10 +34,10 @@ before:
 		fi; \
 	fi
 	if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then mkdir -p $(MODULE_HOME)/opt/$(LAYER_NAME); fi
-	if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R u+w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
+	#if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R u+w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
 
 after:
-	if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R a-w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
+	#if test "$(MODULE)" = "MFEXT" -a "$(LAYER_HASH)" != "null"; then chmod -R a-w "$(MFEXT_HOME)/opt/$(LAYER_NAME)"; fi
 	if test "$(MODULE)" = "MFEXT"; then \
 		if test "$(LAYER_HASH)" != "null"; then \
 			if ! test -f "$(MFEXT_HOME)/opt/layer_$(LAYER_HASH).tar.gz"; then \
@@ -57,13 +57,14 @@ download_archive:
 
 mrproper: clean
 	@if test "$(LAYER_NAME)" != ""; then \
-		if test "$(LAYER_HASH)" != "null"; then \
-			chmod -R u+w $(MODULE_HOME)/opt/$(LAYER_NAME); \
-		fi; \
+		#if test "$(LAYER_HASH)" != "null"; then \
+		#	chmod -R u+w $(MODULE_HOME)/opt/$(LAYER_NAME); \
+		#fi;
 		rm -Rf $(MODULE_HOME)/opt/$(LAYER_NAME); \
 	fi
 
-	if test "$(LAYER_NAME)" != "" -a "$(LAYER_HASH)" != "null"; then chmod -R u+w $(MODULE_HOME)/opt/$(LAYER_NAME) ; rm -Rf $(MODULE_HOME)/opt/$(LAYER_NAME); fi
+	#if test "$(LAYER_NAME)" != "" -a "$(LAYER_HASH)" != "null"; then chmod -R u+w $(MODULE_HOME)/opt/$(LAYER_NAME) ; rm -Rf $(MODULE_HOME)/opt/$(LAYER_NAME); fi
+	if test "$(LAYER_NAME)" != "" -a "$(LAYER_HASH)" != "null"; then rm -Rf $(MODULE_HOME)/opt/$(LAYER_NAME); fi
 
 $(MODULE_HOME)/opt/$(LAYER_NAME)/%: %
 	@mkdir -p $(shell dirname $@)
