@@ -15,8 +15,6 @@ LICENSE=GNU Lesser General Public License (LGPLv3)
 #Iris is not compatible with python3, unless python3 is build with module tkinter (which requires rpm tcl-devel and tk-devel)
 #(because dependency pyketools is calling dependency matplotlib with explicit backend TkAgg instead of default Agg)
 
-all:: $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/iris
-$(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/iris:
+all:: $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/scitools_iris-$(VERSION)-py$(PYTHON3_SHORT_VERSION).egg
+$(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/scitools_iris-$(VERSION)-py$(PYTHON3_SHORT_VERSION).egg:
 	$(MAKE) --file=../../Makefile.standard ARCHIV=$(ARCHIV) PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../scientific/include" EXTRALDFLAGS="-L$(PREFIX)/../scientific/lib" download uncompress python3build python3install
-
-
