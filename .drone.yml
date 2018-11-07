@@ -45,64 +45,52 @@ pipeline:
   bootstrap_integration:
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     environment:
-      - TARGET_BRANCH=integration
+      # yes "master" and not "integration" because we prefer install
+      # in the same directory (so we can't install "master" and "integration"
+      # at same time) so we can share the cache between integration and
+      # master builds (and ci_*, pci_* also)
+      - TARGET_BRANCH=master
     <<: *bootstrap_common
     when:
       event: push
       branch: integration
-  bootstrap_ci:
-    image: metwork/mfext-${OS_VERSION}-buildimage:master
-    environment:
-      - TARGET_BRANCH=integration
-    <<: *bootstrap_common
-    when:
-      event: push
-      branch: [ ci_* ]
   bootstrap:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     environment:
-      - TARGET_BRANCH=${DRONE_BRANCH}
+      - TARGET_BRANCH=master
     <<: *bootstrap_common
     when:
       event: push
-      branch: [ master, pci_* ]
-  build_integration_push:
+      branch: [ master, ci_*, pci_* ]
+  build_integration:
     <<: *build_common
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     environment:
-      - TARGET_BRANCH=integration
+      - TARGET_BRANCH=master
     when:
       event: push
       branch: integration
-  build_ci:
-    image: metwork/mfext-${OS_VERSION}-buildimage:master
-    environment:
-      - TARGET_BRANCH=integration
-    <<: *build_common
-    when:
-      event: push
-      branch: [ ci_* ]
   build:
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     environment:
-      - TARGET_BRANCH=${DRONE_BRANCH}
+      - TARGET_BRANCH=master
     <<: *build_common
     when:
       event: push
-      branch: [ master, pci_* ]
-  publish_ci_integration:
+      branch: [ master, ci_*, pci_* ]
+  publish_integration:
     <<: *publish_ci_common
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     environment:
-      - TARGET_BRANCH=integration
+      - TARGET_BRANCH=master
     when:
       event: push
       branch: integration
-  publish_ci:
+  publish:
     <<: *publish_ci_common
     image: metwork/mfext-${OS_VERSION}-buildimage:master
     environment:
-      - TARGET_BRANCH=${DRONE_BRANCH}
+      - TARGET_BRANCH=master
     when:
       event: push
       branch: [ master, pci_* ]
