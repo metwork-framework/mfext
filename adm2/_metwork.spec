@@ -132,7 +132,7 @@ Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
-Requires: libX11 libXext cairo pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 Requires: libquadmath
 {% endif %}
