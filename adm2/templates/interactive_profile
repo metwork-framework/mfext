@@ -21,6 +21,7 @@ function plugin_env() {
             N=$(cat .layerapi2_label 2>/dev/null |grep "^plugin_" |wc -l)
             if test ${N} -gt 0; then
                 # we are inside a plugin dir
+                export PIP_PREFIX="$(pwd)/local"
                 field_prepend METWORK_LAYERS_PATH "$(pwd)"
                 layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="$(cat .layerapi2_label |grep '^plugin_' |head -1)" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
                 return
@@ -38,6 +39,7 @@ function plugin_env() {
         echo "Install it first or use 'plugin_env' without arguments inside the plugin directory"
         return
     fi
+    export PIP_PREFIX="${MODULE_RUNTIME_HOME}/var/plugins/${PLUGIN}/local"
     layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="plugin_${PLUGIN}@${MODULE_LOWERCASE}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
 }
 
