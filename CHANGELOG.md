@@ -16,6 +16,7 @@
 * add integration_tests layer and rpm mfext-integration-tests ([e7683f6](https://github.com/metwork-framework/mfext/commit/e7683f6))
 * add mapserverapi library ([1cc8895](https://github.com/metwork-framework/mfext/commit/1cc8895))
 * add mapserverapi_python ([d173f3d](https://github.com/metwork-framework/mfext/commit/d173f3d))
+* Add postgresql support in gdal ([fee0706](https://github.com/metwork-framework/mfext/commit/fee0706)), closes [#76](https://github.com/metwork-framework/mfext/issues/76)
 * add pytest package and update some other ones ([c0132d1](https://github.com/metwork-framework/mfext/commit/c0132d1))
 * add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
 * add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))

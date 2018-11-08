@@ -134,16 +134,20 @@ alias mfext="source {MFEXT_HOME}/share/interactive_profile"
 in `.bash_profile` file and use this `mfext` alias when you want to quickly load the "mfext environment".
 
 
+
+## Installation guide
+
+See [this document](https://github.com/metwork-framework/resources/blob/master/documents/install_a_metwork_package.md).
+
+
 ## Contributing guide
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
 
-
 ## Code of Conduct
 
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
-
 
 
