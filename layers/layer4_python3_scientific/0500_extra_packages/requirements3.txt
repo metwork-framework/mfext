@@ -13,3 +13,4 @@ pyshp==1.2.12
 scipy==1.1.0
 Shapely==1.6.4.post2
 toolz==0.9.0
+-e git+https://github.com/metwork-framework/mapserverapi_python.git@f773352ab53883963186b22a8b9cb3a000555a12#egg=mapserverapi
