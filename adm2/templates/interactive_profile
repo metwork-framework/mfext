@@ -14,6 +14,7 @@ function __prompt_without_x_mode() {
     fi
 }
 
+{% if MODULE == "MFBASE" or MODULE == "MFSERV" or MODULE == "MFDATA" %}
 function plugin_env() {
     local PLUGIN=$1
     if test "${PLUGIN}" = ""; then
@@ -42,6 +43,7 @@ function plugin_env() {
     export PIP_PREFIX="${MODULE_RUNTIME_HOME}/var/plugins/${PLUGIN}/local"
     layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="plugin_${PLUGIN}@${MODULE_LOWERCASE}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
 }
+{% endif %}
 
 # Prompt
 if test "${LIQUIDPROMPT}" != "0"; then
