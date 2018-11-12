@@ -14,7 +14,11 @@ git ls-tree HEAD |grep -v '\.git' |grep -v '\.md$' |grep -v '\.yml$' |grep -v '\
 if test -f /etc/buildimage_hash; then
     cat /etc/buildimage_hash >>/tmp/build_cache_hash.$$
 fi
-cat "${SRCDIR}/adm/root.mk" |grep _HOME >>/tmp/build_cache_hash.$$
+if test "${DRONE_BRANCH:-}" != ""; then
+    echo "${DRONE_BRANCH}" >>/tmp/build_cache_hash.$$
+else
+    git rev-parse --abbrev-ref HEAD 2>/dev/null |sed 's/-/_/g' >>/tmp/build_cache_hash.$$
+fi
 
 cat /tmp/build_cache_hash.$$ |md5sum |awk '{print $1;}'
 rm -f /tmp/build_cache_hash.$$
