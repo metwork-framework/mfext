@@ -218,24 +218,24 @@ fi
 %build
 
 %install
-mkdir -p %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} 2>/dev/null
-ln -s /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}
+mkdir -p %{buildroot}/{{MODULE_HOME}} 2>/dev/null
+ln -s {{MODULE_HOME}} %{buildroot}{{MODULE_HOME}}/../metwork-{{MODULE_LOWERCASE}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
 mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
 {% endif %}
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/* %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/
-rm -Rf %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/html_doc
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/* %{buildroot}{{MODULE_HOME}}/
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}{{MODULE_HOME}}/
+rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
-ln -s /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
-ln -s /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/share/bash_profile %{buildroot}/home/{{MODULE_LOWERCASE}}/.bash_profile
+ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
+ln -s {{MODULE_HOME}}/bash_profile %{buildroot}/home/{{MODULE_LOWERCASE}}/.bash_profile
 chmod -R go-rwx %{buildroot}/home/{{MODULE_LOWERCASE}}
 chmod -R u+rX %{buildroot}/home/{{MODULE_LOWERCASE}}
 {% if MODULE == "MFDATA" %}
 chmod g+rx %{buildroot}/home/{{MODULE_LOWERCASE}}
 {% endif %}
 {% endif %}
-chmod -R a+rX %{buildroot}/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
+chmod -R a+rX %{buildroot}{{MODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-%{release} 2>/dev/null
 {% if MODULE == "MFCOM" %}
 mkdir -p %{buildroot}/etc/security/limits.d/
@@ -265,7 +265,7 @@ if ! test -f /etc/metwork.config; then
     echo GENERIC >/etc/metwork.config
 fi
 {% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
-  cp -f /opt/metwork-mfcom-{{MFCOM_BRANCH}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
+  cp -f {{MFCOM_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
   chmod 0755 /etc/rc.d/init.d/metwork
   chown root:root /etc/rc.d/init.d/metwork
   if test `/sbin/chkconfig --list metwork 2>/dev/null |wc -l` -eq 0; then
@@ -282,8 +282,8 @@ fi
 
 %postun core-{{MODULE_BRANCH}}
 if [ "$1" = "0" ]; then # last uninstall only
-  rm -Rf /opt/metwork-{{MODULE_LOWERCASE}} 2>/dev/null
-  rm -Rf /opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} 2>/dev/null
+  rm -Rf {{MODULE_HOME}}/../metwork-{{MODULE_LOWERCASE}} 2>/dev/null
+  rm -Rf {{MODULE_HOME}} 2>/dev/null
   {% if MODULE_HAS_HOME_DIR == "1" %}
   userdel -f -r {{MODULE_LOWERCASE}} 2>/dev/null
   rm -Rf /home/{{MODULE_LOWERCASE}} 2>/dev/null
@@ -299,6 +299,7 @@ rm -fr %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+# FIXME: try to avoid to hardcode /opt here
 /opt/metwork-{{MODULE_LOWERCASE}}
 
 %files core-{{MODULE_BRANCH}}
@@ -308,45 +309,45 @@ rm -fr %{buildroot}
 /home/{{MODULE_LOWERCASE}}
 {% endif %}
 {% if MODULE == "MFEXT" %}
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/.layerapi2_label
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/bin
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/config
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/lib
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/include
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/share
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/core
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/default
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/openresty
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_core
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_circus
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/rpm
+{{MFEXT_HOME}}/.layerapi2_label
+{{MFEXT_HOME}}/bin
+{{MFEXT_HOME}}/config
+{{MFEXT_HOME}}/lib
+{{MFEXT_HOME}}/include
+{{MFEXT_HOME}}/share
+{{MFEXT_HOME}}/opt/core
+{{MFEXT_HOME}}/opt/default
+{{MFEXT_HOME}}/opt/python
+{{MFEXT_HOME}}/opt/openresty
+{{MFEXT_HOME}}/opt/python3
+{{MFEXT_HOME}}/opt/python3_core
+{{MFEXT_HOME}}/opt/python3_circus
+{{MFEXT_HOME}}/opt/rpm
 {% elif MODULE == "MFDATA" %}
-/opt/metwork-mfdata-{{MODULE_BRANCH}}/.layerapi2_label
-/opt/metwork-mfdata-{{MODULE_BRANCH}}/.layerapi2_dependencies
-/opt/metwork-mfdata-{{MODULE_BRANCH}}/bin
-/opt/metwork-mfdata-{{MODULE_BRANCH}}/config
-/opt/metwork-mfdata-{{MODULE_BRANCH}}/share
-/opt/metwork-mfdata-{{MODULE_BRANCH}}/opt/python3
+{{MODULE_HOME}}/.layerapi2_label
+{{MODULE_HOME}}/.layerapi2_dependencies
+{{MODULE_HOME}}/bin
+{{MODULE_HOME}}/config
+{{MODULE_HOME}}/share
+{{MODULE_HOME}}/opt/python3
 {% elif MODULE == "MFSERV" %}
-/opt/metwork-mfserv-{{MODULE_BRANCH}}/.layerapi2_label
-/opt/metwork-mfserv-{{MODULE_BRANCH}}/.layerapi2_dependencies
-/opt/metwork-mfserv-{{MODULE_BRANCH}}/bin
-/opt/metwork-mfserv-{{MODULE_BRANCH}}/config
-/opt/metwork-mfserv-{{MODULE_BRANCH}}/share
-/opt/metwork-mfserv-{{MODULE_BRANCH}}/opt/python3
+{{MODULE_HOME}}.layerapi2_label
+{{MODULE_HOME}}/.layerapi2_dependencies
+{{MODULE_HOME}}/bin
+{{MODULE_HOME}}/config
+{{MODULE_HOME}}/share
+{{MODULE_HOME}}/opt/python3
 {% elif MODULE == "MFCOM" %}
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/.layerapi2_label
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/.layerapi2_dependencies
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/bin
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/config
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/include
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/lib
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/opt/python3
-/opt/metwork-mfcom-{{MFCOM_BRANCH}}/share
+{{MODULE_HOME}}/.layerapi2_label
+{{MODULE_HOME}}/.layerapi2_dependencies
+{{MODULE_HOME}}/bin
+{{MODULE_HOME}}/config
+{{MODULE_HOME}}/include
+{{MODULE_HOME}}/lib
+{{MODULE_HOME}}/opt/python3
+{{MODULE_HOME}}/share
 {% else %}
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
+{{MODULE_HOME}}
 {% endif %}
 {% if MODULE == "MFCOM" %}
 /etc/security/limits.d/50-metwork.conf
@@ -355,48 +356,48 @@ rm -fr %{buildroot}
 {% if MODULE == "MFEXT" %}
 %files devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/devtools
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_devtools
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_devtools_jupyter
+{{MFEXT_HOME}}/opt/devtools
+{{MFEXT_HOME}}/opt/python3_devtools
+{{MFEXT_HOME}}/opt/python3_devtools_jupyter
 
 %files python2-devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python2_devtools
+{{MFEXT_HOME}}/opt/python2_devtools
 
 %files scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/scientific
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/postgresql
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_scientific
+{{MFEXT_HOME}}/opt/scientific
+{{MFEXT_HOME}}/opt/postgresql
+{{MFEXT_HOME}}/opt/python3_scientific
 
 %files nodejs-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/nodejs
+{{MFEXT_HOME}}/opt/nodejs
 
 %files mapserver-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/mapserver
+{{MFEXT_HOME}}/opt/mapserver
 
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python2_scientific
+{{MFEXT_HOME}}/opt/python2_scientific
 
 %files integration-tests-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/integration_tests
+{{MFEXT_HOME}}/opt/integration_tests
 {% endif %}
 
 {% if MODULE == "MFSERV" %}
 %files nodejs-{{MODULE_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/nodejs
+{{MODULE_HOME}}/opt/nodejs
 {% endif %}
 
 {% if MODULE == "MFEXT" or MODULE == "MFCOM" or MODULE == "MFDATA" or MODULE == "MFSERV" %}
 %files python2-{{MODULE_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/python2
+{{MODULE_HOME}}/opt/python2
 {% if MODULE == "MFEXT" %}
-/opt/metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}/opt/python2_core
+{{MODULE_HOME}}/opt/python2_core
 {% endif %}
 {% endif %}
