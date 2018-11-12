@@ -9,7 +9,6 @@ git ls-tree "${BRANCH}" bootstrap.sh adm Makefile layerapi2 glib2 config layers/
 
 cd "${DIR}/../layers" && git ls-tree "${BRANCH}" |grep -v "layer[0-9]_.*"
 cat "${DIR}/root.mk" |grep -v "_VERSION" |sort
-if test -f /etc/redhat-release; then
-    cat /etc/redhat-release
+if test -f /etc/buildimage_hash; then
+    cat /etc/buildimage_hash
 fi
-rpm -qa |sort
