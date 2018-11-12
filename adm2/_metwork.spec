@@ -308,20 +308,20 @@ rm -fr %{buildroot}
 /home/{{MODULE_LOWERCASE}}
 {% endif %}
 {% if MODULE == "MFEXT" %}
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/.layerapi2_label
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/bin
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/config
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/lib
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/include
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/share
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/core
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/default
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/openresty
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_core
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_circus
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/rpm
+{{MFEXT_HOME}}/.layerapi2_label
+{{MFEXT_HOME}}/bin
+{{MFEXT_HOME}}/config
+{{MFEXT_HOME}}/lib
+{{MFEXT_HOME}}/include
+{{MFEXT_HOME}}/share
+{{MFEXT_HOME}}/opt/core
+{{MFEXT_HOME}}/opt/default
+{{MFEXT_HOME}}/opt/python
+{{MFEXT_HOME}}/opt/openresty
+{{MFEXT_HOME}}/opt/python3
+{{MFEXT_HOME}}/opt/python3_core
+{{MFEXT_HOME}}/opt/python3_circus
+{{MFEXT_HOME}}/opt/rpm
 {% elif MODULE == "MFDATA" %}
 /opt/metwork-mfdata-{{MODULE_BRANCH}}/.layerapi2_label
 /opt/metwork-mfdata-{{MODULE_BRANCH}}/.layerapi2_dependencies
@@ -355,35 +355,35 @@ rm -fr %{buildroot}
 {% if MODULE == "MFEXT" %}
 %files devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/devtools
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_devtools
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_devtools_jupyter
+{{MFEXT_HOME}}/opt/devtools
+{{MFEXT_HOME}}/opt/python3_devtools
+{{MFEXT_HOME}}/opt/python3_devtools_jupyter
 
 %files python2-devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python2_devtools
+{{MFEXT_HOME}}/opt/python2_devtools
 
 %files scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/scientific
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/postgresql
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python3_scientific
+{{MFEXT_HOME}}/opt/scientific
+{{MFEXT_HOME}}/opt/postgresql
+{{MFEXT_HOME}}/opt/python3_scientific
 
 %files nodejs-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/nodejs
+{{MFEXT_HOME}}/opt/nodejs
 
 %files mapserver-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/mapserver
+{{MFEXT_HOME}}/opt/mapserver
 
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/python2_scientific
+{{MFEXT_HOME}}/opt/python2_scientific
 
 %files integration-tests-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
-/opt/metwork-mfext-{{MFEXT_BRANCH}}/opt/integration_tests
+{{MFEXT_HOME}}/opt/integration_tests
 {% endif %}
 
 {% if MODULE == "MFSERV" %}
