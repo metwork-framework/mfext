@@ -10,6 +10,9 @@
 {% set version_release_string = version_release|join('-') %}
 {% set epoch_vr = [EPOCH, version_release_string] %}
 {% set FULL_VERSION = epoch_vr|join(':') %}
+{% set _TARGET_LINK = MODULE_HOME + "/../metwork-" + MODULE_LOWERCASE %}
+{% set _TARGET_LINK_COMMAND = "readlink -m " + _TARGET_LINK %}
+{% set TARGET_LINK = _TARGET_LINK_COMMAND|shell %}
 
 Name: metwork-{{MODULE_LOWERCASE}}
 Summary: metwork {{MODULE_LOWERCASE}} module
@@ -17,7 +20,7 @@ Version: {{VERSION_BUILD}}
 Release: {{RELEASE_BUILD}}
 Epoch: {{EPOCH}}
 License: Meteo
-Source0: {{MODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar.bz2
+Source0: {{MODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar
 Group: Applications/Multimedia
 URL: http://metwork.meteo.fr
 Buildroot: %{_topdir}/tmp/%{name}-root
@@ -180,7 +183,7 @@ metwork {{MODULE_LOWERCASE}} integration tests layer
 cd %{_builddir} || exit 1
 rm -Rf %{name}-%{version}-%{release}
 rm -Rf {{MODULE_LOWERCASE}}-%{version}-%{release}
-bzip2 -dc %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-%{release}-linux64.tar.bz2 | tar -xf -
+cat %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-%{release}-linux64.tar | tar -xf -
 mkdir %{name}-%{version}-%{release}
 mv {{MODULE_LOWERCASE}}-%{version}-%{release} %{name}-%{version}-%{release}/
 cd %{name}-%{version}-%{release}
@@ -219,7 +222,7 @@ fi
 
 %install
 mkdir -p %{buildroot}/{{MODULE_HOME}} 2>/dev/null
-ln -s {{MODULE_HOME}} %{buildroot}{{MODULE_HOME}}/../metwork-{{MODULE_LOWERCASE}}
+ln -s {{MODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
 mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
 {% endif %}
@@ -282,7 +285,7 @@ fi
 
 %postun core-{{MODULE_BRANCH}}
 if [ "$1" = "0" ]; then # last uninstall only
-  rm -Rf {{MODULE_HOME}}/../metwork-{{MODULE_LOWERCASE}} 2>/dev/null
+  rm -Rf {{TARGET_LINK}} 2>/dev/null
   rm -Rf {{MODULE_HOME}} 2>/dev/null
   {% if MODULE_HAS_HOME_DIR == "1" %}
   userdel -f -r {{MODULE_LOWERCASE}} 2>/dev/null
@@ -300,7 +303,7 @@ rm -fr %{buildroot}
 %files
 %defattr(-,root,root,-)
 # FIXME: try to avoid to hardcode /opt here
-/opt/metwork-{{MODULE_LOWERCASE}}
+{{TARGET_LINK}}
 
 %files core-{{MODULE_BRANCH}}
 %defattr(-,root,root,-)

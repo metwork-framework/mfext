@@ -99,22 +99,22 @@ prereq:
 ####################################
 ##### FABRICATION DE L'ARCHIVE #####
 ####################################
-archive: $(MODULE_HOME)/$(ARCHIV)-linux64.tar.bz2
-$(MODULE_HOME)/$(ARCHIV)-linux64.tar.bz2:
+archive: $(MODULE_HOME)/$(ARCHIV)-linux64.tar
+$(MODULE_HOME)/$(ARCHIV)-linux64.tar:
 	rm -Rf $(MODULE_HOME)/$(ARCHIV) ; mkdir $(MODULE_HOME)/$(ARCHIV)
-	cp -Rpvf `find -L $(MODULE_HOME) -mindepth 1 -maxdepth 1 -type d |grep -v '^$(MODULE_HOME)/\.' |grep -v '^$(MODULE_HOME)/src' |grep -v '^$(MODULE_HOME)/build' |grep -v '^$(MODULE_HOME)/$(MODULE_LOWERCASE)'` $(MODULE_HOME)/$(ARCHIV)/
+	cp -Rpf `find -L $(MODULE_HOME) -mindepth 1 -maxdepth 1 -type d |grep -v '^$(MODULE_HOME)/\.' |grep -v '^$(MODULE_HOME)/src' |grep -v '^$(MODULE_HOME)/build' |grep -v '^$(MODULE_HOME)/$(MODULE_LOWERCASE)'` $(MODULE_HOME)/$(ARCHIV)/
 	cp -f $(MODULE_HOME)/.layerapi2* $(MODULE_HOME)/$(ARCHIV)/
 	chmod -R go-rwx $(MODULE_HOME)/$(ARCHIV)
 	chmod -R ug+rX $(MODULE_HOME)/$(ARCHIV)
 	chmod -R u+rwX $(MODULE_HOME)/$(ARCHIV)
 	rm -f $(MODULE_HOME)/$(ARCHIV)/mf*_link
-	rm -f $(MODULE_HOME)/$(ARCHIV)/*.tar.bz2
+	rm -f $(MODULE_HOME)/$(ARCHIV)/*.tar
 	rm -f $(MODULE_HOME)/$(ARCHIV)/*.rpm
 	rm -Rf $(MODULE_HOME)/$(ARCHIV)/tmp >/dev/null 2>&1
 	rm -Rf $(MODULE_HOME)/$(ARCHIV)/var >/dev/null 2>&1
 	rm -Rf $(MODULE_HOME)/$(ARCHIV)/log >/dev/null 2>&1
 	rm -Rf $(MODULE_HOME)/$(ARCHIV)/runtime >/dev/null 2>&1
-	cd $(MODULE_HOME) && tar -cvjf $(ARCHIV)-linux64.tar.bz2 $(ARCHIV)
+	cd $(MODULE_HOME) && tar -cf $(ARCHIV)-linux64.tar $(ARCHIV)
 	rm -Rf $(MODULE_HOME)/$(ARCHIV)
 
 
@@ -132,7 +132,7 @@ rpm: archive
 	mkdir $(MODULE_HOME)/rpm/tmp
 	echo '%_topdir $(MODULE_HOME)/rpm' >$(MODULE_HOME)/rpm/.rpmmacros
 	if test "$(MODULE)" = "MFEXT"; then cat $(MFEXT_HOME)/share/_metwork.spec |$(SRC_DIR)/layers/layer7_devtools/0000_penvtpl/bin/penvtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; else cat $(MFEXT_HOME)/share/_metwork.spec |envtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; fi
-	ln -s $(MODULE_HOME)/$(ARCHIV)-linux64.tar.bz2 $(MODULE_HOME)/rpm/SOURCES/$(ARCHIV)-linux64.tar.bz2
+	ln -s $(MODULE_HOME)/$(ARCHIV)-linux64.tar $(MODULE_HOME)/rpm/SOURCES/$(ARCHIV)-linux64.tar
 	cd $(MODULE_HOME)/rpm/SPECS && export HOME=$(MODULE_HOME)/rpm && rpmbuild -bb metwork-$(MODULE_LOWERCASE).spec
 	cp -f $(MODULE_HOME)/rpm/RPMS/x86_64/*.rpm $(MODULE_HOME)/
 	rm -Rf $(MODULE_HOME)/rpm
