@@ -331,7 +331,7 @@ rm -fr %{buildroot}
 {{MODULE_HOME}}/share
 {{MODULE_HOME}}/opt/python3
 {% elif MODULE == "MFSERV" %}
-{{MODULE_HOME}}.layerapi2_label
+{{MODULE_HOME}}/.layerapi2_label
 {{MODULE_HOME}}/.layerapi2_dependencies
 {{MODULE_HOME}}/bin
 {{MODULE_HOME}}/config
