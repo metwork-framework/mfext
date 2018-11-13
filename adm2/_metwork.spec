@@ -231,7 +231,7 @@ mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{ver
 rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
 ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
-ln -s {{MODULE_HOME}}/bash_profile %{buildroot}/home/{{MODULE_LOWERCASE}}/.bash_profile
+ln -s {{MODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MODULE_LOWERCASE}}/.bash_profile
 chmod -R go-rwx %{buildroot}/home/{{MODULE_LOWERCASE}}
 chmod -R u+rX %{buildroot}/home/{{MODULE_LOWERCASE}}
 {% if MODULE == "MFDATA" %}
