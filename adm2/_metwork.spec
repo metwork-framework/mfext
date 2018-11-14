@@ -31,7 +31,6 @@ AutoReq: no
 AutoProv: no
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-full
 {% if MODULE == "MFEXT" %}
-Requires: which
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-python2-scientific-{{MFEXT_BRANCH}}, metwork-mfext-nodejs-{{MFEXT_BRANCH}}, metwork-mfext-mapserver-{{MFEXT_BRANCH}}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 Requires: openssl >= 1.0.2
@@ -71,6 +70,7 @@ AutoProv: no
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
 Requires: libicu
+Requires: which
 {% endif %}
 {% elif MODULE == "MFCOM" %}
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
