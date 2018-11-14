@@ -70,9 +70,9 @@ AutoProv: no
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
 Requires: libicu
+{% endif %}
 Requires: which
 Requires: /usr/bin/lscpu
-{% endif %}
 {% elif MODULE == "MFCOM" %}
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
 {% else %}
