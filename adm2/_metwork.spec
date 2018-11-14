@@ -71,6 +71,7 @@ AutoProv: no
 Requires: libgfortran
 Requires: libicu
 Requires: which
+Requires: /usr/bin/lscpu
 {% endif %}
 {% elif MODULE == "MFCOM" %}
 Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
