@@ -371,7 +371,6 @@ rm -fr %{buildroot}
 %files scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 {{MFEXT_HOME}}/opt/scientific
-{{MFEXT_HOME}}/opt/postgresql
 {{MFEXT_HOME}}/opt/python3_scientific
 
 %files nodejs-{{MFEXT_BRANCH}}
