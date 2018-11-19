@@ -15,6 +15,12 @@ if test "${STARTUP_FLAG}" = "0"; then
     exit 0
 fi
 
+PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
+if test "${PLUGIN_NAME}" != ""; then
+    echo "ERROR: you can't use {{MODULE_LOWERCASE}}.stop inside a plugin_env"
+    exit 1
+fi
+
 LINE="*****     STOPPING ${MODULE}     *****"
 N=`echo "${LINE}" |wc -c`
 HEADER=`echo "**************************************************************" |cut -c 2-${N}`

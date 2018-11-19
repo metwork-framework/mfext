@@ -20,6 +20,11 @@ if test "${STARTUP_FLAG}" = "0"; then
 fi
 
 {% if MODULE == "MFDATA" or MODULE == "MFSERV" or MODULE == "MFBASE" %}
+PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
+if test "${PLUGIN_NAME}" != ""; then
+    echo "ERROR: you can't use {{MODULE_LOWERCASE}}.start inside a plugin_env"
+    exit 1
+fi
 if test "${NOINIT}" = "0"; then
     if ! test -d ${MODULE_RUNTIME_HOME}/var/plugins/base; then
         {{MODULE_LOWERCASE}}.init
