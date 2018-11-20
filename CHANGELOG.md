@@ -5,6 +5,7 @@
 ### Bug Fixes
 
 * add mapserverapi_python ([91f3524](https://github.com/metwork-framework/mfext/commit/91f3524))
+* block mfxxx.start/stop/status/init calls from a plugin_env ([8e515d7](https://github.com/metwork-framework/mfext/commit/8e515d7)), closes [#112](https://github.com/metwork-framework/mfext/issues/112)
 * depency issue with new mapserver subpackage ([80091ee](https://github.com/metwork-framework/mfext/commit/80091ee))
 * fix branch guessing with drone ci ([f9bb425](https://github.com/metwork-framework/mfext/commit/f9bb425))
 * fix drone build caching ([01860a3](https://github.com/metwork-framework/mfext/commit/01860a3))
