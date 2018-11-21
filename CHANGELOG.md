@@ -31,6 +31,7 @@
 * patch certifi for using system certificates on centos ([67d0cf1](https://github.com/metwork-framework/mfext/commit/67d0cf1))
 * upgrade eccodes to 2.9.0 ([86387bc](https://github.com/metwork-framework/mfext/commit/86387bc))
 * upgrade python requests because of security alert ([f8590a9](https://github.com/metwork-framework/mfext/commit/f8590a9))
+* use normal "npm" workflow inside a "plugin_env" ([aeda1e6](https://github.com/metwork-framework/mfext/commit/aeda1e6)), closes [#95](https://github.com/metwork-framework/mfext/issues/95)
 * we can now use plugin_env function in a plugin directory ([9274024](https://github.com/metwork-framework/mfext/commit/9274024))
 * we increase some system limits (nofile and nproc) ([c9632e3](https://github.com/metwork-framework/mfext/commit/c9632e3))
 
