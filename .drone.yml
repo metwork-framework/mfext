@@ -6,7 +6,6 @@
 
 
 bootstrap_common: &bootstrap_common
-  pull: true
   commands:
     - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
     - mkdir -p /opt/metwork-mfext-$${TARGET_DIR}
@@ -114,8 +113,7 @@ pipeline:
 
 
   trigger:
-    image: metwork/drone-downstream-specific-image:master
-    pull: true
+    image: metwork/drone-downstream-specific-image:latest
     repositories:
       - metwork-framework/docker-mfcom-${OS_VERSION}-buildimage@${DRONE_BRANCH}
     secrets: [ downstream_token, downstream_server ]
@@ -124,8 +122,7 @@ pipeline:
       event: push
       branch: [ master, integration ]
   trigger_tests:
-    image: metwork/drone-downstream-specific-image:master
-    pull: true
+    image: metwork/drone-downstream-specific-image:latest
     repositories:
       - metwork-framework/mfext-integration-tests@${DRONE_BRANCH}
       - metwork-framework/docker-mfext-centos6-testimage@${DRONE_BRANCH}
@@ -137,6 +134,7 @@ pipeline:
       status: [ success ]
       event: push
       branch: [ master, integration ]
+
 
 
 matrix:
