@@ -171,15 +171,6 @@ Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}}
 %description python2-scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} python2 scientific layer
 
-%package integration-tests-{{MFEXT_BRANCH}}
-Summary: metwork {{MODULE_LOWERCASE}} integration-tests layer
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-%description integration-tests-{{MFEXT_BRANCH}}
-metwork {{MODULE_LOWERCASE}} integration tests layer
-{% endif %}
-
 %prep
 cd %{_builddir} || exit 1
 rm -Rf %{name}-%{version}-%{release}
@@ -384,11 +375,6 @@ rm -fr %{buildroot}
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 {{MFEXT_HOME}}/opt/python2_scientific
-
-%files integration-tests-{{MFEXT_BRANCH}}
-%defattr(-,root,root,-)
-{{MFEXT_HOME}}/opt/integration_tests
-{% endif %}
 
 {% if MODULE == "MFSERV" %}
 %files nodejs-{{MODULE_BRANCH}}
