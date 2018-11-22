@@ -12,10 +12,6 @@
 This is the **M**etwork **F**ramework "**EXT**ernal depencies" module. This module
 does not contain any services, it is just a bunch of files and directories.
 
-## Installation
-
-See [this document](https://github.com/metwork-framework/resources/blob/master/documents/install_a_metwork_package.md).
-
 ## Usage
 
 ### General
@@ -138,6 +134,10 @@ in `.bash_profile` file and use this `mfext` alias when you want to quickly load
 ## Installation guide
 
 See [this document](https://github.com/metwork-framework/resources/blob/master/documents/install_a_metwork_package.md).
+
+## Configuration guide
+
+See [this document](https://github.com/metwork-framework/resources/blob/master/documents/configure_a_metwork_package.md).
 
 
 ## Contributing guide

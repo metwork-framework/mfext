@@ -24,10 +24,15 @@ if test ${IS_INTERACTIVE} -eq 1; then
     . "{{MODULE_HOME}}/share/interactive_profile"
 fi
 
+{% if MODULE=="MFBASE" or MODULE=="MFSERV" or MODULE=="MFDATA" %}
 # Specific commands for plugin env
-PLUGIN_NAME=$(env |grep "^${MODULE}_CURRENT_PLUGIN_NAME"    |awk -F '=' '{print $2;}')
-if test "${PLUGIN_NAME}" != ""; then
-    LK=$(readlink -s "${MODULE_RUNTIME_HOME}/var/plugins/${PLUGIN_NAME}" 2>/dev/null)
+PLUGIN_DIR="{% raw %}${{% endraw %}{{MODULE}}_CURRENT_PLUGIN_DIR:-}"
+if test "${PLUGIN_DIR}" != ""; then
+    if test -L "${PLUGIN_DIR}"; then
+        LK=$(readlink -s "${PLUGIN_DIR}" 2>/dev/null)
+    else
+        LK="${PLUGIN_DIR}"
+    fi
     if test "${LK}" != "" -a -d "${LK}"; then
         function custom_cd() {
             if test "$1" = ""; then
@@ -38,11 +43,19 @@ if test "${PLUGIN_NAME}" != ""; then
                 "cd" "$@"
             fi
         }
+        function custom_npm() {
+            if ! test -d "$1"; then
+                mkdir -p "$1" >/dev/null 2>&1
+            fi
+            ( cd "$1" && shift && "npm" $@ )
+        }
+        alias npm="custom_npm \"${LK}/local/lib\""
         alias cd=custom_cd
         # shellcheck disable=SC2164
         cd "${LK}"
     fi
 fi
+{% endif %}
 
 # We eventually override with custom module wide settings
 if test -f ~/.metwork.custom_interactive_profile; then
