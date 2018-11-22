@@ -12,10 +12,6 @@
 This is the **M**etwork **F**ramework "**EXT**ernal depencies" module. This module
 does not contain any services, it is just a bunch of files and directories.
 
-## Installation
-
-See [this document](https://github.com/metwork-framework/resources/blob/master/documents/install_a_metwork_package.md).
-
 ## Usage
 
 ### General
