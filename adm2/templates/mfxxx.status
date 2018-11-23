@@ -39,6 +39,22 @@ if test "${ADMIN_HOSTNAME}" != "null"; then
     fi
 fi
 
+# Checking module crontab is not empty
+echo -n "- Checking crontab is not empty..."
+echo_running
+
+if hash crontab 2>/dev/null; then
+    N=`crontab -l | wc -l`
+    if test ${N} -gt 0; then
+        echo_ok
+    else
+        echo_nok "(crontab is empty)"
+        RES=1
+    fi
+else
+    echo_warning "(no crontab installed)"
+fi
+
 {% block custom %}
 # Can be replaced by mfxxx.status.custom
 {% endblock %}
