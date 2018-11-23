@@ -1,8 +1,8 @@
 # automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/.drone.yml template
 
 
-
-
+    
+    
 
 
 bootstrap_common: &bootstrap_common
@@ -124,7 +124,7 @@ pipeline:
   trigger_tests:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
-      - metwork-framework/mfext-integration-tests-runner@${DRONE_BRANCH}
+      - metwork-framework/mfext-integration-tests@${DRONE_BRANCH}
       - metwork-framework/docker-mfext-centos6-testimage@${DRONE_BRANCH}
       - metwork-framework/docker-mfext-centos7-testimage@${DRONE_BRANCH}
     params:
