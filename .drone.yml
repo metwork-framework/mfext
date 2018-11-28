@@ -81,8 +81,10 @@ pipeline:
     environment:
       - TARGET_DIR=master
     when:
+
       event: push
-      branch: integration
+
+      branch: [ integration, ci_*, pci_* ]
   build:
     <<: *build_common
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
