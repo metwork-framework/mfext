@@ -52,6 +52,12 @@ pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-hos
 PYTHONPATH=$(echo "${PYTHONPATH}" |awk -F ":" '{print $1;}')
 export PYTHONPATH
 pip freeze --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host downloads.sourceforge.net --disable-pip-version-check -l |grep -v "^appdirs==" |grep -v "^packaging==" |grep -v "^pyparsing==" |grep -v "^six==" |grep -v "^virtualenv==" >${FREEZED_REQUIREMENTS}
+for req in $(grep "^http" "${REQUIREMENTS}"); do
+    package=$(echo "$req" | awk -F "#egg=" '{print $2;}')
+    grep -v "^$package==" ${FREEZED_REQUIREMENTS} > ${FREEZED_REQUIREMENTS}.2
+    echo "$req" >> ${FREEZED_REQUIREMENTS}.2
+    mv -f ${FREEZED_REQUIREMENTS}.2 ${FREEZED_REQUIREMENTS}
+done
 rm -Rf tmp_src src
 
 cat "${FREEZED_REQUIREMENTS}"
