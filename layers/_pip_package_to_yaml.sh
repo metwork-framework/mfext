@@ -16,7 +16,7 @@ if test "${2:-}" = ""; then
 fi
 
 PACKAGE="$1"
-N=$(echo "${PACKAGE}" |grep -c -E "^\\-e git+http|^\\https" || true)
+N=$(echo "${PACKAGE}" |grep -c -e "^\\-e git+http" -e "^\\https" || true)
 SOURCE=
 if test "${N}" -gt 0; then
     # this is a link like
