@@ -24,6 +24,23 @@ else
 fi
 
 if [[ "${_BRANCH}" == release_* ]]; then
+    # for release_* branches, we will test if there is a tag, if there is a
+    # tag, we have maybe already our version name
+    TAG=$(git describe --tags 2>/dev/null)
+    if test "${TAG}" != ""; then
+        if [[ ${TAG} == v* ]]; then
+            VERSION=${TAG##v}
+            N=$(echo "${VERSION}" |tr -cd '.' |wc -c)
+            if test "${N}" -ge 2; then
+                # we have a version !
+                echo "${VERSION}"
+                exit 0
+            fi
+        fi
+    fi
+fi
+
+if [[ "${_BRANCH}" == release_* ]]; then
     NUMBER_OF_COMMITS=$(git rev-list HEAD ^master 2>/dev/null |wc -l)
 else
     NUMBER_OF_COMMITS=$(git rev-list HEAD 2>/dev/null |wc -l)
