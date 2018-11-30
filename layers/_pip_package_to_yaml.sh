@@ -16,11 +16,13 @@ if test "${2:-}" = ""; then
 fi
 
 PACKAGE="$1"
-N=$(echo "${PACKAGE}" |grep -c "^\\-e git+http" || true)
+N=$(echo "${PACKAGE}" |grep -c -e "^\\-e git+http" -e "^\\https" || true)
 SOURCE=
 if test "${N}" -gt 0; then
     # this is a link like
     # -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
+    # or
+    # https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz#egg=basemap
     SOURCE=$(echo "${PACKAGE}" |awk -F "#egg=" '{print $1;}' |sed 's/^-e //g')
     PACKAGE=$(echo "${PACKAGE}" |awk -F "#egg=" '{print $2;}')
     if test "${PACKAGE}" = ""; then

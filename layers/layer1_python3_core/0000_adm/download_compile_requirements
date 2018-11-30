@@ -48,7 +48,7 @@ if test "${N}" -eq 0; then
 fi
 
 # shellcheck disable=SC2086
-pip wheel --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --disable-pip-version-check --wheel-dir=./src --src=./tmp_src --no-binary :all: -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
+pip wheel --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host downloads.sourceforge.net --disable-pip-version-check --wheel-dir=./src --src=./tmp_src --no-binary :all: -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
 rm -Rf tmp_src
 
 rm -Rf "${TEMPO_LAYER_PATH}"
