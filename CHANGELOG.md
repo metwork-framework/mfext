@@ -16,14 +16,16 @@
 
 ### Features
 
+* add geos, lxml, pycurl, pyproj and sqlalchemy ([7ad2840](https://github.com/metwork-framework/mfext/commit/7ad2840))
 * add integration_tests layer and rpm mfext-integration-tests ([e7683f6](https://github.com/metwork-framework/mfext/commit/e7683f6))
 * add mapserverapi library ([1cc8895](https://github.com/metwork-framework/mfext/commit/1cc8895))
-* add mapserverapi_python ([d173f3d](https://github.com/metwork-framework/mfext/commit/d173f3d))
 * add mapserverapi_python ([e2a38a8](https://github.com/metwork-framework/mfext/commit/e2a38a8))
+* add mapserverapi_python ([d173f3d](https://github.com/metwork-framework/mfext/commit/d173f3d))
 * Add postgresql support in gdal ([fee0706](https://github.com/metwork-framework/mfext/commit/fee0706)), closes [#76](https://github.com/metwork-framework/mfext/issues/76)
 * add pytest package and update some other ones ([c0132d1](https://github.com/metwork-framework/mfext/commit/c0132d1))
 * add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
 * add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
+* check that module crontab is not empy in mfxxx.status ([190a0c8](https://github.com/metwork-framework/mfext/commit/190a0c8)), closes [#122](https://github.com/metwork-framework/mfext/issues/122)
 * first import ([00adaf7](https://github.com/metwork-framework/mfext/commit/00adaf7))
 * load mapserver layer by default (if available) ([7e77a00](https://github.com/metwork-framework/mfext/commit/7e77a00))
 * mapserver introduction ([c9e796b](https://github.com/metwork-framework/mfext/commit/c9e796b)), closes [#51](https://github.com/metwork-framework/mfext/issues/51)

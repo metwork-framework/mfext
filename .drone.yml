@@ -1,4 +1,4 @@
-# automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/.drone.yml template
+# automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/mfxxx_drone.yml template
 
 
     
@@ -55,19 +55,6 @@ pipeline:
   bootstrap_integration_push:
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     environment:
-
-      - TARGET_DIR=master
-
-    <<: *bootstrap_common
-    volumes:
-      - /buildcache:/buildcache
-    when:
-      event: push
-      branch: integration
-
-  bootstrap:
-    image: metwork/mfext-${OS_VERSION}-buildimage:master
-    environment:
       - DEP_DIR=master
       - TARGET_DIR=master
     <<: *bootstrap_common
@@ -75,41 +62,49 @@ pipeline:
       - /buildcache:/buildcache
     when:
       event: push
-      branch: [ master, ci_*, pci_* ]
+      branch: [ integration, ci_*, pci_* ]
+
+  bootstrap:
+    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    environment:
+      - DEP_DIR=${DRONE_BRANCH##release_}
+      - TARGET_DIR=${DRONE_BRANCH##release_}
+    <<: *bootstrap_common
+    volumes:
+      - /buildcache:/buildcache
+    when:
+      event: push
+      branch: [ master, release_* ]
   build_integration:
     <<: *build_common
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     environment:
-
       - TARGET_DIR=master
-
     when:
 
       event: push
 
-      branch: integration
+      branch: [ integration, ci_*, pci_* ]
   build:
     <<: *build_common
-    image: metwork/mfext-${OS_VERSION}-buildimage:master
+    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     environment:
-
-      - TARGET_DIR=master
-
+      - TARGET_DIR=${DRONE_BRANCH##release_}
     when:
       event: push
-      branch: [ master, ci_*, pci_* ]
+      branch: [ master, release_* ]
   publish_ci_integration:
     <<: *publish_ci_common
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     when:
       event: push
-      branch: integration
+      branch: [ integration, pci_* ]
   publish_ci:
     <<: *publish_ci_common
-    image: metwork/mfext-${OS_VERSION}-buildimage:master
+    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     when:
       event: push
-      branch: [ master, pci_* ]
+      branch: [ master, release_* ]
 
 
   trigger:
@@ -120,7 +115,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration ]
+      branch: [ master, integration, release_* ]
   trigger_tests:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
@@ -133,7 +128,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration ]
+      branch: [ master, integration, release_* ]
 
 
 
@@ -142,4 +137,4 @@ matrix:
     - centos6
     - centos7
 
-branches: [ master, integration, ci_*, pci_* ]
+branches: [ master, integration, ci_*, pci_*, release_* ]
