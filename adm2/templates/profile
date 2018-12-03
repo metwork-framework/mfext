@@ -27,6 +27,13 @@ export {{MODULE}}_HOME={{MODULE_HOME}}
 export {{MODULE}}_VERSION={{MODULE_VERSION}}
 export MODULE_LOWERCASE={{MODULE|lower}}
 
+# Set a good default value for MODULE_RUNTIME_SUFFIX if necessary
+if ! test "$(whoami)" = "{{MODULE_LOWERCASE}}"; then
+    if test "${MODULE_RUNTIME_SUFFIX}" = ""; then
+        export MODULE_RUNTIME_SUFFIX=metwork/{{MODULE_LOWERCASE}}
+    fi
+fi
+
 # Set MODULE_RUNTIME_HOME and PYTHON_EGG_CACHE
 {% if MODULE != "MFEXT" and MODULE != "MFCOM" %}
     if test "${MODULE_RUNTIME_USER}" = ""; then
