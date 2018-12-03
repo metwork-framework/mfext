@@ -10,4 +10,9 @@ shapely
 scipy
 dask
 toolz
+#geos is python3 only
+lxml
+pycurl
+pyproj
+SQLAlchemy
 -e git+https://github.com/metwork-framework/mapserverapi_python.git#egg=mapserverapi_python
