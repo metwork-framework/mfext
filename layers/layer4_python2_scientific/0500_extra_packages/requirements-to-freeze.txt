@@ -1,3 +1,5 @@
+#there is a bug related to Cython in cftime 1.0.3
+cftime!=1.0.3
 Cython
 GDAL<2.3
 h5py
@@ -15,4 +17,10 @@ lxml
 pycurl
 pyproj
 SQLAlchemy
+https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz#egg=basemap
+cdsapi
+#Fiona
+pandas
+scikit-learn
+graphviz
 -e git+https://github.com/metwork-framework/mapserverapi_python.git#egg=mapserverapi_python
