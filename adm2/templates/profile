@@ -28,7 +28,7 @@ export {{MODULE}}_VERSION={{MODULE_VERSION}}
 export MODULE_LOWERCASE={{MODULE|lower}}
 
 # Set a good default value for MODULE_RUNTIME_SUFFIX if necessary
-if ! test "`whoami`" = "{{MODULE_LOWERCASE}}"; then
+if ! test "$(whoami)" = "{{MODULE_LOWERCASE}}"; then
     if test "${MODULE_RUNTIME_SUFFIX}" = ""; then
         export MODULE_RUNTIME_SUFFIX=metwork/{{MODULE_LOWERCASE}}
     fi
