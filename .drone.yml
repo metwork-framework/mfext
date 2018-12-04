@@ -107,7 +107,20 @@ pipeline:
       branch: [ master, release_* ]
 
 
-  trigger:
+  trigger_integration_tests:
+    image: metwork/drone-downstream-specific-image:latest
+    repositories:
+      - metwork-framework/mfext-integration-tests-runner@${DRONE_BRANCH}
+    params:
+      - FORCED_OS_VERSION=${OS_VERSION}
+    secrets: [ downstream_token, downstream_server ]
+    when:
+      status: [ success ]
+      event: push
+      branch: [ master, integration, release_* ]
+
+
+  trigger_mfcombuildimage:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
       - metwork-framework/docker-mfcom-${OS_VERSION}-buildimage@${DRONE_BRANCH}
@@ -116,10 +129,9 @@ pipeline:
       status: [ success ]
       event: push
       branch: [ master, integration, release_* ]
-  trigger_tests:
+  trigger_testimages:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
-      - metwork-framework/mfext-integration-tests@${DRONE_BRANCH}
       - metwork-framework/docker-mfext-centos6-testimage@${DRONE_BRANCH}
       - metwork-framework/docker-mfext-centos7-testimage@${DRONE_BRANCH}
     params:
