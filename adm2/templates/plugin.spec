@@ -24,10 +24,13 @@ cd %{pwd} && cp -Rpvf * %{buildroot}/metwork_plugin/%{name}/
 cp -pvf .layerapi2_* %{buildroot}/metwork_plugin/%{name}/
 rm -f %{buildroot}/metwork_plugin/%{name}/Makefile
 rm -f %{buildroot}/metwork_plugin/%{name}/*.plugin
-find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".svn" -exec rm -Rf {} \; >/dev/null 2>&1 || exit 0
-find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".git" -exec rm -Rf {} \; >/dev/null 2>&1 || exit 0
+find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".svn" -exec rm -Rf {} \; >/dev/null 2>&1 || true
+find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".git" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 rm -Rf %{buildroot}/metwork_plugin/%{name}/python3_virtualenv
 rm -Rf %{buildroot}/metwork_plugin/%{name}/python2_virtualenv
+rm -Rf %{buildroot}/metwork_plugin/%{name}/local
+find %{buildroot}/metwork_plugin/%{name}/ -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
+find %{buildroot}/metwork_plugin/%{name}/ -type f -name "*.pyc" -exec rm -f {} \; >/dev/null 2>&1 || true
 if test -d %{buildroot}/metwork_plugin/%{name}/bin; then chmod u+x  %{buildroot}/metwork_plugin/%{name}/bin/*; fi
 if test -f %{buildroot}/metwork_plugin/main.py; then chmod u+x  %{buildroot}/metwork_plugin/main.py; fi
 
