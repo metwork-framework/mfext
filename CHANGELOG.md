@@ -11,14 +11,17 @@
 * fix build error ([b6d3faf](https://github.com/metwork-framework/mfext/commit/b6d3faf))
 * fix drone build caching ([01860a3](https://github.com/metwork-framework/mfext/commit/01860a3))
 * fix error in template spec file for package mfserv and others ([3671242](https://github.com/metwork-framework/mfext/commit/3671242))
+* mapserverapi upgrade (0.1.0 => 0.1.1) ([297890e](https://github.com/metwork-framework/mfext/commit/297890e))
 * mfxxx login problems in docker mode ([8349516](https://github.com/metwork-framework/mfext/commit/8349516)), closes [#84](https://github.com/metwork-framework/mfext/issues/84)
 * sqlite support for python2/python3 ([89c3907](https://github.com/metwork-framework/mfext/commit/89c3907)), closes [#4](https://github.com/metwork-framework/mfext/issues/4)
 
 
 ### Features
 
+* add basemap, cdsapi, graphviz, pandas and scikit-learn ([afc9cad](https://github.com/metwork-framework/mfext/commit/afc9cad))
 * add geos, lxml, pycurl, pyproj and sqlalchemy ([7ad2840](https://github.com/metwork-framework/mfext/commit/7ad2840))
 * add integration_tests layer and rpm mfext-integration-tests ([e7683f6](https://github.com/metwork-framework/mfext/commit/e7683f6))
+* add lxml, pycurl, pyproj and sqlalchemy as in python3 ([fd5cd08](https://github.com/metwork-framework/mfext/commit/fd5cd08))
 * add mapserverapi library ([1cc8895](https://github.com/metwork-framework/mfext/commit/1cc8895))
 * add mapserverapi_python ([e2a38a8](https://github.com/metwork-framework/mfext/commit/e2a38a8))
 * add mapserverapi_python ([d173f3d](https://github.com/metwork-framework/mfext/commit/d173f3d))
