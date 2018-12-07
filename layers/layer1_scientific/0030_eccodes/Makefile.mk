@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=eccodes
-export VERSION=2.9.0
+export VERSION=2.10.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=fab239b47a0a8a1531b68e1e76374321
+export CHECKSUM=c32ba54676b2fa5e1ebd782528185cdd
 export EXPLICIT_NAME=$(NAME)-$(VERSION)-Source
 DESCRIPTION=\
 ecCodes is a package developed by ECMWF which provides an application programming interface and a set of tools for decoding and encoding messages in the following formats: \

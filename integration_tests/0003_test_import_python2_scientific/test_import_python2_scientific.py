@@ -11,7 +11,7 @@ import numpy
 import scipy
 import dask
 import toolz
-#import geos
+#import geos (geos is only python3)
 import lxml
 import pycurl
 import pyproj
@@ -22,3 +22,4 @@ import pandas
 import sklearn
 import graphviz
 import pygraphviz
+import eccodes

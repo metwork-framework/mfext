@@ -22,3 +22,4 @@ import pandas
 import sklearn
 import graphviz
 import pygraphviz
+import eccodes
