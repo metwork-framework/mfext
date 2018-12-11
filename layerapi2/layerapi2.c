@@ -124,3 +124,13 @@ gchar *layerapi2_replace_env_var_pattern(const gchar *string)
 {
     return replace_env_var_pattern(string);
 }
+
+gchar *layerapi2_get_layer_home(const gchar *label) {
+    gchar *res = NULL;
+    Layer *layer = layer_new_from_label(label);
+    if (layer != NULL) {
+        res = g_strdup(layer->home);
+        layer_free(layer);
+    }
+    return res;
+}

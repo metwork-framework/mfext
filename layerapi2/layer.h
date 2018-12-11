@@ -27,6 +27,7 @@ void layer_free(Layer *layer);
 gboolean is_layer_installed(const gchar *layer_home);
 gboolean is_layer_loaded(const gchar *layer_home);
 Layer *layer_new_from_label_or_home(const gchar *label_or_home);
+Layer *layer_new_from_label(const gchar *label);
 GSList *layers_list();
 gboolean layer_load(Layer *layer, gboolean force_prend, GString **bash_cmds);
 gboolean layer_unload(Layer *layer, GString **bash_cmds);

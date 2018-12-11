@@ -23,6 +23,8 @@ LayerApi2Layer *layerapi2_layer_load(const gchar *label_or_home, gboolean force_
 gboolean layerapi2_layer_unload(const gchar *label_or_home, GString **bash_cmds);
 void layerapi2_layers_unload_all(GString **bash_cmds);
 
+gchar *layerapi2_get_layer_home(const gchar *label);
+
 void layerapi2_layers_free(GSList *layers);
 void layerapi2_layer_free(LayerApi2Layer *layer);
 
