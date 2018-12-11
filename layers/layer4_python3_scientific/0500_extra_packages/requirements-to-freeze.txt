@@ -1,4 +1,4 @@
-#there is a bug related to Cython in cftime 1.0.3 
+#there is a bug related to Cython in cftime 1.0.3
 cftime!=1.0.3
 Cython
 GDAL<2.3
@@ -20,6 +20,12 @@ SQLAlchemy
 https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz#egg=basemap
 cdsapi
 #Fiona
+#Dependencies for Fiona which is built separately
+munch
+cligj>=0.5
+attrs>=17
+click-plugins>=1.0
+#End Fiona dependencies
 pandas
 scikit-learn
 graphviz
