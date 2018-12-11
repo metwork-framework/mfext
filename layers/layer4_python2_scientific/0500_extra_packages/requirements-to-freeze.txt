@@ -20,6 +20,14 @@ SQLAlchemy
 https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz#egg=basemap
 cdsapi
 #Fiona
+#Dependencies for Fiona which is built separately
+attrs>=17
+click<8,>=4.0
+cligj>=0.5
+click-plugins>=1.0
+enum34
+munch
+#End Fiona dependencies
 pandas
 scikit-learn
 graphviz
