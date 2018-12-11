@@ -10,7 +10,7 @@ export EXTENSION=tar.gz
 export CHECKTYPE=MD5
 export CHECKSUM=33e8f7cf5943693353a27470dff3d540
 DESCRIPTION=\
-FIONA is OGR’s neat and nimble API for Python programmers
+FIONA is OGR s neat and nimble API for Python programmers
 WEBSITE=https://github.com/Toblerity/Fiona
 LICENSE=BSD
 
