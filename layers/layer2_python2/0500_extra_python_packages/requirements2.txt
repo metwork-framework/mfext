@@ -20,5 +20,5 @@ redis==2.10.6
 requests==2.20.0
 requests-toolbelt==0.8.0
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
-urllib3==1.22
+urllib3==1.23
 numpy==1.14.3
