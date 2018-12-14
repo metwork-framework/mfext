@@ -152,6 +152,15 @@ Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
 %description nodejs-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} nodejs layer
 
+%package java-{{MFEXT_BRANCH}}
+Summary: metwork {{MODULE_LOWERCASE}} java layer
+Group: Applications/Multimedia
+AutoReq: no
+AutoProv: no
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}}
+%description java-{{MFEXT_BRANCH}}
+metwork {{MODULE_LOWERCASE}} java layer
+
 %package mapserver-{{MFEXT_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} mapserver layer
 Group: Applications/Multimedia
@@ -381,6 +390,10 @@ rm -fr %{buildroot}
 %files mapserver-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 {{MFEXT_HOME}}/opt/mapserver
+
+%files java-{{MFEXT_BRANCH}}
+%defattr(-,root,root,-)
+{{MFEXT_HOME}}/opt/java
 
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
