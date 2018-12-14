@@ -31,7 +31,7 @@ AutoReq: no
 AutoProv: no
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-full
 {% if MODULE == "MFEXT" %}
-Requires: metwork-mfext-core-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}, metwork-mfext-python2-scientific-{{MFEXT_BRANCH}}, metwork-mfext-nodejs-{{MFEXT_BRANCH}}, metwork-mfext-mapserver-{{MFEXT_BRANCH}}
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-python2-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-nodejs-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-mapserver-{{MFEXT_BRANCH}} = {{FULL_VERSION}}, metwork-mfext-monitoring-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" %}
 Requires: openssl >= 1.0.2
 Requires: openssl-libs >= 1.0.2
@@ -179,6 +179,15 @@ Requires: metwork-mfext-python2-{{MFEXT_BRANCH}}
 Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}}
 %description python2-scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} python2 scientific layer
+
+%package monitoring-{{MFEXT_BRANCH}}
+Summary: metwork {{MODULE_LOWERCASE}} monitoring layer
+Group: Applications/Multimedia
+AutoReq: no
+AutoProv: no
+Requires: metwork-mfext-core-{{MFEXT_BRANCH}}, metwork-mfext-scientific-{{MFEXT_BRANCH}}
+%description monitoring-{{MFEXT_BRANCH}}
+metwork {{MODULE_LOWERCASE}} monitoring layer
 {% endif %}
 
 %prep
@@ -389,6 +398,10 @@ rm -fr %{buildroot}
 %files python2-scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 {{MFEXT_HOME}}/opt/python2_scientific
+
+%files monitoring-{{MFEXT_BRANCH}}
+%defattr(-,root,root,-)
+{{MFEXT_HOME}}/opt/monitoring
 {% endif %}
 
 {% if MODULE == "MFSERV" %}
