@@ -47,6 +47,7 @@
 * patch certifi for using system certificates on centos ([67d0cf1](https://github.com/metwork-framework/mfext/commit/67d0cf1))
 * telegraf is now monitoring itself ([83d915b](https://github.com/metwork-framework/mfext/commit/83d915b))
 * telegraf update (1.7.1 => 1.7.4) ([43703aa](https://github.com/metwork-framework/mfext/commit/43703aa))
+* update urllib3 (1.22 => 1.23)  ([077012f](https://github.com/metwork-framework/mfext/commit/077012f))
 * upgrade eccodes from 2.9.0 to 2.10.0 and ([dc72ff2](https://github.com/metwork-framework/mfext/commit/dc72ff2))
 * upgrade eccodes to 2.9.0 ([86387bc](https://github.com/metwork-framework/mfext/commit/86387bc))
 * upgrade python requests because of security alert ([f8590a9](https://github.com/metwork-framework/mfext/commit/f8590a9))
