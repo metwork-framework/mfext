@@ -16,7 +16,7 @@ kiwisolver==1.0.1
 lxml==4.2.5
 matplotlib==2.2.2
 munch==2.3.2
-netCDF4==1.4.0
+netCDF4==1.4.2
 pandas==0.23.4
 Pillow==5.1.0
 pngquant==1.0.6
