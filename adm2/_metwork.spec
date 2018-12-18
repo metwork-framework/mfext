@@ -87,7 +87,7 @@ Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 {% set liste = 'cd $MODULE_HOME; ls -da * .layerapi2*|grep -v opt'|shell -%}
-{% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | grep -v "{"'  -%}
+{% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | grep -v "{" | grep -v "^python$"' -%}
 {% set deps = cmd|shell -%}
 {% set deps_list = deps.split('\n')[:-1] -%}
 {% for d in deps_list -%}
