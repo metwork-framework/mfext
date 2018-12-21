@@ -13,7 +13,7 @@ ifeq ($(MODULE_HAS_HOME_DIR),)
     export MODULE_HAS_HOME_DIR=0
 endif
 ifeq ($(EPOCH),)
-    export EPOCH=4
+    export EPOCH=5
 endif
 ARCHIV=$(MODULE_LOWERCASE)-$(VERSION_BUILD)-$(RELEASE_BUILD)
 
