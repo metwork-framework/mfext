@@ -80,14 +80,14 @@ Requires: /usr/bin/lscpu
 %description layer-root-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} root layer
 
-{% for layer in layers_list -%}
+{% for layer in layers_list %}
 %package layer-{{layer}}-{{MODULE_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} {{layer}} layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 {% set liste = 'cd $MODULE_HOME; ls -da * .layerapi2*|grep -v opt'|shell -%}
-{% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | grep -v "{" | grep -v "^python$"' -%}
+{% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
 {% set deps_list = deps.split('\n')[:-1] -%}
 {% for d in deps_list -%}
