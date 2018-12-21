@@ -16,7 +16,7 @@
 
 {% set liste = 'cd $MODULE_HOME; ls -da bin config lib include share .layerapi2* 2>/dev/null'|shell -%}
 {% set root_list = liste.split('\n')[:-1] -%}
-{% set liste2 = 'cd $MODULE_HOME/opt; ls -d *'|shell -%}
+{% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; ls -d *; fi'|shell -%}
 {% set layers_list = liste2.split('\n')[:-1] -%}
 
 Name: metwork-{{MODULE_LOWERCASE}}
@@ -105,7 +105,6 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 %description layer-{{layer}}-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} {{layer}} layer
 {% endfor -%}
-
 
 %package core-{{MODULE_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} meta core layers
