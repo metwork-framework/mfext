@@ -40,15 +40,11 @@ if [[ "${_BRANCH}" == release_* ]]; then
     fi
 fi
 
-if [[ "${_BRANCH}" == release_* ]]; then
-    NUMBER_OF_COMMITS=$(git rev-list HEAD ^master 2>/dev/null |wc -l)
-else
-    NUMBER_OF_COMMITS=$(git rev-list HEAD 2>/dev/null |wc -l)
-fi
+NUMBER_OF_COMMITS=$(git rev-list HEAD 2>/dev/null |wc -l)
 COMMIT=$(git rev-parse --short HEAD 2>/dev/null)
 if test "${COMMIT}" = ""; then
     COMMIT=unknown
 fi
 
-echo "${BRANCH}.${NUMBER_OF_COMMITS}.${COMMIT}"
+echo "${BRANCH}.ci${NUMBER_OF_COMMITS}.${COMMIT}"
 exit 0
