@@ -39,7 +39,18 @@ fi
 
 {% if MODULE == "MFADMIN" %}
 if test "${NOINIT}" = "0"; then
-    if ! test -f "${MODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
+    NEED_INIT=0
+    if test "${MFADMIN_LAYER_METRICS_LOADED:-}" = "1"; then
+        if ! test -f "${MODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
+            NEED_INIT=1
+        fi
+    fi
+    if test "${MFADMIN_LAYER_LOGS_LOADED:-}" = "1"; then
+        if ! test -f "${MODULE_RUNTIME_HOME}/var/kibana/uuid"; then
+            NEED_INIT=1
+        fi
+    fi
+    if test "${NEED_INIT}" = "1"; then
         {{MODULE_LOWERCASE}}.init
     fi
 fi
