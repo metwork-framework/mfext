@@ -127,7 +127,7 @@ export METWORK_LAYERS_PATH
 N=$({{MFEXT_HOME}}/bin/is_layer_installed default 2>/dev/null)
 if test "${N}" = "1"; then
     # We load the default layer
-    layer_load default >/dev/null
+    layer_load "default@mfext,-default@mfcom,-default@${MODULE_LOWERCASE}" >/dev/null
 else
     # The default layer is not installed
     # => we load the root and core layer (failback for developpers)
