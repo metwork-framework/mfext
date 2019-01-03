@@ -21,3 +21,6 @@ import cdsapi
 import pandas
 import sklearn
 import graphviz
+import pygraphviz
+import eccodes
+import fiona #Fiona

@@ -24,7 +24,7 @@ function plugin_env() {
                 # we are inside a plugin dir
                 export PIP_PREFIX="$(pwd)/local"
                 field_prepend METWORK_LAYERS_PATH "$(pwd)"
-                layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="$(cat .layerapi2_label |grep '^plugin_' |head -1)" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+                plugin_wrapper "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
                 return
             fi
         fi
@@ -41,7 +41,7 @@ function plugin_env() {
         return
     fi
     export PIP_PREFIX="${MODULE_RUNTIME_HOME}/var/plugins/${PLUGIN}/local"
-    layer_wrapper --empty --extra-env-prefix="${MODULE}_CURRENT_PLUGIN" --layers="plugin_${PLUGIN}@${MODULE_LOWERCASE}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+    plugin_wrapper "${PLUGIN}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
 }
 {% endif %}
 

@@ -8,6 +8,7 @@ ConfigArgParse==0.13.0
 -e git+https://github.com/thefab/configparser_extended.git@a2b49f4249b9715370b6ab98dadc7bfa5ed022a6#egg=configparser_extended
 -e git+https://github.com/audreyr/cookiecutter.git@83d0d636ae483ca9397640729387d966ece93ee8#egg=cookiecutter
 -e git+https://github.com/thefab/cronwrapper.git@8af59d6cc32d2bc5f40cc59d736576f526abb913#egg=cronwrapper
+diskcache==3.1.1
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git@19465dd337a4fb3aea18df8c8273b0fec8372215#egg=envtpl
 filelock==3.0.4
@@ -31,5 +32,5 @@ requests==2.20.0
 requests-toolbelt==0.8.0
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
-urllib3==1.22
+urllib3==1.23
 whichcraft==0.4.1

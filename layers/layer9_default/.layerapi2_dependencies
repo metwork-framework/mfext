@@ -7,3 +7,4 @@ core@mfext
 -core@{MODULE_LOWERCASE}
 -mapserver@mfext
 python
+-monitoring@mfext

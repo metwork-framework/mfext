@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=eccodes
-export VERSION=2.9.0
+export VERSION=2.10.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=fab239b47a0a8a1531b68e1e76374321
+export CHECKSUM=c32ba54676b2fa5e1ebd782528185cdd
 export EXPLICIT_NAME=$(NAME)-$(VERSION)-Source
 DESCRIPTION=\
 ecCodes is a package developed by ECMWF which provides an application programming interface and a set of tools for decoding and encoding messages in the following formats: \
@@ -16,8 +16,8 @@ WEBSITE=https://www.ecmwf.int/en/computing/software
 LICENSE=Apache 2.0 : http://www.apache.org/licenses/LICENSE-2.0
 
 
-all:: $(PREFIX)/lib/python2.7/site-packages/eccodes-$(VERSION)-py2.7.egg-info
-$(PREFIX)/lib/python2.7/site-packages/eccodes-$(VERSION)-py2.7.egg-info:
+all:: $(PREFIX)/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/eccodes-$(VERSION)-py$(PYTHON2_SHORT_VERSION).egg-info
+$(PREFIX)/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/eccodes-$(VERSION)-py$(PYTHON2_SHORT_VERSION).egg-info:
 	mkdir -p build/$(NAME)-$(VERSION)-Source/build/lib
 	rm -f build/$(NAME)-$(VERSION)-Source/build/lib/libeccodes.so
 	ln -s $(PREFIX)/../scientific/lib/libeccodes.so build/$(NAME)-$(VERSION)-Source/build/lib/libeccodes.so
