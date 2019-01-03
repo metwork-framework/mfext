@@ -22,6 +22,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/metwork_plugin/%{name}/ 2>/dev/null
 cd %{pwd} && cp -Rpvf * %{buildroot}/metwork_plugin/%{name}/
 cp -pvf .layerapi2_* %{buildroot}/metwork_plugin/%{name}/
+cp -pvf .autorestart_* %{buildroot}/metwork_plugin/%{name}/ >/dev/null 2>&1 || true
 rm -f %{buildroot}/metwork_plugin/%{name}/Makefile
 rm -f %{buildroot}/metwork_plugin/%{name}/*.plugin
 find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".svn" -exec rm -Rf {} \; >/dev/null 2>&1 || true
