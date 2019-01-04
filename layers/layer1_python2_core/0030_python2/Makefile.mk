@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=Python
-export VERSION=2.7.9
+export VERSION=2.7.15
 export EXTENSION=tgz
 export CHECKTYPE=MD5
-export CHECKSUM=5eebcaa0030dc4061156d3429657fb83
+export CHECKSUM=045fb3440219a1f6923fefdabde63342
 DESCRIPTION=\
 PYTHON est un langage de script orienté objet
 WEBSITE=http://python.org/
