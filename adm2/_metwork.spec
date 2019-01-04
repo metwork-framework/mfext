@@ -75,7 +75,7 @@ Requires: libicu
 Requires: openssl
 {% endif -%}
 Requires: which
-Requires: /usr/bin/lscpu
+Requires: /usr/bin/lscpu, /usr/bin/wget
 {% endif -%}
 %description layer-root-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} root layer
