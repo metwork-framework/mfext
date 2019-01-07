@@ -331,6 +331,7 @@ if ! test -f /etc/metwork.config; then
     echo GENERIC >/etc/metwork.config
 fi
 {% if MODULE != "MFCOM" and MODULE != "MFEXT" -%}
+  if ! test -d /etc/rc.d/init.d; then mkdir -p /etc/rc.d/init.d; fi
   cp -f {{MFCOM_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
   chmod 0755 /etc/rc.d/init.d/metwork
   chown root:root /etc/rc.d/init.d/metwork
