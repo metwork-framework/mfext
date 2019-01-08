@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=lua-resty-statsd
-export VERSION=0.0.2
+export VERSION=0.0.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=b0eda67bc7e488aab4a3e33b02aa4c77
+export CHECKSUM=938d330f9661efcb4528b75b2ba8de5a
 DESCRIPTION=\
 LUA_RESTY_STATSD is a statsd client for openresty.
 WEBSITE=https://github.com/metwork-framework/lua-resty-statsd
