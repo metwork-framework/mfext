@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:-2]|join('.') %}
 {% if MODULE != "MFEXT" %}
 {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:-2]|join('.') %}
 {% endif %}
 {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:-2]|join('.') %}
+=======
+{% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:2]|join('.') -%}
+{% if MODULE != "MFEXT" -%}
+{% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:2]|join('.') -%}
+{% endif -%}
+{% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:2]|join('.') -%}
+>>>>>>> a26b524... fix: rpm names was incorrect with release tags
 %define __jar_repack %{nil}
 %define __os_install_post %{nil}
 %define debug_package %{nil}
