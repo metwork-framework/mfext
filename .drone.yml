@@ -74,7 +74,7 @@ pipeline:
       - /buildcache:/buildcache
     when:
       event: push
-      branch: [ master, release_* ]
+      branch: [ master, experimental*, release_* ]
   bootstrap_tag:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     environment:
@@ -103,7 +103,7 @@ pipeline:
       - TARGET_DIR=${DRONE_BRANCH##release_}
     when:
       event: push
-      branch: [ master, release_* ]
+      branch: [ master, experimental*, release_* ]
   build_tag:
     <<: *build_common
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
@@ -123,7 +123,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     when:
       event: push
-      branch: [ master, release_* ]
+      branch: [ master, experimental*, release_* ]
   publish_tag:
     image: metwork/mfxxx-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     volumes:
@@ -151,7 +151,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration, release_* ]
+      branch: [ master, integration, experimental*, release_* ]
   trigger_mfcombuildimage:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
@@ -160,7 +160,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration, release_* ]
+      branch: [ master, integration, experimental*, release_* ]
 
 
   trigger_integration_tests:
@@ -173,7 +173,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration, release_* ]
+      branch: [ master, integration, experimental*, release_* ]
 
 
 
