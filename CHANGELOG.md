@@ -1,6 +1,9 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Fix
+- rpm names were incorrect with release tags
+
 <a name="v0.4.0"></a>
 ## [v0.4.0] - 2019-01-08
 ### Docs
