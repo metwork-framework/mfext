@@ -11,6 +11,9 @@
 - upgrade netCDF4 python from 1.4.0 to 1.4.2
 - upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
 
+### Fix
+- rpm names was incorrect with release tags
+
 <a name="v0.4.0"></a>
 ## [v0.4.0] - 2019-01-08
 ### Docs
