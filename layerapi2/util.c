@@ -56,7 +56,8 @@ gchar *read_file_in_directory(const gchar *directory,
 /**
  * Convert some lines (read from a file) into an allocated GSList of gchar*.
  *
- * Note: each line is stripped and empty lines are ignored.
+ * Note: each line is stripped, empty lines are ignored, lines beginning with #
+ *       are ignored.
  *
  * @param lines text lines (read from a file).
  * @return allocated GSList (free with g_slist_free_full(list, g_free))
@@ -71,7 +72,11 @@ GSList *lines_to_gslist(const gchar *lines)
     for (guint i = 0 ; i < g_strv_length(tmp) ; i++) {
         gchar *tmp2 = g_strstrip(g_strdup(tmp[i]));
         if (strlen(tmp2) > 0) {
-            out = g_slist_append(out, tmp2);
+            if (tmp2[0] == '#') {
+                g_free(tmp2);
+            } else {
+                out = g_slist_append(out, tmp2);
+            }
         } else {
             g_free(tmp2);
         }
