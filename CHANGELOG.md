@@ -13,6 +13,12 @@
 
 ### Fix
 - rpm names was incorrect with release tags
+- rpm names were incorrect with release tags
+
+<a name="v0.4.1"></a>
+## [v0.4.1] - 2019-01-10
+### Fix
+- rpm names were incorrect with release tags
 
 <a name="v0.4.0"></a>
 ## [v0.4.0] - 2019-01-08
