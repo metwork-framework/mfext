@@ -1,8 +1,20 @@
-{% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:-2]|join('.') -%}
+{% if MFEXT_VERSION|int(-1) != -1 %}
+    {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:2]|join('.') -%}
+{% else %}
+    {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0] -%}
+{% endif %}
 {% if MODULE != "MFEXT" -%}
-{% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:-2]|join('.') -%}
+    {% if MFCOM_VERSION|int(-1) != -1 %}
+        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:2]|join('.') -%}
+    {% else %}
+        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0] -%}
+    {% endif %}
 {% endif -%}
-{% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:-2]|join('.') -%}
+{% if MODULE_VERSION|int(-1) != -1 %}
+    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:2]|join('.') -%}
+{% else %}
+    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0] -%}
+{% endif %}
 %define __jar_repack %{nil}
 %define __os_install_post %{nil}
 %define debug_package %{nil}
