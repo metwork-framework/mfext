@@ -16,6 +16,9 @@ if test -f /etc/buildimage_hash; then
 fi
 if test "${DRONE_BRANCH:-}" != ""; then
     echo "${DRONE_BRANCH}" >>/tmp/build_cache_hash.$$
+    if test "${DRONE_TAG:-}" != ""; then
+        echo "tag${DRONE_TAG}" >>/tmp/build_cache_hash.$$
+    fi
 else
     git rev-parse --abbrev-ref HEAD 2>/dev/null |sed 's/-/_/g' >>/tmp/build_cache_hash.$$
 fi

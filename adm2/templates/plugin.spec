@@ -27,6 +27,7 @@ rm -f %{buildroot}/metwork_plugin/%{name}/Makefile
 rm -f %{buildroot}/metwork_plugin/%{name}/*.plugin
 find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".svn" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 find %{buildroot}/metwork_plugin/%{name}/ -type d -name ".git" -exec rm -Rf {} \; >/dev/null 2>&1 || true
+find %{buildroot}/metwork_plugin/%{name}/ -type f -name ".git*" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 rm -Rf %{buildroot}/metwork_plugin/%{name}/python3_virtualenv
 rm -Rf %{buildroot}/metwork_plugin/%{name}/python2_virtualenv
 rm -Rf %{buildroot}/metwork_plugin/%{name}/local
