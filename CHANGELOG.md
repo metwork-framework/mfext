@@ -5,13 +5,16 @@
 - add filebeat component
 - add openjdk as a non default layer
 - clean some useless files in .plugin files
+- ignore lines starting with # in .layerapi2_dependencies/conflicts files
 - introduce monitoring layer (loaded by default) and move telegraf inside
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
 - telegraf update (1.7.4 => 1.9.1)
 - update urllib3 (1.22 => 1.23)
 - upgrade netCDF4 python from 1.4.0 to 1.4.2
 - upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
 
 ### Fix
+- do not include .git* files in the plugin RPM
 - rpm names was incorrect with release tags
 - rpm names were incorrect with release tags
 
