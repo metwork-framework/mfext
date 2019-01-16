@@ -14,9 +14,13 @@
 - upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
 
 ### Fix
+- circus update to fix some stop_signal issues (on circus itself)
 - do not include .git* files in the plugin RPM
 - rpm names was incorrect with release tags
 - rpm names were incorrect with release tags
+
+### Perf
+- kill immediatly some watchers during circus shutdown
 
 <a name="v0.4.1"></a>
 ## [v0.4.1] - 2019-01-10
