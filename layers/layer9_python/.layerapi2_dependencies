@@ -2,5 +2,3 @@ python{METWORK_PYTHON_MODE}@mfext
 -python{METWORK_PYTHON_MODE}_scientific@mfext
 -python{METWORK_PYTHON_MODE}_devtools@mfext
 -python{METWORK_PYTHON_MODE}_devtools_jupyter@mfext
--python{METWORK_PYTHON_MODE}@mfcom
--python{METWORK_PYTHON_MODE}@{MODULE_LOWERCASE}
