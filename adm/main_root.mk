@@ -13,7 +13,7 @@ ifeq ($(MODULE_HAS_HOME_DIR),)
     export MODULE_HAS_HOME_DIR=0
 endif
 ifeq ($(EPOCH),)
-    export EPOCH=5
+    export EPOCH=6
 endif
 ARCHIV=$(MODULE_LOWERCASE)-$(VERSION_BUILD)-$(RELEASE_BUILD)
 
@@ -135,4 +135,4 @@ rpm: archive
 	ln -s $(MODULE_HOME)/$(ARCHIV)-linux64.tar $(MODULE_HOME)/rpm/SOURCES/$(ARCHIV)-linux64.tar
 	cd $(MODULE_HOME)/rpm/SPECS && export HOME=$(MODULE_HOME)/rpm && rpmbuild -bb metwork-$(MODULE_LOWERCASE).spec
 	cp -f $(MODULE_HOME)/rpm/RPMS/x86_64/*.rpm $(MODULE_HOME)/
-	rm -Rf $(MODULE_HOME)/rpm
+	if test ! "$(DRONE)" = true; then rm -Rf $(MODULE_HOME)/rpm; fi
