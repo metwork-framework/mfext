@@ -2,6 +2,7 @@
 ## [Unreleased]
 
 ### Feat
+- Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
 - add filebeat component
 - add openjdk as a non default layer
 - clean some useless files in .plugin files
