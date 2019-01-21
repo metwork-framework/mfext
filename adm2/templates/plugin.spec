@@ -31,6 +31,7 @@ find %{buildroot}/metwork_plugin/%{name}/ -type f -name ".git*" -exec rm -Rf {} 
 rm -Rf %{buildroot}/metwork_plugin/%{name}/python3_virtualenv
 rm -Rf %{buildroot}/metwork_plugin/%{name}/python2_virtualenv
 rm -Rf %{buildroot}/metwork_plugin/%{name}/local
+rm -Rf %{buildroot}/metwork_plugin/%{name}/src
 find %{buildroot}/metwork_plugin/%{name}/ -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 find %{buildroot}/metwork_plugin/%{name}/ -type f -name "*.pyc" -exec rm -f {} \; >/dev/null 2>&1 || true
 if test -d %{buildroot}/metwork_plugin/%{name}/bin; then chmod u+x  %{buildroot}/metwork_plugin/%{name}/bin/*; fi
