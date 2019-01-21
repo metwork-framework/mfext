@@ -1,6 +1,6 @@
 # mfext
 
-[//]: # (automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/%7B%7Bcookiecutter.repo%7D%7D/README.md)
+[//]: # (automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/README.md)
 
 ## Status (master branch)
 [![Drone CI](http://metwork-framework.org:8000/api/badges/metwork-framework/mfext/status.svg)](http://metwork-framework.org:8000/metwork-framework/mfext)
@@ -133,11 +133,9 @@ in `.bash_profile` file and use this `mfext` alias when you want to quickly load
 
 ## Installation guide
 
-See [this document](https://github.com/metwork-framework/resources/blob/master/documents/install_a_metwork_package.md).
+See [this document](.metwork-framework/install_a_metwork_package.md).
 
-## Configuration guide
 
-See [this document](https://github.com/metwork-framework/resources/blob/master/documents/configure_a_metwork_package.md).
 
 
 ## Contributing guide
