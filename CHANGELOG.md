@@ -5,6 +5,7 @@
 - Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
 - add filebeat component
 - add openjdk as a non default layer
+- add some metapackages aliases to have a cleaner installation doc
 - clean some useless files in .plugin files
 - ignore lines starting with # in .layerapi2_dependencies/conflicts files
 - introduce monitoring layer (loaded by default) and move telegraf inside
@@ -13,6 +14,7 @@
 - update urllib3 (1.22 => 1.23)
 - upgrade netCDF4 python from 1.4.0 to 1.4.2
 - upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
+- we remove the src directory from .plugin files
 
 ### Fix
 - circus update to fix some stop_signal issues (on circus itself)
