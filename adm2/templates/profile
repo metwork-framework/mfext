@@ -61,7 +61,7 @@ fi
 {% endif %}
 
 # Get the metwork configuration name
-if test "${MFCONFIG}" = ""; then
+if test "${MFCONFIG:-}" = ""; then
     MFCONFIG=$(cat /etc/metwork.config 2>/dev/null |sed 's/ //g' |grep -v '^#' |head -1)
     if test "${MFCONFIG}" = ""; then
         MFCONFIG=GENERIC
