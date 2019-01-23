@@ -17,6 +17,13 @@ if test "${1:-}" = ""; then
     exit 1
 fi
 REQUIREMENTS="$1"
+REALPATH=$(readlink -m "${REQUIREMENTS}")
+REALDIRNAME=$(dirname "${REALPATH}")
+if test -f "${REALDIRNAME}/allow_binary_packages"; then
+    INSTALL_REQUIREMENTS_ALLOW_BINARIES=1
+else
+    INSTALL_REQUIREMENTS_ALLOW_BINARIES=0
+fi
 
 TEMPO_LAYER_LABEL="tempolayer$$"
 TEMPO_LAYER_PATH="$(pwd)/${TEMPO_LAYER_LABEL}"
@@ -47,8 +54,14 @@ if test "${N}" -eq 0; then
     exit 0
 fi
 
+if test "${INSTALL_REQUIREMENTS_ALLOW_BINARIES}" = "1"; then
+    BINARY=""
+else
+    BINARY="--no-binary :all:"
+fi
+
 # shellcheck disable=SC2086
-pip wheel --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host downloads.sourceforge.net --disable-pip-version-check --wheel-dir=./src --src=./tmp_src --no-binary :all: -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
+pip wheel --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host downloads.sourceforge.net --disable-pip-version-check --wheel-dir=./src --src=./tmp_src ${BINARY} -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
 rm -Rf tmp_src
 
 rm -Rf "${TEMPO_LAYER_PATH}"
