@@ -3,6 +3,8 @@
 
 ### Feat
 - Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
+- add a python3_ia layer
+- add a way to install binary python wheels
 - add filebeat component
 - add openjdk as a non default layer
 - add some metapackages aliases to have a cleaner installation doc
@@ -14,6 +16,7 @@
 - update urllib3 (1.22 => 1.23)
 - upgrade netCDF4 python from 1.4.0 to 1.4.2
 - upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
+- user-defined configuration name
 - we remove the src directory from .plugin files
 
 ### Fix
