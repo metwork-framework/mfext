@@ -6,7 +6,7 @@ qs = "LAYERS=ocean&TRANSPARENT=true&FORMAT=image%2Fpng&SERVICE=WMS&" \
     "VERSION=1.1.1&REQUEST=GetMap&STYLES=&EXCEPTIONS=application%2Fvnd.ogc." \
     "se_xml&SRS=EPSG%3A4326&BBOX=-180.0,-90.0,180.0,90.0&WIDTH=500&HEIGHT=250"
 datadir = os.path.realpath(os.path.dirname(os.path.realpath(__file__)) +
-                           "/test_datas")
+                           "/datas")
 
 
 def test_invoke():

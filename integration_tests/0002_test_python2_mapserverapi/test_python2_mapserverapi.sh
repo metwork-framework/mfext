@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python test_python2_mapserverapi.py
+python python2_mapserverapi.py
