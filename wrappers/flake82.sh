@@ -8,4 +8,4 @@ if test "${1:-}" == "--help"; then
     exit 0
 fi
 export METWORK_PYTHON_MODE=2
-layer_wrapper --layers=python -- flake8 --ignore D101,D102,D103,D100,D104,D401,D413,D107,D200,D204,D210,D400,D105 "$@"
+layer_wrapper --layers=python@mfext,-python@mfcom,-python@"${MODULE_LOWERCASE}" -- flake8 --ignore D101,D102,D103,D100,D104,D401,D413,D107,D200,D204,D210,D400,D105 "$@"

@@ -13,6 +13,8 @@ layers/layer4_python2_scientific/0500_extra_packages/src
 layers/layer4_python2_scientific/0500_extra_packages/tempolayer*
 layers/layer2_python3/0500_extra_python_packages/src
 layers/layer2_python3/0500_extra_python_packages/tempolayer*
+layers/layer5_python3_ia/0500_extra_packages/src
+layers/layer5_python3_ia/0500_extra_packages/tempolayer*
 layers/layer7_python2_devtools/0500_extra_python_packages/src
 layers/layer7_python2_devtools/0500_extra_python_packages/tempolayer*
 layers/layer7_python3_devtools/0500_extra_python_packages/src
