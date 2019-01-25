@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python test_import_python2.py
+python import_python2.py
