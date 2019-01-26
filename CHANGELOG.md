@@ -22,6 +22,7 @@
 ### Fix
 - circus update to fix some stop_signal issues (on circus itself)
 - do not include .git* files in the plugin RPM
+- no doc(s) directory in a plugin release
 - rpm names was incorrect with release tags
 - rpm names were incorrect with release tags
 
