@@ -9,6 +9,7 @@
 - add openjdk as a non default layer
 - add some metapackages aliases to have a cleaner installation doc
 - clean some useless files in .plugin files
+- execute integration tests directly from mfext module and launch them on a pull request on the module
 - ignore lines starting with # in .layerapi2_dependencies/conflicts files
 - introduce monitoring layer (loaded by default) and move telegraf inside
 - lua-resty-stats upgrade (0.0.2 => 0.0.3)
