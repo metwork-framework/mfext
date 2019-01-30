@@ -28,9 +28,9 @@ If you prefer to start with a minimal installation, you have to execute the foll
 yum install metwork-mfext-minimal
 ```
 
-## Addons
+## Optional Addons
 
-### Dependencies addons
+### Optional dependencies addons
 
 ```
 # To install some devtools
