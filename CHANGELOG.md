@@ -1,6 +1,46 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Fix
+- rpm names were incorrect with release tags
+
+<a name="v0.5.2"></a>
+## [v0.5.2] - 2019-01-31
+
+<a name="v0.5.1"></a>
+## [v0.5.1] - 2019-01-29
+
+<a name="v0.5.0"></a>
+## [v0.5.0] - 2019-01-29
+### Feat
+- Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
+- add a python3_ia layer
+- add a way to install binary python wheels
+- add filebeat component
+- add openjdk as a non default layer
+- add some metapackages aliases to have a cleaner installation doc
+- clean some useless files in .plugin files
+- execute integration tests directly from mfext module and launch them on a pull request on the module
+- ignore lines starting with # in .layerapi2_dependencies/conflicts files
+- introduce monitoring layer (loaded by default) and move telegraf inside
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- telegraf update (1.7.4 => 1.9.1)
+- update urllib3 (1.22 => 1.23)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
+- user-defined configuration name
+- we remove the src directory from .plugin files
+
+### Fix
+- circus update to fix some stop_signal issues (on circus itself)
+- do not include .git* files in the plugin RPM
+- no doc(s) directory in a plugin release
+- rpm names was incorrect with release tags
+- rpm names were incorrect with release tags
+
+### Perf
+- kill immediatly some watchers during circus shutdown
+
 <a name="v0.4.1"></a>
 ## [v0.4.1] - 2019-01-10
 ### Fix
