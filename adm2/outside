@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec layer_wrapper --empty -- $*
