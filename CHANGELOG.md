@@ -1,6 +1,9 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Feat
+- new utility "outside" to execute commands outside the metwork env
+
 <a name="v0.5.2"></a>
 ## [v0.5.2] - 2019-01-31
 
