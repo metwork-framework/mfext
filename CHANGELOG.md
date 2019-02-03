@@ -2,6 +2,7 @@
 ## [Unreleased]
 
 ### Feat
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
 - introduce new mflog library
 - new utility "outside" to execute commands outside the metwork env
 
