@@ -195,6 +195,18 @@ fi
     {% endif %}
 {% endif %}
 
+# A little kind of magic to deal with [log]/json_file=AUTO
+if test "{% raw %}${{% endraw %}{{MODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
+    if test "{% raw %}${{% endraw %}{{MODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
+        export {{MODULE}}_LOG_JSON_FILE="null"
+    else
+        export {{MODULE}}_LOG_JSON_FILE="{% raw %}${MODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
+    fi
+fi
+
+# FIXME: we add this for a smooth migration =>  we can remove it after a few days (2019-02-04)
+export {{MODULE}}_LOG_DEFAULT_LEVEL="{% raw %}${{% endraw %}{{MODULE}}_LOG_MINIMAL_LEVEL{% raw %}}{% endraw %}"
+
 {% block custom %}
 {% endblock %}
 
