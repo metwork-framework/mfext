@@ -76,6 +76,7 @@ Summary: metwork {{MODULE_LOWERCASE}} minimal module (default layer) branch {{MO
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal-0
 Requires: metwork-{{MODULE_LOWERCASE}}-layer-default-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 # -e "s/^#+//" to add not loaded dependencies
 {% set cmd = 'cat ' + MODULE_HOME + '/opt/default' + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
@@ -106,10 +107,11 @@ Summary: metwork {{MODULE_LOWERCASE}} root layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-root-0
 {% if MODULE == "MFEXT" -%}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: openssl >= 1.0.2
-Requires: openssl-libs >= 1.0.2
+Requires: openssl >= 1:1.0.2
+Requires: openssl-libs >= 1:1.0.2
 #Fixme : libgfortran because numpy is installed in layers python2[3]
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
@@ -149,6 +151,7 @@ Summary: metwork {{MODULE_LOWERCASE}} {{layer}} layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-{{layer}}-0
 # -e "s/^#+//" to add not loaded dependencies
 {% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
@@ -184,6 +187,7 @@ Summary: metwork {{MODULE_LOWERCASE}} meta devtools layers
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-devtools-0
 Requires: metwork-mfext-layer-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_devtools_jupyter-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
@@ -204,6 +208,7 @@ Summary: metwork {{MODULE_LOWERCASE}} meta scientific layers
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-scientific-0
 Requires: metwork-mfext-layer-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
