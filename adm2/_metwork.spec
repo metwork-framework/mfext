@@ -110,8 +110,8 @@ AutoProv: no
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-root-0
 {% if MODULE == "MFEXT" -%}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: openssl >= 1.0.2
-Requires: openssl-libs >= 1.0.2
+Requires: openssl >= 1:1.0.2
+Requires: openssl-libs >= 1:1.0.2
 #Fixme : libgfortran because numpy is installed in layers python2[3]
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
