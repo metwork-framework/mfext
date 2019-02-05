@@ -1,19 +1,19 @@
-{% if MFEXT_VERSION|int(-1) != -1 %}
-    {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:2]|join('.') -%}
+{% if '.ci' in MFEXT_VERSION %}
+    {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:-2]|join('.') %}
 {% else %}
-    {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0] -%}
+    {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:2]|join('.') %}
 {% endif %}
 {% if MODULE != "MFEXT" -%}
-    {% if MFCOM_VERSION|int(-1) != -1 %}
-        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:2]|join('.') -%}
+    {% if '.ci' in MFCOM_VERSION %}
+        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:-2]|join('.') %}
     {% else %}
-        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0] -%}
+        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:2]|join('.') %}
     {% endif %}
 {% endif -%}
-{% if MODULE_VERSION|int(-1) != -1 %}
-    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:2]|join('.') -%}
+{% if '.ci' in MODULE_VERSION %}
+    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:-2]|join('.') %}
 {% else %}
-    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0] -%}
+    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:2]|join('.') %}
 {% endif %}
 %define __jar_repack %{nil}
 %define __os_install_post %{nil}
@@ -108,8 +108,8 @@ AutoReq: no
 AutoProv: no
 {% if MODULE == "MFEXT" -%}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: openssl >= 1.0.2
-Requires: openssl-libs >= 1.0.2
+Requires: openssl >= 1:1.0.2
+Requires: openssl-libs >= 1:1.0.2
 #Fixme : libgfortran because numpy is installed in layers python2[3]
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
