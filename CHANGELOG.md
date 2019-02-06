@@ -4,6 +4,17 @@
 ### Fix
 - rpm names were incorrect with release tags
 
+<a name="v0.5.3"></a>
+## [v0.5.3] - 2019-02-04
+### Feat
+- Upgrade postgis from 2.4.4 to 2.4.6
+- new utility "outside" to execute commands outside the metwork env
+
+### Fix
+- force epoch=1 in centos7 openssl dependency
+- obsoletes wrong named packages
+- rpm names with release tags
+
 <a name="v0.5.2"></a>
 ## [v0.5.2] - 2019-01-31
 
