@@ -3,10 +3,24 @@
 
 ### Feat
 - Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
 - introduce new mflog library
 - new utility "outside" to execute commands outside the metwork env
 
 ### Fix
+- force epoch=1 in centos7 openssl dependency
+- rpm names with release tags
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+
+<a name="v0.5.3"></a>
+## [v0.5.3] - 2019-02-04
+### Feat
+- Upgrade postgis from 2.4.4 to 2.4.6
+- new utility "outside" to execute commands outside the metwork env
+
+### Fix
+- force epoch=1 in centos7 openssl dependency
+- obsoletes wrong named packages
 - rpm names with release tags
 
 <a name="v0.5.2"></a>
