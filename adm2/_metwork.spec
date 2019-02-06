@@ -70,6 +70,8 @@ AutoReq: no
 AutoProv: no
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal-0
 Requires: metwork-{{MODULE_LOWERCASE}}-layer-default-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+# Minimal rpm must have the "layer root" rpm in dependency
+Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 # -e "s/^#+//" to add not loaded dependencies
 {% set cmd = 'cat ' + MODULE_HOME + '/opt/default' + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
@@ -159,7 +161,14 @@ Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-{{layer}}-0
 {% set branch = MODULE_BRANCH -%}
 {% endif -%}
 {% if module_dep == MODULE_LOWERCASE -%}
+# We don't want "root layer rpm" of the module in dependency of the single layer rpms
+# Only minimal rpm, which is in dependency of all single layer rpms, has this dependency
+# (to avoid "circle" dependencies issues and to make sure the root layer rpm is the
+# last uninstalled rpm, which is better because this rpm removes all module files in
+# a rough way)
+{% if layer_dep != "root" -%}
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}} = {{FULL_VERSION}}
+{% endif -%}
 {% else -%}
 # Do not specify version for layers out of the current module
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
@@ -180,6 +189,9 @@ Provides: metwork-mfserv-nodejs-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
 Provides: metwork-mfdata-python2 = {{FULL_VERSION}}
 Provides: metwork-mfdata-python2-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% endif -%}
+# Every single layer rpm must have the minimal module rpm in dependency
+# to prevent single layer installation
+Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% endfor -%}
 %description layer-{{layer}}-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} {{layer}} layer
