@@ -50,17 +50,9 @@ Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MFEXT_BRANCH}} = {{FULL_VERS
 {% for layer in full_layers_list -%}
 Requires: metwork-{{MODULE_LOWERCASE}}-layer-{{layer}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% endfor -%}
+Provides: metwork-{{MODULE_LOWERCASE}}-full = {{FULL_VERSION}}
 %description
 This package provides the full {{MODULE_LOWERCASE}} module of the metwork framework
-
-%package full
-Summary: metwork {{MODULE_LOWERCASE}} full module
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
-%description full
-Alias for metwork-{{MODULE_LOWERCASE}}
 
 %package minimal
 Summary: metwork {{MODULE_LOWERCASE}} minimal module (default layer)
@@ -173,6 +165,18 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 #Add "scientific" system dependencies (specified in meta layer scientific)
 Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 {% endif -%}
+{% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
+Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
+Provides: metwork-mfserv-python2-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
+{% endif -%}
+{% if layer == "nodejs" and MODULE_LOWERCASE == "mfserv" -%}
+Provides: metwork-mfserv-nodejs = {{FULL_VERSION}}
+Provides: metwork-mfserv-nodejs-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
+{% endif -%}
+{% if layer == "python2" and MODULE_LOWERCASE == "mfdata" -%}
+Provides: metwork-mfdata-python2 = {{FULL_VERSION}}
+Provides: metwork-mfdata-python2-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
+{% endif -%}
 {% endfor -%}
 %description layer-{{layer}}-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} {{layer}} layer
@@ -187,17 +191,9 @@ AutoProv: no
 Requires: metwork-mfext-layer-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_devtools_jupyter-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
+Provides: metwork-mfext-devtools = {{FULL_VERSION}}
 %description devtools-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} meta devtools layers
-
-%package devtools
-Summary: metwork {{MODULE_LOWERCASE}} meta devtools layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfext-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-%description devtools
-Alias for metwork-mfext-devtools-{{MFEXT_BRANCH}} (without branch name)
 
 %package scientific-{{MFEXT_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} meta scientific layers
@@ -207,22 +203,14 @@ AutoProv: no
 Requires: metwork-mfext-layer-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+Provides: metwork-mfext-scientific = {{FULL_VERSION}}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
 Requires: libquadmath
 {% endif -%}
 %description scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} meta scientific layers
 
-%package scientific
-Summary: metwork {{MODULE_LOWERCASE}} meta scientific layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-%description scientific
-Alias for metwork-mfext-scientific-{{MFEXT_BRANCH}} (without branch name)
-
-%package python2
+%package python2-{{MFEXT_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} python2 layers
 Group: Applications/Multimedia
 AutoReq: no
@@ -230,40 +218,10 @@ AutoProv: no
 Requires: metwork-mfext-layer-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python2_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python2_devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-%description python2
+Provides: metwork-mfext-python2 = {{FULL_VERSION}}
+%description python2-{{MFEXT_BRANCH}}
 Alias for python2 layers
 
-{% endif -%}
-{% if MODULE == "MFSERV" -%}
-%package python2
-Summary: metwork {{MODULE_LOWERCASE}} python2 layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfserv-layer-python2-{{MODULE_BRANCH}} = {{FULL_VERSION}}
-%description python2
-Alias for python2 layer
-
-%package nodejs
-Summary: metwork {{MODULE_LOWERCASE}} nodejs layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfserv-layer-nodejs-{{MODULE_BRANCH}} = {{FULL_VERSION}}
-%description nodejs
-Alias for nodejs layer
-
-{% endif -%}
-
-{% if MODULE == "MFDATA" -%}
-%package python2
-Summary: metwork {{MODULE_LOWERCASE}} python2 layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfdata-layer-python2-{{MODULE_BRANCH}} = {{FULL_VERSION}}
-%description python2
-Alias for python2 layer
 {% endif -%}
 
 %prep
@@ -392,9 +350,6 @@ rm -fr %{buildroot}
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
 
-%files full
-%defattr(-,root,root,-)
-
 %files minimal
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
@@ -426,28 +381,9 @@ rm -fr %{buildroot}
 %files devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 
-%files devtools
-%defattr(-,root,root,-)
-
 %files scientific-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 
-%files scientific
-%defattr(-,root,root,-)
-
-%files python2
-%defattr(-,root,root,-)
-{% endif -%}
-
-{% if MODULE == "MFSERV" -%}
-%files python2
-%defattr(-,root,root,-)
-
-%files nodejs
-%defattr(-,root,root,-)
-{% endif -%}
-
-{% if MODULE == "MFDATA" -%}
-%files python2
+%files python2-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 {% endif -%}
