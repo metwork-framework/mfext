@@ -1,6 +1,9 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Fix
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+
 <a name="v0.5.3"></a>
 ## [v0.5.3] - 2019-02-04
 ### Feat
