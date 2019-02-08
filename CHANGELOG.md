@@ -6,9 +6,12 @@
 - Upgrade postgis from 2.4.4 to 2.4.6
 - introduce new mflog library
 - new utility "outside" to execute commands outside the metwork env
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
 
 ### Fix
 - force epoch=1 in centos7 openssl dependency
+- mapserverapi update (0.1.2 => 0.1.3)
 - rpm names with release tags
 - upgrade mapserverapi (0.1.1 => 0.1.2)
 
