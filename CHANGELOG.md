@@ -4,6 +4,12 @@
 ### Fix
 - rpm names were incorrect with release tags
 
+<a name="v0.5.4"></a>
+## [v0.5.4] - 2019-02-08
+### Fix
+- mapserverapi update (0.1.2 => 0.1.3)
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+
 <a name="v0.5.3"></a>
 ## [v0.5.3] - 2019-02-04
 ### Feat
