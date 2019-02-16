@@ -15,6 +15,9 @@
 - rpm names with release tags
 - upgrade mapserverapi (0.1.1 => 0.1.2)
 
+<a name="v0.5.5"></a>
+## [v0.5.5] - 2019-02-09
+
 <a name="v0.5.4"></a>
 ## [v0.5.4] - 2019-02-08
 ### Fix
