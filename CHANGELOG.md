@@ -4,6 +4,9 @@
 ### Fix
 - rpm names were incorrect with release tags
 
+<a name="v0.5.5"></a>
+## [v0.5.5] - 2019-02-09
+
 <a name="v0.5.4"></a>
 ## [v0.5.4] - 2019-02-08
 ### Fix
