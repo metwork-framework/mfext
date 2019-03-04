@@ -11,7 +11,7 @@ ConfigArgParse==0.13.0
 diskcache==3.1.1
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git@19465dd337a4fb3aea18df8c8273b0fec8372215#egg=envtpl
--e git+https://github.com/metwork-framework/mflog.git@7e2704f073f801480b484d5395805da3b706418b#egg=mflog
+-e git+https://github.com/metwork-framework/mflog.git@de3cbb7de7a21950bb9d99f2ea076e9299ab9a81#egg=mflog
 structlog==18.2.0
 filelock==3.0.4
 future==0.16.0
