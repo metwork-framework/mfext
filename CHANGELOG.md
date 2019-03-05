@@ -1,6 +1,10 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Feat
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+
 <a name="v0.5.5"></a>
 ## [v0.5.5] - 2019-02-09
 
