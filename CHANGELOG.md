@@ -8,6 +8,7 @@
 - new utility "outside" to execute commands outside the metwork env
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
+- upgrade mflog to latest master
 
 ### Fix
 - force epoch=1 in centos7 openssl dependency
