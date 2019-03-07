@@ -1,4 +1,5 @@
 .PHONY: coverage _coverage clean all before after mrproper doc test archive rpm
+SHELL := /bin/bash
 
 ifeq ($(VERSION_BUILD),)
     export VERSION_BUILD=$(shell $(MFEXT_HOME)/bin/guess_version.sh 2>/dev/null)
@@ -102,8 +103,24 @@ prereq:
 archive: $(MODULE_HOME)/$(ARCHIV)-linux64.tar
 $(MODULE_HOME)/$(ARCHIV)-linux64.tar:
 	rm -Rf $(MODULE_HOME)/$(ARCHIV) ; mkdir $(MODULE_HOME)/$(ARCHIV)
-	cp -Rpf `find -L $(MODULE_HOME) -mindepth 1 -maxdepth 1 -type d |grep -v '^$(MODULE_HOME)/\.' |grep -v '^$(MODULE_HOME)/src' |grep -v '^$(MODULE_HOME)/build' |grep -v '^$(MODULE_HOME)/$(MODULE_LOWERCASE)'` $(MODULE_HOME)/$(ARCHIV)/
-	cp -f $(MODULE_HOME)/.layerapi2* $(MODULE_HOME)/$(ARCHIV)/
+	for REP in $(MODULE_HOME)/*; do \
+		if test "$(MFEXT_ADDON)" = "1"; then continue; fi; \
+		if ! test -d "$${REP}"; then continue; fi; \
+		if test "$${REP}" = "$(MODULE_HOME)/build"; then continue; fi; \
+		if test "$${REP}" = "$(MODULE_HOME)/src"; then continue; fi; \
+		if [[ $${REP} = $(MODULE_HOME)/$(MODULE_LOWERCASE)-* ]]; then continue; fi; \
+		cp -Rpf $${REP} $(MODULE_HOME)/$(ARCHIV)/; \
+	done
+	if test "$(MFEXT_ADDON)" = "1"; then \
+		mkdir -p $(MODULE_HOME)/$(ARCHIV)/opt; \
+		for REP in $(MODULE_HOME)/opt/*; do \
+		    if ! test -d "$${REP}"; then continue; fi; \
+			if ! test -f $${REP}/.mfextaddon; then continue; fi; \
+			cp -Rpf $${REP} $(MODULE_HOME)/$(ARCHIV)/opt/; \
+		done; \
+	else \
+		cp -f $(MODULE_HOME)/.layerapi2* $(MODULE_HOME)/$(ARCHIV)/; \
+	fi
 	chmod -R go-rwx $(MODULE_HOME)/$(ARCHIV)
 	chmod -R ug+rX $(MODULE_HOME)/$(ARCHIV)
 	chmod -R u+rwX $(MODULE_HOME)/$(ARCHIV)
@@ -131,8 +148,9 @@ rpm: archive
 	mkdir $(MODULE_HOME)/rpm/SOURCES
 	mkdir $(MODULE_HOME)/rpm/tmp
 	echo '%_topdir $(MODULE_HOME)/rpm' >$(MODULE_HOME)/rpm/.rpmmacros
-	if test "$(MODULE)" = "MFEXT"; then cat $(MFEXT_HOME)/share/_metwork.spec |$(SRC_DIR)/layers/layer7_devtools/0000_penvtpl/bin/penvtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; else cat $(MFEXT_HOME)/share/_metwork.spec |envtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; fi
+	if test "$(MODULE)" = "MFEXT" -a "$(MFEXT_ADDON)" != "1"; then cat $(MFEXT_HOME)/share/_metwork.spec |$(SRC_DIR)/layers/layer7_devtools/0000_penvtpl/bin/penvtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; else cat $(MFEXT_HOME)/share/_metwork.spec |envtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; fi
 	ln -s $(MODULE_HOME)/$(ARCHIV)-linux64.tar $(MODULE_HOME)/rpm/SOURCES/$(ARCHIV)-linux64.tar
 	cd $(MODULE_HOME)/rpm/SPECS && export HOME=$(MODULE_HOME)/rpm && rpmbuild -bb metwork-$(MODULE_LOWERCASE).spec
+	if test "$(MFEXT_ADDON)" = "1"; then rm -f $$(ls $(MODULE_HOME)/rpm/RPMS/x86_64/*.rpm |grep -v '\-layer\-'); fi
 	cp -f $(MODULE_HOME)/rpm/RPMS/x86_64/*.rpm $(MODULE_HOME)/
 	if test ! "$(DRONE)" = true; then rm -Rf $(MODULE_HOME)/rpm; fi

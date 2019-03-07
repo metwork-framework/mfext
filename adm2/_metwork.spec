@@ -1,3 +1,6 @@
+{% if MFEXT_ADDON is not defined %}
+    {% set MFEXT_ADDON = "0" %}
+{% endif %}
 {% if '.ci' in MFEXT_VERSION %}
     {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:-2]|join('.') %}
 {% else %}
@@ -28,7 +31,11 @@
 
 {% set liste = 'cd $MODULE_HOME; ls -da bin config lib include share .layerapi2* 2>/dev/null'|shell -%}
 {% set root_list = liste.split('\n')[:-1] -%}
+{% if MFEXT_ADDON == "1" %}
+{% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; for REP in *; do if test -f "${REP}/.mfextaddon"; then echo ${REP}; fi; done; fi'|shell -%}
+{% else %}
 {% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; ls -d *; fi'|shell -%}
+{% endif %}
 {% set full_layers_list = liste2.split('\n')[:-1] -%}
 
 Name: metwork-{{MODULE_LOWERCASE}}
@@ -54,6 +61,7 @@ Provides: metwork-{{MODULE_LOWERCASE}}-full = {{FULL_VERSION}}
 %description
 This package provides the full {{MODULE_LOWERCASE}} module of the metwork framework
 
+{% if MFEXT_ADDON == "0" %}
 %package minimal
 Summary: metwork {{MODULE_LOWERCASE}} minimal module (default layer)
 Group: Applications/Multimedia
@@ -136,6 +144,7 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% endfor -%}
 %description layer-root-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} root layer
+{% endif %}
 
 {% for layer in full_layers_list %}
 %package layer-{{layer}}-{{MODULE_BRANCH}}
@@ -164,7 +173,11 @@ AutoProv: no
 # last uninstalled rpm, which is better because this rpm removes all module files in
 # a rough way)
 {% if layer_dep != "root" -%}
+{% if MFEXT_ADDON == "1" %}
+Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
+{% else %}
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}} = {{FULL_VERSION}}
+{% endif -%}
 {% endif -%}
 {% else -%}
 # Do not specify version for layers out of the current module
@@ -188,12 +201,17 @@ Provides: metwork-mfdata-python2-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% endif -%}
 # Every single layer rpm must have the minimal module rpm in dependency
 # to prevent single layer installation
+{% if MFEXT_ADDON == "1" %}
+Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}}
+{% else %}
 Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+{% endif -%}
 {% endfor -%}
 %description layer-{{layer}}-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} {{layer}} layer
 {% endfor -%}
 
+{% if MFEXT_ADDON == "0" %}
 {% if MODULE == "MFEXT" -%}
 %package devtools-{{MFEXT_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} meta devtools layers
@@ -235,6 +253,7 @@ Provides: metwork-mfext-python2 = {{FULL_VERSION}}
 Alias for python2 layers
 
 {% endif -%}
+{% endif -%}
 
 %prep
 cd %{_builddir} || exit 1
@@ -246,6 +265,7 @@ mv {{MODULE_LOWERCASE}}-%{version}-%{release} %{name}-%{version}-%{release}/
 cd %{name}-%{version}-%{release}
 rm -f mf*_link
 
+{% if MFEXT_ADDON == "0" %}
 {% if MODULE_HAS_HOME_DIR == "1" -%}
 %pre layer-root-{{MODULE_BRANCH}}
 N=`cat /etc/group |grep '^metwork:' |wc -l`
@@ -274,6 +294,7 @@ if test ${N} -eq 0; then
   rm -Rf /home/{{MODULE_LOWERCASE}}
 fi
 {% endif -%}
+{% endif %}
 
 %build
 
@@ -284,7 +305,7 @@ ln -s {{MODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
 {% endif -%}
 mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/* %{buildroot}{{MODULE_HOME}}/
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}{{MODULE_HOME}}/
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" -%}
 ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
@@ -307,6 +328,7 @@ cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
 EOF
 {% endif -%}
 
+{% if MFEXT_ADDON == "0" %}
 %post layer-root-{{MODULE_BRANCH}}
 if test -f /etc/metwork.config; then
   touch /etc/metwork.config >/dev/null 2>&1
@@ -354,6 +376,7 @@ if [ "$1" = "0" ]; then # last uninstall only
   {% endif -%}
   rm -Rf /etc/metwork.config.d/{{MODULE_LOWERCASE}}
 fi
+{% endif -%}
 
 %clean
 rm -fr %{buildroot}
@@ -362,6 +385,7 @@ rm -fr %{buildroot}
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
 
+{% if MFEXT_ADDON == "0" %}
 %files minimal
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
@@ -381,6 +405,7 @@ rm -fr %{buildroot}
 {% if MODULE == "MFCOM" -%}
 /etc/security/limits.d/50-metwork.conf
 {% endif -%}
+{% endif %}
 
 {% for layer in full_layers_list -%}
 %files layer-{{layer}}-{{MODULE_BRANCH}}
@@ -389,6 +414,7 @@ rm -fr %{buildroot}
 
 {% endfor -%}
 
+{% if MFEXT_ADDON == "0" %}
 {% if MODULE == "MFEXT" -%}
 %files devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
@@ -399,3 +425,4 @@ rm -fr %{buildroot}
 %files python2-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 {% endif -%}
+{% endif %}
