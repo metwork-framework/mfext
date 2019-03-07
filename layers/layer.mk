@@ -20,6 +20,7 @@ layer: $(TARGET_LAYER_PROFILES)
 			cd $${OLDPWD}; \
 		done; \
 	fi
+	if test "$(MFEXT_ADDON)" = "1"; then touch $(MODULE_HOME)/opt/$(LAYER_NAME)/.mfextaddon; fi
 
 before:
 	if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then \
@@ -67,7 +68,7 @@ mrproper: clean
 
 $(MODULE_HOME)/opt/$(LAYER_NAME)/%: %
 	@mkdir -p $(shell dirname $@)
-	if test "$(MODULE)" = "MFEXT"; then cat $< |$(SRC_DIR)/adm/envtpl >$@; else cat $< |$(MFEXT_HOME)/bin/envtpl >$@; fi
+	if test "$(MODULE)" = "MFEXT" -a "$(MFEXT_ADDON)" != "1"; then cat $< |$(SRC_DIR)/adm/envtpl >$@; else cat $< |$(MFEXT_HOME)/bin/envtpl >$@; fi
 
 doc:
 	_doc_layer.sh $(LAYER_NAME) >$(SRC_DIR)/doc/layer_$(LAYER_NAME).md
