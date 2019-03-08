@@ -4,7 +4,9 @@
 ### Feat
 - Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
 - Upgrade postgis from 2.4.4 to 2.4.6
+- introduce mfext addons
 - introduce new mflog library
+- mflog update (again)
 - new utility "outside" to execute commands outside the metwork env
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
