@@ -2,6 +2,7 @@
 ## [Unreleased]
 
 ### Feat
+- introduce mfext addons
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 
