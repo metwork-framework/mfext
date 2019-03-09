@@ -10,6 +10,7 @@
 - new utility "outside" to execute commands outside the metwork env
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
+- remove python3_ia layer (we are building an dedicated addon for that)
 - upgrade mflog to latest master
 
 ### Fix
