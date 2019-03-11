@@ -66,6 +66,6 @@ if test "${N}" -eq 0; then
 fi
 
 # shellcheck disable=SC2086
-pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host downloads.sourceforge.net --disable-pip-version-check --src="${PREFIX_PATH}/lib/python${PYTHON_SHORT_VERSION}/src" --prefix="${LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} ${FORCED_INDEX_DIR_STRING}
+unsafe_pip install --src="${PREFIX_PATH}/lib/python${PYTHON_SHORT_VERSION}/src" --prefix="${LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} ${FORCED_INDEX_DIR_STRING}
 rm -f "${REQUIREMENTS}.tmp"
 rm -Rf "${LAYER_PATH}/tmp/install_requirements"
