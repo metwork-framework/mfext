@@ -3,6 +3,8 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 exit_if_root
 
+cd "${MODULE_RUNTIME_HOME}" || exit 1
+
 SOFT=0
 SOFT_STRING=""
 if test "${1}" = "soft"; then
