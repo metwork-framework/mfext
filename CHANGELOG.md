@@ -4,6 +4,7 @@
 ### Feat
 - Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
 - Upgrade postgis from 2.4.4 to 2.4.6
+- delete filebeat component
 - introduce mfext addons
 - introduce new mflog library
 - mflog update (again)
@@ -14,6 +15,7 @@
 - upgrade mflog to latest master
 
 ### Fix
+- fix mfxxx.start/stop/status when used in some special dirs
 - force epoch=1 in centos7 openssl dependency
 - mapserverapi update (0.1.2 => 0.1.3)
 - rpm names with release tags
