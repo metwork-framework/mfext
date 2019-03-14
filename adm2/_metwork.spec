@@ -275,27 +275,17 @@ rm -f mf*_link
 %pre layer-root-{{MODULE_BRANCH}}
 N=`cat /etc/group |grep '^metwork:' |wc -l`
 if test ${N} -eq 0; then
-  groupadd metwork >/dev/null 2>&1
-  N=`cat /etc/group |grep '^metwork:' |wc -l`
-  if test ${N} -eq 0; then
-    echo "ERROR: impossible to create the metwork group"
-    exit 1
-  fi
+  groupadd metwork >/dev/null 2>&1 || true
 fi
 N=`cat /etc/passwd |grep '^{{MODULE_LOWERCASE}}:' |wc -l`
 if test ${N} -eq 0; then
-  useradd -d /home/{{MODULE_LOWERCASE}} -g metwork -s /bin/bash {{MODULE_LOWERCASE}} >/dev/null 2>&1
-  echo {{MODULE_LOWERCASE}} |passwd --stdin {{MODULE_LOWERCASE}} >/dev/null 2>&1
+  useradd -d /home/{{MODULE_LOWERCASE}} -g metwork -s /bin/bash {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
+  echo {{MODULE_LOWERCASE}} |passwd --stdin {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
   {% if MODULE == "MFDATA" -%}
-     useradd -M -d /home/{{MODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin depose >/dev/null 2>&1
-     echo depose |passwd --stdin {{MODULE_LOWERCASE}} >/dev/null 2>&1
-     chmod g+rx /home/{{MODULE_LOWERCASE}} >/dev/null 2>&1
+     useradd -M -d /home/{{MODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin depose >/dev/null 2>&1 || true
+     echo depose |passwd --stdin {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
+     chmod g+rx /home/{{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
   {% endif -%}
-  N=`cat /etc/passwd |grep '^{{MODULE_LOWERCASE}}:' |wc -l`
-  if test ${N} -eq 0; then
-    echo "ERROR: impossible to create the {{MODULE_LOWERCASE}} user"
-    exit 1
-  fi
   rm -Rf /home/{{MODULE_LOWERCASE}}
 fi
 {% endif -%}
