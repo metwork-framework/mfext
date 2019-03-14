@@ -1,5 +1,5 @@
 Autologging==1.3.1
 certifi==2018.10.15
 elasticsearch==6.3.1
--e git+https://github.com/metwork-framework/jsonlog2elasticsearch@9b361d9e328fb008ee5a7113cb4bb209a8c0b140#egg=jsonlog2elasticsearch
+-e git+https://github.com/metwork-framework/jsonlog2elasticsearch@77dbe633a82461b97e36a711551ef488f7274e27#egg=jsonlog2elasticsearch
 pygtail==0.10.1
