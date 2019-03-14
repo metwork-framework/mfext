@@ -44,6 +44,7 @@ simplegeneric==0.8.1
 snowballstemmer==1.2.1
 Sphinx==1.8.1
 sphinx-rtd-theme==0.4.2
+sphinx-automodapi==0.10
 sphinxcontrib-websupport==1.1.0
 testfixtures==6.3.0
 tornado==5.1.1
