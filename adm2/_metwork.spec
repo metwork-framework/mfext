@@ -53,7 +53,7 @@ Vendor: Metwork
 ExclusiveOs: linux
 AutoReq: no
 AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
+Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% for layer in full_layers_list -%}
 Requires: metwork-{{MODULE_LOWERCASE}}-layer-{{layer}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% endfor -%}
