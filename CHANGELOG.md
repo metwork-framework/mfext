@@ -6,6 +6,9 @@
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 
+### Fix
+- fix some installation issues in some corner cases
+
 <a name="v0.5.5"></a>
 ## [v0.5.5] - 2019-02-09
 
