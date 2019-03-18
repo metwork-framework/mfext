@@ -1,53 +1,31 @@
 #!/bin/bash
 
-# see http://stackoverflow.com/questions/24515385/is-there-a-general-way-to-add-prepend-remove-paths-from-general-environment-vari
+# FIXME: replace with a direct call to _field_prepend and drop this function
 field_prepend() {
-    local varName=$1 fieldVal=$2 IFS=${3:-':'} auxArr
-    read -ra auxArr <<< "${!varName}"
-    for i in "${!auxArr[@]}"; do
-        # shellcheck disable=SC2184
-        [[ ${auxArr[i]} == "$fieldVal" ]] && unset auxArr[i]
-    done
-    auxArr=("$fieldVal" "${auxArr[@]}")
-    printf -v "$varName" '%s' "${auxArr[*]}"
+    local old_value
+    old_value=$(eval echo "\$$1")
+    local new_value
+    new_value=$("${MFEXT_HOME}/bin/_field_prepend" "${old_value}" "$2")
+    eval export "\\$1=${new_value}"
 }
-# FIXME: replace with a C version
 
-# see http://stackoverflow.com/questions/24515385/is-there-a-general-way-to-add-prepend-remove-paths-from-general-environment-vari
-field_append() {
-    local varName=$1 fieldVal=$2 IFS=${3:-':'} auxArr
-    read -ra auxArr <<< "${!varName}"
-    for i in "${!auxArr[@]}"; do
-        # shellcheck disable=SC2184
-        [[ ${auxArr[i]} == "$fieldVal" ]] && unset auxArr[i]
-    done
-    auxArr+=("$fieldVal")
-    printf -v "$varName" '%s' "${auxArr[*]}"
-}
-# FIXME: replace with a C version
-
-# see http://stackoverflow.com/questions/24515385/is-there-a-general-way-to-add-prepend-remove-paths-from-general-environment-vari
+# FIXME: replace with a direct call to _field_prepend and drop this function
 field_remove() {
-    local varName=$1 fieldVal=$2 IFS=${3:-':'} auxArr
-    read -ra auxArr <<< "${!varName}"
-    for i in "${!auxArr[@]}"; do
-        # shellcheck disable=SC2184
-        [[ ${auxArr[i]} == "$fieldVal" ]] && unset auxArr[i]
-    done
-    printf -v "$varName" '%s' "${auxArr[*]}"
+    local old_value
+    old_value=$(eval echo "\$$1")
+    local new_value
+    new_value=$("${MFEXT_HOME}/bin/_field_remove" --separator="${3:-':'}" "${old_value}" "$2")
+    eval export "\\$1=${new_value}"
 }
-# FIXME: replace with a C version
 
+# FIXME: replace with a direct call to _field_prepend and drop this function
 field_remove_with_wildcards() {
-    local varName=$1 fieldVal=$2 IFS=${3:-':'} auxArr
-    read -ra auxArr <<< "${!varName}"
-    for i in "${!auxArr[@]}"; do
-        # shellcheck disable=SC2184,SC2053
-        [[ ${auxArr[i]} == $fieldVal ]] && unset auxArr[i]
-    done
-    printf -v "$varName" '%s' "${auxArr[*]}"
+    local old_value
+    old_value=$(eval echo "\$$1")
+    local new_value
+    new_value=$("${MFEXT_HOME}/bin/_field_remove" --use-wildcards --separator="${3:-':'}" "${old_value}" "$2")
+    eval export "\\$1=${new_value}"
 }
-# FIXME: replace with a C version
 
 exit_if_root() {
     if test "$(id -u)" -eq 0; then

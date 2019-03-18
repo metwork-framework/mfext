@@ -55,3 +55,4 @@ doc/layerapi2.rst
 doc/*.mdtemp
 doc/.ipynb_checkpoints
 glib2/build
+mfutil_c/build
