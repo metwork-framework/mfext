@@ -5,6 +5,7 @@
 - Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
 - Upgrade postgis from 2.4.4 to 2.4.6
 - add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
 - delete filebeat component
 - introduce mfext addons
 - introduce new mflog library
@@ -22,6 +23,16 @@
 - mapserverapi update (0.1.2 => 0.1.3)
 - rpm names with release tags
 - upgrade mapserverapi (0.1.1 => 0.1.2)
+
+<a name="v0.5.6"></a>
+## [v0.5.6] - 2019-03-15
+### Feat
+- introduce mfext addons
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+
+### Fix
+- fix some installation issues in some corner cases
 
 <a name="v0.5.5"></a>
 ## [v0.5.5] - 2019-02-09
@@ -46,11 +57,11 @@
 <a name="v0.5.2"></a>
 ## [v0.5.2] - 2019-01-31
 
-<a name="v0.5.1"></a>
-## [v0.5.1] - 2019-01-29
-
 <a name="v0.5.0"></a>
 ## [v0.5.0] - 2019-01-29
+
+<a name="v0.5.1"></a>
+## [v0.5.1] - 2019-01-29
 ### Feat
 - Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
 - add a python3_ia layer
