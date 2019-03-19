@@ -10,6 +10,7 @@
 - introduce mfext addons
 - introduce new mflog library
 - mflog update (again)
+- mfutil_c introduction and some profile changes
 - new utility "outside" to execute commands outside the metwork env
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
