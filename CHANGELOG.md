@@ -16,6 +16,7 @@
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 - remove python3_ia layer (we are building an dedicated addon for that)
 - upgrade mflog to latest master
+- use our cookiecutter fork to add some features
 
 ### Fix
 - fix mfxxx.start/stop/status when used in some special dirs
