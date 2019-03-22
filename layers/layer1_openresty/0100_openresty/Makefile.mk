@@ -10,7 +10,7 @@ DESCRIPTION=\
 OPENRESTY est une distribution nginx qui ajoute des modules supplémentaires
 WEBSITE=http://openresty.org
 LICENSE=BSD
-PCRE_SOURCE_PATH=`readlink -m ../pcre/build/pcre-8.36`
+PCRE_SOURCE_PATH=$(LAYER_DIR)/pcre/build/pcre-8.36
 
 all:: $(PREFIX)/bin/resty
 $(PREFIX)/bin/resty: $(PCRE_SOURCE_PATH)
