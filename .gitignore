@@ -67,3 +67,8 @@ doc/layerapi2.rst
 doc/*.mdtemp
 doc/.ipynb_checkpoints
 glib2/build
+<<<<<<< HEAD
+=======
+mfutil_c/build
+pcre/build
+>>>>>>> 96499e1... feat: upgrade glib2 from 2.40.2 to 2.56.4

@@ -1,5 +1,5 @@
-include ../../../adm/root.mk
-include ../../package.mk
+include ../adm/root.mk
+include ../adm/subdir_root.mk
 
 export NAME=pcre
 export VERSION=8.36
@@ -12,6 +12,6 @@ WEBSITE=http://www.pcre.org
 LICENSE=BSD
 
 
-all:: $(PREFIX)/lib/libpcre.so
-$(PREFIX)/lib/libpcre.so:
-	$(MAKE) --file=../../Makefile.standard OPTIONS="--enable-shared --disable-static --enable-unicode-properties" download uncompress configure build install
+all:: $(MFEXT_HOME)/lib/libpcre.so
+$(MFEXT_HOME)/lib/libpcre.so:
+	$(MAKE) --file=../layers/Makefile.standard PREFIX=$(MFEXT_HOME) OPTIONS="--enable-shared --disable-static --enable-unicode-properties" download uncompress configure build install

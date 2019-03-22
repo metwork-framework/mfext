@@ -4,6 +4,8 @@
 all::
 	cd adm && $(MAKE)
 	cd config && $(MAKE)
+	cd layers && $(MAKE) helpers
+	cd pcre && $(MAKE)
 	cd glib2 && $(MAKE)
 	cd layerapi2 && $(MAKE)
 	cd wrappers && $(MAKE)
@@ -17,6 +19,12 @@ clean::
 	cd layerapi2 && $(MAKE) clean
 	cd wrappers && $(MAKE) clean
 	cd adm2 && $(MAKE) clean
+<<<<<<< HEAD
+=======
+	cd glib2 && $(MAKE) clean
+	cd pcre && $(MAKE) clean
+	cd mfutil_c && $(MAKE) clean
+>>>>>>> 96499e1... feat: upgrade glib2 from 2.40.2 to 2.56.4
 
 test::
 	cd adm && $(MAKE) test
