@@ -4,6 +4,9 @@
 ### Fix
 - rpm names were incorrect with release tags
 
+<a name="v0.5.7"></a>
+## [v0.5.7] - 2019-03-16
+
 <a name="v0.5.6"></a>
 ## [v0.5.6] - 2019-03-15
 ### Feat
@@ -37,11 +40,11 @@
 <a name="v0.5.2"></a>
 ## [v0.5.2] - 2019-01-31
 
-<a name="v0.5.0"></a>
-## [v0.5.0] - 2019-01-29
-
 <a name="v0.5.1"></a>
 ## [v0.5.1] - 2019-01-29
+
+<a name="v0.5.0"></a>
+## [v0.5.0] - 2019-01-29
 ### Feat
 - Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
 - add a python3_ia layer
