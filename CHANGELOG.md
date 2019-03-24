@@ -10,13 +10,16 @@
 - introduce mfext addons
 - introduce new mflog library
 - mflog update (again)
+- mflog update to fix some issues about null files
 - mfutil_c introduction and some profile changes
 - new utility "outside" to execute commands outside the metwork env
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 - remove python3_ia layer (we are building an dedicated addon for that)
+- upgrade glib2 from 2.40.2 to 2.56.4
 - upgrade mflog to latest master
 - use our cookiecutter fork to add some features
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
 
 ### Fix
 - fix mfxxx.start/stop/status when used in some special dirs
