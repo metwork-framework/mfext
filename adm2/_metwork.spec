@@ -286,6 +286,7 @@ if test ${N} -eq 0; then
      chmod g+rx /home/{{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
   {% endif -%}
   rm -Rf /home/{{MODULE_LOWERCASE}}
+  chown -R {{MODULE_LOWERCASE}}:metwork /home/{{MODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
 fi
 {% endif -%}
 {% endif %}
@@ -361,13 +362,31 @@ fi
 if [ "$1" = "0" ]; then # last uninstall only
   rm -Rf {{TARGET_LINK}} 2>/dev/null
   rm -Rf {{MODULE_HOME}} 2>/dev/null
+  # see https://stackoverflow.com/questions/40396945/
+  # date-command-is-giving-erroneous-output-while-using-inside-rpm-spec-file
+  export SAVE_SUFFIX="rpmsave`date '+%Y%m%d%H%M%''S'`"
   {% if MODULE_HAS_HOME_DIR == "1" -%}
+  if test -d /home/{{MODULE_LOWERCASE}}; then
+    echo "Saving old /home/{{MODULE_LOWERCASE}} to /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+    mv /home/{{MODULE_LOWERCASE}} /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}
+    rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
+    rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
+    {% if MODULE == "MFDATA" -%}
+      rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
+    {% endif %}
+    mkdir /home/{{MODULE_LOWERCASE}}
+  fi
   userdel -f -r {{MODULE_LOWERCASE}} 2>/dev/null
   rm -Rf /home/{{MODULE_LOWERCASE}} 2>/dev/null
   {% endif -%}
   {% if MODULE == "MFCOM" -%}
     rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
   {% endif -%}
+  N=`find /etc/metwork.config.d/{{MODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
+  if test ${N} -gt 0; then
+      echo "Saving old /etc/metwork.config.d/{{MODULE_LOWERCASE}} to /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+      mv /etc/metwork.config.d/{{MODULE_LOWERCASE}} /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}
+  fi
   rm -Rf /etc/metwork.config.d/{{MODULE_LOWERCASE}}
 fi
 {% endif -%}
