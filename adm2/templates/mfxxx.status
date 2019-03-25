@@ -6,7 +6,7 @@ exit_if_root
 cd "${MODULE_RUNTIME_HOME}" || exit 1
 
 if test "${1:-}" = "--help"; then
-    echo "usage {{MODULE_LOWERCASE}}.start"
+    echo "usage {{MODULE_LOWERCASE}}.status"
     echo "  => test the {{MODULE_LOWERCASE}} module"
     exit 0
 fi
@@ -16,6 +16,20 @@ if test "${PLUGIN_NAME}" != ""; then
     echo "ERROR: you can't use {{MODULE_LOWERCASE}}.status inside a plugin_env"
     exit 1
 fi
+
+{% if MODULE not in ["MFEXT", "MFCOM"] %}
+CONFIG_TARGET=$(readlink -f "${MODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
+if test "${CONFIG_TARGET}" != ""; then
+    CONFIG_TIMESTAMP=$(date -r "${CONFIG_TARGET}" +%s 2>/dev/null)
+    if test "${CONFIG_TIMESTAMP}" != ""; then
+        if test "{% raw %}${{% endraw %}{{MODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
+            echo_bold "WARNING: your environment is outdated => please reload your terminal before playing with {{MODULE_LOWERCASE}}.status"
+            exit 1
+        fi
+    fi
+fi
+{% endif %}
+
 if test "$1" != "QUIET"; then
     LINE="*****     CHECKING ${MODULE}     *****"
     N=`echo "${LINE}" |wc -c`
