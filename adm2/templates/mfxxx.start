@@ -15,6 +15,19 @@ if test "${1:-}" = "NOINIT"; then
     NOINIT=1
 fi
 
+{% if MODULE not in ["MFEXT", "MFCOM"] %}
+CONFIG_TARGET=$(readlink -f "${MODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
+if test "${CONFIG_TARGET}" != ""; then
+    CONFIG_TIMESTAMP=$(date -r "${CONFIG_TARGET}" +%s 2>/dev/null)
+    if test "${CONFIG_TIMESTAMP}" != ""; then
+        if test "{% raw %}${{% endraw %}{{MODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
+            echo_bold "ERROR: your environment is outdated => please reload your terminal before playing with {{MODULE_LOWERCASE}}.start/stop"
+            exit 1
+        fi
+    fi
+fi
+{% endif %}
+
 STARTUP_FLAG=`env |grep "^${MODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
 if test "${STARTUP_FLAG}" = "0"; then
     echo_bold "${MODULE}_STARTUP_FLAG=0 => nothing to start"
