@@ -1,6 +1,12 @@
 # automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/mfxxx_drone.yml template
 
 
+
+    
+    
+
+
+
     
     
 
@@ -21,7 +27,7 @@ bootstrap_common: &bootstrap_common
 build_common: &build_common
   commands:
     - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
-    - if ! test -f .drone_cache; then echo "step bypass"; exit 0; fi
+    - if test "${DRONE_TAG}" = ""; then if ! test -f .drone_cache; then echo "step bypass"; exit 0; fi; fi
     - export METWORK_BUILD_OS=${OS_VERSION}
 
     - mkdir -p /opt/metwork-mfext-$${TARGET_DIR}
@@ -35,21 +41,36 @@ build_common: &build_common
     - mv /opt/metwork-mfext-$${TARGET_DIR}/*.rpm .
   volumes:
     - /pub:/pub
+    - /private:/private
     - /buildcache:/buildcache
 
 
 publish_ci_common: &publish_ci_common
   commands:
     - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
-    - if ! test -f .drone_cache; then echo "step bypass"; touch .drone_downstream_bypass; exit 0; fi
+    - if test "${DRONE_TAG}" = ""; then if ! test -f .drone_cache; then echo "step bypass"; touch .drone_downstream_bypass; exit 0; fi; fi
     - mkdir -p /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
     - cp *.rpm /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
     - createrepo --update /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}
+
     - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext; mkdir -p /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext ; cp -Rf html_doc/* /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext/ ; fi
+
     - touch /buildcache/build_mfext_${DRONE_BRANCH}_`cat .drone_cache`
   volumes:
     - /pub:/pub
+    - /private:/private
     - /buildcache:/buildcache
+
+
+integration_tests_common: &integration_tests_common
+  commands:
+    - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
+    - if test "${DRONE_TAG}" = ""; then if ! test -f .drone_cache; then echo "step bypass"; exit 0; fi; fi
+
+    - yum -y localinstall metwork-mfext*.rpm
+    - /opt/metwork-mfext/bin/mfext_wrapper ./run_integration_tests.sh
+
+
 
 pipeline:
   bootstrap_integration_push:
@@ -74,7 +95,19 @@ pipeline:
       - /buildcache:/buildcache
     when:
       event: push
-      branch: [ master, release_* ]
+      branch: [ master, experimental*, release_* ]
+  bootstrap_tag:
+    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    environment:
+      - DEP_DIR=${DRONE_BRANCH##release_}
+      - TARGET_DIR=${DRONE_BRANCH##release_}
+    <<: *bootstrap_common
+    volumes:
+      - /buildcache:/buildcache
+    when:
+      event: tag
+      ref: refs/tags/v*
+
   build_integration:
     <<: *build_common
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
@@ -92,7 +125,33 @@ pipeline:
       - TARGET_DIR=${DRONE_BRANCH##release_}
     when:
       event: push
-      branch: [ master, release_* ]
+      branch: [ master, experimental*, release_* ]
+  build_tag:
+    <<: *build_common
+    image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    environment:
+      - TARGET_DIR=${DRONE_BRANCH##release_}
+    when:
+      event: tag
+      ref: refs/tags/v*
+
+
+  integration_tests_integration:
+    <<: *integration_tests_common
+    image: centos:${OS_VERSION}
+    when:
+
+      event: push
+
+      branch: [ integration, ci_*, pci_* ]
+  integration_tests:
+    <<: *integration_tests_common
+    image: centos:${OS_VERSION}
+    when:
+      event: push
+      branch: [ master, release_*, experimental* ]
+
+
   publish_ci_integration:
     <<: *publish_ci_common
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
@@ -104,21 +163,24 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     when:
       event: push
-      branch: [ master, release_* ]
-
-
-  trigger_testimages:
-    image: metwork/drone-downstream-specific-image:latest
-    repositories:
-      - metwork-framework/docker-mfext-centos6-testimage@${DRONE_BRANCH}
-      - metwork-framework/docker-mfext-centos7-testimage@${DRONE_BRANCH}
-    params:
-      - FORCED_OS_VERSION=${OS_VERSION}
-    secrets: [ downstream_token, downstream_server ]
+      branch: [ master, experimental*, release_* ]
+  publish_tag:
+    image: metwork/mfxxx-${OS_VERSION}-buildimage:${DRONE_BRANCH}
+    volumes:
+      - /pub:/pub
+      - /private:/private
+    commands:
+      - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
+      - mkdir -p /pub/metwork/releases/rpms/${DRONE_BRANCH}/${OS_VERSION}/
+      - cp *.rpm /pub/metwork/releases/rpms/${DRONE_BRANCH}/${OS_VERSION}/
+      - createrepo --update /pub/metwork/releases/rpms/${DRONE_BRANCH}/${OS_VERSION}
+      - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/releases/docs/${DRONE_BRANCH}/mfext; mkdir -p /pub/metwork/releases/docs/${DRONE_BRANCH}/mfext ; cp -Rf html_doc/* /pub/metwork/releases/docs/${DRONE_BRANCH}/mfext/ ; fi
     when:
-      status: [ success ]
-      event: push
-      branch: [ master, integration, release_* ]
+      event: tag
+      ref: refs/tags/v*
+
+
+
   trigger_mfcombuildimage:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
@@ -127,20 +189,7 @@ pipeline:
     when:
       status: [ success ]
       event: push
-      branch: [ master, integration, release_* ]
-
-
-  trigger_integration_tests:
-    image: metwork/drone-downstream-specific-image:latest
-    repositories:
-      - metwork-framework/mfext-integration-tests-runner@${DRONE_BRANCH}
-    params:
-      - FORCED_OS_VERSION=${OS_VERSION}
-    secrets: [ downstream_token, downstream_server ]
-    when:
-      status: [ success ]
-      event: push
-      branch: [ master, integration, release_* ]
+      branch: [ master, integration, experimental*, release_* ]
 
 
 
@@ -149,4 +198,4 @@ matrix:
     - centos6
     - centos7
 
-branches: [ master, integration, ci_*, pci_*, release_* ]
+branches: [ master, integration, experimental*, ci_*, pci_*, release_* ]

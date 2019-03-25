@@ -3,6 +3,8 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 exit_if_root
 
+cd "${MODULE_RUNTIME_HOME}" || exit 1
+
 if test "${1:-}" = "--help"; then
     echo "usage {{MODULE_LOWERCASE}}.start [NOINIT]"
     echo "  => start the {{MODULE_LOWERCASE}} module"

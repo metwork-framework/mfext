@@ -18,7 +18,7 @@ $(MFEXT_HOME)/bin/python3: custom_wrapper.c make_custom_wrapper.sh
 	./make_custom_wrapper.sh python3_core@mfext,-python3@mfext,-python3@mfcom,-python3@{MODULE_LOWERCASE} python $@
 
 $(MFEXT_HOME)/bin/python: custom_wrapper.c make_custom_wrapper.sh
-	./make_custom_wrapper.sh python python $@
+	./make_custom_wrapper.sh python@mfext,-python@mfcom,-python@{MODULE_LOWERCASE} python $@
 
 $(MFEXT_HOME)/bin/sphinx_wrapper: custom_wrapper.c make_custom_wrapper.sh
 	./make_custom_wrapper.sh python3_devtools@mfext sphinx-build $@

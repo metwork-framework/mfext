@@ -1,64 +1,157 @@
-<a name=""></a>
-# (unreleased)
+<a name="unreleased"></a>
+## [Unreleased]
 
+### Feat
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- delete filebeat component
+- introduce mfext addons
+- introduce new mflog library
+- mflog update (again)
+- mflog update to fix some issues about null files
+- mfutil_c introduction and some profile changes
+- new utility "outside" to execute commands outside the metwork env
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- remove python3_ia layer (we are building an dedicated addon for that)
+- upgrade glib2 from 2.40.2 to 2.56.4
+- upgrade mflog to latest master
+- use our cookiecutter fork to add some features
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
 
-### Bug Fixes
+### Fix
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- force epoch=1 in centos7 openssl dependency
+- mapserverapi update (0.1.2 => 0.1.3)
+- rpm names with release tags
+- upgrade mapserverapi (0.1.1 => 0.1.2)
 
-* add mapserverapi_python ([91f3524](https://github.com/metwork-framework/mfext/commit/91f3524))
-* block mfxxx.start/stop/status/init calls from a plugin_env ([8e515d7](https://github.com/metwork-framework/mfext/commit/8e515d7)), closes [#112](https://github.com/metwork-framework/mfext/issues/112)
-* depency issue with new mapserver subpackage ([80091ee](https://github.com/metwork-framework/mfext/commit/80091ee))
-* fix branch guessing with drone ci ([f9bb425](https://github.com/metwork-framework/mfext/commit/f9bb425))
-* fix build error ([b6d3faf](https://github.com/metwork-framework/mfext/commit/b6d3faf))
-* fix drone build caching ([01860a3](https://github.com/metwork-framework/mfext/commit/01860a3))
-* fix error in template spec file for package mfserv and others ([3671242](https://github.com/metwork-framework/mfext/commit/3671242))
-* fix layer dependencies in new tests ([2ef9a42](https://github.com/metwork-framework/mfext/commit/2ef9a42))
-* mapserverapi upgrade (0.1.0 => 0.1.1) ([297890e](https://github.com/metwork-framework/mfext/commit/297890e))
-* mfxxx login problems in docker mode ([8349516](https://github.com/metwork-framework/mfext/commit/8349516)), closes [#84](https://github.com/metwork-framework/mfext/issues/84)
-* sqlite support for python2/python3 ([89c3907](https://github.com/metwork-framework/mfext/commit/89c3907)), closes [#4](https://github.com/metwork-framework/mfext/issues/4)
+<a name="v0.5.7"></a>
+## [v0.5.7] - 2019-03-16
 
+<a name="v0.5.6"></a>
+## [v0.5.6] - 2019-03-15
+### Feat
+- introduce mfext addons
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
 
-### Features
+### Fix
+- fix some installation issues in some corner cases
 
-* add basemap, cdsapi, graphviz, pandas and scikit-learn ([afc9cad](https://github.com/metwork-framework/mfext/commit/afc9cad))
-* add diskcache in python2 and python3 layers ([4ff07b1](https://github.com/metwork-framework/mfext/commit/4ff07b1)), closes [#136](https://github.com/metwork-framework/mfext/issues/136)
-* add filebeat component ([7f37ad9](https://github.com/metwork-framework/mfext/commit/7f37ad9))
-* Add Fiona in python2 and python3 scientific layers ([92cdbbe](https://github.com/metwork-framework/mfext/commit/92cdbbe)), closes [#127](https://github.com/metwork-framework/mfext/issues/127)
-* add geos, lxml, pycurl, pyproj and sqlalchemy ([7ad2840](https://github.com/metwork-framework/mfext/commit/7ad2840))
-* add graphviz in scientific layer ([a44298b](https://github.com/metwork-framework/mfext/commit/a44298b))
-* add integration_tests layer and rpm mfext-integration-tests ([e7683f6](https://github.com/metwork-framework/mfext/commit/e7683f6))
-* add lib, local/lib to `PYTHONPATH` by default (layers, plugins...) ([ab425d7](https://github.com/metwork-framework/mfext/commit/ab425d7)), closes [metwork-framework/resources#24](https://github.com/metwork-framework/resources/issues/24)
-* add lxml, pycurl, pyproj and sqlalchemy as in python3 ([fd5cd08](https://github.com/metwork-framework/mfext/commit/fd5cd08))
-* add mapserverapi library ([1cc8895](https://github.com/metwork-framework/mfext/commit/1cc8895))
-* add mapserverapi_python ([d173f3d](https://github.com/metwork-framework/mfext/commit/d173f3d))
-* add mapserverapi_python ([e2a38a8](https://github.com/metwork-framework/mfext/commit/e2a38a8))
-* add openjdk as a non default layer ([79e392a](https://github.com/metwork-framework/mfext/commit/79e392a))
-* Add possibility to pip install package from https url. ([0cf2fdc](https://github.com/metwork-framework/mfext/commit/0cf2fdc))
-* Add postgresql support in gdal ([fee0706](https://github.com/metwork-framework/mfext/commit/fee0706)), closes [#76](https://github.com/metwork-framework/mfext/issues/76)
-* add pygraphviz in python[23]_scientific layers ([bc24c6d](https://github.com/metwork-framework/mfext/commit/bc24c6d))
-* add pytest package and update some other ones ([c0132d1](https://github.com/metwork-framework/mfext/commit/c0132d1))
-* add websocket support for openresty ([b3666b0](https://github.com/metwork-framework/mfext/commit/b3666b0))
-* add websocket support for openresty ([8cfb72f](https://github.com/metwork-framework/mfext/commit/8cfb72f))
-* better default MODULE_RUNTIME_SUFFIX ([612cf7b](https://github.com/metwork-framework/mfext/commit/612cf7b))
-* check that module crontab is not empy in mfxxx.status ([190a0c8](https://github.com/metwork-framework/mfext/commit/190a0c8)), closes [#122](https://github.com/metwork-framework/mfext/issues/122)
-* expose new function in layerapi2 ([85aec59](https://github.com/metwork-framework/mfext/commit/85aec59))
-* first import ([00adaf7](https://github.com/metwork-framework/mfext/commit/00adaf7))
-* guess released versions with tags ([0e588b9](https://github.com/metwork-framework/mfext/commit/0e588b9))
-* introduce monitoring layer (loaded by default) and move telegraf ([20f8cbb](https://github.com/metwork-framework/mfext/commit/20f8cbb))
-* load mapserver layer by default (if available) ([7e77a00](https://github.com/metwork-framework/mfext/commit/7e77a00))
-* mapserver introduction ([c9e796b](https://github.com/metwork-framework/mfext/commit/c9e796b)), closes [#51](https://github.com/metwork-framework/mfext/issues/51)
-* now we can use pip inside a "plugin env" ([d060a54](https://github.com/metwork-framework/mfext/commit/d060a54)), closes [#91](https://github.com/metwork-framework/mfext/issues/91)
-* patch certifi for using system certificates on centos ([67d0cf1](https://github.com/metwork-framework/mfext/commit/67d0cf1))
-* telegraf is now monitoring itself ([83d915b](https://github.com/metwork-framework/mfext/commit/83d915b))
-* telegraf update (1.7.1 => 1.7.4) ([43703aa](https://github.com/metwork-framework/mfext/commit/43703aa))
-* telegraf update (1.7.4 => 1.9.1) ([03ea481](https://github.com/metwork-framework/mfext/commit/03ea481))
-* update urllib3 (1.22 => 1.23)  ([077012f](https://github.com/metwork-framework/mfext/commit/077012f))
-* upgrade eccodes from 2.9.0 to 2.10.0 and ([dc72ff2](https://github.com/metwork-framework/mfext/commit/dc72ff2))
-* upgrade eccodes to 2.9.0 ([86387bc](https://github.com/metwork-framework/mfext/commit/86387bc))
-* upgrade netCDF4 python from 1.4.0 to 1.4.2 ([c547b57](https://github.com/metwork-framework/mfext/commit/c547b57)), closes [#162](https://github.com/metwork-framework/mfext/issues/162)
-* upgrade python requests because of security alert ([f8590a9](https://github.com/metwork-framework/mfext/commit/f8590a9))
-* use normal "npm" workflow inside a "plugin_env" ([aeda1e6](https://github.com/metwork-framework/mfext/commit/aeda1e6)), closes [#95](https://github.com/metwork-framework/mfext/issues/95)
-* we can now use plugin_env function in a plugin directory ([9274024](https://github.com/metwork-framework/mfext/commit/9274024))
-* we increase some system limits (nofile and nproc) ([c9632e3](https://github.com/metwork-framework/mfext/commit/c9632e3))
+<a name="v0.5.5"></a>
+## [v0.5.5] - 2019-02-09
 
+<a name="v0.5.4"></a>
+## [v0.5.4] - 2019-02-08
+### Fix
+- mapserverapi update (0.1.2 => 0.1.3)
+- upgrade mapserverapi (0.1.1 => 0.1.2)
 
+<a name="v0.5.3"></a>
+## [v0.5.3] - 2019-02-04
+### Feat
+- Upgrade postgis from 2.4.4 to 2.4.6
+- new utility "outside" to execute commands outside the metwork env
+
+### Fix
+- force epoch=1 in centos7 openssl dependency
+- obsoletes wrong named packages
+- rpm names with release tags
+
+<a name="v0.5.2"></a>
+## [v0.5.2] - 2019-01-31
+
+<a name="v0.5.1"></a>
+## [v0.5.1] - 2019-01-29
+
+<a name="v0.5.0"></a>
+## [v0.5.0] - 2019-01-29
+### Feat
+- Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
+- add a python3_ia layer
+- add a way to install binary python wheels
+- add filebeat component
+- add openjdk as a non default layer
+- add some metapackages aliases to have a cleaner installation doc
+- clean some useless files in .plugin files
+- execute integration tests directly from mfext module and launch them on a pull request on the module
+- ignore lines starting with # in .layerapi2_dependencies/conflicts files
+- introduce monitoring layer (loaded by default) and move telegraf inside
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- telegraf update (1.7.4 => 1.9.1)
+- update urllib3 (1.22 => 1.23)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to 2.7.15
+- user-defined configuration name
+- we remove the src directory from .plugin files
+
+### Fix
+- circus update to fix some stop_signal issues (on circus itself)
+- do not include .git* files in the plugin RPM
+- no doc(s) directory in a plugin release
+- rpm names was incorrect with release tags
+- rpm names were incorrect with release tags
+
+### Perf
+- kill immediatly some watchers during circus shutdown
+
+<a name="v0.4.1"></a>
+## [v0.4.1] - 2019-01-10
+### Fix
+- rpm names were incorrect with release tags
+
+<a name="v0.4.0"></a>
+## [v0.4.0] - 2019-01-08
+### Docs
+- add badges to README
+
+### Feat
+- Add Fiona in python2 and python3 scientific layers (built separately with scl if gcc version < 4.8)
+- Add possibility to pip install package from https url. The requirement must be of the following form : https://url#egg=package\n Example for basemap which has no link in pypi : https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz#egg=basemap\n Add https://downloads.sourceforge.net as trusted-host for pip
+- Add postgresql support in gdal
+- add basemap, cdsapi, graphviz, pandas and scikit-learn (python2 and python3). For the time being, we don't add Fiona (doesn't compile on CentOS6 with gcc 4.4.7) nor pygraphviz (needs rpm graphviz we will build on scientific layer)
+- add diskcache in python2 and python3 layers
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- add graphviz in scientific layer
+- add integration_tests layer and rpm mfext-integration-tests
+- add lib, local/lib to `PYTHONPATH` by default (layers, plugins...)
+- add lxml, pycurl, pyproj and sqlalchemy as in python3 (not geos because it's python3 only)
+- add mapserverapi library
+- add mapserverapi_python
+- add pygraphviz in python[23]_scientific layers (not in 0500_extra_packages because of some compilation issues)
+- add pytest package and update some other ones
+- add websocket support for openresty
+- better default MODULE_RUNTIME_SUFFIX
+- check that module crontab is not empy in mfxxx.status
+- expose new function in layerapi2
+- guess released versions with tags
+- load mapserver layer by default (if available)
+- mapserver introduction
+- now we can use pip inside a "plugin env"
+- patch certifi for using system certificates on centos
+- telegraf is now monitoring itself
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and add python3 support in python3_scientific
+- upgrade eccodes to 2.9.0
+- upgrade python requests because of security alert
+- use normal "npm" workflow inside a "plugin_env"
+- we can now use plugin_env function in a plugin directory
+- we increase some system limits (nofile and nproc)
+
+### Fix
+- add mapserverapi_python (added in requirements-to-freeze.txt but not in requirements3.txt)
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- depency issue with new mapserver subpackage
+- fix branch guessing with drone ci
+- fix build error
+- fix drone build caching
+- fix error in template spec file for package mfserv and others
+- fix layer dependencies in new tests
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- mfxxx login problems in docker mode
+- sqlite support for python2/python3
 

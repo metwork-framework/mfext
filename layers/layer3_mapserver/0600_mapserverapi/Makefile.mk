@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=mapserverapi
-export VERSION=0.1.1
+export VERSION=0.1.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=27fe3125eada16e995c58a10eee1a89a
+export CHECKSUM=0dc976c88a5eb5e701a95aced5c5e3f4
 DESCRIPTION=\
 tiny C library to invoke mapserver engine as a library
 LICENSE=BSD

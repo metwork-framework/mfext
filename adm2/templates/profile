@@ -61,9 +61,11 @@ fi
 {% endif %}
 
 # Get the metwork configuration name
-MFCONFIG=$(cat /etc/metwork.config 2>/dev/null |sed 's/ //g' |grep -v '^#' |head -1)
-if test "${MFCONFIG}" = ""; then
-    MFCONFIG=GENERIC
+if test "${MFCONFIG:-}" = ""; then
+    MFCONFIG=$(cat /etc/metwork.config 2>/dev/null |sed 's/ //g' |grep -v '^#' |head -1)
+    if test "${MFCONFIG}" = ""; then
+        MFCONFIG=GENERIC
+    fi
 fi
 export MFCONFIG
 
@@ -124,10 +126,10 @@ field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}/opt
 export METWORK_LAYERS_PATH
 
 # We load the default layer (if installed)
-N=$({{MFEXT_HOME}}/bin/is_layer_installed default 2>/dev/null)
+N=$({{MFEXT_HOME}}/bin/is_layer_installed default@${MODULE_LOWERCASE} 2>/dev/null)
 if test "${N}" = "1"; then
     # We load the default layer
-    layer_load default >/dev/null
+    layer_load default@${MODULE_LOWERCASE} >/dev/null
 else
     # The default layer is not installed
     # => we load the root and core layer (failback for developpers)
@@ -192,6 +194,18 @@ fi
         fi
     {% endif %}
 {% endif %}
+
+# A little kind of magic to deal with [log]/json_file=AUTO
+if test "{% raw %}${{% endraw %}{{MODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
+    if test "{% raw %}${{% endraw %}{{MODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
+        export {{MODULE}}_LOG_JSON_FILE="null"
+    else
+        export {{MODULE}}_LOG_JSON_FILE="{% raw %}${MODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
+    fi
+fi
+
+# FIXME: we add this for a smooth migration =>  we can remove it after a few days (2019-02-04)
+export {{MODULE}}_LOG_DEFAULT_LEVEL="{% raw %}${{% endraw %}{{MODULE}}_LOG_MINIMAL_LEVEL{% raw %}}{% endraw %}"
 
 {% block custom %}
 {% endblock %}
