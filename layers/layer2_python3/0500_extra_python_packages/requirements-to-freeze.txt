@@ -4,7 +4,7 @@
 -e git+https://github.com/metwork-framework/envtpl.git#egg=envtpl
 -e git+https://github.com/thefab/pystatsd.git#egg=statsd
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client#egg=telegraf_unixsocket_client
--e git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter
+-e git+https://github.com/metwork-framework/cookiecutter.git@metwork#egg=cookiecutter
 psutil
 redis
 requests
