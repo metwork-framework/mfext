@@ -108,6 +108,9 @@ Summary: metwork {{MODULE_LOWERCASE}} root layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+{% if MODULE == "MFADMIN" -%}
+Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
+{% endif -%}
 {% if MODULE == "MFEXT" -%}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
 Requires: openssl >= 1:1.0.2
