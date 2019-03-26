@@ -14,6 +14,7 @@
 - mfutil_c introduction and some profile changes
 - new utility "outside" to execute commands outside the metwork env
 - prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 - remove python3_ia layer (we are building an dedicated addon for that)
 - upgrade glib2 from 2.40.2 to 2.56.4
