@@ -18,6 +18,4 @@ LICENSE=GNU Lesser General Public License (LGPLv3)
 
 all:: $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/Cartopy-0.13.1-py$(PYTHON3_SHORT_VERSION)-linux-x86_64.egg
 $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/Cartopy-0.13.1-py$(PYTHON3_SHORT_VERSION)-linux-x86_64.egg:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../scientific/include" EXTRALDFLAGS="-L$(PREFIX)/../scientific/lib" download uncompress python3build python3install
-
-
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../scientific_core/include" EXTRALDFLAGS="-L$(PREFIX)/../scientific_core/lib" download uncompress python3build python3install

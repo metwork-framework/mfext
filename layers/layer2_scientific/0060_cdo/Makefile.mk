@@ -19,4 +19,4 @@ LICENSE=GNU General Public License
 
 all:: $(PREFIX)/bin/cdo
 $(PREFIX)/bin/cdo:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRALDFLAGS="-L$(PREFIX)/lib" EXTRACFLAGS="-I$(PREFIX)/include" OPTIONS="--with-netcdf=$(PREFIX) --with-hdf5=$(PREFIX) --with-proj=$(PREFIX) --with-curl=$(PREFIX)/../core --with-libxml2=$(PREFIX)/../core  --enable-cdi-lib  --enable-static=no" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRALDFLAGS="-L$(PREFIX)/../scientific_core/lib" EXTRACFLAGS="-I$(PREFIX)/../scientific_core/include" OPTIONS="--with-netcdf=$(PREFIX) --with-hdf5=$(PREFIX) --with-proj=$(PREFIX) --with-curl=$(PREFIX)/../core --with-libxml2=$(PREFIX)/../core  --enable-cdi-lib  --enable-static=no" download uncompress configure build install

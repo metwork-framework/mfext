@@ -14,9 +14,9 @@ in SQL.
 WEBSITE=http://postgis.refractions.net/
 LICENSE=GPL
 
-all:: $(PREFIX)/lib/postgis-$(SHORT_VERSION).so $(PREFIX)/contrib/postgis-$(SHORT_VERSION)/postgis_comments.sql
+all:: $(PREFIX)/lib/postgresql/postgis-$(SHORT_VERSION).so $(PREFIX)/contrib/postgis-$(SHORT_VERSION)/postgis_comments.sql
 
-$(PREFIX)/lib/postgis-$(SHORT_VERSION).so:
+$(PREFIX)/lib/postgresql/postgis-$(SHORT_VERSION).so:
 # EXTENSION is an internal variable used by postgis, for us it is not used anymore after uncompress.
 # So we split : "download uncompress" with EXTENSION and "configure build install" without it
 	export EXTENSION=tar.gz ; $(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress

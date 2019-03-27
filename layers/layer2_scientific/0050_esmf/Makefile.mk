@@ -21,8 +21,8 @@ export ESMF_INSTALL_LIBDIR=$(ESMF_INSTALL_PREFIX)/lib
 export ESMF_INSTALL_BINDIR=$(ESMF_INSTALL_PREFIX)/bin
 export ESMF_INSTALL_DOCDIR=$(ESMF_INSTALL_PREFIX)/doc
 export ESMF_NETCDF=split
-export ESMF_NETCDF_INCLUDE=$(PREFIX)/include
-export ESMF_NETCDF_LIBPATH=$(PREFIX)/lib
+export ESMF_NETCDF_INCLUDE=$(PREFIX)/../scientific_core/include
+export ESMF_NETCDF_LIBPATH=$(PREFIX)/../scientific_core/lib
 
 all:: $(ESMF_INSTALL_LIBDIR)/libesmf.so
 $(ESMF_INSTALL_LIBDIR)/libesmf.so:

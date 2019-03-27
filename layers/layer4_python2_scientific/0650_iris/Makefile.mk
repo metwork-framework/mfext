@@ -14,4 +14,4 @@ LICENSE=GNU Lesser General Public License (LGPLv3)
 
 all:: $(PREFIX)/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/scitools_iris-$(VERSION)-py$(PYTHON2_SHORT_VERSION).egg
 $(PREFIX)/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/scitools_iris-$(VERSION)-py$(PYTHON2_SHORT_VERSION).egg:
-	$(MAKE) --file=../../Makefile.standard ARCHIV=$(ARCHIV) PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../scientific/include" EXTRALDFLAGS="-L$(PREFIX)/../scientific/lib" download uncompress python2build python2install
+	$(MAKE) --file=../../Makefile.standard ARCHIV=$(ARCHIV) PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../scientific_core/include" EXTRALDFLAGS="-L$(PREFIX)/../scientific_core/lib" download uncompress python2build python2install

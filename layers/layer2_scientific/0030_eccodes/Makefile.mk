@@ -17,4 +17,4 @@ LICENSE=Apache 2.0 : http://www.apache.org/licenses/LICENSE-2.0
 
 all:: $(PREFIX)/lib/libeccodes.so
 $(PREFIX)/lib/libeccodes.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="-DBUILD_SHARED_LIBS=ON -DENABLE_PYTHON=OFF -DOPENJPEG_DIR=$(PREFIX) -DENABLE_JPG=ON -DENABLE_NETCDF=ON -DENABLE_FORTRAN=OFF" download uncompress configure_cmake build_cmake install_cmake
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="-DBUILD_SHARED_LIBS=ON -DCMAKE_PREFIX_PATH='$(PREFIX);$(PREFIX)/../scientific_core' -DENABLE_PYTHON=OFF -DOPENJPEG_DIR=$(PREFIX)/../scientific_core -DNETCDF_PATH=$(PREFIX)/../scientific_core -DENABLE_JPG=ON -DENABLE_NETCDF=ON -DENABLE_FORTRAN=OFF" download uncompress configure_cmake build_cmake install_cmake
