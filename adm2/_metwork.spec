@@ -108,6 +108,7 @@ Summary: metwork {{MODULE_LOWERCASE}} root layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 {% if MODULE == "MFADMIN" -%}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 {% endif -%}
