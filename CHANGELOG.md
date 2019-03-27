@@ -29,6 +29,7 @@
 - mapserverapi update (0.1.2 => 0.1.3)
 - rpm names with release tags
 - upgrade mapserverapi (0.1.1 => 0.1.2)
+- upgrade problems at RPM levels
 
 <a name="v0.5.7"></a>
 ## [v0.5.7] - 2019-03-16
