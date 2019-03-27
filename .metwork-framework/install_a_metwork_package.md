@@ -15,7 +15,7 @@ You must:
 
 You just have to execute the following command (as `root` user):
 
-```
+```bash
 yum install metwork-mfext
 ```
 
@@ -24,7 +24,7 @@ yum install metwork-mfext
 If you prefer to start with a minimal installation, you have to execute the following command
 (as `root` user):
 
-```
+```bash
 yum install metwork-mfext-minimal
 ```
 
@@ -32,7 +32,7 @@ yum install metwork-mfext-minimal
 
 ### Optional dependencies addons
 
-```
+```bash
 # To install some devtools
 yum install metwork-mfext-devtools
 
@@ -57,7 +57,7 @@ To uninstall mfext metwork module, use the following command (still as `root` us
 
 
 
-```
+```bash
 yum remove "metwork-mfext*"
 ```
 
@@ -67,7 +67,7 @@ To upgrade mfext metwork module, use the following commands (still as `root` use
 
 
 
-```
+```bash
 # We upgrade mfext metwork module
 yum upgrade "metwork-mfext*"
 ```
@@ -78,7 +78,7 @@ yum upgrade "metwork-mfext*"
 
 To uninstall all metwork modules, use following root commands:
 
-```
+```bash
 # We stop metwork services
 service metwork stop
 
@@ -92,7 +92,7 @@ The same idea applies to upgrade.
 
 For example, to upgrade all metwork modules on a computer, use following root commands:
 
-```
+```bash
 # We stop metwork services
 service metwork stop
 

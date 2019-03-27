@@ -124,7 +124,9 @@ pipeline:
     environment:
       - TARGET_DIR=${DRONE_BRANCH##release_}
     when:
+
       event: push
+
       branch: [ master, experimental*, release_* ]
   build_tag:
     <<: *build_common
@@ -136,20 +138,14 @@ pipeline:
       ref: refs/tags/v*
 
 
-  integration_tests_integration:
-    <<: *integration_tests_common
-    image: centos:${OS_VERSION}
-    when:
-
-      event: push
-
-      branch: [ integration, ci_*, pci_* ]
   integration_tests:
     <<: *integration_tests_common
     image: centos:${OS_VERSION}
     when:
+
       event: push
-      branch: [ master, release_*, experimental* ]
+
+      branch: [ integration, master, ci_*, pci_*, release_*, experimental* ]
 
 
   publish_ci_integration:
