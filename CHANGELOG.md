@@ -25,6 +25,7 @@
 ### Fix
 - fix mfxxx.start/stop/status when used in some special dirs
 - fix some installation issues in some corner cases
+- fix some rpm upgrades
 - force epoch=1 in centos7 openssl dependency
 - mapserverapi update (0.1.2 => 0.1.3)
 - rpm names with release tags
