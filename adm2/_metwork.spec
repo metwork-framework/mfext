@@ -187,9 +187,12 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}} = {{FULL_VERSION
 # Do not specify version for layers out of the current module
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% endif -%}
-{% if layer == "scientific" and MODULE_LOWERCASE == "mfext" -%}
-#Add "scientific" system dependencies (specified in meta layer scientific)
-Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
+{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
+#Add "scientific" system dependencies
+Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
+Requires: libquadmath
+{% endif -%}
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
@@ -236,11 +239,7 @@ AutoReq: no
 AutoProv: no
 Requires: metwork-mfext-layer-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
 Provides: metwork-mfext-scientific = {{FULL_VERSION}}
-{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: libquadmath
-{% endif -%}
 %description scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} meta scientific layers
 
