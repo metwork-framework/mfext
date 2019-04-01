@@ -33,7 +33,7 @@ $(MFEXT_HOME)/lib/libglib-2.0.so:
 before:
 	if test "$(CACHEHASH)" != "null"; then if test -f /buildcache/glib2_$(CACHEHASH).tar.gz; then echo "using glib cache"; cp -f /buildcache/glib2_$(CACHEHASH).tar.gz $(MFEXT_HOME)/; cd $(MFEXT_HOME) ; zcat glib2_$(CACHEHASH).tar.gz |tar xf - ; rm -f glib2_$(CACHEHASH).tar.gz; fi; fi
 
-ifeq ($(shell expr $(PYTHON_VERSION) \< "2.7" ), 1)
+ifeq ($(shell expr $(PYTHON_VERSION) \< "2.8" ), 1)
 
 export PYTHON=/opt/rh/python27/root/usr/bin/python
 
