@@ -177,9 +177,9 @@ AutoProv: no
 # last uninstalled rpm, which is better because this rpm removes all module files in
 # a rough way)
 {% if layer_dep != "root" -%}
-{% if MFEXT_ADDON == "1" %}
+{% if MFEXT_ADDON == "1" -%}
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
-{% else %}
+{% else -%}
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}} = {{FULL_VERSION}}
 {% endif -%}
 {% endif -%}
@@ -187,9 +187,12 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}} = {{FULL_VERSION
 # Do not specify version for layers out of the current module
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% endif -%}
-{% if layer == "scientific" and MODULE_LOWERCASE == "mfext" -%}
-#Add "scientific" system dependencies (specified in meta layer scientific)
-Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
+{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
+#Add "scientific" system dependencies
+Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
+Requires: libquadmath
+{% endif -%}
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
@@ -205,9 +208,9 @@ Provides: metwork-mfdata-python2-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% endif -%}
 # Every single layer rpm must have the minimal module rpm in dependency
 # to prevent single layer installation
-{% if MFEXT_ADDON == "1" %}
+{% if MFEXT_ADDON == "1" -%}
 Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}}
-{% else %}
+{% else -%}
 Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% endif -%}
 {% endfor -%}
@@ -215,8 +218,8 @@ Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSIO
 metwork {{MODULE_LOWERCASE}} {{layer}} layer
 {% endfor -%}
 
-{% if MFEXT_ADDON == "0" %}
 {% if MODULE == "MFEXT" -%}
+{% if MFEXT_ADDON == "0" -%}
 %package devtools-{{MFEXT_BRANCH}}
 Summary: metwork {{MODULE_LOWERCASE}} meta devtools layers
 Group: Applications/Multimedia
@@ -228,34 +231,6 @@ Requires: metwork-mfext-layer-python3_devtools_jupyter-{{MFEXT_BRANCH}} = {{FULL
 Provides: metwork-mfext-devtools = {{FULL_VERSION}}
 %description devtools-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} meta devtools layers
-
-%package scientific-{{MFEXT_BRANCH}}
-Summary: metwork {{MODULE_LOWERCASE}} meta scientific layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfext-layer-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: metwork-mfext-layer-python3_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
-Provides: metwork-mfext-scientific = {{FULL_VERSION}}
-{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: libquadmath
-{% endif -%}
-%description scientific-{{MFEXT_BRANCH}}
-metwork {{MODULE_LOWERCASE}} meta scientific layers
-
-%package python2-{{MFEXT_BRANCH}}
-Summary: metwork {{MODULE_LOWERCASE}} python2 layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfext-layer-python2-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: metwork-mfext-layer-python2_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: metwork-mfext-layer-python2_devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Provides: metwork-mfext-python2 = {{FULL_VERSION}}
-%description python2-{{MFEXT_BRANCH}}
-Alias for python2 layers
-
 {% endif -%}
 {% endif -%}
 
@@ -269,7 +244,7 @@ mv {{MODULE_LOWERCASE}}-%{version}-%{release} %{name}-%{version}-%{release}/
 cd %{name}-%{version}-%{release}
 rm -f mf*_link
 
-{% if MFEXT_ADDON == "0" %}
+{% if MFEXT_ADDON == "0" -%}
 {% if MODULE_HAS_HOME_DIR == "1" -%}
 %pre layer-root-{{MODULE_BRANCH}}
 N=`cat /etc/group |grep '^metwork:' |wc -l`
@@ -289,7 +264,7 @@ if test ${N} -eq 0; then
   chown -R {{MODULE_LOWERCASE}}:metwork /home/{{MODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
 fi
 {% endif -%}
-{% endif %}
+{% endif -%}
 
 %build
 
@@ -427,15 +402,10 @@ rm -fr %{buildroot}
 
 {% endfor -%}
 
-{% if MFEXT_ADDON == "0" %}
 {% if MODULE == "MFEXT" -%}
+{% if MFEXT_ADDON == "0" %}
 %files devtools-{{MFEXT_BRANCH}}
 %defattr(-,root,root,-)
 
-%files scientific-{{MFEXT_BRANCH}}
-%defattr(-,root,root,-)
-
-%files python2-{{MFEXT_BRANCH}}
-%defattr(-,root,root,-)
 {% endif -%}
 {% endif %}
