@@ -17,7 +17,4 @@ netifaces
 cachetools
 inotify_simple
 enum
-# fixme: move to python2_scientific but there is a problem with GDAL build
-# gdal_array is not built if numpy is not installed before
-numpy
 diskcache
