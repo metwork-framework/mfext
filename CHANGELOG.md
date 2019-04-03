@@ -17,6 +17,7 @@
 - refuse mfxxx.stop/start if the config.ini is newer than the current env
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 - remove python3_ia layer (we are building an dedicated addon for that)
+- split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
 - try to keep a backup of user files during uninstall
 - upgrade glib2 from 2.40.2 to 2.56.4
 - upgrade mflog to latest master
