@@ -113,8 +113,8 @@ Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 {% endif -%}
 {% if MODULE == "MFEXT" -%}
-Obsoletes: metwork-mfext-scientic-{{MODULE_BRANCH}}
-Obsoletes: metwork-mfext-scientic
+Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfext-scientific
 Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-python2
 Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
