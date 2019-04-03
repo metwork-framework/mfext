@@ -113,6 +113,13 @@ Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 {% endif -%}
 {% if MODULE == "MFEXT" -%}
+Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfext-scientific
+Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfext-python2
+Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfext-devtools
+
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
 Requires: openssl >= 1:1.0.2
 Requires: openssl-libs >= 1:1.0.2
@@ -217,22 +224,6 @@ Requires: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSIO
 %description layer-{{layer}}-{{MODULE_BRANCH}}
 metwork {{MODULE_LOWERCASE}} {{layer}} layer
 {% endfor -%}
-
-{% if MODULE == "MFEXT" -%}
-{% if MFEXT_ADDON == "0" -%}
-%package devtools-{{MFEXT_BRANCH}}
-Summary: metwork {{MODULE_LOWERCASE}} meta devtools layers
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-mfext-layer-devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: metwork-mfext-layer-python3_devtools-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Requires: metwork-mfext-layer-python3_devtools_jupyter-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
-Provides: metwork-mfext-devtools = {{FULL_VERSION}}
-%description devtools-{{MFEXT_BRANCH}}
-metwork {{MODULE_LOWERCASE}} meta devtools layers
-{% endif -%}
-{% endif -%}
 
 %prep
 cd %{_builddir} || exit 1
@@ -401,11 +392,3 @@ rm -fr %{buildroot}
 {{MODULE_HOME}}/opt/{{layer}}
 
 {% endfor -%}
-
-{% if MODULE == "MFEXT" -%}
-{% if MFEXT_ADDON == "0" %}
-%files devtools-{{MFEXT_BRANCH}}
-%defattr(-,root,root,-)
-
-{% endif -%}
-{% endif %}
