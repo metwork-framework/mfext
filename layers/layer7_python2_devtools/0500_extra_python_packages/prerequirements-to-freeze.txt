@@ -1,4 +1,0 @@
-pytest-runner
-pbr
-vcversioner
-nose

@@ -1,0 +1,5 @@
+setuptools_scm
+pytest-runner
+pbr
+vcversioner
+nose
