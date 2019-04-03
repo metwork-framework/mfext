@@ -24,7 +24,7 @@ $(LAYER_SITE_REQUIREMENTS): prerequirementsPYTHONMAJORVERSION.txt requirementsPY
 	mkdir -p $(PREFIX)/share/metwork_packages
 	for REQ in prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt; do if test -s $${REQ}; then install_requirements $(LAYER_HOME) $${REQ} ./src || { echo "ERROR WITH install_requirements $${REQ} $(LAYER_HOME) $${REQ} ./src"; exit 1; }; fi; done
 	if ! test -d $(LAYER_SITE_PACKAGES); then mkdir -p $(LAYER_SITE_PACKAGES); fi
-	cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@
+	if test -f $@; then cat $@ prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@.tmp; mv $@.tmp $@; else cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@ ;fi
 	IFS=$$'\n' ; for REQ in `cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq`; do _pip_package_to_yaml.sh "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
 
 clean::
