@@ -20,9 +20,6 @@ cachetools
 pyinotify
 inotify-simple
 PyYAML
-# fixme: move to python3_scientific but there is a problem with GDAL build
-# gdal_array is not built if numpy is not installed before
-numpy
 # pyzmq < 17 for circus (layer python3_circus)
 pyzmq<17
 diskcache
