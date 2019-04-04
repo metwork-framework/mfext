@@ -2,6 +2,14 @@
 ## [Unreleased]
 
 ### Feat
+- introduce mflog2mfadmin feature
+- mflog update
+- split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
+- try to keep a backup of user files during uninstall
+
+<a name="v0.6.0"></a>
+## [v0.6.0] - 2019-03-27
+### Feat
 - Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
 - Upgrade postgis from 2.4.4 to 2.4.6
 - add a first version of jsonlog2elasticsearch
@@ -17,8 +25,6 @@
 - refuse mfxxx.stop/start if the config.ini is newer than the current env
 - remove "aliases" rpms (replaced by the use of Provides in spec file)
 - remove python3_ia layer (we are building an dedicated addon for that)
-- split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
-- try to keep a backup of user files during uninstall
 - upgrade glib2 from 2.40.2 to 2.56.4
 - upgrade mflog to latest master
 - use our cookiecutter fork to add some features
