@@ -113,6 +113,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:integration
     environment:
       - TARGET_DIR=master
+      - DEP_BRANCH=integration
     when:
 
       event: push
@@ -123,6 +124,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     environment:
       - TARGET_DIR=${DRONE_BRANCH##release_}
+      - DEP_BRANCH=${DRONE_BRANCH}
     when:
 
       event: push
@@ -133,6 +135,7 @@ pipeline:
     image: metwork/mfext-${OS_VERSION}-buildimage:${DRONE_BRANCH}
     environment:
       - TARGET_DIR=${DRONE_BRANCH##release_}
+      - DEP_BRANCH=${DRONE_BRANCH}
     when:
       event: tag
       ref: refs/tags/v*
