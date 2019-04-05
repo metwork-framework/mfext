@@ -7,6 +7,9 @@
 - split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
 - try to keep a backup of user files during uninstall
 
+### Fix
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+
 <a name="v0.6.0"></a>
 ## [v0.6.0] - 2019-03-27
 ### Feat
