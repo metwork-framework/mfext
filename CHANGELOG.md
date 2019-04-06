@@ -5,6 +5,7 @@
 - introduce mflog2mfadmin feature
 - mflog update
 - split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
+- telegraf update
 - try to keep a backup of user files during uninstall
 
 ### Fix
