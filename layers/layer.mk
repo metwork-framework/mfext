@@ -20,7 +20,7 @@ layer: $(TARGET_LAYER_PROFILES)
 			cd $${OLDPWD}; \
 		done; \
 	fi
-	if test "$(MFEXT_ADDON)" = "1"; then touch $(MODULE_HOME)/opt/$(LAYER_NAME)/.mfextaddon; fi
+	if test "$(MFEXT_ADDON)" = "1"; then echo $(MFEXT_ADDON_NAME) > $(MODULE_HOME)/opt/$(LAYER_NAME)/.mfextaddon; fi
 
 before:
 	if ! test -d "$(MODULE_HOME)/opt/$(LAYER_NAME)"; then \
