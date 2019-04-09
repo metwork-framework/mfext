@@ -116,6 +116,7 @@ $(MODULE_HOME)/$(ARCHIV)-linux64.tar:
 		for REP in $(MODULE_HOME)/opt/*; do \
 		    if ! test -d "$${REP}"; then continue; fi; \
 			if ! test -f $${REP}/.mfextaddon; then continue; fi; \
+			if test "`cat $${REP}/.mfextaddon 2>/dev/null`" != "$(MFEXT_ADDON_NAME)"; then continue; fi; \
 			cp -Rpf $${REP} $(MODULE_HOME)/$(ARCHIV)/opt/; \
 		done; \
 	else \

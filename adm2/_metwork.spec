@@ -32,7 +32,7 @@
 {% set liste = 'cd $MODULE_HOME; ls -da bin config lib include share .layerapi2* 2>/dev/null'|shell -%}
 {% set root_list = liste.split('\n')[:-1] -%}
 {% if MFEXT_ADDON == "1" %}
- {% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; for REP in *; do if test -f "${REP}/.mfextaddon"; then addon_name=`cat ${REP}/.mfextaddon`; if test ${addon_name} == ${MFEXT_ADDON_NAME}; then echo ${REP}; fi; fi; done; fi'|shell -%}
+{% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; for REP in *; do if test -f "${REP}/.mfextaddon"; then addon_name=`cat ${REP}/.mfextaddon`; if test ${addon_name} == ${MFEXT_ADDON_NAME}; then echo ${REP}; fi; fi; done; fi'|shell -%}
 {% else %}
 {% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; ls -d *; fi'|shell -%}
 {% endif %}
