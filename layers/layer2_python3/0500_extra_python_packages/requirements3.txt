@@ -10,8 +10,13 @@ ConfigArgParse==0.13.0
 -e git+https://github.com/thefab/cronwrapper.git@8af59d6cc32d2bc5f40cc59d736576f526abb913#egg=cronwrapper
 diskcache==3.1.1
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
+<<<<<<< HEAD
 -e git+https://github.com/metwork-framework/envtpl.git@19465dd337a4fb3aea18df8c8273b0fec8372215#egg=envtpl
 -e git+https://github.com/metwork-framework/mflog.git@c9f1d9f3b1fc3c1db63dd9fc879ff99e0553203b#egg=mflog
+=======
+-e git+https://github.com/metwork-framework/envtpl.git@af3a63409bf64700ca6a08a1f9bcea4a28c66bf6#egg=envtpl
+-e git+https://github.com/metwork-framework/mflog.git@ae9efbcba17677fa5166590e0738265aff23b5e0#egg=mflog
+>>>>>>> 14ed614... fix: upgrade mflog to fix metwork-framework/mflog#8
 structlog==18.2.0
 filelock==3.0.4
 future==0.16.0
