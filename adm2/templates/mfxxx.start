@@ -1,5 +1,10 @@
 #!/bin/bash
 
+{% if MODULE != "MFADMIN" %}
+ADMIN_HOSTNAME=$(env |grep "^{{MODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
+ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
+{% endif %}
+
 . ${MFEXT_HOME}/lib/bash_utils.sh
 exit_if_root
 
@@ -33,6 +38,8 @@ if test "${STARTUP_FLAG}" = "0"; then
     echo_bold "${MODULE}_STARTUP_FLAG=0 => nothing to start"
     exit 0
 fi
+
+RES=0
 
 {% if MODULE == "MFDATA" or MODULE == "MFSERV" or MODULE == "MFBASE" %}
 PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
@@ -104,6 +111,23 @@ fi
 {% endblock %}
 
 _make_and_install_crontab.sh
+
+{% if MODULE != "MFADMIN" %}
+if test "${ADMIN_HOSTNAME}" != ""; then
+    if test "${ADMIN_HOSTNAME}" != "null"; then
+{% endif %}
+_circus_wait_watcher_started.sh telegraf || RES=1
+_circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
+{% if MODULE != "MFADMIN" %}
+    fi
+fi
+{% endif %}
+
+{% if MODULE != "MFADMIN" %}
+if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
+    _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
+fi
+{% endif %}
 
 echo -n "- Wait 2 sec..."
 echo_running
