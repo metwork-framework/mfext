@@ -141,14 +141,24 @@ pipeline:
       ref: refs/tags/v*
 
 
+  integration_tests_integration:
+    <<: *integration_tests_common
+    image: centos:${OS_VERSION}
+    environment:
+      - DEP_BRANCH=integration
+    when:
+      event: [push, pull_request]
+      branch: [ integration, ci_*, pci_* ]
   integration_tests:
     <<: *integration_tests_common
     image: centos:${OS_VERSION}
+    environment:
+      - DEP_BRANCH=${DRONE_BRANCH}
     when:
 
       event: push
 
-      branch: [ integration, master, ci_*, pci_*, release_*, experimental* ]
+      branch: [  master, release_*, experimental* ]
 
 
   publish_ci_integration:
