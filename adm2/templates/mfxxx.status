@@ -44,16 +44,6 @@ RES=0
 if test -f ${MODULE_HOME}/config/circus.ini; then
     _circus.status || RES=1
 fi
-if test "${MODULE}" = "MFADMIN"; then
-    ADMIN_HOSTNAME=localhost
-else
-    ADMIN_HOSTNAME=$(env |grep "^${MODULE}_ADMIN_HOSTNAME=" |awk -F "=" '{print $2;}')
-fi
-if test "${ADMIN_HOSTNAME}" != "null"; then
-    if test "${ADMIN_HOSTNAME}" != ""; then
-        circus_status_watcher.sh telegraf || RES=1
-    fi
-fi
 
 # Checking module crontab is not empty
 echo -n "- Checking crontab is not empty..."
