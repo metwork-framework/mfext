@@ -10,6 +10,7 @@
 
 ### Fix
 - fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the archive file
 
 <a name="v0.6.0"></a>
 ## [v0.6.0] - 2019-03-27
