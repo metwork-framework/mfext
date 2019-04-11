@@ -10,7 +10,9 @@
 
 ### Fix
 - fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- more reliable checks about some circus watchers
 - only the layers corresponding to the current addon should be in the archive file
+- upgrade mflog to fix metwork-framework/mflog[#8](https://github.com/metwork-framework//issues/8)
 
 <a name="v0.6.0"></a>
 ## [v0.6.0] - 2019-03-27
