@@ -17,30 +17,26 @@ after::
 requirementsPYTHONMAJORVERSION.txt: requirements-to-freeze.txt
 	if test -s $<; then freeze_requirements $< >$@; else touch $@; fi
 
-prerequirementsPYTHONMAJORVERSION.txt: prerequirements-to-freeze.txt
-	if test -s $<; then freeze_requirements $< >$@; else touch $@; fi
-
-$(LAYER_SITE_REQUIREMENTS): prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt src
+$(LAYER_SITE_REQUIREMENTS): requirementsPYTHONMAJORVERSION.txt src
 	mkdir -p $(PREFIX)/share/metwork_packages
-	for REQ in prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt; do if test -s $${REQ}; then install_requirements $(LAYER_HOME) $${REQ} ./src || { echo "ERROR WITH install_requirements $${REQ} $(LAYER_HOME) $${REQ} ./src"; exit 1; }; fi; done
+	for REQ in requirementsPYTHONMAJORVERSION.txt; do if test -s $${REQ}; then install_requirements $(LAYER_HOME) $${REQ} ./src || { echo "ERROR WITH install_requirements $${REQ} $(LAYER_HOME) $${REQ} ./src"; exit 1; }; fi; done
 	if ! test -d $(LAYER_SITE_PACKAGES); then mkdir -p $(LAYER_SITE_PACKAGES); fi
-	if test -f $@; then cat $@ prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@.tmp; mv $@.tmp $@; else cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@ ;fi
-	IFS=$$'\n' ; for REQ in `cat prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt |sort |uniq`; do _pip_package_to_yaml.sh "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
+	if test -f $@; then cat $@ requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@.tmp; mv $@.tmp $@; else cat requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@ ;fi
+	IFS=$$'\n' ; for REQ in `cat requirementsPYTHONMAJORVERSION.txt |sort |uniq`; do _pip_package_to_yaml.sh "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
 
 clean::
-	rm -Rf src venv.* tmp_src tempolayer* requirementsPYTHONMAJORVERSION.txt.tmp prerequirementsPYTHONMAJORVERSION.txt.tmp freezed_requirements.*
+	rm -Rf src venv.* tmp_src tempolayer* requirementsPYTHONMAJORVERSION.txt.tmp freezed_requirements.*
 
 download:: clean src
 
-src: prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt
+src: requirementsPYTHONMAJORVERSION.txt
 	for REQ in $^; do if test -s $${REQ}; then download_compile_requirements $${REQ} || { echo "ERROR WITH download_compile_requirements $${REQ}"; exit 1; }; fi; done
 	if test -d ../../download_archive; then cp -Rf src/* ../../download_archive/ 2>/dev/null; fi
 
-freeze: superclean prerequirementsPYTHONMAJORVERSION.txt requirementsPYTHONMAJORVERSION.txt
+freeze: superclean requirementsPYTHONMAJORVERSION.txt
 
 superclean: clean
 	rm -f requirementsPYTHONMAJORVERSION.txt
-	rm -f prerequirementsPYTHONMAJORVERSION.txt
 
 mrproper: superclean
 	rm -Rf $(LAYER_HOME)
