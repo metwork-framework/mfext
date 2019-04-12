@@ -125,7 +125,9 @@ fi
 
 {% if MODULE != "MFADMIN" %}
 if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
-    _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
+    if test "${ADMIN_HOSTNAME}" != "null"; then
+        _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
+    fi
 fi
 {% endif %}
 
