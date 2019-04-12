@@ -9,7 +9,7 @@ configparser==3.5.0
 diskcache==3.1.1
 enum==0.4.6
 -e git+https://github.com/metwork-framework/envtpl.git@af3a63409bf64700ca6a08a1f9bcea4a28c66bf6#egg=envtpl
--e git+https://github.com/metwork-framework/mflog.git@d52fea8f765c2037348a5e865b8b5ac3f7e42076#egg=mflog
+-e git+https://github.com/metwork-framework/mflog.git@a2a56818b63bbf785141538dfe7cb3c1c410136d#egg=mflog
 structlog==19.1.0
 filelock==3.0.4
 idna==2.6
