@@ -4,12 +4,15 @@
 ### Feat
 - introduce mflog2mfadmin feature
 - mflog update
+- remove prerequirements files
 - split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
 - telegraf update
 - try to keep a backup of user files during uninstall
+- update mflog
 - update mflog and use new automatic context function
 
 ### Fix
+- don't launch mflog2mfadmin is admin hostname is null
 - fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
 - more reliable checks about some circus watchers
 - only the layers corresponding to the current addon should be in the archive file
