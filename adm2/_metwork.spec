@@ -108,6 +108,7 @@ Summary: metwork {{MODULE_LOWERCASE}} root layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Provides: metwork-{{MODULE_LOWERCASE}}-layer-root = {{FULL_VERSION}}
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 {% if MODULE == "MFADMIN" -%}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
@@ -163,6 +164,7 @@ Summary: metwork {{MODULE_LOWERCASE}} {{layer}} layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
+Provides: metwork-{{MODULE_LOWERCASE}}-layer-{{layer}} = {{FULL_VERSION}}
 # -e "s/^#+//" to add not loaded dependencies
 {% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
