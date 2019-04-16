@@ -1,0 +1,39 @@
+@import url("theme.css");
+
+.wy-nav-content {
+    max-width: none !important;
+}
+
+div[id=packages] .wy-table-responsive .wy-table thead, .rst-content table.docutils thead, .rst-content table.field-list thead {
+    text-align: center !important;
+}
+
+
+div[id=packages] .wy-table-responsive colgroup col:nth-child(1) {
+    width: 25% !important;
+}
+div[id=packages] .wy-table-responsive colgroup col:nth-child(2) {
+    width: 10% !important;
+}
+div[id=packages] .wy-table-responsive colgroup col:nth-child(3) {
+    width: 40% !important;
+}
+div[id=packages] .wy-table-responsive colgroup col:nth-child(4) {
+    width: 25% !important;
+}
+
+
+div[id=packages] .wy-table-responsive table tr td:nth-child(1) {
+    color: darkblue;
+}
+
+div[id=packages] .wy-table-responsive table tr td:nth-child(3) {
+    white-space: normal !important;
+}
+
+div[id=packages] .wy-table-responsive table tr th:nth-child(5) {
+    display: none !important;
+}
+div[id=packages] .wy-table-responsive table tr td:nth-child(5) {
+    display: none !important;
+}

@@ -1,7 +1,23 @@
-## What is it ?
+## What is MFEXT ?
 
-This is the **M**etwork **F**ramework "**EXT**ernal depencies" module. This module
-does not contain any services, it is just a bunch of files and directories.
+This is the **M**etwork **F**ramework "**EXT**ernal depencies" module. This module does not contain any services, it is just a bunch of files and directories.
+
+MFEXT is staged in logical and/or technical *layers*. You may check :doc:`../layerapi2` documentation for more about *layers* concept and technical details.
+
+The available libraries and sets of tools in MFEXT can be found by ckecking 
+the documentation about layers or the :ref:`genindex`, or by using the search box.
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>
+
+_ _ _
+
+Some libraries and sets of tools are not included in MFEXT but provided as **MFEXT add-ons**. They have to be installed appart. Available MFEXT add-ons can be found [here](https://github.com/metwork-framework?utf8=%E2%9C%93&q=mfext-addon&type=&language=).
 
 ## Usage
 
