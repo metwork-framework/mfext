@@ -2,21 +2,67 @@
 ## [Unreleased]
 
 ### Feat
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- delete filebeat component
+- introduce mfext addons
 - introduce mflog2mfadmin feature
+- introduce new mflog library
 - mflog update
+- mflog update (again)
+- mflog update to fix some issues about null files
+- mfutil_c introduction and some profile changes
+- new utility "outside" to execute commands outside the metwork env
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
 - remove prerequirements files
+- remove python3_ia layer (we are building an dedicated addon for that)
 - split old scientific layer between scientific_core layer (necessary libraries for standard Metwork use) and new scientific mfextaddon (other provided scientific libraries)
 - telegraf update
 - try to keep a backup of user files during uninstall
 - update mflog
 - update mflog and use new automatic context function
+- upgrade glib2 from 2.40.2 to 2.56.4
+- upgrade mflog to latest master
+- use our cookiecutter fork to add some features
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
 
 ### Fix
 - don't launch mflog2mfadmin is admin hostname is null
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- fix some rpm upgrades
 - fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- force epoch=1 in centos7 openssl dependency
+- mapserverapi update (0.1.2 => 0.1.3)
 - more reliable checks about some circus watchers
 - only the layers corresponding to the current addon should be in the archive file
+- rpm names with release tags
+- upgrade mapserverapi (0.1.1 => 0.1.2)
 - upgrade mflog to fix metwork-framework/mflog[#8](https://github.com/metwork-framework//issues/8)
+- upgrade problems at RPM levels
+
+<a name="v0.5.8"></a>
+## [v0.5.8] - 2019-04-01
+### Feat
+- Upgrade postgis from 2.4.4 to 2.4.6
+- introduce mfext addons
+- new utility "outside" to execute commands outside the metwork env
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- upgrade glib2 from 2.40.2 to 2.56.4
+- use our cookiecutter fork to add some features
+
+### Fix
+- fix some installation issues in some corner cases
+- force epoch=1 in centos7 openssl dependency
+- mapserverapi update (0.1.2 => 0.1.3)
+- obsoletes wrong named packages
+- rpm names with release tags
+- upgrade mapserverapi (0.1.1 => 0.1.2)
 
 <a name="v0.6.0"></a>
 ## [v0.6.0] - 2019-03-27
@@ -87,11 +133,11 @@
 <a name="v0.5.2"></a>
 ## [v0.5.2] - 2019-01-31
 
-<a name="v0.5.1"></a>
-## [v0.5.1] - 2019-01-29
-
 <a name="v0.5.0"></a>
 ## [v0.5.0] - 2019-01-29
+
+<a name="v0.5.1"></a>
+## [v0.5.1] - 2019-01-29
 ### Feat
 - Simplify _metwork.spec with self discovery of layer dependencies and management of metapackage names (keep only scientific and devtools and add minimal and full)  Associated with other changes in all modules, this reduces the number  of layers installed by default when installing a module (only necessary  mfext layers are installed)
 - add a python3_ia layer
