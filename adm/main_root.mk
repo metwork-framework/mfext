@@ -24,7 +24,7 @@ TARGET_LAYERAPI2_FILES := $(addprefix $(MODULE_HOME)/,$(LAYERAPI2_FILES))
 default:: before all after
 all:: ;
 clean:: ;
-before:: adm/root.mk bootstrap.sh $(TARGET_LAYERAPI2_FILES);
+before:: adm/root.mk $(TARGET_LAYERAPI2_FILES);
 
 $(MODULE_HOME)/.layerapi2_label:
 	cp -f .layerapi2_label $(MODULE_HOME)/.layerapi2_label
@@ -81,20 +81,6 @@ coverage:: ;
 _coverage: coverage
 	rm -Rf $(MODULE_HOME)/html_coverage
 	if test -d coverage; then cp -Rf coverage $(MODULE_HOME)/html_coverage; fi
-
-bootstrap.sh: $(wildcard bootstrap.custom)
-	$(MFEXT_HOME)/bin/_make_file_from_template.sh bootstrap.sh .custom >$@
-	chmod u+x $@
-
-doc/Makefile: $(wildcard doc/Makefile.custom)
-	$(MFEXT_HOME)/bin/_make_file_from_template.sh doc/Makefile .custom >$@
-
-doc/conf.py: $(wildcard doc/conf.py)
-	$(MFEXT_HOME)/bin/_make_file_from_template.sh doc/conf.py .custom >$@
-
-prereq:
-	rm -f bootstrap.sh doc/Makefile doc/conf.py
-	$(MAKE) bootstrap.sh doc/Makefile doc/conf.py
 
 
 ####################################
