@@ -82,6 +82,7 @@
 {% set utils = UTILITIES.split(',') %}
 {% for util in utils %}
 
+.. index:: {{util}}
 ### {{util}}
 
 {% if LAYER_NAME == "root" %}
