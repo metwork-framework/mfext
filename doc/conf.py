@@ -16,7 +16,48 @@ import sphinx_rtd_theme
 # ones.
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.viewcode',
-              'sphinx.ext.napoleon']
+              'sphinx.ext.napoleon',
+              'sphinx.ext.intersphinx',
+              'sphinx.ext.autosectionlabel',
+              'sphinx.ext.todo',
+              'sphinx_automodapi.automodapi',
+              'sphinx_automodapi.smart_resolver',
+              ]
+
+# A dictionary of values to pass into the template engine’s context for all pages
+html_context = {
+    # Enable the "Edit in GitHub link within the header of each page. See https://docs.readthedocs.io/en/stable/vcs.html
+    'display_github': True,
+    # Set the following variables to generate the resulting github URL for each page.
+    'github_user': 'metwork-framework',
+    'github_repo': 'mfext',
+    'github_version': 'integration',
+    # Path in the checkout to the docs root
+    'conf_py_path': '/doc/',
+    # Changes how to view files when using display_github, display_gitlab, etc.
+    # When using GitHub or GitLab this can be: blob (default), edit, or raw.
+    # See https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html#confval-vcs_pageview_mode
+    # Warning : the parameter is theme_vcs_pageview_mode and not vcs_pageview_mode as mentionned in the the documentation
+    'theme_vcs_pageview_mode': 'edit'
+}
+
+
+# True to prefix each section label with the name of the document it is in,
+# followed by a colon. For example, index:Introduction for a section called Introduction that appears in document index.rst.
+# Useful for avoiding ambiguity when the same section heading appears in different documents.
+autosectionlabel_prefix_document = True
+
+# If set, autosectionlabel chooses the sections for labeling by its depth.
+# For example, when set 1 to autosectionlabel_maxdepth, labels are generated only for top level sections,
+# and deeper sections are not labeled. It defaults to None (disabled).
+autosectionlabel_maxdepth = 3
+
+# The output format for Graphviz when building HTML files. This must be either 'png' or 'svg'
+graphviz_output_format = 'svg'
+
+# This must be a string that specifies the name of the directory the automodsumm generated documentation ends up in.
+# This directory path should be relative to the documentation root (e.g., same place as index.rst). Defaults to 'api'.
+automodapi_toctreedirnm = 'api'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -61,8 +102,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-
+todo_include_todos = True
+# Emits a warning or not for each TO DO entries. The default is False.
+todo_emit_warnings = False
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -72,7 +114,9 @@ todo_include_todos = False
 # html_theme = 'alabaster'
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-
+html_style = 'css/override_theme.css'
+html_logo = 'images/logo-metwork.png'
+html_favicon = 'images/metwork.ico'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
