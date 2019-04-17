@@ -2,14 +2,14 @@
 
 ## Overview
 
-`layerapi2` module is a library and a set of cli tools to manage a layered environnement
+`layerapi2` module is a library and a set of cli tools to manage a layered environment
 system.
 
-A similar system is [environnement modules](http://modules.sourceforge.net/). `layerapi2` module
+A similar system is [environment modules](http://modules.sourceforge.net/). `layerapi2` module
 is more simple, probably more opinionated and reliable but less HPC oriented and deals with only one
 compiler.
 
-The library is designed to be not metwork specific and should be released
+The library is designed to be not Metwork specific and should be released
 as an independent product.
 
 ## Main concepts
@@ -21,11 +21,11 @@ A layer is defined by:
 - a layer label (a string, not necessarily unique)
 - a layer home (a full path to a directory)
 
-Optionnaly, a layer definition can include:
+Optionally, a layer definition can include:
 
 - some dependencies (just a list of other layer labels)
 - some conflicts (just a list of other layer labels)
-- some environnement variables to set/unset durint layer load/unload
+- some environment variables to set/unset during layer load/unload
 - some extra interactive profile to load/unload during layer load/unload
 
 So concretely, a layer is a directory with the following structure:
@@ -45,7 +45,7 @@ only line.
 
 ### A layers path
 
-The environnement variable `METWORK_LAYERS_PATH` contains a ":" separated list
+The environment variable `METWORK_LAYERS_PATH` contains a ":" separated list
 of directories full paths.
 
 When we search a given layer, we iterate the list from the beginning and for each
@@ -54,7 +54,7 @@ directory full path, we test:
 - if the selected directory is a layer by itself (ie. it contains a `.layerapi2_label` file)
 - if immediate subdirectories are layers
 
-Consider the folowing example:
+Consider the following example:
 
 ```none
     /path1/layer1/
@@ -78,7 +78,7 @@ Notes:
 
 - relative paths in `METWORK_LAYERS_PATH` are ignored
 - if there are several layer homes for a given label (ie. multiple directories with the same value for `.layerapi2_label` file),
-the first occurence is returned when searching by label
+the first occurrence is returned when searching by label
 (so the order of entries in METWORK_LAYERS_PATH can be important).
 
 
@@ -88,10 +88,10 @@ We consider that a layer is *installed* if we can found it by its label through 
 
 When a layer is *installed*, nothing is done automatically. It's just available for loading.
 
-Then a layer can be loaded. When the layer is loaded, the environnement is modified. We will see
+Then a layer can be loaded. When the layer is loaded, the environment is modified. We will see
 that in more detail a little further.
 
-When a layer is loaded, it can be unloaded. Then, the corresponding environnement modification is reversed.
+When a layer is loaded, it can be unloaded. Then, the corresponding environment modification is reversed.
 
 ## Technical details
 
@@ -103,18 +103,18 @@ When you load a layer, following actions are done (in this particular order):
 - we iterate in the "conflicts list" of the layer and we unload each referenced layer (if loaded)
 - we iterate in the "dependencies list" of the layer and we load each referenced layer (if not loaded)
 - if a dependent layer is not installed (so it can't be loaded), we give up the layer loading (unless this particular dependency is marked as optional)
-- then we load concretly the layer (we modify the current environnement)
+- then we load concretely the layer (we modify the current environment)
 
-Following modifications are done to the current environnement:
+Following modifications are done to the current environment:
 
 - we prepend to `PATH`: `{LAYER_HOME}/local/bin` and `{LAYER_HOME}/bin` (if corresponding directories exist)
 - we prepend to `LD_LIBRARY_PATH`: `{LAYER_HOME}/local/lib` and {LAYER_HOME}/lib` (if corresponding directories exist)
 - we prepend to `PKG_CONFIG_PATH`: `{LAYER_HOME}/local/lib/pkgconfig` and `{LAYER_HOME}/lib/pkgconfig` (if corresponding directories exist)
 - we prepend to `PYTHONPATH`: `{LAYER_HOME}/local/lib/python{PYTHON2_SHORT_VERSION}/site-packages` and `{LAYER_HOME}/lib/python{PYTHON2_SHORT_VERSION}/site-packages` (if corresponding directories exist)
 - we prepend to `PYTHONPATH`: `{LAYER_HOME}/local/lib/python{PYTHON3_SHORT_VERSION}/site-packages` and `{LAYER_HOME}/lib/python{PYTHON3_SHORT_VERSION}/site-packages` (if corresponding directories exist)
-- we add extra environnement variables listed by `{LAYER_HOME}/.layerapi2_extra_env` (if the file exists)
+- we add extra environment variables listed by `{LAYER_HOME}/.layerapi2_extra_env` (if the file exists)
 - we load/source the bash file `{LAYER_HOME}/.layerapi2_interactive_profile` file for interactive usage only (if the file exists)
-- we set a special environnement variable `METWORK_LAYER_{HASH}_LOADED` to memorize that the layer is loaded (`HASH` is a hash of the full layer home).
+- we set a special environment variable `METWORK_LAYER_{HASH}_LOADED` to memorize that the layer is loaded (`HASH` is a hash of the full layer home).
 
 ### What is done during layer unloading ?
 
@@ -124,9 +124,9 @@ When you unload a layer, following actions are done (in this particular order):
 which starts with `{LAYER_HOME}/`
 - we load/source the bash file `{LAYER_HOME}/.layerapi2_interactive_unprofile` file for
 interactive usage only (if the file exists)
-- we unset the special environnement variable `METWORK_LAYER_{HASH}_LOADED` to memorize that
+- we unset the special environment variable `METWORK_LAYER_{HASH}_LOADED` to memorize that
 the layer is not loaded any more
-- we remove extra environnement variables listed in `{LAYER_HOME}/.layerapi2_extra_env` (if the file exist)
+- we remove extra environment variables listed in `{LAYER_HOME}/.layerapi2_extra_env` (if the file exist)
 - we (recursively) unload all layers which depends on this one
 
 ### Syntax of `.layerapi2_*` files
@@ -138,7 +138,7 @@ use `{LAYER_HOME}` syntax to point out this layer home in the following.
 
 .. note::
    In all `.layerapi2_*` files, you can embed this particular syntax:
-   `{ENVIRONNEMENT_VARIABLE_NAME}` (with opening/closing braces), it will
+   `{environment_VARIABLE_NAME}` (with opening/closing braces), it will
    be dynamically substituted by its value (at loading time).
 
 .. warning::
@@ -185,7 +185,7 @@ The  ̀.layerapi2_extra_env` is different. It's a plain text files with several
 - spaces at the beginning/end of each lines are ignored
 - lines which start with `#` are comments (they do nothing)
 - empty lines are ignored
-- `ENV_VAR=ENV_VALUE` lines mean "set ENV_VALUE into environnement variable named ENV_VAR" (no escaping is done, youd don't need quotation marks, the `=` character just delimits the variable name and its value)
+- `ENV_VAR=ENV_VALUE` lines mean "set ENV_VALUE into environment variable named ENV_VAR" (no escaping is done, youd don't need quotation marks, the `=` character just delimits the variable name and its value)
 
 Example of `.layerapi2_extra_env` file:
 
@@ -197,7 +197,7 @@ PYTHONUNBUFFERED=x
 ```
 
 .. note::
-   In this file, you have an example of `{ENVIRONNEMENT_VARIABLE_NAME}` syntax
+   In this file, you have an example of `{environment_VARIABLE_NAME}` syntax
    usage (see above).
 
 #### `{LAYER_HOME}/.layerapi2_interactive_profile` and `{LAYER_HOME}/.layerapi2_interactive_unprofile`
@@ -223,7 +223,7 @@ The `layers` utility list installed layers. You can also filter the output to ge
 - only loaded layers
 - only not loaded (but installed) layers
 
-If you don't see your layer in `layers` output, check your `METWORK_LAYERS_PATH` environnement
+If you don't see your layer in `layers` output, check your `METWORK_LAYERS_PATH` environment
 variable and if there is a `.layerapi_label` in your layer home.
 
 Full documentation:
@@ -325,7 +325,7 @@ $ layers
 
 #### `layer_load_bash_cmds`, `layer_unload_bash_cmds`
 
-Two very importants utilities are `layer_load_bash_cmds` and `layer_unload_bash_cmds`.
+Two very important utilities are `layer_load_bash_cmds` and `layer_unload_bash_cmds`.
 
 They output bash commands to source/eval in order to change the current context with the given
 layer loaded/unloaded (included all dependencies management).
@@ -338,7 +338,7 @@ layer loaded/unloaded (included all dependencies management).
 {{ "layer_unload_bash_cmds --help"|shell }}
 ```
 
-We recommend to define in your bash environnement two bash functions like this:
+We recommend to define in your bash environment two bash functions like this:
 
 ```bash
     function layer_load() {

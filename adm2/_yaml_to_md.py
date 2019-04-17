@@ -40,7 +40,12 @@ for fpath in sorted(yaml_files):
     with open(fpath, 'r', encoding="utf-8") as f:
         raw_content = f.read()
         y = yaml.load(unidecode(raw_content))
-        print("**%s** | %s | %s | %s | %s" % (flter(y['name']), flter(y['version']),
+        website = flter(y['website'])
+        name_with_link = flter(y['name'])
+        if not ((website is None) or (website == '')):
+            name_with_link = "[{}]({})".format(name_with_link, website)
+
+        print("%s | %s | %s | %s | %s" % (name_with_link, flter(y['version']),
                                          flter(y['description']),
                                          flter(y['website']),
                                          ".. index:: {} package".format(flter(y['name']))))
