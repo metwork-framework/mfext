@@ -1,10 +1,15 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Docs
+- Improve 'Packages list' display + fix typo
+- Update MFEXT documentation
+
 ### Feat
 - Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
 - Upgrade postgis from 2.4.4 to 2.4.6
 - add a first version of jsonlog2elasticsearch
+- add graphviz in devtools layer (for documentation)
 - add sphinx-automodapi module
 - delete filebeat component
 - introduce mfext addons
