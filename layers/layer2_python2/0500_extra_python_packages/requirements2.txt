@@ -12,7 +12,7 @@ enum==0.4.6
 filelock==3.0.4
 idna==2.6
 inotify-simple==1.1.7
-Jinja2==2.10
+Jinja2==2.10.1
 MarkupSafe==1.0
 netifaces==0.10.6
 psutil==5.4.4
