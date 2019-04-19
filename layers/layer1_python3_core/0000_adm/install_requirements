@@ -16,6 +16,7 @@ if test "${1:-}" = ""; then
     usage
     exit 1
 fi
+PROXY_SET=$(shell _proxy_set.sh)
 PREFIX_PATH="$1"
 if test "${2:-}" = ""; then
     usage
@@ -28,11 +29,13 @@ if test "${3:-}" = ""; then
     cp -f "${REQUIREMENTS}" "${REQUIREMENTS}.tmp"
 else
     export INDEX_DIR="$3"
-    # Hack to block autodownload
-    export http_proxy=http://127.0.0.1:9999
-    export https_proxy=http://127.0.0.1:9999
-    export HTTP_PROXY=http://127.0.0.1:9999
-    export HTTPS_PROXY=http://127.0.0.1:9999
+    if test "${PROXY_SET}" = "0"; then
+        # Hack to block autodownload
+        export http_proxy=http://127.0.0.1:9999
+        export https_proxy=http://127.0.0.1:9999
+        export HTTP_PROXY=http://127.0.0.1:9999
+        export HTTPS_PROXY=http://127.0.0.1:9999
+    fi
     export FORCED_INDEX_DIR_STRING="--no-cache-dir --no-index --find-links=$3"
     cat "${REQUIREMENTS}" |sed 's/^-e git.*egg=\(.*\)$/\1/g' |sed 's/^https.*egg=\(.*\)$/\1/g' >"${REQUIREMENTS}.tmp"
 fi
