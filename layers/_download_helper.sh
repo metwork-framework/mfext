@@ -2,10 +2,14 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-unset http_proxy
-unset https_proxy
-unset HTTP_PROXY
-unset HTTPS_PROXY
+PROXY_SET=$(_proxy_set.sh)
+
+if test "${PROXY_SET}" = "0"; then
+    unset http_proxy
+    unset https_proxy
+    unset HTTP_PROXY
+    unset HTTPS_PROXY
+fi
 
 ARCHIVE_FILE=$1
 SOURCES_FILE=$2
