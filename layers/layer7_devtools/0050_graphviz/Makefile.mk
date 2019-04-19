@@ -15,4 +15,8 @@ LICENSE=Common Public License Version 1.0 (https://www.graphviz.org/license/)
 
 all:: $(PREFIX)/lib/libcgraph.so
 $(PREFIX)/lib/libcgraph.so:
-	$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX) OPTIONS="--disable-python --disable-guile --disable-java --disable-perl --disable-lua --disable-tcl --disable-swig --disable-sharp --disable-ocaml --disable-php --disable-r --disable-ruby" download uncompress configure build install
+	$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX)\
+		OPTIONS="--disable-python --disable-guile --disable-java --disable-perl\
+		--disable-lua --disable-tcl --disable-swig --disable-sharp\
+		--disable-ocaml --disable-php --disable-r --disable-ruby -disable-gdk\
+		--disable-gdk --disable-gtk" download uncompress configure build install
