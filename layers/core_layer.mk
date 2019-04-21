@@ -1,8 +1,11 @@
-# To avoid python autodownload during installation
-export http_proxy=http://127.0.0.1:9999
-export https_proxy=http://127.0.0.1:9999
-export HTTP_PROXY=http://127.0.0.1:9999
-export HTTPS_PROXY=http://127.0.0.1:9999
+PROXY_SET=$(shell _proxy_set.sh)
+ifeq ($(PROXY_SET),0)
+	# To avoid python autodownload during installation
+	export http_proxy=http://127.0.0.1:9999
+	export https_proxy=http://127.0.0.1:9999
+	export HTTP_PROXY=http://127.0.0.1:9999
+	export HTTPS_PROXY=http://127.0.0.1:9999
+endif
 
 export SOURCE := $(shell pwd)
 export LAYER_DIR := $(shell dirname $(SOURCE))

@@ -1,10 +1,13 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
-unexport http_proxy
-unexport https_proxy
-unexport HTTP_PROXY
-unexport HTTPS_PROXY
+PROXY_SET=$(shell _proxy_set.sh)
+ifeq ($(PROXY_SET),0)
+	unexport http_proxy
+	unexport https_proxy
+	unexport HTTP_PROXY
+	unexport HTTPS_PROXY
+endif
 
 export NAME=nodejs
 export VERSION=8.11.2

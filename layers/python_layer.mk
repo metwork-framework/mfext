@@ -1,9 +1,12 @@
 include $(MFEXT_HOME)/share/core_layer.mk
 
-unexport http_proxy
-unexport https_proxy
-unexport HTTP_PROXY
-unexport HTTPS_PROXY
+PROXY_SET=$(shell _proxy_set.sh)
+ifeq ($(PROXY_SET),0)
+	unexport http_proxy
+	unexport https_proxy
+	unexport HTTP_PROXY
+	unexport HTTPS_PROXY
+endif
 
 LAYER_SITE_PACKAGES=$(LAYER_HOME)/lib/python$(PYTHONPYTHONMAJORVERSION_SHORT_VERSION)/site-packages
 LAYER_SITE_REQUIREMENTS=$(LAYER_SITE_PACKAGES)/requirementsPYTHONMAJORVERSION.txt
