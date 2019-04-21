@@ -21,6 +21,7 @@
 - upgrade mflog to fix metwork-framework/mflog#8
 - more reliable checks about some circus watchers
 - don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
 
 
 
