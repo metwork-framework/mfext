@@ -13,6 +13,7 @@
 - remove prerequirements files
 - update mflog
 - add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
 
 
 ### Bug Fixes
