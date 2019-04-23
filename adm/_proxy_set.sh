@@ -32,5 +32,13 @@ if test "${HTTPS_PROXY:-}" != ""; then
     echo 1
     exit 0
 fi
+if test "${ftp_proxy:-}" != ""; then
+    echo 1
+    exit 0
+fi
+if test "${FTP_PROXY:-}" != ""; then
+    echo 1
+    exit 0
+fi
 echo 0
 exit 0
