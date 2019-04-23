@@ -1,7 +1,6 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
-PROXY_SET=$(shell _proxy_set.sh)
 ifeq ($(PROXY_SET),0)
 	unexport http_proxy
 	unexport https_proxy

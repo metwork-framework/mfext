@@ -16,7 +16,9 @@ if test "${1:-}" = ""; then
     usage
     exit 1
 fi
-PROXY_SET=$(_proxy_set.sh)
+if test "${PROXY_SET:-}" = ""; then
+    PROXY_SET=$(_proxy_set.sh)
+fi
 PREFIX_PATH="$1"
 if test "${2:-}" = ""; then
     usage
