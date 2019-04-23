@@ -15,7 +15,7 @@ filelock==3.0.4
 future==0.16.0
 idna==2.6
 inotify-simple==1.1.7
-Jinja2==2.10
+Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.0
 netifaces==0.10.7
