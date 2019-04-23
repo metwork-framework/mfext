@@ -78,6 +78,24 @@ echo "  LAYER_ENVS:=\$(shell env |grep '^METWORK_LAYER_.*_LOADED=1\$\$' |awk -F 
 echo "  \$(foreach LAYER_ENV, \$(LAYER_ENVS), \$(eval unexport \$(LAYER_ENV)))" >>adm/root.mk
 echo "endif" >>adm/root.mk
 
+PROXY_SET=$(adm/_proxy_set.sh)
+if test "${PROXY_SET:-}" = "1"; then
+    echo "export PROXY_SET:=1" >>adm/root.mk
+    if test "${http_proxy:-}" != ""; then
+        echo "export http_proxy:=${http_proxy:-}" >>adm/root.mk
+    fi
+    if test "${https_proxy:-}" != ""; then
+        echo "export https_proxy:=${https_proxy:-}" >>adm/root.mk
+    fi
+    if test "${HTTPS_PROXY:-}" != ""; then
+        echo "export HTTPS_PROXY:=${HTTPS_PROXY:-}" >>adm/root.mk
+    fi
+    if test "${HTTP_PROXY:-}" != ""; then
+        echo "export HTTP_PROXY:=${HTTP_PROXY:-}" >>adm/root.mk
+    fi
+else
+    echo "export PROXY_SET:=0" >>adm/root.mk
+fi
 
 # FIXME: do not hardcode this
 # FIXME: move to layer root extra_env ?

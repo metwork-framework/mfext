@@ -1,6 +1,5 @@
 include $(MFEXT_HOME)/share/core_layer.mk
 
-PROXY_SET=$(shell _proxy_set.sh)
 ifeq ($(PROXY_SET),0)
 	unexport http_proxy
 	unexport https_proxy
