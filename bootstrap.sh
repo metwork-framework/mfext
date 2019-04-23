@@ -81,6 +81,12 @@ echo "endif" >>adm/root.mk
 PROXY_SET=$(adm/_proxy_set.sh)
 if test "${PROXY_SET:-}" = "1"; then
     echo "export PROXY_SET:=1" >>adm/root.mk
+    if test "${ftp_proxy:-}" != ""; then
+        echo "export ftp_proxy:=${ftp_proxy:-}" >>adm/root.mk
+    fi
+    if test "${FTP_PROXY:-}" != ""; then
+        echo "export FTP_PROXY:=${FTP_PROXY:-}" >>adm/root.mk
+    fi
     if test "${http_proxy:-}" != ""; then
         echo "export http_proxy:=${http_proxy:-}" >>adm/root.mk
     fi
