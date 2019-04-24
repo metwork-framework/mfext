@@ -7,8 +7,8 @@ export EXTENSION=tar.bz2
 export CHECKTYPE=MD5
 export CHECKSUM=62149456d21dabee44999f644c986ab0
 DESCRIPTION=\
-GEOS est un port de JTS (Java Topology Suite) en C++\
-Il permet notamment de calculer des intersections complexes de polygones
+GEOS is a C++ port of the ​JTS Topology Suite (JTS). \
+GEOS provides spatial functionality. Especially, it allows to calculate complex intersections of polygons.
 WEBSITE=http://trac.osgeo.org/geos/
 LICENSE=LGPL
 

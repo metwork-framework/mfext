@@ -7,8 +7,8 @@ export EXTENSION=tar.gz
 export CHECKTYPE=MD5
 export CHECKSUM=b0f1c777708cb8e9d37fb47e7ed3312d
 DESCRIPTION=\
-Berkeley DB est un SGBD sous la forme d un fichier et d'une bibliothèque \
-(il n'est utilisé qu en dépendance embarqué de RPM)
+Berkeley DB is a family of embedded key-value database libraries. \
+(it is used only as embedded RPM dependency)
 WEBSITE=http://www.oracle.com/technetwork/database/berkeleydb/overview/index.html
 LICENSE=BSD
 

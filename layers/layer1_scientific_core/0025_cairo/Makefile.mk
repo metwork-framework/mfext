@@ -8,6 +8,7 @@ export CHECKTYPE=MD5
 export CHECKSUM=9f0db9dbfca0966be8acd682e636d165
 DESCRIPTION=\
 Cairo is a 2D graphics library with support for multiple output devices.
+WEBSITE=https://www.cairographics.org/
 LICENSE=LGPL
 
 all::$(PREFIX)/lib/libcairo.so

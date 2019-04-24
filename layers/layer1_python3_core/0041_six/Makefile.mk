@@ -7,7 +7,9 @@ export EXTENSION=tar.gz
 export CHECKTYPE=MD5
 export CHECKSUM=d12789f9baf7e9fb2524c0c64f1773f8
 DESCRIPTION=\
-Une bibliothèque de compatibilité entre Python 2 et Python 3. Requis par différents modules python.
+Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing \
+over the differences between the Python versions with the goal of writing Python code \
+that is compatible on both Python versions.
 WEBSITE=https://pypi.python.org/pypi/six/
 LICENSE=MIT
 

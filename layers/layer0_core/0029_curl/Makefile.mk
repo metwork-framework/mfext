@@ -8,6 +8,7 @@ export CHECKTYPE=MD5
 export CHECKSUM=fb1f03a142236840c1a77c035fa4c542
 DESCRIPTION=\
 CURL is command line tool and library for transferring data with URLs
+WEBSITE=https://curl.haxx.se/
 LICENSE=MIT
 
 all::$(PREFIX)/lib/libcurl.so

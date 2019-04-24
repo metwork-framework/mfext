@@ -5,6 +5,7 @@ MFEXT documentation
    :numbered:
    :caption: Table of Contents
    :name: mfexttoc
+   :maxdepth: 3
 
    README
    configure_metwork_repo
@@ -30,6 +31,8 @@ MFEXT documentation
    layer_rpm
    layer_default
    layer_python
+   todo
+   changelogs
 
 Indices and tables
 ==================
