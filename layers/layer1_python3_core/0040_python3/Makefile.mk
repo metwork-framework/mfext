@@ -7,7 +7,7 @@ export EXTENSION=tgz
 export CHECKTYPE=MD5
 export CHECKSUM=99a7e803633a627b264a42ce976d8c19
 DESCRIPTION=\
-PYTHON3 est un langage de script orienté objet
+Python is an interpreted, object-oriented, high-level programming language.
 WEBSITE=http://python.org/
 LICENSE=Python
 

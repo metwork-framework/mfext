@@ -8,9 +8,10 @@ export EXTENSION=tar.gz
 export CHECKTYPE=MD5
 export CHECKSUM=798c66cc8df26f204f6248358fe4fceb
 DESCRIPTION=\
-GDAL est un outil de traitement dimage (reprojection, sampling...) géoréférencées.\
-Il incorpore également des outils de manipulations de données vectorielles (shapefiles...)\
-et offre des API pour différents langages.
+GDAL is a set of libraries and tools for raster and vector geospatial data formats. \
+As a library, it presents a single raster abstract data model and single vector abstract data model \
+to the calling application for all supported formats. It also comes with a variety of useful command line utilities \
+and APIs for data translation and processing.
 WEBSITE=http://www.gdal.org
 LICENSE=MIT
 

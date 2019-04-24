@@ -34,6 +34,8 @@ def flter(value):
     except Exception:
         return unidecode(str(value))
 
+def is_empty_or_unknown(str_to_check):
+    return (str_to_check is None) or (str_to_check == '') or (str_to_check.lower() == 'unknown')
 
 for fpath in sorted(yaml_files):
     print("Reading %s..." % fpath, file=sys.stderr)
@@ -42,7 +44,7 @@ for fpath in sorted(yaml_files):
         y = yaml.load(unidecode(raw_content))
         website = flter(y['website'])
         name_with_link = flter(y['name'])
-        if not ((website is None) or (website == '')):
+        if not is_empty_or_unknown(website):
             name_with_link = "[{}]({})".format(name_with_link, website)
 
         print("%s | %s | %s | %s | %s" % (name_with_link, flter(y['version']),

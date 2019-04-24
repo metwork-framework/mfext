@@ -7,7 +7,8 @@ export EXTENSION=tar.gz
 export CHECKTYPE=MD5
 export CHECKSUM=a317d98b091f6c53a905e1b7dcf7d7d1
 DESCRIPTION=\
-PYTHON_SETUPTOOLS est un outil pour gérer des packages Python
+Setuptools is a package development process library designed to facilitate \
+download, build, install, upgrade, and uninstall Python packages
 WEBSITE=https://pypi.python.org/pypi/setuptools
 LICENSE=Python
 

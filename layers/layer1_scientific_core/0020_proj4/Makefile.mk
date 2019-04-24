@@ -7,8 +7,8 @@ export EXTENSION=tar.gz
 export CHECKTYPE=MD5
 export CHECKSUM=d815838c92a29179298c126effbb1537
 DESCRIPTION=\
-PROJ4 est une bibliotheque C pour le calcul des projections\
-(au sens mathematique du terme)
+PROJ4 is a generic coordinate transformation software that transforms geospatial coordinates \
+from one coordinate reference system (CRS) to another.
 WEBSITE=http://trac.osgeo.org/proj/
 LICENSE=MIT
 
