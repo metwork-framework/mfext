@@ -4,10 +4,12 @@
 ## [Unreleased]
 
 ### New Features
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
 
 
 ### Bug Fixes
 - backport of #279 to fix metwork-framework/mflog#8
+- jinja2 update (security) 2.10 => 2.10.1
 
 
 
