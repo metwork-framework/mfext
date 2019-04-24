@@ -51,7 +51,7 @@ $(PREFIX)/lib/pkgconfig/%: %
 install-shares: $(TARGET_SHARES)
 $(PREFIX)/share/%: %
 	@mkdir -p $(shell dirname $@)
-	cp --preserve=mode -f $< $@
+	cp --preserve=mode --dereference -Rf $< $@
 
 install-configs: $(TARGET_CONFIGS)
 $(PREFIX)/config/%: %
