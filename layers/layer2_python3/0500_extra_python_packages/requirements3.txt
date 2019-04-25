@@ -12,7 +12,7 @@ diskcache==3.1.1
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git@af3a63409bf64700ca6a08a1f9bcea4a28c66bf6#egg=envtpl
 -e git+https://github.com/metwork-framework/mflog.git@a2a56818b63bbf785141538dfe7cb3c1c410136d#egg=mflog
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@e8233fcb0707ad452ad611eee4e7d532508934bc#egg=cookiecutter_hooks
+-e git+https://github.com/metwork-framework/cookiecutter_hooks.git@57db070654fee65abb7108e10e81f62e064f2791#egg=cookiecutter_hooks
 structlog==19.1.0
 filelock==3.0.4
 future==0.16.0
