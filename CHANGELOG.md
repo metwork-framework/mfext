@@ -16,6 +16,7 @@
 - allow to build mfext behing a corporate http proxy
 - urllib3 update (1.23 => 1.24.2) because of upstream security issue
 - add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
 
 
 ### Bug Fixes
