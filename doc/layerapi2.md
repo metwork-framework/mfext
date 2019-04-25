@@ -1,3 +1,4 @@
+.. index:: layerapi2
 # Layerapi2
 
 ## Overview
@@ -14,6 +15,7 @@ as an independent product.
 
 ## Main concepts
 
+.. index:: layer concept
 ### A layer
 
 A layer is defined by:
@@ -43,6 +45,7 @@ So concretely, a layer is a directory with the following structure:
 The only mandatory file is `.layerapi2_label`. It contains the layer label on its first and
 only line.
 
+.. index:: layer path
 ### A layers path
 
 The environment variable `METWORK_LAYERS_PATH` contains a ":" separated list
@@ -81,7 +84,7 @@ Notes:
 the first occurrence is returned when searching by label
 (so the order of entries in METWORK_LAYERS_PATH can be important).
 
-
+.. index:: layer installation, layer loading, layer unloading,
 ### Installation / Loading / Unloading
 
 We consider that a layer is *installed* if we can found it by its label through the layers path.
@@ -129,6 +132,7 @@ the layer is not loaded any more
 - we remove extra environment variables listed in `{LAYER_HOME}/.layerapi2_extra_env` (if the file exist)
 - we (recursively) unload all layers which depends on this one
 
+.. index:: layerapi2 syntax
 ### Syntax of `.layerapi2_*` files
 
 #### General
@@ -144,6 +148,7 @@ use `{LAYER_HOME}` syntax to point out this layer home in the following.
 .. warning::
    Do not mix with `{LAYER_HOME}` which is just a syntax for this documentation.
 
+.. index:: layerapi2_label
 #### `{LAYER_HOME}/.layerapi2_label`
 
 The only mandatory file is `layerapi2_label`. It is a plain text file with just one line
@@ -160,6 +165,7 @@ Example of `.layerapi2_label` file:
 valid_label_for_a_layer
 ```
 
+.. index:: layerapi2_dependencies, layerapi2_conflicts
 #### `{LAYER_HOME}/.layerapi2_dependencies` and `{LAYER_HOME}/.layerapi2_conflicts`
 
 Then you have `layerapi2_dependencies` and `layerapi2_conflicts` which follow the same syntax.
@@ -178,6 +184,7 @@ valid_label_for_a_layer
 .. note::
     If the label starts with `-`, it means that it is an optional dependency.
 
+.. index:: layerapi2_extra_env
 #### `{LAYER_HOME}/.layerapi2_extra_env`
 
 The  ̀.layerapi2_extra_env` is different. It's a plain text files with several lines:
@@ -200,6 +207,7 @@ PYTHONUNBUFFERED=x
    In this file, you have an example of `{environment_VARIABLE_NAME}` syntax
    usage (see above).
 
+.. index:: layerapi2_interactive_profile, layerapi2_interactive_unprofile
 #### `{LAYER_HOME}/.layerapi2_interactive_profile` and `{LAYER_HOME}/.layerapi2_interactive_unprofile`
 
 The `.layerapi2_interactive_profile` and `.layerapi2_interactive_unprofile` are plain `bash` files. The first one is sourced/loaded when the corresponding layer is loaded. But it works
@@ -214,8 +222,10 @@ only in interactive mode. For example, it won't work with `layer_wrapper` very i
 **Because of above warning, please don't use this feature a lot and limit bash commands to only
 set aliases for interactive usage.**
 
+.. index:: layerapi2 utilities
 ### Utilities
 
+.. index:: layers
 #### `layers`
 
 The `layers` utility list installed layers. You can also filter the output to get:
@@ -242,7 +252,7 @@ You can also filter only "not loaded" (but installed) layers with the following 
 ```none
 layers --loaded-filter=no
 ```
-
+.. index:: is_layer_installed, is_layer_loaded
 #### `is_layer_installed`, `is_layer_loaded`
 
 These two little utilities output `1` is the layer given as argument is installed/loaded.
@@ -255,6 +265,7 @@ These two little utilities output `1` is the layer given as argument is installe
 {{ "is_layer_loaded --help"|shell }}
 ```
 
+.. index:: bootstrap_layer.sh
 #### `bootstrap_layer.sh`
 
 This little utility can be used to bootstrap an empty layer.
@@ -265,6 +276,7 @@ Details are given in the help message:
 {{ "bootstrap_layer.sh --help"|shell }}
 ```
 
+.. index:: layer_wrapper
 #### `layer_wrapper`
 
 This is probably the most interesting and the most useful utility.
@@ -323,6 +335,7 @@ $ layers
     => the original context is not modified
 ```
 
+.. index:: layer_load_bash_cmds, layer_unload_bash_cmds
 #### `layer_load_bash_cmds`, `layer_unload_bash_cmds`
 
 Two very important utilities are `layer_load_bash_cmds` and `layer_unload_bash_cmds`.
@@ -355,6 +368,7 @@ We recommend to define in your bash environment two bash functions like this:
 And use these two bash functions instead of `layer_load_bash_cmds`, `layer_unload_bash_cmds`
 binaries directly. See full tutorial for more details.
 
+.. index:: layerapi2 tutorial
 ## Full tutorial
 
 {% include 'tutorial_layerapi2.mdtemp' %}
