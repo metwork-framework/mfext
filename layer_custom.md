@@ -5,7 +5,7 @@ This is the `root` layer of the MFEXT module.
 
 This layer mainly includes core libraries and utilities like :
 
-- `layerapi2` library and utilities which manage the layer system
+- :doc:`layerapi2 <layerapi2>` library and utilities which manage the layer system
 - wrappers (`python2`, `python3`, `python`...)
 - [glib (gnome) library](https://developer.gnome.org/glib/)
 - (and some other documented below)

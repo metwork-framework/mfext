@@ -8,7 +8,6 @@ is_layer_installed
 is_layer_loaded
 layers
 layer_wrapper
-mfext_wrapper
 nosetests2.sh
 nosetests3.sh
 pylint2.sh
