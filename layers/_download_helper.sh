@@ -2,7 +2,9 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-PROXY_SET=$(_proxy_set.sh)
+if test "${PROXY_SET:-}" = ""; then
+    PROXY_SET=$(_proxy_set.sh)
+fi
 
 if test "${PROXY_SET}" = "0"; then
     unset http_proxy

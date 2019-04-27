@@ -13,6 +13,10 @@
 - remove prerequirements files
 - update mflog
 - add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
 
 
 ### Bug Fixes
@@ -21,6 +25,8 @@
 - upgrade mflog to fix metwork-framework/mflog#8
 - more reliable checks about some circus watchers
 - don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
 
 
 

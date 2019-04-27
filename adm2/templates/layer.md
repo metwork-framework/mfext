@@ -46,7 +46,7 @@
 
 {% if EXTRA_ENV %}
 
-### Extra-environnement (loaded after layer load)
+### Extra-environment (loaded after layer load)
 
 ```none
 {{EXTRA_ENV}}

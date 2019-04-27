@@ -8,7 +8,9 @@ export CHECKTYPE=MD5
 export CHECKSUM=dc2b675234c473c7b37b1076a03120f1
 export ARCHIVE=node-v8.11.2-linux-x64.tar.xz
 DESCRIPTION=\
-Node.js is a JavaScript runtime built on Chrome s V8 JavaScript engine.
+Node.js is a JavaScript runtime built on Chrome s V8 JavaScript engine. \
+npm, provided with Node.js, is a software registry used to share and borrow packages, \
+and to manage development as well.
 WEBSITE=http://nodejs.org
 LICENSE=X11
 

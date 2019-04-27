@@ -57,3 +57,14 @@ doc/.ipynb_checkpoints
 glib2/build
 mfutil_c/build
 pcre/build
+doc/api
+doc/configure_a_metwork_package.md
+doc/configure_a_metwork_package.rst
+doc/configure_metwork_repo.md
+doc/configure_metwork_repo.rst
+doc/install_a_metwork_package.md
+doc/install_a_metwork_package.rst
+doc/README.md
+doc/README.rst
+CHANGELOG*.md
+CHANGELOG*.rst
