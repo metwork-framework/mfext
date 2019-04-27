@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include $(MFEXT_HOME)/share/package.mk
 
 export NAME=openjdk
-export VERSION=11.0.1
+export VERSION=11.0.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=6c2c81fdc2c30655df6350c337f6bb8b
+export CHECKSUM=06b885585bce44c3151719b0e242f855
 export ARCHIVE=$(NAME)-$(VERSION)_linux-x64_bin.tar.gz
 DESCRIPTION=\
 OpenJDK (Open Java Development Kit) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE).
