@@ -17,6 +17,7 @@
 - urllib3 update (1.23 => 1.24.2) because of upstream security issue
 - add search_paths feature to cookiecutter
 - add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
 
 
 ### Bug Fixes
