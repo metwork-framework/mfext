@@ -1,7 +1,8 @@
 # release_0.6 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.6.1 (2019-04-28)
 
 ### New Features
 - urllib3 update (1.23 => 1.24.2) because of upstream security issue
