@@ -1,7 +1,8 @@
 # release_0.5 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.5.9 (2019-04-24)
 
 ### New Features
 
