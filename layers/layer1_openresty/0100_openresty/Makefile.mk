@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=openresty
-export VERSION=1.11.2.2
+export VERSION=1.13.6.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=f4b9aa960e57ca692c4d3da731b7e38b
+export CHECKSUM=d95bc4bbe15e4b045a0593b4ecc0db38
 DESCRIPTION=\
 OPENRESTY est une distribution nginx qui ajoute des modules supplémentaires
 WEBSITE=http://openresty.org
