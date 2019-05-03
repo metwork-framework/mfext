@@ -4,6 +4,16 @@
 ## [Unreleased]
 
 ### New Features
+- openresty update (1.11.2.2 => 1.13.6.2)
+
+
+
+
+
+
+## v0.6.1 (2019-04-28)
+
+### New Features
 - try to keep a backup of user files during uninstall
 - split old scientific layer between scientific_core layer
 - introduce mflog2mfadmin feature
