@@ -7,6 +7,9 @@
 - openresty update (1.11.2.2 => 1.13.6.2)
 
 
+### Bug Fixes
+- update internal circus version to fix a bug with async_kill feature
+
 
 
 
