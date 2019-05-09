@@ -290,6 +290,50 @@ cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
 @metwork    hard    nproc  100000
 EOF
 {% endif -%}
+{% if MODULE == "MFCOM" %}
+cat >%{buildroot}/etc/sysctl_metwork.conf <<EOF
+# Increase size of file handles and inode cache
+fs.file-max = 2097152
+
+# Increase number of incoming connections
+net.core.somaxconn = 50000
+
+# Decrease the time default value for tcp_fin_timeout connection
+net.ipv4.tcp_fin_timeout = 30
+
+# Increase number of incoming connections backlog
+net.core.netdev_max_backlog = 50000
+
+# Increase the tcp-time-wait buckets pool size to prevent simple DOS attacks
+net.ipv4.tcp_max_tw_buckets = 1440000
+net.ipv4.tcp_tw_reuse = 1
+
+# Default Socket Receive Buffer
+net.core.rmem_default = 16777216
+
+# Maximum Socket Receive Buffer
+net.core.rmem_max = 16777216
+
+# Default Socket Send Buffer
+net.core.wmem_default = 16777216
+
+# Maximum Socket Send Buffer
+net.core.wmem_max = 16777216
+
+# Increase the maximum amount of option memory buffers
+net.core.optmem_max = 40960
+
+# Increase the read-buffer space allocatable
+net.ipv4.tcp_rmem = 4096 87380 16777216
+
+# Increase the write-buffer-space allocatable
+net.ipv4.tcp_wmem = 4096 65536 16777216
+
+# UDP
+net.ipv4.udp_rmem_min = 8192
+net.ipv4.udp_wmem_min = 8192
+EOF
+{% endif %}
 
 {% if MFEXT_ADDON == "0" %}
 %post layer-root-{{MODULE_BRANCH}}
@@ -385,6 +429,7 @@ rm -fr %{buildroot}
 {% endfor -%}
 {% if MODULE == "MFCOM" -%}
 /etc/security/limits.d/50-metwork.conf
+/etc/sysctl_metwork.conf
 {% endif -%}
 {% endif %}
 
