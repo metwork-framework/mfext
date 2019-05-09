@@ -40,7 +40,7 @@ function plugin_env() {
         echo "Install it first or use 'plugin_env' without arguments inside the plugin directory"
         return
     fi
-    export PIP_PREFIX="${MODULE_RUNTIME_HOME}/var/plugins/${PLUGIN}/local"
+    export PIP_PREFIX=$(plugins.info "${PLUGIN}" |grep "^Installation home:" |awk -F ': ' '{print $2;}')/local
     plugin_wrapper "${PLUGIN}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
 }
 {% endif %}
