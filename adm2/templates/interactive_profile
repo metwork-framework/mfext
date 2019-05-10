@@ -23,8 +23,12 @@ function plugin_env() {
             if test ${N} -gt 0; then
                 # we are inside a plugin dir
                 export PIP_PREFIX="$(pwd)/local"
+                _OLD_METWORK_LAYERS_PATH="${METWORK_LAYERS_PATH}"
                 field_prepend METWORK_LAYERS_PATH "$(pwd)"
                 plugin_wrapper "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+                export METWORK_LAYERS_PATH="${_OLD_METWORK_LAYERS_PATH}"
+                unset PIP_PREFIX
+                unset _OLD_METWORK_LAYERS_PATH
                 return
             fi
         fi
@@ -42,6 +46,7 @@ function plugin_env() {
     fi
     export PIP_PREFIX=$(plugins.info "${PLUGIN}" |grep "^Installation home:" |awk -F ': ' '{print $2;}')/local
     plugin_wrapper "${PLUGIN}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+    unset PIP_PREFIX
 }
 {% endif %}
 
