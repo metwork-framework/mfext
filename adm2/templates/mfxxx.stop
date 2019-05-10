@@ -1,15 +1,17 @@
 #!/bin/bash
 
 . ${MFEXT_HOME}/lib/bash_utils.sh
-exit_if_root
-
-cd "${MODULE_RUNTIME_HOME}" || exit 1
 
 if test "${1:-}" = "--help"; then
     echo "usage {{MODULE_LOWERCASE}}.start"
     echo "  => stop the {{MODULE_LOWERCASE}} module"
     exit 0
 fi
+
+exit_if_root
+
+cd "${MODULE_RUNTIME_HOME}" || exit 1
+
 {% if MODULE not in ["MFEXT", "MFCOM"] %}
 CONFIG_TARGET=$(readlink -f "${MODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
 if test "${CONFIG_TARGET}" != ""; then

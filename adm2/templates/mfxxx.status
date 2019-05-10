@@ -1,15 +1,16 @@
 #!/bin/bash
 
 . ${MFEXT_HOME}/lib/bash_utils.sh
-exit_if_root
-
-cd "${MODULE_RUNTIME_HOME}" || exit 1
 
 if test "${1:-}" = "--help"; then
     echo "usage {{MODULE_LOWERCASE}}.status"
     echo "  => test the {{MODULE_LOWERCASE}} module"
     exit 0
 fi
+
+exit_if_root
+
+cd "${MODULE_RUNTIME_HOME}" || exit 1
 
 PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
 if test "${PLUGIN_NAME}" != ""; then
