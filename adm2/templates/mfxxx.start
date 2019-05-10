@@ -6,15 +6,17 @@ ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '
 {% endif %}
 
 . ${MFEXT_HOME}/lib/bash_utils.sh
-exit_if_root
-
-cd "${MODULE_RUNTIME_HOME}" || exit 1
 
 if test "${1:-}" = "--help"; then
     echo "usage {{MODULE_LOWERCASE}}.start [NOINIT]"
     echo "  => start the {{MODULE_LOWERCASE}} module"
     exit 0
 fi
+
+exit_if_root
+
+cd "${MODULE_RUNTIME_HOME}" || exit 1
+
 NOINIT=0
 if test "${1:-}" = "NOINIT"; then
     NOINIT=1
