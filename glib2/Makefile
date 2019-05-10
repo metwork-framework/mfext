@@ -33,14 +33,15 @@ $(MFEXT_HOME)/lib/libglib-2.0.so:
 before:
 	if test "$(CACHEHASH)" != "null"; then if test -f /buildcache/glib2_$(CACHEHASH).tar.gz; then echo "using glib cache"; cp -f /buildcache/glib2_$(CACHEHASH).tar.gz $(MFEXT_HOME)/; cd $(MFEXT_HOME) ; zcat glib2_$(CACHEHASH).tar.gz |tar xf - ; rm -f glib2_$(CACHEHASH).tar.gz; fi; fi
 
-ifeq ($(shell expr $(PYTHON_VERSION) \< "2.8" ), 1)
+ifeq ($(shell expr $(PYTHON_VERSION) \< "3.5" ), 1)
 
-export PYTHON=/opt/rh/python27/root/usr/bin/python
+export PYTHON=/opt/rh/rh-python35/root/usr/bin/python
 
 install: build/$(NAME)-$(VERSION)/configure
-	LD_LIBRARY_PATH=/opt/rh/python27/root/usr/lib64/:$(LD_LIBRARY_PATH) && export LD_LIBRARY_PATH && cd build/$(NAME)-$(VERSION) && scl enable python27 './configure --prefix=$(MFEXT_HOME) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --disable-libmount' && rm -Rf $(TMPINSTALL) && mkdir $(TMPINSTALL) && make DESTDIR=$(TMPINSTALL) && make DESTDIR=$(TMPINSTALL) install
+	LD_LIBRARY_PATH=/opt/rh/rh-python35/root/usr/lib64/:$(LD_LIBRARY_PATH) && export LD_LIBRARY_PATH && cd build/$(NAME)-$(VERSION) && scl enable rh-python35 './configure --prefix=$(MFEXT_HOME) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --disable-libmount' && rm -Rf $(TMPINSTALL) && mkdir $(TMPINSTALL) && make DESTDIR=$(TMPINSTALL) && make DESTDIR=$(TMPINSTALL) install
 	rm -Rf $(TMPINSTALL)$(MFEXT_HOME)/share/gtk-doc
 	cp -Rf $(TMPINSTALL)$(MFEXT_HOME)/* $(MFEXT_HOME)/
+	for fic in `grep -rl rh-python35 $(MFEXT_HOME)/bin`; do cat $$fic | sed 's|/opt/rh/rh-python35/root/usr/bin/python|zzzz/opt/python3_core/bin/python3|g' > $$fic.new; cat $$fic.new | sed "s|zzzz|$(MFEXT_HOME)|g" > $$fic; rm $$fic.new; done
 
 else
 
