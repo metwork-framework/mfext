@@ -3,16 +3,12 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" == "--help"; then
-    usage
+    echo "usage: {{MODULE_LOWERCASE}}.init"
+    echo "  => (re)init your module (WARNING: can't drop some user provided datas)"
     exit 0
 fi
 
 exit_if_root
-
-function usage() {
-    echo "usage: {{MODULE_LOWERCASE}}.init"
-    echo "  => (re)init your module (WARNING: can't drop some user provided datas)"
-}
 
 cd "${MODULE_RUNTIME_HOME}" || exit 1
 
