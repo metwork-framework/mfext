@@ -7,6 +7,8 @@
 - openresty update (1.11.2.2 => 1.13.6.2)
 - keep request_id field in logs
 - add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
 
 
 ### Bug Fixes
