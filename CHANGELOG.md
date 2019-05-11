@@ -9,10 +9,13 @@
 - add sqlite3 and libspatialite supports to gdal
 - add werkzeug component (python wsgi toolbox)
 - add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
 
 
 ### Bug Fixes
 - update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
 
 
 
