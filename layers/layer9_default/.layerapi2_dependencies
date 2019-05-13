@@ -2,5 +2,5 @@ root@mfext
 core@mfext
 -devtools@mfext
 -mapserver@mfext
-python@mfext
+python3@mfext
 -monitoring@mfext
