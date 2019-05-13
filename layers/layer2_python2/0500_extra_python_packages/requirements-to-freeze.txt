@@ -18,3 +18,4 @@ cachetools
 inotify_simple
 enum
 diskcache
+terminaltables
