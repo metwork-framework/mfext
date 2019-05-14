@@ -7,7 +7,7 @@ export EXTENSION=tar.bz2
 export CHECKTYPE=MD5
 export CHECKSUM=457543a7754b0d3c1c0aa4d4c3bb4070
 DESCRIPTION=\
-VIM est un editeur de texte unix
+Vim is a highly configurable text editor for efficiently creating and changing any kind of text.
 WEBSITE=http://www.vim.org
 LICENSE=GPL
 SHORT_VERSION=80
