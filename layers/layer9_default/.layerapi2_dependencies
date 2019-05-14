@@ -2,5 +2,9 @@ root@mfext
 core@mfext
 -devtools@mfext
 -mapserver@mfext
-python@mfext
+-scientific_core@mfext
+python3@mfext
+-python3_scientific@mfext
+-python3_devtools@mfext
+-python3_devtools_jupyter@mfext
 -monitoring@mfext

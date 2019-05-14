@@ -7,4 +7,5 @@ if test "${1:-}" == "--help"; then
     exit 0
 fi
 export METWORK_PYTHON_MODE=2
-layer_wrapper --layers=python@mfext,-python@mfcom,-python@"${MODULE_LOWERCASE}" -- pylint "$@"
+layer_wrapper --layers=python2_devtools@mfext,-python2@mfcom,-python2@"${MODULE_LOWERCASE}" -- pylint "$@"
+
