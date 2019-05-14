@@ -80,7 +80,7 @@ Requires: metwork-{{MODULE_LOWERCASE}}-layer-default-{{MODULE_BRANCH}} = {{FULL_
 # Minimal rpm must have the "layer root" rpm in dependency
 Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 # -e "s/^#+//" to add not loaded dependencies
-{% set cmd = 'cat ' + MODULE_HOME + '/opt/default' + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
+{% set cmd = 'cat ' + MODULE_HOME + '/opt/default' + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/^#+//" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
 {% set deps_list = deps.split('\n')[:-1] -%}
 {% for d in deps_list -%}
@@ -134,7 +134,7 @@ Requires: openssl
 Requires: which
 Requires: /usr/bin/lscpu, /usr/bin/wget
 {% endif -%}
-{% set cmd = 'cat ' + MODULE_HOME + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
+{% set cmd = 'cat ' + MODULE_HOME + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/^#+//" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
 {% set deps_list = deps.split('\n')[:-1] -%}
 {% for d in deps_list -%}
@@ -166,7 +166,7 @@ AutoReq: no
 AutoProv: no
 Provides: metwork-{{MODULE_LOWERCASE}}-layer-{{layer}} = {{FULL_VERSION}}
 # -e "s/^#+//" to add not loaded dependencies
-{% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/{METWORK_PYTHON_MODE}/3/g" | sed -e "s/^#+//" | grep -v "{"' -%}
+{% set cmd = 'cat ' + MODULE_HOME + '/opt/' + layer + '/.layerapi2_dependencies| grep -v "^-" | sed -e "s/^#+//" | grep -v "{"' -%}
 {% set deps = cmd|shell -%}
 {% set deps_list = deps.split('\n')[:-1] -%}
 {% for d in deps_list -%}

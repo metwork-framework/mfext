@@ -95,18 +95,6 @@ export MODULE_STATUS
 export PYTHON3_SHORT_VERSION=3.5
 export PYTHON2_SHORT_VERSION=2.7
 
-# We set/check METWORK_PYTHON_MODE
-if test "${METWORK_PYTHON_MODE:-}" = "2"; then
-    if ! test -d "${MFEXT_HOME}/opt/python2"; then
-        echo "ERROR: METWORK_PYTHON_MODE=2 and python2 layer not installed"
-        export PROFILE_ERROR=1
-        unset METWORK_PROFILE_LOADING
-        return 1
-    fi
-else
-    export METWORK_PYTHON_MODE=3
-fi
-
 # We configure the layers system
 field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}
 field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}/opt
