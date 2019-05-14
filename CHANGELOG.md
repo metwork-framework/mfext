@@ -16,6 +16,7 @@
 ### Bug Fixes
 - update internal circus version to fix a bug with async_kill feature
 - use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
 
 
 
