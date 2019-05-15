@@ -110,6 +110,7 @@ AutoReq: no
 AutoProv: no
 Provides: metwork-{{MODULE_LOWERCASE}}-layer-root = {{FULL_VERSION}}
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
 {% if MODULE == "MFADMIN" -%}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 {% endif -%}
