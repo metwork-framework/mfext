@@ -113,6 +113,7 @@ Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
 {% if MODULE == "MFADMIN" -%}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfadmin-layer-python3-{{MODULE_BRANCH}}
 {% endif -%}
 {% if MODULE == "MFEXT" -%}
 Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
