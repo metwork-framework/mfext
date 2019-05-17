@@ -205,6 +205,9 @@ Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-t
 Requires: libquadmath
 {% endif -%}
 {% endif -%}
+{% if layer == "scientific" and MODULE_LOWERCASE == "mfext" -%}
+Requires: tcl tk
+{% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
 Provides: metwork-mfserv-python2-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
