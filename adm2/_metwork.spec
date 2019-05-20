@@ -190,6 +190,8 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% if layer == "scientific" and MODULE_LOWERCASE == "mfext" -%}
 #Add "scientific" system dependencies (specified in meta layer scientific)
 Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
+Requires: tcl
+Requires: tk
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
