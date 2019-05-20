@@ -2,6 +2,7 @@
 
 
 
+
 ## v0.6.1 (2019-04-28)
 
 ### New Features
@@ -51,8 +52,3 @@
 - fix some installation issues in some corner cases
 - upgrade problems at RPM levels
 - fix some rpm upgrades
-
-
-
-
-
