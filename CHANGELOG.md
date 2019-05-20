@@ -1,6 +1,14 @@
 # release_0.6 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+- add python tkinter support thanks to a change to the buildimage
+
+
+
+
 
 
 ## v0.6.1 (2019-04-28)
@@ -52,3 +60,8 @@
 - fix some installation issues in some corner cases
 - upgrade problems at RPM levels
 - fix some rpm upgrades
+
+
+
+
+
