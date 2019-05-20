@@ -39,7 +39,7 @@ if test "${LAYER_NAME}" = "root"; then
         export UTILITIES="${MODULE_LOWERCASE}_wrapper,${UTILITIES}"
     fi
     if test "${MODULE}" != "MFEXT" -a "${MODULE}" != "MFCOM"; then
-        export UTILITIES="${MODULE_LOWERCASE}.start,${MODULE_LOWERCASE}.stop,${MODULE_LOWERCASE}.status,${UTILITIES}"
+        export UTILITIES="${MODULE_LOWERCASE}.start,${MODULE_LOWERCASE}.stop,${MODULE_LOWERCASE}.status,${MODULE_LOWERCASE}.init,${UTILITIES}"
     fi
 fi
 export PACKAGES=
