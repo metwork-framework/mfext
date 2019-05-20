@@ -241,6 +241,8 @@ Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-t
 Provides: metwork-mfext-scientific = {{FULL_VERSION}}
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
 Requires: libquadmath
+Requires: tcl
+Requires: tk
 {% endif -%}
 %description scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} meta scientific layers
