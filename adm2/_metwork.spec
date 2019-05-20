@@ -186,9 +186,21 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}} = {{FULL_VERSION
 # Do not specify version for layers out of the current module
 Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% endif -%}
+<<<<<<< HEAD
 {% if layer == "scientific" and MODULE_LOWERCASE == "mfext" -%}
 #Add "scientific" system dependencies (specified in meta layer scientific)
 Requires: metwork-mfext-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
+=======
+{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
+#Add "scientific" system dependencies
+Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
+Requires: libquadmath
+{% endif -%}
+{% endif -%}
+{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
+Requires: tcl tk
+>>>>>>> 8241d35... build: add tcl/tk dependencies for scientific_core
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
