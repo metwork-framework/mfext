@@ -2,6 +2,7 @@
 
 
 
+
 ## v0.5.9 (2019-04-24)
 
 ### New Features
@@ -122,7 +123,3 @@
 
 ### Performance Enhancements
 - kill immediatly some watchers during circus shutdown
-
-
-
-
