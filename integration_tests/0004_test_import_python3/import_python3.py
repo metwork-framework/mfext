@@ -20,3 +20,4 @@ import inotify_simple #inotify-simple
 import yaml #PyYAML
 import zmq #pyzmq
 import diskcache
+import tkinter
