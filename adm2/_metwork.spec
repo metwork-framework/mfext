@@ -205,7 +205,7 @@ Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-t
 Requires: libquadmath
 {% endif -%}
 {% endif -%}
-{% if layer == "scientific" and MODULE_LOWERCASE == "mfext" -%}
+{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
 Requires: tcl tk
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
