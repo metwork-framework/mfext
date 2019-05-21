@@ -239,10 +239,10 @@ Requires: metwork-mfext-layer-scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: metwork-mfext-layer-python3_scientific-{{MFEXT_BRANCH}} = {{FULL_VERSION}}
 Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
 Provides: metwork-mfext-scientific = {{FULL_VERSION}}
-{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: libquadmath
 Requires: tcl
 Requires: tk
+{% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
+Requires: libquadmath
 {% endif -%}
 %description scientific-{{MFEXT_BRANCH}}
 metwork {{MODULE_LOWERCASE}} meta scientific layers
