@@ -1,7 +1,8 @@
 # release_0.6 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.6.2 (2019-05-20)
 
 ### New Features
 - add python tkinter support thanks to a change to the buildimage
