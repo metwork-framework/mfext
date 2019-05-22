@@ -1,7 +1,0 @@
-N=$(echo ${EDITOR:-} |grep -c "${MFEXT_HOME}/opt/.*vim" ||:)
-if test "${N}" -gt 0 -o "${EDITOR:-}" = ""; then
-    export EDITOR="${MFEXT_HOME}/opt/python2_devtools/bin/_vim"
-fi
-alias vi="${MFEXT_HOME}/opt/python2_devtools/bin/_vim"
-alias vim="${MFEXT_HOME}/opt/python2_devtools/bin/_vim"
-alias vimdiff="${MFEXT_HOME}/opt/python2_devtools/bin/_vimdiff"

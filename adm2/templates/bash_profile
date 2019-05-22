@@ -43,13 +43,6 @@ if test "${PLUGIN_DIR}" != ""; then
                 "cd" "$@"
             fi
         }
-        function custom_npm() {
-            if ! test -d "$1"; then
-                mkdir -p "$1" >/dev/null 2>&1
-            fi
-            ( cd "$1" && shift && "npm" $@ )
-        }
-        alias npm="custom_npm \"${LK}/local/lib\""
         alias cd=custom_cd
         # shellcheck disable=SC2164
         cd "${LK}"
