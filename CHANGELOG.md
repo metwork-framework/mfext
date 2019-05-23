@@ -29,6 +29,7 @@
 
 
 ### Bug Fixes
+- better vim wrappers (specially in plugin_env)
 - obsoletes removed python layer
 - fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
 - add a patch for openresty about nginx upstreams
