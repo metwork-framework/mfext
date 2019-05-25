@@ -29,6 +29,7 @@
 
 
 ### Bug Fixes
+- close mflog issue11
 - better vim wrappers (specially in plugin_env)
 - obsoletes removed python layer
 - fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
