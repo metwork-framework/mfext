@@ -1,19 +1,14 @@
 #!/bin/bash
 
-function standard_vimdiff() {
-    exec vimdiff "$@"
-}
-
-if test "${METWORK_PYTHON_MODE:-}" = ""; then
-    standard_vimdiff "$@"
+which is_layer_installed >/dev/null 2>&1
+if test $? -eq 1; then
+    # this is a FIX for vim usage at git EDITOR
+    # it seems that git unset PATH and LD_LIBRARY_PATH (security reasons?)
+    # before launching the editor
+    # => so we have to reload all layers
+    exec "${MFEXT_HOME}/bin/mfext_wrapper" "${MFEXT_HOME}/bin/_vimdiff_wrapper.sh" "$@"
     exit $?
-fi
-
-DEVTOOLS_LAYER=python${METWORK_PYTHON_MODE}_devtools@mfext
-IS_DEVTOOLS_LAYER_INSTALLED=$(is_layer_installed "${DEVTOOLS_LAYER}")
-if test "${IS_DEVTOOLS_LAYER_INSTALLED}" = "1"; then
-    exec layer_wrapper --layers="${DEVTOOLS_LAYER}" -- "${MFEXT_HOME}/opt/python3_devtools/bin/vimdiff" -u "${MFEXT_HOME}/opt/devtools/config/vimrc"
 else
-    standard_vimdiff "$@"
+    exec "${MFEXT_HOME}/bin/_vimdiff_wrapper.sh" "$@"
     exit $?
 fi
