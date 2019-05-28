@@ -8,7 +8,7 @@ configparser==3.5.0
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 diskcache==3.1.1
 enum==0.4.6
--e git+https://github.com/metwork-framework/envtpl.git@af3a63409bf64700ca6a08a1f9bcea4a28c66bf6#egg=envtpl
+-e git+https://github.com/metwork-framework/envtpl.git@acd716ae8f79e17afd4a015b547740df6d3f8d09#egg=envtpl
 -e git+https://github.com/metwork-framework/mflog.git@032cdebe84d84dba875b1018b1088ac0b000ad0f#egg=mflog
 structlog==19.1.0
 filelock==3.0.4
