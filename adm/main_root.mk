@@ -135,7 +135,7 @@ rpm: archive
 	mkdir $(MODULE_HOME)/rpm/SOURCES
 	mkdir $(MODULE_HOME)/rpm/tmp
 	echo '%_topdir $(MODULE_HOME)/rpm' >$(MODULE_HOME)/rpm/.rpmmacros
-	if test "$(MODULE)" = "MFEXT" -a "$(MFEXT_ADDON)" != "1"; then cat $(MFEXT_HOME)/share/_metwork.spec |$(SRC_DIR)/layers/layer7_devtools/0000_penvtpl/bin/penvtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; else cat $(MFEXT_HOME)/share/_metwork.spec |envtpl >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec; fi
+	cat $(MFEXT_HOME)/share/_metwork.spec | $(MFEXT_HOME)/bin/envtpl --reduce-multi-blank-lines >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec
 	ln -s $(MODULE_HOME)/$(ARCHIV)-linux64.tar $(MODULE_HOME)/rpm/SOURCES/$(ARCHIV)-linux64.tar
 	cd $(MODULE_HOME)/rpm/SPECS && export HOME=$(MODULE_HOME)/rpm && rpmbuild -bb metwork-$(MODULE_LOWERCASE).spec
 	if test "$(MFEXT_ADDON)" = "1"; then rm -f $$(ls $(MODULE_HOME)/rpm/RPMS/x86_64/*.rpm |grep -v '\-layer\-'); fi
