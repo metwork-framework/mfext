@@ -93,7 +93,7 @@ echo STARTING >${MODULE_RUNTIME_HOME}/var/status
 if test -f ${MODULE_HOME}/config/logrotate.conf; then
     echo -n "- Generating logrotate.conf..."
     echo_running
-    cat ${MODULE_HOME}/config/logrotate.conf |envtpl >${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf
+    cat ${MODULE_HOME}/config/logrotate.conf |envtpl --reduce-multi-blank-lines >${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf
     if test -f ${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf; then
         echo_ok
     else
