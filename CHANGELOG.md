@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- preserve some extra env var in mfxxx_wrapper
 - add libev component
 - restore env after exiting plugin_env
 - add terminaltables component
@@ -29,6 +30,8 @@
 
 
 ### Bug Fixes
+- fix vim/vimdiff wrappers usage with git
+- fix vimdiff wrapper
 - close mflog issue11
 - better vim wrappers (specially in plugin_env)
 - obsoletes removed python layer
