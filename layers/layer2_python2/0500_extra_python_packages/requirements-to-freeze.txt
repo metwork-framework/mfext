@@ -19,3 +19,4 @@ inotify_simple
 enum
 diskcache
 terminaltables
+autopep8
