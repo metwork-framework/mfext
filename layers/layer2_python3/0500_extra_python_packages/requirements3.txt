@@ -1,4 +1,5 @@
 arrow==0.12.1
+autopep8==1.4.4
 bash==0.6
 binaryornot==0.4.4
 cachetools==2.1.0
@@ -12,7 +13,7 @@ diskcache==3.1.1
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git@acd716ae8f79e17afd4a015b547740df6d3f8d09#egg=envtpl
 -e git+https://github.com/metwork-framework/mflog.git@032cdebe84d84dba875b1018b1088ac0b000ad0f#egg=mflog
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@57db070654fee65abb7108e10e81f62e064f2791#egg=cookiecutter_hooks
+-e git+https://github.com/metwork-framework/cookiecutter_hooks.git@a48a549c6e4e1c52f7461e418732db0e646f7678#egg=cookiecutter_hooks
 structlog==19.1.0
 filelock==3.0.4
 future==0.16.0
