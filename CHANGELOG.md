@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
 - use envtpl new option --reduce-multi-blank-lines
 - upgrade envtpl (both in python requirements and under portable_envtpl devtool)
 - preserve some extra env var in mfxxx_wrapper
