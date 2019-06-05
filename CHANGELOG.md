@@ -33,6 +33,8 @@
 
 
 ### Bug Fixes
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
 - fix vim/vimdiff wrappers usage with git
 - fix vimdiff wrapper
 - close mflog issue11
