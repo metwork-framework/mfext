@@ -1,14 +1,13 @@
-diff -up certifi-2018.4.16/certifi/core.py.orig certifi-2018.4.16/certifi/core.py
---- certifi-2018.4.16/certifi/core.py.orig	2018-07-09 14:41:03.129650136 +0200
-+++ certifi-2018.4.16/certifi/core.py	2018-07-09 14:50:44.747805364 +0200
-@@ -8,9 +8,19 @@ certifi.py
+diff -up certifi-2019.3.9/certifi/core.py.orig certifi-2019.3.9/certifi/core.py
+--- certifi-2019.3.9/certifi/core.py.orig	2019-06-11 16:55:03.975264582 +0200
++++ certifi-2019.3.9/certifi/core.py	2019-06-11 17:05:13.816264186 +0200
+@@ -7,9 +7,22 @@ certifi.py
  This module returns the installation location of cacert.pem.
  """
  import os
 +import platform
- import warnings
- 
- 
++
++
 +def is_centos_rhel():
 +    try:
 +        distribution_name = \
@@ -16,12 +15,6 @@ diff -up certifi-2018.4.16/certifi/core.py.orig certifi-2018.4.16/certifi/core.p
 +    except Exception:
 +        return False
 +    return ( ('centos' in distribution_name) or ('redhat' in distribution_name))
-+
-+
- class DeprecatedBundleWarning(DeprecationWarning):
-     """
-     The weak security bundle is being deprecated. Please bother your service
-@@ -19,6 +29,9 @@ class DeprecatedBundleWarning(Deprecatio
  
  
  def where():

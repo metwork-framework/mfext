@@ -23,7 +23,7 @@ if test -x "${MFEXT_HOME:-}/opt/python3/bin/envtpl"; then
             fi
             export METWORK_LAYERS_PATH="${MFEXT_HOME}/opt:${MFEXT_HOME}"
             # FIXME: do not hardcode this
-            export PYTHON3_SHORT_VERSION=3.5
+            export PYTHON3_SHORT_VERSION=3.7
         fi
         ENVTPL="${MFEXT_HOME:-}/opt/python3/bin/envtpl"
         exec "${MFEXT_HOME}/bin/python3" "${ENVTPL}" "$@"

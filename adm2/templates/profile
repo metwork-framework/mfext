@@ -92,7 +92,7 @@ fi
 export MODULE_STATUS
 
 # FIXME: do not hardcode this
-export PYTHON3_SHORT_VERSION=3.5
+export PYTHON3_SHORT_VERSION=3.7
 export PYTHON2_SHORT_VERSION=2.7
 
 # We configure the layers system

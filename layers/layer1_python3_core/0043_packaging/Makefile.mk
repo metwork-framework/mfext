@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=packaging
-export VERSION=16.8
+export VERSION=19.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=02c9a248368c7b9d3236cac349a67825
+export CHECKSUM=96113e08d486bc2c5c7f448195547434
 DESCRIPTION=\
 Core utilities for Python packages
 WEBSITE=https://github.com/pypa/packaging
