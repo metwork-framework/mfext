@@ -124,14 +124,10 @@ Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
 
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: openssl >= 1:1.0.2
-Requires: openssl-libs >= 1:1.0.2
 #Fixme : libgfortran because numpy is installed in layers python2[3]
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
 Requires: libicu
-{% else -%}
-Requires: openssl
 {% endif -%}
 Requires: which
 Requires: /usr/bin/lscpu, /usr/bin/wget
