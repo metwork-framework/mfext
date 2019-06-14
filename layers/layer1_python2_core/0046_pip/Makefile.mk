@@ -1,12 +1,14 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
-#Note : there is a problem when building python2_devtools with version 19.x (https://github.com/pypa/pip/issues/6222)
+#Note : keep version < 10
+#If not, pip try to install build dependencies found in pyproject.toml but some
+#projects have flit as build dependency and flit does not exist in python2
 export NAME=pip
-export VERSION=18.1
+export VERSION=9.0.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=75cad449ad62c88b22de317a26781714
+export CHECKSUM=b15b33f9aad61f88d0f8c866d16c55d8
 DESCRIPTION=\
 The PyPA recommended tool for installing Python packages.
 WEBSITE=https://pip.pypa.io/
