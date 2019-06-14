@@ -1,11 +1,12 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
+#Note : there is a problem when building python2_devtools with version 19.x (https://github.com/pypa/pip/issues/6222)
 export NAME=pip
-export VERSION=9.0.1
+export VERSION=18.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=35f01da33009719497f01a4ba69d63c9
+export CHECKSUM=75cad449ad62c88b22de317a26781714
 DESCRIPTION=\
 The PyPA recommended tool for installing Python packages.
 WEBSITE=https://pip.pypa.io/
