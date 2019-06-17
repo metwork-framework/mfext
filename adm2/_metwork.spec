@@ -197,12 +197,10 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
 #Add "scientific" system dependencies
 Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+Requires: tcl tk
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
 Requires: libquadmath
 {% endif -%}
-{% endif -%}
-{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
-Requires: tcl tk
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}
