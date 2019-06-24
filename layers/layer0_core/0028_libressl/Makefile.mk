@@ -14,3 +14,4 @@ LICENSE=OpenSSL License + Original SSLeay License
 all::$(PREFIX)/lib/libssl.so
 $(PREFIX)/lib/libssl.so:
 	$(MAKE) --file=../../Makefile.standard download uncompress configure build install
+	if [ -f /etc/redhat-release ];then ln -s /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem $(PREFIX)/etc/ssl/certs; fi
