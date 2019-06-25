@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=Python
-export VERSION=2.7.15
-export EXTENSION=tgz
+export VERSION=2.7.16
+export EXTENSION=tar.xz
 export CHECKTYPE=MD5
-export CHECKSUM=045fb3440219a1f6923fefdabde63342
+export CHECKSUM=30157d85a2c0479c09ea2cbe61f2aaf5
 DESCRIPTION=\
 Python is an interpreted, object-oriented, high-level programming language.
 WEBSITE=http://python.org/
@@ -13,7 +13,7 @@ LICENSE=Python
 
 all:: $(PREFIX)/bin/python $(PREFIX)/share/python2_version $(PREFIX)/share/python2_short_version
 $(PREFIX)/bin/python:
-	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-I$(PREFIX)/../core/lib" OPTIONS="--enable-shared --disable-static" download uncompress configure build install
+	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS="--enable-shared" download uncompress configure build install
 
 $(PREFIX)/share/python2_version:
 	if ! test -d $(PREFIX)/share; then mkdir -p $(PREFIX)/share; fi

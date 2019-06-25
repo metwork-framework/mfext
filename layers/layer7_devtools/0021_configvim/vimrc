@@ -1,7 +1,7 @@
 if $METWORK_PYTHON_MODE == "3"
-  let &runtimepath=$MFEXT_HOME."/opt/devtools/config/vim,".$MFEXT_HOME."/opt/python3_devtools/share/vim/vim80"
+  let &runtimepath=$MFEXT_HOME."/opt/devtools/config/vim,".$MFEXT_HOME."/opt/python3_devtools/share/vim/vim81"
 else
-  let &runtimepath=$MFEXT_HOME."/opt/devtools/config/vim,".$MFEXT_HOME."/opt/python2_devtools/share/vim/vim80"
+  let &runtimepath=$MFEXT_HOME."/opt/devtools/config/vim,".$MFEXT_HOME."/opt/python2_devtools/share/vim/vim81"
 endif
 
 " Use Vim settings and not vi ones

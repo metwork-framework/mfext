@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=virtualenv
-export VERSION=15.1.0
+export VERSION=16.6.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=44e19f4134906fe2d75124427dc9b716
+export CHECKSUM=55b8d77a83d0141abaee55542d5941e9
 DESCRIPTION=\
 Virtual Python Environment builder
 WEBSITE=https://virtualenv.pypa.io/
