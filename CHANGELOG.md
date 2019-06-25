@@ -1,6 +1,17 @@
 # release_0.7 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+
+
+
+
 
 ## v0.7.0 (2019-05-29)
 
