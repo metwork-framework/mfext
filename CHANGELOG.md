@@ -11,6 +11,7 @@
 
 
 ### Bug Fixes
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
 - add pycodestyle (missing dependency for autopep8)
 - add pycodestyle (missing dependency for autopep8)
 - fix vim/vimdiff wrappers usage with git
