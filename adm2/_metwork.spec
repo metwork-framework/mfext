@@ -124,14 +124,10 @@ Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
 
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
-Requires: openssl >= 1:1.0.2
-Requires: openssl-libs >= 1:1.0.2
 #Fixme : libgfortran because numpy is installed in layers python2[3]
 #rather than in layers python2[3]_scientific
 Requires: libgfortran
 Requires: libicu
-{% else -%}
-Requires: openssl
 {% endif -%}
 Requires: which
 Requires: /usr/bin/lscpu, /usr/bin/wget
@@ -201,12 +197,10 @@ Requires: metwork-{{module_dep}}-layer-{{layer_dep}}-{{branch}}
 {% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
 #Add "scientific" system dependencies
 Requires: libX11 libXext pango fontconfig freetype libgfortran libgomp libjpeg-turbo atlas libpng
+Requires: tcl tk
 {% if METWORK_BUILD_OS|default('unknown') == "centos7" -%}
 Requires: libquadmath
 {% endif -%}
-{% endif -%}
-{% if layer == "scientific_core" and MODULE_LOWERCASE == "mfext" -%}
-Requires: tcl tk
 {% endif -%}
 {% if layer == "python2" and MODULE_LOWERCASE == "mfserv" -%}
 Provides: metwork-mfserv-python2 = {{FULL_VERSION}}

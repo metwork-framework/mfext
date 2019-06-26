@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=six
-export VERSION=1.11.0
+export VERSION=1.12.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=d12789f9baf7e9fb2524c0c64f1773f8
+export CHECKSUM=9ae5d1feed8c0215f4ae4adcd9207fcb
 DESCRIPTION=\
 Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing \
 over the differences between the Python versions with the goal of writing Python code \

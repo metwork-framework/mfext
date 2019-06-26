@@ -1,26 +1,27 @@
 backports.functools-lru-cache==1.5
 bash==0.6
-cachetools==2.0.1
+cachetools==3.1.1
+certifi==2019.3.9
 chardet==3.0.4
-ConfigArgParse==0.13.0
-configparser==3.5.0
+ConfigArgParse==0.14.0
+configparser==3.7.4
 -e git+https://github.com/thefab/configparser_extended.git@a2b49f4249b9715370b6ab98dadc7bfa5ed022a6#egg=configparser_extended
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 diskcache==3.1.1
-enum==0.4.6
--e git+https://github.com/metwork-framework/envtpl.git@acd716ae8f79e17afd4a015b547740df6d3f8d09#egg=envtpl
--e git+https://github.com/metwork-framework/mflog.git@032cdebe84d84dba875b1018b1088ac0b000ad0f#egg=mflog
-structlog==19.1.0
-filelock==3.0.4
-idna==2.6
-inotify-simple==1.1.7
+enum==0.4.7
+-e git+https://github.com/metwork-framework/envtpl.git@af95d6ca9535ea958dcac3a79a3fd139d9f828ff#egg=envtpl
+filelock==3.0.12
+idna==2.8
+inotify-simple==1.1.8
 Jinja2==2.10.1
-MarkupSafe==1.0
-netifaces==0.10.6
-psutil==5.4.4
-redis==2.10.6
-requests==2.20.0
-requests-toolbelt==0.8.0
+MarkupSafe==1.1.1
+-e git+https://github.com/metwork-framework/mflog.git@cb7b475492898f5325701c31f1075bdb13dcfe4a#egg=mflog
+netifaces==0.10.9
+psutil==5.6.3
+redis==3.2.1
+requests==2.22.0
+requests-toolbelt==0.9.1
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
-urllib3==1.24.2
+structlog==19.1.0
 terminaltables==3.1.0
+urllib3==1.25.3

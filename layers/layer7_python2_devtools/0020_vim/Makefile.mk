@@ -2,15 +2,15 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=vim
-export VERSION=8.0.069
+export VERSION=8.1
 export EXTENSION=tar.bz2
 export CHECKTYPE=MD5
-export CHECKSUM=457543a7754b0d3c1c0aa4d4c3bb4070
+export CHECKSUM=1739a1df312305155285f0cfa6118294
 DESCRIPTION=\
 Vim is a highly configurable text editor for efficiently creating and changing any kind of text.
 WEBSITE=http://www.vim.org
 LICENSE=GPL
-SHORT_VERSION=80
+SHORT_VERSION=81
 
 all:: $(PREFIX)/bin/vim
 $(PREFIX)/bin/vim:

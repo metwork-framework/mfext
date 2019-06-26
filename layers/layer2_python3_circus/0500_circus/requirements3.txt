@@ -1,6 +1,7 @@
 cached-property==1.5.1
-certifi==2018.10.15
--e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@cdaf4362e2a5d038f2def8f2dd60fb2ba34cfd91#egg=circus_autorestart_plugin
+certifi==2019.3.9
 -e git+https://github.com/thefab/circus.git@fdd896e56c85fceeaa62491ad50e01880adf4d6b#egg=circus
-gitignore-parser==0.0.3
+-e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@846a92e40b6808c742e841e58d26ad781450c33a#egg=circus_autorestart_plugin
+gitignore-parser==0.0.4
+pyzmq==16.0.4
 tornado==4.5.2

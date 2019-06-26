@@ -21,8 +21,6 @@ cachetools
 pyinotify
 inotify-simple
 PyYAML
-# pyzmq < 17 for circus (layer python3_circus)
-pyzmq<17
 diskcache
 terminaltables
 autopep8
