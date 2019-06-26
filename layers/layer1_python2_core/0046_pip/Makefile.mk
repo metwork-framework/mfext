@@ -1,11 +1,14 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
+#Note : keep version < 10
+#If not, pip try to install build dependencies found in pyproject.toml but some
+#projects have flit as build dependency and flit does not exist in python2
 export NAME=pip
-export VERSION=9.0.1
+export VERSION=9.0.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=35f01da33009719497f01a4ba69d63c9
+export CHECKSUM=b15b33f9aad61f88d0f8c866d16c55d8
 DESCRIPTION=\
 The PyPA recommended tool for installing Python packages.
 WEBSITE=https://pip.pypa.io/
