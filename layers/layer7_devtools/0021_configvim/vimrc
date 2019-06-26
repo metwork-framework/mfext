@@ -4,6 +4,9 @@ else
   let &runtimepath=$MFEXT_HOME."/opt/devtools/config/vim,".$MFEXT_HOME."/opt/python2_devtools/share/vim/vim81"
 endif
 
+" Disable bracketed past mode when leaving vim
+set t_BE=
+
 " Use Vim settings and not vi ones
 " (must be first)
 set nocompatible
