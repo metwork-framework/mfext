@@ -104,42 +104,50 @@ fi
 # Can be replaced by mfxxx.start.custom
 {% endblock %}
 
-if test -f ${MODULE_HOME}/config/circus.ini; then
-    _circus.start
-fi
+if test "${RES}" = "0"; then
 
-{% block custom %}
-# Can be replaced by mfxxx.start.custom
-{% endblock %}
-
-_make_and_install_crontab.sh
-
-{% if MODULE != "MFADMIN" %}
-if test "${ADMIN_HOSTNAME}" != ""; then
-    if test "${ADMIN_HOSTNAME}" != "null"; then
-{% endif %}
-_circus_wait_watcher_started.sh telegraf || RES=1
-_circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
-{% if MODULE != "MFADMIN" %}
+    if test -f ${MODULE_HOME}/config/circus.ini; then
+        _circus.start
     fi
-fi
-{% endif %}
 
-{% if MODULE != "MFADMIN" %}
-if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
-    if test "${ADMIN_HOSTNAME}" != "null"; then
-        _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
+    {% block custom %}
+    # Can be replaced by mfxxx.start.custom
+    {% endblock %}
+
+    _make_and_install_crontab.sh
+
+    {% if MODULE != "MFADMIN" %}
+    if test "${ADMIN_HOSTNAME}" != ""; then
+        if test "${ADMIN_HOSTNAME}" != "null"; then
+    {% endif %}
+    _circus_wait_watcher_started.sh telegraf || RES=1
+    _circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
+    {% if MODULE != "MFADMIN" %}
+        fi
     fi
+    {% endif %}
+
+    {% if MODULE != "MFADMIN" %}
+    if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
+        if test "${ADMIN_HOSTNAME}" != "null"; then
+            _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
+        fi
+    fi
+    {% endif %}
+
+    echo -n "- Wait 2 sec..."
+    echo_running
+    sleep 2
+    echo_ok
+
+    MODULE_LOWERCASE=`echo ${MODULE} | tr '[:upper:]' '[:lower:]'`
+    ${MODULE_LOWERCASE}.status QUIET
+
+else
+    echo
+    echo_bold "ERROR(S) DETECTED DURING ${MODULE} CHECK"
 fi
-{% endif %}
 
-echo -n "- Wait 2 sec..."
-echo_running
-sleep 2
-echo_ok
-
-MODULE_LOWERCASE=`echo ${MODULE} | tr '[:upper:]' '[:lower:]'`
-${MODULE_LOWERCASE}.status QUIET
 RES=$?
 if test ${RES} -eq 0; then
     echo RUNNING >${MODULE_RUNTIME_HOME}/var/status
