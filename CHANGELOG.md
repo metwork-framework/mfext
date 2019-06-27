@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- give up modules start if precondition failed
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
 - update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
 - use envtpl new option --reduce-multi-blank-lines
 - upgrade envtpl (both in python requirements and under portable_envtpl devtool)
