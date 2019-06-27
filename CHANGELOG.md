@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- give up modules start if precondition failed
 
 
 ### Bug Fixes
