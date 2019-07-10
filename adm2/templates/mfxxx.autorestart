@@ -45,6 +45,12 @@ if test "${1:-}" = "--help"; then
     exit 0
 fi
 
+find "${MODULE_RUNTIME_HOME}/var/block_autorestart" -type f -mmin +10 -delete >/dev/null 2>&1
+if test -f "${MODULE_RUNTIME_HOME}/var/block_autorestart"; then
+    log INFO "found ${MODULE_RUNTIME_HOME}/var/block_autorestart => we do nothing"
+    exit 0
+fi
+
 STOPPED=$(module_stopped)
 if test "${STOPPED}" = "yes"; then
     log INFO "the module {{MODULE_LOWERCASE}} is stopped => we do nothing"
