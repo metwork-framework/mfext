@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=telegraf
-export VERSION=1.10.2-1
+export VERSION=1.11.2-1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=b1481fa22064e6c07107eaeb2ecf07f7
+export CHECKSUM=17b91db6360eee11102ed4f51b930fbf
 export ARCHIVE=telegraf-1.10.2_linux_amd64.tar.gz
 DESCRIPTION=\
 influxdb plugin-driven server agent for collecting and reporting metrics.
