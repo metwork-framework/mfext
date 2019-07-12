@@ -10,7 +10,6 @@ MFEXT documentation
    README
    configure_metwork_repo
    install_a_metwork_package
-   configure_a_metwork_package
    layerapi2
    layer_root
    layer_core
@@ -31,7 +30,6 @@ MFEXT documentation
    layer_rpm
    layer_default
    layer_python
-   todo
    changelogs
 
 Indices and tables

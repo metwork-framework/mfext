@@ -17,7 +17,7 @@ This is the **M**etwork **F**ramework "**EXT**ernal depencies" module. This modu
 
 MFEXT is staged in logical and/or technical *layers*. You may check :doc:`../layerapi2` documentation for more about *layers* concept and technical details.
 
-The available libraries and sets of tools in MFEXT can be found by checking 
+The available libraries and sets of tools in MFEXT can be found by ckecking 
 the documentation about layers or the :ref:`genindex`, or by using the search box.
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
