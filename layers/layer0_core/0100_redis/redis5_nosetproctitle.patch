@@ -1,7 +1,7 @@
-diff -up redis-3.0.6/src/config.h.orig redis-3.0.6/src/config.h
---- redis-3.0.6/src/config.h.orig	2016-01-08 12:31:17.792222206 +0100
-+++ redis-3.0.6/src/config.h	2016-01-08 12:31:53.080061994 +0100
-@@ -109,20 +109,6 @@
+diff -up redis-5.0.5/src/config.h.orig redis-5.0.5/src/config.h
+--- redis-5.0.5/src/config.h.orig	2019-07-12 11:38:15.271920521 +0200
++++ redis-5.0.5/src/config.h	2019-07-12 11:38:40.863920493 +0200
+@@ -116,20 +116,6 @@
  #define rdb_fsync_range(fd,off,size) fsync(fd)
  #endif
  
