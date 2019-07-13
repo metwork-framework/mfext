@@ -133,6 +133,7 @@ the layer is not loaded any more
 - we (recursively) unload all layers which depends on this one
 
 .. index:: layerapi2 syntax
+.. _layerapi2_syntax:
 ### Syntax of `.layerapi2_*` files
 
 #### General
