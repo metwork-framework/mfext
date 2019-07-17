@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
 - telegraf update (1.10.2 => 1.11.2)
 - upgrade redis from 3 to 5
 - give up modules start if precondition failed
