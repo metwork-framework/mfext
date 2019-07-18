@@ -16,6 +16,7 @@
 
 
 ### Bug Fixes
+- plugin_env issue with python2 plugins
 - disable SSE4.2 optimizations to avoid nginx crashing on old servers
 - add pycodestyle (missing dependency for autopep8)
 - add pycodestyle (missing dependency for autopep8)
