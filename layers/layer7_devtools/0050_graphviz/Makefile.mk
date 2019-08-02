@@ -18,5 +18,7 @@ $(PREFIX)/lib/libcgraph.so:
 	$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX)\
 		OPTIONS="--disable-python --disable-guile --disable-java --disable-perl\
 		--disable-lua --disable-tcl --disable-swig --disable-sharp\
-		--disable-ocaml --disable-php --disable-r --disable-ruby -disable-gdk\
-		--disable-gdk --disable-gtk" download uncompress configure build install
+		--disable-ocaml --disable-php --disable-r --disable-ruby --without-gtk\
+		--without-gt --without-gtkgl --without-gdk --without-gdk-pixbuf --without-gtkglext\
+	    --without-glade --without-rsvg --without-pangocairo" download uncompress configure build install
+	rm -f $(PREFIX)/bin/gvedit
