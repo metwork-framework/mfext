@@ -13,8 +13,8 @@ auxiliary tools, libraries, and language bindings.
 WEBSITE=https://graphviz.org
 LICENSE=Common Public License Version 1.0 (https://www.graphviz.org/license/)
 
-all:: $(PREFIX)/lib/libcgraph.soo
-$(PREFIX)/lib/libcgraph.soo:
+all:: $(PREFIX)/lib/libcgraph.so
+$(PREFIX)/lib/libcgraph.so:
 	$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX)\
 		OPTIONS="--disable-python --disable-guile --disable-java --disable-perl\
 		--disable-lua --disable-tcl --disable-swig --disable-sharp\
