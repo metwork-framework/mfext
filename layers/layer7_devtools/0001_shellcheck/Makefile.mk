@@ -16,4 +16,4 @@ $(PREFIX)/bin/shellcheck:
 	$(MAKE) --file=$(SRC_DIR)/layers/Makefile.standard download
 	mkdir -p $(PREFIX)/bin
 	cp -f build/$(NAME)-$(VERSION).$(EXTENSION) $(PREFIX)/bin/shellcheck
-	chmod ug+rx $(PREFIX)/bin/shellcheck
+	chmod a+rx $(PREFIX)/bin/shellcheck

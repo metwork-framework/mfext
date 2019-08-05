@@ -1,0 +1,12 @@
+diff -up dtreetrawl-master20190715/Makefile.orig dtreetrawl-master20190715/Makefile
+--- dtreetrawl-master20190715/Makefile.orig	2019-07-16 09:01:19.584814952 +0200
++++ dtreetrawl-master20190715/Makefile	2019-07-16 09:01:46.842533446 +0200
+@@ -4,7 +4,7 @@ CFLAGS = -g -O3 -I./ \
+ 	 -Wextra \
+ 	 -Wno-unused-parameter \
+ 	 $(shell pkg-config --cflags glib-2.0)
+-LDFLAGS = $(shell pkg-config --libs glib-2.0)
++LDFLAGS = $(shell pkg-config --libs glib-2.0) -Wl,-rpath=$(MFEXT_HOME)/lib
+ 
+ PROG = dtreetrawl
+ HDRS = dtreetrawl.h

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function usage() {
+    echo "usage: module_hash"
+    echo "    => compute a hash for the current module (and dependencies)"
+}
+
+if test "${1}" != ""; then
+    usage
+    exit 1
+fi
+if test "${1}" = "--help"; then
+    usage
+    exit 0
+fi
+
+TMPF=/tmp/module_hash.$$
+rm -f "${TMPF}"
+touch "${TMPF}"
+for T in $(layers --raw |grep "@${MODULE_LOWERCASE}" |sed 's/ /#/g'); do
+    LABEL="$(echo "${T}" |awk -F '#' '{print $1;}')"
+    layer_hash "${LABEL}" >>"${TMPF}"
+done
+cat "${TMPF}" |md5sum |awk '{print $1;}'
+rm -f "${TMPF}"

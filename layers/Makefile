@@ -3,11 +3,11 @@
 include ../adm/root.mk
 include ../adm/subdir_root.mk
 
+
 SUBDIRS=$(shell ls -d layer* |grep -v "\.mk")
 
 all:: layerdir makefiles helpers
 	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) all || exit 1; cd $${OLDPWD}; done
-	chmod -R u+w $(MFEXT_HOME)/opt
 
 clean:: $(MFEXT_HOME)/share/core_layer.mk python2_layer.mk python3_layer.mk
 	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) clean || exit 1; cd $${OLDPWD}; done

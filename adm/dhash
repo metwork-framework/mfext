@@ -1,0 +1,65 @@
+#!/bin/bash
+# shellcheck disable=SC1117
+
+set -o noglob
+
+function usage() {
+    echo "usage: dhash /directory/path [IGNORE_HASH_FILE] [IGNORE_ALL_FILE] [PREFIX]"
+}
+
+function get_abs_dirname() {
+    # shellcheck disable=SC2005
+    echo "$(cd "$1" && pwd)"
+}
+
+if test "${1}" = ""; then
+    usage
+    exit 1
+fi
+if test "${1}" = "--help"; then
+    usage
+    exit 0
+fi
+
+export LC_ALL=C
+TMPF="/tmp/dhash.sed.$$"
+rm -f "${TMPF}"
+touch "${TMPF}"
+ABS=$(get_abs_dirname "${1}")/
+echo "s|^${ABS}\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~\5|" >>"${TMPF}"
+echo "s|^|${4}|" >>"${TMPF}"
+echo 's/^\(.*\)~~~DIR~~~\(.*\)~~~\(.*\)~~~\(.*\)$/\1~~~DIR~~~ignored~~~\3~~~ignored/' >>"${TMPF}"
+for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_hash"); do
+    echo "s|^\(${LINE}\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~ignored|" >>"${TMPF}"
+done
+if test "${2}" != ""; then
+    if test -f "${2}"; then
+        for LINE in $(cat "${2}"); do
+            echo "s|^\(${LINE}\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~ignored|" >>"${TMPF}"
+        done
+    fi
+fi
+for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_all"); do
+    echo "\|^${LINE}~~~.*~~~.*~~~.*~~~.*$|d" >>"${TMPF}"
+done
+if test "${3}" != ""; then
+    if test -f "${3}"; then
+        for LINE in $(cat "${3}"); do
+            echo "\|^${LINE}~~~.*~~~.*~~~.*~~~.*$|d" >>"${TMPF}"
+        done
+    fi
+fi
+
+"${MFEXT_HOME}/bin/dtreetrawl" --help >/dev/null 2>&1
+if test $? -eq 0; then
+    DTREE="${MFEXT_HOME}/bin/dtreetrawl"
+else
+    DTREE="${SRC_DIR}/layers/layer7_devtools/0000_pdtreetrawl/bin/dtreetrawl"
+    ${DTREE} --help >/dev/null 2>&1
+    if test $? -ne 0; then
+        echo "ERROR: can't find a working dtreetrawl"
+        exit 1
+    fi
+fi
+"${DTREE}" --terse --hash "${1}" |grep '^::' |awk -F ':' '{print $3"~~~"$6"~~~"$8"~~~"$11"~~~"$19}' |sed -f "${TMPF}" |sort
+rm -f "${TMPF}"
