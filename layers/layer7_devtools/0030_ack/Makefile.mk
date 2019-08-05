@@ -15,4 +15,4 @@ all:: $(PREFIX)/bin/ack
 $(PREFIX)/bin/ack:
 	$(MAKE) --file=../../Makefile.standard download
 	cd build && cp -f $(NAME)-$(VERSION) $(PREFIX)/bin/ack
-	chmod ug+rx $(PREFIX)/bin/ack
+	chmod a+rx $(PREFIX)/bin/ack

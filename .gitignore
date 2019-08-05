@@ -6,6 +6,7 @@ doc/_build
 doc/utilities.md
 doc/layer_*.md
 /layers/layer*/*_extra_packages/src
+/layers/layer*/cache
 /layers/layer*/*_extra_packages/tempolayer*
 /layers/layer*/*_extra_python_packages/src
 /layers/layer*/*_extra_python_packages/tempolayer*
@@ -32,6 +33,7 @@ layerapi/app.info
 layerapi/is_layer_loaded
 layerapi/is_layer_installed
 layerapi2/test_layerapi2
+layerapi2/get_layer_home
 layers/python2_layer.mk
 layers/python3_layer.mk
 layerapi/_layer_load_python2_bash_cmd
@@ -55,8 +57,10 @@ doc/layerapi2.rst
 doc/*.mdtemp
 doc/.ipynb_checkpoints
 glib2/build
+glib2/cache
 mfutil_c/build
 pcre/build
+pcre/cache
 doc/api
 doc/configure_a_metwork_package.md
 doc/configure_a_metwork_package.rst
@@ -69,3 +73,4 @@ doc/README.rst
 doc/CHANGELOG*.md
 doc/CHANGELOG*.rst
 doc/changelogs.rst
+dtreetrawl/build

@@ -2,7 +2,7 @@
 
 LIBS=liblayerapi2.so
 INCLUDES=layerapi2.h
-_BINS=layers test_layerapi2 layer_load_bash_cmds layer_unload_bash_cmds is_layer_loaded is_layer_installed layer_wrapper
+_BINS=layers test_layerapi2 layer_load_bash_cmds layer_unload_bash_cmds is_layer_loaded is_layer_installed layer_wrapper get_layer_home
 BINS=$(_BINS) bootstrap_layer.sh
 VALGRIND=./valgrind.sh
 ifeq ($(COVERAGE),yes)
@@ -60,6 +60,9 @@ layers: layers.c $(OBJECTS)
 	$(CC) -o $@ $(CFLAGS) $(_INCLUDES) $(_LIBS) $^
 
 is_layer_loaded: is_layer_loaded.c $(OBJECTS)
+	$(CC) -o $@ $(CFLAGS) $(_INCLUDES) $(_LIBS) $^
+
+get_layer_home: get_layer_home.c $(OBJECTS)
 	$(CC) -o $@ $(CFLAGS) $(_INCLUDES) $(_LIBS) $^
 
 is_layer_installed: is_layer_installed.c $(OBJECTS)

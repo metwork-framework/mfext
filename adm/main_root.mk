@@ -40,6 +40,7 @@ adm/root.mk:
 	exit 1
 
 after:: ;
+	_layer_dhash root@$(MODULE_LOWERCASE) >$(MODULE_HOME)/.dhash
 
 mrproper:: clean
 	rm -Rf $(MODULE_HOME)/bin
@@ -107,6 +108,7 @@ $(MODULE_HOME)/$(ARCHIV)-linux64.tar:
 		done; \
 	else \
 		cp -f $(MODULE_HOME)/.layerapi2* $(MODULE_HOME)/$(ARCHIV)/; \
+		cp -f $(MODULE_HOME)/.dhash* $(MODULE_HOME)/$(ARCHIV)/ 2>/dev/null || true; \
 	fi
 	chmod -R go-rwx $(MODULE_HOME)/$(ARCHIV)
 	chmod -R ug+rX $(MODULE_HOME)/$(ARCHIV)
