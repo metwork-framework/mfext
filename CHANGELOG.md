@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- mflog update to support non standard logging levels
 
 
 ### Bug Fixes
