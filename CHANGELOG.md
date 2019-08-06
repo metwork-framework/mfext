@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- update mfutil_c and introduce mfutil_lua
 - mflog update to support non standard logging levels
 - add revert_ldd.sh and external_dependencies.sh utilities
 - nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
