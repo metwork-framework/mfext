@@ -60,9 +60,6 @@ configure_metwork_repo.md: ../.metwork-framework/configure_metwork_repo.md
 install_a_metwork_package.md: ../.metwork-framework/install_a_metwork_package.md
 	cp -f $< $@
 
-README.md: ../.metwork-framework/README.md
-	cp -f $< $@
-
 CHANGELOG-%.md: ../CHANGELOG-%.md
 	cp -f $< $@
 	echo "   $(shell echo "$<" |awk -F '/' '{print $$2;}' |sed 's/\.md$$//g')" >>$(CHANGELOGS_RST_FILE)
