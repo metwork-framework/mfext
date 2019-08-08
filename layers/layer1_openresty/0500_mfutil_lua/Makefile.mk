@@ -11,8 +11,8 @@ MFUTIL_LUA is a lua binding of some parts of mfutil library.
 WEBSITE=https://github.com/metwork-framework/mfutil_lua
 LICENSE=BSD
 
-all:: $(PREFIX)/lualib/resty/mfutil.lua
+all:: $(PREFIX)/lualib/mfutil.lua
 
-$(PREFIX)/lualib/resty/mfutil.lua: Makefile Makefile.mk sources
+$(PREFIX)/lualib/mfutil.lua: Makefile Makefile.mk sources
 	$(MAKE) --file=../../Makefile.standard download uncompress
-	cd build/$(NAME)-$(VERSION) && cp -f mfutil.lua $(PREFIX)/lualib/resty/
+	cd build/$(NAME)-$(VERSION) && cp -f mfutil.lua $(PREFIX)/lualib/
