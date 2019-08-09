@@ -152,7 +152,9 @@ pipeline:
 
   integration_tests_integration:
     <<: *integration_tests_common
+    
     image: centos:${OS_VERSION}
+    
     environment:
       - DEP_BRANCH=integration
     when:
@@ -162,7 +164,9 @@ pipeline:
       branch: [ integration, ci_*, pci_* ]
   integration_tests:
     <<: *integration_tests_common
+    
     image: centos:${OS_VERSION}
+    
     environment:
       - DEP_BRANCH=${DRONE_BRANCH}
     when:
@@ -201,6 +205,15 @@ pipeline:
 
 
 
+  trigger_mfxxxtestimage:
+    image: metwork/drone-downstream-specific-image:latest
+    repositories:
+      - metwork-framework/docker-mfxxx-${OS_VERSION}-testimage@${DRONE_BRANCH}
+    secrets: [ downstream_token, downstream_server ]
+    when:
+      status: [ success ]
+      event: push
+      branch: [ master, integration, experimental*, release_* ]
   trigger_mfcombuildimage:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
