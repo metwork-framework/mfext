@@ -120,7 +120,7 @@ cat <<EOF
 
 EOF
 
-if test -x ${MFCOM_HOME}/bin/echo_bold; then
+if test -x ${MFCOM_HOME}/bin/mfcom_wrapper; then
     echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
     echo "(module: ${MODULE}, version: ${MODULE_VERSION})"
     echo
