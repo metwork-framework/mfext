@@ -1,7 +1,8 @@
 # release_0.7 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.7.2 (2019-08-06)
 
 ### New Features
 - mflog update to support non standard logging levels
