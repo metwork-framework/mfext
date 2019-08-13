@@ -1,0 +1,35 @@
+#!/bin/bash
+
+function echoerr() {
+    echo "$@" 1>&2;
+}
+
+if test "${BUILDCACHE:-}" = ""; then
+    echoerr "skipped"
+    exit 0
+fi
+
+for T in $(layers --raw |grep "@${MODULE_LOWERCASE}" |sed 's/ /#/g'); do
+    LAYER_LABEL=$(echo "${T}" |awk -F '#' '{print $1;}')
+    LAYER_NAME=$(echo "${LAYER_LABEL}" |awk -F '@' '{print $1;}')
+    LAYER_HOME=$(echo "${T}" |awk -F '#' '{print $2;}')
+    if test -d "${LAYER_HOME}"; then
+        echo "- Checking ${LAYER_NAME} in ${LAYER_HOME}..."
+        if test -f "${LAYER_HOME}/.dhash"; then
+            _layer_dhash "${LAYER_LABEL}" >"${LAYER_HOME}/.dhash.current"
+            H1=$(cat "${LAYER_HOME}/.dhash.current" |md5sum |awk '{print $1;}')
+            H2=$(cat "${LAYER_HOME}/.dhash" |md5sum |awk '{print $1;}')
+            if test "${H1}" != "${H2}"; then
+                echoerr "CHANGES IN ${LAYER_HOME} => exit 1"
+                diff "${LAYER_HOME}/.dhash" "${LAYER_HOME}/.dhash.current" >&2
+                echoerr "see diff ${LAYER_HOME}/.dhash ${LAYER_HOME}/.dhash.current output"
+                exit 1
+            else
+                echo "No Change"
+                rm -f "${LAYER_HOME}/.dhash.current"
+            fi
+        else
+            echoerr "No hash for layer ${LAYER_LABEL}"
+        fi
+    fi
+done

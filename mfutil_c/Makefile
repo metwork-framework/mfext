@@ -5,25 +5,25 @@ include ../adm/root.mk
 export PYTHON=/usr/bin/python
 
 NAME=mfutil_c
-VERSION=0.0.2
+VERSION=0.0.4
 EXTENSION=tar.gz
 CHECKTYPE=MD5
-CHECKSUM=156ed26b6c9ad37ee15f8a0585f945f3
+CHECKSUM=85db5852f975f1b3a0ea92dd25a0397d
 DESCRIPTION=\
 very low level C library/utilities
 WEBSITE=https://github.com/metwork-framework/mfutil_c
 LICENSE=BSD
 ARCHIVE_FILE=$(NAME)-$(VERSION).$(EXTENSION)
 
-all: $(MFEXT_HOME)/bin/field_prepend
+all: $(MFEXT_HOME)/bin/_field_prepend
 
 build/$(NAME)-$(VERSION)/Makefile:
 	rm -Rf build ; mkdir build
 	cd build && ../../layers/_download_helper.sh $(ARCHIVE_FILE) ../sources $(CHECKTYPE) $(CHECKSUM)
 	cd build && ../../layers/_uncompress_helper.sh $(ARCHIVE_FILE) $(EXTENSION)
 
-$(MFEXT_HOME)/bin/field_prepend: build/$(NAME)-$(VERSION)/Makefile
-	cd build/$(NAME)-$(VERSION) && make PREFIX=$(MFEXT_HOME)
+$(MFEXT_HOME)/bin/_field_prepend: build/$(NAME)-$(VERSION)/Makefile
+	cd build/$(NAME)-$(VERSION) && make PREFIX=$(MFEXT_HOME) FORCE_RPATH=$(MFEXT_HOME)/lib
 	cd build/$(NAME)-$(VERSION) && make PREFIX=$(MFEXT_HOME) install
 
 $(MFEXT_HOME)/share/metwork_packages/%.yaml:

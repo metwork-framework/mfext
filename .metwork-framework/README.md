@@ -1,95 +1,93 @@
 ## What is MFEXT ?
 
-This is the **M**etwork **F**ramework "**EXT**ernal depencies" module. This module does not contain any services, it is just a bunch of files and directories.
+This is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. This module does not contain any services, it is just a bunch of files and directories.
 
-MFEXT is staged in logical and/or technical *layers*. You may check :doc:`../layerapi2` documentation for more about *layers* concept and technical details.
+Usually **MFEXT** is just a dependency of other MetWork Framework **modules** (like [mfserv](https://github.com/metwork-framework/mfserv) or [mfdata](https://github.com/metwork-framework.org/mfdata)) but it can also be used alone like you can see on the short (< 30s) following screencast:
 
-The available libraries and sets of tools in MFEXT can be found by checking 
-the documentation about layers or the :ref:`genindex`, or by using the search box.
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-    <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
-</div>
+[![asciicast](https://asciinema.org/a/uNsG6AaPkMeZ3Lb8NsW4vMkYa.png)](https://asciinema.org/a/uNsG6AaPkMeZ3Lb8NsW4vMkYa)
 
-_ _ _
+### Concepts
 
-Some libraries and sets of tools are not included in MFEXT but provided as **MFEXT add-ons**. They have to be installed appart. Available MFEXT add-ons can be found [here](https://github.com/metwork-framework?utf8=%E2%9C%93&q=mfext-addon&type=&language=).
+#### Layers
 
-## Usage
+**MFEXT** is staged in logical and/or technical **layers**. Some of them are optional,
+you can choose not to install them (for example, layers about Python2). Each layer contains
+one or several **packages**.
 
-### General
+For example, here are some **layers** hosted on this repository:
 
-After installation, there is no service to initialize or to start.
+- `python3_core` which contains several core **packages** for Python3: `python3`, `pip`, `virtualenv`...
+- `python3` which contains several additional **packages** for Python3: `requests`, `psutil`, `filelock`...
+- `openresty` which contains: `openresty`, `lua_restry_http`, `lua_resty_cookie`... **packages**
+- `nodejs` which contains only one package: `nodejs`
+- [...]
 
-All the files are located in `/opt/metwork-mfext-{BRANCH}` directory with probably
-a `/opt/metwork-mfext => /opt/metwork-mfext-{BRANCH}` symbolic link (depending
-on what you have installed).
+#### Packages
 
-Because `/opt` is not used by default on [standard Linux](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard), the installation shouldn't break anything.
+Most of theses **packages** are not
+maintained by the MetWork Framework team. For example, you will find inside a recent [Python](http://www.python.org) interpreter or some well known libraries like [CURL](https://curl.haxx.se/) or [GLIB2](https://developer.gnome.org/glib/).
 
-Therefore, if you do nothing specific after the installation, you won't benefit
-from any included software packages !
+#### Add-ons
 
-So, to use this module, you have to load a kind of "metwork environment". There are several ways to do that.
+This repository holds a lot of **layers** but you will also find extra **layers** in **MFEXT addons**
+repositories. Let's mention in particular [mfextaddon_scientific](https://github.com/metwork-framework/mfextaddon_scientific) which provides some **layers** with a lot of geospatial and
+scientific tools.
 
-In the following, we use `{MFEXT_HOME}` as the installation directory of the `mfext` module. It's probably something like `/opt/metwork-mfext-{BRANCH}` or `/opt/metwork-mfext`. Have a look in `/opt` directory.
+An add-on to **MFEXT** can be maintained by anyone and can be hosted anywhere. But below, you
+will find officially maintained **MFEXT addons**:
 
-### Usage (for one command only)
+| Add-on | Description |
+| --- | --- |
+| [mfextaddon_scientific](https://github.com/metwork-framework/mfextaddon_scientific) | mfext Add-on for scientific libraries and tools |
+| [mfextaddon_python3_ia](https://github.com/metwork-framework/mfextaddon_python3_ia) | mfext Add-on for deep learning/IA libraries and tools for Python3 |
+| [mfextaddon_mapserver](https://github.com/metwork-framework/mfextaddon_mapserver) | mfext Add-on which provides [Mapserver software](https://mapserver.org) and libraries around ([mapserverapi](https://github.com/metwork-framework/mapserverapi)) and [mapserverapi_python](https://github.com/metwork-framework/mapserverapi_python))
 
-If you want to load the "mfext environment" for one command only and return back to a standard running environment after that, you can use the specific wrapper:
+An add-on can contain one or several extra **layers**.
 
+## Quickstart
+
+### Installation
+
+**On a Linux CentOS 7 box**
+
+```bash
+
+# AS ROOT USER
+
+# First, we configure the Metwork Framework repository for stable release on CentOS 7
+cat >/etc/yum.repos.d/metwork.repo <<EOF
+[metwork_stable]
+name=MetWork Stable
+baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/stable/centos7/
+gpgcheck=0
+enabled=1
+metadata_expire=0
+EOF
+
+# Then we install a minimal version of mfext module
+yum -y install metwork-mfext-minimal
+
+# Done :-)
+
+# Then let's install (for the example only) an extra layer
+# (to add Python2 support)
+yum -y install metwork-mfext-layer-python2
 ```
-##### Shell session example #####
 
-# where is the system python command ?
-$ which python
-/usr/bin/python
-# => this is the standard/system python command (in /usr/bin)
+### Usage
 
-# what is the version of the system python command ?
+```console
+
+$ # AS ANY USER (can be root or a non priviligied one)
+
+$ # Test your python version (old system one)
 $ python --version
-Python 2.6.6
-# => this is a very old python version
+Python 2.7.5
 
-# execute python through the wrapper
-# (please replace {MFEXT_HOME} by the real mfext home !)
-$ {MFEXT_HOME}/bin/mfext_wrapper which python
-/opt/metwork[...]/bin/python
-# => this is the metwork python command included in this module
-
-# what is the version of the mfext python command ?
-$ {MFEXT_HOME}/bin/mfext_wrapper python --version
-Python 3.5.3
-# => this is a recent python version
-```
-
-### Usage (for the whole shell session)
-
-If you are tired to use `mfext_wrapper` repeatedly, you can load the "mfext environment"
-for the whole shell session.
-
-Note: at this moment, it doesn't seem to play very well with `zsh` (see #62)
-
-
-```
-##### Shell session example #####
-
-# where is the system python command ?
-$ which python
-/usr/bin/python
-# => this is the standard/system python command (in /usr/bin)
-
-# what is the version of the system python command ?
-$ python --version
-Python 2.6.6
-# => this is a very old python version
-
-# load the mfext environment for the whole shell session
-$ source {MFEXT_HOME}/share/interative_profile
+$ # We load the mfext (interactive) profile for the current session
+$ # (note: there is also a regular profile (without banner and custom bash prompt)
+$ # for non-interactive stuff)
+$ . /opt/metwork-mfext/share/interactive_profile
            __  __      ___          __        _
           |  \/  |    | \ \        / /       | |
           | \  / | ___| |\ \  /\  / /__  _ __| | __
@@ -97,28 +95,89 @@ $ source {MFEXT_HOME}/share/interative_profile
           | |  | |  __/ |_ \  /\  / (_) | |  |   <
           |_|  |_|\___|\__| \/  \/ \___/|_|  |_|\_\
 
+ 11:24:50 up 61 days, 57 min,  1 user,  load average: 1.26, 1.77, 2.13
 
- 17:01:04 up 19 days,  5:22,  1 user,  load average: 0.75, 0.71, 0.45
-
-# => the interactive environment is loaded
-
-# where is the default python command
-$ which python
-/opt/metwork[...]/bin/python
-# => this is the metwork python command included in this module
-
-# what is the version of the default python command ?
+$ # Test your python version (recent Python3 version)
 $ python --version
-Python 3.5.3
-# => this is a recent python version
+Python 3.5.6
+
+$ # See installed layers (currently loaded layers are prefixed by (*))
+$ layers
+- (*) python3@mfext [/opt/metwork-mfext-0.7/opt/python3]
+- (*) python3_core@mfext [/opt/metwork-mfext-0.7/opt/python3_core]
+- (*) default@mfext [/opt/metwork-mfext-0.7/opt/default]
+- (*) core@mfext [/opt/metwork-mfext-0.7/opt/core]
+- python2_core@mfext [/opt/metwork-mfext-0.7/opt/python2_core]
+- python2@mfext [/opt/metwork-mfext-0.7/opt/python2]
+- (*) root@mfext [/opt/metwork-mfext-0.7]
+
+$ # Let's load the python2 extra layer
+$ layer_load python2@mfext
+
+$ layers # note: currently loaded layers are prefixed by (*)
+- python3@mfext [/opt/metwork-mfext-0.7/opt/python3]
+- python3_core@mfext [/opt/metwork-mfext-0.7/opt/python3_core]
+- default@mfext [/opt/metwork-mfext-0.7/opt/default]
+- (*) core@mfext [/opt/metwork-mfext-0.7/opt/core]
+- (*) python2_core@mfext [/opt/metwork-mfext-0.7/opt/python2_core]
+- (*) python2@mfext [/opt/metwork-mfext-0.7/opt/python2]
+- (*) root@mfext [/opt/metwork-mfext-0.7]
+
+$ python --version (latest Python 2.7 version, this is not the system version)
+Python 2.7.15
 ```
 
-Note: if you want to do that but in a non-interactive shell, you should use
-`source {MFEXT_HOME}/share/profile` instead.
+## More details
 
-### Usage (automatically for one user)
+After installation, there is no service to initialize or to start.
 
-If you want to have a system user with "always loaded" metwork environment, you can add:
+All the files are located in `/opt/metwork-mfext-{BRANCH}` directory with probably
+a `/opt/metwork-mfext => /opt/metwork-mfext-{BRANCH}` symbolic link (in very particular
+and advanced use cases, you can choose not to install the symbolic link).
+
+Because `/opt` is not used by default on [standard Linux](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard), **the installation shouldn't break anything.**
+
+Therefore, if you do nothing specific after the installation, you won't benefit
+from any included software packages!
+
+So, to use this module, you have to load a kind of "mfext environment". There are several ways to do that.
+
+In the following, we use `{MFEXT_HOME}` as the installation directory of the `mfext` module. It's probably something like `/opt/metwork-mfext-{BRANCH}` or `/opt/metwork-mfext`. Have a look in `/opt` directory.
+
+### Load the mfext environment (for one command only)
+
+If you want to load the "mfext environment" for one command only and return back to a standard running environment after that, you can use the specific wrapper:
+
+```console
+$ # what is the version of the python command ?
+$ python --version
+Python 2.6.6
+$ # => this is a very old python version
+
+$ # what is the version of the python command (with mfext environment loaded) ?
+$ {MFEXT_HOME}/bin/mfext_wrapper python --version
+Python 3.5.3
+$ # => this is a recent python version
+
+$ # what is the version of the python command ?
+$ python --version
+Python 2.6.6
+$ # => We are back to our original system python command
+```
+
+### Load the mfext environment (for the whole shell session)
+
+If you are tired to use `mfext_wrapper` repeatedly, you can load the "mfext environment"
+for the whole shell session with:
+
+- `. {MFEXT_HOME}/share/interative_profile`
+- (or) `. {MFEXT_HOME}/share/profile` (for non interactive stuff)
+
+See "Quickstart" section below for a complete example.
+
+### Load the mfext environment (automatically for one user)
+
+If you want to have a unix user with "always loaded" metwork environment, you can add:
 
 ```
 source {MFEXT_HOME}/share/interactive_profile
@@ -126,7 +185,7 @@ source {MFEXT_HOME}/share/interactive_profile
 
 in (for example) in the user `.bash_profile` file.
 
-Note: we do not recommend to use this for a user with a full graphical interface because of possible side effects with desktop environment.
+**Note: we do not recommend to use this for a user with a full graphical interface because of possible side effects with desktop environment.**
 
 An alternative way is to add
 
@@ -135,3 +194,32 @@ alias mfext="source {MFEXT_HOME}/share/interactive_profile"
 ```
 
 in `.bash_profile` file and use this `mfext` alias when you want to quickly load the "mfext environment".
+
+### Unloading the mfext environment
+
+If you want to "unload" the "mfext environment" to launch an external command which doesn't play well with metwork libraries
+or tools (because of version conflicts for example), you can use the `outside` command wrapper.
+
+```console
+
+$ # . {MFEXT_HOME}/share/interactive_profile
+[...]
+
+$ python --version
+Python 3.5.6
+$ # => the mfext environment is loaded
+
+$ outside python --version
+Python 2.7.5
+$ # => we lauched the python command outside the mfext environment
+$ #    (so we got the system version)
+
+$ python --version
+Python 3.5.6
+$ # => the mfext environment is still loaded
+```
+
+## Reference documentations
+
+- (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
+- (for **release_0.7** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.7/mfext/) for reference documentation.

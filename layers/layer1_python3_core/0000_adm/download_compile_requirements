@@ -60,8 +60,13 @@ else
     BINARY="--no-binary :all:"
 fi
 
+if test "${METWORK_PYTHON_MODE:-}" = "3"; then
+    BUILD_ISOLATION="--no-build-isolation"
+else
+    BUILD_ISOLATION=""
+fi
 # shellcheck disable=SC2086
-unsafe_pip wheel --wheel-dir=./src --src=./tmp_src ${BINARY} -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
+unsafe_pip wheel ${BUILD_ISOLATION} --wheel-dir=./src --src=./tmp_src ${BINARY} -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
 rm -Rf tmp_src
 
 rm -Rf "${TEMPO_LAYER_PATH}"

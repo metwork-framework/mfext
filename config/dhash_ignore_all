@@ -1,0 +1,17 @@
+.*\.git
+.*\.pyc
+\.dhash.*
+config/version
+config/dhash_ignore_all
+config/dhash_ignore_hash
+\.dhash_ignore_all
+\.dhash_ignore_hash
+.*/cache/.*
+.*/build/.*
+.*/cache
+.*/build
+cache/.*
+build/.*
+cache
+build
+.*\.plugin

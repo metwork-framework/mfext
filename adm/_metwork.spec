@@ -29,7 +29,7 @@
 {% set _TARGET_LINK_COMMAND = "readlink -m " + _TARGET_LINK -%}
 {% set TARGET_LINK = _TARGET_LINK_COMMAND|shell -%}
 
-{% set liste = 'cd $MODULE_HOME; ls -da bin config lib include share .layerapi2* 2>/dev/null'|shell -%}
+{% set liste = 'cd $MODULE_HOME; ls -da bin config lib include share .layerapi2* .dhash* 2>/dev/null'|shell -%}
 {% set root_list = liste.split('\n')[:-1] -%}
 {% if MFEXT_ADDON == "1" %}
 {% set liste2 = 'if test -d $MODULE_HOME/opt; then cd $MODULE_HOME/opt; for REP in *; do if test -f "${REP}/.mfextaddon"; then addon_name=`cat ${REP}/.mfextaddon`; if test ${addon_name} == ${MFEXT_ADDON_NAME}; then echo ${REP}; fi; fi; done; fi'|shell -%}
@@ -268,6 +268,7 @@ mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
 {% endif -%}
 mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/* %{buildroot}{{MODULE_HOME}}/
 mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.dhash* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" -%}
 ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc

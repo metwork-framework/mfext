@@ -1,0 +1,48 @@
+#!/bin/bash
+
+function usage() {
+    echo "usage: _layer_dhash LAYER_LABEL"
+}
+
+if test "${1}" = ""; then
+    usage
+    exit 1
+fi
+if test "${1}" = "--help"; then
+    usage
+    exit 0
+fi
+LAYER_LABEL="${1}"
+LAYER_HOME=$(get_layer_home "${LAYER_LABEL}" 2>/dev/null)
+LAYER_NAME=$(echo "${LAYER_LABEL}" |awk -F '@' '{print $1;}')
+export LC_ALL=C
+if test "${LAYER_HOME}" = ""; then
+    if test "${LAYER_LABEL}" = "root@mfext"; then
+        # get_layer_home is not installed for the moment
+        LAYER_HOME=${MFEXT_HOME}
+    else
+        echo "ERROR: can't find layer home for label: ${LAYER_LABEL}"
+        exit 1
+    fi
+fi
+
+if test "${LAYER_NAME}" = "root"; then
+    # we don't want opt subdir for root layers
+    TMPF=/tmp/__layer_dhash.$$
+    rm -f "${TMPF}"
+    touch "${TMPF}"
+    # shellcheck disable=SC2045
+    for I in $(ls "${LAYER_HOME}"); do
+        if test "${I}" = "opt"; then
+            continue
+        fi
+        if ! test -d "${LAYER_HOME}/${I}"; then
+            continue
+        fi
+        dhash "${LAYER_HOME}/${I}" "${LAYER_HOME}/.dhash_ignore_hash" "${LAYER_HOME}/.dhash_ignore_all" "${I}/" >>"${TMPF}"
+    done
+    cat "${TMPF}" |sort
+    rm -f "${TMPF}"
+else
+    dhash "${LAYER_HOME}" "${LAYER_HOME}/.dhash_ignore_hash" "${LAYER_HOME}/.dhash_ignore_all"
+fi

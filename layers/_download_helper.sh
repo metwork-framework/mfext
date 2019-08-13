@@ -27,6 +27,16 @@ if ! test -d "${DIR}"; then
     mkdir -p "${DIR}"
 fi
 
+CACHEF=""
+if test "${BUILDCACHE:-}" != ""; then
+    if test -d "${BUILDCACHE}"; then
+        CACHEF="${BUILDCACHE}/download_${MODULE_LOWERCASE}_$(cat "${SOURCES_FILE}" |md5sum |awk '{print $1;}')"
+        if test -f "${CACHEF}"; then
+            cp -f "${CACHEF}" "${ARCHIVE_FILE}"
+        fi
+    fi
+fi
+
 "${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
 N=$?
 if test ${N} -eq 0; then
@@ -52,6 +62,10 @@ if test ${SUCCESS} -eq 0; then
     echo "ERROR: can't download a valid archive for source file ${SOURCES_FILE} (checksum: ${CHECKSUM_TYPE}/${CHECKSUM_VALUE})"
     rm -f "${ARCHIVE_FILE}"
     exit 1
+fi
+
+if test "${CACHEF}" != ""; then
+    cp -f "${ARCHIVE_FILE}" "${CACHEF}"
 fi
 
 exit 0
