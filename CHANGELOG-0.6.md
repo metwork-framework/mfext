@@ -2,6 +2,18 @@
 
 
 
+## v0.6.3 (2019-05-25)
+
+### New Features
+
+
+### Bug Fixes
+- close mflog issue11
+
+
+
+
+
 ## v0.6.2 (2019-05-20)
 
 ### New Features
