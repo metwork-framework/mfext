@@ -12,6 +12,7 @@ all::
 	cd adm && $(MAKE) before_layers
 	cd config && $(MAKE)
 	cd layers && $(MAKE) helpers
+	cd libffi && $(MAKE)
 	cd pcre && $(MAKE)
 	cd glib2 && $(MAKE)
 	cd dtreetrawl && $(MAKE)
@@ -31,6 +32,7 @@ clean::
 	cd glib2 && $(MAKE) clean
 	cd dtreetrawl && $(MAKE) clean
 	cd pcre && $(MAKE) clean
+	cd libffi && $(MAKE) clean
 	cd mfutil_c && $(MAKE) clean
 	cd layers && $(MAKE) clean
 
