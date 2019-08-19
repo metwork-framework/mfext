@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function standard_vim() {
-    which vim >/dev/null 2>&1
-    if test $? -eq 0; then
-        exec vi "$@"
-    else
+    command vim >/dev/null 2>&1
+    if test $? -eq 0; then    
         exec vim "$@"
+    else
+        exec vi "$@"
     fi
 }
 
