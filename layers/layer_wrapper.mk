@@ -8,7 +8,7 @@ export FORCED_PATHS := yes
 _PWD=$(PWD)
 _PARENT_PWD=$(shell dirname $(_PWD))
 
-LAYERS_TO_LOAD=$(shell cat $(_PARENT_PWD)/.layerapi2_dependencies |xargs |sed 's/ /,/g')
+LAYERS_TO_LOAD=$(shell cat $(_PARENT_PWD)/.layerapi2_dependencies $(_PARENT_PWD)/.build_extra_dependencies 2>/dev/null |grep '^[a-zA-Z0-9]' |xargs |sed 's/ /,/g')
 CURRENT_LAYER=$(shell cat $(_PARENT_PWD)/.layerapi2_label)
 
 .DEFAULT_GOAL := all
