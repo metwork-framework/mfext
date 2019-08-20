@@ -48,7 +48,7 @@ only line.
 .. index:: layer path
 ### A layers path
 
-The environment variable `METWORK_LAYERS_PATH` contains a ":" separated list
+The environment variable `LAYERAPI2_LAYERS_PATH` contains a ":" separated list
 of directories full paths.
 
 When we search a given layer, we iterate the list from the beginning and for each
@@ -69,7 +69,7 @@ Consider the following example:
     /path3/layers/layer3/.layerapi2_label (containing "layer3label")
 ```
 
-If the value of `METWORK_LAYERS_PATH` is `/path1/layer1:/path2/layers:/path3`:
+If the value of `LAYERAPI2_LAYERS_PATH` is `/path1/layer1:/path2/layers:/path3`:
 
 - we will find (by its label) the layer "layer1label" because it's directly pointed
 by the `/path1/layer1` value
@@ -79,10 +79,10 @@ is an immediate subdirectory of the `/path2/layers` value
 
 Notes:
 
-- relative paths in `METWORK_LAYERS_PATH` are ignored
+- relative paths in `LAYERAPI2_LAYERS_PATH` are ignored
 - if there are several layer homes for a given label (ie. multiple directories with the same value for `.layerapi2_label` file),
 the first occurrence is returned when searching by label
-(so the order of entries in METWORK_LAYERS_PATH can be important).
+(so the order of entries in LAYERAPI2_LAYERS_PATH can be important).
 
 .. index:: layer installation, layer loading, layer unloading,
 ### Installation / Loading / Unloading
@@ -117,7 +117,7 @@ Following modifications are done to the current environment:
 - we prepend to `PYTHONPATH`: `{LAYER_HOME}/local/lib/python{PYTHON3_SHORT_VERSION}/site-packages` and `{LAYER_HOME}/lib/python{PYTHON3_SHORT_VERSION}/site-packages` (if corresponding directories exist)
 - we add extra environment variables listed by `{LAYER_HOME}/.layerapi2_extra_env` (if the file exists)
 - we load/source the bash file `{LAYER_HOME}/.layerapi2_interactive_profile` file for interactive usage only (if the file exists)
-- we set a special environment variable `METWORK_LAYER_{HASH}_LOADED` to memorize that the layer is loaded (`HASH` is a hash of the full layer home).
+- we set a special environment variable `LAYERAPI2_LAYER_{HASH}_LOADED` to memorize that the layer is loaded (`HASH` is a hash of the full layer home).
 
 ### What is done during layer unloading ?
 
@@ -127,7 +127,7 @@ When you unload a layer, following actions are done (in this particular order):
 which starts with `{LAYER_HOME}/`
 - we load/source the bash file `{LAYER_HOME}/.layerapi2_interactive_unprofile` file for
 interactive usage only (if the file exists)
-- we unset the special environment variable `METWORK_LAYER_{HASH}_LOADED` to memorize that
+- we unset the special environment variable `LAYERAPI2_LAYER_{HASH}_LOADED` to memorize that
 the layer is not loaded any more
 - we remove extra environment variables listed in `{LAYER_HOME}/.layerapi2_extra_env` (if the file exist)
 - we (recursively) unload all layers which depends on this one
@@ -234,7 +234,7 @@ The `layers` utility list installed layers. You can also filter the output to ge
 - only loaded layers
 - only not loaded (but installed) layers
 
-If you don't see your layer in `layers` output, check your `METWORK_LAYERS_PATH` environment
+If you don't see your layer in `layers` output, check your `LAYERAPI2_LAYERS_PATH` environment
 variable and if there is a `.layerapi_label` in your layer home.
 
 Full documentation:

@@ -1,0 +1,4 @@
+# not loaded dependencies but packaged by default
+# in the minimal package
+rpm@mfext
+python3_circus@mfext
