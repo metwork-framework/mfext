@@ -13,9 +13,6 @@ endif
 ifeq ($(MODULE_HAS_HOME_DIR),)
     export MODULE_HAS_HOME_DIR=0
 endif
-ifeq ($(EPOCH),)
-    export EPOCH=8
-endif
 ARCHIV=$(MODULE_LOWERCASE)-$(VERSION_BUILD)-$(RELEASE_BUILD)
 
 LAYERAPI2_FILES := $(wildcard .layerapi2_label) $(wildcard .layerapi2_dependencies) $(wildcard .layerapi2_conflicts)
@@ -138,6 +135,7 @@ rpm: archive
 	mkdir $(MODULE_HOME)/rpm/tmp
 	echo '%_topdir $(MODULE_HOME)/rpm' >$(MODULE_HOME)/rpm/.rpmmacros
 	cat $(MFEXT_HOME)/share/_metwork.spec | $(MFEXT_HOME)/bin/envtpl --reduce-multi-blank-lines >$(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec
+	echo $(MODULE_HOME)/rpm/SPECS/metwork-$(MODULE_LOWERCASE).spec
 	ln -s $(MODULE_HOME)/$(ARCHIV)-linux64.tar $(MODULE_HOME)/rpm/SOURCES/$(ARCHIV)-linux64.tar
 	cd $(MODULE_HOME)/rpm/SPECS && export HOME=$(MODULE_HOME)/rpm && rpmbuild -bb metwork-$(MODULE_LOWERCASE).spec
 	if test "$(MFEXT_ADDON)" = "1"; then rm -f $$(ls $(MODULE_HOME)/rpm/RPMS/x86_64/*.rpm |grep -v '\-layer\-'); fi

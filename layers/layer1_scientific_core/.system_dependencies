@@ -1,0 +1,15 @@
+libgfortran@centos7
+libicu@centos7
+libX11@centos6,centos7
+libXext@centos6,centos7
+pango@centos6,centos7
+fontconfig@centos6,centos7
+freetype@centos6,centos7
+libgfortran@centos6,centos7
+libgomp@centos6,centos7
+libjpeg-turbo@centos6,centos7
+atlas@centos6,centos7
+libpng@centos6,centos7
+tcl@centos6,centos7
+tk@centos6,centos7
+libquadmath@centos7

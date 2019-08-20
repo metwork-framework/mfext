@@ -38,7 +38,6 @@ clean::
 
 test::
 	cd adm && $(MAKE) test
-	cd layerapi2 && $(MAKE) check && $(MAKE) leak
 
 sloccount: clean
 	rm -Rf /tmp/metwork_count
