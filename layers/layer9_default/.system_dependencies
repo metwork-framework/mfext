@@ -1,0 +1,4 @@
+which@centos6,centos7
+wget@centos6,centos7
+util-linux-ng@centos6
+util-linux@centos7
