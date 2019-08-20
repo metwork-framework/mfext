@@ -97,6 +97,7 @@ AutoReq: no
 AutoProv: no
 Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Provides: metwork-{{MODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
 {% if MODULE_LOWERCASE == "mfext" %}
 %description
 This package provides the {{TARGET_LINK}} symbolic link
@@ -133,6 +134,7 @@ Obsoletes: metwork-mfext-devtools
 {% endif %}
 # </to be removed someday>
 Provides: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} < {{FULL_VERSION}}
 {% for DEP in dependencies %}
     {% if DEP.type == "metwork" %}
         {# metwork layer dependencies #}
@@ -140,6 +142,7 @@ Provides: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSIO
             {# Because this dependency will be embedded in this package #}
             {{ minimal_layers.append(DEP.label)|replace('None', '') }}
 Provides: {{DEP.rpm}} = {{FULL_VERSION}}
+Obsoletes: {{DEP.rpm}} < {{FULL_VERSION}}
         {% else %}
             {# Because this is a dependency on another module #}
 Requires: {{DEP.rpm}}
@@ -196,6 +199,9 @@ Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 Provides: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}} = {{FULL_VERSION}}
+Provides: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}} < {{FULL_VERSION}}
+Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} < {{FULL_VERSION}}
 {% if MFEXT_ADDON == "0" %}
 Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% else %}
