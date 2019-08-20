@@ -75,11 +75,11 @@ layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MOD
 
 echo
 echo
-echo "***** METWORK_LAYERS_PATH *****"
+echo "***** LAYERAPI2_LAYERS_PATH *****"
 echo
 echo -n "- "
 # shellcheck disable=SC2001
-echo "${METWORK_LAYERS_PATH}" |sed 's/:/\n- /g'
+echo "${LAYERAPI2_LAYERS_PATH}" |sed 's/:/\n- /g'
 
 echo
 echo

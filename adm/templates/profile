@@ -96,22 +96,22 @@ export PYTHON3_SHORT_VERSION=3.7
 export PYTHON2_SHORT_VERSION=2.7
 
 # We configure the layers system
-field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}
-field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}/opt
+field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}
+field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt
 {% if MODULE != "MFEXT" %}
-    field_prepend METWORK_LAYERS_PATH {{MFCOM_HOME}}
-    field_prepend METWORK_LAYERS_PATH {{MFCOM_HOME}}/opt
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFCOM_HOME}}
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFCOM_HOME}}/opt
     {% if MODULE != "MFCOM" %}
-        field_prepend METWORK_LAYERS_PATH {{MODULE_HOME}}
-        field_prepend METWORK_LAYERS_PATH {{MODULE_HOME}}/opt
+        field_prepend LAYERAPI2_LAYERS_PATH {{MODULE_HOME}}
+        field_prepend LAYERAPI2_LAYERS_PATH {{MODULE_HOME}}/opt
         {% if MODULE == "MFSERV" or MODULE == "MFDATA" or MODULE == "MFBASE" %}
             if test "${MODULE_RUNTIME_HOME:-}" != ""; then
-                field_prepend METWORK_LAYERS_PATH ${MODULE_RUNTIME_HOME}/var/plugins
+                field_prepend LAYERAPI2_LAYERS_PATH ${MODULE_RUNTIME_HOME}/var/plugins
             fi
         {% endif %}
     {% endif %}
 {% endif %}
-export METWORK_LAYERS_PATH
+export LAYERAPI2_LAYERS_PATH
 
 # We load the default layer (if installed)
 N=$({{MFEXT_HOME}}/bin/is_layer_installed default@${MODULE_LOWERCASE} 2>/dev/null)
