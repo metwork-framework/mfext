@@ -121,6 +121,15 @@ function layer_load()
     rm -f "${LAYER_LOAD_TMP}"
 }
 
+function layer_load_without_optional()
+{
+    local LAYER_LOAD_TMP
+    LAYER_LOAD_TMP=$(mktemp)
+    eval "$("${MFEXT_HOME}/bin/layer_load_bash_cmds" "--debug" "--dont-load-optional" "$@" 2>"${LAYER_LOAD_TMP}")"
+    cat "${LAYER_LOAD_TMP}"
+    rm -f "${LAYER_LOAD_TMP}"
+}
+
 function is_layer_installed_or_exit()
 {
     local N

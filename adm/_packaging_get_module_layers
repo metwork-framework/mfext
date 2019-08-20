@@ -1,0 +1,35 @@
+#!/bin/bash
+
+function usage() {
+    echo "usage:  _packaging_get_module_layers [ADDON_NAME]"
+    echo "   => return the list of the current module eventualy filtered by the given ADDON_NAME"
+}
+
+if test "${1:-}" = "--help"; then
+    usage
+    exit 0
+fi
+ADDON="${1:-}"
+
+( echo "["
+NEED_COMMA=0
+for TMP in $(layers --raw |grep " ${MODULE_HOME}" |sed 's/ /|/g'); do
+    LABEL=$(echo "${TMP}" |awk -F '|' '{print $1;}')
+    NAME=$(echo "${LABEL}" |awk -F '@' '{print $1;}')
+    MODULE=$(echo "${LABEL}" |awk -F '@' '{print $2;}')
+    HOM=$(echo "${TMP}" |awk -F '|' '{print $2;}')
+    V=$(cat "${HOM}/.mfextaddon" 2>/dev/null)
+    if test "${ADDON}" = "" -a "${V}" != ""; then
+        continue
+    fi
+    if test "${ADDON}" != "" -a "${V}" != "${ADDON}"; then
+        continue
+    fi
+    if test "${NEED_COMMA}" = "1"; then
+        echo ","
+        NEED_COMMA=0
+    fi
+    echo "{\"name\": \"${NAME}\", \"label\": \"${LABEL}\", \"module\": \"${MODULE}\", \"home\": \"${HOM}\"}"
+    NEED_COMMA=1
+done
+echo "]" )|json_reformat
