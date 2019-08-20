@@ -1,0 +1,64 @@
+#!/bin/bash
+
+function usage() {
+    echo "usage:  _packaging_get_dependencies MODULE_BRANCH MFEXT_BRANCH MFCOM_BRANCH"
+    echo "   => return the list of the current module minimal dependencies"
+    echo "      (including system dependencies read in .system_dependencies files)"
+}
+
+. "${MFEXT_HOME}/lib/bash_utils.sh"
+
+if test "${1:-}" = "--help"; then
+    usage
+    exit 0
+fi
+if test "${2:-}" = ""; then
+    usage
+    exit 1
+fi
+
+LABELS=$(cat "${MODULE_HOME}/opt/default/.layerapi2_dependencies" |grep -v "^#" |grep -v "^-" |grep -v "{")
+EXTRA_LABELS=$(cat "${MODULE_HOME}/opt/default/.extra_dependencies" 2>/dev/null |grep -v "^#")
+
+# We unload all layers
+layer_unload root@mfext >/dev/null 2>&1
+
+for LABEL in ${LABELS} ${EXTRA_LABELS}; do
+    layer_load_without_optional "${LABEL}" >/dev/null 2>&1
+done
+LABELS=$(layers --raw --loaded-filter=yes |awk '{print $1;}')
+
+( echo "["
+FIRST=1
+for LABEL in ${LABELS} default@${MODULE_LOWERCASE}; do
+    NAME=$(echo "${LABEL}" |awk -F '@' '{print $1;}')
+    MOD=$(echo "${LABEL}" |awk -F '@' '{print $2;}')
+    HOM=$(get_layer_home "${LABEL}")
+    if test "${FIRST}" = "1"; then
+        FIRST=0
+    else
+        echo ","
+    fi
+    if test "${MOD}" = "mfext"; then
+        BRANCH="$2"
+    elif test "${MOD}" = "mfcom"; then
+        BRANCH="$3"
+    else
+        BRANCH="$1"
+    fi
+    RPM="metwork-${MOD}-layer-${NAME}-${BRANCH}"
+    echo "{\"name\": \"${NAME}\", \"label\": \"${LABEL}\", \"module\": \"${MOD}\", \"home\": \"${HOM}\", \"branch\": \"${BRANCH}\", \"rpm\": \"${RPM}\", \"type\": \"metwork\"}"
+    if test -f "${HOM}/.system_dependencies"; then
+        for L in $(cat "${HOM}/.system_dependencies"); do
+            N=$(echo "${L}" |awk -F '@' '{print $1;}')
+            OSS=$(echo "${L}" |awk -F '@' '{print $2;}' |sed 's/,/","/g')
+            echo ","
+            echo -n "{\"name\": \"${N}\", \"type\": \"system\", \"module\": \"${MOD}\", \"label\": \"${L}\", \"oss\": ["
+            echo -n "\""
+            echo -n "${OSS}"
+            echo -n "\""
+            echo "]}"
+        done
+    fi
+done
+echo "]" )|json_reformat

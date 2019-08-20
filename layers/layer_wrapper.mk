@@ -17,4 +17,4 @@ clean:
 	$(MAKE) -f Makefile.mk clean
 
 .DEFAULT:
-	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,METWORK_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- make -f Makefile.mk $(MAKECMDGOALS)
+	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- make -f Makefile.mk $(MAKECMDGOALS)

@@ -21,7 +21,7 @@ if test -x "${MFEXT_HOME:-}/opt/python3/bin/envtpl"; then
                 echo "ERROR: can't find a valid envtpl binary because MFEXT_HOME is not defined"
                 exit 1
             fi
-            export METWORK_LAYERS_PATH="${MFEXT_HOME}/opt:${MFEXT_HOME}"
+            export LAYERAPI2_LAYERS_PATH="${MFEXT_HOME}/opt:${MFEXT_HOME}"
             # FIXME: do not hardcode this
             export PYTHON3_SHORT_VERSION=3.7
         fi
