@@ -11,6 +11,7 @@ MFEXT documentation
    configure_metwork_repo
    install_a_metwork_package
    layerapi2
+   components
    layer_root
    layer_core
    layer_openresty

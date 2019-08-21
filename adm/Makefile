@@ -3,7 +3,7 @@ BINS_BEFORE=guess_version.sh _make_file_from_template.sh envtpl _proxy_set.sh dh
 SHARES_BEFORE=main_root.mk subdir_root.mk
 
 LIBS=$(LIBS_BEFORE)
-BINS=$(BINS_BEFORE) outside metwork_debug _launch_crontab clear.sh _doc_layer.sh _yaml_to_md.py _packaging_get_module_dependencies _packaging_get_module_layers _packaging_get_layer_dependencies
+BINS=$(BINS_BEFORE) outside metwork_debug _launch_crontab clear.sh _doc_layer.sh _yaml_to_md.py _packaging_get_module_dependencies _packaging_get_module_layers _packaging_get_layer_dependencies _generate_full_components_list.sh
 SHARES=$(SHARES_BEFORE) _metwork.spec
 
 include root.mk

@@ -12,19 +12,19 @@ Usually **MFEXT** is just a dependency of other MetWork Framework **modules** (l
 
 **MFEXT** is staged in logical and/or technical **layers**. Some of them are optional,
 you can choose not to install them (for example, layers about Python2). Each layer contains
-one or several **packages**.
+one or several **components**.
 
 For example, here are some **layers** hosted on this repository:
 
-- `python3_core` which contains several core **packages** for Python3: `python3`, `pip`, `virtualenv`...
-- `python3` which contains several additional **packages** for Python3: `requests`, `psutil`, `filelock`...
-- `openresty` which contains: `openresty`, `lua_restry_http`, `lua_resty_cookie`... **packages**
+- `python3_core` which contains several core **components** for Python3: `python3`, `pip`, `virtualenv`...
+- `python3` which contains several additional **components** for Python3: `requests`, `psutil`, `filelock`...
+- `openresty` which contains: `openresty`, `lua_restry_http`, `lua_resty_cookie`... **components**
 - `nodejs` which contains only one package: `nodejs`
 - [...]
 
-#### Packages
+#### Components
 
-Most of theses **packages** are not
+Most of theses **components** are not
 maintained by the MetWork Framework team. For example, you will find inside a recent [Python](http://www.python.org) interpreter or some well known libraries like [CURL](https://curl.haxx.se/) or [GLIB2](https://developer.gnome.org/glib/).
 
 #### Add-ons
@@ -99,29 +99,29 @@ $ . /opt/metwork-mfext/share/interactive_profile
 
 $ # Test your python version (recent Python3 version)
 $ python --version
-Python 3.5.6
+Python 3.7.3
 
 $ # See installed layers (currently loaded layers are prefixed by (*))
 $ layers
-- (*) python3@mfext [/opt/metwork-mfext-0.7/opt/python3]
-- (*) python3_core@mfext [/opt/metwork-mfext-0.7/opt/python3_core]
-- (*) default@mfext [/opt/metwork-mfext-0.7/opt/default]
-- (*) core@mfext [/opt/metwork-mfext-0.7/opt/core]
-- python2_core@mfext [/opt/metwork-mfext-0.7/opt/python2_core]
-- python2@mfext [/opt/metwork-mfext-0.7/opt/python2]
-- (*) root@mfext [/opt/metwork-mfext-0.7]
+- (*) python3@mfext [/opt/metwork-mfext-0.8/opt/python3]
+- (*) python3_core@mfext [/opt/metwork-mfext-0.8/opt/python3_core]
+- (*) default@mfext [/opt/metwork-mfext-0.8/opt/default]
+- (*) core@mfext [/opt/metwork-mfext-0.8/opt/core]
+- python2_core@mfext [/opt/metwork-mfext-0.8/opt/python2_core]
+- python2@mfext [/opt/metwork-mfext-0.8/opt/python2]
+- (*) root@mfext [/opt/metwork-mfext-0.8]
 
 $ # Let's load the python2 extra layer
 $ layer_load python2@mfext
 
 $ layers # note: currently loaded layers are prefixed by (*)
-- python3@mfext [/opt/metwork-mfext-0.7/opt/python3]
-- python3_core@mfext [/opt/metwork-mfext-0.7/opt/python3_core]
-- default@mfext [/opt/metwork-mfext-0.7/opt/default]
-- (*) core@mfext [/opt/metwork-mfext-0.7/opt/core]
-- (*) python2_core@mfext [/opt/metwork-mfext-0.7/opt/python2_core]
-- (*) python2@mfext [/opt/metwork-mfext-0.7/opt/python2]
-- (*) root@mfext [/opt/metwork-mfext-0.7]
+- python3@mfext [/opt/metwork-mfext-0.8/opt/python3]
+- python3_core@mfext [/opt/metwork-mfext-0.8/opt/python3_core]
+- default@mfext [/opt/metwork-mfext-0.8/opt/default]
+- (*) core@mfext [/opt/metwork-mfext-0.8/opt/core]
+- (*) python2_core@mfext [/opt/metwork-mfext-0.8/opt/python2_core]
+- (*) python2@mfext [/opt/metwork-mfext-0.8/opt/python2]
+- (*) root@mfext [/opt/metwork-mfext-0.8]
 
 $ python --version (latest Python 2.7 version, this is not the system version)
 Python 2.7.15
@@ -138,7 +138,7 @@ and advanced use cases, you can choose not to install the symbolic link).
 Because `/opt` is not used by default on [standard Linux](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard), **the installation shouldn't break anything.**
 
 Therefore, if you do nothing specific after the installation, you won't benefit
-from any included software packages!
+from any included software components!
 
 So, to use this module, you have to load a kind of "mfext environment". There are several ways to do that.
 
@@ -156,7 +156,7 @@ $ # => this is a very old python version
 
 $ # what is the version of the python command (with mfext environment loaded) ?
 $ {MFEXT_HOME}/bin/mfext_wrapper python --version
-Python 3.5.3
+Python 3.7.3
 $ # => this is a recent python version
 
 $ # what is the version of the python command ?
@@ -206,7 +206,7 @@ $ # . {MFEXT_HOME}/share/interactive_profile
 [...]
 
 $ python --version
-Python 3.5.6
+Python 3.7.3
 $ # => the mfext environment is loaded
 
 $ outside python --version
@@ -215,11 +215,11 @@ $ # => we lauched the python command outside the mfext environment
 $ #    (so we got the system version)
 
 $ python --version
-Python 3.5.6
+Python 3.7.3
 $ # => the mfext environment is still loaded
 ```
 
 ## Reference documentations
 
 - (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
-- (for **release_0.7** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.7/mfext/) for reference documentation.
+- (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
