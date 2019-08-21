@@ -1,0 +1,26 @@
+diff -up libffi-3.2/configure.orig libffi-3.2/configure
+--- libffi-3.2/configure.orig	2019-08-19 17:00:46.576269982 +0200
++++ libffi-3.2/configure	2019-08-19 17:03:48.833096990 +0200
+@@ -11172,7 +11172,7 @@ if test "$GCC" = yes; then
+   # Ok, now we have the path, separated by spaces, we can step through it
+   # and add multilib dir if necessary.
+   lt_tmp_lt_search_path_spec=
+-  lt_multi_os_dir=`$CC $CPPFLAGS $CFLAGS $LDFLAGS -print-multi-os-directory 2>/dev/null`
++  lt_multi_os_dir=""
+   for lt_sys_path in $lt_search_path_spec; do
+     if test -d "$lt_sys_path/$lt_multi_os_dir"; then
+       lt_tmp_lt_search_path_spec="$lt_tmp_lt_search_path_spec $lt_sys_path/$lt_multi_os_dir"
+@@ -18725,7 +18725,7 @@ if test "x$GCC" = "xyes"; then
+     toolexecdir="${libdir}"/gcc-lib/'$(target_alias)'
+     toolexeclibdir="${libdir}"
+   fi
+-  multi_os_directory=`$CC $CFLAGS -print-multi-os-directory`
++  multi_os_directory=.
+   case $multi_os_directory in
+     .) ;; # Avoid trailing /.
+     ../*) toolexeclibdir=$toolexeclibdir/$multi_os_directory ;;
+@@ -21765,4 +21765,3 @@ if test -n "$ac_unrecognized_opts" && te
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-
