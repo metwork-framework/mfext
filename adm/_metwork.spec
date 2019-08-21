@@ -141,8 +141,15 @@ Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} < {{FULL_VERSI
         {% if DEP.module == MODULE_LOWERCASE %}
             {# Because this dependency will be embedded in this package #}
             {{ minimal_layers.append(DEP.label)|replace('None', '') }}
+            {% if (MODULE_BRANCH == "integration" or MODULE_BRANCH == "master") and DEP.name == "root" %}
+                # we don't obsoletes root layer for the moment to avoid some issues with postun
+                # => we provide a new layer-root dummy package
+                # FIXME: to be removed someday
+Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
+            {% else %}
 Provides: {{DEP.rpm}} = {{FULL_VERSION}}
 Obsoletes: {{DEP.rpm}} < {{FULL_VERSION}}
+            {% endif %}
         {% else %}
             {# Because this is a dependency on another module #}
 Requires: {{DEP.rpm}}
@@ -160,6 +167,19 @@ This package contains minimal (readonly) files and directories for {{MODULE_LOWE
 Everything is in {{MODULE_HOME}}/
 {% endif %}
 
+{% if MFEXT_ADDON == "0" %}
+    {% if MODULE_BRANCH == "master" or MODULE_BRANCH == "integration" %}
+        # DUMMY TEMPORARY LAYER-ROOT PACKAGE to avoid some issues with postun
+%package layer-root-{{MODULE_BRANCH}}
+Summary: dummy package to deal with update issues
+Group: Applications/Multimedia
+AutoReq: no
+AutoProv: no
+Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
+%description layer-root-{{MODULE_BRANCH}}
+Dummy package to deal with update issues
+    {% endif %}
+{% endif %}
 
 {% if MFEXT_ADDON == "0" %}
 ########################
@@ -470,3 +490,10 @@ rm -fr %{buildroot}
 {{MODULE_HOME}}/opt/{{LAYER.name}}
     {% endif %}
 {% endfor %}
+
+{% if MFEXT_ADDON == "0" %}
+    {% if MODULE_BRANCH == "master" or MODULE_BRANCH == "integration" %}
+%files layer-root-{{MODULE_BRANCH}}
+%defattr(-,root,root,-)
+    {% endif %}
+{% endif %}
