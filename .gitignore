@@ -56,6 +56,8 @@ doc/layer_*.rst
 doc/layerapi2.rst
 doc/*.mdtemp
 doc/.ipynb_checkpoints
+libffi/build
+libffi/cache
 glib2/build
 glib2/cache
 mfutil_c/build
