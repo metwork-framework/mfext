@@ -68,6 +68,8 @@ doc/configure_metwork_repo.md
 doc/configure_metwork_repo.rst
 doc/install_a_metwork_package.md
 doc/install_a_metwork_package.rst
+doc/components.md
+doc/components.rst
 doc/README.rst
 doc/CHANGELOG*.md
 doc/CHANGELOG*.rst
