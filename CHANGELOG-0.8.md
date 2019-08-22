@@ -1,6 +1,17 @@
 # release_0.8 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- fix vi usage without devtools
+
+
+
+
 
 ## v0.8.0 (2019-08-19)
 
