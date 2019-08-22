@@ -52,7 +52,7 @@ clean: Makefile
 	rm -f layer_*.rst
 
 components.md:
-	_generate_full_components_list.sh >$@
+	layer_wrapper --layers=python3_devtools@mfext -- _generate_full_components_list.sh >$@
 
 configure_a_metwork_package.md: ../.metwork-framework/configure_a_metwork_package.md
 	cp -f $< $@
