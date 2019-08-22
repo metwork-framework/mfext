@@ -1,0 +1,3 @@
+#Force readline to link with libtinfo.so for termcap symbols, as done in
+#CentOS packages (necessary for use in python2)
+readline-link-to-libtinfo.patch

@@ -1,0 +1,12 @@
+diff -up readline-8.0/support/shobj-conf.orig readline-8.0/support/shobj-conf
+--- readline-8.0/support/shobj-conf.orig	2019-08-22 14:24:23.786345911 +0200
++++ readline-8.0/support/shobj-conf	2019-08-22 14:22:19.566346052 +0200
+@@ -42,7 +42,7 @@ SHOBJ_XLDFLAGS=
+ SHOBJ_LIBS=
+ 
+ SHLIB_XLDFLAGS=
+-SHLIB_LIBS=
++SHLIB_LIBS='-ltinfo'
+ 
+ SHLIB_DOT='.'
+ SHLIB_LIBPREF='lib'
