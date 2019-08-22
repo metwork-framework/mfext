@@ -42,7 +42,7 @@ superclean:
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-html: $(CHANGELOGS_FILES) $(COMMON_DOCFILES) $(IPYNB_FILES) $(RST_FILES) Makefile components.md
+html: $(CHANGELOGS_FILES) $(COMMON_DOCFILES) $(IPYNB_FILES) $(RST_FILES) Makefile components.rst
 	echo $(CHANGELOGS_FILES)
 	rm -f tempo.*
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -52,7 +52,6 @@ clean: Makefile
 	rm -f layer_*.rst
 
 components.md:
-	echo $(PATH)
 	_generate_full_components_list.sh >$@
 
 configure_a_metwork_package.md: ../.metwork-framework/configure_a_metwork_package.md
