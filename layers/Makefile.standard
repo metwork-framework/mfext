@@ -56,7 +56,7 @@ download:
 
 uncompress:
 	rm -Rf $(NAME_VERSION)
-	$(MFEXT_HOME)/bin/_uncompress_helper.sh `readlink -m $(ARCHIVE_TARGET)` $(EXTENSION)
+	$(MFEXT_HOME)/bin/_uncompress_helper.sh `readlink -m $(ARCHIVE_TARGET)` $(EXTENSION) $(NAME_VERSION)
 
 python2build:
 	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && $(MFEXT_HOME)/bin/python2 setup.py build
