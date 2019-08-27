@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- embed readline and use it instead of the system library
 - embed libffi and use it instead of system library
 - new packaging + layerapi2 is now hosted in a dedicated repository
 - introduce build extra dependencies
@@ -11,6 +12,8 @@
 
 
 ### Bug Fixes
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- use vi in python2 mode when we are in python2
 - fix vi usage without devtools
 
 
