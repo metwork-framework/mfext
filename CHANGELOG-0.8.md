@@ -7,6 +7,18 @@
 
 
 ### Bug Fixes
+- use vi in python2 mode when we are in python2
+
+
+
+
+
+## v0.8.1 (2019-08-22)
+
+### New Features
+
+
+### Bug Fixes
 - fix vi usage without devtools
 
 
