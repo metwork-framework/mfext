@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- embed libpng
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
 - embed readline and use it instead of the system library
 - embed libffi and use it instead of system library
 - new packaging + layerapi2 is now hosted in a dedicated repository
