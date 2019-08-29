@@ -49,7 +49,7 @@ scientific tools.
 An add-on to **MFEXT** can be maintained by anyone and can be hosted anywhere. But below, you
 will find officially maintained **MFEXT addons**:
 
-| Add-on | Description |
+| Addon | Description |
 | --- | --- |
 | [mfextaddon_scientific](https://github.com/metwork-framework/mfextaddon_scientific) | mfext Add-on for scientific libraries and tools |
 | [mfextaddon_python3_ia](https://github.com/metwork-framework/mfextaddon_python3_ia) | mfext Add-on for deep learning/IA libraries and tools for Python3 |
