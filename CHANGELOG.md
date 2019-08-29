@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- embed tcl/tk libraries and build python2/3 with them
 - embed libpng
 - move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
 - embed readline and use it instead of the system library
