@@ -10,8 +10,8 @@ DESCRIPTION=\
 OPENRESTY est une distribution nginx qui ajoute des modules supplémentaires
 WEBSITE=http://openresty.org
 LICENSE=BSD
-PCRE_SOURCE_PATH=$(LAYER_DIR)/pcre/build/pcre-8.36
-LIBRESSL_SOURCE_PATH=$(LAYER_DIR)/libressl/build/libressl-2.9.2
+PCRE_SOURCE_PATH=$(LAYER_DIR)/pcre/build/pcre
+LIBRESSL_SOURCE_PATH=$(LAYER_DIR)/libressl/build/libressl
 
 all:: $(PREFIX)/bin/resty
 $(PREFIX)/bin/resty: $(PCRE_SOURCE_PATH) $(LIBRESSL_SOURCE_PATH)
@@ -20,11 +20,11 @@ $(PREFIX)/bin/resty: $(PCRE_SOURCE_PATH) $(LIBRESSL_SOURCE_PATH)
 	rm -f $(PREFIX)/config/mime.types && ln -s $(PREFIX)/nginx/conf/mime.types $(PREFIX)/config/mime.types
 
 $(PCRE_SOURCE_PATH):
-	cd ../pcre ; make downloadonly
+	cd ../pcre && make downloadonly
 
 $(LIBRESSL_SOURCE_PATH):
-	cd ../libressl ; make downloadonly
+	cd ../libressl && make downloadonly
 
 clean::
-	cd ../pcre ; make clean
-	cd ../libressl ; make clean
+	cd ../pcre && make clean
+	cd ../libressl && make clean

@@ -6,50 +6,35 @@ function get_abs_filename() {
     echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 }
 
+function usage() {
+    echo "usage: ./bootstrap.sh INSTALL_PREFIX_DIRECTORY"
+}
 
-    function usage() {
-        echo "usage: ./bootstrap.sh INSTALL_PREFIX_DIRECTORY"
-    }
-    if test "${1:-}" = ""; then
-        usage
-        exit 1
-    fi
-    MFEXT_HOME=$(get_abs_filename "$1")
-    export MFEXT_HOME
-    MFEXT_VERSION=$(adm/guess_version.sh)
-    export MFEXT_VERSION
-    export MODULE_VERSION=${MFEXT_VERSION}
-
-
+if test "${1:-}" = ""; then
+    usage
+    exit 1
+fi
 if test "${1:-}" = "--help"; then
     usage
-    exit 1
+    exit 0
 fi
 
-PREFIX=$(get_abs_filename "$1")
-export PREFIX
-if ! test -d "${PREFIX}"; then
-    usage
-    echo "ERROR: ${PREFIX} is not a directory"
-    exit 1
-fi
-MFEXT_HOME=$(get_abs_filename "${MFEXT_HOME}")
+MFEXT_HOME=$(get_abs_filename "$1")
 export MFEXT_HOME
-
-
-
-MODULE_HOME=$(get_abs_filename "${PREFIX}")
-export MODULE_HOME
+MFEXT_VERSION=$(adm/guess_version.sh)
+export MFEXT_VERSION
+export MODULE_VERSION=${MFEXT_VERSION}
+export MODULE_HOME=${MFEXT_HOME}
 export MODULE=MFEXT
 export MODULE_LOWERCASE=mfext
 SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export SRC_DIR
-
+BOOTSTRAP_HASH=$("${SRC_DIR}/adm/dhash" bootstrap |grep -v ^src |sort |md5sum |awk '{print $1;}')
 
 rm -f adm/root.mk
 touch adm/root.mk
 
-ROOT_PATH=${MFEXT_HOME}/bin:${PATH:-}
+ROOT_PATH=${MFEXT_HOME}/bin:${MFEXT_HOME}/opt/core/bin:${SRC_DIR}/bootstrap/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 echo "Making adm/root.mk..."
 rm -f adm/root.mk
@@ -57,6 +42,7 @@ touch adm/root.mk
 
 echo "export MODULE := ${MODULE}" >>adm/root.mk
 echo "export MODULE_LOWERCASE := $(echo ${MODULE} | tr '[:upper:]' '[:lower:]')" >>adm/root.mk
+echo "export BOOTSTRAP_HASH := ${BOOTSTRAP_HASH}" >>adm/root.mk
 echo "export LAYERAPI2_LAYERS_PATH := ${MFEXT_HOME}/opt:${MFEXT_HOME}" >>adm/root.mk
 echo "export MFEXT_HOME := ${MFEXT_HOME}" >>adm/root.mk
 echo "export MFEXT_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
@@ -65,8 +51,8 @@ echo "export MODULE_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
 echo "export SRC_DIR := ${SRC_DIR}" >>adm/root.mk
 echo "ifeq (\$(FORCED_PATHS),)" >>adm/root.mk
 echo "  export PATH := ${ROOT_PATH}" >>adm/root.mk
-echo "  export LD_LIBRARY_PATH := ${MFEXT_HOME}/lib" >>adm/root.mk
-echo "  export PKG_CONFIG_PATH := ${MFEXT_HOME}/lib/pkgconfig" >>adm/root.mk
+echo "  export LD_LIBRARY_PATH := ">>adm/root.mk
+echo "  export PKG_CONFIG_PATH := " >>adm/root.mk
 echo "  LAYER_ENVS:=\$(shell env |grep '^LAYERAPI2_LAYER_.*_LOADED=1\$\$' |awk -F '=' '{print \$\$1;}')" >>adm/root.mk
 echo "  \$(foreach LAYER_ENV, \$(LAYER_ENVS), \$(eval unexport \$(LAYER_ENV)))" >>adm/root.mk
 echo "endif" >>adm/root.mk

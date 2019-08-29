@@ -24,4 +24,4 @@ if test "${MODULE_RUNTIME_SUFFIX:-}" = ""; then
     export MODULE_RUNTIME_SUFFIX="metwork/{{MODULE_LOWERCASE}}"
 fi
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-exec "{{MFEXT_HOME}}/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=HOME,TERM,DISPLAY,COLORTERM,HOSTNAME,LANG,LOGNAME,PWD,USER,USERNAME,XAUTHORITY,MODULE_RUNTIME_HOME,MODULE_RUNTIME_SUFFIX,PATH -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"
+exec "{{MFEXT_HOME}}/opt/core/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=HOME,TERM,DISPLAY,COLORTERM,HOSTNAME,LANG,LOGNAME,PWD,USER,USERNAME,XAUTHORITY,MODULE_RUNTIME_HOME,MODULE_RUNTIME_SUFFIX,PATH -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"

@@ -95,13 +95,6 @@ alias debug="metwork_debug"
 alias circusctl="_circusctl --endpoint {% raw %}${{% endraw %}{{MODULE}}{% raw %}_CIRCUS_ENDPOINT}{% endraw %} --timeout=10"
 {% endif %}
 
-alias vi=${MFEXT_HOME}/bin/vim_wrapper.sh
-alias vim=${MFEXT_HOME}/bin/vim_wrapper.sh
-alias vimdiff=${MFEXT_HOME}/bin/vimdiff_wrapper.sh
-if test "${EDITOR:-}" = ""; then
-    export EDITOR="${MFEXT_HOME}/bin/vim_wrapper.sh"
-fi
-
 if test "${PROFILE_ERROR}" = "1"; then
     exit 1
 fi

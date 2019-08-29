@@ -370,6 +370,3 @@ And use these two bash functions instead of `layer_load_bash_cmds`, `layer_unloa
 binaries directly. See full tutorial for more details.
 
 .. index:: layerapi2 tutorial
-## Full tutorial
-
-{% include 'tutorial_layerapi2.mdtemp' %}

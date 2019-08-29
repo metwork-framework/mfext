@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PORTABLE_ENVTPL_DIR=${CURRENT_DIR}/../opt/portable_envtpl
+
+"${PORTABLE_ENVTPL_DIR}/envtpl" "$@"
