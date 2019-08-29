@@ -1,4 +1,4 @@
-export PATH := $(MFEXT_HOME)/bin:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
+export PATH := $(MFEXT_HOME)/bin:$(MFEXT_HOME)/opt/core/bin:$(SRC_DIR)/bootstrap/bin:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 unexport LD_LIBRARY_PATH
 unexport PKG_CONFIG_PATH
 export FORCED_PATHS := yes
@@ -18,3 +18,6 @@ clean:
 
 .DEFAULT:
 	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- make -f Makefile.mk $(MAKECMDGOALS)
+
+test:
+	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER),devtools@mfext -- make -f Makefile.mk test

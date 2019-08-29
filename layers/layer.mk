@@ -5,7 +5,7 @@ MAKEFILE_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 LAYER_DIR_NAME:=$(shell basename $(MAKEFILE_DIR))
 export LAYER_NAME := $(shell echo $(LAYER_DIR_NAME) |sed 's/^layer[0-9]_//g')
 
-LAYER_PROFILES := $(wildcard .layerapi2_label) $(wildcard .extra_dependencies) $(wildcard .system_dependencies) $(wildcard .layerapi2_conflicts) $(wildcard .layerapi2_dependencies) $(wildcard .layerapi2_extra_env) $(wildcard .layerapi2_interactive_profile) $(wildcard .layerapi2_interactive_unprofile)
+LAYER_PROFILES := $(wildcard .layerapi2_label) $(wildcard .extra_dependencies) $(wildcard .system_dependencies) $(wildcard .layerapi2_conflicts) $(wildcard .layerapi2_dependencies) $(wildcard .layerapi2_extra_env) $(wildcard .layerapi2_interactive_profile) $(wildcard .layerapi2_interactive_unprofile) $(wildcard .build_extra_dependencies)
 TARGET_LAYER_PROFILES := $(addprefix $(MODULE_HOME)/opt/$(LAYER_NAME)/,$(LAYER_PROFILES))
 DHASH_IGNORES := $(wildcard dhash_ignore_*)
 TARGET_DHASH_IGNORES := $(addprefix $(MODULE_HOME)/opt/$(LAYER_NAME)/.,$(DHASH_IGNORES))

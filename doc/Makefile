@@ -3,13 +3,12 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = $(MFEXT_HOME)/bin/sphinx_wrapper
+SPHINXBUILD   = $(MFEXT_HOME)/opt/devtools/bin/sphinx_wrapper
 SPHINXPROJ    = mfext
 SOURCEDIR     = .
 BUILDDIR      = _build
 
 RST_FILES=$(shell ls *.md |grep -v tempo.md 2>/dev/null |sed 's/\.md$$/\.rst/g')
-IPYNB_FILES=$(shell ls *.ipynb 2>/dev/null |sed 's/\.ipynb$$/\.mdtemp/g')
 COMMON_DOCFILES=configure_a_metwork_package.rst configure_metwork_repo.rst install_a_metwork_package.rst README.rst
 CHANGELOGS_FILES=$(shell ls -r ../CHANGELOG*.md |awk -F '/' '{print $$2;}' |sed 's/\.md$$/\.rst/g')
 CHANGELOGS_RST_TMPL=changelogs.tmpl
@@ -30,9 +29,6 @@ help:
 	layer_wrapper --layers=python3_devtools@mfext -- m2r --overwrite tempo.md
 	cat tempo.rst |sed 's/^.. code-block::$$/.. code-block:: none\n\n   Output:/g' >$@
 	rm -f tempo.md
-
-%.mdtemp: %.ipynb
-	layer_wrapper --layers=python3_devtools_jupyter@mfext -- jupyter nbconvert --to markdown --stdout $< >$@
 
 superclean:
 	rm -f tempo.*

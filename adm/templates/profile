@@ -114,7 +114,7 @@ field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt
 export LAYERAPI2_LAYERS_PATH
 
 # We load the default layer (if installed)
-N=$({{MFEXT_HOME}}/bin/is_layer_installed default@${MODULE_LOWERCASE} 2>/dev/null)
+N=$({{MFEXT_HOME}}/opt/core/bin/is_layer_installed default@${MODULE_LOWERCASE} 2>/dev/null)
 if test "${N}" = "1"; then
     # note: if we are in a plugin_env, we don't load default layers (issue mfserv#220)
     if test "{% raw %}${{% endraw %}{{MODULE}}_CURRENT_PLUGIN_NAME:-}" = ""; then

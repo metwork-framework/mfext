@@ -1,0 +1,3 @@
+#!/bin/bash
+
+layer_wrapper --layers="python2_core@mfext,-python2@mfext,-python2@mfcom,-python2${MODULE_LOWERCASE}" -- python "$@"

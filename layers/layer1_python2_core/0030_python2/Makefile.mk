@@ -13,7 +13,7 @@ LICENSE=Python
 
 all:: $(PREFIX)/bin/python $(PREFIX)/share/python2_version $(PREFIX)/share/python2_short_version
 $(PREFIX)/bin/python:
-	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include -I$(PREFIX)/../tcltk/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib -L$(PREFIX)/../../lib -L$(PREFIX)/../tcltk/lib" OPTIONS='--enable-shared --with-system-ffi --with-tcltk-includes="-I$(PREFIX)/../tcltk/include" --with-tcltk-libs="-L$(PREFIX)/../tcltk/lib -ltcl8.6 -ltk8.6"' download uncompress configure build install
+	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include -I$(PREFIX)/../tcltk/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib -L$(PREFIX)/../tcltk/lib" OPTIONS='--enable-shared --with-system-ffi --with-tcltk-includes="-I$(PREFIX)/../tcltk/include" --with-tcltk-libs="-L$(PREFIX)/../tcltk/lib -ltcl8.6 -ltk8.6"' download uncompress configure build install
 
 $(PREFIX)/share/python2_version:
 	if ! test -d $(PREFIX)/share; then mkdir -p $(PREFIX)/share; fi

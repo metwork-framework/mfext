@@ -1,14 +1,12 @@
 coverage
 mock
 flake8
-ipdb
-ipython
 pylint
 testfixtures
 isort
-jedi
 pydocstyle
 flake8-docstrings
 mockredispy
 pytest
 werkzeug
+nose

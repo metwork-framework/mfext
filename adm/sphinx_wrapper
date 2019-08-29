@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# FIXME: temporary file to wait for changes in doc/Makefile in all other modules
+# We have to use ${MFEXT_HOME}/opt/core/bin/sphinx_wrapper instead
+
+layer_wrapper --layers="python3_devtools@mfext" -- sphinx-build "$@"

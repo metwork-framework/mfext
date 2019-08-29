@@ -5,7 +5,7 @@ field_prepend() {
     local old_value
     old_value=$(eval echo "\$$1")
     local new_value
-    new_value=$("${MFEXT_HOME}/bin/_field_prepend" "${old_value}" "$2")
+    new_value=$("${MFEXT_HOME}/opt/core/bin/_field_prepend" "${old_value}" "$2")
     eval export "\\$1=${new_value}"
 }
 
@@ -14,7 +14,7 @@ field_remove() {
     local old_value
     old_value=$(eval echo "\$$1")
     local new_value
-    new_value=$("${MFEXT_HOME}/bin/_field_remove" --separator="${3:-':'}" "${old_value}" "$2")
+    new_value=$("${MFEXT_HOME}/opt/core/bin/_field_remove" --separator="${3:-':'}" "${old_value}" "$2")
     eval export "\\$1=${new_value}"
 }
 
@@ -23,7 +23,7 @@ field_remove_with_wildcards() {
     local old_value
     old_value=$(eval echo "\$$1")
     local new_value
-    new_value=$("${MFEXT_HOME}/bin/_field_remove" --use-wildcards --separator="${3:-':'}" "${old_value}" "$2")
+    new_value=$("${MFEXT_HOME}/opt/core/bin/_field_remove" --use-wildcards --separator="${3:-':'}" "${old_value}" "$2")
     eval export "\\$1=${new_value}"
 }
 
@@ -107,7 +107,7 @@ function layer_unload()
 {
     local LAYER_UNLOAD_TMP
     LAYER_UNLOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/bin/layer_unload_bash_cmds" "--debug" "$@" 2>"${LAYER_UNLOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_unload_bash_cmds" "--debug" "$@" 2>"${LAYER_UNLOAD_TMP}")"
     cat "${LAYER_UNLOAD_TMP}"
     rm -f "${LAYER_UNLOAD_TMP}"
 }
@@ -116,7 +116,7 @@ function layer_load()
 {
     local LAYER_LOAD_TMP
     LAYER_LOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/bin/layer_load_bash_cmds" "--debug" "$@" 2>"${LAYER_LOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--debug" "$@" 2>"${LAYER_LOAD_TMP}")"
     cat "${LAYER_LOAD_TMP}"
     rm -f "${LAYER_LOAD_TMP}"
 }
@@ -125,7 +125,7 @@ function layer_load_without_optional()
 {
     local LAYER_LOAD_TMP
     LAYER_LOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/bin/layer_load_bash_cmds" "--debug" "--dont-load-optional" "$@" 2>"${LAYER_LOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--debug" "--dont-load-optional" "$@" 2>"${LAYER_LOAD_TMP}")"
     cat "${LAYER_LOAD_TMP}"
     rm -f "${LAYER_LOAD_TMP}"
 }
