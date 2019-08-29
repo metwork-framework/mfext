@@ -1,0 +1,6 @@
+alias vi=${MFEXT_HOME}/opt/python2_devtools/bin/vim_wrapper.sh
+alias vim=${MFEXT_HOME}/opt/python2_devtools/bin/vim_wrapper.sh
+alias vimdiff=${MFEXT_HOME}/opt/python2_devtools/bin/vim_wrapper.sh
+if test "${EDITOR:-}" = ""; then
+    export EDITOR=${MFEXT_HOME}/opt/python2_devtools/bin/vim_wrapper.sh
+fi

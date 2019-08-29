@@ -59,63 +59,63 @@ uncompress:
 	$(MFEXT_HOME)/bin/_uncompress_helper.sh `readlink -m $(ARCHIVE_TARGET)` $(EXTENSION) $(NAME_VERSION)
 
 python2build:
-	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && $(MFEXT_HOME)/bin/python2 setup.py build
+	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && python2 setup.py build
 
 python2build_cmake:
-	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && $(MFEXT_HOME)/bin/python2 setup.py build
+	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && python2 setup.py build
 
 python3build:
-	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && $(MFEXT_HOME)/bin/python3 setup.py build $(EXTRA_SETUP_PY_FLAGS)
+	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && python3 setup.py build $(EXTRA_SETUP_PY_FLAGS)
 
 python3build_cmake:
-	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && $(MFEXT_HOME)/bin/python3 setup.py build $(EXTRA_SETUP_PY_FLAGS)
+	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi  && python3 setup.py build $(EXTRA_SETUP_PY_FLAGS)
 
 python2install:
 	if ! test -d $(PYTHON2_SITE_PACKAGES); then mkdir -p $(PYTHON2_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
+	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
 
 python2install_cmake:
 	if ! test -d $(PYTHON2_SITE_PACKAGES); then mkdir -p $(PYTHON2_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
+	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
 
 python2pyinstall:
 	if ! test -d $(PYTHON2_SITE_PACKAGES); then mkdir -p $(PYTHON2_SITE_PACKAGES); fi
 	if ! test -d build/$(NAME_VERSION)/build/python; then if test -d build/$(NAME_VERSION)/build/python2; then cd build/$(NAME_VERSION)/build; ln -s python2 python; fi; fi
-	cd build/$(NAME_VERSION)/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
+	cd build/$(NAME_VERSION)/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
 
 python2pyinstall_cmake:
 	if ! test -d $(PYTHON2_SITE_PACKAGES); then mkdir -p $(PYTHON2_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION)/build/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
+	cd build/$(NAME_VERSION)/build/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python2 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON2_SITE_PACKAGES)
 
 python2swiginstall:
 	if ! test -d $(PYTHON2_SITE_PACKAGES); then mkdir -p $(PYTHON2_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION) && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python2 setup.py install --prefix=$(PREFIX)/opt/python2 --install-lib=$(PYTHON2_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION) && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python2 setup.py install --prefix=$(PREFIX)/opt/python2 --install-lib=$(PYTHON2_SITE_PACKAGES); fi
 
 python2swiginstall_cmake:
 	if ! test -d $(PYTHON2_SITE_PACKAGES); then mkdir -p $(PYTHON2_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION)/build && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python2 setup.py install --prefix=$(PREFIX)/opt/python2 --install-lib=$(PYTHON2_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION)/build && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python2 setup.py install --prefix=$(PREFIX)/opt/python2 --install-lib=$(PYTHON2_SITE_PACKAGES); fi
 
 python3install:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
+	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
 python3install_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
+	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
 python3pyinstall:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION)/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
+	cd build/$(NAME_VERSION)/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
 python3pyinstall_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	if ! test -d build/$(NAME_VERSION)/build/python; then if test -d build/$(NAME_VERSION)/build/python3; then cd build/$(NAME_VERSION)/build; ln -s python3 python; fi; fi
-	cd build/$(NAME_VERSION)/build/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
+	cd build/$(NAME_VERSION)/build/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
 python3swiginstall:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION) && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python3 setup.py install --prefix=$(PREFIX)/opt/python3 --install-lib=$(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION) && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX)/opt/python3 --install-lib=$(PYTHON3_SITE_PACKAGES); fi
 
 python3swiginstall_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
-	cd build/$(NAME_VERSION)/build && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && $(MFEXT_HOME)/bin/python3 setup.py install --prefix=$(PREFIX)/opt/python3 --install-lib=$(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION)/build && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX)/opt/python3 --install-lib=$(PYTHON3_SITE_PACKAGES); fi
