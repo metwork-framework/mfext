@@ -11,7 +11,7 @@ LIBPNG is the official PNG reference library
 WEBSITE=http://www.libpng.org/
 LICENSE=Open Source : http://www.libpng.org/pub/png/src/libpng-LICENSE.txt
 
-all:: $(PREFIX)/lib/libpng12.so
-$(PREFIX)/lib/libpng12.so:
+all:: $(PREFIX)/lib/libpng16.so
+$(PREFIX)/lib/libpng16.so:
 	# Build with cmake would need cmake >= 3.1, so we keep configure
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure build install
