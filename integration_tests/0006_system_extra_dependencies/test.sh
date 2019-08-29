@@ -34,6 +34,5 @@ done
 
 if test "${RET}" = "1"; then
     echo "extra dependencies found"
-    # FIXME: uncomment next line
-    #exit 1
+    exit 1
 fi
