@@ -34,7 +34,14 @@
 {% if MFEXT_ADDON is not defined %}
     {% set MFEXT_ADDON = "0" %}
 {% endif %}
-{% set version_release = [VERSION_BUILD, RELEASE_BUILD] %}
+{% if METWORK_BUILD_OS == "centos6" %}
+    {% set RELEASE_BUILD_SUFFIX = ".el6" %}
+{% elif METWORK_BUILD_OS == "centos7" %}
+    {% set RELEASE_BUILD_SUFFIX = ".el7" %}
+{% else %}
+    {% set RELEASE_BUILD_SUFFIX = "" %}
+{% endif %}
+{% set version_release = [VERSION_BUILD, RELEASE_BUILD + RELEASE_BUILD_SUFFIX] %}
 {% set version_release_string = version_release|join('-') %}
 {% set epoch_vr = ["9", version_release_string] %}
 {% set FULL_VERSION = epoch_vr|join(':') %}
@@ -83,7 +90,7 @@ Summary: metwork {{MODULE_LOWERCASE}} symbolic link
 Summary: metwork {{MODULE_LOWERCASE}} symbolic link and stuff around the {{MODULE_LOWERCASE}} unix user
 {% endif %}
 Version: {{VERSION_BUILD}}
-Release: {{RELEASE_BUILD}}
+Release: {{RELEASE_BUILD}}{{RELEASE_BUILD_SUFFIX}}
 Epoch: 9
 License: Meteo
 Source0: {{MODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar
@@ -131,6 +138,7 @@ Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-python2
 Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
+Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
 {% endif %}
 # </to be removed someday>
 Provides: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
@@ -156,7 +164,7 @@ Requires: {{DEP.rpm}}
         {% endif %}
     {% else %}
         {# system dependencies #}
-        {% if METWORK_BUILD_OS|default('unknown') in DEP.oss %}
+        {% if METWORK_BUILD_OS|default('unknown') in DEP.oss or "all" in DEP.oss %}
 Requires: {{DEP.name}}
             {{ minimal_system_dependencies.append(DEP.name)|replace('None', '') }}
         {% endif %}
@@ -245,7 +253,7 @@ Requires: {{LDEP.rpm}}
             {% else %}
                 {# system dependencies #}
                 {% if LDEP.name not in minimal_system_dependencies %}
-                    {% if METWORK_BUILD_OS|default('unknown') in LDEP.oss %}
+                    {% if METWORK_BUILD_OS|default('unknown') in LDEP.oss or "all" in LDEP.oss %}
 Requires: {{LDEP.name}}
                     {% endif %}
                 {% endif %}
