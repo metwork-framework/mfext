@@ -271,12 +271,12 @@ metwork {{MODULE_LOWERCASE}} {{LAYER.name}} extra layer. Everything is in
 ########################
 %prep
 cd %{_builddir} || exit 1
-rm -Rf %{name}-%{version}-%{release}
-rm -Rf {{MODULE_LOWERCASE}}-%{version}-%{release}
-cat %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-%{release}-linux64.tar | tar -xf -
-mkdir %{name}-%{version}-%{release}
-mv {{MODULE_LOWERCASE}}-%{version}-%{release} %{name}-%{version}-%{release}/
-cd %{name}-%{version}-%{release}
+rm -Rf %{name}-%{version}-{{RELEASE_BUILD}}
+rm -Rf {{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}
+cat %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}-linux64.tar | tar -xf -
+mkdir %{name}-%{version}-{{RELEASE_BUILD}}
+mv {{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}} %{name}-%{version}-{{RELEASE_BUILD}}/
+cd %{name}-%{version}-{{RELEASE_BUILD}}
 rm -f mf*_link
 
 
@@ -325,9 +325,9 @@ ln -s {{MODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
     mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
 {% endif %}
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/* %{buildroot}{{MODULE_HOME}}/
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.dhash* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MODULE_HOME}}/
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
     ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
@@ -339,7 +339,7 @@ rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
     {% endif %}
 {% endif %}
 chmod -R a+rX %{buildroot}{{MODULE_HOME}}
-rm -Rf %{_builddir}/%{name}-%{version}-%{release} 2>/dev/null
+rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 {% if MODULE == "MFCOM" %}
     mkdir -p %{buildroot}/etc/security/limits.d/
     cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
