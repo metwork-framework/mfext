@@ -199,7 +199,7 @@ Summary: metwork {{MODULE_LOWERCASE}} module (with all layers)
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Requires: metwork-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% for DEP in layers %}
     {% if DEP.module == MODULE_LOWERCASE %}
         {% if DEP.label not in minimal_layers %}
