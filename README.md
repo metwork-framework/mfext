@@ -3,13 +3,18 @@
 
 [//]: # (automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/README.md)
 
-## Status (master branch)
+**Status (master branch)**
+
+
+
 [![Drone CI](http://metwork-framework.org:8000/api/badges/metwork-framework/mfext/status.svg)](http://metwork-framework.org:8000/metwork-framework/mfext)
 [![Maintenance](https://github.com/metwork-framework/resources/blob/master/badges/maintained.svg)]()
 [![License](https://github.com/metwork-framework/resources/blob/master/badges/bsd.svg)]()
 [![Gitter](https://github.com/metwork-framework/resources/blob/master/badges/community-en.svg)](https://gitter.im/metwork-framework/community-en?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Gitter](https://github.com/metwork-framework/resources/blob/master/badges/community-fr.svg)](https://gitter.im/metwork-framework/community-fr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+
+[//]: # (TABLE_OF_CONTENTS_PLACEHOLDER)
 
 ## What is MFEXT ?
 
@@ -239,6 +244,12 @@ $ # => the mfext environment is still loaded
 - (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
 
 
+
+
+## Reference documentation
+
+- (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
+- (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
 
 ## Installation guide
 
