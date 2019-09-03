@@ -19,12 +19,11 @@
 * [1\. What is MFEXT ?](#1-what-is-mfext-)
 * [2\. Quickstart](#2-quickstart)
 * [3\. More details](#3-more-details)
-* [4\. Reference documentations](#4-reference-documentations)
-* [5\. Reference documentation](#5-reference-documentation)
-* [6\. Installation guide](#6-installation-guide)
-* [7\. Contributing guide](#7-contributing-guide)
-* [8\. Code of Conduct](#8-code-of-conduct)
-* [9\. Sponsors](#9-sponsors)
+* [4\. Reference documentation](#4-reference-documentation)
+* [5\. Installation guide](#5-installation-guide)
+* [6\. Contributing guide](#6-contributing-guide)
+* [7\. Code of Conduct](#7-code-of-conduct)
+* [8\. Sponsors](#8-sponsors)
 
 
 
@@ -250,39 +249,34 @@ Python 3.7.3
 $ # => the mfext environment is still loaded
 ```
 
-## 4. Reference documentations
+
+
+
+## 4. Reference documentation
 
 - (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
 - (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
 
-
-
-
-## 5. Reference documentation
-
-- (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
-- (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
-
-## 6. Installation guide
+## 5. Installation guide
 
 See [this document](.metwork-framework/install_a_metwork_package.md).
 
 
 
 
-## 7. Contributing guide
+## 6. Contributing guide
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
 
-## 8. Code of Conduct
+## 7. Code of Conduct
 
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 
 
 
-## 9. Sponsors
+## 8. Sponsors
 
 *(If you are officially paid to work on MetWork Framework, please contact us to add your company logo here!)*
 
