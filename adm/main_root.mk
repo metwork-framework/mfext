@@ -40,6 +40,9 @@ after:: ;
 	_layer_dhash root@$(MODULE_LOWERCASE) >$(MODULE_HOME)/.dhash
 
 mrproper:: clean
+	if test "$(MFEXT_ADDON)" != ""; then $(MAKE) _addon_mrproper; else $(MAKE) _mrproper; fi
+
+_mrproper:
 	rm -Rf $(MODULE_HOME)/bin
 	rm -Rf $(MODULE_HOME)/sbin
 	rm -Rf $(MODULE_HOME)/lib
@@ -61,6 +64,9 @@ mrproper:: clean
 	rm -Rf $(MODULE_HOME)/cgi-bin
 	rm -f $(MODULE_HOME)/mf*_link
 	rm -f $(MODULE_HOME)/.layerapi2_*
+
+_addon_mrproper:
+	for L in $(MODULE_HOME)/opt/*; do A=`cat $${L}/.mfextaddon 2>/dev/null`; if test "$(MFEXT_ADDON_NAME)" != "" -a "$${A}" = "$(MFEXT_ADDON_NAME)"; then rm -Rf "$${L}"; fi; done
 
 doc:: predoc
 	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py $(MODULE_HOME) >packages.md

@@ -67,7 +67,7 @@ integration_tests_common: &integration_tests_common
     - if test -f .drone_downstream_bypass; then echo "step bypass"; exit 0; fi
 
     - yum -y localinstall metwork-mfext*.rpm
-    - /opt/metwork-mfext/bin/mfext_wrapper ./run_integration_tests.sh
+    - if test -d "integration_tests"; then cd integration_tests; /opt/metwork-mfext/bin/mfext_wrapper ./run_integration_tests.sh; cd ..; fi
 
 
 

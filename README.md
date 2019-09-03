@@ -1,9 +1,12 @@
 [![logo](https://raw.githubusercontent.com/metwork-framework/resources/master/logos/metwork-white-logo-small.png)](http://www.metwork-framework.org)
-# mfext
+#  mfext
 
 [//]: # (automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/README.md)
 
-## Status (master branch)
+**Status (master branch)**
+
+
+
 [![Drone CI](http://metwork-framework.org:8000/api/badges/metwork-framework/mfext/status.svg)](http://metwork-framework.org:8000/metwork-framework/mfext)
 [![Maintenance](https://github.com/metwork-framework/resources/blob/master/badges/maintained.svg)]()
 [![License](https://github.com/metwork-framework/resources/blob/master/badges/bsd.svg)]()
@@ -11,7 +14,21 @@
 [![Gitter](https://github.com/metwork-framework/resources/blob/master/badges/community-fr.svg)](https://gitter.im/metwork-framework/community-fr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
-## What is MFEXT ?
+**Table of contents**
+
+* [1\. What is MFEXT ?](#1-what-is-mfext-)
+* [2\. Quickstart](#2-quickstart)
+* [3\. More details](#3-more-details)
+* [4\. Reference documentations](#4-reference-documentations)
+* [5\. Reference documentation](#5-reference-documentation)
+* [6\. Installation guide](#6-installation-guide)
+* [7\. Contributing guide](#7-contributing-guide)
+* [8\. Code of Conduct](#8-code-of-conduct)
+* [9\. Sponsors](#9-sponsors)
+
+
+
+## 1. What is MFEXT ?
 
 This is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. This module does not contain any services, it is just a bunch of files and directories.
 
@@ -19,9 +36,9 @@ Usually **MFEXT** is just a dependency of other MetWork Framework **modules** (l
 
 [![asciicast](https://asciinema.org/a/uNsG6AaPkMeZ3Lb8NsW4vMkYa.png)](https://asciinema.org/a/uNsG6AaPkMeZ3Lb8NsW4vMkYa)
 
-### Concepts
+### 1.1 Concepts
 
-#### Layers
+#### 1.1.1 Layers
 
 **MFEXT** is staged in logical and/or technical **layers**. Some of them are optional,
 you can choose not to install them (for example, layers about Python2). Each layer contains
@@ -35,12 +52,12 @@ For example, here are some **layers** hosted on this repository:
 - `nodejs` which contains only one package: `nodejs`
 - [...]
 
-#### Components
+#### 1.1.2 Components
 
 Most of theses **components** are not
 maintained by the MetWork Framework team. For example, you will find inside a recent [Python](http://www.python.org) interpreter or some well known libraries like [CURL](https://curl.haxx.se/) or [GLIB2](https://developer.gnome.org/glib/).
 
-#### Add-ons
+#### 1.1.3 Add-ons
 
 This repository holds a lot of **layers** but you will also find extra **layers** in **MFEXT addons**
 repositories. Let's mention in particular [mfextaddon_scientific](https://github.com/metwork-framework/mfextaddon_scientific) which provides some **layers** with a lot of geospatial and
@@ -58,9 +75,9 @@ will find officially maintained **MFEXT addons**:
 
 An add-on can contain one or several extra **layers**.
 
-## Quickstart
+## 2. Quickstart
 
-### Installation
+### 2.1 Installation
 
 **On a Linux CentOS 7 box**
 
@@ -88,7 +105,7 @@ yum -y install metwork-mfext-minimal
 yum -y install metwork-mfext-layer-python2
 ```
 
-### Usage
+### 2.2 Usage
 
 ```console
 
@@ -141,7 +158,7 @@ $ python --version (latest Python 2.7 version, this is not the system version)
 Python 2.7.15
 ```
 
-## More details
+## 3. More details
 
 After installation, there is no service to initialize or to start.
 
@@ -158,7 +175,7 @@ So, to use this module, you have to load a kind of "mfext environment". There ar
 
 In the following, we use `{MFEXT_HOME}` as the installation directory of the `mfext` module. It's probably something like `/opt/metwork-mfext-{BRANCH}` or `/opt/metwork-mfext`. Have a look in `/opt` directory.
 
-### Load the mfext environment (for one command only)
+### 3.1 Load the mfext environment (for one command only)
 
 If you want to load the "mfext environment" for one command only and return back to a standard running environment after that, you can use the specific wrapper:
 
@@ -179,7 +196,7 @@ Python 2.6.6
 $ # => We are back to our original system python command
 ```
 
-### Load the mfext environment (for the whole shell session)
+### 3.2 Load the mfext environment (for the whole shell session)
 
 If you are tired to use `mfext_wrapper` repeatedly, you can load the "mfext environment"
 for the whole shell session with:
@@ -189,7 +206,7 @@ for the whole shell session with:
 
 See "Quickstart" section below for a complete example.
 
-### Load the mfext environment (automatically for one user)
+### 3.3 Load the mfext environment (automatically for one user)
 
 If you want to have a unix user with "always loaded" metwork environment, you can add:
 
@@ -209,7 +226,7 @@ alias mfext="source {MFEXT_HOME}/share/interactive_profile"
 
 in `.bash_profile` file and use this `mfext` alias when you want to quickly load the "mfext environment".
 
-### Unloading the mfext environment
+### 3.4 Unloading the mfext environment
 
 If you want to "unload" the "mfext environment" to launch an external command which doesn't play well with metwork libraries
 or tools (because of version conflicts for example), you can use the `outside` command wrapper.
@@ -233,33 +250,39 @@ Python 3.7.3
 $ # => the mfext environment is still loaded
 ```
 
-## Reference documentations
+## 4. Reference documentations
 
 - (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
 - (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
 
 
 
-## Installation guide
+
+## 5. Reference documentation
+
+- (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
+- (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
+
+## 6. Installation guide
 
 See [this document](.metwork-framework/install_a_metwork_package.md).
 
 
 
 
-## Contributing guide
+## 7. Contributing guide
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
 
-## Code of Conduct
+## 8. Code of Conduct
 
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 
 
 
-## Sponsors
+## 9. Sponsors
 
 *(If you are officially paid to work on MetWork Framework, please contact us to add your company logo here!)*
 
