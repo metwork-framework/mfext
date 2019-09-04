@@ -34,7 +34,14 @@
 {% if MFEXT_ADDON is not defined %}
     {% set MFEXT_ADDON = "0" %}
 {% endif %}
-{% set version_release = [VERSION_BUILD, RELEASE_BUILD] %}
+{% if METWORK_BUILD_OS == "centos6" %}
+    {% set RELEASE_BUILD_SUFFIX = ".el6" %}
+{% elif METWORK_BUILD_OS == "centos7" %}
+    {% set RELEASE_BUILD_SUFFIX = ".el7" %}
+{% else %}
+    {% set RELEASE_BUILD_SUFFIX = "" %}
+{% endif %}
+{% set version_release = [VERSION_BUILD, RELEASE_BUILD + RELEASE_BUILD_SUFFIX] %}
 {% set version_release_string = version_release|join('-') %}
 {% set epoch_vr = ["9", version_release_string] %}
 {% set FULL_VERSION = epoch_vr|join(':') %}
@@ -83,7 +90,7 @@ Summary: metwork {{MODULE_LOWERCASE}} symbolic link
 Summary: metwork {{MODULE_LOWERCASE}} symbolic link and stuff around the {{MODULE_LOWERCASE}} unix user
 {% endif %}
 Version: {{VERSION_BUILD}}
-Release: {{RELEASE_BUILD}}
+Release: {{RELEASE_BUILD}}{{RELEASE_BUILD_SUFFIX}}
 Epoch: 9
 License: Meteo
 Source0: {{MODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar
@@ -131,6 +138,7 @@ Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-python2
 Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
+Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
 {% endif %}
 # </to be removed someday>
 Provides: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
@@ -156,7 +164,7 @@ Requires: {{DEP.rpm}}
         {% endif %}
     {% else %}
         {# system dependencies #}
-        {% if METWORK_BUILD_OS|default('unknown') in DEP.oss %}
+        {% if METWORK_BUILD_OS|default('unknown') in DEP.oss or "all" in DEP.oss %}
 Requires: {{DEP.name}}
             {{ minimal_system_dependencies.append(DEP.name)|replace('None', '') }}
         {% endif %}
@@ -191,7 +199,7 @@ Summary: metwork {{MODULE_LOWERCASE}} module (with all layers)
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Requires: metwork-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% for DEP in layers %}
     {% if DEP.module == MODULE_LOWERCASE %}
         {% if DEP.label not in minimal_layers %}
@@ -245,7 +253,7 @@ Requires: {{LDEP.rpm}}
             {% else %}
                 {# system dependencies #}
                 {% if LDEP.name not in minimal_system_dependencies %}
-                    {% if METWORK_BUILD_OS|default('unknown') in LDEP.oss %}
+                    {% if METWORK_BUILD_OS|default('unknown') in LDEP.oss or "all" in LDEP.oss %}
 Requires: {{LDEP.name}}
                     {% endif %}
                 {% endif %}
@@ -263,12 +271,12 @@ metwork {{MODULE_LOWERCASE}} {{LAYER.name}} extra layer. Everything is in
 ########################
 %prep
 cd %{_builddir} || exit 1
-rm -Rf %{name}-%{version}-%{release}
-rm -Rf {{MODULE_LOWERCASE}}-%{version}-%{release}
-cat %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-%{release}-linux64.tar | tar -xf -
-mkdir %{name}-%{version}-%{release}
-mv {{MODULE_LOWERCASE}}-%{version}-%{release} %{name}-%{version}-%{release}/
-cd %{name}-%{version}-%{release}
+rm -Rf %{name}-%{version}-{{RELEASE_BUILD}}
+rm -Rf {{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}
+cat %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}-linux64.tar | tar -xf -
+mkdir %{name}-%{version}-{{RELEASE_BUILD}}
+mv {{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}} %{name}-%{version}-{{RELEASE_BUILD}}/
+cd %{name}-%{version}-{{RELEASE_BUILD}}
 rm -f mf*_link
 
 
@@ -317,9 +325,9 @@ ln -s {{MODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
     mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
 {% endif %}
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/* %{buildroot}{{MODULE_HOME}}/
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-%{release}/{{MODULE_LOWERCASE}}-%{version}-%{release}/.dhash* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MODULE_HOME}}/
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
+mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
     ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
@@ -331,7 +339,7 @@ rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
     {% endif %}
 {% endif %}
 chmod -R a+rX %{buildroot}{{MODULE_HOME}}
-rm -Rf %{_builddir}/%{name}-%{version}-%{release} 2>/dev/null
+rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 {% if MODULE == "MFCOM" %}
     mkdir -p %{buildroot}/etc/security/limits.d/
     cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF

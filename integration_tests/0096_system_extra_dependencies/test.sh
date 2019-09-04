@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-OK_DEPS=$(cat list.txt |xargs)
+OK_DEPS=$(cat list.txt list_ok_not_found.txt |xargs)
 
 N=$(cat /etc/redhat-release 2>/dev/null |grep -c "^CentOS release 6")
 if test "${N}" -eq 0; then
@@ -9,10 +9,14 @@ if test "${N}" -eq 0; then
     exit 0
 fi
 
-cd "${MODULE_HOME}" || exit 1
-DEPS=$(external_dependencies.sh |sed 's/usr//g' |sed 's/lib64//g' |sed 's~/~~g' |xargs)
-
+export PATH=${PATH}:${PWD}/..
 RET=0
+
+
+cd "${MODULE_HOME}" || exit 1
+DEPS1=$(external_dependencies.sh |awk -F '/' '{print $NF}' |xargs)
+DEPS2=$(external_dependencies_not_found.sh |xargs)
+DEPS=$(echo $DEPS1 $DEPS2)
 for DEP in ${DEPS}; do
     FOUND=0
     for OK_DEP in ${OK_DEPS}; do
@@ -32,7 +36,8 @@ for DEP in ${DEPS}; do
     RET=1
 done
 
+
 if test "${RET}" = "1"; then
     echo "extra dependencies found"
-    exit 1
+    #exit 1
 fi
