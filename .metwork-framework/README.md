@@ -219,8 +219,3 @@ $ python --version
 Python 3.7.3
 $ # => the mfext environment is still loaded
 ```
-
-## Reference documentations
-
-- (for **master** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
-- (for **release_0.8** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/release_0.8/mfext/) for reference documentation.
