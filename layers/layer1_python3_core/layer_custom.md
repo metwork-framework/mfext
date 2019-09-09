@@ -12,6 +12,13 @@ This layer is not loaded by default and conflicts with `python2_core` layer.
 So you have to use `layer_wrapper` or bash `layer_load` before using
 included packages.
 
-.. note:: there is also a :ref:`python3 wrapper<layer_root_python3_wrapper>` available in the :ref:`root layer<layer_root>` which is the way to go if you want to execute a python3 script without any question about currently loaded layers.
+.. note::
+    There is also a `python2` wrapper (see utilities) available in this layer which is the way to go if you want to execute a python2 script from a python3 environment (for example with this layer loaded).
+
+{% endblock %}
+
+{% block utilities %}
+
+{{ utility("layer_wrapper --layers=python2@mfext -- python3", displayed_name="python3") }}
 
 {% endblock %}

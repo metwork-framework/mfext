@@ -1,4 +1,10 @@
 #!/bin/bash
 
+if test "${1:-}" = "--help"; then
+    echo "usage: outside COMMAND COMMAND_ARG1 COMMAND_ARG2 ..."
+    echo "  => execute the given command outside the metwork environement"
+    exit 0
+fi
+
 # shellcheck disable=SC2048,SC2086
 exec layer_wrapper --empty -- $*

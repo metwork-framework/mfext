@@ -78,3 +78,5 @@ doc/CHANGELOG*.rst
 doc/changelogs.rst
 dtreetrawl/build
 layerapi2/build
+doc/installation_guide.md
+doc/installation_guide.rst
