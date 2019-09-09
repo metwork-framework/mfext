@@ -34,12 +34,15 @@
 {% if MFEXT_ADDON is not defined %}
     {% set MFEXT_ADDON = "0" %}
 {% endif %}
-{% if METWORK_BUILD_OS == "centos6" %}
-    {% set RELEASE_BUILD_SUFFIX = ".el6" %}
-{% elif METWORK_BUILD_OS == "centos7" %}
-    {% set RELEASE_BUILD_SUFFIX = ".el7" %}
-{% else %}
-    {% set RELEASE_BUILD_SUFFIX = "" %}
+{% set RELEASE_BUILD_SUFFIX = "" %}
+{% if METWORK_BUILD_OS is defined %}
+    {% if METWORK_BUILD_OS == "centos6" %}
+        {% set RELEASE_BUILD_SUFFIX = ".el6" %}
+    {% elif METWORK_BUILD_OS == "centos7" %}
+        {% set RELEASE_BUILD_SUFFIX = ".el7" %}
+    {% elif METWORK_BUILD_OS == "generic" %}
+        {% set RELEASE_BUILD_SUFFIX = ".gen" %}
+    {% endif %}
 {% endif %}
 {% set version_release = [VERSION_BUILD, RELEASE_BUILD + RELEASE_BUILD_SUFFIX] %}
 {% set version_release_string = version_release|join('-') %}

@@ -46,6 +46,8 @@ else:
     print("| Name | Version | Description |")
 print("| --- | --- | --- |")
 
+ADDON_NAME = os.environ.get('MFEXT_ADDON_NAME', None)
+
 
 def flter(value):
     value = value.replace('|', ' ')
@@ -61,7 +63,7 @@ def is_empty_or_unknown(str_to_check):
     return (str_to_check is None) or (str_to_check == '') or \
         (str_to_check.lower() == 'unknown')
 
-
+count = 0
 for tmp in sorted(yamls, key=lambda x: x[0]):
     fpath = tmp[1]
     print("Reading %s..." % fpath, file=sys.stderr)
@@ -83,6 +85,15 @@ for tmp in sorted(yamls, key=lambda x: x[0]):
             lhome = fpath.split('/share/metwork_packages/')[0]
             with open("%s/.layerapi2_label" % lhome, 'r') as g:
                 llabel = g.read().strip()
+            if ADDON_NAME:
+                addon = None
+                try:
+                    with open("%s/.mfextaddon" % lhome, "r") as h:
+                        addon = h.read().strip()
+                except FileNotFoundError:
+                    pass
+                if addon != ADDON_NAME:
+                    continue
             lname = llabel.split('@')[0]
             if args.not_sphinx:
                 description = lname
@@ -90,6 +101,7 @@ for tmp in sorted(yamls, key=lambda x: x[0]):
                 description = ":ref:`%s <layer_%s>`" % (lname, lname)
         else:
             description = flter(y['description'])
+        count = count + 1
         if args.not_sphinx:
             print("| %s | %s | %s |" %
                   (name_with_link, version,
@@ -100,7 +112,9 @@ for tmp in sorted(yamls, key=lambda x: x[0]):
                   (name_with_link, version,
                    description))
 print()
-if len(yaml_files) == 1:
+if count == 0:
+    print("*(0 component)*")
+elif count == 1:
     print("*(1 component)*")
 else:
-    print("*(%i components)*" % len(yaml_files))
+    print("*(%i components)*" % count)
