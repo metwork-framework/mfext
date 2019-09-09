@@ -38,8 +38,8 @@ build_common: &build_common
     - rm -Rf html_doc
     - if test -d /opt/metwork-mfext-$${TARGET_DIR}/html_doc; then cp -Rf /opt/metwork-mfext-$${TARGET_DIR}/html_doc . ; fi
     - if test -d /pub; then make test >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make_test.log 2>&1 || ( tail -200 /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make_test.log ; exit 1 ) else make test; fi
-    - if test "${OS_VERSION}" = "centos6"; then export METWORK_BUILD_OS=generic ; if test -d /pub; then make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make_rpm.log 2>&1 || ( tail -200 /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make_rpm.log ; exit 1 ) else make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm; fi; fi
-    - mv /opt/metwork-mfext-$${TARGET_DIR}/*.rpm . 2>/dev/null || true
+    - if test -d /pub; then make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm >/pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make_rpm.log 2>&1 || ( tail -200 /pub/metwork/continuous_integration/buildlogs/${DRONE_BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}/make_rpm.log ; exit 1 ) else make RELEASE_BUILD=${DRONE_BUILD_NUMBER} rpm; fi
+    - mv /opt/metwork-mfext-$${TARGET_DIR}/*.rpm .
   volumes:
     - /pub:/pub
     - /private:/private
@@ -50,8 +50,9 @@ publish_ci_common: &publish_ci_common
     - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
     - if test -d /buildcache; then export BUILDCACHE=/buildcache; fi
     - if test -f .drone_downstream_bypass; then echo "step bypass"; exit 0; fi
-    - mkdir -p /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/generic/
-    - ( cp *.rpm /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/generic/ 2>/dev/null && createrepo --update /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/generic ) || true
+    - mkdir -p /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
+    - cp *.rpm /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/
+    - createrepo --update /pub/metwork/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}
     - if test "${OS_VERSION}" = "centos6"; then rm -Rf /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext; mkdir -p /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext ; if test -d html_doc; then cp -Rf html_doc/* /pub/metwork/continuous_integration/docs/${DRONE_BRANCH}/mfext/ ; fi ; fi
     - touch "$${BUILDCACHE}/build_hash_`cat .build_hash`"
   volumes:
