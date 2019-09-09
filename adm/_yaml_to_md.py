@@ -8,27 +8,43 @@ import sys
 from unidecode import unidecode
 
 DESCRIPTION = "build a MD doc file about metwork components of the given layer"
+MODULE_HOME = os.environ['MODULE_HOME']
 parser = argparse.ArgumentParser(description=DESCRIPTION)
 parser.add_argument("--not-sphinx", action="store_true",
                     help='not sphinx rendering')
-parser.add_argument("LAYER_HOME", help='a layer home')
+parser.add_argument("LAYER_HOME", help='a layer home (if set to ALL, '
+                    'build for all layers)')
 
 args = parser.parse_args()
 layer_home = args.LAYER_HOME
-if not os.path.isdir(layer_home):
-    print("ERROR: %s must be a directory", file=sys.stderr)
-    sys.exit(1)
+if layer_home == "ALL":
+    all_mode = True
+else:
+    all_mode = False
+    if not os.path.isdir(layer_home):
+        print("ERROR: %s must be a directory", file=sys.stderr)
+        sys.exit(1)
 
-yaml_files = glob.glob("%s/share/metwork_packages/*.yaml" % layer_home)
+if all_mode:
+    yaml_files = glob.glob("%s/opt/*/share/metwork_packages/*.yaml" %
+                           MODULE_HOME)
+    yaml_files = yaml_files + glob.glob("%s/share/metwork_packages/*.yaml" %
+                                        MODULE_HOME)
+else:
+    yaml_files = glob.glob("%s/share/metwork_packages/*.yaml" % layer_home)
 if len(yaml_files) == 0:
     sys.exit(0)
 
-if args.not_sphinx:
-    print("Name | Version | Description | Home Page")
-    print("-----|---------|-------------|----------")
+yamls = []
+for yaml_file in yaml_files:
+    yamls.append((os.path.basename(yaml_file), yaml_file))
+
+
+if all_mode:
+    print("| Name | Version | Layer |")
 else:
-    print("Name | Version | Description | Home Page| |")
-    print("-----|---------|-------------|----------|-|")
+    print("| Name | Version | Description |")
+print("| --- | --- | --- |")
 
 
 def flter(value):
@@ -46,7 +62,8 @@ def is_empty_or_unknown(str_to_check):
         (str_to_check.lower() == 'unknown')
 
 
-for fpath in sorted(yaml_files):
+for tmp in sorted(yamls, key=lambda x: x[0]):
+    fpath = tmp[1]
     print("Reading %s..." % fpath, file=sys.stderr)
     with open(fpath, 'r', encoding="utf-8") as f:
         raw_content = f.read()
@@ -62,17 +79,26 @@ for fpath in sorted(yaml_files):
 
         name_with_link = "[{}]({})".format(name, website)
 
-        if args.not_sphinx:
-            print("%s | %s | %s | %s" %
-                  (name_with_link, version,
-                   flter(y['description']),
-                   website))
+        if all_mode:
+            lhome = fpath.split('/share/metwork_packages/')[0]
+            with open("%s/.layerapi2_label" % lhome, 'r') as g:
+                llabel = g.read().strip()
+            lname = llabel.split('@')[0]
+            if args.not_sphinx:
+                description = lname
+            else:
+                description = ":ref:`%s <layer_%s>`" % (lname, lname)
         else:
-            print("%s | %s | %s | %s | %s" %
+            description = flter(y['description'])
+        if args.not_sphinx:
+            print("| %s | %s | %s |" %
                   (name_with_link, version,
-                   flter(y['description']),
-                   website,
-                   ".. index:: {}-{} package".format(name, version)))
+                   description))
+        else:
+            index = ".. index:: {}-{} package".format(name, version)
+            print("| %s | %s | %s |" %
+                  (name_with_link, version,
+                   description))
 print()
 if len(yaml_files) == 1:
     print("*(1 component)*")
