@@ -73,7 +73,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'mfext'
-copyright = u'2017, MetWork'
+copyright = u'2017-2019, MetWork'
 author = u'MetWork'
 
 # The version info for the project you're documenting, acts as replacement for
