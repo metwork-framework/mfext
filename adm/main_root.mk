@@ -69,6 +69,7 @@ _addon_mrproper:
 	for L in $(MODULE_HOME)/opt/*; do A=`cat $${L}/.mfextaddon 2>/dev/null`; if test "$(MFEXT_ADDON_NAME)" != "" -a "$${A}" = "$(MFEXT_ADDON_NAME)"; then rm -Rf "$${L}"; fi; done
 
 doc:: predoc
+	cd doc && make clean
 	@mkdir -p .metwork-framework
 	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py --not-sphinx ALL >.metwork-framework/components.md
 	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py $(MODULE_HOME) >packages.md
@@ -76,7 +77,7 @@ doc:: predoc
 	rm -f packages.md
 	if test -d layers; then cd layers && $(MAKE) doc; fi
 	if test -d extra_layers; then cd extra_layers && $(MAKE) doc; fi
-	if test -d doc; then cd doc && make clean && layer_wrapper --layers=devtools@mfext,-python3@$(MODULE_LOWERCASE) -- make html && rm -Rf $(MODULE_HOME)/html_doc && cp -Rf _build/html $(MODULE_HOME)/html_doc; fi
+	if test -d doc; then cd doc && layer_wrapper --layers=devtools@mfext,-python3@$(MODULE_LOWERCASE) -- make html && rm -Rf $(MODULE_HOME)/html_doc && cp -Rf _build/html $(MODULE_HOME)/html_doc; fi
 
 predoc:: ;
 

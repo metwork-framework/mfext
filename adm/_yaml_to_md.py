@@ -63,6 +63,7 @@ def is_empty_or_unknown(str_to_check):
     return (str_to_check is None) or (str_to_check == '') or \
         (str_to_check.lower() == 'unknown')
 
+
 count = 0
 for tmp in sorted(yamls, key=lambda x: x[0]):
     fpath = tmp[1]
@@ -107,10 +108,13 @@ for tmp in sorted(yamls, key=lambda x: x[0]):
                   (name_with_link, version,
                    description))
         else:
-            index = ".. index:: {}-{} package".format(name, version)
+            if all_mode:
+                index = version
+            else:
+                index = ":index:`{} <single: {} package>`".format(version,
+                                                                  name)
             print("| %s | %s | %s |" %
-                  (name_with_link, version,
-                   description))
+                  (name_with_link, index, description))
 print()
 if count == 0:
     print("*(0 component)*")
