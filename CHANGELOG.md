@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add some system dependencies
 - refactoring about #437, #432, #420
 - embed tcl/tk libraries and build python2/3 with them
 - embed libpng
