@@ -21,4 +21,13 @@ See also [layerapi2 README for details](https://github.com/metwork-framework/lay
 {{ utility("is_layer_loaded", level="#####") }}
 {{ utility("layer_wrapper", level="#####") }}
 
+##### misc utilities
+
+{{ utility("echo_ok", level="#####") }}
+{{ utility("echo_bold", level="#####") }}
+{{ utility("echo_nok", level="#####") }}
+{{ utility("echo_warning", level="#####") }}
+{{ utility("echo_running", level="#####") }}
+{{ utility("get_unique_hexa_identifier", level="#####") }}
+
 {% endblock %}
