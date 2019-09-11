@@ -37,7 +37,9 @@ adm/root.mk:
 	exit 1
 
 after:: ;
-	_layer_dhash root@$(MODULE_LOWERCASE) >$(MODULE_HOME)/.dhash
+	if test "$(MFEXT_ADDON)" != "1"; then _layer_dhash root@$(MODULE_LOWERCASE) >$(MODULE_HOME)/.dhash; fi
+	@mkdir -p .metwork-framework
+	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py --not-sphinx ALL >.metwork-framework/components.md
 
 mrproper:: clean
 	if test "$(MFEXT_ADDON)" != ""; then $(MAKE) _addon_mrproper; else $(MAKE) _mrproper; fi
@@ -70,10 +72,9 @@ _addon_mrproper:
 
 doc:: predoc
 	cd doc && make clean
-	@mkdir -p .metwork-framework
-	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py --not-sphinx ALL >.metwork-framework/components.md
 	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py $(MODULE_HOME) >packages.md
 	_doc_layer.sh root >$(SRC_DIR)/doc/layer_root.md
+	if test "$(MFEXT_ADDON)" != "1"; then _doc_layer.sh root >$(SRC_DIR)/doc/layer_root.md; fi
 	rm -f packages.md
 	if test -d layers; then cd layers && $(MAKE) doc; fi
 	if test -d extra_layers; then cd extra_layers && $(MAKE) doc; fi
