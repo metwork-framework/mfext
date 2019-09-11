@@ -16,3 +16,4 @@ libxcb-shm.so.0()(64bit)@generic
 libxcb.so.1()(64bit)@generic
 libXext.so.6()(64bit)@generic
 libXrender.so.1()(64bit)@generic
+libpixman-1.so.0()(64bit)@generic
