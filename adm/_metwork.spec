@@ -291,18 +291,16 @@ rm -f mf*_link
 %pre {{MODULE_BRANCH}}
         N=`cat /etc/group |grep '^metwork:' |wc -l`
         if test ${N} -eq 0; then
+            echo "INFO: creating metwork unix local group"
             groupadd metwork >/dev/null 2>&1 || true
         fi
         N=`cat /etc/passwd |grep '^{{MODULE_LOWERCASE}}:' |wc -l`
         if test ${N} -eq 0; then
+            echo "INFO: creating {{MODULE_LOWERCASE}} unix local user"
             useradd -d /home/{{MODULE_LOWERCASE}} -g metwork -s /bin/bash {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
-            # FIXME: we don't probably want default passwords
-            echo {{MODULE_LOWERCASE}} |passwd --stdin {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
             {% if MODULE == "MFDATA" %}
-                # FIXME: depose is a french word
-                useradd -M -d /home/{{MODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin depose >/dev/null 2>&1 || true
-                # FIXME: we don't probably want default passwords
-                echo depose |passwd --stdin {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
+                echo "INFO: creating upload unix local group"
+                useradd -M -d /home/{{MODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin upload >/dev/null 2>&1 || true
                 chmod g+rx /home/{{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
             {% endif %}
             rm -Rf /home/{{MODULE_LOWERCASE}}
@@ -385,8 +383,17 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         cp -f {{MFCOM_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
         chmod 0755 /etc/rc.d/init.d/metwork
         chown root:root /etc/rc.d/init.d/metwork
-        if test `/sbin/chkconfig --list metwork 2>/dev/null |wc -l` -eq 0; then
-            /sbin/chkconfig --add metwork >/dev/null 2>&1
+        if test -d /usr/lib/systemd/system; then
+            if ! test -f /usr/lib/systemd/system/metwork.service; then
+                echo "INFO: creating metwork systemd service"
+            fi
+            cp -f {{MFCOM_HOME}}/share/metwork.service /usr/lib/systemd/system/metwork.service
+            systemctl reload metwork.service >/dev/null 2>&1 || true
+            systemctl enable metwork.service >/dev/null 2>&1 || true
+        else
+            if test `/sbin/chkconfig --list metwork 2>/dev/null |wc -l` -eq 0; then
+                /sbin/chkconfig --add metwork >/dev/null 2>&1
+            fi
         fi
     {% endif %}
     {% if MODULE == "MFDATA" %}
@@ -412,7 +419,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         export SAVE_SUFFIX="rpmsave`date '+%Y%m%d%H%M%''S'`"
         {% if MODULE_HAS_HOME_DIR == "1" %}
             if test -d /home/{{MODULE_LOWERCASE}}; then
-                echo "Saving old /home/{{MODULE_LOWERCASE}} to /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+                echo "INFO: saving old /home/{{MODULE_LOWERCASE}} to /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
                 mv /home/{{MODULE_LOWERCASE}} /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}
                 rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
@@ -429,7 +436,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         {% endif %}
         N=`find /etc/metwork.config.d/{{MODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
-            echo "Saving old /etc/metwork.config.d/{{MODULE_LOWERCASE}} to /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+            echo "INFO: saving old /etc/metwork.config.d/{{MODULE_LOWERCASE}} to /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
             mv /etc/metwork.config.d/{{MODULE_LOWERCASE}} /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}
         fi
         rm -Rf /etc/metwork.config.d/{{MODULE_LOWERCASE}}

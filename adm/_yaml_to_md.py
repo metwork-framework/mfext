@@ -67,7 +67,6 @@ def is_empty_or_unknown(str_to_check):
 count = 0
 for tmp in sorted(yamls, key=lambda x: x[0]):
     fpath = tmp[1]
-    print("Reading %s..." % fpath, file=sys.stderr)
     with open(fpath, 'r', encoding="utf-8") as f:
         raw_content = f.read()
         y = yaml.load(unidecode(raw_content))

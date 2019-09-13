@@ -212,12 +212,7 @@ napoleon_use_admonition_for_notes = False
 napoleon_use_admonition_for_references = False
 napoleon_use_ivar = True
 napoleon_use_param = False
-
-
-def skip(app, what, name, obj, skip, options):
-    if name == "__init__":
-        return False
-        return skip
+autoclass_content = 'both'
 
 
 def build_intersphinx_mapping_url(current_module, module):

@@ -4,9 +4,9 @@ SPHINXPROJ    = mfext
 SOURCEDIR     = .
 BUILDDIR      = _build
 
-RST_FILES=$(shell ls *.md |grep -v tempo.md 2>/dev/null |sed 's/\.md$$/\.rst/g')
-COMMON_DOCFILES=$(shell cd ../.metwork-framework && ls configure_a_metwork_package.md README.md installation_guide.md components.md |sed 's/\.md$$/\.rst/g' 2>/dev/null)
-CHANGELOGS_FILES=$(shell cd .. && ls CHANGELOG.md |sed 's/\.md$$/\.rst/g' && ls -r CHANGELOG-*.md |sed 's/\.md$$/\.rst/g')
+RST_FILES=$(shell ls *.md 2>/dev/null |grep -v tempo.md |sed 's/\.md$$/\.rst/g')
+COMMON_DOCFILES=$(shell cd ../.metwork-framework && ls configure_a_metwork_package.md README.md installation_guide.md components.md 2>/dev/null |sed 's/\.md$$/\.rst/g')
+CHANGELOGS_FILES=$(shell cd .. && ls CHANGELOG.md 2>/dev/null |sed 's/\.md$$/\.rst/g' && ls -r CHANGELOG-*.md 2>/dev/null |sed 's/\.md$$/\.rst/g')
 CHANGELOGS_RST_TMPL=changelogs.tmpl
 CHANGELOGS_RST_FILE=changelogs.rst
 
