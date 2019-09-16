@@ -19,3 +19,4 @@ libstdc++.so.6()(64bit)@generic
 /usr/bin/find@generic
 /usr/bin/uptime@generic
 /usr/bin/awk@generic
+/usr/bin/lscpu@generic
