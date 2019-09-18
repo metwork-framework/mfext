@@ -21,12 +21,12 @@ fi
 if test ${IS_INTERACTIVE} -eq 1; then
     # We load the "interactive profile"
     # shellcheck disable=SC1091
-    . "{{MODULE_HOME}}/share/interactive_profile"
+    . "{{MFMODULE_HOME}}/share/interactive_profile"
 fi
 
-{% if MODULE=="MFBASE" or MODULE=="MFSERV" or MODULE=="MFDATA" %}
+{% if MFMODULE=="MFBASE" or MFMODULE=="MFSERV" or MFMODULE=="MFDATA" %}
 # Specific commands for plugin env
-PLUGIN_DIR="{% raw %}${{% endraw %}{{MODULE}}_CURRENT_PLUGIN_DIR:-}"
+PLUGIN_DIR="{% raw %}${{% endraw %}{{MFMODULE}}_CURRENT_PLUGIN_DIR:-}"
 if test "${PLUGIN_DIR}" != ""; then
     if test -L "${PLUGIN_DIR}"; then
         LK=$(readlink -s "${PLUGIN_DIR}" 2>/dev/null)

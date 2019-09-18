@@ -3,41 +3,41 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" = "--help"; then
-    echo "usage {{MODULE_LOWERCASE}}.start"
-    echo "  => stop the {{MODULE_LOWERCASE}} module"
+    echo "usage {{MFMODULE_LOWERCASE}}.start"
+    echo "  => stop the {{MFMODULE_LOWERCASE}} module"
     exit 0
 fi
 
 exit_if_root
 
-cd "${MODULE_RUNTIME_HOME}" || exit 1
+cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
-{% if MODULE not in ["MFEXT", "MFCOM"] %}
-CONFIG_TARGET=$(readlink -f "${MODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
+{% if MFMODULE not in ["MFEXT", "MFCOM"] %}
+CONFIG_TARGET=$(readlink -f "${MFMODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
 if test "${CONFIG_TARGET}" != ""; then
     CONFIG_TIMESTAMP=$(date -r "${CONFIG_TARGET}" +%s 2>/dev/null)
     if test "${CONFIG_TIMESTAMP}" != ""; then
-        if test "{% raw %}${{% endraw %}{{MODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
-            echo_bold "ERROR: your environment is outdated => please reload your terminal before playing with {{MODULE_LOWERCASE}}.start/stop"
+        if test "{% raw %}${{% endraw %}{{MFMODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
+            echo_bold "ERROR: your environment is outdated => please reload your terminal before playing with {{MFMODULE_LOWERCASE}}.start/stop"
             exit 1
         fi
     fi
 fi
 {% endif %}
 
-STARTUP_FLAG=`env |grep "^${MODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
+STARTUP_FLAG=`env |grep "^${MFMODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
 if test "${STARTUP_FLAG}" = "0"; then
-    echo_bold "${MODULE}_STARTUP_FLAG=0 => nothing to start"
+    echo_bold "${MFMODULE}_STARTUP_FLAG=0 => nothing to start"
     exit 0
 fi
 
-PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
+PLUGIN_NAME=$(env |grep ^{{MFMODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
 if test "${PLUGIN_NAME}" != ""; then
-    echo "ERROR: you can't use {{MODULE_LOWERCASE}}.stop inside a plugin_env"
+    echo "ERROR: you can't use {{MFMODULE_LOWERCASE}}.stop inside a plugin_env"
     exit 1
 fi
 
-LINE="*****     STOPPING ${MODULE}     *****"
+LINE="*****     STOPPING ${MFMODULE}     *****"
 N=`echo "${LINE}" |wc -c`
 HEADER=`echo "**************************************************************" |cut -c 2-${N}`
 echo_bold "${HEADER}"
@@ -45,7 +45,7 @@ echo_bold "${LINE}"
 echo_bold "${HEADER}"
 echo "  "
 
-echo STOPPING >${MODULE_RUNTIME_HOME}/var/status
+echo STOPPING >${MFMODULE_RUNTIME_HOME}/var/status
 
 _uninstall_crontab.sh
 
@@ -53,7 +53,7 @@ _uninstall_crontab.sh
 # Can be replaced by mfxxx.stop.custom
 {% endblock %}
 
-if test -f ${MODULE_HOME}/config/circus.ini; then
+if test -f ${MFMODULE_HOME}/config/circus.ini; then
     _circus.stop
 fi
 echo -n "- Killing remainging processes (if any)..."
@@ -81,9 +81,9 @@ else
     echo_nok "${KILLED} remaining processes"
     echo_bold "see the output of the kill_remaining_processes.py command"
 fi
-rm -f ${MODULE_RUNTIME_HOME}/var/*.socket >/dev/null 2>&1
+rm -f ${MFMODULE_RUNTIME_HOME}/var/*.socket >/dev/null 2>&1
 
-echo STOPPED >${MODULE_RUNTIME_HOME}/var/status
+echo STOPPED >${MFMODULE_RUNTIME_HOME}/var/status
 
 echo " "
 echo " "

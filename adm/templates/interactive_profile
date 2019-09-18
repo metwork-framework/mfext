@@ -1,5 +1,5 @@
 # We load the "non interactive" profile
-. {{MODULE_HOME}}/share/profile
+. {{MFMODULE_HOME}}/share/profile
 
 function __prompt_without_x_mode() {
     local X_MODE=`echo $- |grep -c 'x'`
@@ -14,7 +14,7 @@ function __prompt_without_x_mode() {
     fi
 }
 
-{% if MODULE == "MFBASE" or MODULE == "MFSERV" or MODULE == "MFDATA" %}
+{% if MFMODULE == "MFBASE" or MFMODULE == "MFSERV" or MFMODULE == "MFDATA" %}
 function plugin_env() {
     local PLUGIN=$1
     if test "${PLUGIN}" = ""; then
@@ -25,7 +25,7 @@ function plugin_env() {
                 export PIP_PREFIX="$(pwd)/local"
                 _OLD_LAYERAPI2_LAYERS_PATH="${LAYERAPI2_LAYERS_PATH}"
                 field_prepend LAYERAPI2_LAYERS_PATH "$(pwd)"
-                plugin_wrapper "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+                plugin_wrapper "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')" -- bash --rcfile "${MFMODULE_HOME}/share/bash_profile"
                 export LAYERAPI2_LAYERS_PATH="${_OLD_LAYERAPI2_LAYERS_PATH}"
                 unset PIP_PREFIX
                 unset _OLD_LAYERAPI2_LAYERS_PATH
@@ -35,9 +35,9 @@ function plugin_env() {
         echo "usage: plugin_env PLUGIN_NAME or plugin_env (inside a plugin dir)"
         return 1
     fi
-    N=$(is_layer_installed "plugin_${PLUGIN}@${MODULE_LOWERCASE}")
+    N=$(is_layer_installed "plugin_${PLUGIN}@${MFMODULE_LOWERCASE}")
     if test "${N}" = "0"; then
-        echo "Error: layer: plugin_${PLUGIN}@${MODULE_LOWERCASE} is not available"
+        echo "Error: layer: plugin_${PLUGIN}@${MFMODULE_LOWERCASE} is not available"
         echo
         echo "Maybe the plugin: ${PLUGIN} is not installed ?"
         echo
@@ -45,7 +45,7 @@ function plugin_env() {
         return
     fi
     export PIP_PREFIX=$(plugins.info "${PLUGIN}" |grep "^Installation home:" |awk -F ': ' '{print $2;}')/local
-    plugin_wrapper "${PLUGIN}" -- bash --rcfile "${MODULE_HOME}/share/bash_profile"
+    plugin_wrapper "${PLUGIN}" -- bash --rcfile "${MFMODULE_HOME}/share/bash_profile"
     unset PIP_PREFIX
 }
 {% endif %}
@@ -63,14 +63,14 @@ if test "${LIQUIDPROMPT}" != "0"; then
         export LP_ENABLE_BZR=0
         export LP_ENABLE_RUNTIME=0
         export LP_ENABLE_VIRTUALENV=0
-        PLUGIN_NAME=$(env |grep "^${MODULE}_CURRENT_PLUGIN_NAME" |awk -F '=' '{print $2;}')
+        PLUGIN_NAME=$(env |grep "^${MFMODULE}_CURRENT_PLUGIN_NAME" |awk -F '=' '{print $2;}')
         . {{MFEXT_HOME}}/opt/core/share/liquidprompt/liquidprompt >/dev/null 2>&1
         PROMPT_COMMAND=__prompt_without_x_mode
-        if test "{{MODULE_LOWERCASE}}" != "`whoami`"; then
+        if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
             if test "${PLUGIN_NAME}" != ""; then
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MODULE}}, env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
             else
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MODULE}}${LP_MARK_BATTERY}"
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
             fi
         else
             if test "${PLUGIN_NAME}" != ""; then
@@ -91,8 +91,8 @@ if test "${LAUNCH_CRONTAB}" != ""; then
 fi
 alias debug="metwork_debug"
 
-{% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
-alias circusctl="_circusctl --endpoint {% raw %}${{% endraw %}{{MODULE}}{% raw %}_CIRCUS_ENDPOINT}{% endraw %} --timeout=10"
+{% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
+alias circusctl="_circusctl --endpoint {% raw %}${{% endraw %}{{MFMODULE}}{% raw %}_CIRCUS_ENDPOINT}{% endraw %} --timeout=10"
 {% endif %}
 
 if test "${PROFILE_ERROR}" = "1"; then
@@ -115,7 +115,7 @@ EOF
 
 if test -x ${MFCOM_HOME}/bin/mfcom_wrapper; then
     echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
-    echo "(module: ${MODULE}, version: ${MODULE_VERSION})"
+    echo "(module: ${MFMODULE}, version: ${MFMODULE_VERSION})"
     echo
 fi
 

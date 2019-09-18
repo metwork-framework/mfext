@@ -21,13 +21,13 @@ fi
 layer_unload root@mfext >/dev/null 2>&1
 
 # We load the given layer
-layer_load_without_optional "${1}@${MODULE_LOWERCASE}" >/dev/null 2>&1
+layer_load_without_optional "${1}@${MFMODULE_LOWERCASE}" >/dev/null 2>&1
 
 LABELS=$(layers --raw --loaded-filter=yes |awk '{print $1;}')
 
 ( echo "["
 NEED_COMMA=0
-for LABEL in ${LABELS} default@${MODULE_LOWERCASE}; do
+for LABEL in ${LABELS} default@${MFMODULE_LOWERCASE}; do
     NAME=$(echo "${LABEL}" |awk -F '@' '{print $1;}')
     MOD=$(echo "${LABEL}" |awk -F '@' '{print $2;}')
     HOM=$(get_layer_home "${LABEL}")
@@ -47,7 +47,7 @@ for LABEL in ${LABELS} default@${MODULE_LOWERCASE}; do
         BRANCH="$2"
     fi
     RPM="metwork-${MOD}-layer-${NAME}-${BRANCH}"
-    if test "${NAME}" != "${1}" -o "${MOD}" != "${MODULE_LOWERCASE}"; then
+    if test "${NAME}" != "${1}" -o "${MOD}" != "${MFMODULE_LOWERCASE}"; then
         echo "{\"name\": \"${NAME}\", \"label\": \"${LABEL}\", \"module\": \"${MOD}\", \"addon\": \"${V}\", \"home\": \"${HOM}\", \"branch\": \"${BRANCH}\", \"rpm\": \"${RPM}\", \"type\": \"metwork\"}"
         NEED_COMMA=1
     fi

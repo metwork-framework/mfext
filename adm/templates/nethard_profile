@@ -1,4 +1,4 @@
-{% if MODULE == "MFCOM" %}
+{% if MFMODULE == "MFCOM" %}
 
     # no cache
     source <(_make_nethard_config.py)
@@ -7,24 +7,24 @@
 
 UUID=`cat /proc/sys/kernel/random/uuid |sed 's/-//g'`
 
-cache_get ${MODULE_RUNTIME_HOME}/tmp/system.cache 1440 >${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
-if test -s ${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}; then
+cache_get ${MFMODULE_RUNTIME_HOME}/tmp/system.cache 1440 >${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
+if test -s ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}; then
     # A cache is available, let's use it
 
-    . ${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
+    . ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
 
 else
     # No cache, let's compute
-    _make_nethard_config.py >${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+    _make_nethard_config.py >${MFMODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
 
     if test "${PROFILE_ERROR}" != "1"; then
-        cache_set_from_file ${MODULE_RUNTIME_HOME}/tmp/system.cache ${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+        cache_set_from_file ${MFMODULE_RUNTIME_HOME}/tmp/system.cache ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
     fi
-    . ${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
-    rm -f ${MODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+    . ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
+    rm -f ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.write.${UUID}
 
 fi
-rm -f ${MODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
+rm -f ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
 
 {% endif %}
 

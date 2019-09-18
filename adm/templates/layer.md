@@ -31,9 +31,9 @@
 #### Layer Home
 
 {% if LAYER_NAME == "root" %}
-`{{MODULE_HOME}}`
+`{{MFMODULE_HOME}}`
 {% else %}
-`{{MODULE_HOME}}/opt/{{LAYER_NAME}}`
+`{{MFMODULE_HOME}}/opt/{{LAYER_NAME}}`
 {% endif %}
 
 #### Label
@@ -108,25 +108,25 @@
 
 {% endblock %}
 
-{% if self.utilities() or MODULE not in ['MFEXT', 'MFCOM'] %}
+{% if self.utilities() or MFMODULE not in ['MFEXT', 'MFCOM'] %}
 ### Utilities
 {% endif %}
 
-{% if MODULE not in ['MFEXT', 'MFCOM'] and LAYER_NAME == "root" %}
+{% if MFMODULE not in ['MFEXT', 'MFCOM'] and LAYER_NAME == "root" %}
 
-#### {{MODULE_LOWERCASE}}.stop
+#### {{MFMODULE_LOWERCASE}}.stop
 
-Stop the `{{MODULE_LOWERCASE}}` module. This is nearly
-the same thing than `service metwork stop {{MODULE_LOWERCASE}}` (as `root` user).
+Stop the `{{MFMODULE_LOWERCASE}}` module. This is nearly
+the same thing than `service metwork stop {{MFMODULE_LOWERCASE}}` (as `root` user).
 
-#### {{MODULE_LOWERCASE}}.status
+#### {{MFMODULE_LOWERCASE}}.status
 
-Get the status of the `{{MODULE_LOWERCASE}}` module. This is nearly
-the same thing than `service metwork status {{MODULE_LOWERCASE}}` (as `root` user).
+Get the status of the `{{MFMODULE_LOWERCASE}}` module. This is nearly
+the same thing than `service metwork status {{MFMODULE_LOWERCASE}}` (as `root` user).
 
 The (unix) return code will be `0` if the module is ok.
 
-{{ utility(MODULE_LOWERCASE + "_wrapper") }}
+{{ utility(MFMODULE_LOWERCASE + "_wrapper") }}
 
 {% endif %}
 

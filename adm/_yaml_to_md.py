@@ -8,7 +8,7 @@ import sys
 from unidecode import unidecode
 
 DESCRIPTION = "build a MD doc file about metwork components of the given layer"
-MODULE_HOME = os.environ['MODULE_HOME']
+MFMODULE_HOME = os.environ['MFMODULE_HOME']
 parser = argparse.ArgumentParser(description=DESCRIPTION)
 parser.add_argument("--not-sphinx", action="store_true",
                     help='not sphinx rendering')
@@ -27,9 +27,9 @@ else:
 
 if all_mode:
     yaml_files = glob.glob("%s/opt/*/share/metwork_packages/*.yaml" %
-                           MODULE_HOME)
+                           MFMODULE_HOME)
     yaml_files = yaml_files + glob.glob("%s/share/metwork_packages/*.yaml" %
-                                        MODULE_HOME)
+                                        MFMODULE_HOME)
 else:
     yaml_files = glob.glob("%s/share/metwork_packages/*.yaml" % layer_home)
 if len(yaml_files) == 0:

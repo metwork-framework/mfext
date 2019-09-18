@@ -17,9 +17,9 @@ export LAYER_NAME=${1}
 if test "${LAYER_NAME}" = "root"; then
     touch packages.md
 else
-    layer_wrapper --layers=python3_devtools@mfext -- "${MFEXT_HOME}/bin/_yaml_to_md.py" "${MODULE_HOME}/opt/${LAYER_NAME}" >packages.md
+    layer_wrapper --layers=python3_devtools@mfext -- "${MFEXT_HOME}/bin/_yaml_to_md.py" "${MFMODULE_HOME}/opt/${LAYER_NAME}" >packages.md
     if test $? -ne 0; then
-        echo "ERROR DURING layer_wrapper --layers=python3_devtools@mfext -- ${MFEXT_HOME}/bin/_yaml_to_md.py ${MODULE_HOME}/opt/${LAYER_NAME}"
+        echo "ERROR DURING layer_wrapper --layers=python3_devtools@mfext -- ${MFEXT_HOME}/bin/_yaml_to_md.py ${MFMODULE_HOME}/opt/${LAYER_NAME}"
         exit 1
     fi
 fi

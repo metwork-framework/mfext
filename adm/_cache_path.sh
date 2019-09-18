@@ -55,4 +55,4 @@ SH=$( (git ls-files "${2}" |sort |xargs -n1 md5sum) |md5sum |awk '{print $1;}')
 echoerr "source hash: ${SH}"
 
 H=$(echo "${H0}_${H1}_${LH}_${SH}" |md5sum |awk '{print $1;}')
-echo "${BUILDCACHE}/${MODULE_LOWERCASE}_cache_${LABEL}_${H}.tar"
+echo "${BUILDCACHE}/${MFMODULE_LOWERCASE}_cache_${LABEL}_${H}.tar"

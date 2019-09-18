@@ -17,7 +17,7 @@ fi
 TMPF=/tmp/module_hash.$$
 rm -f "${TMPF}"
 touch "${TMPF}"
-for T in $(layers --raw |grep "@${MODULE_LOWERCASE}" |sed 's/ /#/g'); do
+for T in $(layers --raw |grep "@${MFMODULE_LOWERCASE}" |sed 's/ /#/g'); do
     LABEL="$(echo "${T}" |awk -F '#' '{print $1;}')"
     layer_hash "${LABEL}" >>"${TMPF}"
 done

@@ -26,9 +26,9 @@ First of all, we set in `LAYERAPI2_LAYERS_PATH`:
 - `${MFEXT_HOME}/opt`
 - `${MFCOM_HOME}` (if the current module is not `mfext`)
 - `${MFCOM_HOME}/opt` (if the current module is not `mfext`)
-- `${MODULE_HOME}` (if the current module is not `mfext` and `mfcom`)
-- `${MODULE_HOME}/opt` (if the current module is not `mfext` and `mfcom`)
-- `${MODULE_RUNTIME_HOME}/var/plugins` (if the current module is `mfserv`, `mfbase` or `mfdata`)
+- `${MFMODULE_HOME}` (if the current module is not `mfext` and `mfcom`)
+- `${MFMODULE_HOME}/opt` (if the current module is not `mfext` and `mfcom`)
+- `${MFMODULE_RUNTIME_HOME}/var/plugins` (if the current module is `mfserv`, `mfbase` or `mfdata`)
 
 So we have a kind of layers inheritance. For example: `mfserv => mfcom => mfext`.
 
@@ -62,9 +62,9 @@ The layer home of `foo@mfserv` (for example) is always:
 There are two exceptions:
 
 - one for `root@module_name_in_lowercase` (see "special layers") (for this one,
-its layer home is : `${MODULE_HOME}`)
+its layer home is : `${MFMODULE_HOME}`)
 - one for `plugin_foo@module_name_in_lowercase` (see "special layers") (for these layers,
-their layer home is `${MODULE_RUNTIME_HOME}/var/plugins/foo`)
+their layer home is `${MFMODULE_RUNTIME_HOME}/var/plugins/foo`)
 
 
 ### Real example

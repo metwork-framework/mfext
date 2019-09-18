@@ -9,7 +9,7 @@ if test "${BUILDCACHE:-}" = ""; then
     exit 0
 fi
 
-for T in $(layers --raw |grep "@${MODULE_LOWERCASE}" |sed 's/ /#/g'); do
+for T in $(layers --raw |grep "@${MFMODULE_LOWERCASE}" |sed 's/ /#/g'); do
     LAYER_LABEL=$(echo "${T}" |awk -F '#' '{print $1;}')
     LAYER_NAME=$(echo "${LAYER_LABEL}" |awk -F '@' '{print $1;}')
     LAYER_HOME=$(echo "${T}" |awk -F '#' '{print $2;}')

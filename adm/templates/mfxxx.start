@@ -1,59 +1,59 @@
 #!/bin/bash
 
-{% if MODULE != "MFADMIN" %}
-ADMIN_HOSTNAME=$(env |grep "^{{MODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
-ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
+{% if MFMODULE != "MFADMIN" %}
+ADMIN_HOSTNAME=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
+ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
 {% endif %}
 
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" = "--help"; then
-    echo "usage {{MODULE_LOWERCASE}}.start [NOINIT]"
-    echo "  => start the {{MODULE_LOWERCASE}} module"
+    echo "usage {{MFMODULE_LOWERCASE}}.start [NOINIT]"
+    echo "  => start the {{MFMODULE_LOWERCASE}} module"
     exit 0
 fi
 
 exit_if_root
 
-cd "${MODULE_RUNTIME_HOME}" || exit 1
+cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
 NOINIT=0
 if test "${1:-}" = "NOINIT"; then
     NOINIT=1
 fi
 
-{% if MODULE not in ["MFEXT", "MFCOM"] %}
-CONFIG_TARGET=$(readlink -f "${MODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
+{% if MFMODULE not in ["MFEXT", "MFCOM"] %}
+CONFIG_TARGET=$(readlink -f "${MFMODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
 if test "${CONFIG_TARGET}" != ""; then
     CONFIG_TIMESTAMP=$(date -r "${CONFIG_TARGET}" +%s 2>/dev/null)
     if test "${CONFIG_TIMESTAMP}" != ""; then
-        if test "{% raw %}${{% endraw %}{{MODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
-            echo_bold "ERROR: your environment is outdated => please reload your terminal before playing with {{MODULE_LOWERCASE}}.start/stop"
+        if test "{% raw %}${{% endraw %}{{MFMODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
+            echo_bold "ERROR: your environment is outdated => please reload your terminal before playing with {{MFMODULE_LOWERCASE}}.start/stop"
             exit 1
         fi
     fi
 fi
 {% endif %}
 
-STARTUP_FLAG=`env |grep "^${MODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
+STARTUP_FLAG=`env |grep "^${MFMODULE}_STARTUP_FLAG=" |awk -F '=' '{print $2;}'`
 if test "${STARTUP_FLAG}" = "0"; then
-    echo_bold "${MODULE}_STARTUP_FLAG=0 => nothing to start"
+    echo_bold "${MFMODULE}_STARTUP_FLAG=0 => nothing to start"
     exit 0
 fi
 
 RES=0
 
-{% if MODULE == "MFDATA" or MODULE == "MFSERV" or MODULE == "MFBASE" %}
-PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
+{% if MFMODULE == "MFDATA" or MFMODULE == "MFSERV" or MFMODULE == "MFBASE" %}
+PLUGIN_NAME=$(env |grep ^{{MFMODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
 if test "${PLUGIN_NAME}" != ""; then
-    echo "ERROR: you can't use {{MODULE_LOWERCASE}}.start inside a plugin_env"
+    echo "ERROR: you can't use {{MFMODULE_LOWERCASE}}.start inside a plugin_env"
     exit 1
 fi
 if test "${NOINIT}" = "0"; then
-    if ! test -d ${MODULE_RUNTIME_HOME}/var/plugins/base; then
-        {{MODULE_LOWERCASE}}.init
+    if ! test -d ${MFMODULE_RUNTIME_HOME}/var/plugins/base; then
+        {{MFMODULE_LOWERCASE}}.init
     fi
-    if ! test -d ${MODULE_RUNTIME_HOME}/var/plugins/base; then
+    if ! test -d ${MFMODULE_RUNTIME_HOME}/var/plugins/base; then
         echo "ERROR: plugin system not initialized"
         exit 1
     fi
@@ -61,26 +61,26 @@ if test "${NOINIT}" = "0"; then
 fi
 {% endif %}
 
-{% if MODULE == "MFADMIN" %}
+{% if MFMODULE == "MFADMIN" %}
 if test "${NOINIT}" = "0"; then
     NEED_INIT=0
     if test "${MFADMIN_LAYER_METRICS_LOADED:-}" = "1"; then
-        if ! test -f "${MODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
+        if ! test -f "${MFMODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
             NEED_INIT=1
         fi
     fi
     if test "${MFADMIN_LAYER_LOGS_LOADED:-}" = "1"; then
-        if ! test -f "${MODULE_RUNTIME_HOME}/var/kibana/uuid"; then
+        if ! test -f "${MFMODULE_RUNTIME_HOME}/var/kibana/uuid"; then
             NEED_INIT=1
         fi
     fi
     if test "${NEED_INIT}" = "1"; then
-        {{MODULE_LOWERCASE}}.init
+        {{MFMODULE_LOWERCASE}}.init
     fi
 fi
 {% endif %}
 
-LINE="*****     STARTING ${MODULE}     *****"
+LINE="*****     STARTING ${MFMODULE}     *****"
 N=`echo "${LINE}" |wc -c`
 HEADER=`echo "**************************************************************" |cut -c 2-${N}`
 echo_bold "${HEADER}"
@@ -88,13 +88,13 @@ echo_bold "${LINE}"
 echo_bold "${HEADER}"
 echo "  "
 
-echo STARTING >${MODULE_RUNTIME_HOME}/var/status
+echo STARTING >${MFMODULE_RUNTIME_HOME}/var/status
 
-if test -f ${MODULE_HOME}/config/logrotate.conf; then
+if test -f ${MFMODULE_HOME}/config/logrotate.conf; then
     echo -n "- Generating logrotate.conf..."
     echo_running
-    cat ${MODULE_HOME}/config/logrotate.conf |envtpl --reduce-multi-blank-lines >${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf
-    if test -f ${MODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf; then
+    cat ${MFMODULE_HOME}/config/logrotate.conf |envtpl --reduce-multi-blank-lines >${MFMODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf
+    if test -f ${MFMODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf; then
         echo_ok
     else
         echo_nok
@@ -106,7 +106,7 @@ fi
 
 if test "${RES}" = "0"; then
 
-    if test -f ${MODULE_HOME}/config/circus.ini; then
+    if test -f ${MFMODULE_HOME}/config/circus.ini; then
         _circus.start
     fi
 
@@ -116,18 +116,18 @@ if test "${RES}" = "0"; then
 
     _make_and_install_crontab.sh
 
-    {% if MODULE != "MFADMIN" %}
+    {% if MFMODULE != "MFADMIN" %}
     if test "${ADMIN_HOSTNAME}" != ""; then
         if test "${ADMIN_HOSTNAME}" != "null"; then
     {% endif %}
     _circus_wait_watcher_started.sh telegraf || RES=1
     _circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
-    {% if MODULE != "MFADMIN" %}
+    {% if MFMODULE != "MFADMIN" %}
         fi
     fi
     {% endif %}
 
-    {% if MODULE != "MFADMIN" %}
+    {% if MFMODULE != "MFADMIN" %}
     if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
         if test "${ADMIN_HOSTNAME}" != "null"; then
             _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
@@ -140,19 +140,19 @@ if test "${RES}" = "0"; then
     sleep 2
     echo_ok
 
-    MODULE_LOWERCASE=`echo ${MODULE} | tr '[:upper:]' '[:lower:]'`
-    ${MODULE_LOWERCASE}.status QUIET
+    MFMODULE_LOWERCASE=`echo ${MFMODULE} | tr '[:upper:]' '[:lower:]'`
+    ${MFMODULE_LOWERCASE}.status QUIET
 
 else
     echo
-    echo_bold "ERROR(S) DETECTED DURING ${MODULE} CHECK"
+    echo_bold "ERROR(S) DETECTED DURING ${MFMODULE} CHECK"
 fi
 
 RES=$?
 if test ${RES} -eq 0; then
-    echo RUNNING >${MODULE_RUNTIME_HOME}/var/status
+    echo RUNNING >${MFMODULE_RUNTIME_HOME}/var/status
 else
-    echo ERROR >${MODULE_RUNTIME_HOME}/var/status
+    echo ERROR >${MFMODULE_RUNTIME_HOME}/var/status
 fi
 
 echo " "

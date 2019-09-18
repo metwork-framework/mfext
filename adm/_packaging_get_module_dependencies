@@ -17,8 +17,8 @@ if test "${2:-}" = ""; then
     exit 1
 fi
 
-LABELS=$(cat "${MODULE_HOME}/opt/default/.layerapi2_dependencies" |grep -v "^#" |grep -v "^-" |grep -v "{")
-EXTRA_LABELS=$(cat "${MODULE_HOME}/opt/default/.extra_dependencies" 2>/dev/null |grep -v "^#")
+LABELS=$(cat "${MFMODULE_HOME}/opt/default/.layerapi2_dependencies" |grep -v "^#" |grep -v "^-" |grep -v "{")
+EXTRA_LABELS=$(cat "${MFMODULE_HOME}/opt/default/.extra_dependencies" 2>/dev/null |grep -v "^#")
 
 # We unload all layers
 layer_unload root@mfext >/dev/null 2>&1
@@ -30,7 +30,7 @@ LABELS=$(layers --raw --loaded-filter=yes |awk '{print $1;}')
 
 ( echo "["
 FIRST=1
-for LABEL in ${LABELS} default@${MODULE_LOWERCASE}; do
+for LABEL in ${LABELS} default@${MFMODULE_LOWERCASE}; do
     NAME=$(echo "${LABEL}" |awk -F '@' '{print $1;}')
     MOD=$(echo "${LABEL}" |awk -F '@' '{print $2;}')
     HOM=$(get_layer_home "${LABEL}")
