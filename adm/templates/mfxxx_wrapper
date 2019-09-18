@@ -2,10 +2,10 @@
 
 function usage()
 {
-    echo "usage: {{MODULE_HOME}}/bin/{{MODULE_LOWERCASE}}_wrapper COMMAND_TO_WRAP [COMMAND_ARG1] [COMMAND_ARG2] [...]"
-    echo "  => launch the given command within metwork/{{MODULE_LOWERCASE}} environnent"
+    echo "usage: {{MFMODULE_HOME}}/bin/{{MFMODULE_LOWERCASE}}_wrapper COMMAND_TO_WRAP [COMMAND_ARG1] [COMMAND_ARG2] [...]"
+    echo "  => launch the given command within metwork/{{MFMODULE_LOWERCASE}} environnent"
     echo "  => note: the current environnent is cleared before"
-    echo "  =>       (only MODULE_RUNTIME_SUFFIX, MODULE_RUNTIME_HOME and some standard env var (HOME, TERM, DISPLAY...) "
+    echo "  =>       (only MFMODULE_RUNTIME_SUFFIX, MFMODULE_RUNTIME_HOME and some standard env var (HOME, TERM, DISPLAY...) "
     echo "            are keeped intact)"
 }
 
@@ -20,8 +20,8 @@ fi
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 CURRENT_BASENAME="$( basename "${0}" )"
-if test "${MODULE_RUNTIME_SUFFIX:-}" = ""; then
-    export MODULE_RUNTIME_SUFFIX="metwork/{{MODULE_LOWERCASE}}"
+if test "${MFMODULE_RUNTIME_SUFFIX:-}" = ""; then
+    export MFMODULE_RUNTIME_SUFFIX="metwork/{{MFMODULE_LOWERCASE}}"
 fi
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-exec "{{MFEXT_HOME}}/opt/core/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=HOME,TERM,DISPLAY,COLORTERM,HOSTNAME,LANG,LOGNAME,PWD,USER,USERNAME,XAUTHORITY,MODULE_RUNTIME_HOME,MODULE_RUNTIME_SUFFIX,PATH -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"
+exec "{{MFEXT_HOME}}/opt/core/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=HOME,TERM,DISPLAY,COLORTERM,HOSTNAME,LANG,LOGNAME,PWD,USER,USERNAME,XAUTHORITY,MFMODULE_RUNTIME_HOME,MFMODULE_RUNTIME_SUFFIX,PATH -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"

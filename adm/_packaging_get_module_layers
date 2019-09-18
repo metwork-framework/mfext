@@ -13,10 +13,10 @@ ADDON="${1:-}"
 
 ( echo "["
 NEED_COMMA=0
-for TMP in $(layers --raw |grep " ${MODULE_HOME}" |sed 's/ /|/g'); do
+for TMP in $(layers --raw |grep " ${MFMODULE_HOME}" |sed 's/ /|/g'); do
     LABEL=$(echo "${TMP}" |awk -F '|' '{print $1;}')
     NAME=$(echo "${LABEL}" |awk -F '@' '{print $1;}')
-    MODULE=$(echo "${LABEL}" |awk -F '@' '{print $2;}')
+    MFMODULE=$(echo "${LABEL}" |awk -F '@' '{print $2;}')
     HOM=$(echo "${TMP}" |awk -F '|' '{print $2;}')
     V=$(cat "${HOM}/.mfextaddon" 2>/dev/null)
     if test "${ADDON}" = "" -a "${V}" != ""; then
@@ -29,7 +29,7 @@ for TMP in $(layers --raw |grep " ${MODULE_HOME}" |sed 's/ /|/g'); do
         echo ","
         NEED_COMMA=0
     fi
-    echo "{\"name\": \"${NAME}\", \"label\": \"${LABEL}\", \"module\": \"${MODULE}\", \"home\": \"${HOM}\"}"
+    echo "{\"name\": \"${NAME}\", \"label\": \"${LABEL}\", \"module\": \"${MFMODULE}\", \"home\": \"${HOM}\"}"
     NEED_COMMA=1
 done
 echo "]" )|json_reformat

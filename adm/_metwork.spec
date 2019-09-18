@@ -9,7 +9,7 @@
     {# Example: 0.7.5 #}
     {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:2]|join('.') %}
 {% endif %}
-{% if MODULE != "MFEXT" %}
+{% if MFMODULE != "MFEXT" %}
     {% if '.ci' in MFCOM_VERSION %}
         {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:-2]|join('.') %}
     {% else %}
@@ -18,10 +18,10 @@
 {% else %}
     {% set MFCOM_BRANCH = "NOT_USED" %}
 {% endif %}
-{% if '.ci' in MODULE_VERSION %}
-    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:-2]|join('.') %}
+{% if '.ci' in MFMODULE_VERSION %}
+    {% set MODULE_BRANCH = MFMODULE_VERSION.split('.')[0:-2]|join('.') %}
 {% else %}
-    {% set MODULE_BRANCH = MODULE_VERSION.split('.')[0:2]|join('.') %}
+    {% set MODULE_BRANCH = MFMODULE_VERSION.split('.')[0:2]|join('.') %}
 {% endif %}
 # DEBUG: MFEXT_BRANCH: {{MFEXT_BRANCH}}
 # DEBUG: MFCOM_BRANCH: {{MFCOM_BRANCH}}
@@ -48,7 +48,7 @@
 {% set version_release_string = version_release|join('-') %}
 {% set epoch_vr = ["9", version_release_string] %}
 {% set FULL_VERSION = epoch_vr|join(':') %}
-{% set _TARGET_LINK = MODULE_HOME + "/../metwork-" + MODULE_LOWERCASE %}
+{% set _TARGET_LINK = MFMODULE_HOME + "/../metwork-" + MFMODULE_LOWERCASE %}
 {% set _TARGET_LINK_COMMAND = "readlink -m " + _TARGET_LINK %}
 {% set TARGET_LINK = _TARGET_LINK_COMMAND|shell %}
 # DEBUG: MFEXT_ADDON: {{MFEXT_ADDON}}
@@ -66,7 +66,7 @@
 {% else %}
     #  DEBUG: layers_command: _packaging_get_module_layers
     {% set layers = "_packaging_get_module_layers"|shell|from_json %}
-    {% if MODULE == "MFEXT" %}
+    {% if MFMODULE == "MFEXT" %}
         # DEBUG: dependencies_command: {{ "_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH }}
         {% set dependencies = ("_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH)|shell|from_json %}
     {% else %}
@@ -82,21 +82,21 @@
 ##### MAIN PACKAGE #####
 ########################
 # Note: it will be deleted for addons (in the calling Makefile)
-# content: symbolic link + home directory  + everything that is not in {{MODULE_HOME}}
+# content: symbolic link + home directory  + everything that is not in {{MFMODULE_HOME}}
 %define __jar_repack %{nil}
 %define __os_install_post %{nil}
 %define debug_package %{nil}
-Name: metwork-{{MODULE_LOWERCASE}}
-{% if MODULE_LOWERCASE == "mfext" %}
-Summary: metwork {{MODULE_LOWERCASE}} symbolic link
+Name: metwork-{{MFMODULE_LOWERCASE}}
+{% if MFMODULE_LOWERCASE == "mfext" %}
+Summary: metwork {{MFMODULE_LOWERCASE}} symbolic link
 {% else %}
-Summary: metwork {{MODULE_LOWERCASE}} symbolic link and stuff around the {{MODULE_LOWERCASE}} unix user
+Summary: metwork {{MFMODULE_LOWERCASE}} symbolic link and stuff around the {{MFMODULE_LOWERCASE}} unix user
 {% endif %}
 Version: {{VERSION_BUILD}}
 Release: {{RELEASE_BUILD}}{{RELEASE_BUILD_SUFFIX}}
 Epoch: 9
 License: Meteo
-Source0: {{MODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar
+Source0: {{MFMODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar
 Group: Applications/Multimedia
 URL: http://metwork.meteo.fr
 Buildroot: %{_topdir}/tmp/%{name}-root
@@ -105,16 +105,16 @@ Vendor: Metwork
 ExclusiveOs: linux
 AutoReq: no
 AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
-Provides: metwork-{{MODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
-Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
-{% if MODULE_LOWERCASE == "mfext" %}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
+Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
+{% if MFMODULE_LOWERCASE == "mfext" %}
 %description
 This package provides the {{TARGET_LINK}} symbolic link
 {% else %}
 %description
 This package provides the {{TARGET_LINK}} symbolic link
-and the stuff around the {{MODULE_LOWERCASE}} unix user.
+and the stuff around the {{MFMODULE_LOWERCASE}} unix user.
 {% endif %}
 
 
@@ -122,19 +122,19 @@ and the stuff around the {{MODULE_LOWERCASE}} unix user.
 #################################
 ##### SUFFIXED MAIN PACKAGE #####
 #################################
-# Content: everything in {{MODULE_HOME}} and all minimal layers
+# Content: everything in {{MFMODULE_HOME}} and all minimal layers
 %package {{MODULE_BRANCH}}
-Summary: metwork {{MODULE_LOWERCASE}} minimal module (default layer)
+Summary: metwork {{MFMODULE_LOWERCASE}} minimal module (default layer)
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
 # <to be removed someday>
-Obsoletes: metwork-{{MODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
-Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
-{% if MODULE == "MFADMIN" %}
+Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
+Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
+{% if MFMODULE == "MFADMIN" %}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfadmin-layer-python3-{{MODULE_BRANCH}}
-{% elif MODULE == "MFEXT" %}
+{% elif MFMODULE == "MFEXT" %}
 Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-scientific
 Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
@@ -144,19 +144,19 @@ Obsoletes: metwork-mfext-devtools
 Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
 {% endif %}
 # </to be removed someday>
-Provides: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
-Obsoletes: metwork-{{MODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} < {{FULL_VERSION}}
+Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} < {{FULL_VERSION}}
 {% for DEP in dependencies %}
     {% if DEP.type == "metwork" %}
         {# metwork layer dependencies #}
-        {% if DEP.module == MODULE_LOWERCASE %}
+        {% if DEP.module == MFMODULE_LOWERCASE %}
             {# Because this dependency will be embedded in this package #}
             {{ minimal_layers.append(DEP.label)|replace('None', '') }}
             {% if (MODULE_BRANCH == "integration" or MODULE_BRANCH == "master") and DEP.name == "root" %}
                 # we don't obsoletes root layer for the moment to avoid some issues with postun
                 # => we provide a new layer-root dummy package
                 # FIXME: to be removed someday
-Requires: metwork-{{MODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
             {% else %}
 Provides: {{DEP.rpm}} = {{FULL_VERSION}}
 Obsoletes: {{DEP.rpm}} < {{FULL_VERSION}}
@@ -174,8 +174,8 @@ Requires: {{DEP.name}}
     {% endif %}
 {% endfor %}
 %description {{MODULE_BRANCH}}
-This package contains minimal (readonly) files and directories for {{MODULE_LOWERCASE}} module.
-Everything is in {{MODULE_HOME}}/
+This package contains minimal (readonly) files and directories for {{MFMODULE_LOWERCASE}} module.
+Everything is in {{MFMODULE_HOME}}/
 {% endif %}
 
 {% if MFEXT_ADDON == "0" %}
@@ -186,7 +186,7 @@ Summary: dummy package to deal with update issues
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
 %description layer-root-{{MODULE_BRANCH}}
 Dummy package to deal with update issues
     {% endif %}
@@ -196,25 +196,25 @@ Dummy package to deal with update issues
 ########################
 ##### FULL PACKAGE #####
 ########################
-# Content: everything in {{MODULE_HOME}} and all available layers
+# Content: everything in {{MFMODULE_HOME}} and all available layers
 %package full
-Summary: metwork {{MODULE_LOWERCASE}} module (with all layers)
+Summary: metwork {{MFMODULE_LOWERCASE}} module (with all layers)
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Requires: metwork-{{MODULE_LOWERCASE}} = {{FULL_VERSION}}
+Requires: metwork-{{MFMODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% for DEP in layers %}
-    {% if DEP.module == MODULE_LOWERCASE %}
+    {% if DEP.module == MFMODULE_LOWERCASE %}
         {% if DEP.label not in minimal_layers %}
-Requires: metwork-{{MODULE_LOWERCASE}}-layer-{{DEP.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-layer-{{DEP.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
         {% endif %}
     {% else %}
-Requires: metwork-{{MODULE_LOWERCASE}}-layer-{{DEP.name}}-{{MODULE_BRANCH}}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-layer-{{DEP.name}}-{{MODULE_BRANCH}}
     {% endif %}
 {% endfor %}
 %description full
-This package contains all (readonly) files and directories for {{MODULE_LOWERCASE}} module.
-Everything is in {{MODULE_HOME}}/
+This package contains all (readonly) files and directories for {{MFMODULE_LOWERCASE}} module.
+Everything is in {{MFMODULE_HOME}}/
 {% endif %}
 
 
@@ -225,20 +225,20 @@ Everything is in {{MODULE_HOME}}/
 {% for LAYER in layers %}
     {% if LAYER.label not in minimal_layers %}
 %package layer-{{LAYER.name}}-{{MODULE_BRANCH}}
-Summary: metwork {{MODULE_LOWERCASE}} {{LAYER.name}} extra layer
+Summary: metwork {{MFMODULE_LOWERCASE}} {{LAYER.name}} extra layer
 Group: Applications/Multimedia
 AutoReq: no
 AutoProv: no
-Provides: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}} = {{FULL_VERSION}}
-Provides: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
-Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}} < {{FULL_VERSION}}
-Obsoletes: metwork-{{MODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} < {{FULL_VERSION}}
+Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} = {{FULL_VERSION}}
+Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} < {{FULL_VERSION}}
+Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} < {{FULL_VERSION}}
 {% if MFEXT_ADDON == "0" %}
-Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% else %}
-Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
+Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}}
 {% endif %}
-        {% if MODULE == "MFEXT" %}
+        {% if MFMODULE == "MFEXT" %}
             {% set layer_dependencies = ("_packaging_get_layer_dependencies " + LAYER.name + " " + MODULE_BRANCH + " " + MFEXT_BRANCH)|shell|from_json %}
         {% else %}
             {% set layer_dependencies = ("_packaging_get_layer_dependencies " + LAYER.name + " " + MODULE_BRANCH + " " + MFEXT_BRANCH + " " + MFCOM_BRANCH)|shell|from_json %}
@@ -247,7 +247,7 @@ Requires: metwork-{{MODULE_LOWERCASE}}-{{MODULE_BRANCH}}
             {% if LDEP.type == "metwork" %}
                 {% if LDEP.label not in minimal_layers %}
                     {# metwork layer dependencies #}
-                    {% if LDEP.module == MODULE_LOWERCASE and LDEP.addon == MFEXT_ADDON_NAME|default('no') %}
+                    {% if LDEP.module == MFMODULE_LOWERCASE and LDEP.addon == MFEXT_ADDON_NAME|default('no') %}
 Requires: {{LDEP.rpm}} = {{FULL_VERSION}}
                     {% else %}
 Requires: {{LDEP.rpm}}
@@ -263,8 +263,8 @@ Requires: {{LDEP.name}}
             {% endif %}
         {% endfor %}
 %description layer-{{LAYER.name}}-{{MODULE_BRANCH}}
-metwork {{MODULE_LOWERCASE}} {{LAYER.name}} extra layer. Everything is in
-{{MODULE_HOME}}/opt/{{LAYER.name}}
+metwork {{MFMODULE_LOWERCASE}} {{LAYER.name}} extra layer. Everything is in
+{{MFMODULE_HOME}}/opt/{{LAYER.name}}
     {% endif %}
 {% endfor %}
 
@@ -275,10 +275,10 @@ metwork {{MODULE_LOWERCASE}} {{LAYER.name}} extra layer. Everything is in
 %prep
 cd %{_builddir} || exit 1
 rm -Rf %{name}-%{version}-{{RELEASE_BUILD}}
-rm -Rf {{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}
-cat %{_sourcedir}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}-linux64.tar | tar -xf -
+rm -Rf {{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}
+cat %{_sourcedir}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}-linux64.tar | tar -xf -
 mkdir %{name}-%{version}-{{RELEASE_BUILD}}
-mv {{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}} %{name}-%{version}-{{RELEASE_BUILD}}/
+mv {{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}} %{name}-%{version}-{{RELEASE_BUILD}}/
 cd %{name}-%{version}-{{RELEASE_BUILD}}
 rm -f mf*_link
 
@@ -294,17 +294,17 @@ rm -f mf*_link
             echo "INFO: creating metwork unix local group"
             groupadd metwork >/dev/null 2>&1 || true
         fi
-        N=`cat /etc/passwd |grep '^{{MODULE_LOWERCASE}}:' |wc -l`
+        N=`cat /etc/passwd |grep '^{{MFMODULE_LOWERCASE}}:' |wc -l`
         if test ${N} -eq 0; then
-            echo "INFO: creating {{MODULE_LOWERCASE}} unix local user"
-            useradd -d /home/{{MODULE_LOWERCASE}} -g metwork -s /bin/bash {{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
-            {% if MODULE == "MFDATA" %}
+            echo "INFO: creating {{MFMODULE_LOWERCASE}} unix local user"
+            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
+            {% if MFMODULE == "MFDATA" %}
                 echo "INFO: creating upload unix local group"
-                useradd -M -d /home/{{MODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin upload >/dev/null 2>&1 || true
-                chmod g+rx /home/{{MODULE_LOWERCASE}} >/dev/null 2>&1 || true
+                useradd -M -d /home/{{MFMODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin upload >/dev/null 2>&1 || true
+                chmod g+rx /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
             {% endif %}
-            rm -Rf /home/{{MODULE_LOWERCASE}}
-            chown -R {{MODULE_LOWERCASE}}:metwork /home/{{MODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
+            rm -Rf /home/{{MFMODULE_LOWERCASE}}
+            chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
         fi
     {% endif %}
 {% endif %}
@@ -321,27 +321,27 @@ rm -f mf*_link
 ##### install SECTION #####
 ###########################
 %install
-mkdir -p %{buildroot}/{{MODULE_HOME}} 2>/dev/null
-ln -s {{MODULE_HOME}} %{buildroot}{{TARGET_LINK}}
+mkdir -p %{buildroot}/{{MFMODULE_HOME}} 2>/dev/null
+ln -s {{MFMODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
-    mkdir -p %{buildroot}/home/{{MODULE_LOWERCASE}} 2>/dev/null
+    mkdir -p %{buildroot}/home/{{MFMODULE_LOWERCASE}} 2>/dev/null
 {% endif %}
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MODULE_HOME}}/
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
-mv metwork-{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MODULE_HOME}}/ 2>/dev/null || true
-rm -Rf %{buildroot}{{MODULE_HOME}}/html_doc
+mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MFMODULE_HOME}}/
+mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
+mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
+rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
-    ln -s {{MODULE_HOME}}/share/bashrc %{buildroot}/home/{{MODULE_LOWERCASE}}/.bashrc
-    ln -s {{MODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MODULE_LOWERCASE}}/.bash_profile
-    chmod -R go-rwx %{buildroot}/home/{{MODULE_LOWERCASE}}
-    chmod -R u+rX %{buildroot}/home/{{MODULE_LOWERCASE}}
-    {% if MODULE == "MFDATA" %}
-        chmod g+rx %{buildroot}/home/{{MODULE_LOWERCASE}}
+    ln -s {{MFMODULE_HOME}}/share/bashrc %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bashrc
+    ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
+    chmod -R go-rwx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+    chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+    {% if MFMODULE == "MFDATA" %}
+        chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
     {% endif %}
 {% endif %}
-chmod -R a+rX %{buildroot}{{MODULE_HOME}}
+chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
-{% if MODULE == "MFCOM" %}
+{% if MFMODULE == "MFCOM" %}
     mkdir -p %{buildroot}/etc/security/limits.d/
     cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
     @metwork    soft    nofile  65536
@@ -361,24 +361,24 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         # to flush caches
         touch /etc/metwork.config >/dev/null 2>&1
     fi
-    {% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
+    {% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
         if ! test -f /etc/metwork.config; then
             echo GENERIC >/etc/metwork.config
         fi
     {% endif %}
-    {% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
-        if ! test -d /etc/metwork.config.d/{{MODULE_LOWERCASE}}; then
-            mkdir -p /etc/metwork.config.d/{{MODULE_LOWERCASE}}
-            {% if MODULE == "MFDATA" %}
-                mkdir -p /etc/metwork.config.d/{{MODULE_LOWERCASE}}/external_plugins
-            {% elif MODULE == "MFSERV" %}
-                mkdir -p /etc/metwork.config.d/{{MODULE_LOWERCASE}}/external_plugins
-            {% elif MODULE == "MFBASE" %}
-                mkdir -p /etc/metwork.config.d/{{MODULE_LOWERCASE}}/external_plugins
+    {% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
+        if ! test -d /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}; then
+            mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
+            {% if MFMODULE == "MFDATA" %}
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+            {% elif MFMODULE == "MFSERV" %}
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+            {% elif MFMODULE == "MFBASE" %}
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
             {% endif %}
         fi
     {% endif %}
-    {% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
+    {% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
         if ! test -d /etc/rc.d/init.d; then mkdir -p /etc/rc.d/init.d; fi
         cp -f {{MFCOM_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
         chmod 0755 /etc/rc.d/init.d/metwork
@@ -396,12 +396,12 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             fi
         fi
     {% endif %}
-    {% if MODULE == "MFDATA" %}
-        mkdir -p /home/{{MODULE_LOWERCASE}}/var/in >/dev/null 2>&1
-        chown -R {{MODULE_LOWERCASE}}:metwork /home/{{MODULE_LOWERCASE}}/var >/dev/null 2>&1
-        chmod g+rX /home/{{MODULE_LOWERCASE}} >/dev/null 2>&1
-        chmod g+rX /home/{{MODULE_LOWERCASE}}/var >/dev/null 2>&1
-        chmod g+rX /home/{{MODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+    {% if MFMODULE == "MFDATA" %}
+        mkdir -p /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+        chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
+        chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
+        chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
+        chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
     {% endif %}
 {% endif %}
 
@@ -413,33 +413,33 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 %postun {{MODULE_BRANCH}}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{TARGET_LINK}} 2>/dev/null
-        rm -Rf {{MODULE_HOME}} 2>/dev/null
+        rm -Rf {{MFMODULE_HOME}} 2>/dev/null
         # see https://stackoverflow.com/questions/40396945/
         # date-command-is-giving-erroneous-output-while-using-inside-rpm-spec-file
         export SAVE_SUFFIX="rpmsave`date '+%Y%m%d%H%M%''S'`"
         {% if MODULE_HAS_HOME_DIR == "1" %}
-            if test -d /home/{{MODULE_LOWERCASE}}; then
-                echo "INFO: saving old /home/{{MODULE_LOWERCASE}} to /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-                mv /home/{{MODULE_LOWERCASE}} /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}
-                rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
-                rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
-                {% if MODULE == "MFDATA" %}
-                    rm -Rf /home/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
+            if test -d /home/{{MFMODULE_LOWERCASE}}; then
+                echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+                mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+                rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
+                rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
+                {% if MFMODULE == "MFDATA" %}
+                    rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
-                mkdir /home/{{MODULE_LOWERCASE}}
+                mkdir /home/{{MFMODULE_LOWERCASE}}
             fi
-            userdel -f -r {{MODULE_LOWERCASE}} 2>/dev/null
-            rm -Rf /home/{{MODULE_LOWERCASE}} 2>/dev/null
+            userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
+            rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
         {% endif %}
-        {% if MODULE == "MFCOM" %}
+        {% if MFMODULE == "MFCOM" %}
             rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
         {% endif %}
-        N=`find /etc/metwork.config.d/{{MODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
+        N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
-            echo "INFO: saving old /etc/metwork.config.d/{{MODULE_LOWERCASE}} to /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-            mv /etc/metwork.config.d/{{MODULE_LOWERCASE}} /etc/metwork.config.d/{{MODULE_LOWERCASE}}.${SAVE_SUFFIX}
+            echo "INFO: saving old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+            mv /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
         fi
-        rm -Rf /etc/metwork.config.d/{{MODULE_LOWERCASE}}
+        rm -Rf /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
     fi
 {% endif %}
 
@@ -458,10 +458,10 @@ rm -fr %{buildroot}
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
-%defattr(-,{{MODULE_LOWERCASE}},metwork,-)
-/home/{{MODULE_LOWERCASE}}
+%defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
+/home/{{MFMODULE_LOWERCASE}}
 {% endif %}
-{% if MODULE == "MFCOM" %}
+{% if MFMODULE == "MFCOM" %}
 /etc/security/limits.d/50-metwork.conf
 {% endif %}
 
@@ -472,16 +472,16 @@ rm -fr %{buildroot}
 ##################################################
 %files {{MODULE_BRANCH}}
 %defattr(-,root,root,-)
-{% set tmp_list = "cd ${MODULE_HOME}; ls -a |grep -v '^\.$' |grep -v '^\.\.$' |grep -v '^tmp$' |grep -v '^opt$' |grep -v '\.tar$' |grep -v '^rpm$' |grep -v '^html_doc' 2>/dev/null"|shell %}
+{% set tmp_list = "cd ${MFMODULE_HOME}; ls -a |grep -v '^\.$' |grep -v '^\.\.$' |grep -v '^tmp$' |grep -v '^opt$' |grep -v '\.tar$' |grep -v '^rpm$' |grep -v '^html_doc' 2>/dev/null"|shell %}
 {% set root_list = tmp_list.split('\n')[:-1] %}
 {% for entry in root_list %}
-{{MODULE_HOME}}/{{ entry }}
+{{MFMODULE_HOME}}/{{ entry }}
 {% endfor %}
-%dir {{MODULE_HOME}}/opt
+%dir {{MFMODULE_HOME}}/opt
 {% for LAYER in layers %}
     {% if LAYER.label in minimal_layers %}
         {% if LAYER.name != "root" %}
-{{MODULE_HOME}}/opt/{{LAYER.name}}
+{{MFMODULE_HOME}}/opt/{{LAYER.name}}
         {% endif %}
     {% endif %}
 {% endfor %}
@@ -505,7 +505,7 @@ rm -fr %{buildroot}
 ###########################################################################
 %files layer-{{LAYER.name}}-{{MODULE_BRANCH}}
 %defattr(-,root,root,-)
-{{MODULE_HOME}}/opt/{{LAYER.name}}
+{{MFMODULE_HOME}}/opt/{{LAYER.name}}
     {% endif %}
 {% endfor %}
 

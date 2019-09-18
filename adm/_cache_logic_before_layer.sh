@@ -14,7 +14,7 @@ if test "${1:-}" = "--help"; then
 fi
 LAYER_HOME=$1
 LAYER_NAME=$2
-LAYER_LABEL="${LAYER_NAME}@${MODULE_LOWERCASE}"
+LAYER_LABEL="${LAYER_NAME}@${MFMODULE_LOWERCASE}"
 PW=$(pwd)
 
 rm -Rf "${PW}/cache"

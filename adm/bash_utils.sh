@@ -36,11 +36,11 @@ exit_if_root() {
 
 function cleanup_directories()
 {
-    if test "${MODULE_RUNTIME_HOME}" != ""; then
+    if test "${MFMODULE_RUNTIME_HOME}" != ""; then
         for REP in tmp var log; do
-        if test -d "${MODULE_RUNTIME_HOME}/${REP}"; then
-            echo -n "- Cleaning ${MODULE_RUNTIME_HOME}/${REP}..."
-            cd "${MODULE_RUNTIME_HOME}/${REP}" && rm -Rf ./* >/dev/null 2>&1
+        if test -d "${MFMODULE_RUNTIME_HOME}/${REP}"; then
+            echo -n "- Cleaning ${MFMODULE_RUNTIME_HOME}/${REP}..."
+            cd "${MFMODULE_RUNTIME_HOME}/${REP}" && rm -Rf ./* >/dev/null 2>&1
             echo_ok
         fi
         done
@@ -50,8 +50,8 @@ function cleanup_directories()
 
 function cleanup_pyc()
 {
-    if test "${MODULE_RUNTIME_HOME}" != ""; then
-        find "${MODULE_RUNTIME_HOME}" -name "*.pyc" -delete
+    if test "${MFMODULE_RUNTIME_HOME}" != ""; then
+        find "${MFMODULE_RUNTIME_HOME}" -name "*.pyc" -delete
     fi
 }
 # FIXME: inline this function
@@ -70,9 +70,9 @@ function cache_get()
 {
     FILE=${1}
     LIFETIME=${2}
-    NEWERS="/etc/hosts /etc/resolv.conf /etc/nsswitch.conf /etc/metwork.config ${MFCOM_HOME}/config/config.ini ${MODULE_HOME}/config/config.ini ${MODULE_RUNTIME_HOME}/config/config.ini"
-    if test -f "/etc/metwork.config.d/${MODULE_LOWERCASE}/config.ini"; then
-        NEWERS="${NEWERS} /etc/metwork.config.d/${MODULE_LOWERCASE}/config.ini"
+    NEWERS="/etc/hosts /etc/resolv.conf /etc/nsswitch.conf /etc/metwork.config ${MFCOM_HOME}/config/config.ini ${MFMODULE_HOME}/config/config.ini ${MFMODULE_RUNTIME_HOME}/config/config.ini"
+    if test -f "/etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"; then
+        NEWERS="${NEWERS} /etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"
     fi
     OUT="find ${FILE} -type f -mmin -${LIFETIME} "
     for NEWER in ${NEWERS}; do

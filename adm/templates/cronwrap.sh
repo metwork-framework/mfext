@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. {{MODULE_HOME}}/share/profile
+. {{MFMODULE_HOME}}/share/profile
 
 export NOINTERACTIVE=1
 

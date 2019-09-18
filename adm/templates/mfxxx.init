@@ -3,14 +3,14 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" == "--help"; then
-    echo "usage: {{MODULE_LOWERCASE}}.init"
+    echo "usage: {{MFMODULE_LOWERCASE}}.init"
     echo "  => (re)init your module (WARNING: can't drop some user provided datas)"
     exit 0
 fi
 
 exit_if_root
 
-cd "${MODULE_RUNTIME_HOME}" || exit 1
+cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
 SOFT=0
 SOFT_STRING=""
@@ -19,13 +19,13 @@ if test "${1}" = "soft"; then
     SOFT_STRING="SOFT "
 fi
 
-PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
+PLUGIN_NAME=$(env |grep ^{{MFMODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
 if test "${PLUGIN_NAME}" != ""; then
-    echo "ERROR: you can't use {{MODULE_LOWERCASE}}.init inside a plugin_env"
+    echo "ERROR: you can't use {{MFMODULE_LOWERCASE}}.init inside a plugin_env"
     exit 1
 fi
 if test "$1" != "QUIET"; then
-    LINE="*****     ${MODULE} ${SOFT_STRING}INITIALIZATION     *****"
+    LINE="*****     ${MFMODULE} ${SOFT_STRING}INITIALIZATION     *****"
     N=`echo "${LINE}" |wc -c`
     HEADER=`echo "**************************************************************" |cut -c 2-${N}`
     echo_bold "${HEADER}"
@@ -34,16 +34,16 @@ if test "$1" != "QUIET"; then
     echo "  "
 fi
 
-MODULE_LOWERCASE=`echo ${MODULE} | tr '[:upper:]' '[:lower:]'`
+MFMODULE_LOWERCASE=`echo ${MFMODULE} | tr '[:upper:]' '[:lower:]'`
 
-echo -n "- Eventually stopping ${MODULE_LOWERCASE} module..."
+echo -n "- Eventually stopping ${MFMODULE_LOWERCASE} module..."
 echo_running
-${MODULE_LOWERCASE}.stop >/dev/null 2>&1
+${MFMODULE_LOWERCASE}.stop >/dev/null 2>&1
 echo_ok
 
 if test "${SOFT}" = "0"; then
     cleanup_directories
-    mkdir -p ${MODULE_RUNTIME_HOME}/tmp/config_auto
+    mkdir -p ${MFMODULE_RUNTIME_HOME}/tmp/config_auto
 fi
 cleanup_pyc
 
@@ -51,7 +51,7 @@ cleanup_pyc
 # Can be replaced by mfxxx.init.custom
 {% endblock %}
 
-{% if MODULE == "MFDATA" or MODULE == "MFSERV" or MODULE == "MFBASE" %}
+{% if MFMODULE == "MFDATA" or MFMODULE == "MFSERV" or MFMODULE == "MFBASE" %}
 _plugins.init
 {% endif %}
 

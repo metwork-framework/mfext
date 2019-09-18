@@ -1,12 +1,12 @@
 #!/bin/bash
 
 function usage() {
-    echo "usage: {{MODULE_LOWERCASE}}.autorestart"
-    echo "  => autorestart the module if there is a problem with {{MODULE_LOWERCASE}}.status"
+    echo "usage: {{MFMODULE_LOWERCASE}}.autorestart"
+    echo "  => autorestart the module if there is a problem with {{MFMODULE_LOWERCASE}}.status"
 }
 
 function module_status() {
-    timeout 60s {{MODULE_LOWERCASE}}.status >/dev/null 2>&1
+    timeout 60s {{MFMODULE_LOWERCASE}}.status >/dev/null 2>&1
     if test $? -ne 0; then
         echo "ko"
     else
@@ -15,7 +15,7 @@ function module_status() {
 }
 
 function module_stopped() {
-    STATUS_FILE=$(cat "${MODULE_RUNTIME_HOME}/var/status" 2>/dev/null)
+    STATUS_FILE=$(cat "${MFMODULE_RUNTIME_HOME}/var/status" 2>/dev/null)
     if test "${STATUS_FILE}" = ""; then
         echo "yes"
         return
@@ -28,7 +28,7 @@ function module_stopped() {
 }
 
 function module_starting_stopping() {
-    STATUS_FILE=$(cat "${MODULE_RUNTIME_HOME}/var/status" 2>/dev/null)
+    STATUS_FILE=$(cat "${MFMODULE_RUNTIME_HOME}/var/status" 2>/dev/null)
     if test "${STATUS_FILE}" = "STARTING"; then
         echo "yes"
         return
@@ -45,66 +45,66 @@ if test "${1:-}" = "--help"; then
     exit 0
 fi
 
-find "${MODULE_RUNTIME_HOME}/var/block_autorestart" -type f -mmin +10 -delete >/dev/null 2>&1
-if test -f "${MODULE_RUNTIME_HOME}/var/block_autorestart"; then
-    log INFO "found ${MODULE_RUNTIME_HOME}/var/block_autorestart => we do nothing"
+find "${MFMODULE_RUNTIME_HOME}/var/block_autorestart" -type f -mmin +10 -delete >/dev/null 2>&1
+if test -f "${MFMODULE_RUNTIME_HOME}/var/block_autorestart"; then
+    log INFO "found ${MFMODULE_RUNTIME_HOME}/var/block_autorestart => we do nothing"
     exit 0
 fi
 
 STOPPED=$(module_stopped)
 if test "${STOPPED}" = "yes"; then
-    log INFO "the module {{MODULE_LOWERCASE}} is stopped => we do nothing"
+    log INFO "the module {{MFMODULE_LOWERCASE}} is stopped => we do nothing"
     exit 0
 fi
 
 STARTING_STOPPING=$(module_starting_stopping)
 if test "${STARTING_STOPPING}" = "yes"; then
-    find "${MODULE_RUNTIME_HOME}/var/status" -type f -mmin +10 -delete 2>/dev/null
+    find "${MFMODULE_RUNTIME_HOME}/var/status" -type f -mmin +10 -delete 2>/dev/null
     STARTING_STOPPING=$(module_starting_stopping)
     if test "${STARTING_STOPPING}" = "yes"; then
-        log INFO "the module {{MODULE_LOWERCASE}} is changing state => we do nothing"
+        log INFO "the module {{MFMODULE_LOWERCASE}} is changing state => we do nothing"
         exit 0
     fi
-    log WARNING "the module {{MODULE_LOWERCASE}} was starting/stopping since mode than 10 minutes => forcing state"
+    log WARNING "the module {{MFMODULE_LOWERCASE}} was starting/stopping since mode than 10 minutes => forcing state"
 fi
 
 STATUS=$(module_status)
 if test "${STATUS}" = "ok"; then
-    log INFO "the {{MODULE_LOWERCASE}} seems to be ok and does not need to be restarted"
-    echo "RUNNING" >"${MODULE_RUNTIME_HOME}/var/status"
+    log INFO "the {{MFMODULE_LOWERCASE}} seems to be ok and does not need to be restarted"
+    echo "RUNNING" >"${MFMODULE_RUNTIME_HOME}/var/status"
     exit 0
 else
-    echo "ERROR" > "${MODULE_RUNTIME_HOME}/var/status"
+    echo "ERROR" > "${MFMODULE_RUNTIME_HOME}/var/status"
 fi
 
-log WARNING "bad return code from {{MODULE_LOWERCASE}}.status => let's wait 30s and retry"
+log WARNING "bad return code from {{MFMODULE_LOWERCASE}}.status => let's wait 30s and retry"
 sleep 30
 
 STATUS=$(module_status)
 if test "${STATUS}" = "ok"; then
-    log WARNING "the {{MODULE_LOWERCASE}}.status seems to be ok now => we do nothing"
-    echo "RUNNING" >"${MODULE_RUNTIME_HOME}/var/status"
+    log WARNING "the {{MFMODULE_LOWERCASE}}.status seems to be ok now => we do nothing"
+    echo "RUNNING" >"${MFMODULE_RUNTIME_HOME}/var/status"
     exit 0
 fi
 
-log CRITICAL "the {{MODULE_LOWERCASE}}.status is not ok (after two attempts) => let's restart the module"
+log CRITICAL "the {{MFMODULE_LOWERCASE}}.status is not ok (after two attempts) => let's restart the module"
 
-log INFO "launching {{MODULE_LOWERCASE}}.stop (with a 300s timeout)"
-timeout 300s {{MODULE_LOWERCASE}}.stop
+log INFO "launching {{MFMODULE_LOWERCASE}}.stop (with a 300s timeout)"
+timeout 300s {{MFMODULE_LOWERCASE}}.stop
 
-log INFO "launching {{MODULE_LOWERCASE}}.start (with a 300s timeout)"
-timeout 300s {{MODULE_LOWERCASE}}.start
+log INFO "launching {{MFMODULE_LOWERCASE}}.start (with a 300s timeout)"
+timeout 300s {{MFMODULE_LOWERCASE}}.start
 
 log INFO "sleeping 30s"
 sleep 30
 
 STATUS=$(module_status)
 if test "${STATUS}" != "ok"; then
-    log CRITICAL "the {{MODULE_LOWERCASE}}.status is still not ok (even after a module restart) => BIG PROBLEM"
-    echo "ERROR" > "${MODULE_RUNTIME_HOME}/var/status"
+    log CRITICAL "the {{MFMODULE_LOWERCASE}}.status is still not ok (even after a module restart) => BIG PROBLEM"
+    echo "ERROR" > "${MFMODULE_RUNTIME_HOME}/var/status"
     exit 1
 else
-    log CRITICAL "the {{MODULE_LOWERCASE}}.status is now ok after the automatic stop/start => no problem anymore"
-    echo "RUNNING" >"${MODULE_RUNTIME_HOME}/var/status"
+    log CRITICAL "the {{MFMODULE_LOWERCASE}}.status is now ok after the automatic stop/start => no problem anymore"
+    echo "RUNNING" >"${MFMODULE_RUNTIME_HOME}/var/status"
     exit 0
 fi

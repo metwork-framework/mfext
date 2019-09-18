@@ -23,10 +23,10 @@ MFEXT_HOME=$(get_abs_filename "$1")
 export MFEXT_HOME
 MFEXT_VERSION=$(adm/guess_version.sh)
 export MFEXT_VERSION
-export MODULE_VERSION=${MFEXT_VERSION}
-export MODULE_HOME=${MFEXT_HOME}
-export MODULE=MFEXT
-export MODULE_LOWERCASE=mfext
+export MFMODULE_VERSION=${MFEXT_VERSION}
+export MFMODULE_HOME=${MFEXT_HOME}
+export MFMODULE=MFEXT
+export MFMODULE_LOWERCASE=mfext
 SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export SRC_DIR
 BOOTSTRAP_HASH=$("${SRC_DIR}/adm/dhash" bootstrap |grep -v ^src |sort |md5sum |awk '{print $1;}')
@@ -40,14 +40,14 @@ echo "Making adm/root.mk..."
 rm -f adm/root.mk
 touch adm/root.mk
 
-echo "export MODULE := ${MODULE}" >>adm/root.mk
-echo "export MODULE_LOWERCASE := $(echo ${MODULE} | tr '[:upper:]' '[:lower:]')" >>adm/root.mk
+echo "export MFMODULE := ${MFMODULE}" >>adm/root.mk
+echo "export MFMODULE_LOWERCASE := $(echo ${MFMODULE} | tr '[:upper:]' '[:lower:]')" >>adm/root.mk
 echo "export BOOTSTRAP_HASH := ${BOOTSTRAP_HASH}" >>adm/root.mk
 echo "export LAYERAPI2_LAYERS_PATH := ${MFEXT_HOME}/opt:${MFEXT_HOME}" >>adm/root.mk
 echo "export MFEXT_HOME := ${MFEXT_HOME}" >>adm/root.mk
 echo "export MFEXT_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
-echo "export MODULE_HOME := ${MODULE_HOME}" >>adm/root.mk
-echo "export MODULE_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
+echo "export MFMODULE_HOME := ${MFMODULE_HOME}" >>adm/root.mk
+echo "export MFMODULE_VERSION := ${MFEXT_VERSION}" >>adm/root.mk
 echo "export SRC_DIR := ${SRC_DIR}" >>adm/root.mk
 echo "ifeq (\$(FORCED_PATHS),)" >>adm/root.mk
 echo "  export PATH := ${ROOT_PATH}" >>adm/root.mk

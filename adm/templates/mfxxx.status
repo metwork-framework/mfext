@@ -3,28 +3,28 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" = "--help"; then
-    echo "usage {{MODULE_LOWERCASE}}.status"
-    echo "  => test the {{MODULE_LOWERCASE}} module"
+    echo "usage {{MFMODULE_LOWERCASE}}.status"
+    echo "  => test the {{MFMODULE_LOWERCASE}} module"
     exit 0
 fi
 
 exit_if_root
 
-cd "${MODULE_RUNTIME_HOME}" || exit 1
+cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
-PLUGIN_NAME=$(env |grep ^{{MODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
+PLUGIN_NAME=$(env |grep ^{{MFMODULE}}_CURRENT_PLUGIN_NAME |awk -F '=' '{print $2;}')
 if test "${PLUGIN_NAME}" != ""; then
-    echo "ERROR: you can't use {{MODULE_LOWERCASE}}.status inside a plugin_env"
+    echo "ERROR: you can't use {{MFMODULE_LOWERCASE}}.status inside a plugin_env"
     exit 1
 fi
 
-{% if MODULE not in ["MFEXT", "MFCOM"] %}
-CONFIG_TARGET=$(readlink -f "${MODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
+{% if MFMODULE not in ["MFEXT", "MFCOM"] %}
+CONFIG_TARGET=$(readlink -f "${MFMODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
 if test "${CONFIG_TARGET}" != ""; then
     CONFIG_TIMESTAMP=$(date -r "${CONFIG_TARGET}" +%s 2>/dev/null)
     if test "${CONFIG_TIMESTAMP}" != ""; then
-        if test "{% raw %}${{% endraw %}{{MODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
-            echo_bold "WARNING: your environment is outdated => please reload your terminal before playing with {{MODULE_LOWERCASE}}.status"
+        if test "{% raw %}${{% endraw %}{{MFMODULE}}_CONF_GENERATION_TIME{% raw %}}{% endraw %}" -lt "${CONFIG_TIMESTAMP}"; then
+            echo_bold "WARNING: your environment is outdated => please reload your terminal before playing with {{MFMODULE_LOWERCASE}}.status"
             exit 1
         fi
     fi
@@ -32,7 +32,7 @@ fi
 {% endif %}
 
 if test "$1" != "QUIET"; then
-    LINE="*****     CHECKING ${MODULE}     *****"
+    LINE="*****     CHECKING ${MFMODULE}     *****"
     N=`echo "${LINE}" |wc -c`
     HEADER=`echo "**************************************************************" |cut -c 2-${N}`
     echo_bold "${HEADER}"
@@ -42,7 +42,7 @@ if test "$1" != "QUIET"; then
 fi
 
 RES=0
-if test -f ${MODULE_HOME}/config/circus.ini; then
+if test -f ${MFMODULE_HOME}/config/circus.ini; then
     _circus.status || RES=1
 fi
 
@@ -68,7 +68,7 @@ fi
 
 if test ${RES} -ne 0; then
     echo ""
-    echo_bold "ERROR(S) DETECTED DURING ${MODULE} CHECK"
+    echo_bold "ERROR(S) DETECTED DURING ${MFMODULE} CHECK"
 else
     if test "$1" != "QUIET"; then
         echo " "
