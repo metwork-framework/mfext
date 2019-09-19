@@ -12,5 +12,6 @@ This layer mainly includes some utilities (mainly internal).
 {{ utility("clear.sh") }}
 {{ utility("metwork_debug") }}
 {{ utility("outside") }}
+{{ utility("components") }}
 
 {% endblock %}
