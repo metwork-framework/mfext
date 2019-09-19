@@ -24,3 +24,4 @@ PyYAML
 diskcache
 terminaltables
 autopep8
+unidecode
