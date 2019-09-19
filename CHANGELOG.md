@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
 - no more default passwords, prelimininary systemd support
 - add some system dependencies
 - refactoring about #437, #432, #420
