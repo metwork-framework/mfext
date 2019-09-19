@@ -388,7 +388,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
                 echo "INFO: creating metwork systemd service"
             fi
             cp -f {{MFCOM_HOME}}/share/metwork.service /usr/lib/systemd/system/metwork.service
-            systemctl reload metwork.service >/dev/null 2>&1 || true
+            systemctl daemon-reload >/dev/null 2>&1 || true
             systemctl enable metwork.service >/dev/null 2>&1 || true
         else
             if test `/sbin/chkconfig --list metwork 2>/dev/null |wc -l` -eq 0; then
@@ -433,6 +433,12 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         {% endif %}
         {% if MFMODULE == "MFCOM" %}
             rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
+            if test -f /usr/lib/systemd/system/metwork.service; then
+                systemctl disable metwork.service >/dev/null 2>&1 || true
+                rm -f /usr/lib/systemd/system/metwork.service >/dev/null 2>&1
+                systemctl daemon-reload >/dev/null 2>&1 || true
+                systemctl reset-failed >/dev/null 2>&1 || true
+            fi
         {% endif %}
         N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
