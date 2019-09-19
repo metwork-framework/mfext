@@ -1,0 +1,225 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+import os
+import glob
+import json
+import argparse
+import bash
+import yaml
+import sys
+import six
+import codecs
+from unidecode import unidecode
+
+
+DESCRIPTION = "list installed/loaded components"
+MFMODULE = os.environ['MFMODULE']
+MFMODULE_HOME = os.environ['MFMODULE_HOME']
+MFEXT_HOME = os.environ['MFEXT_HOME']
+MFCOM_HOME = os.environ.get('MFCOM_HOME', '/not_defined')
+
+# PY2 compatibility
+try:
+    FileNotFoundError
+except NameError:
+    FileNotFoundError = IOError
+
+
+# Copied from mfutil to use in mfext
+# (FIXME: delete this when mfcom is a mfext layer)
+class BashWrapper(object):
+    """Bash command/output wrapper."""
+
+    __bash_cmd = None
+    __bash_result_object = None
+
+    def __init__(self, bash_cmd):
+        self.__bash_cmd = bash_cmd
+        self.__bash_result_object = bash.bash(bash_cmd)
+
+    def __bool__(self):
+        return (self.__bash_result_object.code == 0)
+
+    def __nonzero__(self):
+        # python2 compatibility
+        return self.__bool__()
+
+    @property
+    def code(self):
+        return self.__bash_result_object.code
+
+    @property
+    def stdout(self):
+        return self.__bash_result_object.stdout.strip().decode('UTF-8')
+
+    @property
+    def stderr(self):
+        return self.__bash_result_object.stderr.strip().decode('UTF-8')
+
+    def __repr__(self):
+        result = []
+        result.append("")
+        result.append("===== BASH COMMAND =======================")
+        result.append(self.__bash_cmd)
+        result.append("===== BASH RETURN CODE ===================")
+        result.append(str(self.code))
+        stdout = self.stdout
+        if stdout and len(stdout) > 0:
+            result.append("===== BASH STDOUT ========================")
+            result.append(self.stdout)
+        stderr = self.stderr
+        if stderr and len(stderr) > 0:
+            result.append("===== BASH STDERR ========================")
+            result.append(self.stderr)
+        return "\n".join(result)
+
+
+def fltr(value):
+    value = value.replace('|', ' ')
+    if value is None:
+        return "Unknown"
+    try:
+        return unidecode(value)
+    except Exception:
+        return unidecode(str(value))
+
+
+parser = argparse.ArgumentParser(description=DESCRIPTION)
+parser.add_argument("--module", help='filter output for this module only')
+parser.add_argument("--layer", help="filter output for this layer only")
+parser.add_argument("--name", help="filter output for this component only")
+parser.add_argument("--loaded-filter", help="loaded layer filter (default: no"
+                    " filter, possible values: yes, no)")
+parser.add_argument("--raw", help="raw output (can't be used with "
+                    "json option)", action="store_true")
+parser.add_argument("--json", help="json output (can't be used with "
+                    "raw output)", action="store_true")
+parser.add_argument("---without-versions", help="remove versions in output "
+                    "(ignored with json or raw output)", action="store_true")
+parser.add_argument("--full", help="add all informations (bigger, don't work "
+                    "with raw output)",
+                    action="store_true")
+
+
+args = parser.parse_args()
+if args.json and args.raw:
+    print("ERROR: json and raw options are mutually exclusive")
+    sys.exit(1)
+if args.loaded_filter:
+    if args.loaded_filter not in ('yes', 'no'):
+        print("ERROR: loaded-filter option value must be 'yes' or 'no'")
+        sys.exit(1)
+if args.full and args.raw:
+    print("ERROR: full and raw options are mutually exclusive")
+    sys.exit(1)
+
+
+yaml_files = []
+yaml_files = glob.glob("%s/opt/*/share/metwork_packages/*.yaml" %
+                       MFMODULE_HOME)
+yaml_files = yaml_files + glob.glob("%s/share/metwork_packages/*.yaml" %
+                                    MFMODULE_HOME)
+if MFMODULE != "MFEXT":
+    yaml_files = \
+        yaml_files + glob.glob("%s/opt/*/share/metwork_packages/*.yaml" %
+                               MFEXT_HOME)
+    yaml_files = yaml_files + glob.glob("%s/share/metwork_packages/*.yaml" %
+                                        MFEXT_HOME)
+    if MFMODULE != "MFCOM":
+        yaml_files = \
+            yaml_files + glob.glob("%s/opt/*/share/metwork_packages/*.yaml" %
+                                   MFCOM_HOME)
+        yaml_files = yaml_files + \
+            glob.glob("%s/share/metwork_packages/*.yaml" % MFCOM_HOME)
+
+layers = {}
+json_array = []
+for yaml_file in yaml_files:
+    lhome = yaml_file.split('/share/metwork_packages/')[0]
+    with open("%s/.layerapi2_label" % lhome, 'r') as g:
+        llabel = g.read().strip()
+    if llabel not in layers:
+        loaded = False
+        addon = None
+        tmp = BashWrapper("is_layer_loaded %s" % llabel)
+        if tmp and tmp.stdout.strip() == "1":
+            loaded = True
+        try:
+            with open("%s/.mfextaddon" % lhome, "r") as h:
+                addon = h.read().strip()
+        except FileNotFoundError:
+            pass
+        module = ""
+        try:
+            module = llabel.split('@')[1]
+        except KeyError:
+            pass
+        layers[llabel] = {
+            "label": llabel,
+            "home": lhome,
+            "loaded": loaded,
+            "addon": addon,
+            "module": module
+        }
+    if six.PY2:
+        with codecs.open(yaml_file, encoding='utf-8', mode='r') as f:
+            raw_content = f.read()
+            y = yaml.load(unidecode(raw_content), Loader=yaml.BaseLoader)
+    else:
+        with open(yaml_file, 'r', encoding="utf-8") as f:
+            raw_content = f.read()
+            y = yaml.load(unidecode(raw_content), Loader=yaml.BaseLoader)
+    name = y['name']
+    if args.name is not None:
+        if args.name != name:
+            continue
+    if args.module is not None:
+        if args.module != layers[llabel]['module']:
+            continue
+    if args.layer is not None:
+        if args.layer != llabel:
+            continue
+    loaded_str = "(*) " if layers[llabel]['loaded'] else ""
+    version_str = "-%s" % fltr(y['version'])
+    if args.without_versions:
+        version_str = ""
+    addon_str = ""
+    if layers[llabel]['addon']:
+        addon_str = " (addon: %s)" % layers[llabel]['addon']
+    if args.loaded_filter == "yes":
+        if not layers[llabel]['loaded']:
+            continue
+    if args.loaded_filter == "no":
+        if layers[llabel]['loaded']:
+            continue
+    if args.raw:
+        print("%s %s %s %s" % (name, fltr(y['version']),
+                               layers[llabel]['module'], llabel))
+    elif args.json:
+        tmp = {
+            "name": name,
+            "version": fltr(y['version']),
+            "module": layers[llabel]['module'],
+            "layer": llabel,
+            "addon": layers[llabel]['addon'],
+            "loaded": layers[llabel]['loaded']
+        }
+        if args.full:
+            tmp['website'] = fltr(y['website'])
+            tmp['description'] = fltr(y['description'])
+            tmp['license'] = fltr(y['license'])
+            tmp['sources'] = [fltr(x['url']) for x in y['sources']]
+        json_array.append(tmp)
+
+    else:
+        print("- %s%s%s (module: %s%s, layer: %s)" %
+              (loaded_str, name, version_str,
+               layers[llabel]['module'], addon_str, llabel))
+        if args.full:
+            print("    => website: %s" % fltr(y['website']))
+            print("    => description: %s" % fltr(y['description']))
+            print("    => license: %s" % fltr(y['license']))
+
+if args.json:
+    print(json.dumps(json_array, indent=4))

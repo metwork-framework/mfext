@@ -65,7 +65,7 @@ def is_empty_or_unknown(str_to_check):
 
 
 count = 0
-for tmp in sorted(yamls, key=lambda x: x[0]):
+for tmp in sorted(yamls):
     fpath = tmp[1]
     with open(fpath, 'r', encoding="utf-8") as f:
         raw_content = f.read()
@@ -85,14 +85,17 @@ for tmp in sorted(yamls, key=lambda x: x[0]):
             lhome = fpath.split('/share/metwork_packages/')[0]
             with open("%s/.layerapi2_label" % lhome, 'r') as g:
                 llabel = g.read().strip()
+            addon = None
+            try:
+                with open("%s/.mfextaddon" % lhome, "r") as h:
+                    addon = h.read().strip()
+            except FileNotFoundError:
+                pass
             if ADDON_NAME:
-                addon = None
-                try:
-                    with open("%s/.mfextaddon" % lhome, "r") as h:
-                        addon = h.read().strip()
-                except FileNotFoundError:
-                    pass
                 if addon != ADDON_NAME:
+                    continue
+            else:
+                if all_mode and addon:
                     continue
             lname = llabel.split('@')[0]
             if args.not_sphinx:

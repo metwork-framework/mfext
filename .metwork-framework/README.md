@@ -22,10 +22,14 @@ For example, here are some **layers** hosted on this repository:
 - `nodejs` which contains only one package: `nodejs`
 - [...]
 
+You can inspect installed layers with the `layers` utility.
+
 #### Components
 
 Most of theses **components** are not
 maintained by the MetWork Framework team. For example, you will find inside a recent [Python](http://www.python.org) interpreter or some well known libraries like [CURL](https://curl.haxx.se/) or [GLIB2](https://developer.gnome.org/glib/).
+
+You can inspect installed components with the `components` utility.
 
 #### Add-ons
 
@@ -126,6 +130,32 @@ $ layers # note: currently loaded layers are prefixed by (*)
 
 $ python --version (latest Python 2.7 version, this is not the system version)
 Python 2.7.15
+
+$ # See available components for the current env
+$ components --loaded-filter=yes
+- (*) libressl-2.9.2 (module: mfext, layer: core@mfext)
+- (*) mfutil_c-0.0.4 (module: mfext, layer: core@mfext)
+- (*) glib-2.56.4 (module: mfext, layer: core@mfext)
+- (*) yajl-2.1.0 (module: mfext, layer: core@mfext)
+- (*) libxml2-2.9.7 (module: mfext, layer: core@mfext)
+- (*) pcre-8.36 (module: mfext, layer: core@mfext)
+[...]
+
+$ # See full details about a given component
+$ components --name=virtualenv --full
+- virtualenv-16.6.0 (module: mfext, layer: python3_core@mfext)
+    => website: https://virtualenv.pypa.io/
+    => description: Virtual Python Environment builder
+    => license: MIT
+- (*) virtualenv-16.6.0 (module: mfext, layer: python2_core@mfext)
+    => website: https://virtualenv.pypa.io/
+    => description: Virtual Python Environment builder
+    => license: MIT
+
+$ # Note: you have two components because you have one in python2_core layer
+$ #       (currently loaded because you have the (*) sign before) and one
+$ #       in (not loaded) python3_core layer.
+
 ```
 
 ## More details

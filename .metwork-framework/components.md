@@ -8,12 +8,14 @@
 | [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python2 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
+| [PyYAML](https://github.com/yaml/pyyaml) | 5.1.2 | python2 |
 | [PyYAML](https://github.com/yaml/pyyaml) | 5.1.1 | python3 |
 | [Pygments](http://pygments.org/) | 2.4.2 | python3_devtools |
 | [Python](http://python.org/) | 2.7.16 | python2_core |
 | [Python](http://python.org/) | 3.7.3 | python3_core |
 | [Sphinx](http://sphinx-doc.org/) | 2.2.0 | python3_devtools |
-| [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3_devtools |
+| [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python2 |
+| [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.15.5 | python2_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.15.5 | python3_devtools |
 | [ack](https://beyondgrep.com/) | 2.16-single-file | devtools |
@@ -37,12 +39,12 @@
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python2 |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
 | [cairo](https://www.cairographics.org/) | 1.14.12 | scientific_core |
-| [certifi](https://certifi.io/) | 2019.3.9 | python3_circus |
+| [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python2 |
 | [certifi](https://certifi.io) | 2019.3.9 | python2_core |
-| [certifi](https://certifi.io/) | 2019.3.9 | python3 |
-| [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python2_devtools |
+| [certifi](https://certifi.io/) | 2019.3.9 | python3 |
+| [certifi](https://certifi.io/) | 2019.3.9 | python3_circus |
 | [certifi](https://certifi.io) | 2019.3.9 | python3_core |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3_devtools |
 | [cffi](http://cffi.readthedocs.org) | 1.12.3 | python2 |
@@ -162,8 +164,8 @@
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python3 |
 | [py](http://py.readthedocs.io/) | 1.8.0 | python2_devtools |
 | [py](http://py.readthedocs.io/) | 1.8.0 | python3_devtools |
-| [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python3 |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python2_devtools |
+| [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.19 | python2 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.19 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 3.0.0 | python2_devtools |
@@ -182,8 +184,8 @@
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
 | [pyzmq](https://pyzmq.readthedocs.org) | 16.0.4 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
-| [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python2 |
 | [redis](http://redis.io) | 5.0.5 | core |
+| [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python2 |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python2 |
 | [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python3 |
@@ -243,4 +245,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(242 components)*
+*(244 components)*
