@@ -152,15 +152,8 @@ Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} < {{FULL_VER
         {% if DEP.module == MFMODULE_LOWERCASE %}
             {# Because this dependency will be embedded in this package #}
             {{ minimal_layers.append(DEP.label)|replace('None', '') }}
-            {% if (MODULE_BRANCH == "integration" or MODULE_BRANCH == "master") and DEP.name == "root" %}
-                # we don't obsoletes root layer for the moment to avoid some issues with postun
-                # => we provide a new layer-root dummy package
-                # FIXME: to be removed someday
-Requires: metwork-{{MFMODULE_LOWERCASE}}-layer-root-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
-            {% else %}
 Provides: {{DEP.rpm}} = {{FULL_VERSION}}
 Obsoletes: {{DEP.rpm}} < {{FULL_VERSION}}
-            {% endif %}
         {% else %}
             {# Because this is a dependency on another module #}
 Requires: {{DEP.rpm}}
@@ -176,20 +169,6 @@ Requires: {{DEP.name}}
 %description {{MODULE_BRANCH}}
 This package contains minimal (readonly) files and directories for {{MFMODULE_LOWERCASE}} module.
 Everything is in {{MFMODULE_HOME}}/
-{% endif %}
-
-{% if MFEXT_ADDON == "0" %}
-    {% if MODULE_BRANCH == "master" or MODULE_BRANCH == "integration" %}
-        # DUMMY TEMPORARY LAYER-ROOT PACKAGE to avoid some issues with postun
-%package layer-root-{{MODULE_BRANCH}}
-Summary: dummy package to deal with update issues
-Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
-Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} >= {{FULL_VERSION}}
-%description layer-root-{{MODULE_BRANCH}}
-Dummy package to deal with update issues
-    {% endif %}
 {% endif %}
 
 {% if MFEXT_ADDON == "0" %}
