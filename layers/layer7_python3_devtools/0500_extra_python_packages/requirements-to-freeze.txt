@@ -12,7 +12,6 @@ jedi
 pydocstyle
 flake8-docstrings
 mockredispy
-unidecode
 m2r
 jupyter_client
 pytest
