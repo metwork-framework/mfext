@@ -34,6 +34,7 @@
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python2 |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
+| [black](https://github.com/ambv/black) | 19.3b0 | python3_devtools |
 | [c-ares](https://c-ares.haxx.se/) | 1.12.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python2 |
@@ -226,6 +227,7 @@
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.0 | python2_devtools |
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.0 | python3_devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
+| [toml](https://github.com/uiri/toml) | 0.10.0 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.0 | python3_devtools |
 | [typing](https://docs.python.org/3/library/typing.html) | 3.7.4.1 | python2_devtools |
@@ -245,4 +247,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(244 components)*
+*(246 components)*
