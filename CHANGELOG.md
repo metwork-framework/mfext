@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add black python component
 - introduce components utility
 - replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
 - no more default passwords, prelimininary systemd support
