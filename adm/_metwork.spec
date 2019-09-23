@@ -493,10 +493,3 @@ rm -fr %{buildroot}
 {{MFMODULE_HOME}}/opt/{{LAYER.name}}
     {% endif %}
 {% endfor %}
-
-{% if MFEXT_ADDON == "0" %}
-    {% if MODULE_BRANCH == "master" or MODULE_BRANCH == "integration" %}
-%files layer-root-{{MODULE_BRANCH}}
-%defattr(-,root,root,-)
-    {% endif %}
-{% endif %}
