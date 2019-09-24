@@ -4,6 +4,16 @@
 ## [Unreleased]
 
 ### New Features
+- add hmac openresty component
+
+
+
+
+
+
+## v0.8.2 (2019-09-21)
+
+### New Features
 - introduce components utility
 
 
