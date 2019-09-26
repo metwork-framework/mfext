@@ -1,6 +1,9 @@
 ## What is MFEXT ?
 
-This is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. This module does not contain any services, it is just a bunch of files and directories.
+This is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. This module is a "dependencies package" ridiculously easy to install which add to a Linux distribution plenty of recent softwares, especially for scientific and meteorology domain. 
+
+This module does not contain any services, it is just a bunch of files and directories installed in `/opt` directory
+(so installing **MFEXT** module can't break anything on your system).
 
 Usually **MFEXT** is just a dependency of other MetWork Framework **modules** (like [mfserv](https://github.com/metwork-framework/mfserv) or [mfdata](https://github.com/metwork-framework.org/mfdata)) but it can also be used alone like you can see on the short (< 30s) following screencast:
 
