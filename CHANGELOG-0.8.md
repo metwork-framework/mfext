@@ -1,7 +1,8 @@
 # release_0.8 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.8.3 (2019-09-24)
 
 ### New Features
 - add hmac openresty component
