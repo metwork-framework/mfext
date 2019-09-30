@@ -1,0 +1,37 @@
+#!/bin/env python3
+
+import argparse
+import os
+import sys
+import json
+import subprocess
+
+argparser = argparse.ArgumentParser(
+    description="Get the package name from a layer label"
+)
+argparser.add_argument("LAYER_LABEL", nargs=1, help="layer label")
+args = argparser.parse_args()
+
+label = args.LAYER_LABEL[0]
+mod = label.split('@')[1]
+env = {}
+if mod == "mfext":
+    env['MFMODULE_HOME'] = os.environ['MFEXT_HOME']
+    env['MFMODULE_LOWERCASE'] = mod
+elif mod == "mfcom":
+    env['MFMODULE_HOME'] = os.environ['MFCOM_HOME']
+    env['MFMODULE_LOWERCASE'] = mod
+
+cmd = "_packaging_get_module_dependencies 1 2 3"
+x = subprocess.run(["_packaging_get_module_dependencies", "1", "2", "3"],
+                   stdout=subprocess.PIPE, env=dict(os.environ, **env))
+if x.returncode != 0:
+    raise Exception("_packaging_get_module_dependencies error")
+
+deps = json.loads(x.stdout.decode('utf8'))
+for dep in deps:
+    if dep['label'] == label:
+        print("metwork-%s-minimal" % mod)
+        sys.exit(0)
+
+print("metwork-%s-layer-%s" % (mod, label.split('@')[0]))

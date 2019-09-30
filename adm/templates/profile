@@ -19,34 +19,34 @@ if test -f /etc/metwork.extraprofile; then
     . /etc/metwork.extraprofile
 fi
 
-# Wet set MODULE, MODULE_HOME env variables
-export MODULE={{MODULE}}
-export MODULE_HOME={{MODULE_HOME}}
-export MODULE_VERSION={{MODULE_VERSION}}
-export {{MODULE}}_HOME={{MODULE_HOME}}
-export {{MODULE}}_VERSION={{MODULE_VERSION}}
-export MODULE_LOWERCASE={{MODULE|lower}}
+# Wet set MFMODULE, MFMODULE_HOME env variables
+export MFMODULE={{MFMODULE}}
+export MFMODULE_HOME={{MFMODULE_HOME}}
+export MFMODULE_VERSION={{MFMODULE_VERSION}}
+export {{MFMODULE}}_HOME={{MFMODULE_HOME}}
+export {{MFMODULE}}_VERSION={{MFMODULE_VERSION}}
+export MFMODULE_LOWERCASE={{MFMODULE|lower}}
 
-# Set a good default value for MODULE_RUNTIME_SUFFIX if necessary
-if ! test "$(whoami)" = "{{MODULE_LOWERCASE}}"; then
-    if test "${MODULE_RUNTIME_SUFFIX}" = ""; then
-        export MODULE_RUNTIME_SUFFIX=metwork/{{MODULE_LOWERCASE}}
+# Set a good default value for MFMODULE_RUNTIME_SUFFIX if necessary
+if ! test "$(whoami)" = "{{MFMODULE_LOWERCASE}}"; then
+    if test "${MFMODULE_RUNTIME_SUFFIX}" = ""; then
+        export MFMODULE_RUNTIME_SUFFIX=metwork/{{MFMODULE_LOWERCASE}}
     fi
 fi
 
-# Set MODULE_RUNTIME_HOME and PYTHON_EGG_CACHE
-{% if MODULE != "MFEXT" and MODULE != "MFCOM" %}
-    if test "${MODULE_RUNTIME_USER}" = ""; then
-        export MODULE_RUNTIME_USER=`whoami`
+# Set MFMODULE_RUNTIME_HOME and PYTHON_EGG_CACHE
+{% if MFMODULE != "MFEXT" and MFMODULE != "MFCOM" %}
+    if test "${MFMODULE_RUNTIME_USER}" = ""; then
+        export MFMODULE_RUNTIME_USER=`whoami`
     fi
-    if test "${MODULE_RUNTIME_HOME}" = ""; then
-        CMD="echo ~${MODULE_RUNTIME_USER}"
-        if test "${MODULE_RUNTIME_SUFFIX}" != ""; then
-            CMD="${CMD}/${MODULE_RUNTIME_SUFFIX}"
+    if test "${MFMODULE_RUNTIME_HOME}" = ""; then
+        CMD="echo ~${MFMODULE_RUNTIME_USER}"
+        if test "${MFMODULE_RUNTIME_SUFFIX}" != ""; then
+            CMD="${CMD}/${MFMODULE_RUNTIME_SUFFIX}"
         fi
-        export MODULE_RUNTIME_HOME=`eval ${CMD}`
+        export MFMODULE_RUNTIME_HOME=`eval ${CMD}`
     fi
-    export PYTHON_EGG_CACHE=${MODULE_RUNTIME_HOME}/tmp/python_cache
+    export PYTHON_EGG_CACHE=${MFMODULE_RUNTIME_HOME}/tmp/python_cache
 {% else %}
     export PYTHON_EGG_CACHE="${TMPDIR:-/tmp}/metwork_python_egg_cache"
 {% endif %}
@@ -54,7 +54,7 @@ if ! test -d "${PYTHON_EGG_CACHE}"; then
     mkdir -p "${PYTHON_EGG_CACHE}"
 fi
 
-{% if MODULE != "MFCOM" and MODULE != "MFEXT" %}
+{% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
     # We set MFCOM_HOME
     export MFCOM_HOME={{MFCOM_HOME}}
     export MFCOM_VERSION={{MFCOM_VERSION}}
@@ -77,49 +77,49 @@ field_prepend PKG_CONFIG_PATH /usr/lib64/pkgconfig
 field_prepend PKG_CONFIG_PATH /lib64/pkgconfig
 export PKG_CONFIG_PATH
 
-# We set the MODULE_VERSION environnement variable
-MODULE_VERSION=$(cat ${MODULE_HOME}/config/version 2>/dev/null |head -1)
-if test "${MODULE_VERSION}" = ""; then
-    MODULE_VERSION=unknown
+# We set the MFMODULE_VERSION environnement variable
+MFMODULE_VERSION=$(cat ${MFMODULE_HOME}/config/version 2>/dev/null |head -1)
+if test "${MFMODULE_VERSION}" = ""; then
+    MFMODULE_VERSION=unknown
 fi
-export MODULE_VERSION
+export MFMODULE_VERSION
 
-# We set the MODULE_STATUS environnement variable
-MODULE_STATUS=$(cat ${MODULE_HOME}/var/status 2>/dev/null)
-if test "${MODULE_STATUS}" = ""; then
-    MODULE_STATUS=unknown
+# We set the MFMODULE_STATUS environnement variable
+MFMODULE_STATUS=$(cat ${MFMODULE_HOME}/var/status 2>/dev/null)
+if test "${MFMODULE_STATUS}" = ""; then
+    MFMODULE_STATUS=unknown
 fi
-export MODULE_STATUS
+export MFMODULE_STATUS
 
 # FIXME: do not hardcode this
 export PYTHON3_SHORT_VERSION=3.7
 export PYTHON2_SHORT_VERSION=2.7
 
 # We configure the layers system
-field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}
-field_prepend METWORK_LAYERS_PATH {{MFEXT_HOME}}/opt
-{% if MODULE != "MFEXT" %}
-    field_prepend METWORK_LAYERS_PATH {{MFCOM_HOME}}
-    field_prepend METWORK_LAYERS_PATH {{MFCOM_HOME}}/opt
-    {% if MODULE != "MFCOM" %}
-        field_prepend METWORK_LAYERS_PATH {{MODULE_HOME}}
-        field_prepend METWORK_LAYERS_PATH {{MODULE_HOME}}/opt
-        {% if MODULE == "MFSERV" or MODULE == "MFDATA" or MODULE == "MFBASE" %}
-            if test "${MODULE_RUNTIME_HOME:-}" != ""; then
-                field_prepend METWORK_LAYERS_PATH ${MODULE_RUNTIME_HOME}/var/plugins
+field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}
+field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt
+{% if MFMODULE != "MFEXT" %}
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFCOM_HOME}}
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFCOM_HOME}}/opt
+    {% if MFMODULE != "MFCOM" %}
+        field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}
+        field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}/opt
+        {% if MFMODULE == "MFSERV" or MFMODULE == "MFDATA" or MFMODULE == "MFBASE" %}
+            if test "${MFMODULE_RUNTIME_HOME:-}" != ""; then
+                field_prepend LAYERAPI2_LAYERS_PATH ${MFMODULE_RUNTIME_HOME}/var/plugins
             fi
         {% endif %}
     {% endif %}
 {% endif %}
-export METWORK_LAYERS_PATH
+export LAYERAPI2_LAYERS_PATH
 
 # We load the default layer (if installed)
-N=$({{MFEXT_HOME}}/bin/is_layer_installed default@${MODULE_LOWERCASE} 2>/dev/null)
+N=$({{MFEXT_HOME}}/opt/core/bin/is_layer_installed default@${MFMODULE_LOWERCASE} 2>/dev/null)
 if test "${N}" = "1"; then
     # note: if we are in a plugin_env, we don't load default layers (issue mfserv#220)
-    if test "{% raw %}${{% endraw %}{{MODULE}}_CURRENT_PLUGIN_NAME:-}" = ""; then
+    if test "{% raw %}${{% endraw %}{{MFMODULE}}_CURRENT_PLUGIN_NAME:-}" = ""; then
         # We load the default layer
-        layer_load default@${MODULE_LOWERCASE} >/dev/null
+        layer_load default@${MFMODULE_LOWERCASE} >/dev/null
     fi
 else
     # The default layer is not installed
@@ -128,44 +128,44 @@ else
     layer_load core@mfext >/dev/null 2>&1
 fi
 
-{% if MODULE != "MFEXT" and MODULE != "MFCOM" %}
-    if ! test -d ${MODULE_RUNTIME_HOME}; then
-        mkdir -p ${MODULE_RUNTIME_HOME} >/dev/null 2>&1
+{% if MFMODULE != "MFEXT" and MFMODULE != "MFCOM" %}
+    if ! test -d ${MFMODULE_RUNTIME_HOME}; then
+        mkdir -p ${MFMODULE_RUNTIME_HOME} >/dev/null 2>&1
     fi
-    if ! test -d ${MODULE_RUNTIME_HOME}; then
-        echo "ERROR: can't create ${MODULE_RUNTIME_HOME} directory"
+    if ! test -d ${MFMODULE_RUNTIME_HOME}; then
+        echo "ERROR: can't create ${MFMODULE_RUNTIME_HOME} directory"
         export PROFILE_ERROR=1
         unset METWORK_PROFILE_LOADING
         return 1
     fi
     for SUBDIR in config tmp var log tmp/config_auto; do
-        if ! test -d ${MODULE_RUNTIME_HOME}/${SUBDIR}; then
-            mkdir -p ${MODULE_RUNTIME_HOME}/${SUBDIR} >/dev/null 2>&1
-            if ! test -d ${MODULE_RUNTIME_HOME}/${SUBDIR}; then
-                echo "ERROR: can't create ${MODULE_RUNTIME_HOME}/${SUBDIR} directory"
+        if ! test -d ${MFMODULE_RUNTIME_HOME}/${SUBDIR}; then
+            mkdir -p ${MFMODULE_RUNTIME_HOME}/${SUBDIR} >/dev/null 2>&1
+            if ! test -d ${MFMODULE_RUNTIME_HOME}/${SUBDIR}; then
+                echo "ERROR: can't create ${MFMODULE_RUNTIME_HOME}/${SUBDIR} directory"
                 export PROFILE_ERROR=1
                 unset METWORK_PROFILE_LOADING
                 return 1
             fi
         fi
     done
-    if test -f "/etc/metwork.config.d/{{MODULE|lower}}/config.ini"; then
-        if ! test -L "${MODULE_RUNTIME_HOME}/config/config.ini"; then
-            rm -f "${MODULE_RUNTIME_HOME}/config/config.ini"
-            ln -s "/etc/metwork.config.d/{{MODULE|lower}}/config.ini" "${MODULE_RUNTIME_HOME}/config/config.ini"
+    if test -f "/etc/metwork.config.d/{{MFMODULE|lower}}/config.ini"; then
+        if ! test -L "${MFMODULE_RUNTIME_HOME}/config/config.ini"; then
+            rm -f "${MFMODULE_RUNTIME_HOME}/config/config.ini"
+            ln -s "/etc/metwork.config.d/{{MFMODULE|lower}}/config.ini" "${MFMODULE_RUNTIME_HOME}/config/config.ini"
         fi
     fi
-    if ! test -f ${MODULE_RUNTIME_HOME}/config/config.ini; then
-        if test -f ${MODULE_HOME}/config/config.ini; then
-            ${MFCOM_HOME}/bin/_prepare_config.py >${MODULE_RUNTIME_HOME}/config/config.ini 2>&1
+    if ! test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
+        if test -f ${MFMODULE_HOME}/config/config.ini; then
+            ${MFCOM_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
         fi
     else
-        if ! test -L ${MODULE_HOME}/config/config.ini; then
-            if test ${MODULE_HOME}/config/config.ini -nt ${MODULE_RUNTIME_HOME}/config/config.ini; then
-                N=`cat ${MODULE_RUNTIME_HOME}/config/config.ini |grep -v '^\[' |grep -v '^#' |grep '[a-zA-Z]' |wc -l`
+        if ! test -L ${MFMODULE_HOME}/config/config.ini; then
+            if test ${MFMODULE_HOME}/config/config.ini -nt ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
+                N=`cat ${MFMODULE_RUNTIME_HOME}/config/config.ini |grep -v '^\[' |grep -v '^#' |grep '[a-zA-Z]' |wc -l`
                 if test "${N}" -eq 0; then
                     # we can override
-                    ${MFCOM_HOME}/bin/_prepare_config.py >${MODULE_RUNTIME_HOME}/config/config.ini 2>&1
+                    ${MFCOM_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
                 fi
             fi
         fi
@@ -174,12 +174,12 @@ fi
         {% set FORCED_MODULE_HOME = MFCOM_HOME %}
         {% set FORCED_MODULE = "MFCOM" %}
         {% include "nethard_profile" %}
-        {% set FORCED_MODULE_HOME = "${MODULE_HOME}" %}
-        {% set FORCED_MODULE = "${MODULE}" %}
+        {% set FORCED_MODULE_HOME = "${MFMODULE_HOME}" %}
+        {% set FORCED_MODULE = "${MFMODULE}" %}
         {% include "config_profile" %}
     fi
 {% else %}
-    {% if MODULE == "MFCOM" %}
+    {% if MFMODULE == "MFCOM" %}
         if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
             {% include "nethard_profile" %}
         fi
@@ -187,18 +187,18 @@ fi
 {% endif %}
 
 # A little kind of magic to deal with [log]/json_file=AUTO
-if test "{% raw %}${{% endraw %}{{MODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
-    if test "{% raw %}${{% endraw %}{{MODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
-        export {{MODULE}}_LOG_JSON_FILE="null"
+if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
+    if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
+        export {{MFMODULE}}_LOG_JSON_FILE="null"
     else
-        export {{MODULE}}_LOG_JSON_FILE="{% raw %}${MODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
+        export {{MFMODULE}}_LOG_JSON_FILE="{% raw %}${MFMODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
     fi
 fi
 
 # FIXME: we add this for a smooth migration =>  we can remove it after a few days (2019-02-04)
-export {{MODULE}}_LOG_DEFAULT_LEVEL="{% raw %}${{% endraw %}{{MODULE}}_LOG_MINIMAL_LEVEL{% raw %}}{% endraw %}"
+export {{MFMODULE}}_LOG_DEFAULT_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MINIMAL_LEVEL{% raw %}}{% endraw %}"
 
-{% if MODULE != "MFEXT" %}
+{% if MFMODULE != "MFEXT" %}
 export MFLOG_EXTRA_CONTEXT_FUNC="mflog_metwork_addon.extra_context"
 export MFLOG_JSON_ONLY_KEYS="plugin"
 {% endif %}

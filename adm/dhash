@@ -29,7 +29,7 @@ ABS=$(get_abs_dirname "${1}")/
 echo "s|^${ABS}\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~\5|" >>"${TMPF}"
 echo "s|^|${4}|" >>"${TMPF}"
 echo 's/^\(.*\)~~~DIR~~~\(.*\)~~~\(.*\)~~~\(.*\)$/\1~~~DIR~~~ignored~~~\3~~~ignored/' >>"${TMPF}"
-for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_hash"); do
+for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_hash" 2>/dev/null); do
     echo "s|^\(${LINE}\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~ignored|" >>"${TMPF}"
 done
 if test "${2}" != ""; then
@@ -39,7 +39,7 @@ if test "${2}" != ""; then
         done
     fi
 fi
-for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_all"); do
+for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_all" 2>/dev/null); do
     echo "\|^${LINE}~~~.*~~~.*~~~.*~~~.*$|d" >>"${TMPF}"
 done
 if test "${3}" != ""; then
@@ -50,11 +50,11 @@ if test "${3}" != ""; then
     fi
 fi
 
-"${MFEXT_HOME}/bin/dtreetrawl" --help >/dev/null 2>&1
+"${MFEXT_HOME}/opt/core/bin/dtreetrawl" --help >/dev/null 2>&1
 if test $? -eq 0; then
-    DTREE="${MFEXT_HOME}/bin/dtreetrawl"
+    DTREE="${MFEXT_HOME}/opt/core/bin/dtreetrawl"
 else
-    DTREE="${SRC_DIR}/layers/layer7_devtools/0000_pdtreetrawl/bin/dtreetrawl"
+    DTREE="${SRC_DIR}/bootstrap/bin/dtreetrawl"
     ${DTREE} --help >/dev/null 2>&1
     if test $? -ne 0; then
         echo "ERROR: can't find a working dtreetrawl"

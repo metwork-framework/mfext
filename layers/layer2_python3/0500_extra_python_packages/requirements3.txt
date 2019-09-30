@@ -21,7 +21,7 @@ inotify-simple==1.1.8
 Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
--e git+https://github.com/metwork-framework/mflog.git@757f6a1c25dc9b9b44d8ab5cc479e833d765fc48#egg=mflog
+-e git+https://github.com/metwork-framework/mflog.git@53ecaa57fa3825af5566ffd7726bb2fd986eef76#egg=mflog
 netifaces==0.10.9
 poyo==0.4.2
 psutil==5.6.3
@@ -38,4 +38,5 @@ structlog==19.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 terminaltables==3.1.0
 urllib3==1.25.3
+Unidecode==1.1.1
 whichcraft==0.5.2

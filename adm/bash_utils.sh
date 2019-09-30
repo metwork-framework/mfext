@@ -5,7 +5,7 @@ field_prepend() {
     local old_value
     old_value=$(eval echo "\$$1")
     local new_value
-    new_value=$("${MFEXT_HOME}/bin/_field_prepend" "${old_value}" "$2")
+    new_value=$("${MFEXT_HOME}/opt/core/bin/_field_prepend" "${old_value}" "$2")
     eval export "\\$1=${new_value}"
 }
 
@@ -14,7 +14,7 @@ field_remove() {
     local old_value
     old_value=$(eval echo "\$$1")
     local new_value
-    new_value=$("${MFEXT_HOME}/bin/_field_remove" --separator="${3:-':'}" "${old_value}" "$2")
+    new_value=$("${MFEXT_HOME}/opt/core/bin/_field_remove" --separator="${3:-':'}" "${old_value}" "$2")
     eval export "\\$1=${new_value}"
 }
 
@@ -23,7 +23,7 @@ field_remove_with_wildcards() {
     local old_value
     old_value=$(eval echo "\$$1")
     local new_value
-    new_value=$("${MFEXT_HOME}/bin/_field_remove" --use-wildcards --separator="${3:-':'}" "${old_value}" "$2")
+    new_value=$("${MFEXT_HOME}/opt/core/bin/_field_remove" --use-wildcards --separator="${3:-':'}" "${old_value}" "$2")
     eval export "\\$1=${new_value}"
 }
 
@@ -36,11 +36,11 @@ exit_if_root() {
 
 function cleanup_directories()
 {
-    if test "${MODULE_RUNTIME_HOME}" != ""; then
+    if test "${MFMODULE_RUNTIME_HOME}" != ""; then
         for REP in tmp var log; do
-        if test -d "${MODULE_RUNTIME_HOME}/${REP}"; then
-            echo -n "- Cleaning ${MODULE_RUNTIME_HOME}/${REP}..."
-            cd "${MODULE_RUNTIME_HOME}/${REP}" && rm -Rf ./* >/dev/null 2>&1
+        if test -d "${MFMODULE_RUNTIME_HOME}/${REP}"; then
+            echo -n "- Cleaning ${MFMODULE_RUNTIME_HOME}/${REP}..."
+            cd "${MFMODULE_RUNTIME_HOME}/${REP}" && rm -Rf ./* >/dev/null 2>&1
             echo_ok
         fi
         done
@@ -50,8 +50,8 @@ function cleanup_directories()
 
 function cleanup_pyc()
 {
-    if test "${MODULE_RUNTIME_HOME}" != ""; then
-        find "${MODULE_RUNTIME_HOME}" -name "*.pyc" -delete
+    if test "${MFMODULE_RUNTIME_HOME}" != ""; then
+        find "${MFMODULE_RUNTIME_HOME}" -name "*.pyc" -delete
     fi
 }
 # FIXME: inline this function
@@ -70,9 +70,9 @@ function cache_get()
 {
     FILE=${1}
     LIFETIME=${2}
-    NEWERS="/etc/hosts /etc/resolv.conf /etc/nsswitch.conf /etc/metwork.config ${MFCOM_HOME}/config/config.ini ${MODULE_HOME}/config/config.ini ${MODULE_RUNTIME_HOME}/config/config.ini"
-    if test -f "/etc/metwork.config.d/${MODULE_LOWERCASE}/config.ini"; then
-        NEWERS="${NEWERS} /etc/metwork.config.d/${MODULE_LOWERCASE}/config.ini"
+    NEWERS="/etc/hosts /etc/resolv.conf /etc/nsswitch.conf /etc/metwork.config ${MFCOM_HOME}/config/config.ini ${MFMODULE_HOME}/config/config.ini ${MFMODULE_RUNTIME_HOME}/config/config.ini"
+    if test -f "/etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"; then
+        NEWERS="${NEWERS} /etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"
     fi
     OUT="find ${FILE} -type f -mmin -${LIFETIME} "
     for NEWER in ${NEWERS}; do
@@ -107,7 +107,7 @@ function layer_unload()
 {
     local LAYER_UNLOAD_TMP
     LAYER_UNLOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/bin/layer_unload_bash_cmds" "--debug" "$@" 2>"${LAYER_UNLOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_unload_bash_cmds" "--debug" "$@" 2>"${LAYER_UNLOAD_TMP}")"
     cat "${LAYER_UNLOAD_TMP}"
     rm -f "${LAYER_UNLOAD_TMP}"
 }
@@ -116,7 +116,16 @@ function layer_load()
 {
     local LAYER_LOAD_TMP
     LAYER_LOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/bin/layer_load_bash_cmds" "--debug" "$@" 2>"${LAYER_LOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--debug" "$@" 2>"${LAYER_LOAD_TMP}")"
+    cat "${LAYER_LOAD_TMP}"
+    rm -f "${LAYER_LOAD_TMP}"
+}
+
+function layer_load_without_optional()
+{
+    local LAYER_LOAD_TMP
+    LAYER_LOAD_TMP=$(mktemp)
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--debug" "--dont-load-optional" "$@" 2>"${LAYER_LOAD_TMP}")"
     cat "${LAYER_LOAD_TMP}"
     rm -f "${LAYER_LOAD_TMP}"
 }

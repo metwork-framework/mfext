@@ -56,6 +56,8 @@ doc/layer_*.rst
 doc/layerapi2.rst
 doc/*.mdtemp
 doc/.ipynb_checkpoints
+libffi/build
+libffi/cache
 glib2/build
 glib2/cache
 mfutil_c/build
@@ -68,9 +70,14 @@ doc/configure_metwork_repo.md
 doc/configure_metwork_repo.rst
 doc/install_a_metwork_package.md
 doc/install_a_metwork_package.rst
-doc/README.md
+doc/components.md
+doc/components.rst
 doc/README.rst
 doc/CHANGELOG*.md
 doc/CHANGELOG*.rst
 doc/changelogs.rst
 dtreetrawl/build
+layerapi2/build
+doc/installation_guide.md
+doc/installation_guide.rst
+doc/README.md

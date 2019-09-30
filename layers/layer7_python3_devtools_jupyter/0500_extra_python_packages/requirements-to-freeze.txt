@@ -1,2 +1,0 @@
-jupyter
-bash_kernel

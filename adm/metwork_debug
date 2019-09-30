@@ -34,18 +34,18 @@ echo
 echo
 echo "***** CURRENT MODULE *****"
 echo
-echo "- module: ${MODULE:-undefined}"
-echo "- module version: ${MODULE_VERSION:-undefined}"
-echo "- module home: ${MODULE_HOME:-undefined}"
-echo "- module runtime home: ${MODULE_RUNTIME_HOME:-undefined}"
-if test "${MODULE:-}" != "MFEXT"; then
+echo "- module: ${MFMODULE:-undefined}"
+echo "- module version: ${MFMODULE_VERSION:-undefined}"
+echo "- module home: ${MFMODULE_HOME:-undefined}"
+echo "- module runtime home: ${MFMODULE_RUNTIME_HOME:-undefined}"
+if test "${MFMODULE:-}" != "MFEXT"; then
     echo
     echo
     echo "***** MFEXT MODULE *****"
     echo
     echo "- mfext home: ${MFEXT_HOME:-undefined}"
     echo "- mfext version: ${MFEXT_VERSION:-undefined}"
-    if test "${MODULE:-}" != "MFCOM"; then
+    if test "${MFMODULE:-}" != "MFCOM"; then
         echo
         echo
         echo "***** MFCOM MODULE *****"
@@ -61,8 +61,8 @@ echo "***** LOADED LAYERS *****"
 echo
 layers --loaded-filter=yes --raw |grep @mfext |awk '{print "- "$1" ["$2"]";}'
 layers --loaded-filter=yes --raw |grep -v @mfext |grep @mfcom |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
 
 echo
 echo
@@ -70,16 +70,16 @@ echo "***** NOT LOADED (BUT INSTALLED) LAYERS *****"
 echo
 layers --loaded-filter=no --raw |grep @mfext |awk '{print "- "$1" ["$2"]";}'
 layers --loaded-filter=no --raw |grep -v @mfext |grep @mfcom |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
 
 echo
 echo
-echo "***** METWORK_LAYERS_PATH *****"
+echo "***** LAYERAPI2_LAYERS_PATH *****"
 echo
 echo -n "- "
 # shellcheck disable=SC2001
-echo "${METWORK_LAYERS_PATH}" |sed 's/:/\n- /g'
+echo "${LAYERAPI2_LAYERS_PATH}" |sed 's/:/\n- /g'
 
 echo
 echo

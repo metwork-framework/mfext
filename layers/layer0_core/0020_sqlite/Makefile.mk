@@ -14,4 +14,4 @@ LICENSE=Domain public
 
 all:: $(PREFIX)/lib/libsqlite3.so
 $(PREFIX)/lib/libsqlite3.so: Makefile Makefile.mk sources
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="--enable-shared --disable-static" EXTRACFLAGS="-DSQLITE_ENABLE_COLUMN_METADATA" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="--enable-shared --disable-static" EXTRACFLAGS="-I$(PREFIX)/include -DSQLITE_ENABLE_COLUMN_METADATA" EXTRALDFLAGS="-L$(PREFIX)/lib" download uncompress configure build install

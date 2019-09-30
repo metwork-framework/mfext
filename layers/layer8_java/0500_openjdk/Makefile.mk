@@ -1,6 +1,7 @@
 include ../../../adm/root.mk
 include $(MFEXT_HOME)/share/package.mk
 
+#We will have to upgrade to 12.0.2 someday
 export NAME=openjdk
 export VERSION=11.0.2
 export EXTENSION=tar.gz

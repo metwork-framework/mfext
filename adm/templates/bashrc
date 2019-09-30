@@ -20,7 +20,7 @@ if test -f /etc/metwork.custom_profile; then
     . /etc/metwork.custom_profile
 fi
 
-PROFILE="{{MODULE_HOME}}/share/profile"
+PROFILE="{{MFMODULE_HOME}}/share/profile"
 # We load the main profile
 if ! test -f ${PROFILE}; then
     echo "ERROR: UNABLE TO FIND THE PROFILE ${PROFILE} !"

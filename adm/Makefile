@@ -1,9 +1,9 @@
 LIBS_BEFORE=bash_utils.sh
-BINS_BEFORE=guess_version.sh _make_file_from_template.sh envtpl _proxy_set.sh dhash layer_hash _cache_path.sh _cache_logic_before.sh _cache_logic_after.sh _cache_logic_before_layer.sh _cache_logic_after_layer.sh _layer_hash module_hash _layer_dhash _check_layers_hash
+BINS_BEFORE=guess_version.sh _make_file_from_template.sh envtpl _proxy_set.sh dhash layer_hash _cache_path.sh _cache_logic_before_layer.sh _cache_logic_after_layer.sh _layer_hash module_hash _layer_dhash _check_layers_hash
 SHARES_BEFORE=main_root.mk subdir_root.mk
 
 LIBS=$(LIBS_BEFORE)
-BINS=$(BINS_BEFORE) outside metwork_debug _launch_crontab clear.sh _doc_layer.sh _yaml_to_md.py
+BINS=$(BINS_BEFORE) outside metwork_debug _launch_crontab clear.sh _doc_layer.sh _yaml_to_md.py _packaging_get_module_dependencies _packaging_get_module_layers _packaging_get_layer_dependencies sphinx_wrapper _packaging_get_package_name components
 SHARES=$(SHARES_BEFORE) _metwork.spec
 
 include root.mk

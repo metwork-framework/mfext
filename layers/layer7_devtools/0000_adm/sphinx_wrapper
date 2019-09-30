@@ -1,0 +1,3 @@
+#!/bin/bash
+
+layer_wrapper --layers="python3_devtools@mfext" -- sphinx-build "$@"

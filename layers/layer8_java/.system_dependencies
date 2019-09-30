@@ -1,0 +1,5 @@
+libfreetype.so.6()(64bit)@all
+libX11.so.6()(64bit)@all
+libXau.so.6()(64bit)@all
+libxcb.so.1()(64bit)@all
+libXrender.so.1()(64bit)@all

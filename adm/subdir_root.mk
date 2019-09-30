@@ -1,5 +1,5 @@
 ifeq ($(PREFIX),)
-	PREFIX:=$(MODULE_HOME)
+	PREFIX:=$(MFMODULE_HOME)
 endif
 TARGET_BINS:=$(addprefix $(PREFIX)/bin/,$(BINS))
 TARGET_SBINS:=$(addprefix $(PREFIX)/sbin/,$(SBINS))
@@ -77,13 +77,13 @@ $(PREFIX)/share/profile: $(MFEXT_HOME)/share/templates/$(PROFILE_TEMPLATE) $(MFE
 $(PREFIX)/share/interactive_profile: $(MFEXT_HOME)/share/templates/$(INTERACTIVE_PROFILE_TEMPLATE) $(wildcard $(INTERACTIVE_PROFILE_TEMPLATE).custom)
 	$(MFEXT_HOME)/bin/_make_file_from_template.sh $(INTERACTIVE_PROFILE_TEMPLATE) .custom >$@
 
-load_env: $(PREFIX)/share/load_env.sh $(PREFIX)/share/load_env_and_cd_sources.sh $(PREFIX)/share/load_env_and_cd_runtime.sh $(PREFIX)/bin/$(MODULE_LOWERCASE)_wrapper $(PREFIX)/bin/_$(MODULE_LOWERCASE)_wrapper
+load_env: $(PREFIX)/share/load_env.sh $(PREFIX)/share/load_env_and_cd_sources.sh $(PREFIX)/share/load_env_and_cd_runtime.sh $(PREFIX)/bin/$(MFMODULE_LOWERCASE)_wrapper $(PREFIX)/bin/_$(MFMODULE_LOWERCASE)_wrapper
 
-$(PREFIX)/bin/$(MODULE_LOWERCASE)_wrapper: $(MFEXT_HOME)/share/templates/mfxxx_wrapper
+$(PREFIX)/bin/$(MFMODULE_LOWERCASE)_wrapper: $(MFEXT_HOME)/share/templates/mfxxx_wrapper
 	$(MFEXT_HOME)/bin/_make_file_from_template.sh mfxxx_wrapper .custom >$@
 	chmod a+rx $@
 
-$(PREFIX)/bin/_$(MODULE_LOWERCASE)_wrapper: $(MFEXT_HOME)/share/templates/_mfxxx_wrapper
+$(PREFIX)/bin/_$(MFMODULE_LOWERCASE)_wrapper: $(MFEXT_HOME)/share/templates/_mfxxx_wrapper
 	$(MFEXT_HOME)/bin/_make_file_from_template.sh _mfxxx_wrapper .custom >$@
 	chmod a+rx $@
 

@@ -30,7 +30,7 @@ fi
 CACHEF=""
 if test "${BUILDCACHE:-}" != ""; then
     if test -d "${BUILDCACHE}"; then
-        CACHEF="${BUILDCACHE}/download_${MODULE_LOWERCASE}_$(cat "${SOURCES_FILE}" |md5sum |awk '{print $1;}')"
+        CACHEF="${BUILDCACHE}/download_${MFMODULE_LOWERCASE}_$(cat "${SOURCES_FILE}" |md5sum |awk '{print $1;}')"
         if test -f "${CACHEF}"; then
             cp -f "${CACHEF}" "${ARCHIVE_FILE}"
         fi

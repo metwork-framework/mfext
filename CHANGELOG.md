@@ -4,27 +4,27 @@
 ## [Unreleased]
 
 ### New Features
-- mflog update to support non standard logging levels
-- add revert_ldd.sh and external_dependencies.sh utilities
-- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
-- telegraf update (1.10.2 => 1.11.2)
-- upgrade redis from 3 to 5
-- give up modules start if precondition failed
-- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
-- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
-- use envtpl new option --reduce-multi-blank-lines
-- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
-- preserve some extra env var in mfxxx_wrapper
+- add hmac openresty component
+- add black python component
+- introduce components utility
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- no more default passwords, prelimininary systemd support
+- add some system dependencies
+- refactoring about #437, #432, #420
+- embed tcl/tk libraries and build python2/3 with them
+- embed libpng
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed readline and use it instead of the system library
+- embed libffi and use it instead of system library
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- introduce build extra dependencies
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
 
 
 ### Bug Fixes
-- plugin_env issue with python2 plugins
-- disable SSE4.2 optimizations to avoid nginx crashing on old servers
-- add pycodestyle (missing dependency for autopep8)
-- add pycodestyle (missing dependency for autopep8)
-- fix vim/vimdiff wrappers usage with git
-- fix vimdiff wrapper
-- close mflog issue11
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- use vi in python2 mode when we are in python2
+- fix vi usage without devtools
 
 
 
