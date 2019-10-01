@@ -416,13 +416,14 @@ $ # => the mfext environment is still loaded
 | [libxslt](http://xmlsoft.org/) | 1.1.28 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
+| [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [m2r](https://github.com/miyakogi/m2r) | 0.2.1 | python3_devtools |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python2_devtools |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
-| [mflog](https://pypi.org/project/mflog) | custom | python2 |
-| [mflog](https://pypi.org/project/mflog) | custom | python3 |
+| [mflog](https://github.com/metwork-framework/mflog) | custom | python2 |
+| [mflog](https://github.com/metwork-framework/mflog) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.4 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
 | [mistune](https://github.com/lepture/mistune) | 0.8.4 | python3_devtools |
@@ -540,7 +541,7 @@ $ # => the mfext environment is still loaded
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(246 components)*
+*(247 components)*
 
 
 
