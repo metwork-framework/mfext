@@ -2,7 +2,7 @@
 
 **MFEXT** is a "dependencies package" ridiculously easy to install which adds plenty of recent software components to a Linux distribution, especially for scientific and meteorology domain, but not only!
 
-**MFEXT** is "language agnostic" and runs on plenty of linux distributions from a venerable CentOS6 to the latest Fedora or openSUSE where it brings to you exactly the same list of [component versions](#5-full-list-of-components).
+**MFEXT** is "language agnostic" and runs on plenty of linux distributions from a venerable CentOS6 to the latest Fedora or openSUSE where it brings to you exactly the same [list of component versions](#5-full-list-of-components).
 
 In 5 seconds, here is how **MFEXT** works:
 
