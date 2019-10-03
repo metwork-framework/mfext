@@ -25,7 +25,7 @@ Want to know what software is included in the package? [Look here!](#5-full-list
 
 Installing the **MFEXT** module is safe, it can't break anything on your system. It does not contain any services, it is just a bunch of files and directories installed in `/opt` directory and you have to explicitly load a profile file to use them.
 
-**MFEXT** is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. It can be used alone, or as a dependency of other MetWork Framework **modules** (like [mfserv](https://github.com/metwork-framework/mfserv) or [mfdata](https://github.com/metwork-framework.org/mfdata)). MetWork-Framework is an open source system for managing several applications or micro-services running on the same Linux server, production grade.
+**MFEXT** is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. It can be used alone, or as a dependency of other MetWork Framework **modules** (like [mfserv](https://github.com/metwork-framework/mfserv) or [mfdata](https://github.com/metwork-framework.org/mfdata)). [MetWork Framework](http://www.metwork-framework.org) is an open source system for building and managing production grade applications or micro-services.
 
 You have more time? Look at this 30 seconds screencast showcasing installation and usage of **MFEXT**:
 
