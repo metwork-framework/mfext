@@ -1,6 +1,6 @@
 ## What is MFEXT ?
 
-**MFEXT** is a "dependencies package" ridiculously easy to install which adds plenty of recent softwares to a Linux distribution, especially for scientific and meteorology domain, but not only!
+**MFEXT** is a "dependencies package" ridiculously easy to install which adds plenty of recent software components to a Linux distribution, especially for scientific and meteorology domain, but not only!
 
 **MFEXT** is safe, multi-environment, it supports several languages (python, nodejs, java, lua...) and many libraries. With **MFEXT**, you can run several micro-services on the same machine, each micro-service running in its own environment, with its own stack of dependencies.
 
