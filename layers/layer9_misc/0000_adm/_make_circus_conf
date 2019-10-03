@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eu
+
+cat "${MFMODULE_HOME}/config/circus.ini" | envtpl --reduce-multi-blank-lines
+if test -f "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/circus.ini.extra"; then
+    cat "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/circus.ini.extra"
+fi

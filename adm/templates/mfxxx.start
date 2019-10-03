@@ -22,7 +22,7 @@ if test "${1:-}" = "NOINIT"; then
     NOINIT=1
 fi
 
-{% if MFMODULE not in ["MFEXT", "MFCOM"] %}
+{% if MFMODULE != "MFEXT" %}
 CONFIG_TARGET=$(readlink -f "${MFMODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
 if test "${CONFIG_TARGET}" != ""; then
     CONFIG_TIMESTAMP=$(date -r "${CONFIG_TARGET}" +%s 2>/dev/null)

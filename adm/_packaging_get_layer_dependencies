@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function usage() {
-    echo "usage:  _packaging_get_dependencies LAYER_NAME MODULE_BRANCH MFEXT_BRANCH MFCOM_BRANCH"
+    echo "usage:  _packaging_get_dependencies LAYER_NAME MODULE_BRANCH MFEXT_BRANCH"
     echo "   => return the list of minimal dependencies of the given layer"
     echo "      (including system dependencies read in .system_dependencies files)"
 }
@@ -41,8 +41,6 @@ for LABEL in ${LABELS} default@${MFMODULE_LOWERCASE}; do
     fi
     if test "${MOD}" = "mfext"; then
         BRANCH="$3"
-    elif test "${MOD}" = "mfcom"; then
-        BRANCH="$4"
     else
         BRANCH="$2"
     fi

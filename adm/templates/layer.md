@@ -108,11 +108,11 @@
 
 {% endblock %}
 
-{% if self.utilities() or MFMODULE not in ['MFEXT', 'MFCOM'] %}
+{% if self.utilities() or MFMODULE != 'MFEXT' %}
 ### Utilities
 {% endif %}
 
-{% if MFMODULE not in ['MFEXT', 'MFCOM'] and LAYER_NAME == "root" %}
+{% if MFMODULE != 'MFEXT' and LAYER_NAME == "root" %}
 
 #### {{MFMODULE_LOWERCASE}}.stop
 

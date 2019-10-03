@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+
+import psutil
+import os
+import sys
+import argparse
+import time
+import signal
+from datetime import datetime
+
+from mflog import getLogger
+from mfutil import kill_process_and_children
+from mfutil.cli import echo_ok, echo_nok, echo_warning, echo_running
+
+LOG = getLogger('_circus.stop')
+USER = os.environ.get('MFMODULE_RUNTIME_USER', None)
+MFMODULE_RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', None)
+MFMODULE = os.environ['MFMODULE']
+
+
+def get_circus_master_pids(verbose=True):
+    pids = []
+    for proc in psutil.process_iter():
+        try:
+            if proc.username() != USER:
+                continue
+            if proc.ppid() != 1:
+                continue
+            cmdline = " ".join(proc.cmdline())
+            if 'circusd' not in cmdline:
+                continue
+            env = proc.environ()
+            if env.get('METWORK_LIST_PROCESSES_FORCE', None) != MFMODULE:
+                continue
+            pids.append(proc.pid)
+        except Exception:
+            if verbose:
+                LOG.debug("exception catched")
+    return pids
+
+
+def send_sigterm(pids):
+    for pid in pids:
+        try:
+            if args.verbose:
+                LOG.info("Sending SIGTERM to process #%i" % pid)
+            p = psutil.Process(pid)
+            p.send_signal(signal.SIGTERM)
+        except Exception:
+            pass
+
+
+argparser = argparse.ArgumentParser(description="stop circus for the "
+                                    "current user/module")
+argparser.add_argument("--dont-wait", action="store_true", help="don't wait "
+                       "for stop to finish")
+argparser.add_argument("--maxwait", default=300, help="maximum wait time "
+                       "after SIGTERM and before SIGKILL")
+argparser.add_argument("--verbose", action="store_true",
+                       help="verbose mode")
+args = argparser.parse_args()
+
+if not args.verbose:
+    echo_running("- Stopping circus (slow)...")
+
+pids = get_circus_master_pids(args.verbose)
+if len(pids) == 0:
+    if args.verbose:
+        LOG.warning("nothing to stop")
+    else:
+        echo_warning("(already stopped)")
+    sys.exit(1)
+
+send_sigterm(pids)
+
+if args.dont_wait:
+    sys.exit(0)
+
+before = datetime.now()
+i = 0
+while (datetime.now() - before).total_seconds() < args.maxwait:
+    if args.verbose:
+        LOG.info("sleeping 0.2s...")
+    time.sleep(0.2)
+    pids = get_circus_master_pids(args.verbose)
+    if len(pids) == 0:
+        break
+    i = i + 1
+    if i >= 5:
+        # every second we send another SIGTERM
+        # (in some corner cases, the initial SIGTERM can be lost, for example
+        #  if send during a circus restart)
+        send_sigterm(pids)
+        i = 0
+
+
+if len(pids) == 0:
+    if args.verbose:
+        LOG.info("ok, stopped")
+    else:
+        echo_ok()
+    sys.exit(0)
+
+if args.verbose:
+    LOG.warning("timeout, let's SIGKILL...")
+for pid in pids:
+    kill_process_and_children(pid)
+
+pids = get_circus_master_pids(args.verbose)
+if len(pids) > 0:
+    if args.verbose:
+        LOG.critical("can't kill circus..., remaining pids = %s" % pids)
+    else:
+        echo_nok()
+    sys.exit(1)
+else:
+    if args.verbose:
+        LOG.info("ok, circus is killed")
+    else:
+        echo_ok()
+    sys.exit(0)

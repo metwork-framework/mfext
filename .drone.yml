@@ -64,7 +64,6 @@ publish_ci_common: &publish_ci_common
     - /private:/private
     - /buildcache:/buildcache
 
-
 integration_tests_common: &integration_tests_common
   commands:
     - if test "$${FORCED_OS_VERSION}" != ""; then if test "$${FORCED_OS_VERSION}" != "${OS_VERSION}"; then echo "step bypass"; exit 0; fi; fi
@@ -72,7 +71,6 @@ integration_tests_common: &integration_tests_common
 
     - yum -y localinstall metwork-mfext*.rpm
     - if test -d "integration_tests"; then cd integration_tests; /opt/metwork-mfext/bin/mfext_wrapper ./run_integration_tests.sh; cd ..; fi
-
 
 
 pipeline:
@@ -151,7 +149,6 @@ pipeline:
       event: tag
       ref: refs/tags/v*
 
-
   integration_tests_integration:
     <<: *integration_tests_common
     
@@ -176,7 +173,6 @@ pipeline:
       event: push
 
       branch: [  master, release_*, experimental* ]
-
 
   publish_ci_integration:
     <<: *publish_ci_common
@@ -227,7 +223,6 @@ pipeline:
       ref: refs/tags/v*
 
 
-
   trigger_mfxxxtestimage:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
@@ -237,10 +232,10 @@ pipeline:
       status: [ success ]
       event: push
       branch: [ master, integration, experimental*, release_* ]
-  trigger_mfcombuildimage:
+  trigger_mfxxxbuildimage:
     image: metwork/drone-downstream-specific-image:latest
     repositories:
-      - metwork-framework/docker-mfcom-${OS_VERSION}-buildimage@${DRONE_BRANCH}
+      - metwork-framework/docker-mfxxx-${OS_VERSION}-buildimage@${DRONE_BRANCH}
     secrets: [ downstream_token, downstream_server ]
     when:
       status: [ success ]

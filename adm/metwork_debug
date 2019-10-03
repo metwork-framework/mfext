@@ -45,14 +45,6 @@ if test "${MFMODULE:-}" != "MFEXT"; then
     echo
     echo "- mfext home: ${MFEXT_HOME:-undefined}"
     echo "- mfext version: ${MFEXT_VERSION:-undefined}"
-    if test "${MFMODULE:-}" != "MFCOM"; then
-        echo
-        echo
-        echo "***** MFCOM MODULE *****"
-        echo
-        echo "- mfcom home: ${MFCOM_HOME:-undefined}"
-        echo "- mfcom version: ${MFCOM_VERSION:-undefined}"
-    fi
 fi
 
 echo
@@ -60,18 +52,16 @@ echo
 echo "***** LOADED LAYERS *****"
 echo
 layers --loaded-filter=yes --raw |grep @mfext |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=yes --raw |grep -v @mfext |grep @mfcom |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=yes --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=yes --raw |grep -v @mfext |grep -v "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
 
 echo
 echo
 echo "***** NOT LOADED (BUT INSTALLED) LAYERS *****"
 echo
 layers --loaded-filter=no --raw |grep @mfext |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=no --raw |grep -v @mfext |grep @mfcom |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
-layers --loaded-filter=no --raw |grep -v @mfext |grep -v @mfcom |grep -v "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
+layers --loaded-filter=no --raw |grep -v @mfext |grep -v "@${MFMODULE_LOWERCASE}" |awk '{print "- "$1" ["$2"]";}'
 
 echo
 echo

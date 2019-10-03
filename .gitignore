@@ -1,5 +1,7 @@
 adm/root.mk
 layers/layer*/*/build
+layers/layer*/*/dist
+layers/layer*/*/*.egg-info
 layers/xlayer*/*/build
 layers/download_archive
 doc/_build
@@ -81,3 +83,5 @@ layerapi2/build
 doc/installation_guide.md
 doc/installation_guide.rst
 doc/README.md
+layers/layer9_python3_misc/0100_mfutil/__pycache__/
+layers/layer9_python3_misc/0100_mfutil/fastentrypoints.pyc

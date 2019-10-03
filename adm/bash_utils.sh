@@ -70,7 +70,7 @@ function cache_get()
 {
     FILE=${1}
     LIFETIME=${2}
-    NEWERS="/etc/hosts /etc/resolv.conf /etc/nsswitch.conf /etc/metwork.config ${MFCOM_HOME}/config/config.ini ${MFMODULE_HOME}/config/config.ini ${MFMODULE_RUNTIME_HOME}/config/config.ini"
+    NEWERS="/etc/hosts /etc/resolv.conf /etc/nsswitch.conf /etc/metwork.config ${MFEXT_HOME}/opt/misc/config/config.ini ${MFMODULE_HOME}/config/config.ini ${MFMODULE_RUNTIME_HOME}/config/config.ini"
     if test -f "/etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"; then
         NEWERS="${NEWERS} /etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"
     fi

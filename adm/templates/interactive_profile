@@ -91,7 +91,7 @@ if test "${LAUNCH_CRONTAB}" != ""; then
 fi
 alias debug="metwork_debug"
 
-{% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
+{% if MFMODULE != "MFEXT" %}
 alias circusctl="_circusctl --endpoint {% raw %}${{% endraw %}{{MFMODULE}}{% raw %}_CIRCUS_ENDPOINT}{% endraw %} --timeout=10"
 {% endif %}
 
@@ -113,7 +113,7 @@ cat <<EOF
 
 EOF
 
-if test -x ${MFCOM_HOME}/bin/mfcom_wrapper; then
+if test -x ${MFEXT_HOME}/opt/misc/bin/mfcom_wrapper; then
     echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
     echo "(module: ${MFMODULE}, version: ${MFMODULE_VERSION})"
     echo
