@@ -5,4 +5,4 @@ if test "${1:-}" = "--help"; then
     echo "  => launch a python3 command inside a python3 env (even if we are currently in a python2 env)"
     exit 0
 fi
-layer_wrapper --layers="python3_core@mfext,-python3@mfext,-python3@mfcom,-python3${MODULE_LOWERCASE}" -- python "$@"
+layer_wrapper --layers="python3_core@mfext,-python3@mfext,-python3_misc@mfext,-python3${MODULE_LOWERCASE}" -- python "$@"

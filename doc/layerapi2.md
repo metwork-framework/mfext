@@ -24,13 +24,11 @@ First of all, we set in `LAYERAPI2_LAYERS_PATH`:
 
 - `${MFEXT_HOME}`
 - `${MFEXT_HOME}/opt`
-- `${MFCOM_HOME}` (if the current module is not `mfext`)
-- `${MFCOM_HOME}/opt` (if the current module is not `mfext`)
-- `${MFMODULE_HOME}` (if the current module is not `mfext` and `mfcom`)
-- `${MFMODULE_HOME}/opt` (if the current module is not `mfext` and `mfcom`)
+- `${MFMODULE_HOME}` (if the current module is not `mfext`)
+- `${MFMODULE_HOME}/opt` (if the current module is not `mfext`)
 - `${MFMODULE_RUNTIME_HOME}/var/plugins` (if the current module is `mfserv`, `mfbase` or `mfdata`)
 
-So we have a kind of layers inheritance. For example: `mfserv => mfcom => mfext`.
+So we have a kind of layers inheritance. For example: `mfserv => mfext`.
 
 ### Special layers
 
@@ -80,10 +78,9 @@ $ layers
 - nodejs@mfserv [/home/fab/metwork/mfserv/build/opt/nodejs]
 - (*) python3@mfserv [/home/fab/metwork/mfserv/build/opt/python3]
 - (*) root@mfserv [/home/fab/metwork/mfserv/build]
-- (*) default@mfcom [/home/fab/metwork/mfcom/build/opt/default]
-- python2@mfcom [/home/fab/metwork/mfcom/build/opt/python2]
-- (*) python3@mfcom [/home/fab/metwork/mfcom/build/opt/python3]
-- (*) root@mfcom [/home/fab/metwork/mfcom/build]
+- (*) misc@mfext [/home/fab/metwork/mfext/build/opt/misc]
+- python2_misc@mfext [/home/fab/metwork/mfext/build/opt/python2_misc]
+- (*) python3_misc@mfext [/home/fab/metwork/mfext/build/opt/python3_misc]
 - (*) python3_vim@mfext [/home/fab/metwork/mfext/build/opt/python3_vim]
 - rpm@mfext [/home/fab/metwork/mfext/build/opt/rpm]
 - python2_devtools@mfext [/home/fab/metwork/mfext/build/opt/python2_devtools]

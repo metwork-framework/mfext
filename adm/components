@@ -17,7 +17,6 @@ DESCRIPTION = "list installed/loaded components"
 MFMODULE = os.environ['MFMODULE']
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
 MFEXT_HOME = os.environ['MFEXT_HOME']
-MFCOM_HOME = os.environ.get('MFCOM_HOME', '/not_defined')
 
 # PY2 compatibility
 try:
@@ -126,13 +125,6 @@ if MFMODULE != "MFEXT":
                                MFEXT_HOME)
     yaml_files = yaml_files + glob.glob("%s/share/metwork_packages/*.yaml" %
                                         MFEXT_HOME)
-    if MFMODULE != "MFCOM":
-        yaml_files = \
-            yaml_files + glob.glob("%s/opt/*/share/metwork_packages/*.yaml" %
-                                   MFCOM_HOME)
-        yaml_files = yaml_files + \
-            glob.glob("%s/share/metwork_packages/*.yaml" % MFCOM_HOME)
-
 layers = {}
 json_array = []
 for yaml_file in yaml_files:

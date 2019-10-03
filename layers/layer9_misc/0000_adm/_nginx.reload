@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+import psutil
+import os
+import argparse
+import signal
+
+from mflog import getLogger
+
+LOG = getLogger('nginx.reload')
+USER = os.environ.get('MFMODULE_RUNTIME_USER', None)
+MFMODULE_RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', None)
+
+
+def get_nginx_master_pids():
+    pids = []
+    for proc in psutil.process_iter():
+        try:
+            if proc.username() != USER:
+                continue
+            cmdline = " ".join(proc.cmdline())
+            if 'nginx: master process' not in cmdline:
+                continue
+            cwd = proc.cwd()
+            if not cwd.startswith(MFMODULE_RUNTIME_HOME):
+                continue
+            pids.append(proc.pid)
+        except Exception:
+            LOG.debug("exception catched")
+    return pids
+
+
+argparser = argparse.ArgumentParser(description="reload nginx for the "
+                                    "current user/module")
+args = argparser.parse_args()
+
+pids = get_nginx_master_pids()
+for pid in pids:
+    try:
+        LOG.info("Sending SIGHUP to process #%i" % pid)
+        p = psutil.Process(pid)
+        p.send_signal(signal.SIGHUP)
+    except Exception:
+        pass

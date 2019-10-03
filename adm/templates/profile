@@ -35,7 +35,7 @@ if ! test "$(whoami)" = "{{MFMODULE_LOWERCASE}}"; then
 fi
 
 # Set MFMODULE_RUNTIME_HOME and PYTHON_EGG_CACHE
-{% if MFMODULE != "MFEXT" and MFMODULE != "MFCOM" %}
+{% if MFMODULE != "MFEXT" %}
     if test "${MFMODULE_RUNTIME_USER}" = ""; then
         export MFMODULE_RUNTIME_USER=`whoami`
     fi
@@ -54,10 +54,10 @@ if ! test -d "${PYTHON_EGG_CACHE}"; then
     mkdir -p "${PYTHON_EGG_CACHE}"
 fi
 
-{% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
-    # We set MFCOM_HOME
-    export MFCOM_HOME={{MFCOM_HOME}}
-    export MFCOM_VERSION={{MFCOM_VERSION}}
+{% if MFMODULE != "MFEXT" %}
+    # We set MFEXT_HOME (FIXME: necessary ?)
+    export MFEXT_HOME={{MFEXT_HOME}}
+    export MFEXT_VERSION={{MFEXT_VERSION}}
 {% endif %}
 
 # Get the metwork configuration name
@@ -99,16 +99,13 @@ export PYTHON2_SHORT_VERSION=2.7
 field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}
 field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt
 {% if MFMODULE != "MFEXT" %}
-    field_prepend LAYERAPI2_LAYERS_PATH {{MFCOM_HOME}}
-    field_prepend LAYERAPI2_LAYERS_PATH {{MFCOM_HOME}}/opt
-    {% if MFMODULE != "MFCOM" %}
-        field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}
-        field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}/opt
-        {% if MFMODULE == "MFSERV" or MFMODULE == "MFDATA" or MFMODULE == "MFBASE" %}
-            if test "${MFMODULE_RUNTIME_HOME:-}" != ""; then
-                field_prepend LAYERAPI2_LAYERS_PATH ${MFMODULE_RUNTIME_HOME}/var/plugins
-            fi
-        {% endif %}
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt/misc
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}
+    field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}/opt
+    {% if MFMODULE == "MFSERV" or MFMODULE == "MFDATA" or MFMODULE == "MFBASE" %}
+        if test "${MFMODULE_RUNTIME_HOME:-}" != ""; then
+            field_prepend LAYERAPI2_LAYERS_PATH ${MFMODULE_RUNTIME_HOME}/var/plugins
+        fi
     {% endif %}
 {% endif %}
 export LAYERAPI2_LAYERS_PATH
@@ -128,7 +125,7 @@ else
     layer_load core@mfext >/dev/null 2>&1
 fi
 
-{% if MFMODULE != "MFEXT" and MFMODULE != "MFCOM" %}
+{% if MFMODULE != "MFEXT" %}
     if ! test -d ${MFMODULE_RUNTIME_HOME}; then
         mkdir -p ${MFMODULE_RUNTIME_HOME} >/dev/null 2>&1
     fi
@@ -157,7 +154,7 @@ fi
     fi
     if ! test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
         if test -f ${MFMODULE_HOME}/config/config.ini; then
-            ${MFCOM_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
+            ${MFEXT_HOME}/opt/misc/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
         fi
     else
         if ! test -L ${MFMODULE_HOME}/config/config.ini; then
@@ -165,25 +162,17 @@ fi
                 N=`cat ${MFMODULE_RUNTIME_HOME}/config/config.ini |grep -v '^\[' |grep -v '^#' |grep '[a-zA-Z]' |wc -l`
                 if test "${N}" -eq 0; then
                     # we can override
-                    ${MFCOM_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
+                    ${MFEXT_HOME}/opt/misc/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
                 fi
             fi
         fi
     fi
     if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
-        {% set FORCED_MODULE_HOME = MFCOM_HOME %}
-        {% set FORCED_MODULE = "MFCOM" %}
         {% include "nethard_profile" %}
         {% set FORCED_MODULE_HOME = "${MFMODULE_HOME}" %}
         {% set FORCED_MODULE = "${MFMODULE}" %}
         {% include "config_profile" %}
     fi
-{% else %}
-    {% if MFMODULE == "MFCOM" %}
-        if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
-            {% include "nethard_profile" %}
-        fi
-    {% endif %}
 {% endif %}
 
 # A little kind of magic to deal with [log]/json_file=AUTO

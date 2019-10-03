@@ -1,0 +1,66 @@
+#!/bin/bash
+
+set -eu
+
+function usage() {
+    echo "usage: _install_plugins_virtualenv NAME VERSION RELEASE"
+    echo "DO NOT USE DIRECTLY ! it's called by plugins.install/develop"
+}
+
+if test $# -ne 3; then
+    usage
+    exit 1
+fi
+
+NAME=${1}
+if test "${1}" = "--help"; then
+    usage
+    exit 0
+fi
+
+PLUGIN_HOME=$(plugins.info --just-home "${NAME}" || true)
+if test "${PLUGIN_HOME}" = ""; then
+    # we try pwd (the plugin is maybe not installed for the moment)
+    # example: during a make develop, we build the virtualenv before the
+    # installation
+    PLUGIN_HOME=$(pwd)
+fi
+
+if ! test -f "${PLUGIN_HOME}/.layerapi2_dependencies"; then
+    echo "${PLUGIN_HOME} is not a valid plugin home"
+    exit 1
+fi
+if ! test -f "${PLUGIN_HOME}/.layerapi2_dependencies"; then
+    echo "${PLUGIN_HOME} is not a valid plugin home"
+    exit 1
+fi
+
+LAYERS=$(cat "${PLUGIN_HOME}/.layerapi2_dependencies" |tr '\n' ',' |sed 's/,$/\n/')
+for PYTHON_MAJOR_VERSION in 2 3; do
+    if test "${PYTHON_MAJOR_VERSION}" = "2"; then
+        SHORT_VERSION="${PYTHON2_SHORT_VERSION}"
+    else
+        SHORT_VERSION="${PYTHON3_SHORT_VERSION}"
+    fi
+    REQ="requirements${PYTHON_MAJOR_VERSION}.txt"
+    if test -f "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/${REQ}"; then
+        OLDPWD=$(pwd)
+        cd "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" && layer_wrapper --empty --layers="${LAYERS}" -- install_requirements "${PLUGIN_HOME}/local" "${REQ}" "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/src"
+        cd "${OLDPWD}" || exit 1
+    fi
+    if test -d "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources"; then
+        N=$(find "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" -maxdepth 1 -type f -name "*requirements${PYTHON_MAJOR_VERSION}.txt" |wc -l)
+        if test "${N}" -gt 0; then
+            # shellcheck disable=2086
+            cat ${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/requirements${PYTHON_MAJOR_VERSION}.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$/\1/g' >"${PLUGIN_HOME}/local/lib/python${SHORT_VERSION}/site-packages/requirements${PYTHON_MAJOR_VERSION}.txt"
+        fi
+    fi
+done
+if test -d "${PLUGIN_HOME}/node_modules"; then
+    mkdir -p "${PLUGIN_HOME}/local/lib"
+    if ! test -L "${PLUGIN_HOME}/local/lib/node_modules"; then
+        cd "${PLUGIN_HOME}/local/lib"
+        ln -s ../../node_modules node_modules
+    fi
+fi
+rm -f "${PLUGIN_HOME}/local/.layerapi2*"

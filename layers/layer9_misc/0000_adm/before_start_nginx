@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/nginx.conf"
+rm -f "${MFMODULE_RUNTIME_HOME}/var/nginx.socket"
+
+PORT=$(env |grep "^${MFMODULE}_NGINX_PORT" |awk -F '=' '{print $2;}')
+
+PROXY_TEMP=$(env |grep "^${MFMODULE}_NGINX_PROXY_TEMP_PATH" |awk -F '=' '{print $2;}')
+if test "${PROXY_TEMP}" = ""; then
+    PROXY_TEMP="${MFMODULE_RUNTIME_HOME}/tmp/nginx/proxy_temp"
+fi
+FASTCGI_TEMP=$(env |grep "^${MFMODULE}_NGINX_FASTCGI_TEMP_PATH" |awk -F '=' '{print $2;}')
+if test "${FASTCGI_TEMP}" = ""; then
+    FASTCGI_TEMP="${MFMODULE_RUNTIME_HOME}/tmp/nginx/fastcgi_temp"
+fi
+CLIENTBODY_TEMP=$(env |grep "^${MFMODULE}_NGINX_CLIENTBODY_TEMP_PATH" |awk -F '=' '{print $2;}')
+if test "${CLIENTBODY_TEMP}" = ""; then
+    CLIENTBODY_TEMP="${MFMODULE_RUNTIME_HOME}/tmp/nginx/proxy_temp"
+fi
+
+cp -f "${MFEXT_HOME}/opt/openresty/config/mime.types" "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/"
+
+rm -Rf "${PROXY_TEMP}" >/dev/null 2>&1
+mkdir -p "${PROXY_TEMP}" >/dev/null 2>&1
+rm -Rf "${FASTCGI_TEMP}" >/dev/null 2>&1
+mkdir -p "${FASTCGI_TEMP}" >/dev/null 2>&1
+rm -Rf "${CLIENTBODY_TEMP}" >/dev/null 2>&1
+mkdir -p "${CLIENTBODY_TEMP}" >/dev/null 2>&1
+
+# FIXME: to check if it is necessary
+mkdir -p "${MFMODULE_RUNTIME_HOME}/var/nginx" >/dev/null 2>&1
+mkdir -p "${MFMODULE_RUNTIME_HOME}/var/nginx2" >/dev/null 2>&1
+
+# logs before configuration file is read
+touch /tmp/nginx_error.log >/dev/null 2>&1
+chmod 666 /tmp/nginx_error.log >/dev/null 2>&1
+mkdir -p "${MFMODULE_RUNTIME_HOME}/tmp/nginx_tmp_prefix/logs" >/dev/null 2>&1
+
+if test "${PORT}" != ""; then
+    if test "${PORT}" != "0"; then
+        timeout 10s ping_tcp_port --silent 127.0.0.1 "${PORT}"
+        if test $? -eq 0; then
+            log WARNING "nginx configured port [${PORT}] already used"
+            exit 1
+        fi
+    fi
+fi
+
+_make_nginx_conf >"${MFMODULE_RUNTIME_HOME}/tmp/config_auto/nginx.conf"
+if test -s "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/nginx.conf"; then
+    exit 0
+else
+    exit 1
+fi

@@ -1,0 +1,360 @@
+#!/bin/bash
+# chkconfig: 345 98 02
+# description: metwork services
+
+MODULES="mffront mfdata mfserv mfbase mfbus mfadmin mfsysmon"
+MODULES_FULL="${MODULES} mfext"
+
+nointeractive() {
+  touch /tmp/nointeractive.tmp >/dev/null 2>&1
+  chmod a+rw /tmp/nointeractive.tmp >/dev/null 2>&1
+  mv -f /tmp/nointeractive.tmp /tmp/nointeractive >/dev/null 2>&1
+  chmod a+rw /tmp/nointeractive >/dev/null 2>&1
+}
+
+interactive() {
+  rm -f /tmp/nointeractive
+}
+
+start_module() {
+  MODU=${1}
+  USR=${2}
+  HOM=$(dirname "$(dirname "$(readlink "$(eval echo "~${USR}")/.bashrc")")")
+  if test "${HOM}" != "."; then
+    if test -d "${HOM}"; then
+      if test -x "${HOM}/bin/${MODU}.start"; then
+        nointeractive
+        su --command="${MODU}.start" - "${USR}"
+        interactive
+      fi
+    fi
+  fi
+}
+
+init_module() {
+  MODU=${1}
+  USR=${2}
+  OPTS=${3}
+  if test "${OPTS}" = ""; then
+    COMMAND=${MODU}.init
+  else
+    COMMAND="${MODU}.init ${OPTS}"
+  fi
+  HOM=$(dirname "$(dirname "$(readlink "$(eval echo "~${USR}")/.bashrc")")")
+  if test "${HOM}" != "."; then
+    if test -d "${HOM}"; then
+      if test -x "${HOM}/bin/${MODU}.init"; then
+        nointeractive
+        su --command="${COMMAND}" - "${USR}"
+        interactive
+      fi
+    fi
+  fi
+}
+
+stop_module() {
+  MODU=${1}
+  USR=${2}
+  HOM=$(dirname "$(dirname "$(readlink "$(eval echo "~${USR}")/.bashrc")")")
+  if test "${HOM}" != "."; then
+    if test -d "${HOM}"; then
+      if test -x "${HOM}/bin/${MODU}.stop"; then
+        nointeractive
+        su --command="${MODU}.stop" - "${USR}"
+        interactive
+      fi
+    fi
+  fi
+}
+
+status_module() {
+  MODU=${1}
+  USR=${2}
+  HOM=$(dirname "$(dirname "$(readlink "$(eval echo "~${USR}")/.bashrc")")")
+  if test "${HOM}" != "."; then
+    if test -d "${HOM}"; then
+      if test -x "${HOM}/bin/${MODU}.status"; then
+        nointeractive
+        su --command="${MODU}.status" - "${USR}"
+        RES=$?
+        interactive
+        return ${RES}
+      fi
+    fi
+  fi
+}
+
+version_module() {
+  MODU=${1}
+  USR=${2}
+  HOM=$(dirname "$(dirname "$(readlink "$(eval echo "~${USR}")/.bashrc")")")
+  if test "${HOM}" != "."; then
+    if test -d "${HOM}"; then
+      if test -f "${HOM}/config/version"; then
+          VERSION=$(cat "${HOM}/config/version" 2>/dev/null |head -1)
+        printf "%-15s" "${MODU}:"
+        echo "${VERSION}"
+      fi
+    fi
+  fi
+}
+
+fix_system() {
+  USR=$(echo "${1}" |awk -F '@' '{print $1;}')
+  HOM=$(echo "${1}" |awk -F '@' '{print $2;}')
+  N=$(grep -c docker /proc/1/cgroup 2>/dev/null)
+  if test "${N}" -gt 0; then
+    DOCKER_MODE=1
+  else
+    DOCKER_MODE=0
+  fi
+  if test -f "${MFEXT_HOME}/opt/misc/config/sysctl_metwork.conf"; then
+    if test "${DOCKER_MODE}" = "0"; then
+      if ! test -f "/etc/metwork.config.d/system/no_sysctl"; then
+        echo -n "System: applying ${MFEXT_HOME}/opt/misc/config/sysctl_metwork.conf... "
+        /sbin/sysctl -p "${MFEXT_HOME}/opt/misc/config/sysctl_metwork.conf" >/dev/null
+        if test $? -eq 0; then
+          echo "Ok"
+        else
+          echo "ERROR"
+        fi
+      fi
+    fi
+  fi
+  if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
+    if ! test -f "/etc/metwork.config.d/system/no_sysctl"; then
+      echo -n "System: disabling transparent_hugepage... "
+      echo never > /sys/kernel/mm/transparent_hugepage/enabled
+      if test $? -eq 0; then
+        echo "Ok"
+      else
+        echo "ERROR"
+      fi
+    fi
+  fi
+  echo ""
+  echo ""
+}
+
+something_to_startstop() {
+  RES=""
+  for USR in ${MODULES}; do
+    HOM=$(dirname "$(dirname "$(readlink "$(eval echo "~${USR}")/.bashrc")")")
+    if test "${HOM}" != "."; then
+      if test -d "${HOM}"; then
+        if test -x "${HOM}/bin/${USR}.start"; then
+          RES="${USR}@${HOM}"
+          break
+        fi
+      fi
+    fi
+  done
+  echo "${RES}"
+}
+
+start() {
+  M=$(something_to_startstop)
+  if test "${1}" = "" -o "${1}" = "all"; then
+    if test "${M}" != ""; then
+        echo "==========================================================="
+        echo "==========                                       =========="
+        echo "==========     STARTING METWORK SERVICES         =========="
+        echo "==========                                       =========="
+        echo "==========================================================="
+        echo " "
+        echo " "
+        fix_system "${M}"
+    fi
+    for MOD in ${MODULES}; do
+      start_module "${MOD}" "${MOD}"
+    done
+  else
+    start_module "${1}" "${1}"
+  fi
+  if test -d /var/lock/subsys; then
+    touch /var/lock/subsys/metwork >/dev/null 2>&1
+  fi
+}
+
+version() {
+  if test "${1}" = "" -o "${1}" = "all"; then
+    for MOD in ${MODULES_FULL}; do
+      version_module "${MOD}" "${MOD}"
+    done
+  else
+    version_module "${1}" "${1}"
+  fi
+}
+
+status() {
+  if test "${1}" = "" -o "${1}" = "all"; then
+    echo "========================================================="
+    echo "==========                                     =========="
+    echo "==========     STATUS METWORK SERVICES         =========="
+    echo "==========                                     =========="
+    echo "========================================================="
+    echo " "
+    echo " "
+    RES=0
+    for MOD in ${MODULES}; do
+      status_module "${MOD}" "${MOD}"
+      N=$?
+      if test ${RES} -eq 0; then
+        if test ${N} -ne 0; then
+          RES=${N}
+        fi
+      fi
+    done
+    return ${RES}
+  else
+    status_module "${1}" "${1}"
+    return $?
+  fi
+}
+
+init() {
+  if test "${1}" = "" -o "${1}" = "all"; then
+    echo "======================================================="
+    echo "==========                                   =========="
+    echo "==========     INIT METWORK SERVICES         =========="
+    echo "==========                                   =========="
+    echo "======================================================="
+    echo " "
+    echo " "
+    RES=0
+    for MOD in ${MODULES}; do
+      init_module "${MOD}" "${MOD}" "${2}"
+      N=$?
+      if test ${RES} -eq 0; then
+        if test ${N} -ne 0; then
+          RES=${N}
+        fi
+      fi
+    done
+    return ${RES}
+  else
+    init_module "${1}" "${1}" "${2}"
+    return $?
+  fi
+}
+
+stop() {
+  M=$(something_to_startstop)
+  if test "${1}" = "" -o "${1}" = "all"; then
+    if test "${M}" != ""; then
+        echo "======================================================="
+        echo "==========                                   =========="
+        echo "==========     STOPPING METWORK SERVICES     =========="
+        echo "==========                                   =========="
+        echo "======================================================="
+        echo " "
+        echo " "
+    fi
+    for MOD in ${MODULES}; do
+      stop_module "${MOD}" "${MOD}"
+    done
+  else
+    stop_module "${1}" "${1}"
+  fi
+  if test -d /var/lock/subsys; then
+    rm -f /var/lock/subsys/metwork >/dev/null 2>&1
+  fi
+}
+
+usage() {
+  echo "usage: /etc/init.d/metwork start|stop|restart|init|version|yum_hot_update [module] [init_options]"
+  echo "(module must be choosen between 'all ${MODULES}')"
+}
+
+if test $# -ne 1 -a $# -ne 2 -a $# -ne 3; then
+  usage
+  exit 1
+fi
+MODULE=
+OPTIONS=
+if test $# -ge 2; then
+  MODULE=${2}
+  FOUND=0
+  for M in all ${MODULES}; do
+    if test "${M}" = "${MODULE}"; then
+      FOUND=1
+    fi
+  done
+  if test ${FOUND} -eq 0; then
+    usage
+    exit 1
+  fi
+fi
+if test $# -eq 3; then
+  OPTIONS=${3}
+fi
+
+if test "$(id -u)" != "0"; then
+  echo "YOU MUST RUN THIS SCRIPT AS ROOT"
+  exit 1
+fi
+
+case $1 in
+  start)
+    start "${MODULE}";;
+  restart)
+    if test "${MODULE}" = "" -o "${MODULE}" = "all"; then
+      stop
+      start
+    else
+      stop "${MODULE}"
+      start "${MODULE}"
+    fi
+    ;;
+  stop)
+    stop "${MODULE}";;
+  version)
+    version "${MODULE}";;
+  status)
+    status "${MODULE}"
+    exit $?;;
+  init)
+    init "${MODULE}" "${OPTIONS}";;
+  yum_hot_update)
+    if test "${MODULE}" = "" -o "${MODULE}" = "all"; then
+      echo "***** WARNING *****"
+      echo "This command will stop all your metwork modules"
+      echo "Then update them with yum"
+      echo "Then reinit them (can be slow for mfbase module for example)"
+      echo "And start them again"
+      echo " "
+      echo "=> You have 10 seconds to do CONTROL + C if you are not sure !"
+      sleep 10
+      if test $? -ne 0; then
+        exit 1
+      fi
+      stop
+      yum -y update "metwork-*"
+      init "${MODULE}" "${OPTIONS}"
+      start
+    else
+      echo "***** WARNING *****"
+      echo "This command will stop your ${MODULE} metwork module"
+      echo "Then update it with yum"
+      echo "Then reinit it"
+      echo "And start it again"
+      echo " "
+      echo "=> You have 10 seconds to do CONTROL + C if you are not sure !"
+      sleep 10
+      if test $? -ne 0; then
+        exit 1
+      fi
+      stop "${MODULE}"
+      RPM_NAME="metwork-${MODULE}"
+      if test -e "/etc/${RPM_NAME}.alt"; then
+          RPM_NAME=$(cat "/etc/${RPM_NAME}.alt")
+      fi
+      yum -y update "${RPM_NAME}"
+      init "${MODULE}" "${OPTIONS}"
+      start "${MODULE}"
+    fi
+    ;;
+  *)
+    usage
+    exit 1
+esac

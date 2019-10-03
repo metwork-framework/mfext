@@ -4,13 +4,14 @@ core@mfext
 -mapserver@mfext
 -scientific_core@mfext
 python3@mfext
+misc@mfext
+python3_misc@mfext
 -scientific@mfext
 -python3_scientific@mfext
 -python3_ia@mfext
 -python3_mapserverapi@mfext
 -python3_vim@mfext
 -python3_devtools@mfext
--python3_vim@mfext
 -python3_devtools_jupyter@mfext
 -monitoring@mfext
 -java@mfext

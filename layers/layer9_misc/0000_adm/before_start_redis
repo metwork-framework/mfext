@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat ${MFMODULE_HOME}/config/redis.conf |envtpl --reduce-multi-blank-lines >${MFMODULE_RUNTIME_HOME}/tmp/config_auto/redis.conf
+if test -s ${MFMODULE_RUNTIME_HOME}/tmp/config_auto/redis.conf; then
+    exit 0
+else
+    exit 1
+fi
