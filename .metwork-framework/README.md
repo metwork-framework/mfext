@@ -21,7 +21,6 @@ Python 3.7.3
 $ # Great, a newer version!
 ```
 
-Want to know what software is included in the package? [Look here!](#5-full-list-of-components)
 
 Installing the **MFEXT** module is safe, it can't break anything on your system. It does not contain any services, it is just a bunch of files and directories installed in `/opt` directory and you have to explicitly load a profile file to use them.
 
