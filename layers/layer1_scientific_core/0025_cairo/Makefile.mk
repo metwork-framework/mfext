@@ -13,4 +13,4 @@ LICENSE=LGPL
 
 all::$(PREFIX)/lib/libcairo.so
 $(PREFIX)/lib/libcairo.so:
-	$(MAKE) --file=../../Makefile.standard download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard OPTIONS="--disable-trace" download uncompress configure build install
