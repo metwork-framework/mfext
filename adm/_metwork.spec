@@ -305,15 +305,6 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
-{% if MFMODULE != "MFEXT" %}
-    mkdir -p %{buildroot}/etc/security/limits.d/
-    cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
-    @metwork    soft    nofile  65536
-    @metwork    hard    nofile  65536
-    @metwork    soft    nproc  100000
-    @metwork    hard    nproc  100000
-    EOF
-{% endif %}
 
 
 {% if MFEXT_ADDON == "0" %}
@@ -367,6 +358,19 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
     {% endif %}
+    {% if MFMODULE != "MFEXT" %}
+        if test -d /etc/security/limits.d; then
+            if ! test -f /etc/security/limits.d/50-metwork.conf; then
+                echo "INFO: creating /etc/security/limits.d/50-metwork.conf file"
+            fi
+            cat >/etc/security/limits.d/50-metwork.conf <<EOF
+@metwork    soft    nofile  65536
+@metwork    hard    nofile  65536
+@metwork    soft    nproc  100000
+@metwork    hard    nproc  100000
+EOF
+        fi
+    {% endif %}
 {% endif %}
 
 
@@ -395,14 +399,17 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
             rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
         {% endif %}
-        {% if MFMODULE != "MFEXT" %}
-            rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
-            if test -f /usr/lib/systemd/system/metwork.service; then
-                systemctl disable metwork.service >/dev/null 2>&1 || true
-                rm -f /usr/lib/systemd/system/metwork.service >/dev/null 2>&1
-                systemctl daemon-reload >/dev/null 2>&1 || true
-                systemctl reset-failed >/dev/null 2>&1 || true
+        {% if MFMODULE == "MFEXT" %}
+            if test -f /etc/rc.d/init.d/metwork; then
+                rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
+                if test -f /usr/lib/systemd/system/metwork.service; then
+                    systemctl disable metwork.service >/dev/null 2>&1 || true
+                    rm -f /usr/lib/systemd/system/metwork.service >/dev/null 2>&1
+                    systemctl daemon-reload >/dev/null 2>&1 || true
+                    systemctl reset-failed >/dev/null 2>&1 || true
+                fi
             fi
+            rm -f /etc/security/limits.d/50-metwork.conf >/dev/null 2>&1
         {% endif %}
         N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
@@ -430,9 +437,6 @@ rm -fr %{buildroot}
 {% if MODULE_HAS_HOME_DIR == "1" %}
 %defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
 /home/{{MFMODULE_LOWERCASE}}
-{% endif %}
-{% if MFMODULE != "MFEXT" %}
-/etc/security/limits.d/50-metwork.conf
 {% endif %}
 
 
