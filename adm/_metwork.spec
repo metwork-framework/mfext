@@ -94,6 +94,8 @@ Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
 {% if MFMODULE_LOWERCASE == "mfext" %}
+Obsoletes: metwork-mfcom
+Obsoletes: metwork-mfcom-minimal
 %description
 This package provides the {{TARGET_LINK}} symbolic link
 {% else %}
@@ -127,6 +129,8 @@ Obsoletes: metwork-mfext-python2
 Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
 Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfcom-layer-python2-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfcom-{{MODULE_BRANCH}}
 {% endif %}
 # </to be removed someday>
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
