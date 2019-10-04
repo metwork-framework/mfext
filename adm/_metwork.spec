@@ -9,22 +9,12 @@
     {# Example: 0.7.5 #}
     {% set MFEXT_BRANCH = MFEXT_VERSION.split('.')[0:2]|join('.') %}
 {% endif %}
-{% if MFMODULE != "MFEXT" %}
-    {% if '.ci' in MFCOM_VERSION %}
-        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:-2]|join('.') %}
-    {% else %}
-        {% set MFCOM_BRANCH = MFCOM_VERSION.split('.')[0:2]|join('.') %}
-    {% endif %}
-{% else %}
-    {% set MFCOM_BRANCH = "NOT_USED" %}
-{% endif %}
 {% if '.ci' in MFMODULE_VERSION %}
     {% set MODULE_BRANCH = MFMODULE_VERSION.split('.')[0:-2]|join('.') %}
 {% else %}
     {% set MODULE_BRANCH = MFMODULE_VERSION.split('.')[0:2]|join('.') %}
 {% endif %}
 # DEBUG: MFEXT_BRANCH: {{MFEXT_BRANCH}}
-# DEBUG: MFCOM_BRANCH: {{MFCOM_BRANCH}}
 # DEBUG: MODULE_BRANCH: {{MODULE_BRANCH}}
 
 
@@ -66,13 +56,8 @@
 {% else %}
     #  DEBUG: layers_command: _packaging_get_module_layers
     {% set layers = "_packaging_get_module_layers"|shell|from_json %}
-    {% if MFMODULE == "MFEXT" %}
-        # DEBUG: dependencies_command: {{ "_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH }}
-        {% set dependencies = ("_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH)|shell|from_json %}
-    {% else %}
-        # DEBUG: dependencies_command: {{ "_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH + " " + MFCOM_BRANCH}}
-        {% set dependencies = ("_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH + " " + MFCOM_BRANCH)|shell|from_json %}
-    {% endif %}
+    # DEBUG: dependencies_command: {{ "_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH }}
+    {% set dependencies = ("_packaging_get_module_dependencies " + MODULE_BRANCH + " " + MFEXT_BRANCH)|shell|from_json %}
 {% endif %}
 {% set minimal_layers = [] %}
 {% set minimal_system_dependencies = [] %}
@@ -221,11 +206,7 @@ Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% else %}
 Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}}
 {% endif %}
-        {% if MFMODULE == "MFEXT" %}
-            {% set layer_dependencies = ("_packaging_get_layer_dependencies " + LAYER.name + " " + MODULE_BRANCH + " " + MFEXT_BRANCH)|shell|from_json %}
-        {% else %}
-            {% set layer_dependencies = ("_packaging_get_layer_dependencies " + LAYER.name + " " + MODULE_BRANCH + " " + MFEXT_BRANCH + " " + MFCOM_BRANCH)|shell|from_json %}
-        {% endif %}
+        {% set layer_dependencies = ("_packaging_get_layer_dependencies " + LAYER.name + " " + MODULE_BRANCH + " " + MFEXT_BRANCH)|shell|from_json %}
         {% for LDEP in layer_dependencies %}
             {% if LDEP.type == "metwork" %}
                 {% if LDEP.label not in minimal_layers %}
@@ -324,7 +305,7 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
-{% if MFMODULE == "MFCOM" %}
+{% if MFMODULE != "MFEXT" %}
     mkdir -p %{buildroot}/etc/security/limits.d/
     cat >%{buildroot}/etc/security/limits.d/50-metwork.conf <<EOF
     @metwork    soft    nofile  65536
@@ -344,12 +325,12 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         # to flush caches
         touch /etc/metwork.config >/dev/null 2>&1
     fi
-    {% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
+    {% if MFMODULE != "MFEXT" %}
         if ! test -f /etc/metwork.config; then
             echo GENERIC >/etc/metwork.config
         fi
     {% endif %}
-    {% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
+    {% if MFMODULE != "MFEXT" %}
         if ! test -d /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}; then
             mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
             {% if MFMODULE == "MFDATA" %}
@@ -361,16 +342,16 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             {% endif %}
         fi
     {% endif %}
-    {% if MFMODULE != "MFCOM" and MFMODULE != "MFEXT" %}
+    {% if MFMODULE != "MFEXT" %}
         if ! test -d /etc/rc.d/init.d; then mkdir -p /etc/rc.d/init.d; fi
-        cp -f {{MFCOM_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
+        cp -f {{MFEXT_HOME}}/opt/misc/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
         chmod 0755 /etc/rc.d/init.d/metwork
         chown root:root /etc/rc.d/init.d/metwork
         if test -d /usr/lib/systemd/system; then
             if ! test -f /usr/lib/systemd/system/metwork.service; then
                 echo "INFO: creating metwork systemd service"
             fi
-            cp -f {{MFCOM_HOME}}/share/metwork.service /usr/lib/systemd/system/metwork.service
+            cp -f {{MFEXT_HOME}}/opt/misc/share/metwork.service /usr/lib/systemd/system/metwork.service
             systemctl daemon-reload >/dev/null 2>&1 || true
             systemctl enable metwork.service >/dev/null 2>&1 || true
         else
@@ -414,7 +395,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
             rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
         {% endif %}
-        {% if MFMODULE == "MFCOM" %}
+        {% if MFMODULE != "MFEXT" %}
             rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
             if test -f /usr/lib/systemd/system/metwork.service; then
                 systemctl disable metwork.service >/dev/null 2>&1 || true
@@ -450,7 +431,7 @@ rm -fr %{buildroot}
 %defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
 /home/{{MFMODULE_LOWERCASE}}
 {% endif %}
-{% if MFMODULE == "MFCOM" %}
+{% if MFMODULE != "MFEXT" %}
 /etc/security/limits.d/50-metwork.conf
 {% endif %}
 

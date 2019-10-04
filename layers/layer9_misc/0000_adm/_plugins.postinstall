@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -eu
+
+function usage() {
+    echo "usage: _plugins.postinstall NAME VERSION RELEASE"
+    echo "DO NOT USE DIRECTLY ! it's called by plugins.install/develop"
+}
+
+if test $# -ne 3; then
+    usage
+    exit 1
+fi
+
+NAME=${1}
+if test "${1}" = "--help"; then
+    usage
+    exit 0
+fi
+
+if test "${MFMODULE_RUNTIME_HOME:-}" = ""; then
+    exit 0
+fi
+
+PLUGIN_HOME=$(plugins.info --just-home "${NAME}" || true)
+if test "${PLUGIN_HOME}" != ""; then
+    if ! test -d "${PLUGIN_HOME}"; then
+        exit 0
+    fi
+fi
+_install_plugin_virtualenv "${1}" "${2}" "${3}"
+
+if ! test -L "${PLUGIN_HOME}"; then
+    rm -Rf "${PLUGIN_HOME}/python3_virtualenv_sources"
+    rm -Rf "${PLUGIN_HOME}/python2_virtualenv_sources"
+    rm -Rf "${PLUGIN_HOME}/node_sources"
+fi
+
+if test -x "${PLUGIN_HOME}/postinstall"; then
+    echo "Running post-installation plugin tasks"
+    plugin_wrapper --cwd "${NAME}" "${PLUGIN_HOME}/postinstall"
+fi

@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+
+from __future__ import print_function
+import os
+import sys
+import argparse
+from mfutil.layerapi2 import LayerApi2Wrapper
+
+DESCRIPTION = "execute a command in a plugin environment"
+
+#FIXME: fix to ensure compatibility with existing plugins using
+#old variables names MODULE* (to be removed)
+for var in ["MODULE", "MODULE_HOME", "MODULE_LOWERCASE", "MODULE_VERSION",
+            "MODULE_STATUS", "MODULE_RUNTIME_HOME", "MODULE_RUNTIME_USER",
+            "MODULE_RUNTIME_SUFFIX", "MODULE_PLUGINS_BASE_DIR"]:
+    new_var = 'MF' + var
+    if var not in os.environ and new_var in os.environ:
+        os.environ[var] = os.environ[new_var]
+
+MFMODULE = os.environ["MFMODULE"]
+MFMODULE_LOWERCASE = os.environ["MFMODULE_LOWERCASE"]
+
+parser = argparse.ArgumentParser(description=DESCRIPTION)
+parser.add_argument("--cwd",
+                    action="store_true",
+                    help="change working directory to plugin home")
+parser.add_argument("--do-not-add-plugin-dir-to-python-path",
+                    action="store_true",
+                    help="do not add plugin directory to PYTHONPATH")
+parser.add_argument("--do-not-add-lib-subdir-to-python-path",
+                    action='store_true',
+                    help="do not add lib subdir to PYTHONPATH")
+parser.add_argument("--do-not-add-lib-subdir-to-node-path",
+                    action='store_true',
+                    help="do not add lib subdir to NODE_PATH")
+parser.add_argument("--add-extra-dir-to-python-path", default=None, type=str,
+                    help="add a custom dir to PYTHONPATH")
+parser.add_argument("--add-extra-dir-to-node-path", default=None, type=str,
+                    help="add a custom dir to NODE_PATH")
+parser.add_argument("--plugins-base-dir", type=str, default=None,
+                    help="can be use to set an alternate "
+                    "plugins-base-dir, if not set the value of "
+                    "MFMODULE_PLUGINS_BASE_DIR env var is used (or a "
+                    "hardcoded standard value).")
+parser.add_argument("PLUGIN_NAME", type=str,
+                    help="plugin name")
+parser.add_argument("COMMAND_AND_ARGS", nargs='+',
+                    help="command (and args )to execute")
+args = parser.parse_args()
+plugin = args.PLUGIN_NAME
+layer_name = "plugin_%s@%s" % (plugin, MFMODULE_LOWERCASE)
+
+# we check that the plugins base dir is included in LAYERAPI2_LAYERS_PATH
+# (useful for custom plugins base dir during hotswapping for example)
+if args.plugins_base_dir is not None:
+    plugins_base_dir = args.plugins_base_dir
+else:
+    plugins_base_dir = os.environ.get('MFMODULE_PLUGINS_BASE_DIR', None)
+if plugins_base_dir is not None:
+    if plugins_base_dir not in \
+            os.environ.get('LAYERAPI2_LAYERS_PATH', '').split(':'):
+        os.environ['LAYERAPI2_LAYERS_PATH'] = plugins_base_dir + ':' + \
+            os.environ['LAYERAPI2_LAYERS_PATH']
+
+layer_dir = LayerApi2Wrapper.get_layer_home(layer_name)
+if layer_dir is None:
+    print("ERROR: the plugin %s (full layer name: %s) does not seem to be "
+          "installed/available" % (plugin, layer_name), file=sys.stderr)
+    sys.exit(1)
+
+lw_args = ["--empty",
+           "--extra-env-prefix=%s_CURRENT_PLUGIN" % MFMODULE,
+           "--layers=%s" % layer_name]
+if args.cwd:
+    lw_args.append("--cwd")
+if args.do_not_add_plugin_dir_to_python_path is not True:
+    lw_args.append("--prepend-env=PYTHONPATH,%s" % layer_dir)
+if args.add_extra_dir_to_python_path is not None:
+    lw_args.append("--prepend-env=PYTHONPATH,%s" %
+                   args.add_extra_dir_to_python_path)
+if args.add_extra_dir_to_node_path is not None:
+    lw_args.append("--prepend-env=NODE_PATH,%s" %
+                   args.add_extra_dir_to_node_path)
+if os.path.isdir("%s/lib" % layer_dir):
+    if args.do_not_add_lib_subdir_to_python_path is not True:
+        lw_args.append("--prepend-env=PYTHONPATH,%s/lib" % layer_dir)
+    if args.do_not_add_lib_subdir_to_node_path is not True:
+        lw_args.append("--prepend-env=NODE_PATH,%s/lib" % layer_dir)
+
+lw_args.append("--")
+for cmd_arg in args.COMMAND_AND_ARGS:
+    lw_args.append(cmd_arg)
+
+os.execvp("layer_wrapper", lw_args)

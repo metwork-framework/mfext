@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+import requests
+import argparse
+from mflog import getLogger
+
+MFMODULE = os.environ['MFMODULE']
+MFMODULE_RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', 'unknown')
+NGINX_PORT_ENV = "%s_NGINX_PORT" % MFMODULE
+NGINX_PORT = int(os.environ[NGINX_PORT_ENV])
+UUID_URL = "http://127.0.0.1:%i/uuid" % NGINX_PORT
+
+parser = argparse.ArgumentParser(description="test nginx with a special uuid "
+                                 "request and return an exit code == 0 if ok")
+parser.parse_args()
+logger = getLogger("nginx.status")
+
+if MFMODULE == "MFEXT":
+    logger.warning("this script can't work on this module")
+    sys.exit(1)
+
+x = requests.get(UUID_URL, timeout=10)
+if x.status_code != 200:
+    logger.warning("bad status code: %i for url=%s" %
+                   (x.status_code, UUID_URL))
+    sys.exit(1)
+
+try:
+    uuid = x.text.strip()
+except Exception:
+    logger.warning("can't read uuid for url=%s" % UUID_URL)
+    sys.exit(1)
+
+try:
+    with open("%s/var/uuid" % MFMODULE_RUNTIME_HOME, 'r') as f:
+        file_uuid = f.read().strip()
+except Exception:
+    logger.warning("can't read file uuid")
+    sys.exit(1)
+
+if uuid != file_uuid:
+    logger.warning("%s != %s => bad uuid got on %s" % (uuid, file_uuid,
+                                                       UUID_URL))
+    sys.exit(1)
+
+sys.exit(0)

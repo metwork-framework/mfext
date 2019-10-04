@@ -1,0 +1,12 @@
+[Unit]
+Description=MetWork Services
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.d/init.d/metwork start
+ExecStop=/etc/rc.d/init.d/metwork stop
+LimitNOFILE=65536
+LimitNPROC=100000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,10 +1,3 @@
-{% if MFMODULE == "MFCOM" %}
-
-    # no cache
-    source <(_make_nethard_config.py)
-
-{% else %}
-
 UUID=`cat /proc/sys/kernel/random/uuid |sed 's/-//g'`
 
 cache_get ${MFMODULE_RUNTIME_HOME}/tmp/system.cache 1440 >${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
@@ -25,7 +18,5 @@ else
 
 fi
 rm -f ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
-
-{% endif %}
 
 export MFCOM_HOSTNAME_FULL_IP=${MFCOM_HOSTNAME_IP}

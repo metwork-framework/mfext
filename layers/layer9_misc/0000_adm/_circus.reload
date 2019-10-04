@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ENDPOINT=$(env |grep "^${MFMODULE}_CIRCUS_ENDPOINT" |awk -F '=' '{print $2;}')
+
+_circus.status
+if test $? -ne 0; then
+    _circus.stop
+    _circus.start
+else
+    timeout 10s _circusctl --endpoint "${ENDPOINT}" reloadconfig
+    if test $? -ne 0; then
+        _circus.stop
+        _circus.start
+    fi
+fi

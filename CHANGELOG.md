@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- update layerapi2
 - add hmac openresty component
 - add black python component
 - introduce components utility

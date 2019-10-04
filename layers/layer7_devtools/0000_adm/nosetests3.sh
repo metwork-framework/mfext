@@ -7,4 +7,4 @@ if test "${1:-}" == "--help"; then
     exit 0
 fi
 export METWORK_PYTHON_MODE=3
-layer_wrapper --layers=python3_devtools@mfext,-python3@mfcom,-python3@"${MODULE_LOWERCASE}" -- nosetests "$@"
+layer_wrapper --layers=python3_devtools@mfext,-python3_misc@mfext,-python3@"${MODULE_LOWERCASE}" -- nosetests "$@"

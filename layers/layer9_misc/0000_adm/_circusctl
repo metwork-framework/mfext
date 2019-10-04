@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# because of https://github.com/circus-tent/circus/issues/962
+
+. "${MFEXT_HOME}/lib/bash_utils.sh"
+layer_load python3_circus@mfext >/dev/null 2>&1
+
+python -m circus.circusctl $@

@@ -10,10 +10,8 @@ if test -f {{FORCED_MODULE_HOME}}/config/config.ini; then
     else
         # Pas de cache, on recalcule
         CONF_FILE={{FORCED_MODULE_HOME}}/config/config.ini
-        if test "{{FORCED_MODULE}}" != "MFCOM"; then
-            if test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
-                CONF_FILE=${MFMODULE_RUNTIME_HOME}/config/config.ini
-            fi
+        if test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
+            CONF_FILE=${MFMODULE_RUNTIME_HOME}/config/config.ini
         fi
         __ini_to_env.py ${CONF_FILE} {{FORCED_MODULE}} >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID}
         N=`grep dns_error ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID} |wc -l`
@@ -22,7 +20,7 @@ if test -f {{FORCED_MODULE_HOME}}/config/config.ini; then
             if test -f "/etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"; then
                 EXTRA_NEWER="-newer /etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"
             fi
-            N2=`find ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache -newer /etc/hosts -newer /etc/resolv.conf -newer /etc/synopsis.config -newer /etc/nsswitch.conf -newer ${MFMODULE_HOME}/config/advanced_config.ini -newer {{MFCOM_HOME}}/config/advanced_config.ini ${EXTRA_NEWER} -newer ${MFMODULE_HOME}/config/config.ini -newer {{MFCOM_HOME}}/config/config.ini 2>/dev/null |wc -l`
+            N2=`find ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache -newer /etc/hosts -newer /etc/resolv.conf -newer /etc/synopsis.config -newer /etc/nsswitch.conf -newer ${MFMODULE_HOME}/config/advanced_config.ini -newer {{MFEXT_HOME}}/opt/misc/config/advanced_config.ini ${EXTRA_NEWER} -newer ${MFMODULE_HOME}/config/config.ini -newer {{MFEXT_HOME}}/opt/misc/config/config.ini 2>/dev/null |wc -l`
             if test ${N2} -eq 0; then
                 rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache >/dev/null 2>&1
                 echo "ERROR: dns error found and we can't use the old cache value"

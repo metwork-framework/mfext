@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -f "${MFMODULE_RUNTIME_HOME}/var/telegraf.socket"
+cat "${MFMODULE_HOME}/config/telegraf.conf" |envtpl --reduce-multi-blank-lines >"${MFMODULE_RUNTIME_HOME}/tmp/config_auto/telegraf.conf"
+if test -s "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/telegraf.conf"; then
+    exit 0
+else
+    rm -f "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/telegraf.conf"
+    exit 1
+fi

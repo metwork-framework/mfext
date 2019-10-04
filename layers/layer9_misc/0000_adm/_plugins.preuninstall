@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -eu
+
+function usage() {
+    echo "usage: _plugins.preuninstall NAME VERSION RELEASE"
+    echo "DO NOT USE DIRECTLY ! it's called by plugins.uninstall"
+}
+
+if test $# -ne 3; then
+    usage
+    exit 1
+fi
+
+NAME=${1}
+if test "${1}" = "--help"; then
+    usage
+    exit 0
+fi
+
+if test "${MFMODULE_RUNTIME_HOME:-}" = ""; then
+    exit 0
+fi
+
+PLUGIN_HOME=$(plugins.info --just-home "${NAME}" || true)
+if test "${PLUGIN_HOME}" = ""; then
+    exit 0
+fi
+
+if ! test -d "${PLUGIN_HOME}"; then
+    exit 0
+fi
