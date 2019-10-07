@@ -83,12 +83,7 @@ if not os.path.isdir(res):
     print("ERROR : cookiecutter result is not a valid directory")
     parser.exit(1)
 
-if MFMODULE == "MFDATA":
-    # FIXME: why chmod +x *.py ???
-    get_bash_output_or_die("cd %s && chmod +x *.py && "
-                           "remove_empty.sh" % args.plugin)
-else:
-    get_bash_output_or_die("cd %s && remove_empty.sh" % args.plugin)
+get_bash_output_or_die("cd %s && remove_empty.sh" % args.plugin)
 
 get_bash_output_or_die("cd %s && bootstrap_plugin.post" % args.plugin)
 
