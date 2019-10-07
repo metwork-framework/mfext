@@ -56,11 +56,4 @@ for PYTHON_MAJOR_VERSION in 2 3; do
         fi
     fi
 done
-if test -d "${PLUGIN_HOME}/node_modules"; then
-    mkdir -p "${PLUGIN_HOME}/local/lib"
-    if ! test -L "${PLUGIN_HOME}/local/lib/node_modules"; then
-        cd "${PLUGIN_HOME}/local/lib"
-        ln -s ../../node_modules node_modules
-    fi
-fi
 rm -f "${PLUGIN_HOME}/local/.layerapi2*"

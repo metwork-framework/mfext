@@ -24,15 +24,12 @@ parser = argparse.ArgumentParser(description=DESCRIPTION)
 parser.add_argument("--cwd",
                     action="store_true",
                     help="change working directory to plugin home")
+parser.add_argument("--empty",
+                    action="store_true",
+                    help="unload all layers before")
 parser.add_argument("--do-not-add-plugin-dir-to-python-path",
                     action="store_true",
                     help="do not add plugin directory to PYTHONPATH")
-parser.add_argument("--do-not-add-lib-subdir-to-python-path",
-                    action='store_true',
-                    help="do not add lib subdir to PYTHONPATH")
-parser.add_argument("--do-not-add-lib-subdir-to-node-path",
-                    action='store_true',
-                    help="do not add lib subdir to NODE_PATH")
 parser.add_argument("--add-extra-dir-to-python-path", default=None, type=str,
                     help="add a custom dir to PYTHONPATH")
 parser.add_argument("--add-extra-dir-to-node-path", default=None, type=str,
@@ -73,6 +70,8 @@ lw_args = ["--empty",
            "--layers=%s" % layer_name]
 if args.cwd:
     lw_args.append("--cwd")
+if args.empty:
+    lw_args.append("--empty")
 if args.do_not_add_plugin_dir_to_python_path is not True:
     lw_args.append("--prepend-env=PYTHONPATH,%s" % layer_dir)
 if args.add_extra_dir_to_python_path is not None:
@@ -81,11 +80,6 @@ if args.add_extra_dir_to_python_path is not None:
 if args.add_extra_dir_to_node_path is not None:
     lw_args.append("--prepend-env=NODE_PATH,%s" %
                    args.add_extra_dir_to_node_path)
-if os.path.isdir("%s/lib" % layer_dir):
-    if args.do_not_add_lib_subdir_to_python_path is not True:
-        lw_args.append("--prepend-env=PYTHONPATH,%s/lib" % layer_dir)
-    if args.do_not_add_lib_subdir_to_node_path is not True:
-        lw_args.append("--prepend-env=NODE_PATH,%s/lib" % layer_dir)
 
 lw_args.append("--")
 for cmd_arg in args.COMMAND_AND_ARGS:

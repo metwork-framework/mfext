@@ -27,7 +27,6 @@ endif
 ifneq ("$(wildcard package.json)","")
 	PREREQ+=package-lock.json
 	PREREQ+=node_modules
-	DEPLOY+=local/lib/node_modules
 endif
 LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
 
@@ -79,15 +78,9 @@ package-lock.json: package.json
 	rm -f $@
 	export LAYERAPI2_LAYERS_PATH=`pwd`:$(LAYERAPI2_LAYERS_PATH) ; plugin_wrapper $(NAME) -- npm install
 
-
 node_modules: package-lock.json
 	rm -Rf node_modules
 	export LAYERAPI2_LAYERS_PATH=`pwd`:$(LAYERAPI2_LAYERS_PATH) ; plugin_wrapper $(NAME) -- npm install
-
-local/lib/node_modules:
-	rm -f local/lib/node_modules
-	mkdir -p local/lib
-	if test -d node_modules; then cd local/lib && ln -s ../../node_modules node_modules; fi
 
 prerelease_check:
 	@N=`plugins.info $(NAME) 2>/dev/null |wc -l` ; if test $${N} -gt 0; then echo "ERROR: please uninstall the plugin before doing 'make release'" ; exit 1; fi

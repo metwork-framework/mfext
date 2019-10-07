@@ -89,6 +89,14 @@ echo "${LD_LIBRARY_PATH}" |sed 's/:/\n- /g'
 
 echo
 echo
+echo "***** NODE_PATH *****"
+echo
+echo -n "- "
+# shellcheck disable=SC2001
+echo "${NODE_PATH}" |sed 's/:/\n- /g'
+
+echo
+echo
 echo "***** PYTHONPATH *****"
 echo
 echo -n "- "
