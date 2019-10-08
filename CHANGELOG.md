@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- add empty option to plugin_wrapper
+- add NODE_PATH in metwork_debug output
 - integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
 - update layerapi2
 - add hmac openresty component
@@ -24,6 +26,7 @@
 
 
 ### Bug Fixes
+- fix complex issues with some extra layers in plugin_env
 - fix issue #35 on addon scientific (build problem with python2 ESMF)
 - use vi in python2 mode when we are in python2
 - fix vi usage without devtools
