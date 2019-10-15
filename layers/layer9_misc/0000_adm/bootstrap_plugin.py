@@ -13,6 +13,7 @@ from bash import bash
 
 
 MFMODULE = os.environ['MFMODULE']
+MFMODULE_LOWERCASE = os.environ['MFMODULE_LOWERCASE']
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
 PLUGIN_TEMPLATES_PATH = "%s/share/templates/plugins/" % MFMODULE_HOME
 
@@ -122,7 +123,7 @@ if args.make:
 
 print("Plugin %s successfully created on directory %s" %
       (args.plugin, res))
-plugins_guide = "https://github.com/metwork-framework" + \
-    "/resources/blob/master/documents/plugins_guide.md"
+plugins_guide = "https://github.com/metwork-framework/" + MFMODULE_LOWERCASE + \
+    "/blob/master/.metwork-framework/plugins_guide.md"
 print("You can read the metwork-framework Plugins guide at \n    %s" %
       plugins_guide)
