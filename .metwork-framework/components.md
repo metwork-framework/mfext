@@ -244,6 +244,7 @@
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.5.2 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.11.2 | python2_devtools |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.11.2 | python3_devtools |
+| [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
