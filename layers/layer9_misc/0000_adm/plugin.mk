@@ -59,10 +59,10 @@ local/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/requirements2.txt: $(REQU
 	touch config.ini
 
 python3_virtualenv_sources/requirements3.txt: python3_virtualenv_sources/requirements-to-freeze.txt
-	cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements3.txt
+	cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements3.txt || { echo "ERROR with freeze_requirements"; rm -f requirements3.txt; exit 1; }
 
 python2_virtualenv_sources/requirements2.txt: python2_virtualenv_sources/requirements-to-freeze.txt
-	cd python2_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements2.txt
+	cd python2_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements2.txt || { echo "ERROR with freeze_requirements"; rm -f requirements2.txt; exit 1; }
 
 python3_virtualenv_sources/src: $(REQUIREMENTS3)
 	if test -f python3_virtualenv_sources/requirements3.txt; then \
