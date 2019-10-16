@@ -13,8 +13,14 @@ dist/$(EGG):
 
 test:
 	flake8.sh --exclude=build .
-	find . -name "*.py" ! -path './build/*' -print0 |xargs -0 pylint.sh --errors-only 
+	find . -name "*.py" ! -path './build/*' -print0 |xargs -0 pylint.sh --errors-only
 	cd tests && nosetests.sh --nocapture .
 
 coverage:
 	cd tests && nosetests.sh --with-coverage --cover-package=mfutil --cover-erase --cover-html --cover-html-dir=coverage --nocapture .
+
+pythonclean:
+	rm -rf build dist *.egg-info
+	rm -f `find -name "*.pyc"`
+	rm -rf `find -name "__pycache__"`
+	rm -rf tests/.coverage tests/coverage

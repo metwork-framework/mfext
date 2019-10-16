@@ -1,4 +1,12 @@
-from ctypes import cdll, c_void_p
+from ctypes import cdll, c_void_p, POINTER, Structure
+
+
+class GSList(Structure):
+    pass
+
+
+GSList._fields_ = [("data", c_void_p), ("next", POINTER(GSList))]
+GSListPointer = POINTER(GSList)
 
 
 class Glib2Wrapper(object):
