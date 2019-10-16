@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
 - infinite circus max_retry
 - add empty option to plugin_wrapper
 - add NODE_PATH in metwork_debug output
@@ -27,6 +29,7 @@
 
 
 ### Bug Fixes
+- don't write empty requirements{2,3}.txt file in case of errors
 - fix complex issues with some extra layers in plugin_env
 - fix issue #35 on addon scientific (build problem with python2 ESMF)
 - use vi in python2 mode when we are in python2
