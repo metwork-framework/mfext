@@ -21,11 +21,12 @@
 * [3\. More details](#3-more-details)
 * [4\. Concepts](#4-concepts)
 * [5\. Full list of components](#5-full-list-of-components)
-* [6\. Reference documentation](#6-reference-documentation)
-* [7\. Installation guide](#7-installation-guide)
-* [8\. Contributing guide](#8-contributing-guide)
-* [9\. Code of Conduct](#9-code-of-conduct)
-* [10\. Sponsors](#10-sponsors)
+* [6\.  Cheatsheet](#6-cheatsheet)
+* [7\. Reference documentation](#7-reference-documentation)
+* [8\. Installation guide](#8-installation-guide)
+* [9\. Contributing guide](#9-contributing-guide)
+* [10\. Code of Conduct](#10-code-of-conduct)
+* [11\. Sponsors](#11-sponsors)
 
 
 
@@ -573,7 +574,11 @@ An add-on can contain one or several extra **layers**.
 
 
 
-## 6. Reference documentation
+## 6.  Cheatsheet
+
+A cheatsheet for this module is available [here](.metwork-framework/cheatsheet.md)
+
+## 7. Reference documentation
 
 - (for **master (development)** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/continuous_integration/docs/master/mfext/) for reference documentation.
 - (for **latest released stable** version), see [this dedicated site](http://metwork-framework.org/pub/metwork/releases/docs/stable/mfext/) for reference documentation.
@@ -585,26 +590,26 @@ And if you are looking for an old released version, you can search [here](http:/
 
 
 
-## 7. Installation guide
+## 8. Installation guide
 
 See [this document](.metwork-framework/install_a_metwork_package.md).
 
 
 
 
-## 8. Contributing guide
+## 9. Contributing guide
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
 
-## 9. Code of Conduct
+## 10. Code of Conduct
 
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 
 
 
-## 10. Sponsors
+## 11. Sponsors
 
 *(If you are officially paid to work on MetWork Framework, please contact us to add your company logo here!)*
 
