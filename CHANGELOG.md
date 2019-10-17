@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add some layerapi2 functions in mfutil
 - add wrk tool to devtools layer
 - add wrk tool to devtools layer
 - infinite circus max_retry
@@ -29,6 +30,7 @@
 
 
 ### Bug Fixes
+- fix dead link to plugins guide
 - don't write empty requirements{2,3}.txt file in case of errors
 - fix complex issues with some extra layers in plugin_env
 - fix issue #35 on addon scientific (build problem with python2 ESMF)
