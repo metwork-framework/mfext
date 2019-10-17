@@ -57,7 +57,9 @@ if test "${NOINIT}" = "0"; then
         echo "ERROR: plugin system not initialized"
         exit 1
     fi
+    {% if MFMODULE != "MFBASE" %}
     _install_or_update_configured_plugins.py
+    {% endif %}
 fi
 {% endif %}
 
@@ -154,6 +156,12 @@ if test ${RES} -eq 0; then
 else
     echo ERROR >${MODULE_RUNTIME_HOME}/var/status
 fi
+
+{% if MFMODULE == "MFBASE" %}
+if test ${RES} -eq 0; then
+    _install_or_update_configured_plugins.py
+fi
+{% endif %}
 
 echo " "
 echo " "
