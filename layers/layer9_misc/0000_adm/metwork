@@ -123,14 +123,13 @@ fix_system() {
   fi
   if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
     if ! test -f "/etc/metwork.config.d/system/no_sysctl"; then
-      #Only on not ro file system
-      if [[ -z `mount | grep "on /sys " | grep "(ro[,]"` ]]; then
-        echo -n "System: disabling transparent_hugepage... "
-        echo never > /sys/kernel/mm/transparent_hugepage/enabled
-        if test $? -eq 0; then
-          echo "Ok"
-        else
-          echo "ERROR"
+      (echo never > /sys/kernel/mm/transparent_hugepage/enabled) 2>/dev/null
+      if test $? -eq 0; then      
+        echo -n "System: disabling transparent_hugepage...  Ok"
+      else
+        N=$(grep -c never /sys/kernel/mm/transparent_hugepage/enabled)
+        if test ${N} -eq 0; then
+          echo "System: can't disable transparent_hugepage (WARNING)"
         fi
       fi
     fi
