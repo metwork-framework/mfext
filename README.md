@@ -21,7 +21,7 @@
 * [3\. More details](#3-more-details)
 * [4\. Concepts](#4-concepts)
 * [5\. Full list of components](#5-full-list-of-components)
-* [6\.  Cheatsheet](#6-cheatsheet)
+* [6\. Cheatsheet](#6-cheatsheet)
 * [7\. Reference documentation](#7-reference-documentation)
 * [8\. Installation guide](#8-installation-guide)
 * [9\. Contributing guide](#9-contributing-guide)
@@ -574,7 +574,7 @@ An add-on can contain one or several extra **layers**.
 
 
 
-## 6.  Cheatsheet
+## 6. Cheatsheet
 
 A cheatsheet for this module is available [here](.metwork-framework/cheatsheet.md)
 
