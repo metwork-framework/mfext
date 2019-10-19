@@ -30,6 +30,7 @@
 
 
 ### Bug Fixes
+- fix metwork services start for systems where /sys is readonly
 - external_plugins/ directory for mfbase
 - fix dead link to plugins guide
 - don't write empty requirements{2,3}.txt file in case of errors
