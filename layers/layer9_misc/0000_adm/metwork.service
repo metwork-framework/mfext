@@ -2,8 +2,9 @@
 Description=MetWork Services
 
 [Service]
-Type=forking
+Type=oneshot
 ExecStart=/etc/rc.d/init.d/metwork start
+RemainAfterExit=true
 ExecStop=/etc/rc.d/init.d/metwork stop
 LimitNOFILE=65536
 LimitNPROC=100000
