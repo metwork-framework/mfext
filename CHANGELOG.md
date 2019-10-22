@@ -30,6 +30,7 @@
 
 
 ### Bug Fixes
+- fix systemd service
 - fix metwork services start for systems where /sys is readonly
 - external_plugins/ directory for mfbase
 - fix dead link to plugins guide
