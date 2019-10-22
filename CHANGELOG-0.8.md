@@ -2,6 +2,18 @@
 
 
 
+## v0.8.5 (2019-10-19)
+
+### New Features
+
+
+### Bug Fixes
+- external_plugins/ directory for mfbase
+
+
+
+
+
 ## v0.8.4 (2019-10-15)
 
 - No interesting change
