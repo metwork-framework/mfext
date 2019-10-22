@@ -1,4 +1,4 @@
-# CHANGELOG
+# release_0.9 CHANGELOG
 
 
 ## [Unreleased]
@@ -30,6 +30,8 @@
 
 
 ### Bug Fixes
+- fix systemd service
+- external_plugins/ directory for mfbase
 - fix dead link to plugins guide
 - don't write empty requirements{2,3}.txt file in case of errors
 - fix complex issues with some extra layers in plugin_env
