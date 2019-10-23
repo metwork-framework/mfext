@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=mfutil_c
-export VERSION=0.0.4
+export VERSION=0.0.5
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=85db5852f975f1b3a0ea92dd25a0397d
+export CHECKSUM=1d23cec0baca95eee98a57156935401b
 DESCRIPTION=\
 very low level C library/utilities
 WEBSITE=https://github.com/metwork-framework/mfutil_c
