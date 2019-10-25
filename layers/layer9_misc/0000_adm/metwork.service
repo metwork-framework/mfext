@@ -8,6 +8,8 @@ RemainAfterExit=true
 ExecStop=/etc/rc.d/init.d/metwork stop
 LimitNOFILE=65536
 LimitNPROC=100000
+TimeoutStartSec=infinity
+TimeoutStopSec=infinity
 
 [Install]
 WantedBy=multi-user.target
