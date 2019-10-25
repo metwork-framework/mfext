@@ -164,3 +164,7 @@ unset MFADMIN_HOSTNAME_IP
 
 {% block custom %}
 {% endblock %}
+
+# see https://github.com/metwork-framework/mfext/issues/544
+# => can help to ignore some processes in list_metwork_processes.py output
+export METWORK_LIST_PROCESSES_FORCE=0
