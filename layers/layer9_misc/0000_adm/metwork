@@ -5,17 +5,6 @@
 MODULES="mffront mfdata mfserv mfbase mfbus mfadmin mfsysmon"
 MODULES_FULL="${MODULES} mfext"
 
-nointeractive() {
-  touch /tmp/nointeractive.tmp >/dev/null 2>&1
-  chmod a+rw /tmp/nointeractive.tmp >/dev/null 2>&1
-  mv -f /tmp/nointeractive.tmp /tmp/nointeractive >/dev/null 2>&1
-  chmod a+rw /tmp/nointeractive >/dev/null 2>&1
-}
-
-interactive() {
-  rm -f /tmp/nointeractive
-}
-
 start_module() {
   MODU=${1}
   USR=${2}
@@ -23,9 +12,7 @@ start_module() {
   if test "${HOM}" != "."; then
     if test -d "${HOM}"; then
       if test -x "${HOM}/bin/${MODU}.start"; then
-        nointeractive
-        su --command="${MODU}.start" - "${USR}"
-        interactive
+        su --command="${HOM}/bin/${MODU}_wrapper ${MODU}.start" "${USR}"
       fi
     fi
   fi
@@ -44,9 +31,7 @@ init_module() {
   if test "${HOM}" != "."; then
     if test -d "${HOM}"; then
       if test -x "${HOM}/bin/${MODU}.init"; then
-        nointeractive
-        su --command="${COMMAND}" - "${USR}"
-        interactive
+        su --command="${HOM}/bin/${MODU}_wrapper ${COMMAND}" "${USR}"
       fi
     fi
   fi
@@ -59,9 +44,7 @@ stop_module() {
   if test "${HOM}" != "."; then
     if test -d "${HOM}"; then
       if test -x "${HOM}/bin/${MODU}.stop"; then
-        nointeractive
-        su --command="${MODU}.stop" - "${USR}"
-        interactive
+        su --command="${HOM}/bin/${MODU}_wrapper ${MODU}.stop" "${USR}"
       fi
     fi
   fi
@@ -74,10 +57,8 @@ status_module() {
   if test "${HOM}" != "."; then
     if test -d "${HOM}"; then
       if test -x "${HOM}/bin/${MODU}.status"; then
-        nointeractive
-        su --command="${MODU}.status" - "${USR}"
+        su --command="${HOM}/bin/${MODU}_wrapper ${MODU}.status" "${USR}"
         RES=$?
-        interactive
         return ${RES}
       fi
     fi
@@ -124,7 +105,7 @@ fix_system() {
   if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
     if ! test -f "/etc/metwork.config.d/system/no_sysctl"; then
       (echo never > /sys/kernel/mm/transparent_hugepage/enabled) 2>/dev/null
-      if test $? -eq 0; then      
+      if test $? -eq 0; then
         echo "System: disabling transparent_hugepage...  Ok"
       else
         N=$(grep -c "^never$" /sys/kernel/mm/transparent_hugepage/enabled)
