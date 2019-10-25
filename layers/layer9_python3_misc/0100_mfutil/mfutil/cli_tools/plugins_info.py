@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
+import os
 import argparse
 import sys
-from mfutil.plugins import get_plugin_info
+from mfutil.plugins import get_plugin_info, MFUtilPluginBaseNotInitialized
 
 DESCRIPTION = "get some information about a plugin"
+MFMODULE_LOWERCASE = os.environ['MFMODULE_LOWERCASE']
 
 
 def main():
@@ -21,8 +23,19 @@ def main():
                             "hardcoded standard value).")
     args = arg_parser.parse_args()
 
-    infos = get_plugin_info(args.name_or_filepath,
-                            plugins_base_dir=args.plugins_base_dir)
+    try:
+        infos = get_plugin_info(args.name_or_filepath,
+                                plugins_base_dir=args.plugins_base_dir)
+    except MFUtilPluginBaseNotInitialized:
+        print("ERROR: the module is not initialized", file=sys.stderr)
+        print("       => start it once before installing your plugin",
+              file=sys.stderr)
+        print("", file=sys.stderr)
+        print("hint: you can use %s.start to do that" % MFMODULE_LOWERCASE,
+              file=sys.stderr)
+        print("", file=sys.stderr)
+        sys.exit(3)
+
     if infos is None:
         sys.exit(1)
     if args.just_home:
