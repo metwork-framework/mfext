@@ -21,4 +21,7 @@ Available layers
    layer_nodejs
    layer_java
    layer_monitoring
+   layer_misc
+   layer_python2_misc
+   layer_python3_misc
    layer_default
