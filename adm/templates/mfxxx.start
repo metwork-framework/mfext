@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# See https://github.com/metwork-framework/mfext/issues/544
+unset METWORK_LIST_PROCESSES_FORCE
+
 {% if MFMODULE != "MFADMIN" %}
 ADMIN_HOSTNAME=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
 ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
