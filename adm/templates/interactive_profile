@@ -1,6 +1,11 @@
 # We load the "non interactive" profile
 . {{MFMODULE_HOME}}/share/profile
 
+{% if MFMODULE != "MFADMIN" %}
+MFADMIN_HOSTNAME=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
+MFADMIN_HOSTNAME_IP=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME_IP=" |awk -F '=' '{print $2;}')
+{% endif %}
+
 function __prompt_without_x_mode() {
     local X_MODE=`echo $- |grep -c 'x'`
     if test ${X_MODE} -gt 0; then
@@ -137,6 +142,27 @@ fi
 uptime
 
 echo
+
+{% if MFMODULE != "MFADMIN" %}
+if test "${MFSERV_CURRENT_PLUGIN_NAME:-}" = ""; then
+    if test "${MFADMIN_HOSTNAME}" != "null" -a "${MFADMIN_HOSTNAME}" != ""; then
+        if test "${MFEXT_LAYER_MONITORING_LOADED:-}" != "1"; then
+            echo_bold "WARNING: the [admin]/hostname value is configured for this module"
+            echo_bold "         but the monitoring@mfext layer is not installed"
+            echo_bold "         => you should consider installing it"
+            echo
+            echo "(hint: use 'yum install metwork-mfext-layer-monitoring'"
+            echo "       as root to do that (or something similar adapted to your Linux"
+            echo "       distribution)"
+        else
+            echo_bold "Sending metrics and logs to mfadmin module: (${MFADMIN_HOSTNAME}, ${MFADMIN_HOSTNAME_IP})"
+        fi
+        echo
+    fi
+fi
+unset MFADMIN_HOSTNAME
+unset MFADMIN_HOSTNAME_IP
+{% endif %}
 
 {% block custom %}
 {% endblock %}
