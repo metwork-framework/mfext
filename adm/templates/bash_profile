@@ -14,15 +14,9 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-IS_INTERACTIVE=1
-if test -f /tmp/nointeractive; then
-    IS_INTERACTIVE=0
-fi
-if test ${IS_INTERACTIVE} -eq 1; then
-    # We load the "interactive profile"
-    # shellcheck disable=SC1091
-    . "{{MFMODULE_HOME}}/share/interactive_profile"
-fi
+# We load the "interactive profile"
+# shellcheck disable=SC1091
+. "{{MFMODULE_HOME}}/share/interactive_profile"
 
 {% if MFMODULE=="MFBASE" or MFMODULE=="MFSERV" or MFMODULE=="MFDATA" %}
 # Specific commands for plugin env
