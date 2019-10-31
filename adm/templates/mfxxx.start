@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# See https://github.com/metwork-framework/mfext/issues/544
+unset METWORK_LIST_PROCESSES_FORCE
+
 {% if MFMODULE != "MFADMIN" %}
 ADMIN_HOSTNAME=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
 ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
@@ -111,6 +114,24 @@ if test "${RES}" = "0"; then
     if test -f ${MFMODULE_HOME}/config/circus.ini; then
         _circus.start
     fi
+
+    {% if MFMODULE != "MFADMIN" %}
+    if test "${MFEXT_LAYER_MONITORING_LOADED:-}" != "1"; then
+        if test "${ADMIN_HOSTNAME}" != "null"; then
+            echo -n "- Checking monitoring layer..."
+            echo_warning
+            echo_bold "WARNING: the [admin]/hostname value is configured for this module"
+            echo_bold "         but the monitoring@mfext layer is not installed"
+            echo_bold "         => you should consider installing it"
+            echo
+            echo "(hint: use 'yum install metwork-mfext-layer-monitoring'"
+            echo "       as root to do that (or something similar adapted to your Linux"
+            echo "       distribution)"
+            echo
+            export ADMIN_HOSTNAME=null
+        fi
+    fi
+    {% endif %}
 
     {% block custom %}
     # Can be replaced by mfxxx.start.custom

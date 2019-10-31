@@ -1,6 +1,19 @@
 # release_0.9 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+
+
+### Bug Fixes
+- fix metwork services start for systems where /sys is readonly
+
+
+
+
 
 ## v0.9.1 (2019-10-23)
 
