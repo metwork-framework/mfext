@@ -6,10 +6,13 @@
 ### New Features
 - add a banner about configured mfadmin module
 - better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
 
 
 ### Bug Fixes
 - fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
 
 
 
