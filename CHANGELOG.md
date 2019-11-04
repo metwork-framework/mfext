@@ -11,6 +11,7 @@
 
 
 ### Bug Fixes
+- mfserv_wrapper now loads custom metwork profiles
 - fix systemd service
 - fix metwork services start for systems where /sys is readonly
 
