@@ -1,7 +1,8 @@
 # release_0.9 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.9.2 (2019-11-01)
 
 ### New Features
 - add a banner about configured mfadmin module
