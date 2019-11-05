@@ -54,7 +54,7 @@ $ # Great, a newer version!
 ```
 
 
-Installing the **MFEXT** module is safe, it can't break anything on your system. It does not contain any services, it is just a bunch of files and directories installed in `/opt` directory and you have to explicitly load a profile file to use them.
+Installing the **MFEXT** module is safe, it can't break anything on your system. It does not contain any services, it is just a bunch of files and directories installed in `/opt` directory and you have to explicitly load a profile file to use them.
 
 **MFEXT** is the **M**etwork **F**ramework "**EXT**ernal dependencies" **module**. It can be used alone, or as a dependency of other MetWork Framework **modules** (like [mfserv](https://github.com/metwork-framework/mfserv) or [mfdata](https://github.com/metwork-framework.org/mfdata)). [MetWork Framework](http://www.metwork-framework.org) is an open source system for building and managing production grade applications or micro-services.
 
@@ -66,24 +66,24 @@ You have more time? Look at this 30 seconds screencast showcasing installation a
 
 ### 2.1 Installation
 
-**On a Linux CentOS 7 box**
+**On a Linux CentOS 6, 7 or 8 box** *(but easily adaptable for other distributions)*
 
 ```bash
 
 # AS ROOT USER
 
-# First, we configure the Metwork Framework repository for stable release on CentOS 7
+# First, we configure the Metwork Framework repository for stable releases
 cat >/etc/yum.repos.d/metwork.repo <<EOF
 [metwork_stable]
 name=MetWork Stable
-baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/stable/centos7/
+baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/stable/portable/
 gpgcheck=0
 enabled=1
 metadata_expire=0
 EOF
 
 # Then we install a minimal version of mfext module
-yum -y install metwork-mfext-minimal
+yum -y install metwork-mfext
 
 # Done :-)
 
