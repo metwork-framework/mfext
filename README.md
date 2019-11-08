@@ -561,11 +561,12 @@ An add-on can contain one or several extra **layers**.
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.11.2 | python2_devtools |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.11.2 | python3_devtools |
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
+| [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(248 components)*
+*(249 components)*
 
 
 
