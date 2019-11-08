@@ -1,0 +1,14 @@
+diff -up wrk2-master/Makefile.orig wrk2-master/Makefile
+--- wrk2-master/Makefile.orig	2019-11-08 11:17:14.481498993 +0100
++++ wrk2-master/Makefile	2019-11-08 11:22:33.874498630 +0100
+@@ -17,6 +17,10 @@ else ifeq ($(TARGET), linux)
+         CFLAGS  += -D_POSIX_C_SOURCE=200809L -D_BSD_SOURCE
+ 	LIBS    += -ldl
+ 	LDFLAGS += -Wl,-E
++	ifneq ($(OPENSSL_HOME), )
++		CFLAGS  += -I$(OPENSSL_HOME)/include/openssl
++		LDFLAGS += -L$(OPENSSL_HOME)/lib
++	endif
+ else ifeq ($(TARGET), freebsd)
+ 	CFLAGS  += -D_DECLARE_C99_LDBL_MATH
+ 	LDFLAGS += -Wl,-E
