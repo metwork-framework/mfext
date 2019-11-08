@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add wrk2 (variant of wrk)
 - add a clear warning...
 - better interactive/GUI processes detection
 - add a banner about configured mfadmin module
