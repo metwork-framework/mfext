@@ -44,7 +44,7 @@ if test "${PLUGIN_DIR}" != ""; then
 fi
 {% endif %}
 
-# We eventually override with custom module wide settings
+# We possibly override with custom module wide settings
 if test -f ~/.metwork.custom_interactive_profile; then
     . ~/.metwork.custom_interactive_profile
 fi

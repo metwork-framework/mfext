@@ -14,7 +14,7 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# We eventually override with system wide custom settings
+# We possibly override with system wide custom settings
 if test -f /etc/metwork.custom_profile; then
     # shellcheck disable=SC1091
     . /etc/metwork.custom_profile
@@ -29,7 +29,7 @@ else
     . ${PROFILE}
 fi
 
-# We eventually override with module wide custom settings
+# We possibly override with module wide custom settings
 if test -f ~/.metwork.custom_profile; then
     . ~/.metwork.custom_profile
 fi
