@@ -5,7 +5,7 @@ if test "${1:-}" = ""; then
     exit 1
 fi
 
-# We eventually override with system wide custom settings
+# We override with system wide custom settings (if existing)
 if test -f /etc/metwork.custom_profile; then
     # shellcheck disable=SC1091
     . /etc/metwork.custom_profile
@@ -18,7 +18,7 @@ if test "${METWORK_PROFILE_LOADED}" != "1" -a "${METWORK_PROFILE_LOADING}" != "1
     fi
 fi
 
-# We eventually override with module wide custom settings
+# We override with module wide custom settings (if existing)
 if test -f ~/.metwork.custom_profile; then
     . ~/.metwork.custom_profile
 fi
