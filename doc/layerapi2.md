@@ -78,7 +78,6 @@ $ layers
 - nodejs@mfserv [/home/fab/metwork/mfserv/build/opt/nodejs]
 - (*) python3@mfserv [/home/fab/metwork/mfserv/build/opt/python3]
 - (*) root@mfserv [/home/fab/metwork/mfserv/build]
-- (*) misc@mfext [/home/fab/metwork/mfext/build/opt/misc]
 - python2_misc@mfext [/home/fab/metwork/mfext/build/opt/python2_misc]
 - (*) python3_misc@mfext [/home/fab/metwork/mfext/build/opt/python3_misc]
 - (*) python3_vim@mfext [/home/fab/metwork/mfext/build/opt/python3_vim]

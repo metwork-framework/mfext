@@ -133,7 +133,7 @@ cat <<EOF
 
 EOF
 
-if test -x ${MFEXT_HOME}/opt/misc/bin/mfcom_wrapper; then
+if test -x ${MFEXT_HOME}/bin/mfcom_wrapper; then
     echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
     echo "(module: ${MFMODULE}, version: ${MFMODULE_VERSION})"
     echo
