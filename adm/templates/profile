@@ -99,7 +99,6 @@ export PYTHON2_SHORT_VERSION=2.7
 field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}
 field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt
 {% if MFMODULE != "MFEXT" %}
-    field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}/opt/misc
     field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}
     field_prepend LAYERAPI2_LAYERS_PATH {{MFMODULE_HOME}}/opt
     {% if MFMODULE == "MFSERV" or MFMODULE == "MFDATA" or MFMODULE == "MFBASE" %}
@@ -154,7 +153,7 @@ fi
     fi
     if ! test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
         if test -f ${MFMODULE_HOME}/config/config.ini; then
-            ${MFEXT_HOME}/opt/misc/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
+            ${MFEXT_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
         fi
     else
         if ! test -L ${MFMODULE_HOME}/config/config.ini; then
@@ -162,7 +161,7 @@ fi
                 N=`cat ${MFMODULE_RUNTIME_HOME}/config/config.ini |grep -v '^\[' |grep -v '^#' |grep '[a-zA-Z]' |wc -l`
                 if test "${N}" -eq 0; then
                     # we can override
-                    ${MFEXT_HOME}/opt/misc/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
+                    ${MFEXT_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
                 fi
             fi
         fi

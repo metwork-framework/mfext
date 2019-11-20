@@ -335,14 +335,14 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
     {% endif %}
     {% if MFMODULE != "MFEXT" %}
         if ! test -d /etc/rc.d/init.d; then mkdir -p /etc/rc.d/init.d; fi
-        cp -f {{MFEXT_HOME}}/opt/misc/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
+        cp -f {{MFEXT_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
         chmod 0755 /etc/rc.d/init.d/metwork
         chown root:root /etc/rc.d/init.d/metwork
         if test -d /usr/lib/systemd/system; then
             if ! test -f /usr/lib/systemd/system/metwork.service; then
                 echo "INFO: creating metwork systemd service"
             fi
-            cp -f {{MFEXT_HOME}}/opt/misc/share/metwork.service /usr/lib/systemd/system/metwork.service
+            cp -f {{MFEXT_HOME}}/share/metwork.service /usr/lib/systemd/system/metwork.service
             systemctl daemon-reload >/dev/null 2>&1 || true
             systemctl enable metwork.service >/dev/null 2>&1 || true
         else

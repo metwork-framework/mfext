@@ -32,10 +32,10 @@ LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
 
 all: $(PREREQ) custom $(DEPLOY)
 
-.autorestart_includes: $(MFEXT_HOME)/opt/misc/share/plugin_autorestart_includes
+.autorestart_includes: $(MFEXT_HOME)/share/plugin_autorestart_includes
 	@cp -f $< $@
 
-.autorestart_excludes: $(MFEXT_HOME)/opt/misc/share/plugin_autorestart_excludes
+.autorestart_excludes: $(MFEXT_HOME)/share/plugin_autorestart_excludes
 	@cp -f $< $@
 
 clean::
