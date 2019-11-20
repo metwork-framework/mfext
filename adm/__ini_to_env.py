@@ -8,13 +8,13 @@
 # ===== Projet SYNOPSIS ======
 # ============================
 #
-# (c) 2009-2016, Météo-France
+# (c) 2009-2016, Meteo-France
 #
 
 ##
 #
 # @author Florian POURTUGAU <florian.pourtugau@meteo.fr>
-# @since février 2016
+# @since fevrier 2016
 # @file __ini_to_env.py
 #
 
@@ -37,7 +37,7 @@ except ImportError:
 def read_config_file(parser, config, home):
     res = OrderedDict()
     for s in parser._sections:
-        # On inclut les sections des fichiers de config à inclure
+        # Include sections of config files to include
         if(s.startswith("INCLUDE_")):
             parser_included = ExtendedConfigParser(config=config,
                                                    inheritance='im')
@@ -45,8 +45,7 @@ def read_config_file(parser, config, home):
             data = codecs.open(home + "/config/" + included_file, "r", "utf-8")
             parser_included.read_file(data)
             res.update(read_config_file(parser_included, config, home))
-        # On ajoute la section si elle n'y est pas ou on la met à jour
-        # si elle a été incluse auparavant
+        # Add section if missing or update if included before
         else:
             try:
                 res[s].update(read_section(parser, s, home))
@@ -69,18 +68,17 @@ def read_option(parser, section, home, o, res):
         opt = o
     val = parser[section][opt]
 
-    # Récupère le contenu d'une variable d'environnement
+    # Retrieve content of environment variable
     if(re.match("^.*@@@[A-Z0-9_][A-Z0-9_]*@@@.*$", str(val))):
         name = val[(val.find("@@@") + 3):val.rfind("@@@")]
         res[opt] = val.replace("@@@" + name + "@@@", environ.get(name, ""))
 
-    # Récupère le contenu d'une variable d'environnement
+    # Retrieve content of environment variable
     if(re.match("^.*{{[A-Z0-9_][A-Z0-9_]*}}.*$", str(val))):
         name = val[(val.find("{{") + 2):val.rfind("}}")]
         res[opt] = val.replace("{{" + name + "}}", environ.get(name, ""))
 
-    # Récupère le contenu d'un fichier en string en remplaçant les "\n"
-    # par des ";"
+    # Retrieve content of a file, replacing "\n" by ";"
     if(re.match("^~~~[\\.a-zA-Z0-9_][\\.a-zA-Z0-9_]*~~~$", str(val))):
         file_name = home + "/config/" + \
             val[(val.find("~~~") + 3):val.rfind("~~~")]
@@ -88,8 +86,8 @@ def read_option(parser, section, home, o, res):
         content = data.read()
         res[opt] = content.replace("\n", ";")
 
-    # Si l'option finit par "_HOSTNAME" ou s'appelle "hostname", on créé
-    # la variable "HOSTNAME_IP" correspondante
+    # If the option is ending by "_HOSTNAME" or is "hostname", 
+    # create corresponding "HOSTNAME_IP" variable
     if(opt.lower().endswith("_hostnames") or opt.lower() == "hostnames"):
         if(opt + "_IP" not in res):
             ip_list = []
@@ -122,7 +120,7 @@ def read_option(parser, section, home, o, res):
 
 
 def get_ip_var(opt, val):
-    # Si c'est "null" ou si c'est une socket Unix
+    # If it's "null" or linux socket
     if(val.lower() == "null" or val.startswith("/")):
         return val
     else:
@@ -133,10 +131,10 @@ def main():
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument(
         "path",
-        help="Chemin du fichier de config à visualiser")
+        help="Chemin du fichier de config a visualiser")
     arg_parser.add_argument(
         "module",
-        help="Précise le module dans lequel se trouve le fichier de config")
+        help="Precise le module dans lequel se trouve le fichier de config")
     args = arg_parser.parse_args()
 
     parser = ExtendedConfigParser(

@@ -109,7 +109,7 @@ fix_system() {
         echo "System: disabling transparent_hugepage...  Ok"
       else
         N=$(grep -c "^never$" /sys/kernel/mm/transparent_hugepage/enabled)
-        if test ${N} -eq 0; then
+        if test "${N}" -eq 0; then
           echo "System: can't disable transparent_hugepage (WARNING)"
         fi
       fi
