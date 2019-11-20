@@ -13,8 +13,8 @@ if hash crontab 2>/dev/null; then
     undeploycron_between "${START_LINE}" "${STOP_LINE}" >"${MFMODULE_RUNTIME_HOME}/tmp/undeploycron_errors.$$" 2>&1
     if test $? -eq 0; then
 
-        N=$(crontab -l 2>/dev/null |grep "${START_LINE}" |wc -l)
-        if test ${N} -gt 0; then
+        N=$(crontab -l 2>/dev/null |grep -c "${START_LINE}")
+        if test "${N}" -gt 0; then
             echo_nok || RES=1
         else
             echo_ok
@@ -28,8 +28,8 @@ if hash crontab 2>/dev/null; then
             STOP_LINE="##### END OF METWORK ${MFMODULE} PLUGIN ${PLUGIN} CRONTAB #####"
             undeploycron_between "${START_LINE}" "${STOP_LINE}" >>"${MFMODULE_RUNTIME_HOME}/tmp/undeploycron_errors.$$" 2>&1
             if test $? -eq 0; then
-                N=$(crontab -l 2>/dev/null |grep "${START_LINE}" |wc -l)
-                if test ${N} -gt 0; then
+                N=$(crontab -l 2>/dev/null |grep -c "${START_LINE}")
+                if test "${N}" -gt 0; then
                     echo_nok || RES=1
                 else
                     echo_ok
