@@ -36,7 +36,7 @@ fi
 
 MFMODULE_LOWERCASE=`echo ${MFMODULE} | tr '[:upper:]' '[:lower:]'`
 
-echo -n "- Eventually stopping ${MFMODULE_LOWERCASE} module..."
+echo -n "- Stopping (if running) ${MFMODULE_LOWERCASE} module..."
 echo_running
 ${MFMODULE_LOWERCASE}.stop >/dev/null 2>&1
 echo_ok
