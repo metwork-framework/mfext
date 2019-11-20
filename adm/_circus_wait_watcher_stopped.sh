@@ -2,7 +2,10 @@
 
 WATCHER=$1
 ENDPOINT=$(env |grep "^${MFMODULE}_CIRCUS_ENDPOINT" |awk -F '=' '{print $2;}')
+# shellcheck disable=SC2001
 SOCKET=$(echo "${ENDPOINT}" |sed 's~ipc://~~g')
+#Maybe the correct SC2001 syntax below
+#SOCKET="${ENDPOINT//ipc:\/\/}"
 is_interactive
 if test $? -eq 0; then
     IS_INTERACTIVE=1
@@ -28,7 +31,7 @@ while test ${I} -lt 400; do
     if test "${S}" = "error"; then
         break
     fi
-    I=$(expr ${I} + 1)
+    I=$((I + 1))
     sleep 1
     if test "${IS_INTERACTIVE}" = "1"; then
         if test ${I} -gt 5; then
@@ -37,12 +40,14 @@ while test ${I} -lt 400; do
                 SLOW=1
             fi
             echo "    => waiting ${I}/400..."
+# shellcheck disable=SC1117
             echo -en "\e[1A"
         fi
     fi
 done
 
 if test "${SLOW}" = "1"; then
+# shellcheck disable=SC1117
     echo -en "\e[1A"
 fi
 if test "${I}" -ge 400; then
