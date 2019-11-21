@@ -12,6 +12,7 @@
 
 
 ### Bug Fixes
+- correct translation error from French (wrong use of false friend "eventually")
 - mfserv_wrapper now loads custom metwork profiles
 - fix systemd service
 - fix metwork services start for systems where /sys is readonly
