@@ -153,7 +153,7 @@
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.4 | python2_devtools |
-| [pcre](http://www.pcre.org) | 8.36 | core |
+| [pcre](http://www.pcre.org) | 8.43 | core |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python2_devtools |
@@ -214,7 +214,7 @@
 | [sphinxcontrib-jsmath](http://sphinx-doc.org/) | 1.0.1 | python3_devtools |
 | [sphinxcontrib-qthelp](None) | 1.0.2 | python3_devtools |
 | [sphinxcontrib-serializinghtml](None) | 1.1.3 | python3_devtools |
-| [sqlite](http://sqlite.org/) | 3080803 | core |
+| [sqlite](http://sqlite.org/) | 3300100 | core |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python2 |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python3 |
 | [structlog](https://www.structlog.org/) | 19.1.0 | python2 |
