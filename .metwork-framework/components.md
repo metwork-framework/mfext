@@ -153,7 +153,7 @@
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.4 | python2_devtools |
-| [pcre](http://www.pcre.org) | 8.36 | core |
+| [pcre](http://www.pcre.org) | 8.43 | core |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python2_devtools |
