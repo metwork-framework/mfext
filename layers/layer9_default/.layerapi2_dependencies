@@ -4,7 +4,6 @@ core@mfext
 -mapserver@mfext
 -scientific_core@mfext
 python3@mfext
-misc@mfext
 python3_misc@mfext
 -scientific@mfext
 -python3_scientific@mfext

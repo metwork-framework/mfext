@@ -15,7 +15,7 @@ ifeq ($(MODULE_HAS_HOME_DIR),)
 endif
 ARCHIV=$(MFMODULE_LOWERCASE)-$(VERSION_BUILD)-$(RELEASE_BUILD)
 
-LAYERAPI2_FILES := $(wildcard .layerapi2_label) $(wildcard .layerapi2_dependencies) $(wildcard .layerapi2_conflicts)
+LAYERAPI2_FILES := $(wildcard .layerapi2_label) $(wildcard .layerapi2_dependencies) $(wildcard .layerapi2_conflicts) $(wildcard .layerapi2_extraenv)
 TARGET_LAYERAPI2_FILES := $(addprefix $(MFMODULE_HOME)/,$(LAYERAPI2_FILES))
 
 default:: before all after
@@ -31,6 +31,9 @@ $(MFMODULE_HOME)/.layerapi2_conflicts:
 
 $(MFMODULE_HOME)/.layerapi2_dependencies:
 	cp -f .layerapi2_dependencies $(MFMODULE_HOME)/.layerapi2_dependencies
+
+$(MFMODULE_HOME)/.layerapi2_extraenv:
+	cp -f .layerapi2_extraenv $(MFMODULE_HOME)/.layerapi2_extraenv
 
 adm/root.mk:
 	@echo "ERROR: you have to execute ./bootstrap.sh first"

@@ -13,7 +13,7 @@ import codecs
 
 import re
 
-__author__ = "Michał Słomkowski"
+__author__ = "Michal Slomkowski"
 __license__ = "Apache 2.0"
 __version__ = "1.0.2"
 

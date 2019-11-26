@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ${MFEXT_HOME}/lib/bash_utils.sh
+. "${MFEXT_HOME}/lib/bash_utils.sh"
 exit_if_root
 
 function usage() {
@@ -27,9 +27,9 @@ ENDPOINT=$(env |grep "^${MFMODULE}_CIRCUS_ENDPOINT" |awk -F '=' '{print $2;}')
 # Verification de la presence du daemon
 echo -n "- Checking circus status..."
 echo_running
-N=`pgrep -U ${MFMODULE_RUNTIME_USER} -f "${IDENTIFY}" |wc -l`
-if test ${N} -gt 0; then
-    timeout 30s _circusctl --endpoint ${ENDPOINT} --timeout=20 globaloptions >/dev/null 2>&1
+N=$(pgrep -U "${MFMODULE_RUNTIME_USER}" -f "${IDENTIFY}" |wc -l)
+if test "${N}" -gt 0; then
+    timeout 30s _circusctl --endpoint "${ENDPOINT}" --timeout=20 globaloptions >/dev/null 2>&1
     if test $? -eq 0; then
         echo_ok
     else

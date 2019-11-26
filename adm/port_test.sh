@@ -17,7 +17,7 @@ if test "${PORT}" = ""; then
     exit 1
 fi
 
-tcping -q -t 5 ${HOSTNAME} ${PORT} >/dev/null 2>&1
+tcping -q -t 5 "${HOSTNAME}" "${PORT}" >/dev/null 2>&1
 RES=$?
 
 if test ${RES} -eq 0; then
