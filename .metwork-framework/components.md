@@ -214,7 +214,7 @@
 | [sphinxcontrib-jsmath](http://sphinx-doc.org/) | 1.0.1 | python3_devtools |
 | [sphinxcontrib-qthelp](None) | 1.0.2 | python3_devtools |
 | [sphinxcontrib-serializinghtml](None) | 1.1.3 | python3_devtools |
-| [sqlite](http://sqlite.org/) | 3080803 | core |
+| [sqlite](http://sqlite.org/) | 3300100 | core |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python2 |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python3 |
 | [structlog](https://www.structlog.org/) | 19.1.0 | python2 |
