@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- remove layer misc@mfext (share files and shells are moved to adm)
 - add wrk2 (variant of wrk)
 - add a clear warning...
 - better interactive/GUI processes detection
