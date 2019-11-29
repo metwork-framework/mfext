@@ -120,7 +120,7 @@
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 4.3.0a | scientific_core |
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
-| [libxslt](http://xmlsoft.org/) | 1.1.28 | core |
+| [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
 | [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
