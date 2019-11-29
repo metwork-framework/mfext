@@ -35,7 +35,7 @@
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [black](https://github.com/ambv/black) | 19.3b0 | python3_devtools |
-| [c-ares](https://c-ares.haxx.se/) | 1.12.0 | core |
+| [c-ares](https://c-ares.haxx.se/) | 1.15.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python2 |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
