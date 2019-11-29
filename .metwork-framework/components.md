@@ -148,7 +148,7 @@
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python2_devtools |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
 | [openjdk](https://jdk.java.net) | 11.0.2 | java |
-| [openjpeg](http://www.openjpeg.org/) | 2.1.2 | scientific_core |
+| [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
