@@ -193,7 +193,7 @@
 | [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python2 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
-| [rpm](http://rpm.org) | 4.15.1 | rpm |
+| [rpm](http://rpm.org) | 4.9.1.3 | rpm |
 | [scandir](https://github.com/benhoyt/scandir) | 1.10.0 | python2_devtools |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 3.3.3 | python2 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 3.3.3 | python3 |
