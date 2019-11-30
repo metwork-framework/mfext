@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=rpm
-export VERSION=4.15.1
+export VERSION=4.9.1.3
 export EXTENSION=tar.bz2
 export CHECKTYPE=MD5
-export CHECKSUM=ed72147451a5ed93b2a48e2f8f5413c3
+export CHECKSUM=e266b959de9865cce2816451e8a62e12
 DESCRIPTION=\
 RPM is a powerful command line driven package management
 WEBSITE=http://rpm.org
