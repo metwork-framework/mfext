@@ -7,19 +7,17 @@ include ../../package.mk
 #will be released in cartopy
 
 export NAME=proj
-export VERSION=5.2.0
-#export VERSION=6.1.0
+export VERSION=6.2.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=ad285c7d03cbb138d9246e10e1f3191c
-#export CHECKSUM=4ec5d9240b0e290670886519f250946c (6.1.0)
+export CHECKSUM=9f874e227d221daf95f7858dc55dfa3e
 DESCRIPTION=\
 PROJ4 is a generic coordinate transformation software that transforms geospatial coordinates \
 from one coordinate reference system (CRS) to another.
 WEBSITE=http://trac.osgeo.org/proj/
 LICENSE=MIT
 
-# proj 5.2.0 or 6.1.0 needs C++11 to build (not natively available on CentOS6).
+# proj > 5.2.0 needs C++11 to build (not natively available on CentOS6).
 # So we build it with temporary scl if gcc < 4.8
 GCC_VERSION = `gcc --version | head -1 | cut -d" " -f3 | cut -d"." -f1-2`
 DEVTOOLSET = 7

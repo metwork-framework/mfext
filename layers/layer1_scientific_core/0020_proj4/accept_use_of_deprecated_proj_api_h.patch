@@ -1,0 +1,16 @@
+diff -up proj-6.2.1/src/proj_api.h.orig proj-6.2.1/src/proj_api.h
+--- proj-6.2.1/src/proj_api.h.orig	2019-12-03 16:05:18.508938972 +0100
++++ proj-6.2.1/src/proj_api.h	2019-12-03 16:05:03.193938985 +0100
+@@ -33,9 +33,12 @@
+   *
+   */
+ 
++/* We allow use of this deprecated file in Metwork because of libspatialite and cartopy */
++/*
+ #ifndef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
+ #error 'To use the proj_api.h you must define the macro ACCEPT_USE_OF_DEPRECATED_PROJ_API_H'
+ #endif
++*/
+ 
+ #ifndef PJ_VERSION
+ #define PJ_VERSION 621
