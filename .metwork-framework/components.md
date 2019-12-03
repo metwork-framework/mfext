@@ -97,7 +97,7 @@
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.4 | python3_circus |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
-| [hdf5](https://www.hdfgroup.org) | 1.10.2 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python2 |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
 | [imagesize](https://github.com/shibukawa/imagesize_py) | 1.1.0 | python3_devtools |
