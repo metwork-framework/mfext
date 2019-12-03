@@ -14,3 +14,5 @@ LICENSE=BSD
 all:: $(PREFIX)/lib/libopenjp2.so
 $(PREFIX)/lib/libopenjp2.so:
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure_cmake build_cmake install_cmake
+	#add link (useful for eccodes build in mfextaddon_scientific)
+	cd $(PREFIX)/include && rm -f openjpeg && ln -s openjpeg-2.3 openjpeg
