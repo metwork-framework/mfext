@@ -92,7 +92,7 @@
 | [functools32](https://github.com/MiCHiLU/python-functools32) | 3.2.3.post2 | python2_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [futures](https://github.com/agronholm/pythonfutures) | 3.3.0 | python2_devtools |
-| [gdal](http://www.gdal.org) | 2.4.3 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.4 | python3_circus |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
