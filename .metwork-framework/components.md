@@ -158,8 +158,8 @@
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python2_devtools |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python3_devtools |
-| [postgis](http://postgis.refractions.net/) | 2.4.6 | scientific_core |
-| [postgresql](http://postgresql.org/) | 10.11 | scientific_core |
+| [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
+| [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python2 |
