@@ -14,3 +14,9 @@ dist/$(EGG):
 test:
 	flake8.sh --exclude=build .
 	find . -name "*.py" ! -path './build/*' -print0 |xargs -0 pylint.sh --errors-only
+
+pythonclean:
+	rm -rf build dist *.egg-info
+	rm -f `find -name "*.pyc"`
+	rm -rf `find -name "__pycache__"`
+	rm -rf tests/.coverage tests/coverage
