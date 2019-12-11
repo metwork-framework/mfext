@@ -15,3 +15,9 @@ test:
 	@echo "***** PYTHON3 TESTS *****"
 	flake8.sh --exclude=build .
 	find . -name "*.py" ! -path './build/*' -print0 |xargs -0 layer_wrapper --layers=python3@mfext -- pylint.sh --errors-only
+
+pythonclean:
+	rm -rf build dist *.egg-info
+	rm -f `find -name "*.pyc"`
+	rm -rf `find -name "__pycache__"`
+	rm -rf tests/.coverage tests/coverage
