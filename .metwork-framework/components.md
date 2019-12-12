@@ -39,7 +39,7 @@
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python2 |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
-| [cairo](https://www.cairographics.org/) | 1.14.12 | scientific_core |
+| [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
 | [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python2 |
 | [certifi](https://certifi.io) | 2019.3.9 | python2_core |
@@ -156,6 +156,7 @@
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
+| [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python2_devtools |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python3_devtools |
 | [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
@@ -250,4 +251,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(249 components)*
+*(250 components)*
