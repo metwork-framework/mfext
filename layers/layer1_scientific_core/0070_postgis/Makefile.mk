@@ -3,7 +3,7 @@ include ../../package.mk
 
 export NAME=postgis
 export VERSION=3.0.0
-export SHORT_VERSION=2.4
+export SHORT_VERSION=3
 # export EXTENSION (see below)
 export CHECKTYPE=MD5
 export CHECKSUM=725019e3a67ac52ccef4d00031cb0c77
