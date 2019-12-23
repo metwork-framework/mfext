@@ -111,6 +111,7 @@
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
 | [jsonlog2elasticsearch](https://pypi.org/project/jsonlog2elasticsearch) | custom | monitoring |
+| [jsonsyslog2elasticsearch](https://pypi.org/project/jsonsyslog2elasticsearch) | custom | monitoring |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.3 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.2 | python2_devtools |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.2 | python3_devtools |
@@ -250,4 +251,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(249 components)*
+*(250 components)*
