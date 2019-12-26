@@ -18,7 +18,6 @@
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.15.5 | python2_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.15.5 | python3_devtools |
-| [ack](https://beyondgrep.com/) | 2.16-single-file | devtools |
 | [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python2_core |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
@@ -144,7 +143,7 @@
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python2 |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
-| [nodejs](http://nodejs.org) | 10.16.0 | nodejs |
+| [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python2_devtools |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
 | [openjdk](https://jdk.java.net) | 11.0.2 | java |
@@ -228,6 +227,7 @@
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.0 | python2_devtools |
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.0 | python3_devtools |
+| [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
 | [toml](https://github.com/uiri/toml) | 0.10.0 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
