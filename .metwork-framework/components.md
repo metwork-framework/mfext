@@ -123,6 +123,7 @@
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
 | [libxslt](http://xmlsoft.org/) | 1.1.28 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
+| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.0.1 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
 | [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
