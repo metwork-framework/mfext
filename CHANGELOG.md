@@ -1,6 +1,15 @@
 # release_0.9 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+- update circus_autorestart_plugin
+
+
+
+
+
 
 ## v0.9.2 (2019-11-01)
 
