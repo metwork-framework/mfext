@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- update circus_autorestart_plugin
 - add log_proxy
 - add json2syslog2elasticsearch
 - remove layer misc@mfext (share files and shells are moved to adm)
