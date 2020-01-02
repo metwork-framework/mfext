@@ -23,12 +23,10 @@ function __prompt_without_x_mode() {
 function __get_plugin_env_profile_tmp_file() {
     TMPPROFILE="${MFMODULE_RUNTIME_HOME}/tmp/$(get_unique_hexa_identifier).profile"
     touch "${TMPPROFILE}"
-    echo "source \"${MFMODULE_HOME}/share/bash_profile\"" >>"${TMPPROFILE}"
-    local LAYERS=$(layers --loaded-filter=yes --raw |awk '{print $1;}' |grep -v "^plugin_")
-    local LAYER=
-    for LAYER in ${LAYERS}; do
-        echo "layer_load \"${LAYER}\" >/dev/null 2>&1" >>"${TMPPROFILE}"
-    done
+    if test "${TERM}" != ""; then echo "export TERM=\"${TERM}\"" >>"${TMPPROFILE}"; fi
+    if test "${COLORTERM}" != ""; then echo "export COLORTERM=\"${COLORTERM}\"" >>"${TMPPROFILE}"; fi
+    if test "${DISPLAY}" != ""; then echo "export DISPLAY=\"${DISPLAY}\"" >>"${TMPPROFILE}"; fi
+    plugin_wrapper --bash-cmds "$1" NOTUSED >>"${TMPPROFILE}"
     echo "${TMPPROFILE}"
 }
 function plugin_env() {
@@ -41,8 +39,8 @@ function plugin_env() {
                 export PIP_PREFIX="$(pwd)/local"
                 _OLD_LAYERAPI2_LAYERS_PATH="${LAYERAPI2_LAYERS_PATH}"
                 field_prepend LAYERAPI2_LAYERS_PATH "$(pwd)"
-                TMPPROFILE=$(__get_plugin_env_profile_tmp_file)
-                plugin_wrapper --empty "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')" -- bash --rcfile "${TMPPROFILE}"
+                TMPPROFILE=$(__get_plugin_env_profile_tmp_file "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')")
+                env -i bash --rcfile "${TMPPROFILE}"
                 rm -f "${TMPPROFILE}"
                 export LAYERAPI2_LAYERS_PATH="${_OLD_LAYERAPI2_LAYERS_PATH}"
                 unset PIP_PREFIX
@@ -62,9 +60,10 @@ function plugin_env() {
         echo "Install it first or use 'plugin_env' without arguments inside the plugin directory"
         return
     fi
-    export PIP_PREFIX=$(plugins.info "${PLUGIN}" |grep "^Installation home:" |awk -F ': ' '{print $2;}')/local
-    TMPPROFILE=$(__get_plugin_env_profile_tmp_file)
-    plugin_wrapper --empty "${PLUGIN}" -- bash --rcfile "${TMPPROFILE}"
+    local PLUGIN_HOME=$(plugins.info "${PLUGIN}" |grep "^Installation home:" |awk -F ': ' '{print $2;}')
+    export PIP_PREFIX="${PLUGIN_HOME}/local"
+    TMPPROFILE=$(__get_plugin_env_profile_tmp_file ${PLUGIN})
+    env -i bash --rcfile "${TMPPROFILE}"
     rm -f "${TMPPROFILE}"
     unset PIP_PREFIX
 }

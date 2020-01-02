@@ -18,6 +18,8 @@ for var in ["MODULE", "MODULE_HOME", "MODULE_LOWERCASE", "MODULE_VERSION",
         os.environ[var] = os.environ[new_var]
 
 MFMODULE = os.environ["MFMODULE"]
+MFMODULE_HOME = os.environ["MFMODULE_HOME"]
+MFMODULE_RUNTIME_HOME = os.environ["MFMODULE_RUNTIME_HOME"]
 MFMODULE_LOWERCASE = os.environ["MFMODULE_LOWERCASE"]
 
 parser = argparse.ArgumentParser(description=DESCRIPTION)
@@ -34,6 +36,10 @@ parser.add_argument("--add-extra-dir-to-python-path", default=None, type=str,
                     help="add a custom dir to PYTHONPATH")
 parser.add_argument("--add-extra-dir-to-node-path", default=None, type=str,
                     help="add a custom dir to NODE_PATH")
+parser.add_argument("--bash-cmds", action="store_true",
+                    help="if set don't execute command but output bash cmds"
+                    "to be execute in a fresh empty shell"
+                    "(--empty and COMMAND_AND_ARGS ignored)")
 parser.add_argument("--plugins-base-dir", type=str, default=None,
                     help="can be use to set an alternate "
                     "plugins-base-dir, if not set the value of "
@@ -64,6 +70,32 @@ if layer_dir is None:
     print("ERROR: the plugin %s (full layer name: %s) does not seem to be "
           "installed/available" % (plugin, layer_name), file=sys.stderr)
     sys.exit(1)
+
+if args.bash_cmds:
+    print("export %s_CURRENT_PLUGIN_NAME=%s" % (MFMODULE, plugin))
+    print("export %s_CURRENT_PLUGIN_DIR=%s" % (MFMODULE, layer_dir))
+    print("export %s_CURRENT_PLUGIN_LABEL=%s" % (MFMODULE, layer_name))
+    print("source /etc/profile")
+    print("if test -f %s/.bash_profile; then source %s/.bash_profile; fi" %
+          (MFMODULE_RUNTIME_HOME, MFMODULE_RUNTIME_HOME))
+    print("source %s/share/interactive_profile" % MFMODULE_HOME)
+    if args.do_not_add_plugin_dir_to_python_path is not True:
+        print("field_prepend PYTHONPATH \"%s\"" % layer_dir)
+        print("export PYTHONPATH")
+    if args.add_extra_dir_to_python_path is not None:
+        print("field_prepend PYTHONPATH \"%s\"" %
+              args.add_extra_dir_to_python_path)
+        print("export PYTHONPATH")
+    if args.add_extra_dir_to_node_path is not None:
+        print("field_prepend NODE_PATH \"%s\"" %
+              args.add_extra_dir_to_node_path)
+        print("export NODE_PATH")
+    print("field_prepend LAYERAPI2_LAYERS_PATH \"%s\"" % layer_dir)
+    print("export LAYERAPI2_LAYERS_PATH")
+    print("layer_load %s >/dev/null" % layer_name)
+    if args.cwd:
+        print("cd %s" % layer_dir)
+    sys.exit(0)
 
 lw_args = ["--empty",
            "--extra-env-prefix=%s_CURRENT_PLUGIN" % MFMODULE,
