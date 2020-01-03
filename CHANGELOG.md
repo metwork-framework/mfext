@@ -16,6 +16,7 @@
 
 
 ### Bug Fixes
+- fix plugin_env behaviour in some corner cases
 - correct translation error from French (wrong use of false friend "eventually")
 - mfserv_wrapper now loads custom metwork profiles
 - fix systemd service
