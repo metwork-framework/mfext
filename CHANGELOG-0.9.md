@@ -1,11 +1,20 @@
 # release_0.9 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.9.4 (2020-01-02)
+
+- No interesting change
+
+
+## v0.9.3 (2020-01-02)
 
 ### New Features
 - update circus_autorestart_plugin
 
+
+### Bug Fixes
+- fix plugin_env behaviour in some corner cases
 
 
 
