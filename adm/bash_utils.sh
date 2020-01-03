@@ -62,7 +62,7 @@ function start_daemon() {
         exit 1
     fi
     # shellcheck disable=SC2086
-    nohup $1 >>"$2" 2>>"$3" &
+    log_proxy_wrapper --stdout "$2" --stderr "$3" -- nohup $1 &
 }
 # FIXME: inline this function
 
