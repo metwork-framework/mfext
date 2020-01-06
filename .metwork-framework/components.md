@@ -117,7 +117,7 @@
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libpng](http://www.libpng.org/) | 1.6.37 | scientific_core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
-| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 4.3.0a | scientific_core |
+| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
 | [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
