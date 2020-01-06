@@ -177,18 +177,32 @@ fi
 # A little kind of magic to deal with [log]/json_file=AUTO
 if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
     if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
-        export {{MFMODULE}}_LOG_JSON_FILE="null"
+        export MFLOG_JSON_FILE="null"
     else
-        export {{MFMODULE}}_LOG_JSON_FILE="{% raw %}${MFMODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
+        export MFLOG_JSON_FILE="{% raw %}${MFMODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
     fi
 fi
 
-# FIXME: we add this for a smooth migration =>  we can remove it after a few days (2019-02-04)
-export {{MFMODULE}}_LOG_DEFAULT_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MINIMAL_LEVEL{% raw %}}{% endraw %}"
+if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_NUMBER_OF_ROTATED_FILES{% raw %}:-}{% endraw %}" != ""; then
+    export LOGPROXY_ROTATED_FILES="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_NUMBER_OF_ROTATED_FILES{% raw %}:-}{% endraw %}"
+    export LOGPROXY_ROTATION_TIME="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MAX_AGE_BEFORE_ROTATION{% raw %}:-}{% endraw %}"
+    export LOGPROXY_ROTATION_SIZE="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MAX_SIZE_BEFORE_ROTATION{% raw %}:-}{% endraw %}"
+fi
 
 {% if MFMODULE != "MFEXT" %}
 export MFLOG_EXTRA_CONTEXT_FUNC="mflog_metwork_addon.extra_context"
 export MFLOG_JSON_ONLY_KEYS="plugin"
+export MFLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
+export MFLOG_JSON_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_JSON_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
+if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADMIN_FLAG{% raw %}:-}{% endraw %}" = "AUTO"; then
+    if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
+        export MFLOG_SYSLOG_ADDRESS="null"
+    else
+        export MFLOG_SYSLOG_ADDRESS="127.0.0.1:{% raw %}${{% endraw %}{{MFMODULE}}_JSONSYSLOG2ELASTICSEARCH_MFLOG_PORT{% raw %}:-}{% endraw %}"
+    fi
+fi
+export MFLOG_SYSLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADMIN_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
+export MFLOG_SYSLOG_FORMAT="json"
 {% endif %}
 
 {% block custom %}

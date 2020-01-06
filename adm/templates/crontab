@@ -1,10 +1,7 @@
 ##### BEGINNING OF METWORK {{MFMODULE}} MODULE CRONTAB #####
 
-# Logs rotation
-1 0 * * * {% raw %}{{RUNTIME_SUFFIX}}{% endraw %} {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --low --random-sleep=30 -- /usr/sbin/logrotate --force --verbose {% raw %}{{MFMODULE_RUNTIME_HOME}}{% endraw %}/tmp/config_auto/logrotate.conf --state={% raw %}{{MFMODULE_RUNTIME_HOME}}{% endraw %}/var/logrotate.state >{% raw %}{{MFMODULE_RUNTIME_HOME}}{% endraw %}/log/logrotate.last.log 2>&1
-
 # Autorestart
-*/5 * * * * {% raw %}{{RUNTIME_SUFFIX}}{% endraw %} {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --random-sleep=30 --timeout=800 -- {{MFMODULE_LOWERCASE}}.autorestart >>{% raw %}{{MFMODULE_RUNTIME_HOME}}{% endraw %}/log/autorestart.log 2>&1
+*/5 * * * * {% raw %}{{RUNTIME_SUFFIX}}{% endraw %} {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --random-sleep=30 --timeout=800 -- {{MFMODULE_LOWERCASE}}.autorestart 2>&1 |log_proxy {% raw %}{{MFMODULE_RUNTIME_HOME}}{% endraw %}/log/autorestart.log
 
 {% block custom %}
 {% endblock %}
