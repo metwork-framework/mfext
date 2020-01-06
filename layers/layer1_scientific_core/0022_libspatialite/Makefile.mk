@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=libspatialite
-export VERSION=4.3.0a
+export VERSION=5.0.0-beta0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=6b380b332c00da6f76f432b10a1a338c
+export CHECKSUM=c12b217bb8cce533dbf79d841aae466c
 DESCRIPTION=\
 SPATIALITE is an open source library intended to extend the SQLite core to \
 support fully fledged Spatial SQL capabilities. Using SQLite + SpatiaLite you \
