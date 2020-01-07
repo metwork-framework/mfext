@@ -15,3 +15,12 @@ sphinx-automodapi
 werkzeug
 nose
 black
+mkdocs
+mkdocs-add-number-plugin
+mkdocs-macros-plugin
+mkdocs-material
+pymdown-extensions
+-e git+https://github.com/metwork-framework/jinja2_shell_extension#egg=jinja2_shell_extension
+-e git+https://github.com/metwork-framework/jinja2_getenv_extension#egg=jinja2_getenv_extension
+-e git+https://github.com/metwork-framework/jinja2_fnmatch_extension#egg=jinja2_fnmatch_extension
+-e git+https://github.com/metwork-framework/jinja2_from_json_extension#egg=jinja2_from_json_extension
