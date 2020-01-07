@@ -205,6 +205,12 @@ export MFLOG_SYSLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADM
 export MFLOG_SYSLOG_FORMAT="json"
 {% endif %}
 
+{% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+# Temporary fix for not breaking some plugins compatibility in 0.10 release
+# FIXME: remove this for 0.11 release
+export MFCOM_HOME="{{MFEXT_HOME}}"
+{% endif %}
+
 {% block custom %}
 {% endblock %}
 
