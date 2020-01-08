@@ -17,7 +17,7 @@
 | [Sphinx](http://sphinx-doc.org/) | 2.3.1 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python2 |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
-| [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.15.5 | python2_devtools |
+| [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.16.0 | python2_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 0.16.0 | python3_devtools |
 | [ack](https://beyondgrep.com/) | 2.16-single-file | devtools |
 | [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
@@ -27,7 +27,7 @@
 | [astroid](https://github.com/PyCQA/astroid) | 1.6.6 | python2_devtools |
 | [astroid](https://github.com/PyCQA/astroid) | 2.3.3 | python3_devtools |
 | [atomicwrites](https://github.com/untitaker/python-atomicwrites) | 1.3.0 | python2_devtools |
-| [attrs](https://www.attrs.org/) | 19.1.0 | python2_devtools |
+| [attrs](https://www.attrs.org/) | 19.3.0 | python2_devtools |
 | [attrs](https://www.attrs.org/) | 19.3.0 | python3_devtools |
 | [autopep8](https://github.com/hhatto/autopep8) | 1.4.4 | python3 |
 | [backports.functools-lru-cache](https://github.com/jaraco/backports.functools_lru_cache) | 1.5 | python2 |
@@ -58,10 +58,10 @@
 | [configparser-extended](https://github.com/thefab/configparser_extended) | custom | python2 |
 | [configparser-extended](https://github.com/thefab/configparser_extended) | custom | python3 |
 | [configparser](https://github.com/jaraco/configparser/) | 3.7.4 | python2 |
-| [contextlib2](http://contextlib2.readthedocs.org) | 0.5.5 | python2_devtools |
+| [contextlib2](http://contextlib2.readthedocs.org) | 0.6.0.post1 | python2_devtools |
 | [cookiecutter-hooks](https://pypi.org/project/cookiecutter-hooks) | custom | python3 |
 | [cookiecutter](https://github.com/audreyr/cookiecutter) | custom | python3 |
-| [coverage](https://github.com/nedbat/coveragepy) | 4.5.4 | python2_devtools |
+| [coverage](https://github.com/nedbat/coveragepy) | 5.0.2 | python2_devtools |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.0.2 | python3_devtools |
 | [cronwrapper](https://github.com/thefab/cronwrapper) | custom | python3 |
 | [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
@@ -82,10 +82,9 @@
 | [envtpl](https://github.com/andreasjansson/envtpl) | custom | python3 |
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python2 |
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3 |
-| [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.3.1 | python2_devtools |
+| [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python2_devtools |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
-| [flake8-polyfill](https://gitlab.com/pycqa/flake8-polyfill) | 1.0.2 | python2_devtools |
-| [flake8](https://gitlab.com/pycqa/flake8) | 3.7.8 | python2_devtools |
+| [flake8](https://gitlab.com/pycqa/flake8) | 3.7.9 | python2_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.7.9 | python3_devtools |
 | [funcsigs](http://funcsigs.readthedocs.org) | 1.0.2 | python2_devtools |
 | [functools32](https://github.com/MiCHiLU/python-functools32) | 3.2.3.post2 | python2_devtools |
@@ -101,7 +100,7 @@
 | [idna](https://github.com/kjd/idna) | 2.8 | python2 |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
 | [imagesize](https://github.com/shibukawa/imagesize_py) | 1.2.0 | python3_devtools |
-| [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 0.19 | python2_devtools |
+| [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 1.3.0 | python2_devtools |
 | [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 1.3.0 | python3_devtools |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python2 |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
@@ -118,7 +117,7 @@
 | [jsonlog2elasticsearch](https://pypi.org/project/jsonlog2elasticsearch) | custom | monitoring |
 | [jsonsyslog2elasticsearch](https://pypi.org/project/jsonsyslog2elasticsearch) | custom | monitoring |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.3 | core |
-| [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.2 | python2_devtools |
+| [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python2_devtools |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
@@ -165,13 +164,13 @@
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
-| [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.4 | python2_devtools |
+| [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.5 | python2_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.7.0 | python3_devtools |
 | [pcre](http://www.pcre.org) | 8.36 | core |
 | [pep562](https://github.com/facelessuser/pep562) | 1.0 | python3_devtools |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
-| [pluggy](https://github.com/pytest-dev/pluggy) | 0.12.0 | python2_devtools |
+| [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python2_devtools |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis](http://postgis.refractions.net/) | 2.4.6 | scientific_core |
 | [postgresql](http://postgresql.org/) | 10.1 | scientific_core |
@@ -179,7 +178,7 @@
 | [proj](http://trac.osgeo.org/proj/) | 5.2.0 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python2 |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python3 |
-| [py](http://py.readthedocs.io/) | 1.8.0 | python2_devtools |
+| [py](http://py.readthedocs.io/) | 1.8.1 | python2_devtools |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python3_devtools |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python2_devtools |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python3 |
@@ -196,7 +195,7 @@
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 6.2.1 | python3_devtools |
 | [pyparsing](http://pyparsing.wikispaces.com/) | 2.4.0 | python2_core |
 | [pyparsing](http://pyparsing.wikispaces.com/) | 2.4.0 | python3_core |
-| [pytest](https://docs.pytest.org/en/latest/) | 4.6.5 | python2_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 4.6.9 | python2_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.3.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
@@ -222,7 +221,7 @@
 | [six](https://pypi.python.org/pypi/six/) | 1.12.0 | python2_core |
 | [six](https://pypi.python.org/pypi/six/) | 1.12.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
-| [snowballstemmer](https://github.com/snowballstem/snowball) | 1.9.0 | python2_devtools |
+| [snowballstemmer](https://github.com/snowballstem/snowball) | 2.0.0 | python2_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.0.0 | python3_devtools |
 | [sphinx-automodapi](http://astropy.org) | 0.12 | python3_devtools |
 | [sphinx-rtd-theme](https://github.com/rtfd/sphinx_rtd_theme/) | 0.4.3 | python3_devtools |
@@ -244,7 +243,7 @@
 | [termcolor](http://pypi.python.org/pypi/termcolor) | 1.1.0 | python3_devtools |
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python2 |
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
-| [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.0 | python2_devtools |
+| [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.3 | python2_devtools |
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.3 | python3_devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
 | [toml](https://github.com/uiri/toml) | 0.10.0 | python3_devtools |
@@ -257,7 +256,7 @@
 | [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
 | [virtualenv](https://virtualenv.pypa.io/) | 16.6.0 | python2_core |
 | [virtualenv](https://virtualenv.pypa.io/) | 16.6.0 | python3_core |
-| [wcwidth](https://github.com/jquast/wcwidth) | 0.1.7 | python2_devtools |
+| [wcwidth](https://github.com/jquast/wcwidth) | 0.1.8 | python2_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.1.8 | python3_devtools |
 | [wheel](https://github.com/pypa/wheel) | 0.33.4 | python2_core |
 | [wheel](https://github.com/pypa/wheel) | 0.33.4 | python3_core |
@@ -270,4 +269,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(269 components)*
+*(268 components)*
