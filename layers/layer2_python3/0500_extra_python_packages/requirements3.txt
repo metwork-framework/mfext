@@ -10,7 +10,7 @@ ConfigArgParse==0.14.0
 -e git+https://github.com/thefab/configparser_extended.git@a2b49f4249b9715370b6ab98dadc7bfa5ed022a6#egg=configparser_extended
 -e git+https://github.com/metwork-framework/cookiecutter.git@883bd169fa9252f08631a764f7264434e373463b#egg=cookiecutter
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@794e4454eb249046e16517281445d51c28cd6482#egg=cookiecutter_hooks
--e git+https://github.com/thefab/cronwrapper.git@7338452ddd206ce622384f8235018290bdabac3c#egg=cronwrapper
+-e git+https://github.com/metwork-framework/cronwrapper@e7c9a9829e4c099a14e3c79bd600a88e6e76c400#egg=cronwrapper
 -e git+https://github.com/Hawker65/deploycron.git@8fc7c4b8b072d7be7fb27517c9640bd1846b2ed9#egg=deploycron
 diskcache==3.1.1
 -e git+https://github.com/metwork-framework/envtpl.git@af95d6ca9535ea958dcac3a79a3fd139d9f828ff#egg=envtpl
