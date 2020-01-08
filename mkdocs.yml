@@ -14,6 +14,7 @@ plugins:
   - awesome-pages
 
 markdown_extensions:
+  - footnotes
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details

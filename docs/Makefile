@@ -8,6 +8,9 @@ all: $(CHANGELOGS_TARGETS) 850-components.md
 
 850-components.md: ../.metwork-framework/components.md
 	rm -f $@
-	echo "# Available components in all mfext layers (excepting add-ons)" >$@
+	echo "# Available components" >$@
+	echo >>$@
+	echo "!!! note" >>$@
+	echo "    Available components in all mfext layers (excepting add-ons)" >>$@
 	echo >>$@
 	cat $< >>$@
