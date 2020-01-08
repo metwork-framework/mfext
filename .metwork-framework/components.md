@@ -142,6 +142,7 @@
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
 | [mistune](https://github.com/lepture/mistune) | 0.8.4 | python3_devtools |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.1.0 | python3_devtools |
+| [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.2.0 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 0.3.3 | python3_devtools |
 | [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 4.6.0 | python3_devtools |
 | [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) | 0.2.1 | python3_devtools |
@@ -204,7 +205,7 @@
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python2 |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
-| [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.1.7 | python3_devtools |
+| [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.1.8 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python2 |
 | [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python3 |
@@ -269,4 +270,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(268 components)*
+*(269 components)*
