@@ -14,3 +14,7 @@ all: $(CHANGELOGS_TARGETS) 850-components.md
 	echo "    Available components in all mfext layers (excepting add-ons)" >>$@
 	echo >>$@
 	cat $< >>$@
+
+clean:
+	rm -f 900-changelogs/*.md
+	rm -f 850-components.md
