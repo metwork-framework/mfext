@@ -9,7 +9,9 @@ plugins:
   - mkdocs-add-number-plugin:
       strict_mode: False
       order: 2
-  - macros
+  - macros:
+      module_name: mkdocs_main
+  - awesome-pages
 
 markdown_extensions:
   - pymdownx.caret
