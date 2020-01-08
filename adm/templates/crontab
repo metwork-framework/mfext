@@ -1,7 +1,7 @@
 ##### BEGINNING OF METWORK {{MFMODULE}} MODULE CRONTAB #####
 
 # Autorestart
-*/5 * * * * {% raw %}{{RUNTIME_SUFFIX}}{% endraw %} {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --random-sleep=30 --timeout=800 -- {{MFMODULE_LOWERCASE}}.autorestart 2>&1 |log_proxy {% raw %}{{MFMODULE_RUNTIME_HOME}}{% endraw %}/log/autorestart.log
+*/5 * * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --random-sleep=30 --timeout=800 --log-capture-to={% raw %}{{MFMODULE_RUNTIME_HOME}}/log/autorestart.log{% endraw %} -- {{MFMODULE_LOWERCASE}}.autorestart
 
 {% block custom %}
 {% endblock %}

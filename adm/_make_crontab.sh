@@ -15,11 +15,8 @@ if ! test -s "${MFMODULE_HOME}/config/crontab"; then
     exit 0
 fi
 
-RUNTIME_SUFFIX=""
-if test "${MFMODULE_RUNTIME_SUFFIX:-}" != ""; then
-    RUNTIME_SUFFIX="export MFMODULE_RUNTIME_SUFFIX=${MFMODULE_RUNTIME_SUFFIX} ; "
-fi
-export RUNTIME_SUFFIX
+# FIXME: deprecated => remove for 0.11 release
+export RUNTIME_SUFFIX=""
 
 cat "${MFMODULE_HOME}/config/crontab" |envtpl --reduce-multi-blank-lines
 
