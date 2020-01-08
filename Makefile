@@ -22,6 +22,14 @@ clean::
 	cd adm && $(MAKE) clean
 	cd layers && $(MAKE) clean
 	cd bootstrap/src && $(MAKE) clean
+	rm -Rf _docs_build
 
 test::
 	cd adm && $(MAKE) test
+
+.PHONY: docs
+docs:
+	cd docs && make
+	rm -Rf _docs_build
+	layer_wrapper --layers=python3_devtools@mfext -- mkdocs build --strict --site-dir _docs_build
+	rm -Rf $(MFMODULE_HOME)/html_doc && cp -Rf _docs_build $(MFMODULE_HOME)/html_doc

@@ -86,3 +86,4 @@ doc/README.md
 layers/layer9_python3_misc/0100_mfutil/__pycache__/
 layers/layer9_python3_misc/0100_mfutil/fastentrypoints.pyc
 __pycache__
+_docs_build
