@@ -14,7 +14,7 @@ For example, here are some **layers** hosted on this repository:
 - `nodejs` which contains only one package: `nodejs`
 - [...]
 
-You can inspect installed layers with the `layers` utility.
+You can inspect installed layers with the {{link_utility("layers")}} utility.
 
 !!! note
     If you want more details about the "layers system", please read the [corresponding documentation about layerapi2](../200-layerapi2).
@@ -24,7 +24,7 @@ You can inspect installed layers with the `layers` utility.
 Most of theses **components** are not
 maintained by the MetWork Framework team. For example, you will find inside a recent [Python](http://www.python.org) interpreter or some well known libraries like [CURL](https://curl.haxx.se/) or [GLIB2](https://developer.gnome.org/glib/).
 
-You can inspect installed components with the `components` utility.
+You can inspect installed components with the {{link_utility("components")}} utility.
 
 ## Add-ons
 

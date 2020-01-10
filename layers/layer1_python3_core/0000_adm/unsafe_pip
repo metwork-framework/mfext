@@ -1,6 +1,20 @@
 #!/bin/bash
 
-# pip wrapper when you are annoyed with internal https proxies
-# WARNING: this is not safe (you can have a man-in-the-middle attack)
+function usage() {
+    echo "usage: unsafe_pip PIP_ARGUMENTS"
+    echo "  => this is a simple pip wrapper to use when you are annoyed with"
+    echo "     man-in-the-middle https proxies"
+    echo "  => use it like standard pip cli tool"
+    echo "  => WARNING: it adds some unsafe options"
+}
+
+if test "${1:-}" = "--help"; then
+    usage
+    exit 0
+fi
+if test "${1:-}" = ""; then
+    usage
+    exit 1
+fi
 
 exec pip --timeout=60 --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host downloads.sourceforge.net --disable-pip-version-check "$@"
