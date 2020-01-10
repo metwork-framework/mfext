@@ -5,12 +5,12 @@ theme:
 repo_url: https://github.com/metwork-framework/mfext
 repo_name: 'GitHub'
 plugins:
+  - macros:
+      module_name: mkdocs_main
   - search
   - mkdocs-add-number-plugin:
       strict_mode: False
       order: 2
-  - macros:
-      module_name: mkdocs_main
   - awesome-pages
 
 markdown_extensions:
@@ -29,3 +29,4 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - admonition
+  - attr_list

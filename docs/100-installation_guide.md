@@ -145,7 +145,7 @@ zypper install metwork-mfext
 
 
 
-### Full installation (all mfext layers, except addons)
+### Full installation (all mfext layers, except [add-ons]({{addons}}))
 
 
 If you prefer a full installation (as `root` user):
@@ -220,10 +220,10 @@ zypper install metwork-mfext-layer-nodejs
 zypper install metwork-mfext-layer-java
 ```
 
-### Optional mfext layers (from mfext add-ons)
+### Optional mfext layers (from mfext [add-ons]({{addons}}))
 
-You can also install some optional layers (provided by some mfext add-ons)
-in the same way and with the same repository (for official add-ons).
+You can also install some optional layers (provided by some mfext [add-ons]({{addons}}))
+in the same way and with the same repository (for official [add-ons]({{addons}})).
 
 For example (please refer to corresponding add-on documentation)
 

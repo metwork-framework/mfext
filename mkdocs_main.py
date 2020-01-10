@@ -5,9 +5,39 @@ from jinja2_from_json_extension import from_json
 
 
 def define_env(env):
+
+    # ***** Variables *****
     env.variables['components'] = "../850-components"
     env.variables['installation_guide'] = "../100-installation_guide"
+    env.variables['addons'] = "../840-addons"
+
+    # ***** Filters *****
     env.filters["shell"] = shell
     env.filters["getenv"] = getenv
     env.filters["fnmatch"] = _fnmatch
     env.filters["from_json"] = from_json
+
+    # ***** Macros *****
+
+    @env.macro
+    def declare_utility(name, cmd=None, level=3, custom_anchor=None):
+        res = []
+        anchor = ""
+        if custom_anchor != "AUTO":
+            anchor = "{: #%s}" % \
+                (custom_anchor if custom_anchor is not None else name)
+        _cmd = cmd
+        if _cmd is None:
+            _cmd = "%s --help" % name
+        res.append("%s %s %s" % ('#' * level, name, anchor))
+        res.append("")
+        res.append("```console")
+        res.append("$ %s" % _cmd)
+        res.append(shell(None, _cmd))
+        res.append("```")
+        res.append("")
+        return "\n".join(res)
+
+    @env.macro
+    def link_utility(name, number=750, page="utilities"):
+        return "[`%s`](../%i-%s#%s)" % (name, number, page, name)
