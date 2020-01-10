@@ -16,6 +16,9 @@ For example, here are some **layers** hosted on this repository:
 
 You can inspect installed layers with the `layers` utility.
 
+!!! note
+    If you want more details about the "layers system", please read the [corresponding documentation about layerapi2](../200-layerapi2).
+
 ## Components
 
 Most of theses **components** are not
@@ -29,14 +32,6 @@ This repository holds a lot of **layers** but you will also find extra **layers*
 repositories. Let's mention in particular [mfextaddon_scientific](https://github.com/metwork-framework/mfextaddon_scientific) which provides some **layers** with a lot of geospatial and
 scientific tools.
 
-An add-on to **MFEXT** can be maintained by anyone and can be hosted anywhere. But below, you
-will find officially maintained **MFEXT addons**:
+An add-on to **MFEXT** can be maintained by anyone and can be hosted anywhere. But there are also some *officially maintained* add-ons and you can use them exactly in the same way with the same level of quality/management.
 
-| Addon | Description |
-| --- | --- |
-| [mfextaddon_scientific](https://github.com/metwork-framework/mfextaddon_scientific) | mfext Add-on for scientific libraries and tools |
-| [mfextaddon_python3_ia](https://github.com/metwork-framework/mfextaddon_python3_ia) | mfext Add-on for deep learning/IA libraries and tools for Python3 |
-| [mfextaddon_mapserver](https://github.com/metwork-framework/mfextaddon_mapserver) | mfext Add-on which provides [Mapserver software](https://mapserver.org) and libraries around ([mapserverapi](https://github.com/metwork-framework/mapserverapi)) and [mapserverapi_python](https://github.com/metwork-framework/mapserverapi_python)) |
-| [mfextaddon_vim](https://github.com/metwork-framework/mfextaddon_vim) | mfext Add-on which provides an opinionated vim editor (including configuration) for use in MetWork Framework env |
-
-An add-on can contain one or several extra **layers**.
+You will find more details about add-ons (**and a list of them**) in the [dedicated documentation page]({{addons}}).
