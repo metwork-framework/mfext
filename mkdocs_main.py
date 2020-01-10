@@ -20,7 +20,8 @@ def define_env(env):
     # ***** Macros *****
 
     @env.macro
-    def declare_utility(name, cmd=None, level=3, custom_anchor=None):
+    def declare_utility(name, cmd=None, level=3, custom_anchor=None,
+                        layers="default@mfext"):
         res = []
         anchor = ""
         if custom_anchor != "AUTO":
@@ -29,6 +30,7 @@ def define_env(env):
         _cmd = cmd
         if _cmd is None:
             _cmd = "%s --help" % name
+        _cmd = "layer_wrapper --layers=%s -- %s" % (layers, _cmd)
         res.append("%s %s %s" % ('#' * level, name, anchor))
         res.append("")
         res.append("```console")
