@@ -17,7 +17,7 @@ TARGET_LIBS_BEFORE:=$(addprefix $(MFEXT_HOME)/lib/,$(LIBS_BEFORE))
 TEMPLATES=$(shell find templates ! -type d)
 TARGET_TEMPLATES:=$(addprefix $(MFEXT_HOME)/share/,$(TEMPLATES))
 
-all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile $(PREFIX)/lib/mfext/__init__.py $(PREFIX)/lib/mfext/plugins_common.py
+all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile $(PREFIX)/lib/mfext/__init__.py $(PREFIX)/lib/mfext/plugins_common.py $(PREFIX)/lib/mfext/jsonsyslog2es_metwork_addon.py
 
 before_layers: $(TARGET_BINS_BEFORE) $(TARGET_SHARES_BEFORE) $(TARGET_LIBS_BEFORE)
 
@@ -33,4 +33,7 @@ $(PREFIX)/lib/mfext/__init__.py:
 	touch $@
 
 $(PREFIX)/lib/mfext/plugins_common.py: plugins_common.py
+	cp -f $< $@
+
+$(PREFIX)/lib/mfext/jsonsyslog2es_metwork_addon.py: jsonsyslog2es_metwork_addon.py
 	cp -f $< $@
