@@ -17,7 +17,8 @@ LOGGER = getLogger("telegraf_collector_metwork_module")
 MFMODULE = os.environ['MFMODULE']
 CMD = "list_metwork_processes.py --output-format=json --include-current-family"
 MONITORING_CMDLINE_PATTERNS = ['*telegraf*', '*list_metwork_processes*',
-                               '*jsonlog2elasticsearch*']
+                               '*jsonlog2elasticsearch*',
+                               '*jsonsyslog2elasticsearch*']
 IS_MONITORING_MODULE = (MFMODULE in ['MFSYSMON', 'MFADMIN'])
 
 
