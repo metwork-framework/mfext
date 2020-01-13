@@ -121,6 +121,7 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [m2r](https://github.com/miyakogi/m2r) | 0.2.1 | python3_devtools |
+| [Mako](https://www.makotemplates.org/) | 1.1.0 | python3_devtools |
 | [Markdown](https://Python-Markdown.github.io/) | 3.1.1 | python3_devtools |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python2 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
@@ -158,6 +159,7 @@
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.5 | python2_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.7.0 | python3_devtools |
 | [pcre](http://www.pcre.org) | 8.36 | core |
+| [pdoc3](https://pdoc3.github.io/pdoc/) | 0.7.2 | python3_devtools |
 | [pep562](https://github.com/facelessuser/pep562) | 1.0 | python3_devtools |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
@@ -270,4 +272,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(269 components)*
+*(271 components)*

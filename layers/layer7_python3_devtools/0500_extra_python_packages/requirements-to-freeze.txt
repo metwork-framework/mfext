@@ -16,6 +16,7 @@ werkzeug
 nose
 black
 mkdocs
+pdoc3
 mkdocs-add-number-plugin
 mkdocs-macros-plugin
 mkdocs-awesome-pages-plugin
