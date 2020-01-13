@@ -83,6 +83,13 @@ doc:: predoc
 	if test -d extra_layers; then cd extra_layers && $(MAKE) doc; fi
 	if test -d doc; then cd doc && layer_wrapper --layers=devtools@mfext,-python3@$(MFMODULE_LOWERCASE) -- make html && rm -Rf $(MFMODULE_HOME)/html_doc && cp -Rf _build/html $(MFMODULE_HOME)/html_doc; fi
 
+.PHONY: docs
+docs::
+	cd docs && make
+	rm -Rf _docs_build
+	layer_wrapper --layers=python3_devtools@mfext -- mkdocs build --strict --site-dir _docs_build
+	rm -Rf $(MFMODULE_HOME)/html_doc && cp -Rf _docs_build $(MFMODULE_HOME)/html_doc
+
 predoc:: ;
 
 test::
