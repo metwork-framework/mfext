@@ -12,10 +12,10 @@ all: $(CHANGELOGS_TARGETS) 850-components.md
 	rm -f $@
 	echo "# Available components" >$@
 	echo >>$@
-	if test "${MFMODULE}" = "MFEXT"; then echo "!!! note" >>$@; echo "    Available components in all mfext layers **(excepting add-ons)**" >>$@ ; echo >>$@ ; echo "    :arrow_right: **you will find plenty of other components in [addons]({{addons}}) (even some officially maintained)**" >>$@ ; fi
+	if test "${MFMODULE}" = "MFEXT" -a "${MFEXT_ADDON}" != "1"; then echo "!!! note" >>$@; echo "    Available components in all mfext layers **(excepting add-ons)**" >>$@ ; echo >>$@ ; echo "    :arrow_right: **you will find plenty of other components in [addons]({{addons}}) (even some officially maintained)**" >>$@ ; fi
 	cat $< >>$@
 	echo >>$@
-	if test "${MFMODULE}" = "MFEXT"; then echo "!!! note" >>$@; echo "    Available components in all mfext layers **(excepting add-ons)**" >>$@ ; echo >>$@ ; echo "    :arrow_right: **you will find plenty of other components in [addons]({{addons}}) (even some officially maintained)**" >>$@ ; fi
+	if test "${MFMODULE}" = "MFEXT" -a "${MFEXT_ADDON}" != "1"; then echo "!!! note" >>$@; echo "    Available components in all mfext layers **(excepting add-ons)**" >>$@ ; echo >>$@ ; echo "    :arrow_right: **you will find plenty of other components in [addons]({{addons}}) (even some officially maintained)**" >>$@ ; fi
 
 clean:
 	rm -f 900-changelogs/*.md
