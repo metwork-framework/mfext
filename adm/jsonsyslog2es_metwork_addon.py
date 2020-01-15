@@ -9,8 +9,9 @@ def transform_func(dict_object):
     if "name" in dict_object:
         # FIXME: don't hardcode elasticsearch here
         # But it's difficult to block elasticsearch logger where it's used only
-        # in jsonlog2elasticsearch
-        if dict_object['name'] in ("elasticsearch", "jsonlog2elasticsearch"):
+        # in jsonlog2elasticsearch/jsonsyslog2elasticsearch
+        if dict_object['name'] in ("elasticsearch", "jsonlog2elasticsearch",
+                                   "jsonsyslog2elasticsearch"):
             return None
     if "module" not in dict_object:
         dict_object["module"] = MFMODULE

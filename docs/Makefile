@@ -1,0 +1,22 @@
+include ../adm/root.mk
+
+CHANGELOGS_SOURCES=$(shell cd .. && ls CHANGELOG-*.md 2>/dev/null)
+CHANGELOGS_TARGETS=$(addprefix 900-changelogs/, $(CHANGELOGS_SOURCES))
+
+all: $(CHANGELOGS_TARGETS) 850-components.md
+
+900-changelogs/%: ../%
+	cat $< |sed 's/^# \(.*\) CHANGELOG$$/# \1/g' >$@
+
+850-components.md: ../.metwork-framework/components.md
+	rm -f $@
+	echo "# Available components" >$@
+	echo >>$@
+	if test "${MFMODULE}" = "MFEXT" -a "${MFEXT_ADDON}" != "1"; then echo "!!! note" >>$@; echo "    Available components in all mfext layers **(excepting add-ons)**" >>$@ ; echo >>$@ ; echo "    :arrow_right: **you will find plenty of other components in [addons]({{addons}}) (even some officially maintained)**" >>$@ ; fi
+	cat $< >>$@
+	echo >>$@
+	if test "${MFMODULE}" = "MFEXT" -a "${MFEXT_ADDON}" != "1"; then echo "!!! note" >>$@; echo "    Available components in all mfext layers **(excepting add-ons)**" >>$@ ; echo >>$@ ; echo "    :arrow_right: **you will find plenty of other components in [addons]({{addons}}) (even some officially maintained)**" >>$@ ; fi
+
+clean:
+	rm -f 900-changelogs/*.md
+	rm -f 850-components.md

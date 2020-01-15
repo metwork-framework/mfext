@@ -1,5 +1,12 @@
 #!/bin/bash
 
+{% if MFMODULE != "MFADMIN" %}
+ADMIN_HOSTNAME=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
+ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
+NGINX_FLAG=$(env |grep "^{{MFMODULE}}_NGINX_FLAG=" |awk -F '=' '{print $2;}')
+ADMIN_SEND_NGINX_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_NGINX_LOGS=" |awk -F '=' '{print $2;}')
+{% endif %}
+
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" = "--help"; then
@@ -61,6 +68,21 @@ if hash crontab 2>/dev/null; then
 else
     echo_warning "(no crontab installed)"
 fi
+
+{% if MFMODULE != "MFADMIN" %}
+if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
+    if test "${ADMIN_HOSTNAME}" != "null"; then
+        circus_status_watcher.sh mflogs2mfadmin || RES=1
+    fi
+fi
+if test "${ADMIN_SEND_NGINX_LOGS}" = "1"; then
+    if test "${ADMIN_HOSTNAME}" != "null"; then
+        if test "${NGINX_FLAG}" = "1"; then
+            circus_status_watcher.sh nginxlogs2mfadmin || RES=1
+        fi
+    fi
+fi
+{% endif %}
 
 {% block custom %}
 # Can be replaced by mfxxx.status.custom
