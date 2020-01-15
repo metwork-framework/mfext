@@ -154,6 +154,7 @@
 | [openjdk](https://jdk.java.net) | 11.0.2 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.1.2 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
+| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.5 | python2_devtools |
@@ -272,4 +273,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(271 components)*
+*(272 components)*
