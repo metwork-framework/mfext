@@ -3,17 +3,16 @@
 
 import argparse
 import codecs
-from os import environ
-from configparser_extended import ExtendedConfigParser
+from opinionated_configparser import OpinionatedConfigParser
 
 
 def print_file(parser):
-    for s in parser._sections:
+    for s in parser.sections():
         print(s)
 
 
 def print_section(parser, section):
-    for o in parser.options(section, strict=True, cfg_ind=True):
+    for o in parser.options(section):
         print(o)
 
 
@@ -45,12 +44,10 @@ def main():
     args = arg_parser.parse_args()
 
     if(args.config):
-        parser = ExtendedConfigParser(config="NULL", strict=False,
-                                      inheritance='im')
+        parser = OpinionatedConfigParser(use_envtpl=True,
+                                         configuration_name=args.config)
     else:
-        parser = ExtendedConfigParser(
-            config=environ.get("SYNCONFIG", "GENERIC"), strict=False,
-            inheritance='im')
+        parser = OpinionatedConfigParser(use_envtpl=True)
     data = codecs.open(str(args.path), "r", "utf-8")
     parser.read_file(data)
 

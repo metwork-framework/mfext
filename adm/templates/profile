@@ -145,12 +145,6 @@ fi
             fi
         fi
     done
-    if test -f "/etc/metwork.config.d/{{MFMODULE|lower}}/config.ini"; then
-        if ! test -L "${MFMODULE_RUNTIME_HOME}/config/config.ini"; then
-            rm -f "${MFMODULE_RUNTIME_HOME}/config/config.ini"
-            ln -s "/etc/metwork.config.d/{{MFMODULE|lower}}/config.ini" "${MFMODULE_RUNTIME_HOME}/config/config.ini"
-        fi
-    fi
     if ! test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
         if test -f ${MFMODULE_HOME}/config/config.ini; then
             ${MFEXT_HOME}/bin/_prepare_config.py >${MFMODULE_RUNTIME_HOME}/config/config.ini 2>&1
@@ -168,8 +162,6 @@ fi
     fi
     if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
         {% include "nethard_profile" %}
-        {% set FORCED_MODULE_HOME = "${MFMODULE_HOME}" %}
-        {% set FORCED_MODULE = "${MFMODULE}" %}
         {% include "config_profile" %}
     fi
 {% endif %}

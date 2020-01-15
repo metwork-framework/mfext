@@ -153,6 +153,7 @@
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
+| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.5 | python2_devtools |
