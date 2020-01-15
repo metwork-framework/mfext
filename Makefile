@@ -22,6 +22,7 @@ clean::
 	cd adm && $(MAKE) clean
 	cd layers && $(MAKE) clean
 	cd bootstrap/src && $(MAKE) clean
+	rm -Rf _docs_build
 
 test::
 	cd adm && $(MAKE) test

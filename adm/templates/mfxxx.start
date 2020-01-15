@@ -6,6 +6,8 @@ unset METWORK_LIST_PROCESSES_FORCE
 {% if MFMODULE != "MFADMIN" %}
 ADMIN_HOSTNAME=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME=" |awk -F '=' '{print $2;}')
 ADMIN_SEND_MFLOG_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_MFLOG_LOGS=" |awk -F '=' '{print $2;}')
+NGINX_FLAG=$(env |grep "^{{MFMODULE}}_NGINX_FLAG=" |awk -F '=' '{print $2;}')
+ADMIN_SEND_NGINX_LOGS=$(env |grep "^{{MFMODULE}}_ADMIN_SEND_NGINX_LOGS=" |awk -F '=' '{print $2;}')
 {% endif %}
 
 . ${MFEXT_HOME}/lib/bash_utils.sh
@@ -95,16 +97,6 @@ echo "  "
 
 echo STARTING >${MFMODULE_RUNTIME_HOME}/var/status
 
-if test -f ${MFMODULE_HOME}/config/logrotate.conf; then
-    echo -n "- Generating logrotate.conf..."
-    echo_running
-    cat ${MFMODULE_HOME}/config/logrotate.conf |envtpl --reduce-multi-blank-lines >${MFMODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf
-    if test -f ${MFMODULE_RUNTIME_HOME}/tmp/config_auto/logrotate.conf; then
-        echo_ok
-    else
-        echo_nok
-    fi
-fi
 {% block custom_before_circus %}
 # Can be replaced by mfxxx.start.custom
 {% endblock %}
@@ -153,7 +145,14 @@ if test "${RES}" = "0"; then
     {% if MFMODULE != "MFADMIN" %}
     if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
         if test "${ADMIN_HOSTNAME}" != "null"; then
-            _circus_wait_watcher_started.sh mflog2mfadmin || RES=1
+            _circus_wait_watcher_started.sh mflogs2mfadmin || RES=1
+        fi
+    fi
+    if test "${ADMIN_SEND_NGINX_LOGS}" = "1"; then
+        if test "${ADMIN_HOSTNAME}" != "null"; then
+            if test "${NGINX_FLAG}" = "1"; then
+                _circus_wait_watcher_started.sh nginxlogs2mfadmin || RES=1
+            fi
         fi
     fi
     {% endif %}

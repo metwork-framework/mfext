@@ -1,5 +1,5 @@
 -e git+https://github.com/thefab/configparser_extended.git#egg=configparser_extended
--e git+https://github.com/thefab/cronwrapper.git#egg=cronwrapper
+-e git+https://github.com/metwork-framework/cronwrapper#egg=cronwrapper
 -e git+https://github.com/Hawker65/deploycron.git#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git#egg=envtpl
 -e git+https://github.com/thefab/pystatsd.git#egg=statsd

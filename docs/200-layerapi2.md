@@ -1,4 +1,3 @@
-.. index:: layerapi2
 # Layerapi2
 
 ## General
@@ -8,7 +7,7 @@ the heart of `mfext` layers system.
 
 You should read the [layerapi2 reference documentation](https://github.com/metwork-framework/layerapi2/blob/master/README.md).
 
-## How we use layerapi2 in MetWork
+## How we use layerapi2 in MetWork?
 
 ### Layer names
 
@@ -46,7 +45,7 @@ loaded by default (have a look at its `.layerapi2_dependencies` file).
 
 In `mfserv`, `mfdata` and `mfbase` modules, we have some other special layers:
 
-    `plugin_foo@module_name_in_lowercase`
+    plugin_foo@module_name_in_lowercase
 
 For user-provided plugins (which are regular layers but with a custom "layer_home" (see next
 paragraph).
@@ -114,23 +113,27 @@ Have a look at [layerapi2 reference documentation](https://github.com/metwork-fr
 
 #### layers
 
-```none
+```console
+$ layers --help
 {{ "layers --help"|shell }}
 ```
 
 #### is_layer_installed, is_layer_loaded
 
-```none
+```console
+$ is_layer_installed --help
 {{ "is_layer_installed --help"|shell }}
 ```
 
-```none
+```console
+$ is_layer_loaded --help
 {{ "is_layer_loaded --help"|shell }}
 ```
 
 #### layer_wrapper
 
-```none
+```console
+$ layer_wrapper --help
 {{ "layer_wrapper --help"|shell }}
 ```
 

@@ -2,6 +2,5 @@
 
 . {{MFMODULE_HOME}}/share/profile
 
-export NOINTERACTIVE=1
-
-layer_wrapper --layers=python3@mfext -- cronwrap.py "$@"
+# shellcheck disable=SC2068
+exec cronwrap.py $@
