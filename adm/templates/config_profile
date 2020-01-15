@@ -1,28 +1,26 @@
 UUID=`cat /proc/sys/kernel/random/uuid |sed 's/-//g'`
 
-# On exporte des variables d'environnement a partir de la config
-SUFFIX=`echo {{FORCED_MODULE}} | tr '[:upper:]' '[:lower:]'`
-if test -f {{FORCED_MODULE_HOME}}/config/config.ini; then
-    cache_get ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache 1440 >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.load.${UUID}
-    if test -s ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.load.${UUID}; then
+if test -f {{MFMODULE_HOME}}/config/config.ini; then
+    cache_get ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache 1440 >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.load.${UUID}
+    if test -s ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.load.${UUID}; then
         # Un cache est dispo, on l'utiliser
-        . ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.load.${UUID}
+        . ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.load.${UUID}
     else
         # Pas de cache, on recalcule
-        CONF_FILE={{FORCED_MODULE_HOME}}/config/config.ini
+        CONF_FILE={{MFMODULE_HOME}}/config/config.ini
         if test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
             CONF_FILE=${MFMODULE_RUNTIME_HOME}/config/config.ini
         fi
-        __ini_to_env.py ${CONF_FILE} {{FORCED_MODULE}} >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID}
-        N=`grep dns_error ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID} |wc -l`
+        _ini_to_env.py --prefix={{MFMODULE}} --resolve --legacy-env --generation-time "{{MFMODULE_HOME}}/config/config.ini" "${MFMODULE_RUNTIME_HOME}/config/config.ini" "/etc/metwork.config.d/mfserv/config.ini" >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID}
+        N=`grep dns_error ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID} |wc -l`
         if test ${N} -gt 0; then
             # si l'erreur DNS est lie a une modification de conf, on la prend quand meme
-            if test -f "/etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"; then
-                EXTRA_NEWER="-newer /etc/metwork.config.d/${MFMODULE_LOWERCASE}/config.ini"
+            if test -f "/etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/config.ini"; then
+                EXTRA_NEWER="-newer /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/config.ini"
             fi
-            N2=`find ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache -newer /etc/hosts -newer /etc/resolv.conf -newer /etc/synopsis.config -newer /etc/nsswitch.conf -newer ${MFMODULE_HOME}/config/advanced_config.ini -newer {{MFEXT_HOME}}/config/advanced_config.ini ${EXTRA_NEWER} -newer ${MFMODULE_HOME}/config/config.ini -newer {{MFEXT_HOME}}/config/config.ini 2>/dev/null |wc -l`
+            N2=`find ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache -newer /etc/hosts -newer /etc/resolv.conf -newer /etc/synopsis.config -newer /etc/nsswitch.conf -newer ${MFMODULE_HOME}/config/advanced_config.ini -newer {{MFEXT_HOME}}/config/advanced_config.ini ${EXTRA_NEWER} -newer ${MFMODULE_HOME}/config/config.ini -newer {{MFEXT_HOME}}/config/config.ini 2>/dev/null |wc -l`
             if test ${N2} -eq 0; then
-                rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache >/dev/null 2>&1
+                rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache >/dev/null 2>&1
                 echo "ERROR: dns error found and we can't use the old cache value"
                 export PROFILE_ERROR=1
             else
@@ -30,14 +28,14 @@ if test -f {{FORCED_MODULE_HOME}}/config/config.ini; then
                 export PROFILE_ERROR=1
             fi
         fi
-        if test ${N} -gt 0 -a -s ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache; then
+        if test ${N} -gt 0 -a -s ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache; then
             # il y a des erreurs DNS :-(, on va utiliser l'ancien fichier de cache
-            . ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache
+            . ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache
         else
-           . ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID}
-           cache_set_from_file ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID}
-           rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.write.${UUID}
+           . ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID}
+           cache_set_from_file ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID}
+           rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID}
         fi
     fi
-    rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_${SUFFIX}.cache.load.${UUID}
+    rm -f ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.load.${UUID}
 fi

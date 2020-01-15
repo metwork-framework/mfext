@@ -23,6 +23,7 @@ jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@40802be13aa14b3c94518fcc90295ac88997a1e5#egg=mflog
 netifaces==0.10.9
+-e git+https://github.com/metwork-framework/opinionated_configparser.git@f8c33753bd8f86c109004486ede620d33b8dc0de#egg=opinionated_configparser
 poyo==0.4.2
 psutil==5.6.3
 pycodestyle==2.5.0
