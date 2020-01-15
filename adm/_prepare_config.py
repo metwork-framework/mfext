@@ -5,6 +5,7 @@ import os
 
 
 HOME = os.environ['MFMODULE_HOME']
+MFMODULE = os.environ['MFMODULE']
 
 if __name__ == '__main__':
 
@@ -13,12 +14,16 @@ if __name__ == '__main__':
         lines = f.readlines()
 
     print("# THIS FILE OVERRIDES %s CONFIGURATION FILE" % conf_file)
-    print("# DON'T CHANGE ANYTHING IN %s FILE" % conf_file)
-    print("# DON'T REMOVE THE INCLUDE_config.ini LINE BELLOW")
-    print("# => YOU CAN JUST SET THE KEY YOU WANT TO OVERRIDE "
-          "BY REMOVING COMMENT")
-    print("#    BEFORE THE KEY NAME AND BY CHANGING ITS VALUE HERE")
-    print("[INCLUDE_config.ini]")
+    print("# DON'T CHANGE ANYTHING IN %s FILE, NEVER" % conf_file)
+    print("#")
+    print("# => to set a new value for a key, just uncomment it in the "
+          "     current file and change its value")
+    print("#")
+    print("# Note: this file itself can be overriden by: ")
+    print("#       /etc/metwork.config.d/%s/config.ini" % MFMODULE)
+    print("#       (if exists)")
+    print("# Read the configuration head in reference documentation for "
+          "details")
     print("")
     for line in lines:
         tmp = line.strip()
