@@ -2,11 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=nodejs
-export VERSION=10.16.0
+export VERSION=10.16.3
 export EXTENSION=tar.xz
 export CHECKTYPE=MD5
-export CHECKSUM=c8222839f80ea586aa24d1ee792e1d93
-export ARCHIVE=node-v10.16.0-linux-x64.tar.xz
+export CHECKSUM=9a539e6a9c00539a4ce44b71837cb112
 DESCRIPTION=\
 Node.js is a JavaScript runtime built on Chrome s V8 JavaScript engine. \
 npm, provided with Node.js, is a software registry used to share and borrow packages, \

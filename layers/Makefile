@@ -20,7 +20,7 @@ download_archive:
 	rm -Rf download_archive ; mkdir download_archive
 	@for SUBDIR in $(SUBDIRS); do OLDPWD=`pwd`; cd $$SUBDIR || exit 1; $(MAKE) download_archive || exit 1; cd $${OLDPWD}; done
 
-makefiles: python2_layer.mk python3_layer.mk $(MFEXT_HOME)/share/python3_layer.mk $(MFEXT_HOME)/share/python2_layer.mk $(MFEXT_HOME)/share/package.mk $(MFEXT_HOME)/share/layer.mk $(MFEXT_HOME)/share/Makefile.standard $(MFEXT_HOME)/share/core_layer.mk $(MFEXT_HOME)/share/simple_layer.mk $(MFEXT_HOME)/share/layer_wrapper.mk
+makefiles: python2_layer.mk python3_layer.mk $(MFEXT_HOME)/share/python3_layer.mk $(MFEXT_HOME)/share/python2_layer.mk python2_layer_scl.mk python3_layer_scl.mk $(MFEXT_HOME)/share/python3_layer_scl.mk $(MFEXT_HOME)/share/python2_layer_scl.mk $(MFEXT_HOME)/share/package.mk $(MFEXT_HOME)/share/layer.mk $(MFEXT_HOME)/share/Makefile.standard $(MFEXT_HOME)/share/core_layer.mk $(MFEXT_HOME)/share/simple_layer.mk $(MFEXT_HOME)/share/layer_wrapper.mk
 
 helpers: $(MFEXT_HOME)/bin/_uncompress_helper.sh $(MFEXT_HOME)/bin/_download_helper.sh $(MFEXT_HOME)/bin/_checksum_helper.sh $(MFEXT_HOME)/bin/_pip_package_to_yaml.sh
 
@@ -34,6 +34,18 @@ $(MFEXT_HOME)/share/python3_layer.mk: python3_layer.mk
 	cp -f $< $@
 
 $(MFEXT_HOME)/share/python2_layer.mk: python2_layer.mk
+	cp -f $< $@
+
+python2_layer_scl.mk: python_layer_scl.mk
+	cat python_layer_scl.mk |sed 's/PYTHONMAJORVERSION/2/g' >python2_layer_scl.mk
+
+python3_layer_scl.mk: python_layer_scl.mk
+	cat python_layer_scl.mk |sed 's/PYTHONMAJORVERSION/3/g' >python3_layer_scl.mk
+
+$(MFEXT_HOME)/share/python3_layer_scl.mk: python3_layer_scl.mk
+	cp -f $< $@
+
+$(MFEXT_HOME)/share/python2_layer_scl.mk: python2_layer_scl.mk
 	cp -f $< $@
 
 layerdir:
