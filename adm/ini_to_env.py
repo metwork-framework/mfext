@@ -9,7 +9,7 @@ from mfutil import get_ipv4_for_hostname
 from opinionated_configparser import OpinionatedConfigParser
 
 
-def legacy_env(val):
+def _legacy_env(val):
     # Legacy env vars
     # (the recommended way is to use envtpl/jinja2 placeholders)
     if re.match("^.*@@@[A-Z0-9_][A-Z0-9_]*@@@.*$", val):
@@ -18,7 +18,7 @@ def legacy_env(val):
     return val
 
 
-def legacy_file(val, directory):
+def _legacy_file(val, directory):
     if directory is None:
         print(
             "ERROR: specify a directory with "
@@ -108,10 +108,10 @@ def make_env_var_dict(
         for option in parser.options(section):
             val = parser.get(section, option)
             if legacy_env:
-                val = legacy_env(val)
+                val = _legacy_env(val)
             if legacy_file_inclusion:
-                lfid = args.legacy_file_inclusion_directory
-                val = legacy_file(val, lfid)
+                lfid = legacy_file_inclusion_directory
+                val = _legacy_file(val, lfid)
             if resolve:
                 if not parser.has_option(section, "%s_ip" % option):
                     if (
