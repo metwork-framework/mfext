@@ -1,4 +1,4 @@
-import configparser_extended
+import opinionated_configparser
 import deploycron
 import envtpl
 import statsd

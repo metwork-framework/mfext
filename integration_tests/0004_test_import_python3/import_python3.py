@@ -1,4 +1,4 @@
-import configparser_extended
+import opinionated_configparser
 import cronwrapper
 import deploycron
 import envtpl
