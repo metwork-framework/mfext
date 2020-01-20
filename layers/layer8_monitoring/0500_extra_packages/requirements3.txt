@@ -1,7 +1,5 @@
 certifi==2019.3.9
 ciso8601==2.1.1
 elasticsearch==6.4.0
--e git+https://github.com/metwork-framework/jsonlog2elasticsearch@dfa9d4592960884109cf01972652721389488989#egg=jsonlog2elasticsearch
 -e git+https://github.com/metwork-framework/jsonsyslog2elasticsearch@2d15fed792cba59515d3f4c253c0060d7be73364#egg=jsonsyslog2elasticsearch
-pygtail==0.10.1
 ujson==1.35
