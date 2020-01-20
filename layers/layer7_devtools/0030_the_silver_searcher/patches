@@ -1,0 +1,2 @@
+#Patch to build without lzma
+no_lzma.patch

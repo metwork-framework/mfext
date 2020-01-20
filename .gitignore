@@ -35,6 +35,8 @@ layerapi2/test_layerapi2
 layerapi2/get_layer_home
 layers/python2_layer.mk
 layers/python3_layer.mk
+layers/python2_layer_scl.mk
+layers/python3_layer_scl.mk
 layerapi/_layer_load_python2_bash_cmd
 layerapi/_layer_load_python3_bash_cmd
 layers/layer*/packages.md

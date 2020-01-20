@@ -2,11 +2,11 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=postgis
-export VERSION=2.4.6
-export SHORT_VERSION=2.4
+export VERSION=3.0.0
+export SHORT_VERSION=3
 # export EXTENSION (see below)
 export CHECKTYPE=MD5
-export CHECKSUM=d6af0fd3dda595cff9d625512b265f4b
+export CHECKSUM=725019e3a67ac52ccef4d00031cb0c77
 DESCRIPTION=\
 PostGIS is a spatial database extender for PostgreSQL database.\
 It adds support for geographic objects allowing location queries to be run\
