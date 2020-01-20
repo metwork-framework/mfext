@@ -182,7 +182,7 @@ if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_NUMBER_OF_ROTATED_FILES{% raw %
 fi
 
 {% if MFMODULE != "MFEXT" %}
-export MFLOG_EXTRA_CONTEXT_FUNC="mflog_metwork_addon.extra_context"
+export MFLOG_EXTRA_CONTEXT_FUNC="mfext.mflog_addon.extra_context"
 export MFLOG_JSON_ONLY_KEYS="plugin"
 export MFLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
 export MFLOG_JSON_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_JSON_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
