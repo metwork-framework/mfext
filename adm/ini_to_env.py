@@ -131,6 +131,7 @@ def make_env_var_dict(
             add_env_var(env_var_dict, prefix, section, option, val)
     if generation_time:
         add_env_var(
-            env_var_dict, prefix, "conf", "generation_time", str(time.time())
+            env_var_dict, prefix, "conf", "generation_time",
+            str(int(time.time()))
         )
     return env_var_dict
