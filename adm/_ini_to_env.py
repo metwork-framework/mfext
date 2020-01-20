@@ -130,11 +130,7 @@ if __name__ == "__main__":
     else:
         configuration_name = args.configuration_name
     configuration_name = configuration_name.lower()
-    parser = OpinionatedConfigParser(
-        configuration_name=configuration_name,
-        use_envtpl=True,
-        ignore_sections_starting_with="_",
-    )
+    parser = OpinionatedConfigParser(configuration_name=configuration_name)
     paths = [x for x in args.path if os.path.isfile(x)]
     parser.read(paths)
     for section in parser.sections():
