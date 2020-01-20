@@ -1,5 +1,10 @@
 # Utilities
 
+!!! note
+    **These utilities are only those maintained by the MetWork project.**
+
+    You can find many others provided by other [components]({{components}}).
+
 ## Core layers
 
 !!! note
