@@ -44,10 +44,9 @@ def main():
     args = arg_parser.parse_args()
 
     if(args.config):
-        parser = OpinionatedConfigParser(use_envtpl=True,
-                                         configuration_name=args.config)
+        parser = OpinionatedConfigParser(configuration_name=args.config)
     else:
-        parser = OpinionatedConfigParser(use_envtpl=True)
+        parser = OpinionatedConfigParser()
     data = codecs.open(str(args.path), "r", "utf-8")
     parser.read_file(data)
 

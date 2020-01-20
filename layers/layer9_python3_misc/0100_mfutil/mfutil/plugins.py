@@ -12,7 +12,7 @@ import filelock
 from mfutil import BashWrapperException, BashWrapperOrRaise, BashWrapper
 from mfutil import mkdir_p_or_die, get_unique_hexa_identifier
 from mfutil.layerapi2 import LayerApi2Wrapper
-from configparser_extended import ExtendedConfigParser
+from opinionated_configparser import OpinionatedConfigParser
 
 RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', '/tmp')
 MFEXT_HOME = os.environ['MFEXT_HOME']
@@ -616,8 +616,7 @@ def build_plugin(plugin_path, plugins_base_dir=None):
     plugins_base_dir = _get_plugins_base_dir(plugins_base_dir)
     base = os.path.join(plugins_base_dir, "base")
     pwd = os.getcwd()
-    parser = ExtendedConfigParser(config=os.environ.get('MFCONFIG', 'GENERIC'),
-                                  strict=False, inheritance="im")
+    parser = OpinionatedConfigParser()
     with open(os.path.join(plugin_path, "config.ini"), "r") as f:
         config_content = f.read()
     if six.PY2:

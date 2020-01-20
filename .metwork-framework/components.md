@@ -39,8 +39,6 @@
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [ConfigArgParse](https://github.com/bw2/ConfigArgParse) | 0.14.0 | python2 |
 | [ConfigArgParse](https://github.com/bw2/ConfigArgParse) | 0.14.0 | python3 |
-| [configparser-extended](https://github.com/thefab/configparser_extended) | custom | python2 |
-| [configparser-extended](https://github.com/thefab/configparser_extended) | custom | python3 |
 | [configparser](https://github.com/jaraco/configparser/) | 3.7.4 | python2 |
 | [contextlib2](http://contextlib2.readthedocs.org) | 0.6.0.post1 | python2_devtools |
 | [cookiecutter-hooks](https://pypi.org/project/cookiecutter-hooks) | custom | python3 |
@@ -153,6 +151,7 @@
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
+| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python2 |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
@@ -274,4 +273,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(273 components)*
+*(272 components)*
