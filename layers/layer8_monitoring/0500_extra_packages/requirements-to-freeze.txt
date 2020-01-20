@@ -1,2 +1,1 @@
--e git+https://github.com/metwork-framework/jsonlog2elasticsearch#egg=jsonlog2elasticsearch
 -e git+https://github.com/metwork-framework/jsonsyslog2elasticsearch#egg=jsonsyslog2elasticsearch
