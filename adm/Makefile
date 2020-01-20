@@ -17,7 +17,7 @@ TARGET_LIBS_BEFORE:=$(addprefix $(MFEXT_HOME)/lib/,$(LIBS_BEFORE))
 TEMPLATES=$(shell find templates ! -type d)
 TARGET_TEMPLATES:=$(addprefix $(MFEXT_HOME)/share/,$(TEMPLATES))
 
-all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile $(PREFIX)/lib/mfext/__init__.py $(PREFIX)/lib/mfext/plugins_common.py $(PREFIX)/lib/mfext/jsonsyslog2es_metwork_addon.py $(PREFIX)/lib/mfext/ini_to_env.py $(PREFIX)/lib/mfext/circus_hooks.py
+all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile $(PREFIX)/lib/mfext/__init__.py $(PREFIX)/lib/mfext/plugins_common.py $(PREFIX)/lib/mfext/jsonsyslog2es_metwork_addon.py $(PREFIX)/lib/mfext/ini_to_env.py $(PREFIX)/lib/mfext/circus_hooks.py $(PREFIX)/lib/mfext/mflog_addon.py
 
 before_layers: $(TARGET_BINS_BEFORE) $(TARGET_SHARES_BEFORE) $(TARGET_LIBS_BEFORE)
 
@@ -39,6 +39,9 @@ $(PREFIX)/lib/mfext/ini_to_env.py: ini_to_env.py
 	cp -f $< $@
 
 $(PREFIX)/lib/mfext/circus_hooks.py: circus_hooks.py
+	cp -f $< $@
+
+$(PREFIX)/lib/mfext/mflog_addon.py: mflog_addon.py
 	cp -f $< $@
 
 $(PREFIX)/lib/mfext/jsonsyslog2es_metwork_addon.py: jsonsyslog2es_metwork_addon.py
