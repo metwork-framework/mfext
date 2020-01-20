@@ -316,7 +316,6 @@ An add-on can contain one or several extra **layers**.
 
 | Name | Version | Layer |
 | --- | --- | --- |
-| [ack](https://beyondgrep.com/) | 2.16-single-file | devtools |
 | [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python2_core |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
@@ -333,11 +332,11 @@ An add-on can contain one or several extra **layers**.
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [black](https://github.com/psf/black) | 19.10b0 | python3_devtools |
-| [c-ares](https://c-ares.haxx.se/) | 1.12.0 | core |
+| [c-ares](https://c-ares.haxx.se/) | 1.15.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python2 |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
-| [cairo](https://www.cairographics.org/) | 1.14.12 | scientific_core |
+| [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
 | [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python2 |
 | [certifi](https://certifi.io) | 2019.3.9 | python2_core |
@@ -356,8 +355,6 @@ An add-on can contain one or several extra **layers**.
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [ConfigArgParse](https://github.com/bw2/ConfigArgParse) | 0.14.0 | python2 |
 | [ConfigArgParse](https://github.com/bw2/ConfigArgParse) | 0.14.0 | python3 |
-| [configparser-extended](https://github.com/thefab/configparser_extended) | custom | python2 |
-| [configparser-extended](https://github.com/thefab/configparser_extended) | custom | python3 |
 | [configparser](https://github.com/jaraco/configparser/) | 3.7.4 | python2 |
 | [contextlib2](http://contextlib2.readthedocs.org) | 0.6.0.post1 | python2_devtools |
 | [cookiecutter-hooks](https://pypi.org/project/cookiecutter-hooks) | custom | python3 |
@@ -391,12 +388,12 @@ An add-on can contain one or several extra **layers**.
 | [functools32](https://github.com/MiCHiLU/python-functools32) | 3.2.3.post2 | python2_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [futures](https://github.com/agronholm/pythonfutures) | 3.3.0 | python2_devtools |
-| [gdal](http://www.gdal.org) | 2.2.4 | scientific_core |
-| [geos](http://trac.osgeo.org/geos/) | 3.7.1 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
+| [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.4 | python3_circus |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
-| [hdf5](https://www.hdfgroup.org) | 1.10.2 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [htmlmin](https://htmlmin.readthedocs.io/en/latest/) | 0.1.12 | python3_devtools |
 | [idna](https://github.com/kjd/idna) | 2.8 | python2 |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
@@ -426,9 +423,9 @@ An add-on can contain one or several extra **layers**.
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libpng](http://www.libpng.org/) | 1.6.37 | scientific_core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
-| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 4.3.0a | scientific_core |
+| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
-| [libxslt](http://xmlsoft.org/) | 1.1.28 | core |
+| [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.0.2 | core |
@@ -437,6 +434,7 @@ An add-on can contain one or several extra **layers**.
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [m2r](https://github.com/miyakogi/m2r) | 0.2.1 | python3_devtools |
+| [Mako](https://www.makotemplates.org/) | 1.1.0 | python3_devtools |
 | [Markdown](https://Python-Markdown.github.io/) | 3.1.1 | python3_devtools |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python2 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
@@ -463,26 +461,30 @@ An add-on can contain one or several extra **layers**.
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python2 |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
-| [nodejs](http://nodejs.org) | 10.16.0 | nodejs |
+| [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python2_devtools |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
-| [openjdk](https://jdk.java.net) | 11.0.2 | java |
-| [openjpeg](http://www.openjpeg.org/) | 2.1.2 | scientific_core |
+| [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
+| [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
+| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python2 |
+| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.5 | python2_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.7.0 | python3_devtools |
-| [pcre](http://www.pcre.org) | 8.36 | core |
+| [pcre](http://www.pcre.org) | 8.43 | core |
+| [pdoc3](https://pdoc3.github.io/pdoc/) | 0.7.2 | python3_devtools |
 | [pep562](https://github.com/facelessuser/pep562) | 1.0 | python3_devtools |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
+| [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python2_devtools |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
-| [postgis](http://postgis.refractions.net/) | 2.4.6 | scientific_core |
-| [postgresql](http://postgresql.org/) | 10.1 | scientific_core |
+| [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
+| [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
-| [proj](http://trac.osgeo.org/proj/) | 5.2.0 | scientific_core |
+| [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python2 |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python3 |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python2_devtools |
@@ -544,7 +546,7 @@ An add-on can contain one or several extra **layers**.
 | [sphinxcontrib-jsmath](http://sphinx-doc.org/) | 1.0.1 | python3_devtools |
 | [sphinxcontrib-qthelp](None) | 1.0.2 | python3_devtools |
 | [sphinxcontrib-serializinghtml](None) | 1.1.3 | python3_devtools |
-| [sqlite](http://sqlite.org/) | 3080803 | core |
+| [sqlite](http://sqlite.org/) | 3300100 | core |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python2 |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python3 |
 | [structlog](https://www.structlog.org/) | 19.1.0 | python2 |
@@ -558,6 +560,7 @@ An add-on can contain one or several extra **layers**.
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.3 | python2_devtools |
 | [testfixtures](https://github.com/Simplistix/testfixtures) | 6.10.3 | python3_devtools |
+| [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
 | [toml](https://github.com/uiri/toml) | 0.10.0 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
@@ -586,7 +589,7 @@ An add-on can contain one or several extra **layers**.
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(269 components)*
+*(272 components)*
 
 
 
