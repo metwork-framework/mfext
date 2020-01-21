@@ -31,6 +31,13 @@
 {{ declare_utility("log_proxy") }}
 {{ declare_utility("log_proxy_wrapper") }}
 {{ declare_utility("unsafe_pip") }}
+{{ declare_utility("get_unique_hexa_identifier") }}
+{{ declare_utility("get_layer_home") }}
+{{ declare_utility("get_simple_hostname") }}
+{{ declare_utility("get_full_hostname") }}
+{{ declare_utility("get_domainname") }}
+{{ declare_utility("get_real_ip") }}
+{{ declare_utility("get_ip_for_hostname") }}
 
 
 ## Python3 layers
