@@ -414,7 +414,6 @@ An add-on can contain one or several extra **layers**.
 | [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
 | [jsmin](https://github.com/tikitu/jsmin/) | 2.2.2 | python3_devtools |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
-| [jsonlog2elasticsearch](https://pypi.org/project/jsonlog2elasticsearch) | custom | monitoring |
 | [jsonsyslog2elasticsearch](https://pypi.org/project/jsonsyslog2elasticsearch) | custom | monitoring |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.3 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python2_devtools |
@@ -498,7 +497,6 @@ An add-on can contain one or several extra **layers**.
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.1.1 | python2_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.1.1 | python3_devtools |
 | [Pygments](http://pygments.org/) | 2.5.2 | python3_devtools |
-| [pygtail](http://github.com/bgreenlee/pygtail) | 0.10.1 | monitoring |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://github.com/PyCQA/pylint) | 1.9.5 | python2_devtools |
 | [pylint](https://github.com/PyCQA/pylint) | 2.4.4 | python3_devtools |
@@ -589,7 +587,7 @@ An add-on can contain one or several extra **layers**.
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(272 components)*
+*(270 components)*
 
 
 

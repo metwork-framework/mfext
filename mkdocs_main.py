@@ -30,12 +30,12 @@ def define_env(env):
         _cmd = cmd
         if _cmd is None:
             _cmd = "%s --help" % name
-        _cmd = "layer_wrapper --layers=%s -- %s" % (layers, _cmd)
+        _cmd2 = "layer_wrapper --layers=%s -- %s" % (layers, _cmd)
         res.append("%s %s %s" % ('#' * level, name, anchor))
         res.append("")
         res.append("```console")
         res.append("$ %s" % _cmd)
-        res.append(shell(None, _cmd))
+        res.append(shell(None, _cmd2))
         res.append("```")
         res.append("")
         return "\n".join(res)
