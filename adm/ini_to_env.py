@@ -38,7 +38,7 @@ def _legacy_file(val, directory):
     return val
 
 
-def resolve(val):
+def _resolve(val):
     if val.lower() == "null" or val.startswith("/"):
         # If it's "null" or linux socket
         return val
@@ -58,7 +58,7 @@ def add_env_var(env_var_dict, prefix, section, option, val):
 
 
 def add_resolved_ip_var(env_var_dict, prefix, section, option, val):
-    new_val = resolve(val)
+    new_val = _resolve(val)
     if new_val is None:
         new_val = "dns_error"
     add_env_var(env_var_dict, prefix, section, option + "_IP", new_val)
@@ -68,7 +68,7 @@ def add_resolved_ips_var(env_var_dict, prefix, section, option, val):
     hostname_list = val.split(";")
     new_vals = []
     for hostname in hostname_list:
-        new_val = resolve(val)
+        new_val = _resolve(hostname)
         if new_val is None:
             new_val = "dns_error"
         new_vals.append(new_val)

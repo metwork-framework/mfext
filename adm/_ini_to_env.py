@@ -61,7 +61,8 @@ if __name__ == "__main__":
         legacy_env=args.legacy_env,
         legacy_file_inclusion=args.legacy_file_inclusion,
         legacy_file_inclusion_directory=args.legacy_file_inclusion_directory,
-        generation_time=True
+        generation_time=True,
+        resolve=args.resolve
     )
     for k, v in env_var_dict.items():
         print("export %s=%s" % (k, shlex.quote(v)))
