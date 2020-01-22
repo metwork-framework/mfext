@@ -5,6 +5,7 @@ import os
 import sys
 import argparse
 from mfutil.layerapi2 import LayerApi2Wrapper
+from mfutil import mkdir_p
 
 DESCRIPTION = "execute a command in a plugin environment"
 
@@ -52,6 +53,7 @@ parser.add_argument("COMMAND_AND_ARGS", nargs='+',
 args = parser.parse_args()
 plugin = args.PLUGIN_NAME
 layer_name = "plugin_%s@%s" % (plugin, MFMODULE_LOWERCASE)
+tmpdir = os.path.join(MFMODULE_RUNTIME_HOME, "tmp", plugin)
 
 # we check that the plugins base dir is included in LAYERAPI2_LAYERS_PATH
 # (useful for custom plugins base dir during hotswapping for example)
@@ -72,6 +74,8 @@ if layer_dir is None:
     sys.exit(1)
 
 if args.bash_cmds:
+    if mkdir_p(tmpdir, nodebug=True, nowarning=True):
+        print("export TMPDIR=\"%s\"" % tmpdir)
     print("export %s_CURRENT_PLUGIN_NAME=%s" % (MFMODULE, plugin))
     print("export %s_CURRENT_PLUGIN_DIR=%s" % (MFMODULE, layer_dir))
     print("export %s_CURRENT_PLUGIN_LABEL=%s" % (MFMODULE, layer_name))
@@ -116,5 +120,8 @@ if args.add_extra_dir_to_node_path is not None:
 lw_args.append("--")
 for cmd_arg in args.COMMAND_AND_ARGS:
     lw_args.append(cmd_arg)
+
+if mkdir_p(tmpdir, nodebug=True, nowarning=True):
+    os.environ["TMPDIR"] = tmpdir
 
 os.execvp("layer_wrapper", lw_args)

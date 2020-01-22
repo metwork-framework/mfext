@@ -55,9 +55,14 @@ if ! test -d "${PYTHON_EGG_CACHE}"; then
 fi
 
 {% if MFMODULE != "MFEXT" %}
-    # We set MFEXT_HOME (FIXME: necessary ?)
-    export MFEXT_HOME={{MFEXT_HOME}}
-    export MFEXT_VERSION={{MFEXT_VERSION}}
+    # We set TMPDIR
+    if test "${MFMODULE_RUNTIME_HOME:-}" != ""; then
+        if test "{% raw %}${{% endraw %}{{MFMODULE}}{% raw %}_CURRENT_PLUGIN_NAME:-}{% endraw %}" = ""; then
+            # else, it's already set by plugin_wrapper
+            export TMPDIR="${MFMODULE_RUNTIME_HOME}/tmp";
+            mkdir -p "${TMPDIR}" >/dev/null 2>&1
+        fi
+    fi
 {% endif %}
 
 # Get the metwork configuration name
