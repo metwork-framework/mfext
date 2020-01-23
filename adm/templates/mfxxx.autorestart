@@ -90,7 +90,7 @@ fi
 log CRITICAL "the {{MFMODULE_LOWERCASE}}.status is not ok (after two attempts) => let's restart the module"
 
 log INFO "launching {{MFMODULE_LOWERCASE}}.stop (with a 300s timeout)"
-timeout 300s {{MFMODULE_LOWERCASE}}.stop
+timeout 300s {{MFMODULE_LOWERCASE}}.stop KEEPCRON
 
 log INFO "launching {{MFMODULE_LOWERCASE}}.start (with a 300s timeout)"
 timeout 300s {{MFMODULE_LOWERCASE}}.start

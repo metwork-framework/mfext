@@ -3,12 +3,17 @@
 . ${MFEXT_HOME}/lib/bash_utils.sh
 
 if test "${1:-}" = "--help"; then
-    echo "usage {{MFMODULE_LOWERCASE}}.start"
+    echo "usage {{MFMODULE_LOWERCASE}}.stop [KEEPCRON]"
     echo "  => stop the {{MFMODULE_LOWERCASE}} module"
+    echo "     (if KEEPCRON is set as argument, we keed the cron)"
     exit 0
 fi
 
 exit_if_root
+KEEPCRON=0
+if test "${1:-}" = "KEEPCRON"; then
+    KEEPCRON=1
+fi
 
 cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
@@ -47,7 +52,9 @@ echo "  "
 
 echo STOPPING >${MFMODULE_RUNTIME_HOME}/var/status
 
-_uninstall_crontab.sh
+if test "${KEEPCRON}" = "0"; then
+    _uninstall_crontab.sh
+fi
 
 {% block custom %}
 # Can be replaced by mfxxx.stop.custom
