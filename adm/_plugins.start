@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+import sys
+from mfutil.plugins import get_installed_plugins
+from mfext.circus import MetWorkCircusClient
+from mfutil.cli import echo_ok, echo_running, echo_bold, echo_nok
+
+# Preparing
+echo_running("- Collecting infos about plugins...")
+client = MetWorkCircusClient()
+if not client.check():
+    echo_nok()
+    echo_bold("=> ERROR: can't connect to circus. Is the module started?")
+    sys.exit(1)
+watchers = client.list_watchers()
+watchers_by_plugin = {}
+if len(sys.argv) >= 2:
+    plugins = [{"name": sys.argv[1]}]
+else:
+    plugins = get_installed_plugins()
+for plugin in plugins:
+    watchers = client.list_watchers_by_plugin_pattern(plugin['name'])
+    if watchers is not None and len(watchers) > 0:
+        watchers_by_plugin[plugin['name']] = watchers
+echo_ok()
+
+# Starting
+res = True
+for plugin_dict in plugins:
+    plugin_name = plugin_dict['name']
+    if plugin_name in watchers_by_plugin:
+        print("- Starting plugin: %s" % plugin_name)
+        watchers = watchers_by_plugin[plugin_name]
+        for watcher in watchers:
+            res = res and client.start_watcher(indent=4, name=watcher)
+
+if not res:
+    sys.exit(1)

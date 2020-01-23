@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+
+import sys
+import time
+import os
+from mfutil import BashWrapper, get_tmp_filepath
+import psutil
+from datetime import datetime
+from mfutil.plugins import get_installed_plugins, \
+    get_layer_home_from_plugin_name
+from mfutil.cli import echo_ok, echo_warning, echo_running, echo_bold
+from mfext.circus import MetWorkCircusClient
+
+
+def check_pids(pids):
+    recent_or_missing = 0
+    for pid in pids:
+        try:
+            process = psutil.Process(pid)
+            create_time = process.create_time()
+        except Exception:
+            recent_or_missing += 1
+            continue
+        age = datetime.timestamp(datetime.now()) - create_time
+        if age < 5:
+            recent_or_missing += 1
+    if recent_or_missing == len(pids):
+        return False
+    return True
+
+
+echo_running("- Collecting infos about plugins...")
+client = MetWorkCircusClient()
+if not client.check():
+    echo_warning("(circus stopped)")
+    sys.exit(1)
+if len(sys.argv) >= 2:
+    plugins = [{"name": sys.argv[1]}]
+else:
+    plugins = get_installed_plugins()
+watchers = client.list_watchers()
+watchers_by_plugin = {}
+for plugin in plugins:
+    watchers = client.list_watchers_by_plugin_pattern(plugin['name'])
+    if watchers is not None and len(watchers) > 0:
+        watchers_by_plugin[plugin['name']] = watchers
+echo_ok()
+
+res = True
+for plugin_dict in plugins:
+    plugin_res = True
+    plugin_name = plugin_dict['name']
+    echo_running("- Checking plugin: %s (basic)..." % plugin_name)
+    plugin_home = get_layer_home_from_plugin_name(plugin_name)
+    if plugin_home is None:
+        echo_warning()
+        echo_bold("=> can't find plugin_dir")
+        res = False
+        continue
+    echo_ok()
+    if plugin_name in watchers_by_plugin:
+        echo_running("- Checking plugin: %s (processes)..." % plugin_name)
+        watchers = watchers_by_plugin[plugin_name]
+        for watcher in watchers:
+            try:
+                status = client.statuses()[watcher]
+            except Exception:
+                echo_warning()
+                echo_bold("=> can't find watcher status for watcher: %s" %
+                          watcher)
+                plugin_res = False
+                break
+            if status != "active":
+                echo_warning()
+                echo_bold("=> the status of the watcher: %s is %s" %
+                          (watcher, status))
+                plugin_res = False
+                break
+            pids = client.list_pids(name=watcher)
+            if pids is None:
+                echo_warning()
+                echo_bold("=> can't find process list for watcher: %s" %
+                          watcher)
+                plugin_res = False
+                break
+            if check_pids(pids) is False:
+                # let's wait 5s and retry
+                time.sleep(5)
+                pids = client.list_pids(name=watcher)
+                if pids is None:
+                    echo_warning()
+                    echo_bold("=> can't find process list for watcher: %s" %
+                              watcher)
+                    plugin_res = False
+                    break
+                if check_pids(pids) is False:
+                    echo_warning()
+                    echo_bold("=> all processes for watcher: %s "
+                              "are missing or too fresh" % watcher)
+                    plugin_res = False
+                    break
+        if plugin_res:
+            echo_ok()
+        else:
+            res = False
+    if plugin_res and os.path.exists("%s/bin/plugin.status" % plugin_home):
+        echo_running("- Checking plugin: %s (custom)..." % plugin_name)
+        status_log = get_tmp_filepath(prefix="plugins_status_")
+        cmd = "timeout 30s plugin_wrapper --empty --cwd "\
+            "%s -- plugin.status >%s 2>&1" % (plugin_name, status_log)
+        x = BashWrapper(cmd)
+        if x:
+            os.unlink(status_log)
+            echo_ok()
+        else:
+            echo_warning()
+            echo_bold("=> bad status code: %i for plugin.status "
+                      "(see %s for details)" % (x.code, status_log))
+            res = False
+
+if not res:
+    sys.exit(1)

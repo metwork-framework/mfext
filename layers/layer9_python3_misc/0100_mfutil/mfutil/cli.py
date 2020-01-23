@@ -14,6 +14,8 @@ def _get_mfutil():
         i = ctypes.cdll.LoadLibrary("libmfutil.so")
         i.mfutil_echo_ok.restype = None
         i.mfutil_echo_ok.argtypes = [ctypes.c_char_p]
+        i.mfutil_is_interactive_execution.restype = ctypes.c_int
+        i.mfutil_is_interactive_execution.argtypes = []
         i.mfutil_echo_nok.restype = None
         i.mfutil_echo_nok.argtypes = [ctypes.c_char_p]
         i.mfutil_echo_warning.restype = None
@@ -26,6 +28,12 @@ def _get_mfutil():
         i.mfutil_echo_clean.argtypes = []
         MFUTIL_INSTANCE = i
     return MFUTIL_INSTANCE
+
+
+def is_interactive():
+    """Return True if we are in an interactive terminal."""
+    tmp = _get_mfutil().mfutil_is_interactive_execution()
+    return (tmp == 1)
 
 
 def echo_ok(message=""):
