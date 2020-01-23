@@ -5,7 +5,7 @@
 if test "${1:-}" = "--help"; then
     echo "usage {{MFMODULE_LOWERCASE}}.stop [KEEPCRON]"
     echo "  => stop the {{MFMODULE_LOWERCASE}} module"
-    echo "     (if KEEPCRON is set as argument, we keed the cron)"
+    echo "     (if KEEPCRON is set as argument, we keep the cron)"
     exit 0
 fi
 
