@@ -136,18 +136,20 @@ cat <<EOF
 
 EOF
 
-if test -x ${MFEXT_HOME}/opt/misc/bin/mfcom_wrapper; then
+{% if MFMODULE != "MFEXT" %}
+if test "$(which_or_empty echo_bold)" != ""; then
     echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
     echo "(module: ${MFMODULE}, version: ${MFMODULE_VERSION})"
     echo
 fi
+{% endif %}
 
 uptime
 
 echo
 
 {% if MFMODULE != "MFADMIN" %}
-if test "${MFSERV_CURRENT_PLUGIN_NAME:-}" = ""; then
+if test "$(which_or_empty echo_bold)" != ""; then
     if test "${MFADMIN_HOSTNAME}" != "null" -a "${MFADMIN_HOSTNAME}" != ""; then
         if test "${MFEXT_LAYER_MONITORING_LOADED:-}" != "1"; then
             echo_bold "WARNING: the [admin]/hostname value is configured for this module"
