@@ -208,7 +208,7 @@ export MFLOG_SYSLOG_FORMAT="json"
 export MFCOM_HOME="{{MFEXT_HOME}}"
 {% endif %}
 
-ulimit -c {% raw %}${{% endraw %}{{MFMODULE}}_MISC_CORE_SIZE{% raw %}:-}{% endraw %}
+ulimit -c "{% raw %}${{% endraw %}{{MFMODULE}}_MISC_CORE_SIZE{% raw %}:-}{% endraw %}"
 
 {% block custom %}
 {% endblock %}
