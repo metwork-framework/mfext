@@ -97,6 +97,10 @@ echo "  "
 
 echo STARTING >${MFMODULE_RUNTIME_HOME}/var/status
 
+{% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+export METWORK_STARTING=1
+{% endif %}
+
 {% block custom_before_circus %}
 # Can be replaced by mfxxx.start.custom
 {% endblock %}
@@ -155,6 +159,10 @@ if test "${RES}" = "0"; then
             fi
         fi
     fi
+    {% endif %}
+
+    {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+    plugins.start
     {% endif %}
 
     echo -n "- Wait 2 sec..."

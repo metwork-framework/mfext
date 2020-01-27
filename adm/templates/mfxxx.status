@@ -88,14 +88,35 @@ fi
 # Can be replaced by mfxxx.status.custom
 {% endblock %}
 
-if test ${RES} -ne 0; then
+{% if MFMODULE in ['MFSERV', 'MFBASE', 'MFDATA'] %}
+if test ${RES} -eq 0 -a "$1" != "QUIET"; then
+    echo
+    LINE="*****     CHECKING {{MFMODULE}} PLUGINS     *****"
+    N=`echo "${LINE}" |wc -c`
+    HEADER=`echo "**********************************************************************" |cut -c 2-${N}`
+    echo_bold "${HEADER}"
+    echo_bold "${LINE}"
+    echo_bold "${HEADER}"
+    echo "  "
+    plugins.status
+    if test $? -ne 0; then
+        echo ""
+        echo_bold "WARNING: SOME ERRORS DETECTED DURING {{MFMODULE}} PLUGINS CHECK"
+        RES=2
+    fi
+fi
+{% endif %}
+
+if test ${RES} -eq 1; then
     echo ""
-    echo_bold "ERROR(S) DETECTED DURING ${MFMODULE} CHECK"
-else
+    echo_bold "ERROR(S) DETECTED DURING {{MFMODULE}} CHECK"
+elif test ${RES} -eq 0; then
     if test "$1" != "QUIET"; then
         echo " "
         echo_bold "OK !"
     fi
+    exit 0
+else
+    # We return 0 in case of WARNING to avoid an autorestart
+    exit 0
 fi
-
-exit ${RES}

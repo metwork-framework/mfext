@@ -15,6 +15,7 @@ LOGGER = getLogger("conf_monitor")
 MFMODULE_RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', None)
 MFMODULE_RUNTIME_USER = os.environ.get('MFMODULE_RUNTIME_USER', None)
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
+os.environ['METWORK_STARTING'] = '0'
 
 
 def handler_stop_signals(signum, frame):
@@ -60,9 +61,18 @@ def get_plugins_crontab():
     return res
 
 
-def md5sumfile(path):
+def md5sumfile(path, ignore_lines_starting_with=[]):
+    c = ""
     with open(path, 'r') as f:
-        c = f.read()
+        for line in f.readlines():
+            tmp = line.strip()
+            ignore = False
+            for pattern in ignore_lines_starting_with:
+                if tmp.startswith(pattern):
+                    ignore = True
+                    break
+            if not ignore:
+                c = c + tmp
     return hashlib.md5(c.encode('utf8')).hexdigest()
 
 
@@ -70,7 +80,9 @@ def make_new_circus_conf():
     new_circus_conf = "%s/tmp/tmp_circus_conf2" % MFMODULE_RUNTIME_HOME
     cmd = "_make_circus_conf >%s" % new_circus_conf
     BashWrapperOrRaise(cmd)
-    return (new_circus_conf, md5sumfile(new_circus_conf))
+    return (new_circus_conf,
+            md5sumfile(new_circus_conf,
+                       ignore_lines_starting_with=["autostart"]))
 
 
 def make_new_crontab_conf():
@@ -82,7 +94,9 @@ def make_new_crontab_conf():
 
 def get_old_circus_conf():
     old_circus_conf = "%s/tmp/config_auto/circus.ini" % MFMODULE_RUNTIME_HOME
-    return (old_circus_conf, md5sumfile(old_circus_conf))
+    return (old_circus_conf,
+            md5sumfile(old_circus_conf,
+                       ignore_lines_starting_with=["autostart"]))
 
 
 def get_old_crontab_conf():

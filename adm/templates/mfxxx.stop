@@ -56,6 +56,10 @@ if test "${KEEPCRON}" = "0"; then
     _uninstall_crontab.sh
 fi
 
+{% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+plugins.stop
+{% endif %}
+
 {% block custom %}
 # Can be replaced by mfxxx.stop.custom
 {% endblock %}
