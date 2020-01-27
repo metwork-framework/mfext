@@ -2,6 +2,20 @@
 
 
 
+## v0.9.5 (2020-01-24)
+
+### New Features
+
+
+### Bug Fixes
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+
+
+
+
+
 ## v0.9.4 (2020-01-02)
 
 - No interesting change
