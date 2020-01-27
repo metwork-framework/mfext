@@ -98,7 +98,7 @@ During a metwork module upgrade :
 
 So, if you changed some keys in `${MFMODULE_RUNTIME_HOME}/config/config.ini`, your change will never be overriden by a metwork upgrade.
 
-But the upgrade add a new configuration option, the new configuration option will be (of course) visible in `${MFMODULE_HOME}/config/config.ini` but not in your `${MFMODULE_RUNTIME_HOME}/config/config.ini` (because we prefer to keep your changes). It's not a problem in itself but you can miss some configuration options.
+But if the upgrade add a new configuration option, the new configuration option will be (of course) visible in `${MFMODULE_HOME}/config/config.ini` but not in your `${MFMODULE_RUNTIME_HOME}/config/config.ini` (because we prefer to keep your changes). It's not a problem in itself but you can miss some configuration options.
 
 So, when you do some metwork ugprades on a customized system, you should sometimes do a kind of diff/merge between `${MFMODULE_RUNTIME_HOME}/config/config.ini` and `${MFMODULE_HOME}/config/config.ini`.
 
