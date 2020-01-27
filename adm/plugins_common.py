@@ -1,5 +1,6 @@
 import os
 import envtpl
+from opinionated_configparser import OpinionatedConfigParser
 
 MFMODULE_RUNTIME_HOME = os.environ['MFMODULE_RUNTIME_HOME']
 MFEXT_HOME = os.environ["MFEXT_HOME"]
@@ -278,3 +279,20 @@ def get_redis_service_extra_conf(logger, parser, plugin_conf):
                                            keep_multi_blank_lines=False)
         f.write(new_content)
     return extra_conf
+
+
+def get_plugin_parser(plugin_home, plugin_name, **kwargs):
+    config_ini = os.path.join(plugin_home, "config.ini")
+    metadata_ini = os.path.join(plugin_home, "metadata.ini")
+    plugin_ini = os.path.join(plugin_home, plugin_name + ".ini")
+    parser = OpinionatedConfigParser(**kwargs)
+    if os.path.exists(config_ini):
+        parser.read(config_ini)
+        return parser
+    if not os.path.exists(metadata_ini) or not os.path.exists(plugin_ini):
+        raise Exception("can't find %s and %s "
+                        "in plugin directory: %s => broken plugin?" %
+                        (metadata_ini, plugin_ini, plugin_home))
+    parser.read(metadata_ini)
+    parser.read(plugin_ini)
+    return parser
