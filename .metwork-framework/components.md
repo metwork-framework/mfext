@@ -99,7 +99,7 @@
 | [jsmin](https://github.com/tikitu/jsmin/) | 2.2.2 | python3_devtools |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
 | [jsonsyslog2elasticsearch](https://pypi.org/project/jsonsyslog2elasticsearch) | custom | monitoring |
-| [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.3 | core |
+| [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python2_devtools |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
@@ -111,7 +111,7 @@
 | [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
-| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.0.3 | core |
+| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.0.4 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
 | [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
