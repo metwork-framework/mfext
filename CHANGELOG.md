@@ -1,6 +1,15 @@
 # release_0.9 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+- cronwrap load custom profiles like bashrc/profile
+
+
+
+
+
 
 ## v0.9.5 (2020-01-24)
 
