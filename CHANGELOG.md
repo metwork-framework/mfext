@@ -4,6 +4,9 @@
 ## [Unreleased]
 
 ### New Features
+- add coredump size limit in config
+- cronwrap load custom profiles like bashrc/profile
+- plugins checks
 - set TMPDIR automatically
 - end of configparser_extended migration
 - set default mfsysmon admin/hostname config to localhost
