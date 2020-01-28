@@ -11,13 +11,21 @@ _PARENT_PWD=$(shell dirname $(_PWD))
 LAYERS_TO_LOAD=$(shell cat $(_PARENT_PWD)/.layerapi2_dependencies $(_PARENT_PWD)/.build_extra_dependencies 2>/dev/null |grep '^[a-zA-Z0-9]' |xargs |sed 's/ /,/g')
 CURRENT_LAYER=$(shell cat $(_PARENT_PWD)/.layerapi2_label)
 
+GCC_VERSION=`gcc --version | head -1 | cut -d" " -f3 | cut -d"." -f1-3`
+
+ifeq ($(shell expr $(GCC_VERSION) \< "8.3.1" ), 1)
+    export SCL='scl enable devtoolset-8 --'
+else
+    export SCL=''
+endif
+
 .DEFAULT_GOAL := all
 
 clean:
 	$(MAKE) -f Makefile.mk clean
 
 .DEFAULT:
-	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- make -f Makefile.mk $(MAKECMDGOALS)
+	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- $(subst ',,$(SCL)) make -f Makefile.mk $(MAKECMDGOALS)
 
 test:
-	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER),devtools@mfext -- make -f Makefile.mk test
+	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER),devtools@mfext -- $(subst ',,$(SCL)) make -f Makefile.mk test
