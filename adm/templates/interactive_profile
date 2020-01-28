@@ -23,14 +23,14 @@ function __prompt_without_x_mode() {
 function __get_plugin_env_profile_tmp_file() {
     TMPPROFILE="${MFMODULE_RUNTIME_HOME}/tmp/$(get_unique_hexa_identifier).profile"
     touch "${TMPPROFILE}"
-    for VAR in HOME TERM DISPLAY COLORTERM HOSTNAME LANG LOGNAME USER USERNAME XAUTHORITY MFMODULE_RUNTIME_HOME MFMODULE_RUNTIME_SUFFIX; do
+    for VAR in HOME TERM DISPLAY COLORTERM HOSTNAME LANG LOGNAME USER USERNAME XAUTHORITY MFMODULE_RUNTIME_HOME MFMODULE_RUNTIME_SUFFIX PIP_PREFIX; do
         local N=$(env |grep "^${VAR}=..*$" |wc -l)
         if test "${N}" -gt 0; then
            local VAL=$(printenv "${VAR}")
            echo "export ${VAR}=\"${VAL}\"" >>"${TMPPROFILE}"
         fi
     done
-    plugin_wrapper --bash-cmds "$1" NOTUSED >>"${TMPPROFILE}"
+    plugin_wrapper --cwd --bash-cmds "$1" NOTUSED >>"${TMPPROFILE}"
     echo "${TMPPROFILE}"
 }
 function plugin_env() {
@@ -66,7 +66,7 @@ function plugin_env() {
     fi
     local PLUGIN_HOME=$(plugins.info "${PLUGIN}" |grep "^Installation home:" |awk -F ': ' '{print $2;}')
     export PIP_PREFIX="${PLUGIN_HOME}/local"
-    TMPPROFILE=$(__get_plugin_env_profile_tmp_file ${PLUGIN})
+    TMPPROFILE=$(__get_plugin_env_profile_tmp_file "${PLUGIN}")
     env -i bash --rcfile "${TMPPROFILE}"
     rm -f "${TMPPROFILE}"
     unset PIP_PREFIX
