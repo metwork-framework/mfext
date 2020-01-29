@@ -7,6 +7,9 @@
 - cronwrap load custom profiles like bashrc/profile
 
 
+### Bug Fixes
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+
 
 
 
