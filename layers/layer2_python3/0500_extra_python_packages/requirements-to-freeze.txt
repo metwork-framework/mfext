@@ -7,6 +7,7 @@
 -e git+https://github.com/metwork-framework/cookiecutter.git@metwork#egg=cookiecutter
 -e git+https://github.com/metwork-framework/mflog.git#egg=mflog
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git#egg=cookiecutter_hooks
+-e git+https://github.com/metwork-framework/mfutil.git#egg=mfutil
 structlog
 psutil
 redis
