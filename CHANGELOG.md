@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- remove python2/3_misc layers
+- if core_size = -1, ulimit -c is not set
 - add coredump size limit in config
 - cronwrap load custom profiles like bashrc/profile
 - plugins checks
@@ -49,6 +51,7 @@
 
 
 ### Bug Fixes
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
 - fix nasty warning in mfdata plugin_env when admin is set
 - fix automatic restart
 - remove some old aliases for vim in python2_devtools

@@ -125,6 +125,8 @@
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | custom | python2 |
 | [mflog](https://github.com/metwork-framework/mflog) | custom | python3 |
+| [mfutil](https://pypi.org/project/mfutil) | custom | python2 |
+| [mfutil](https://pypi.org/project/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
 | [mistune](https://github.com/lepture/mistune) | 0.8.4 | python3_devtools |
@@ -271,4 +273,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(270 components)*
+*(272 components)*
