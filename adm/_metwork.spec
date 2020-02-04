@@ -131,6 +131,8 @@ Obsoletes: metwork-mfext-devtools
 Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfcom-layer-python2-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfcom-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfext-layer-python2_misc-{{MODULE_BRANCH}}
+Obsoletes: metwork-mfext-layer-python2_misc
 {% endif %}
 # </to be removed someday>
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
