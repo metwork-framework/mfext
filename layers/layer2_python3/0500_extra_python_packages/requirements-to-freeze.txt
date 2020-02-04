@@ -1,6 +1,6 @@
 -e git+https://github.com/metwork-framework/opinionated_configparser.git#egg=opinionated_configparser
 -e git+https://github.com/metwork-framework/cronwrapper#egg=cronwrapper
--e git+https://github.com/Hawker65/deploycron.git#egg=deploycron
+-e git+https://github.com/metwork-framework/deploycron.git#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git#egg=envtpl
 -e git+https://github.com/thefab/pystatsd.git#egg=statsd
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client#egg=telegraf_unixsocket_client
