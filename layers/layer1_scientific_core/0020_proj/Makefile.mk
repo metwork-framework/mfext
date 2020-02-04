@@ -17,21 +17,6 @@ from one coordinate reference system (CRS) to another.
 WEBSITE=http://trac.osgeo.org/proj/
 LICENSE=MIT
 
-# proj > 5.2.0 needs C++11 to build (not natively available on CentOS6).
-# So we build it with temporary scl if gcc < 4.8
-GCC_VERSION = `gcc --version | head -1 | cut -d" " -f3 | cut -d"." -f1-2`
-DEVTOOLSET = 7
-
-ifeq ($(shell expr $(GCC_VERSION) \< "4.8" ), 1)
-
-all:: $(PREFIX)/lib/libproj.so
-$(PREFIX)/lib/libproj.so:
-	scl enable devtoolset-$(DEVTOOLSET) '$(MAKE) --file=../../Makefile.standard OPTIONS="--without-jni" PREFIX=$(PREFIX) download uncompress configure build install'
-
-else
-
 all:: $(PREFIX)/lib/libproj.so
 $(PREFIX)/lib/libproj.so:
 	$(MAKE) --file=../../Makefile.standard OPTIONS="--without-jni" PREFIX=$(PREFIX) download uncompress configure build install
-
-endif
