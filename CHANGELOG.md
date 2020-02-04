@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- remove python2/3_misc layers
 - if core_size = -1, ulimit -c is not set
 - add coredump size limit in config
 - cronwrap load custom profiles like bashrc/profile
