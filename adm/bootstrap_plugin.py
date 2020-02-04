@@ -4,7 +4,7 @@
 import argparse
 import os
 from cookiecutter.main import cookiecutter
-from mfutil import get_bash_output_or_die
+from mfutil import BashWrapperOrRaise
 from mfutil.plugins import validate_plugin_name
 import shutil
 import glob
@@ -84,9 +84,9 @@ if not os.path.isdir(res):
     print("ERROR : cookiecutter result is not a valid directory")
     parser.exit(1)
 
-get_bash_output_or_die("cd %s && remove_empty.sh" % args.plugin)
+BashWrapperOrRaise("cd %s && remove_empty.sh" % args.plugin)
 
-get_bash_output_or_die("cd %s && bootstrap_plugin.post" % args.plugin)
+BashWrapperOrRaise("cd %s && bootstrap_plugin.post" % args.plugin)
 
 if args.make:
     print("Make plugin on directory %s" % args.plugin)
