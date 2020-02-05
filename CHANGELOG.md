@@ -4,7 +4,9 @@
 ## [Unreleased]
 
 ### New Features
+- better interactive profile for mfext
 - remove python2/3_misc layers
+- build all mfext with devtoolset-8 (gcc-8)
 - if core_size = -1, ulimit -c is not set
 - add coredump size limit in config
 - cronwrap load custom profiles like bashrc/profile
