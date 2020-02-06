@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- update telegraf component
 - better interactive profile for mfext
 - remove python2/3_misc layers
 - build all mfext with devtoolset-8 (gcc-8)
