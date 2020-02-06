@@ -215,6 +215,8 @@
 | [setuptools](https://pypi.python.org/pypi/setuptools) | 41.0.1 | python2_core |
 | [setuptools](https://pypi.python.org/pypi/setuptools) | 41.0.1 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
+| [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.10 | python2 |
+| [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.10 | python3 |
 | [singledispatch](http://docs.python.org/3/library/functools.html#functools.singledispatch) | 3.4.0.3 | python2_devtools |
 | [six](https://pypi.python.org/pypi/six/) | 1.12.0 | python2_core |
 | [six](https://pypi.python.org/pypi/six/) | 1.12.0 | python3_core |
@@ -273,4 +275,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(272 components)*
+*(274 components)*
