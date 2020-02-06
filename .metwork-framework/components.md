@@ -240,7 +240,7 @@
 | [tcl](https://www.tcl.tk/) | 8.6.9 | tcltk |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | custom | python3 |
-| [telegraf](https://github.com/influxdata/telegraf) | 1.11.2-1 | monitoring |
+| [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
 | [termcolor](http://pypi.python.org/pypi/termcolor) | 1.1.0 | python3_devtools |
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python2 |
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
