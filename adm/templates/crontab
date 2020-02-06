@@ -3,6 +3,16 @@
 # Autorestart
 */5 * * * * {{MFEXT_HOME}}/bin/_no_automatic_kill.sh {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=900 --log-capture-to={% raw %}{{MFMODULE_RUNTIME_HOME}}/log/autorestart.log{% endraw %} -- {{MFMODULE_LOWERCASE}}.autorestart
 
+{% raw %}
+{% set misc_tmp_max_age_env = MFMODULE + "_MISC_TMP_MAX_AGE" %}
+{% set misc_tmp_max_age = misc_tmp_max_age_env|getenv("0")|int %}
+{% if misc_tmp_max_age > 0 %}
+# Cleaning of tmp subdirectory
+0 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL find {{MFMODULE_RUNTIME_HOME}}/tmp -type f -mtime +{{misc_tmp_max_age}} -delete
+30 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL find {{MFMODULE_RUNTIME_HOME}}/tmp -type d -mtime +{{misc_tmp_max_age}} -exec rmdir {} \;
+{% endif %}
+{% endraw %}
+
 {% block custom %}
 {% endblock %}
 
