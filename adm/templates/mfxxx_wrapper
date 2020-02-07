@@ -5,8 +5,8 @@ function usage()
     echo "usage: {{MFMODULE_HOME}}/bin/{{MFMODULE_LOWERCASE}}_wrapper COMMAND_TO_WRAP [COMMAND_ARG1] [COMMAND_ARG2] [...]"
     echo "  => launch the given command within metwork/{{MFMODULE_LOWERCASE}} environnent"
     echo "  => note: the current environnent is cleared before"
-    echo "  =>       (only MFMODULE_RUNTIME_SUFFIX, MFMODULE_RUNTIME_HOME"
-    echo "            and some standard env var (HOME, TERM, DISPLAY...) are keeped intact)"
+    echo "  =>       (only MFMODULE_RUNTIME_SUFFIX, MFMODULE_RUNTIME_HOME and some standard env var (HOME, TERM, DISPLAY...) "
+    echo "            are keeped intact)"
 }
 
 if test "$1" = ""; then
