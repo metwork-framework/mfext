@@ -21,4 +21,4 @@ fi
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 CURRENT_BASENAME="$( basename "${0}" )"
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-exec "{{MFEXT_HOME}}/opt/core/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=HOME,TERM,DISPLAY,COLORTERM,HOSTNAME,LANG,LOGNAME,PWD,USER,USERNAME,XAUTHORITY,MFMODULE_RUNTIME_HOME,MFMODULE_RUNTIME_SUFFIX,PATH,LOGPROXY_LOG_DIRECTORY -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"
+exec "{{MFEXT_HOME}}/opt/core/bin/layer_wrapper" --empty --empty-env --empty-env-keeps=HOME,TERM,DISPLAY,COLORTERM,HOSTNAME,LANG,LOGNAME,PWD,USER,USERNAME,XAUTHORITY,MFMODULE_RUNTIME_HOME,MFMODULE_RUNTIME_SUFFIX,PATH -- bash --noprofile --norc -c "${CURRENT_DIR}/_${CURRENT_BASENAME} $*"
