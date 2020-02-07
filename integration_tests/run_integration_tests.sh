@@ -29,7 +29,7 @@ for rep in $list_rep; do
             if test $? == 0; then
                 echo "Test $test ($rep) OK"
             else
-                for F in $(ls ${LOGPROXY_LOG_DIRECTORY}/*.log ${LOGPROXY_LOG_DIRECTORY}/*.stdout ${LOGPROXY_LOG_DIRECTORY}/*.stderr 2>/dev/null); do
+                for F in $(ls ${MFMODULE_RUNTIME_HOME}/log/*.log ${MFMODULE_RUNTIME_HOME}/log/*.stdout ${MFMODULE_RUNTIME_HOME}/log/*.stderr 2>/dev/null); do
                     if test -s "${F}"; then
                         echo "===== 40 last lines of ${F} to debug ====="
                         tail -40 "${F}"
