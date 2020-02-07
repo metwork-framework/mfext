@@ -169,6 +169,8 @@ fi
         {% include "nethard_profile" %}
         {% include "config_profile" %}
     fi
+    # Set LOGPROXY_LOG_DIRECTORY (default directory for logs)
+    export LOGPROXY_LOG_DIRECTORY="${MFMODULE_RUNTIME_HOME}/log"
 {% endif %}
 
 # A little kind of magic to deal with [log]/json_file=AUTO
