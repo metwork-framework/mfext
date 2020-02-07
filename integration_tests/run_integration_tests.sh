@@ -18,7 +18,7 @@ for rep in $list_rep; do
         fi
         for test in test*; do
             echo "Test" $test "in" $rep
-            for F in $(ls ${LOGPROXY_LOG_DIRECTORY}/*.log ${LOGPROXY_LOG_DIRECTORY}/*.stdout ${LOGPROXY_LOG_DIRECTORY}/*.stderr 2>/dev/null); do
+            for F in $(ls ${MFMODULE_RUNTIME_HOME}/log/*.log ${MFMODULE_RUNTIME_HOME}/log/*.stdout ${MFMODULE_RUNTIME_HOME}/log/*.stderr 2>/dev/null); do
                 truncate -s 0 "${F}"
             done
             if test $WRAPPER -eq 0; then
