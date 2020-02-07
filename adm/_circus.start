@@ -34,11 +34,11 @@ if test ${?} -eq 0; then
   exit 0
 fi
 
-echo "*****************************************************************************" >> "${LOGPROXY_LOG_DIRECTORY}/circus.log"
-echo "$(date) : STARTING circus" >> "${LOGPROXY_LOG_DIRECTORY}/circus.log"
-echo "*****************************************************************************" >> "${LOGPROXY_LOG_DIRECTORY}/circus.log"
+echo "*****************************************************************************" >> "${MFMODULE_RUNTIME_HOME}/log/circus.log"
+echo "$(date) : STARTING circus" >> "${MFMODULE_RUNTIME_HOME}/log/circus.log"
+echo "*****************************************************************************" >> "${MFMODULE_RUNTIME_HOME}/log/circus.log"
 export METWORK_LIST_PROCESSES_FORCE="${MFMODULE}"
-start_daemon "layer_wrapper --layers=python3_circus@mfext -- circusd ${CONFIG_FILE}" "${LOGPROXY_LOG_DIRECTORY}/circus.log" "${LOGPROXY_LOG_DIRECTORY}/circus.log"
+start_daemon "layer_wrapper --layers=python3_circus@mfext -- circusd ${CONFIG_FILE}" "${MFMODULE_RUNTIME_HOME}/log/circus.log" "${LOGPROXY_LOG_DIRECTORY}/circus.log"
 echo_ok
 
 exit 0
