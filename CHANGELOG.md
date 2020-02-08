@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- introduce automatic cleaning of tmp directory
+- use LOGPROXY_LOG_DIRECTORY env variable for log paths
 - update telegraf component
 - better interactive profile for mfext
 - remove python2/3_misc layers
