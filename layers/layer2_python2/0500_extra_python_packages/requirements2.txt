@@ -16,7 +16,7 @@ inotify-simple==1.1.8
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@40802be13aa14b3c94518fcc90295ac88997a1e5#egg=mflog
--e git+https://github.com/metwork-framework/mfutil.git@effa419b5b9511e8dd7a66a9b4c57216ad4727d3#egg=mfutil
+-e git+https://github.com/metwork-framework/mfutil.git@c49456f7b5d443c4521efcd3a7db0597e50eee9b#egg=mfutil
 netifaces==0.10.9
 psutil==5.6.3
 PyYAML==5.1.2
