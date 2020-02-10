@@ -4,22 +4,28 @@
 # https://github.com/monitoring-tools/telegraf-plugins/tree/master/netstat
 
 import os
+import sys
 import time
 import json
 import fnmatch
 from telegraf_unixsocket_client import TelegrafUnixSocketClient
 from mflog import getLogger
 from mfutil import BashWrapper
+import distro
 
 MFMODULE_RUNTIME_HOME = os.environ["MFMODULE_RUNTIME_HOME"]
 SOCKET_PATH = os.path.join(MFMODULE_RUNTIME_HOME, "var", "telegraf.socket")
 LOGGER = getLogger("telegraf_collector_metwork_module")
+MFEXT_VERSION = os.environ["MFEXT_VERSION"]
+MFMODULE_VERSION = os.environ["MFMODULE_VERSION"]
 MFMODULE = os.environ['MFMODULE']
 CMD = "list_metwork_processes.py --output-format=json --include-current-family"
 MONITORING_CMDLINE_PATTERNS = ['*telegraf*', '*list_metwork_processes*',
                                '*jsonlog2elasticsearch*',
                                '*jsonsyslog2elasticsearch*']
 IS_MONITORING_MODULE = (MFMODULE in ['MFSYSMON', 'MFADMIN'])
+IS_LINUX = sys.platform.startswith("linux")
+OS_NAME = distro.name(pretty=True) if IS_LINUX else "unknown"
 
 
 def is_cmdline_monitoring(cmdline):
@@ -52,14 +58,24 @@ def get_stats():
         for key in ('mem_percent', 'num_threads', 'cpu_percent', 'num_fds'):
             search_plugin = plugin if not plugin.startswith('#') else ''
             if plugin != '#monitoring#':
-                stats[plugin][key] = sum([x[key] for x in processes
-                                if x['plugin'] == search_plugin and
-                                not is_cmdline_monitoring(x['cmdline'])])
+                stats[plugin][key] = \
+                    sum([x[key] for x in processes
+                         if x['plugin'] == search_plugin and
+                         not is_cmdline_monitoring(x['cmdline'])])
             else:
-                stats[plugin][key] = sum([x[key] for x in processes
-                                if x['plugin'] == search_plugin and
-                                is_cmdline_monitoring(x['cmdline'])])
+                stats[plugin][key] = \
+                    sum([x[key] for x in processes
+                         if x['plugin'] == search_plugin and
+                         is_cmdline_monitoring(x['cmdline'])])
     return stats
+
+
+def get_versions():
+    return {
+        "mfext_version": MFEXT_VERSION,
+        "version": MFMODULE_VERSION,
+        "os_name": OS_NAME
+    }
 
 
 while True:
@@ -78,4 +94,8 @@ while True:
             msg = client.send_measurement("metwork_module", fields_dict,
                                           extra_tags={"plugin": plugin})
             LOGGER.debug("sended msg: %s" % msg)
+    versions = get_versions()
+    msg = client.send_measurement("metwork_version", versions,
+                                  extra_tags={"bypassbasicstats": "1"})
+    LOGGER.debug("sended msg: %s" % msg)
     client.close()
