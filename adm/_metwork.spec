@@ -264,11 +264,6 @@ rm -f mf*_link
         if test ${N} -eq 0; then
             echo "INFO: creating {{MFMODULE_LOWERCASE}} unix local user"
             useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
-            {% if MFMODULE == "MFDATA" %}
-                echo "INFO: creating upload unix local group"
-                useradd -M -d /home/{{MFMODULE_LOWERCASE}}/var/in -g metwork -s /sbin/nologin upload >/dev/null 2>&1 || true
-                chmod g+rx /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
-            {% endif %}
             rm -Rf /home/{{MFMODULE_LOWERCASE}}
             chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
         fi
