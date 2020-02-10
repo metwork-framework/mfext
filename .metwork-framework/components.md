@@ -53,6 +53,7 @@
 | [deploycron](https://github.com/monklof/deploycron) | custom | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python2 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
+| [distro](https://github.com/nir0s/distro) | 1.4.0 | monitoring |
 | [docutils](http://docutils.sourceforge.net/) | 0.15.2 | python3_devtools |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
 | [elasticsearch](https://github.com/elastic/elasticsearch-py) | 6.4.0 | monitoring |
@@ -275,4 +276,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(274 components)*
+*(275 components)*
