@@ -89,11 +89,11 @@ fix_system() {
   else
     DOCKER_MODE=0
   fi
-  if test -f "${MFEXT_HOME}/config/sysctl_metwork.conf"; then
+  if test -f "{{MFEXT_HOME}}/config/sysctl_metwork.conf"; then
     if test "${DOCKER_MODE}" = "0"; then
       if ! test -f "/etc/metwork.config.d/system/no_sysctl"; then
-        echo -n "System: applying ${MFEXT_HOME}/config/sysctl_metwork.conf... "
-        /sbin/sysctl -p "${MFEXT_HOME}/config/sysctl_metwork.conf" >/dev/null
+        echo -n "System: applying {{MFEXT_HOME}}/config/sysctl_metwork.conf... "
+        /sbin/sysctl -p "{{MFEXT_HOME}}/config/sysctl_metwork.conf" >/dev/null
         if test $? -eq 0; then
           echo "Ok"
         else
