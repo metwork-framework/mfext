@@ -4,6 +4,9 @@
 ## [Unreleased]
 
 ### New Features
+- remove upload system account by default
+- add metwork module version and os name/version
+- add distro python3 component
 - introduce automatic cleaning of tmp directory
 - use LOGPROXY_LOG_DIRECTORY env variable for log paths
 - update telegraf component
@@ -56,6 +59,7 @@
 
 
 ### Bug Fixes
+- custom sysctl.conf was not applied during startup
 - fix pip usage inside plugin_env (and change cwd for plugin_home)
 - fix nasty warning in mfdata plugin_env when admin is set
 - fix automatic restart
