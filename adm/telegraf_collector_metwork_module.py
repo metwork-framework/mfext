@@ -11,6 +11,7 @@ import fnmatch
 from telegraf_unixsocket_client import TelegrafUnixSocketClient
 from mflog import getLogger
 from mfutil import BashWrapper
+import mfutil.plugins
 import distro
 
 MFMODULE_RUNTIME_HOME = os.environ["MFMODULE_RUNTIME_HOME"]
@@ -78,6 +79,16 @@ def get_versions():
     }
 
 
+def get_plugins():
+    plugins = {}
+    if MFMODULE in ("MFSERV", "MFDATA", "MFBASE"):
+        try:
+            plugins = mfutil.plugins.get_installed_plugins()
+        except Exception:
+            pass
+    return plugins
+
+
 while True:
     LOGGER.debug("waiting 10s...")
     time.sleep(10)
@@ -98,4 +109,13 @@ while True:
     msg = client.send_measurement("metwork_version", versions,
                                   extra_tags={"bypassbasicstats": "1"})
     LOGGER.debug("sended msg: %s" % msg)
+    plugins = get_plugins()
+    for plugin in plugins:
+        tags = {"plugin_name": plugin["name"],
+                "bypassbasicstats": "1"}
+        msg = client.send_measurement("metwork_plugin",
+                                      {"version": plugin["version"],
+                                       "release": plugin["release"]},
+                                      extra_tags=tags)
+        LOGGER.debug("sended msg: %s" % msg)
     client.close()
