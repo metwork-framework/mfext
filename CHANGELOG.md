@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- collect and forward metwork plugin versions
+- increase sysctl net.ipv4.tcp_max_syn_backlog
 - remove upload system account by default
 - add metwork module version and os name/version
 - add distro python3 component
