@@ -5,6 +5,7 @@
 
 ### New Features
 - cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
 
 
 ### Bug Fixes
