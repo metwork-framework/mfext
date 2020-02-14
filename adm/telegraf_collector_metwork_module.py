@@ -89,6 +89,23 @@ def get_plugins():
     return plugins
 
 
+def get_status():
+    status = "unknown"
+    status_code = 0
+    try:
+        with open("%s/var/status" % MFMODULE_RUNTIME_HOME, "r") as f:
+            status = f.read().strip().lower()
+        if status in ('running',):
+            status_code = 2
+        elif status in ('error', 'unknown'):
+            status_code = 0
+        else:
+            status_code = 1
+    except Exception:
+        pass
+    return {"status": status, "status_code": status_code}
+
+
 while True:
     LOGGER.debug("waiting 10s...")
     time.sleep(10)
@@ -106,8 +123,17 @@ while True:
                                           extra_tags={"plugin": plugin})
             LOGGER.debug("sended msg: %s" % msg)
     versions = get_versions()
-    msg = client.send_measurement("metwork_version", versions,
-                                  extra_tags={"bypassbasicstats": "1"})
+    status = get_status()
+    msg = client.send_measurement(
+        "metwork_version", {"version": versions["mfext_version"],
+                            "status": "ok"},
+        extra_tags={"bypassbasicstats": "1", "modname": "mfext"})
+    LOGGER.debug("sended msg: %s" % msg)
+    msg = client.send_measurement(
+        "metwork_version", {"version": versions["version"],
+                            "status": status["status"],
+                            "status_code": status["status_code"]},
+        extra_tags={"bypassbasicstats": "1", "modname": MFMODULE.lower()})
     LOGGER.debug("sended msg: %s" % msg)
     plugins = get_plugins()
     for plugin in plugins:
