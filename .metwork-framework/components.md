@@ -205,8 +205,8 @@
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.1.8 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
-| [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python2 |
-| [requests-toolbelt](https://toolbelt.readthedocs.org) | 0.9.1 | python3 |
+| [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python2 |
+| [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python2 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
 | [rpm](http://rpm.org) | 4.9.1.3 | rpm |

@@ -95,6 +95,13 @@ fi
 rm -f ${MFMODULE_RUNTIME_HOME}/var/*.socket >/dev/null 2>&1
 
 echo STOPPED >${MFMODULE_RUNTIME_HOME}/var/status
+{% if MFMODULE == "MFADMIN" %}
+( timeout 10s send_stopped_state.py & ) >/dev/null 2>&1
+{% else %}
+    if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}}{% endraw %}" != "null"; then
+        ( timeout 10s send_stopped_state.py & ) >/dev/null 2>&1
+    fi
+{% endif %}
 
 echo " "
 echo " "
