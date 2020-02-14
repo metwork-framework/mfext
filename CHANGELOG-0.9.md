@@ -10,6 +10,7 @@
 
 ### Bug Fixes
 - fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
 
 
 
