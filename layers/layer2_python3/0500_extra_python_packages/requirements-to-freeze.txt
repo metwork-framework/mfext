@@ -12,7 +12,7 @@ structlog
 psutil
 redis
 requests
-requests-toolbelt
+requests_unixsocket
 six
 bash
 filelock
