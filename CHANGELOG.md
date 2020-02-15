@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- publish metwork module status on mfadmin
+- python requests-toolbelt component replaced by requests-unixsocket
 - collect and forward metwork plugin versions
 - increase sysctl net.ipv4.tcp_max_syn_backlog
 - remove upload system account by default
