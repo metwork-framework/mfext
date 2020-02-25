@@ -95,6 +95,11 @@ echo_bold "${LINE}"
 echo_bold "${HEADER}"
 echo "  "
 
+{% if MFMODULE != "MFADMIN" %}
+    if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}}{% endraw %}" != "null"; then
+        ( timeout 10s _send_state.py starting & ) >/dev/null 2>&1
+    fi
+{% endif %}
 echo STARTING >${MFMODULE_RUNTIME_HOME}/var/status
 
 {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
