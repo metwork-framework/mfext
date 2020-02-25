@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if test "${1:-}" = "--help"; then
-    echo "usage: python3 [PYTHON_ARGS]"
-    echo "  => launch a python3 command inside a python3 env (even if we are currently in a python2 env)"
-    exit 0
-fi
-layer_wrapper --layers="python3_core@mfext,-python3@mfext,-python3${MODULE_LOWERCASE}" -- python "$@"
