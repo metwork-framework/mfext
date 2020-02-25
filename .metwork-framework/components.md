@@ -77,7 +77,7 @@
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.5 | python2 |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.5 | python3 |
-| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.4 | python3_circus |
+| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.5 | python3_circus |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
