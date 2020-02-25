@@ -126,12 +126,14 @@ while True:
     status = get_status()
     msg = client.send_measurement(
         "metwork_version", {"version": versions["mfext_version"],
-                            "status": "ok"},
+                            "status": "ok",
+                            "os_name": versions["os_name"]},
         extra_tags={"bypassbasicstats": "1", "modname": "mfext"})
     LOGGER.debug("sended msg: %s" % msg)
     msg = client.send_measurement(
         "metwork_version", {"version": versions["version"],
                             "status": status["status"],
+                            "os_name": versions["os_name"],
                             "status_code": status["status_code"]},
         extra_tags={"bypassbasicstats": "1", "modname": MFMODULE.lower()})
     LOGGER.debug("sended msg: %s" % msg)

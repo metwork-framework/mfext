@@ -15,13 +15,14 @@ diskcache==3.1.1
 -e git+https://github.com/metwork-framework/envtpl.git@af95d6ca9535ea958dcac3a79a3fd139d9f828ff#egg=envtpl
 filelock==3.0.12
 future==0.17.1
+gitignore-parser==0.0.5
 idna==2.8
 inotify-simple==1.1.8
 Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@40802be13aa14b3c94518fcc90295ac88997a1e5#egg=mflog
--e git+https://github.com/metwork-framework/mfutil.git@c49456f7b5d443c4521efcd3a7db0597e50eee9b#egg=mfutil
+-e git+https://github.com/metwork-framework/mfutil.git@bc2fc42f9a5e903bc054bd13ccbd23a6bfb31793#egg=mfutil
 netifaces==0.10.9
 -e git+https://github.com/metwork-framework/opinionated_configparser.git@a737a27e35b7f7e8ce00b51e6f661cd2f036a9b0#egg=opinionated_configparser
 poyo==0.4.2

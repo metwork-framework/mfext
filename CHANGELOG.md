@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- update log_proxy to get dot control files
 - publish metwork module status on mfadmin
 - python requests-toolbelt component replaced by requests-unixsocket
 - collect and forward metwork plugin versions
