@@ -50,6 +50,13 @@ echo_bold "${LINE}"
 echo_bold "${HEADER}"
 echo "  "
 
+{% if MFMODULE != "MFADMIN" %}
+    if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}}{% endraw %}" != "null"; then
+        ( timeout 10s _send_state.py stopping & ) >/dev/null 2>&1
+    fi
+{% else %}
+    ( timeout 10s _send_state.py stopping & ) >/dev/null 2>&1
+{% endif %}
 echo STOPPING >${MFMODULE_RUNTIME_HOME}/var/status
 
 if test "${KEEPCRON}" = "0"; then
@@ -95,11 +102,9 @@ fi
 rm -f ${MFMODULE_RUNTIME_HOME}/var/*.socket >/dev/null 2>&1
 
 echo STOPPED >${MFMODULE_RUNTIME_HOME}/var/status
-{% if MFMODULE == "MFADMIN" %}
-( timeout 10s send_stopped_state.py & ) >/dev/null 2>&1
-{% else %}
+{% if MFMODULE != "MFADMIN" %}
     if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}}{% endraw %}" != "null"; then
-        ( timeout 10s send_stopped_state.py & ) >/dev/null 2>&1
+        ( timeout 10s _send_state.py stopped & ) >/dev/null 2>&1
     fi
 {% endif %}
 
