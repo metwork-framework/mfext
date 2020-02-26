@@ -159,6 +159,7 @@
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python2_core |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
+| [pathlib](https://pathlib.readthedocs.org/) | 1.0.1 | python2 |
 | [pathlib2](https://github.com/mcmtroffaes/pathlib2) | 2.3.5 | python2_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.7.0 | python3_devtools |
 | [pcre](http://www.pcre.org) | 8.43 | core |
@@ -278,4 +279,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(277 components)*
+*(278 components)*
