@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add possibility to exclude files when releasing a plugin and update mfutil
 - update log_proxy to get dot control files
 - publish metwork module status on mfadmin
 - python requests-toolbelt component replaced by requests-unixsocket
