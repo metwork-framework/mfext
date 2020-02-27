@@ -10,8 +10,28 @@ TARGET_LAYER_PROFILES := $(addprefix $(MFMODULE_HOME)/opt/$(LAYER_NAME)/,$(LAYER
 DHASH_IGNORES := $(wildcard dhash_ignore_*)
 TARGET_DHASH_IGNORES := $(addprefix $(MFMODULE_HOME)/opt/$(LAYER_NAME)/.,$(DHASH_IGNORES))
 
+BYPASS = 0
+space = $(empty) $(empty)
+MISSING_LAYERS = 
+DISPO_LAYERS = 
+
+ifneq ("$(wildcard .bypass_build_if_missing)","")
+    $(foreach layer, $(shell ls ${MFEXT_HOME}/opt) root, $(eval DISPO_LAYERS += ${layer}@mfext))
+    $(if $(findstring ${MFMODULE_LOWERCASE},${MFEXT_HOME}),,$(foreach layer, $(shell ls ${MFMODULE_HOME}/opt) root, $(eval DISPO_LAYERS += ${layer}@${MFMODULE_LOWERCASE})))
+    BYPASS_LAYERS = $(shell cat .bypass_build_if_missing)
+    $(foreach layer, ${BYPASS_LAYERS}, $(if $(findstring ${space}${layer},${DISPO_LAYERS}),,$(eval BYPASS = 1);$(eval MISSING_LAYERS += ${layer})))
+endif
+
+ifeq ($(BYPASS), 0)
 
 all: before layer after
+
+else
+
+all:
+    $(info layer ${LAYER_NAME}@${MFMODULE_LOWERCASE} not built because of missing layers${MISSING_LAYERS})
+
+endif
 
 layer:
 	if ! test -f cache/hit; then \
