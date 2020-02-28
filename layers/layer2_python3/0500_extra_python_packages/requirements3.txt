@@ -15,7 +15,7 @@ diskcache==3.1.1
 -e git+https://github.com/metwork-framework/envtpl.git@af95d6ca9535ea958dcac3a79a3fd139d9f828ff#egg=envtpl
 filelock==3.0.12
 future==0.17.1
-gitignore-parser==0.0.5
+gitignore-parser==0.0.6
 idna==2.8
 inotify-simple==1.1.8
 Jinja2==2.10.1
