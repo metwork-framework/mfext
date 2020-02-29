@@ -3,12 +3,17 @@ include ../adm/root.mk
 CHANGELOGS_SOURCES=$(shell cd .. && ls CHANGELOG-*.md 2>/dev/null)
 CHANGELOGS_TARGETS=$(addprefix 900-changelogs/, $(CHANGELOGS_SOURCES))
 
-all: $(CHANGELOGS_TARGETS) 850-components.md
+CONFIG_INI_TARGET=
+
+all: $(CHANGELOGS_TARGETS) 850-reference/100-components.md $(CONFIG_INI_TARGET)
 
 900-changelogs/%: ../%
 	cat $< |sed 's/^# \(.*\) CHANGELOG$$/# \1/g' >$@
 
-850-components.md: ../.metwork-framework/components.md
+850-reference/config.ini: $(MFMODULE_HOME)/config/config.ini
+	cp -f $< $@
+
+850-reference/100-components.md: ../.metwork-framework/components.md
 	rm -f $@
 	echo "# Available components" >$@
 	echo >>$@
@@ -19,4 +24,6 @@ all: $(CHANGELOGS_TARGETS) 850-components.md
 
 clean:
 	rm -f 900-changelogs/*.md
+	rm -f 850-reference/100-components.md
+	rm -f 850-reference/config.ini
 	rm -f 850-components.md

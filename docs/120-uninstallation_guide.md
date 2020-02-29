@@ -5,14 +5,17 @@
 To uninstall mfext metwork module, use the following command (as `root` user):
 
 ```console tab="CentOS/Fedora"
+
 yum remove "metwork-mfext*"
 ```
 
 ```console tab="Mageia"
+
 urpme "metwork-mfext*"
 ```
 
 ```console tab="SUSE"
+
 zypper remove "metwork-mfext*"
 ```
 
