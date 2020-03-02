@@ -1,6 +1,13 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
+ifeq ($(PROXY_SET),0)
+        unexport http_proxy
+        unexport https_proxy
+        unexport HTTP_PROXY
+        unexport HTTPS_PROXY
+endif
+
 export NAME=bjoern
 export VERSION=metwork-20190515
 export EXTENSION=zip
