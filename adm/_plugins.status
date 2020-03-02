@@ -5,11 +5,16 @@ import time
 import os
 from mfutil import BashWrapper, get_tmp_filepath
 import psutil
+import requests
 from datetime import datetime
 from mfutil.plugins import get_installed_plugins, \
     get_layer_home_from_plugin_name
 from mfutil.cli import echo_ok, echo_warning, echo_running, echo_bold
 from mfext.circus import MetWorkCircusClient
+from mfext.plugins_common import get_plugin_parser
+
+MFMODULE = os.environ.get("MFMODULE", "MFEXT")
+NGINX_PORT = int(os.environ.get("%s_NGINX_PORT" % MFMODULE, 0))
 
 
 def check_pids(pids):
@@ -103,6 +108,47 @@ for plugin_dict in plugins:
             echo_ok()
         else:
             res = False
+    if plugin_res:
+        parser = get_plugin_parser(plugin_home, plugin_name,
+                                   ignore_sections_starting_with=None)
+        if parser.has_option("__advanced", "disable_nginx_conf"):
+            if parser.getboolean("__advanced", "disable_nginx_conf"):
+                continue
+        sections = [x for x in parser.sections() if x.startswith("app_")]
+        for section in sections:
+            endpoint = parser.get(section, "http_test_endpoint",
+                                  fallback="null").strip()
+            if endpoint == "null":
+                continue
+            expected_status_code = \
+                parser.getint(section, "http_test_expected_status_code")
+            expected_body = \
+                parser.get(section, "http_test_expected_body")
+            timeout = \
+                parser.getint(section, "http_test_timeout")
+            echo_running("- Checking plugin: %s (http)..." % plugin_name)
+            url = "http://127.0.0.1:%i%s" % (NGINX_PORT, endpoint)
+            status = False
+            before = datetime.now()
+            while ((datetime.now() - before).total_seconds() < timeout):
+                try:
+                    t = timeout - (datetime.now() - before).total_seconds()
+                    if t < 1:
+                        t = 1
+                    x = requests.get(url, timeout=t)
+                    if x.status_code == expected_status_code:
+                        if expected_body in x.text:
+                            status = True
+                            break
+                except Exception:
+                    pass
+            if status is False:
+                echo_warning()
+                echo_bold("=> configured http test: %s  is failing" % url)
+                plugin_res = False
+                res = False
+            else:
+                echo_ok()
     if plugin_res and os.path.exists("%s/bin/plugin.status" % plugin_home):
         echo_running("- Checking plugin: %s (custom)..." % plugin_name)
         status_log = get_tmp_filepath(prefix="plugins_status_")
