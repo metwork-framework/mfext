@@ -9,6 +9,7 @@
 | [Babel](http://babel.pocoo.org/) | 2.8.0 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
+| [bjoern](https://github.com/thefab/bjoern/tree/metwork) | metwork-20190515 | python3 |
 | [black](https://github.com/psf/black) | 19.10b0 | python3_devtools |
 | [c-ares](https://c-ares.haxx.se/) | 1.15.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
