@@ -27,7 +27,7 @@ if test -d "${MFMODULE_RUNTIME_HOME}/var/plugins"; then
         if test -s "${BDIR}/crontab"; then
             echo "##### BEGINNING OF METWORK ${MFMODULE} PLUGIN ${NAME} CRONTAB #####"
             cat "${BDIR}/crontab" | envtpl --reduce-multi-blank-lines
-            echo -e "\n##### END OF METWORK ${MFMODULE} PLUGIN ${NAME} CRONTAB #####"
+            echo -e "\\n##### END OF METWORK ${MFMODULE} PLUGIN ${NAME} CRONTAB #####"
         fi
     done
 fi
