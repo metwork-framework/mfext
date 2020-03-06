@@ -66,6 +66,7 @@
 
 
 ### Bug Fixes
+- fix issue 745 (problem with blank lines while editing crontab)
 - custom sysctl.conf was not applied during startup
 - fix pip usage inside plugin_env (and change cwd for plugin_home)
 - fix nasty warning in mfdata plugin_env when admin is set
