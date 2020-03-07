@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- cronwrapper update
 - custom prompt for virtualenv
 - add possibility to exclude files when releasing a plugin and update mfutil
 - update log_proxy to get dot control files
