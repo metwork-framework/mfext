@@ -87,7 +87,7 @@ def make_new_circus_conf():
 
 def make_new_crontab_conf():
     new_crontab_conf = "%s/tmp/tmp_crontab_conf2" % MFMODULE_RUNTIME_HOME
-    cmd = "_make_crontab.sh >%s" % new_crontab_conf
+    cmd = "_make_crontab.py >%s" % new_crontab_conf
     BashWrapperOrRaise(cmd)
     return (new_crontab_conf, md5sumfile(new_crontab_conf))
 
