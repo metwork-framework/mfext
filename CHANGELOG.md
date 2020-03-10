@@ -4,6 +4,8 @@
 ## [Unreleased]
 
 ### New Features
+- mflog update
+- we can use *_CURRENT_PLUGIN_* variables in plugin crontabs
 - cronwrapper update
 - custom prompt for virtualenv
 - add possibility to exclude files when releasing a plugin and update mfutil
