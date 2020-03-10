@@ -165,6 +165,9 @@ fi
             fi
         fi
     fi
+    if ! test -f "${MFMODULE_RUNTIME_HOME}/config/mflog_override.conf"; then
+        cat "${MFEXT_HOME}/share/templates/mflog_override.conf" |envtpl --reduce-multi-blank-lines >"${MFMODULE_RUNTIME_HOME}/config/mflog_override.conf"
+    fi
     if test "${METWORK_BOOTSTRAP_MODE}" != "1"; then
         {% include "nethard_profile" %}
         {% include "config_profile" %}
@@ -189,6 +192,7 @@ if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_NUMBER_OF_ROTATED_FILES{% raw %
 fi
 
 {% if MFMODULE != "MFEXT" %}
+# MFLOG configuration
 export MFLOG_EXTRA_CONTEXT_FUNC="mfext.mflog_addon.extra_context"
 export MFLOG_JSON_ONLY_KEYS="plugin"
 export MFLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
@@ -202,6 +206,7 @@ if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADMIN_FLAG{% raw %}:-}{% endr
 fi
 export MFLOG_SYSLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADMIN_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
 export MFLOG_SYSLOG_FORMAT="json"
+export MFLOG_MINIMAL_LEVEL_OVERRIDE_FILES="/etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/config/mflog_override.conf;${MFMODULE_RUNTIME_HOME}/config/mflog_override.conf;${MFMODULE_HOME}/config/mflog_override.conf;${MFEXT_HOME}/config/mflog_override.conf"
 {% endif %}
 
 {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
