@@ -3,7 +3,7 @@
 import os
 import sys
 from mflog import get_logger
-from mfutil import BashWrapper
+from mfutil import BashWrapper, get_tmp_filepath
 from mfutil.plugins import get_installed_plugins
 
 MFMODULE_HOME = os.environ.get("MFMODULE_HOME", None)
@@ -43,15 +43,23 @@ for plugin in plugins:
         continue
     x = BashWrapper(
         f"cat {plugin['home']}/crontab "
+        "| grep -v '^#' |grep [^[:space:]] "
         f"|plugin_wrapper {plugin['name']} -- "
         "envtpl --reduce-multi-blank-lines"
     )
     if not x:
+        tmpfile = get_tmp_filepath(prefix="crontabdebug")
+        with open(tmpfile, "w") as f:
+            f.write("***** plugin %s crontab error details *****\n\n" %
+                    plugin['name'])
+            f.write("%s\n" % x)
         LOGGER.warning(f"problem with {plugin['home']}/crontab "
-                       "file: bad syntax? => ignoring it")
+                       "file: bad syntax? => ignoring it (details in %s)",
+                       tmpfile)
         continue
-    print(f"##### BEGINNING OF METWORK {MFMODULE} "
-          f"PLUGIN {plugin['name']} CRONTAB #####")
-    print(x.stdout)
-    print(f"##### END OF METWORK {MFMODULE} "
-          f"PLUGIN {plugin['name']} CRONTAB #####")
+    if len(x.stdout.strip()) > 0:
+        print(f"##### BEGINNING OF METWORK {MFMODULE} "
+              f"PLUGIN {plugin['name']} CRONTAB #####")
+        print(x.stdout)
+        print(f"##### END OF METWORK {MFMODULE} "
+              f"PLUGIN {plugin['name']} CRONTAB #####")
