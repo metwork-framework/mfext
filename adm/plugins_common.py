@@ -1,10 +1,14 @@
 import os
 import envtpl
 from opinionated_configparser import OpinionatedConfigParser
+from mfext.ini_to_env import make_env_var_dict
+from mfutil.plugins import layerapi2_label_to_plugin_name
+from mfutil.layerapi2 import LayerApi2Wrapper
 
 MFMODULE_RUNTIME_HOME = os.environ['MFMODULE_RUNTIME_HOME']
 MFEXT_HOME = os.environ["MFEXT_HOME"]
 MFMODULE = os.environ['MFMODULE']
+MFMODULE_LOWERCASE = os.environ['MFMODULE_LOWERCASE']
 if MFMODULE == "MFSERV":
     DEPRECATED_IGNORED_GENERAL_OPTIONS = ["extra_nginx_conf_filename", "name"]
     DEPRECATED_IGNORED_APP_OPTIONS = ["proxy_timeout", "graceful_timeout"]
@@ -83,71 +87,107 @@ def get_cmd_and_args(cmd_and_args, plugin_conf, app_conf,
     )
 
 
-def get_rlimit_conf(parser, section):
+def get_plugin_env_prefix(plugin_name):
+    return "%s_PLUGIN_%s" % (MFMODULE, plugin_name.upper())
+
+
+def get_plugin_env(plugin_name, section, key):
+    return "%s_%s_%s" % (get_plugin_env_prefix(plugin_name), section.upper(),
+                         key.upper())
+
+
+def get_plugin_env_value_or_config(parser, section, plugin_name, key,
+                                   default=None):
+    env = get_plugin_env(plugin_name, section, key)
+    if env is os.environ:
+        return os.environ[env]
+    if parser.has_option(section, key):
+        return parser.get(section, key)
+    return default
+
+
+def get_rlimit_conf(parser, section, plugin_name):
+    # FIXME: in 0.11, remove reading from configuration file
     conf = {}
-    if parser.has_option(section, "rlimit_as"):
-        conf["as"] = parser.getint(section, "rlimit_as")
-    if parser.has_option(section, "rlimit_nofile"):
-        conf["nofile"] = parser.getint(section, "rlimit_nofile")
-    if parser.has_option(section, "rlimit_nproc"):
-        conf["nproc"] = parser.getint(section, "rlimit_nproc")
-    if parser.has_option(section, "rlimit_stack"):
-        conf["stack"] = parser.getint(section, "rlimit_stack")
-    if parser.has_option(section, "rlimit_core"):
-        conf["core"] = parser.getint(section, "rlimit_core")
-    if parser.has_option(section, "rlimit_fsize"):
-        conf["fsize"] = parser.getint(section, "rlimit_fsize")
+    for key1, key2 in [("as", "rlimit_as"), ("nofile", "rlimit_nofile"),
+                       ("nproc", "rlimit_nproc"), ("stack", "rlimit_stack"),
+                       ("core", "rlimit_core"), ("fsize", "rlimit_fsize")]:
+        tmp = get_plugin_env_value_or_config(parser, section, plugin_name,
+                                             key2)
+        if tmp is not None:
+            conf[key1] = int(tmp)
     return conf
 
 
-def get_split_conf(logger, parser, section):
+def get_split_conf(logger, parser, section, plugin_name):
+    # FIXME: in 0.11, remove reading from configuration file
     split_stdout_stderr = False
-    if parser.has_option(section, "log_split_stdout_stderr"):
-        tmp = parser.get(section, "log_split_stdout_stderr")
-        if tmp == "AUTO":
-            global_conf = \
-                os.environ["%s_LOG_TRY_TO_SPLIT_STDOUT_STDERR" % MFMODULE]
-            split_stdout_stderr = (global_conf == "1")
-        elif tmp == "1":
-            split_stdout_stderr = True
-        elif tmp == "0":
-            split_stdout_stderr = False
-        else:
-            logger.warning("invalid value for log_split_stdout_stderr: "
-                           "%s => ignoring" % tmp)
     split_multiple_workers = False
-    if parser.has_option(section, "log_split_multiple_workers"):
-        tmp = parser.get(section, "log_split_multiple_workers")
-        if tmp == "AUTO":
-            global_conf = \
-                os.environ["%s_LOG_TRY_TO_SPLIT_MULTIPLE_WORKERS" % MFMODULE]
-            split_multiple_workers = (global_conf == "1")
-        elif tmp == "1":
-            split_multiple_workers = True
-        elif tmp == "0":
-            split_multiple_workers = False
-        else:
-            logger.warning("invalid value for log_split_multiple_workers: "
-                           "%s => ignoring" % tmp)
+    tmp = get_plugin_env_value_or_config(parser, section, plugin_name,
+                                         "log_split_stdout_stderr")
+    if tmp is None:
+        if parser.has_option(section, "log_split_stdout_stderr"):
+            tmp = parser.get(section, "log_split_stdout_stderr")
+    if tmp == "AUTO":
+        global_conf = \
+            os.environ["%s_LOG_TRY_TO_SPLIT_STDOUT_STDERR" % MFMODULE]
+        split_stdout_stderr = (global_conf == "1")
+    elif tmp == "1":
+        split_stdout_stderr = True
+    elif tmp == "0":
+        split_stdout_stderr = False
+    else:
+        logger.warning("invalid value for log_split_stdout_stderr: "
+                       "%s => ignoring" % tmp)
+    tmp = get_plugin_env_value_or_config(parser, section, plugin_name,
+                                         "log_split_multiple_workers")
+    if tmp is None:
+        if parser.has_option(section, "log_split_multiple_workers"):
+            tmp = parser.get(section, "log_split_multiple_workers")
+    if tmp == "AUTO":
+        global_conf = \
+            os.environ["%s_LOG_TRY_TO_SPLIT_MULTIPLE_WORKERS" % MFMODULE]
+        split_multiple_workers = (global_conf == "1")
+    elif tmp == "1":
+        split_multiple_workers = True
+    elif tmp == "0":
+        split_multiple_workers = False
+    else:
+        logger.warning("invalid value for log_split_multiple_workers: "
+                       "%s => ignoring" % tmp)
     return {
         "split_stdout_stderr": split_stdout_stderr,
         "split_multiple_workers": split_multiple_workers
     }
 
 
-def get_plugin_format_version(logger, parser):
-    if not parser.has_option("general", "__version"):
-        if logger is not None:
+def get_plugin_format_version(logger, plugin_directory, plugin_name):
+    try:
+        with open("%s/.plugin_format_version" % plugin_directory, "r") as f:
+            c = f.read().strip()
+        tmp = c.split('.')
+        res = []
+        for t in tmp:
+            try:
+                res.append(int(t))
+            except Exception:
+                res.append(9999)
+        return res
+    except Exception:
+        if logger:
             logger.warning("Deprecated config.ini format => "
                            "it's still ok for this release but it won't work "
                            "anymore with mfserv 0.11 release")
-        return 0
-    else:
-        return int(parser.get("general", "__version"))
+        return [0, 0, 0]
 
 
-def get_workers(logger, parser, section):
+def get_workers(logger, parser, section, plugin_name):
+    # FIXME: in 0.11, remove reading from configuration file
     workers = 0
+    tmp = get_plugin_env_value_or_config(parser, section, plugin_name,
+                                         "numprocesses")
+    if tmp is not None:
+        return int(tmp)
     if parser.has_option(section, "numprocesses"):
         workers = \
             int(envtpl.render_string(parser.get(section, "numprocesses"),
@@ -235,20 +275,31 @@ def test_deprecated_options(logger, parser, section=None):
 def get_extra_daemon_conf(logger, parser, section, extra_daemon, plugin_conf):
     plugin_name = plugin_conf["name"]
     extra_conf = {}
-    extra_conf.update(get_split_conf(logger, parser, section))
-    workers = get_workers(logger, parser, section)
+    extra_conf.update(get_split_conf(logger, parser, section, plugin_name))
+    workers = get_workers(logger, parser, section, plugin_name)
     extra_conf["numprocesses"] = workers
     cmd_and_args = parser.get(section, "cmd_and_args")
     extra_conf["name"] = \
         "extra_daemon_%s_for_plugin_%s" % (extra_daemon, plugin_name)
-    extra_conf["rlimits"] = get_rlimit_conf(parser, section)
+    extra_conf["rlimits"] = get_rlimit_conf(parser, section, plugin_name)
     extra_conf["graceful_timeout"] = 30
     extra_conf["max_age"] = 0
-    if parser.has_option(section, "graceful_timeout"):
-        extra_conf["graceful_timeout"] = \
-            parser.getint(section, "graceful_timeout")
-    if parser.has_option(section, "max_age"):
-        extra_conf["max_age"] = parser.getint(section, "max_age")
+    # FIXME: in 0.11, remove reading from configuration file
+    tmp = get_plugin_env_value_or_config(parser, section, plugin_name,
+                                         "max_age")
+    if tmp is not None:
+        extra_conf["max_age"] = int(tmp)
+    else:
+        if parser.has_option(section, "max_age"):
+            extra_conf["max_age"] = parser.getint(section, "max_age")
+    tmp = get_plugin_env_value_or_config(parser, section, plugin_name,
+                                         "graceful_timeout")
+    if tmp is not None:
+        extra_conf["graceful_timeout"] = int(tmp)
+    else:
+        if parser.has_option(section, "graceful_timeout"):
+            extra_conf["graceful_timeout"] = \
+                parser.getint(section, "graceful_timeout")
     extra_conf["cmd_args"] = get_cmd_and_args(cmd_and_args, plugin_conf,
                                               extra_conf, False)
     return extra_conf
@@ -281,18 +332,82 @@ def get_redis_service_extra_conf(logger, parser, plugin_conf):
     return extra_conf
 
 
+def _get_plugin_env_dict(plugin_home, plugin_name):
+    # FIXME: remove external_plugins paths in 0.11
+    env_var_dict = {}
+    if get_plugin_format_version(None, plugin_home, plugin_name) >= [0, 10, 0]:
+        paths = [
+            "%s/%s.ini" % (plugin_home, "config"),
+            "%s/config/external_plugins/%s.ini" % (MFMODULE_RUNTIME_HOME,
+                                                   plugin_name),
+            "%s/config/plugins/%s.ini" % (MFMODULE_RUNTIME_HOME, plugin_name),
+            "/etc/metwork.config.d/%s/external_plugins/%s.ini" %
+            (MFMODULE_LOWERCASE, plugin_name),
+            "/etc/metwork.config.d/%s/plugins/%s.ini" %
+            (MFMODULE_LOWERCASE, plugin_name)
+        ]
+        env_var_dict = make_env_var_dict(
+            None,
+            "%s_PLUGIN_%s" % (MFMODULE, plugin_name.upper()),
+            paths,
+            legacy_env=False, legacy_file_inclusion=False,
+            generation_time=False, resolve=True
+        )
+    env_var_dict["%s_CURRENT_PLUGIN_NAME" % MFMODULE] = plugin_name
+    env_var_dict["%s_CURRENT_PLUGIN_DIR" % MFMODULE] = plugin_home
+    env_var_dict["%s_CURRENT_PLUGIN_LABEL" % MFMODULE] = \
+        "plugin_%s@%s" % (plugin_name, MFMODULE_LOWERCASE)
+    return env_var_dict
+
+
+def get_plugin_env_dict(plugin_home, plugin_name):
+    lines = []
+    res = {}
+    try:
+        with open("%s/.layerapi2_dependencies" % plugin_home, "r") as f:
+            lines = f.readlines()
+    except Exception:
+        pass
+    for line in lines:
+        tmp = line.strip()
+        if tmp.startswith('-'):
+            tmp = tmp[1:]
+        if tmp.startswith("plugin_"):
+            home = LayerApi2Wrapper.get_layer_home(tmp)
+            name = get_plugin_name_from_plugin_home(home)
+            if home and name:
+                res.update(get_plugin_env_dict(home, name))
+    res.update(_get_plugin_env_dict(plugin_home, plugin_name))
+    return res
+
+
+def set_plugin_env(plugin_home, plugin_name):
+    env_var_dict = get_plugin_env_dict(plugin_home, plugin_name)
+    for k, v in env_var_dict.items():
+        os.environ[k] = v
+
+
+def get_plugin_name_from_plugin_home(plugin_home):
+    try:
+        with open(os.path.join(plugin_home, ".layerapi2_label"), "r") as f:
+            label = f.read().strip()
+    except Exception:
+        return None
+    try:
+        plugin_name = layerapi2_label_to_plugin_name(label)
+    except Exception:
+        return None
+    return plugin_name
+
+
 def get_plugin_parser(plugin_home, plugin_name, **kwargs):
     config_ini = os.path.join(plugin_home, "config.ini")
-    metadata_ini = os.path.join(plugin_home, "metadata.ini")
-    plugin_ini = os.path.join(plugin_home, plugin_name + ".ini")
     parser = OpinionatedConfigParser(**kwargs)
+    # FIXME: remove __ special handling
+    parser.optionxform = lambda x: x[1:].lower() \
+        if x.startswith('_') and not x.startswith('__') else x.lower()
     if os.path.exists(config_ini):
         parser.read(config_ini)
         return parser
-    if not os.path.exists(metadata_ini) or not os.path.exists(plugin_ini):
-        raise Exception("can't find %s and %s "
-                        "in plugin directory: %s => broken plugin?" %
-                        (metadata_ini, plugin_ini, plugin_home))
-    parser.read(metadata_ini)
-    parser.read(plugin_ini)
-    return parser
+    raise Exception("can't find config.ini file in plugin directory: %s "
+                    "=> broken plugin?" % plugin_home)

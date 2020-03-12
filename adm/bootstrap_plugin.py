@@ -75,7 +75,8 @@ if b is False:
     print("Validation error: %s" % msg)
     parser.exit(1)
 
-extra_context = {"name": args.plugin}
+extra_context = {"name": args.plugin,
+                 "MFMODULE_VERSION": os.environ["MFMODULE_VERSION"]}
 res = cookiecutter(template_path, extra_context=extra_context,
                    no_input=args.no_input,
                    search_paths=[PLUGIN_TEMPLATES_PATH])

@@ -1,10 +1,14 @@
 .PHONY: freeze clean prerelease_check all superclean
 
 NAME:=$(shell cat .layerapi2_label |sed 's/^plugin_//g' |awk -F '@' '{print $$1;}')
-VERSION:=$(shell config.py config.ini general version |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
+VERSION:=$(shell config.py config.ini general _version 2>/dev/null |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
+ifeq ($(VERSION),)
+VERSION:=$(shell config.py config.ini general version 2>/dev/null |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
+endif
+
 RELEASE:=1
 
-PREREQ:=.autorestart_includes .autorestart_excludes
+PREREQ:=.plugin_format_version
 DEPLOY:=
 ifneq ("$(wildcard python3_virtualenv_sources/requirements-to-freeze.txt)","")
 	REQUIREMENTS3:=python3_virtualenv_sources/requirements3.txt
@@ -32,11 +36,8 @@ LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
 
 all: $(PREREQ) custom $(DEPLOY)
 
-.autorestart_includes: $(MFEXT_HOME)/share/plugin_autorestart_includes
-	@cp -f $< $@
-
-.autorestart_excludes: $(MFEXT_HOME)/share/plugin_autorestart_excludes
-	@cp -f $< $@
+.plugin_format_version:
+	echo $(MFMODULE_VERSION) >$@
 
 clean::
 	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules

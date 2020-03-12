@@ -6,11 +6,13 @@ import sys
 import argparse
 from mfutil.layerapi2 import LayerApi2Wrapper
 from mfutil import mkdir_p
+from mfext.plugins_common import get_plugin_env_dict
+import shlex
 
 DESCRIPTION = "execute a command in a plugin environment"
 
-#FIXME: fix to ensure compatibility with existing plugins using
-#old variables names MODULE* (to be removed)
+# FIXME: fix to ensure compatibility with existing plugins using
+# old variables names MODULE* (to be removed)
 for var in ["MODULE", "MODULE_HOME", "MODULE_LOWERCASE", "MODULE_VERSION",
             "MODULE_STATUS", "MODULE_RUNTIME_HOME", "MODULE_RUNTIME_USER",
             "MODULE_RUNTIME_SUFFIX", "MODULE_PLUGINS_BASE_DIR"]:
@@ -73,12 +75,10 @@ if layer_dir is None:
           "installed/available" % (plugin, layer_name), file=sys.stderr)
     sys.exit(1)
 
+env_var_dict = get_plugin_env_dict(layer_dir, plugin)
 if args.bash_cmds:
     if mkdir_p(tmpdir, nodebug=True, nowarning=True):
         print("export TMPDIR=\"%s\"" % tmpdir)
-    print("export %s_CURRENT_PLUGIN_NAME=%s" % (MFMODULE, plugin))
-    print("export %s_CURRENT_PLUGIN_DIR=%s" % (MFMODULE, layer_dir))
-    print("export %s_CURRENT_PLUGIN_LABEL=%s" % (MFMODULE, layer_name))
     print("source /etc/profile")
     print("if test -f %s/.bash_profile; then source %s/.bash_profile; fi" %
           (MFMODULE_RUNTIME_HOME, MFMODULE_RUNTIME_HOME))
@@ -97,12 +97,16 @@ if args.bash_cmds:
     print("field_prepend LAYERAPI2_LAYERS_PATH \"%s\"" % layer_dir)
     print("export LAYERAPI2_LAYERS_PATH")
     print("layer_load %s >/dev/null" % layer_name)
+    for k, v in env_var_dict.items():
+        print("export %s=%s" % (k, shlex.quote(v)))
     if args.cwd:
         print("cd %s" % layer_dir)
     sys.exit(0)
 
+for k, v in env_var_dict.items():
+    os.environ[k] = v
+
 lw_args = ["--empty",
-           "--extra-env-prefix=%s_CURRENT_PLUGIN" % MFMODULE,
            "--layers=%s" % layer_name]
 if args.cwd:
     lw_args.append("--cwd")
