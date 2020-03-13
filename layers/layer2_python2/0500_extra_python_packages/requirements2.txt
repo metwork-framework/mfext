@@ -20,7 +20,7 @@ MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mfutil.git@698ff51ea38d288065a1835adb16b717ac1eb6db#egg=mfutil
 netifaces==0.10.9
 pathlib==1.0.1
-psutil==5.6.3
+psutil==5.6.6
 PyYAML==5.1.2
 redis==3.2.1
 requests==2.22.0
