@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=netcdf-c
-export VERSION=4.7.0
+export VERSION=4.7.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=abdb55e6df783b5a4c7645b230ab0b98
+export CHECKSUM=9e1d7f13c2aef921c854d87037bcbd96
 DESCRIPTION=\
 NETCDF-C is the C API of NETCDF format
 WEBSITE=http://www.unidata.ucar.edu/software/netcdf/
