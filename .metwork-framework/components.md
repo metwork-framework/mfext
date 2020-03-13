@@ -174,8 +174,8 @@
 | [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
-| [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python2 |
-| [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python3 |
+| [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python2 |
+| [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python2_devtools |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python3_devtools |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python2_devtools |
