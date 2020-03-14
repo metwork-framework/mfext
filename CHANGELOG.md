@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- upgrade netcdf_c from 4.7.0 to 4.7.3
 - mflog update
 - we can use *_CURRENT_PLUGIN_* variables in plugin crontabs
 - cronwrapper update
