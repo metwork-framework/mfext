@@ -145,7 +145,7 @@
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3_devtools |
 | [more-itertools](https://github.com/erikrose/more-itertools) | 5.0.0 | python2_devtools |
 | [more-itertools](https://github.com/erikrose/more-itertools) | 8.0.2 | python3_devtools |
-| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.0 | scientific_core |
+| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python2 |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
