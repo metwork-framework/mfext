@@ -69,6 +69,8 @@
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.7.9 | python2_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.7.9 | python3_devtools |
+| [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | scientific_core |
+| [freetype](https://www.freetype.org/) | 2.10.1 | scientific_core |
 | [funcsigs](http://funcsigs.readthedocs.org) | 1.0.2 | python2_devtools |
 | [functools32](https://github.com/MiCHiLU/python-functools32) | 3.2.3.post2 | python2_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
@@ -279,4 +281,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(278 components)*
+*(280 components)*
