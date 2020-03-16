@@ -103,7 +103,7 @@
 | [mock](http://mock.readthedocs.org/en/latest/) | 3.0.5 | python3_devtools |
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3_devtools |
 | [more-itertools](https://github.com/erikrose/more-itertools) | 8.0.2 | python3_devtools |
-| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.0 | scientific_core |
+| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
@@ -124,7 +124,7 @@
 | [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
-| [psutil](https://github.com/giampaolo/psutil) | 5.6.3 | python3 |
+| [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python3_devtools |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.5.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.19 | python3 |

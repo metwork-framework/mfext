@@ -1,8 +1,10 @@
 # Configuration guide
 
+
 !!! warning
     This is a "general concept" guide not specific to `mfext` module as this
     module does not offer any configuration.
+
 
 ## Concepts
 
@@ -25,9 +27,9 @@ This file contains a single line with this **uppercase configuration name**.
 
 By default, its value is `GENERIC`.
 
-It would be used to select special configuration values in all metwork modules
-and plugins. But you have to define them! If there special configuration values
-does not exist for the given "configuration name", standard configuration values
+This *configuration name* will be used to select special configuration values in all metwork modules
+and plugins. But you have to define them! If these special configuration values
+do not exist for the given "configuration name", standard configuration values
 are used. So if you set a silly value like `ZEERT455FRO` as configuration name,
 it will probably change anything unless you defined (before!) some custom
 configuration value for this silly configuration name.

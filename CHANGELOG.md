@@ -4,6 +4,12 @@
 ## [Unreleased]
 
 ### New Features
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- mflog update
+- we can use *_CURRENT_PLUGIN_* variables in plugin crontabs
+- cronwrapper update
+- custom prompt for virtualenv
+- add possibility to exclude files when releasing a plugin and update mfutil
 - update log_proxy to get dot control files
 - publish metwork module status on mfadmin
 - python requests-toolbelt component replaced by requests-unixsocket
@@ -64,6 +70,7 @@
 
 
 ### Bug Fixes
+- fix issue 745 (problem with blank lines while editing crontab)
 - custom sysctl.conf was not applied during startup
 - fix pip usage inside plugin_env (and change cwd for plugin_home)
 - fix nasty warning in mfdata plugin_env when admin is set

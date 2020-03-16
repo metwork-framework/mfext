@@ -7,6 +7,25 @@ MFADMIN_HOSTNAME_IP=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME_IP=" |awk -F '=' '
 {% endif %}
 
 function __prompt_without_x_mode() {
+    PLUGIN_NAME={% raw %}${{% endraw %}{{MFMODULE}}_CURRENT_PLUGIN_NAME{% raw %}}{% endraw %}
+    if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
+        if test "${PLUGIN_NAME}" != ""; then
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+        else
+            if test "${VIRTUAL_ENV:-}" != ""; then
+                VENV_NAME=$(basename "${VIRTUAL_ENV}")
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, venv: ${VENV_NAME}${LP_MARK_BATTERY}"
+                unset VENV_NAME
+            else
+                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
+            fi
+        fi
+    else
+        if test "${PLUGIN_NAME}" != ""; then
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+        fi
+    fi
+    unset PLUGIN_NAME
     local X_MODE=`echo $- |grep -c 'x'`
     if test ${X_MODE} -gt 0; then
         # we temporary remove the -x mode before loading
@@ -89,17 +108,6 @@ if test "${LIQUIDPROMPT}" != "0"; then
         PLUGIN_NAME=$(env |grep "^${MFMODULE}_CURRENT_PLUGIN_NAME" |awk -F '=' '{print $2;}')
         . {{MFEXT_HOME}}/opt/core/share/liquidprompt/liquidprompt >/dev/null 2>&1
         PROMPT_COMMAND=__prompt_without_x_mode
-        if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
-            if test "${PLUGIN_NAME}" != ""; then
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
-            else
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
-            fi
-        else
-            if test "${PLUGIN_NAME}" != ""; then
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
-            fi
-        fi
         unset PLUGIN_NAME
     fi
 fi
