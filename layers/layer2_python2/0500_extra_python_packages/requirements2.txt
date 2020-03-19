@@ -17,7 +17,7 @@ inotify-simple==1.1.8
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@114e65c8c5612fab866d886adba8c46f97c2d14e#egg=mflog
--e git+https://github.com/metwork-framework/mfutil.git@698ff51ea38d288065a1835adb16b717ac1eb6db#egg=mfutil
+-e git+https://github.com/metwork-framework/mfutil.git@74ecf6fc3b803ec72916f74632bbdd062b3d50d6#egg=mfutil
 netifaces==0.10.9
 pathlib==1.0.1
 psutil==5.6.6
