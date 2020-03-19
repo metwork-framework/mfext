@@ -32,8 +32,6 @@ mkdir -p "${MFMODULE_RUNTIME_HOME}/var/nginx" >/dev/null 2>&1
 mkdir -p "${MFMODULE_RUNTIME_HOME}/var/nginx2" >/dev/null 2>&1
 
 # logs before configuration file is read
-touch /tmp/nginx_error.log >/dev/null 2>&1
-chmod 666 /tmp/nginx_error.log >/dev/null 2>&1
 mkdir -p "${MFMODULE_RUNTIME_HOME}/tmp/nginx_tmp_prefix/logs" >/dev/null 2>&1
 
 if test "${PORT}" != ""; then
