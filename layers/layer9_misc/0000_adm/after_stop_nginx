@@ -1,3 +1,4 @@
 #!/bin/bash
 
-rm -f /tmp/nginx_error.log
+rm -f /tmp/nginx_error.log >/dev/null 2>&1
+exit 0
