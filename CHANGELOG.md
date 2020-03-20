@@ -1,7 +1,20 @@
 # release_0.9 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.9.8 (2020-03-19)
+
+### New Features
+
+
+### Bug Fixes
+- fix again a little warning
+
+
+
+
+
+## v0.9.7 (2020-03-19)
 
 ### New Features
 - cronwrapper update to fix uid collisions when mfserv is launched several times
