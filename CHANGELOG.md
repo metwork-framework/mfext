@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- update mfutil to get explicit error messages in some cases when building plugin specfile
 - update log_proxy to fix problem when a maximum file size if set by ulimit
 - add fontconfig and freetype (moved from mfextaddon_scientific)
 - upgrade netcdf_c from 4.7.0 to 4.7.3
