@@ -24,7 +24,7 @@
 
 
 
-## v0.5.8 (2019-04-02)
+## v0.5.8 (2019-04-01)
 
 ### New Features
 - use our cookiecutter fork to add some features
