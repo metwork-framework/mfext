@@ -74,6 +74,7 @@
 
 
 ### Bug Fixes
+- mfxxx.status must return 1 when errors occur
 - fix compatibility with old systemd versions
 - fix issue 745 (problem with blank lines while editing crontab)
 - custom sysctl.conf was not applied during startup
