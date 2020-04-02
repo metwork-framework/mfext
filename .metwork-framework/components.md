@@ -167,6 +167,7 @@
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.7.2 | python3_devtools |
 | [pep562](https://github.com/facelessuser/pep562) | 1.0 | python3_devtools |
+| [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
 | [pip](https://pip.pypa.io/) | 9.0.3 | python2_core |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
@@ -281,4 +282,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(280 components)*
+*(281 components)*

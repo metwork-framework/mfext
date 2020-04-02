@@ -26,3 +26,4 @@ diskcache
 terminaltables
 autopep8
 unidecode
+pika
