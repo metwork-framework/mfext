@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add python3 package 'pika'
 - add extension plpython3u to postgresql
 - update mfutil to get explicit error messages in some cases when building plugin specfile
 - update log_proxy to fix problem when a maximum file size if set by ulimit
