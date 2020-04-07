@@ -7,7 +7,7 @@ from mfutil import BashWrapper, get_tmp_filepath
 import psutil
 import requests
 from datetime import datetime
-from mfutil.plugins import get_installed_plugins, \
+from mfplugin.compat import get_installed_plugins, \
     get_layer_home_from_plugin_name
 from mfutil.cli import echo_ok, echo_warning, echo_running, echo_bold
 from mfext.circus import MetWorkCircusClient

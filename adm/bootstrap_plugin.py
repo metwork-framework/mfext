@@ -5,7 +5,7 @@ import argparse
 import os
 from cookiecutter.main import cookiecutter
 from mfutil import BashWrapperOrRaise
-from mfutil.plugins import validate_plugin_name
+from mfplugin.utils import validate_plugin_name, BadPluginName
 import shutil
 import glob
 import sys
@@ -69,10 +69,11 @@ if os.path.isdir(args.plugin):
           (args.plugin, os.getcwd()))
     parser.exit(1)
 
-(b, msg) = validate_plugin_name(args.plugin)
-if b is False:
+try:
+    validate_plugin_name(args.plugin)
+except BadPluginName as e:
     print("ERROR: the plugin name: %s is not valid" % args.plugin)
-    print("Validation error: %s" % msg)
+    print("Validation error: %s" % e)
     parser.exit(1)
 
 extra_context = {"name": args.plugin,

@@ -8,7 +8,8 @@ import filelock
 from inotify_simple import flags, INotify
 from mflog import getLogger
 from mfutil import BashWrapperOrRaise, BashWrapper
-from mfutil.plugins import get_installed_plugins, get_plugin_lock_path
+from mfplugin.compat import get_installed_plugins
+from mfplugin.utils import get_plugin_lock_path
 
 RUN = True
 LOGGER = getLogger("conf_monitor")

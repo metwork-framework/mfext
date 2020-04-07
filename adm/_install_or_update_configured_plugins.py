@@ -4,28 +4,39 @@ import os
 import glob
 import sys
 import logging
-from mfutil.cli import echo_running, echo_ok
-from mfutil.plugins import get_plugin_hash, get_plugin_info, install_plugin, \
-    uninstall_plugin
+from mfutil.cli import echo_running, echo_ok, echo_nok, echo_bold
+from mfplugin.compat import get_plugin_hash, get_plugin_info
+from mfplugin.manager import PluginsManager
 
 MFMODULE = os.environ['MFMODULE']
 MFMODULE_RUNTIME_HOME = os.environ['MFMODULE_RUNTIME_HOME']
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
 EXTERNAL_PLUGINS_PATH = \
     "/etc/metwork.config.d/%s/external_plugins" % MFMODULE.lower()
+plugins_manager = PluginsManager()
 
 
 def i_plugin(typ, name, fil):
     echo_running("- Installing %s plugin: %s..." % (typ, name))
-    install_plugin(fil)
-    echo_ok()
+    try:
+        plugins_manager.install_plugin(fil)
+    except Exception as e:
+        echo_nok()
+        echo_bold("ERROR: %s" % e)
+    else:
+        echo_ok()
 
 
 def u_plugin(typ, name, fil):
     echo_running("- Updating %s plugin: %s..." % (typ, name))
-    uninstall_plugin(name)
-    install_plugin(fil)
-    echo_ok()
+    try:
+        plugins_manager.uninstall_plugin(name)
+        plugins_manager.install_plugin(fil)
+    except Exception as e:
+        echo_nok()
+        echo_bold("ERROR: %s" % e)
+    else:
+        echo_ok()
 
 
 internal_plugins_to_check = []
