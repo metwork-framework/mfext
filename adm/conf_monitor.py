@@ -16,6 +16,8 @@ LOGGER = getLogger("conf_monitor")
 MFMODULE_RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', None)
 MFMODULE_RUNTIME_USER = os.environ.get('MFMODULE_RUNTIME_USER', None)
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
+
+# This value will say to circus: "hey you can start automatically plugins"
 os.environ['METWORK_STARTING'] = '0'
 
 

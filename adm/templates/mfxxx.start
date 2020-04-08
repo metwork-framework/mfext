@@ -102,9 +102,9 @@ echo "  "
 {% endif %}
 echo STARTING >${MFMODULE_RUNTIME_HOME}/var/status
 
-{% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+# This value will say to circus: "don't start plugins and extra daemons"
+# => they will be launched by plugins.start
 export METWORK_STARTING=1
-{% endif %}
 
 {% block custom_before_circus %}
 # Can be replaced by mfxxx.start.custom

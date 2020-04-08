@@ -1,4 +1,4 @@
-.PHONY: freeze clean prerelease_check all superclean
+.PHONY: freeze clean prerelease_check all superclean check
 
 NAME:=$(shell cat .layerapi2_label |sed 's/^plugin_//g' |awk -F '@' '{print $$1;}')
 VERSION:=$(shell config.py config.ini general _version 2>/dev/null |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
@@ -34,7 +34,7 @@ ifneq ("$(wildcard package.json)","")
 endif
 LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
 
-all: $(PREREQ) custom $(DEPLOY)
+all: check $(PREREQ) custom $(DEPLOY)
 
 .plugin_format_version:
 	echo $(MFMODULE_VERSION) >$@
@@ -86,14 +86,11 @@ node_modules: package-lock.json
 prerelease_check:
 	@N=`plugins.info $(NAME) 2>/dev/null |wc -l` ; if test $${N} -gt 0; then echo "ERROR: please uninstall the plugin before doing 'make release'" ; exit 1; fi
 
-release: prerelease_check clean $(PREREQ) custom
+release: check prerelease_check clean $(PREREQ) custom
 	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --show-plugin-path
 
-releasedebug: prerelease_check clean $(PREREQ) custom
-	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --debug --show-plugin-path
+develop: check $(PREREQ) custom $(DEPLOY)
+	@_plugins.develop --ignore-already-installed $(NAME)
 
-develop: $(PREREQ) custom $(DEPLOY)
-	_plugins.develop $(NAME)
-
-developdebug: $(PREREQ) custom $(DEPLOY)
-	_plugins.develop --debug $(NAME)
+check:
+	@plugins.check .
