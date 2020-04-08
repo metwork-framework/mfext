@@ -7,7 +7,13 @@ LOGGER = getLogger("circus_hooks")
 def _call(cmd):
     LOGGER.info("Calling %s..." % cmd)
     r = BashWrapper(cmd)
-    if r.code != 0:
+    if r.code == 200:
+        # if the exit code is 200, we return False but without any errors
+        # it can be used (for example) with before_signal_shell to block
+        # signals and use a custom shutdown procedure
+        # https://circus.readthedocs.io/en/latest/for-devs/writing-hooks/
+        return False
+    elif r.code != 0:
         msg = "Bad return code: %i from cmd: %s with output: %s" % \
               (r.code, cmd, str(r).replace("\n", " "))
         LOGGER.warning(msg)
