@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add a new feature in circus_hooks with special exit code 200
 - add python3 package 'pika'
 - add extension plpython3u to postgresql
 - update mfutil to get explicit error messages in some cases when building plugin specfile
