@@ -62,7 +62,7 @@ function plugin_env() {
                 export PIP_PREFIX="$(pwd)/local"
                 _OLD_LAYERAPI2_LAYERS_PATH="${LAYERAPI2_LAYERS_PATH}"
                 field_prepend LAYERAPI2_LAYERS_PATH "$(pwd)"
-                TMPPROFILE=$(__get_plugin_env_profile_tmp_file "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')")
+                TMPPROFILE=$(__get_plugin_env_profile_tmp_file "$(pwd)")
                 env -i bash --rcfile "${TMPPROFILE}"
                 rm -f "${TMPPROFILE}"
                 export LAYERAPI2_LAYERS_PATH="${_OLD_LAYERAPI2_LAYERS_PATH}"

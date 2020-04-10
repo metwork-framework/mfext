@@ -77,11 +77,11 @@ python2_virtualenv_sources/src: $(REQUIREMENTS2)
 
 package-lock.json: package.json
 	rm -f $@
-	export LAYERAPI2_LAYERS_PATH=`pwd`:$(LAYERAPI2_LAYERS_PATH) ; plugin_wrapper $(NAME) -- npm install
+	plugin_wrapper "$(shell pwd)" -- npm install
 
 node_modules: package-lock.json
 	rm -Rf node_modules
-	export LAYERAPI2_LAYERS_PATH=`pwd`:$(LAYERAPI2_LAYERS_PATH) ; plugin_wrapper $(NAME) -- npm install
+	plugin_wrapper "$(shell pwd)" -- npm install
 
 prerelease_check:
 	@N=`plugins.info $(NAME) 2>/dev/null |wc -l` ; if test $${N} -gt 0; then echo "ERROR: please uninstall the plugin before doing 'make release'" ; exit 1; fi
