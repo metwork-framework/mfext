@@ -22,6 +22,7 @@ mkdocs-macros-plugin
 mkdocs-awesome-pages-plugin
 mkdocs-material
 pymdown-extensions
+pytest-cov
 -e git+https://github.com/metwork-framework/jinja2_shell_extension#egg=jinja2_shell_extension
 -e git+https://github.com/metwork-framework/jinja2_getenv_extension#egg=jinja2_getenv_extension
 -e git+https://github.com/metwork-framework/jinja2_fnmatch_extension#egg=jinja2_fnmatch_extension
