@@ -1,7 +1,7 @@
 import os
 
 MFMODULE = os.environ['MFMODULE']
-HOSTNAME = os.environ['MFCOM_HOSTNAME']
+MFHOSTNAME = os.environ['MFHOSTNAME']
 MFMODULE_VERSION = os.environ.get('MFMODULE_VERSION', 'unknown')
 
 
@@ -16,7 +16,7 @@ def transform_func(dict_object):
     if "module" not in dict_object:
         dict_object["module"] = MFMODULE
     if "hostname" not in dict_object:
-        dict_object["hostname"] = HOSTNAME
+        dict_object["hostname"] = MFHOSTNAME
     if "module_version" not in dict_object:
         dict_object["module_version"] = MFMODULE_VERSION
     return dict_object

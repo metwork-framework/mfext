@@ -19,4 +19,4 @@ else
 fi
 rm -f ${MFMODULE_RUNTIME_HOME}/tmp/system.cache.load.${UUID}
 
-export MFCOM_HOSTNAME_FULL_IP=${MFCOM_HOSTNAME_IP}
+export MFHOSTNAME_FULL_IP=${MFHOSTNAME_IP}

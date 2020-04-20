@@ -29,29 +29,29 @@ physical_cores_result = bash.bash(cmd)
 if physical_cores_result.code != 0:
     profile_error("can't execute %s" % cmd)
 physical_cores = int(physical_cores_result.stdout)
-print("export MFCOM_HARDWARE_NUMBER_OF_PHYSICAL_PROCESSORS=%i" %
+print("export MFHARDWARE_NUMBER_OF_PHYSICAL_PROCESSORS=%i" %
       physical_processors)
-print("export MFCOM_HARDWARE_NUMBER_OF_CPU_CORES=%i" %
+print("export MFHARDWARE_NUMBER_OF_CPU_CORES=%i" %
       physical_cores)
-print("export MFCOM_HARDWARE_NUMBER_OF_CPU_CORES_PLUS_1=%i" %
+print("export MFHARDWARE_NUMBER_OF_CPU_CORES_PLUS_1=%i" %
       max(physical_cores / 2, 1))
-print("export MFCOM_HARDWARE_NUMBER_OF_CPU_CORES_PLUS_1=%i" %
+print("export MFHARDWARE_NUMBER_OF_CPU_CORES_PLUS_1=%i" %
       (physical_cores + 1))
-print("export MFCOM_HARDWARE_NUMBER_OF_CPU_CORES_MULTIPLIED_BY_2=%i" %
+print("export MFHARDWARE_NUMBER_OF_CPU_CORES_MULTIPLIED_BY_2=%i" %
       (physical_cores * 2))
 for divide_by in (2, 3, 4, 6, 8):
-    print("export MFCOM_HARDWARE_NUMBER_OF_CPU_CORES_DIVIDED_BY_%i=%i" %
+    print("export MFHARDWARE_NUMBER_OF_CPU_CORES_DIVIDED_BY_%i=%i" %
           (divide_by, max(physical_cores / divide_by, 1)))
 
 # memory
 memory_kb = psutil.virtual_memory().total / 1024
-print("export MFCOM_HARDWARE_PHYSICAL_MEMORY=%i" % memory_kb)
+print("export MFHARDWARE_PHYSICAL_MEMORY=%i" % memory_kb)
 for divide_by in (2, 3, 4, 6, 8, 16):
-    print("export MFCOM_HARDWARE_PHYSICAL_MEMORY_DIVIDED_BY_%i=%i" %
+    print("export MFHARDWARE_PHYSICAL_MEMORY_DIVIDED_BY_%i=%i" %
           (divide_by, memory_kb / divide_by))
 
 # network
-print("export MFCOM_HOSTNAME=%s" % get_simple_hostname())
-print("export MFCOM_HOSTNAME_FULL=%s" % get_full_hostname())
-print("export MFCOM_DOMAIN=%s" % get_domainname())
-print("export MFCOM_HOSTNAME_IP=%s" % get_real_ip())
+print("export MFHOSTNAME=%s" % get_simple_hostname())
+print("export MFHOSTNAME_FULL=%s" % get_full_hostname())
+print("export MFDOMAIN=%s" % get_domainname())
+print("export MFHOSTNAME_IP=%s" % get_real_ip())
