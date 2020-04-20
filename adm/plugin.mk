@@ -1,9 +1,14 @@
-.PHONY: freeze clean prerelease_check all superclean check
+.PHONY: freeze clean prerelease_check all superclean check custom precustom
 
-NAME:=$(shell cat .layerapi2_label |sed 's/^plugin_//g' |awk -F '@' '{print $$1;}')
+NAME:=$(shell cat .layerapi2_label 2>/dev/null |sed 's/^plugin_//g' |awk -F '@' '{print $$1;}')
+ifeq ($(NAME),)
+	PWD=$(shell pwd)
+	NAME:=$(shell basename $(PWD))
+endif
+
 VERSION:=$(shell config.py config.ini general _version 2>/dev/null |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
 ifeq ($(VERSION),)
-VERSION:=$(shell config.py config.ini general version 2>/dev/null |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
+VERSION:=$(MFMODULE_VERSION)
 endif
 
 RELEASE:=1
@@ -34,7 +39,7 @@ ifneq ("$(wildcard package.json)","")
 endif
 LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
 
-all: check $(PREREQ) custom $(DEPLOY)
+all: precustom check $(PREREQ) custom $(DEPLOY)
 
 .plugin_format_version:
 	echo $(MFMODULE_VERSION) >$@
@@ -42,6 +47,9 @@ all: check $(PREREQ) custom $(DEPLOY)
 clean::
 	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules
 	find . -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
+
+precustom::
+	@echo "override me" >/dev/null
 
 custom::
 	@echo "override me" >/dev/null
@@ -86,10 +94,11 @@ node_modules: package-lock.json
 prerelease_check:
 	@N=`plugins.info $(NAME) 2>/dev/null |wc -l` ; if test $${N} -gt 0; then echo "ERROR: please uninstall the plugin before doing 'make release'" ; exit 1; fi
 
-release: check prerelease_check clean $(PREREQ) custom
+release: precustom check prerelease_check clean precustom $(PREREQ) custom
+	$(MAKE) precustom
 	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --show-plugin-path
 
-develop: check $(PREREQ) custom $(DEPLOY)
+develop: precustom check $(PREREQ) custom $(DEPLOY)
 	@_plugins.develop --ignore-already-installed $(NAME)
 
 check:
