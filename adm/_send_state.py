@@ -8,7 +8,7 @@ import argparse
 
 MFMODULE_VERSION = os.environ["MFMODULE_VERSION"]
 MFMODULE = os.environ['MFMODULE']
-MFCOM_HOSTNAME = os.environ['MFCOM_HOSTNAME']
+MFHOSTNAME = os.environ['MFHOSTNAME']
 IS_LINUX = sys.platform.startswith("linux")
 OS_NAME = distro.name(pretty=True) if IS_LINUX else "unknown"
 
@@ -33,6 +33,6 @@ url = "http://%s:%s/write?db=metrics" % (admin_hostname_ip, admin_http_port)
 data = 'metwork_version,bypassbasicstats=1,host=%s,modname=%s,' \
     'module=%s,resolution=fullres status="%s",version="%s",' \
     'os_name="%s",status_code=1i' % \
-    (MFCOM_HOSTNAME, MFMODULE.lower(), MFMODULE.lower(), args.STATE[0],
+    (MFHOSTNAME, MFMODULE.lower(), MFMODULE.lower(), args.STATE[0],
      MFMODULE_VERSION, OS_NAME)
 print(requests.post(url, timeout=10, data=data).text)

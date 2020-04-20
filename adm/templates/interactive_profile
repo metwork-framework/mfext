@@ -146,7 +146,7 @@ EOF
 
 if test "$(which_or_empty echo_bold)" != ""; then
     {% if MFMODULE != "MFEXT" %}
-    echo_bold "Welcome on ${MFCOM_HOSTNAME} (${MFCOM_HOSTNAME_FULL}, ${MFCOM_HOSTNAME_FULL_IP})"
+    echo_bold "Welcome on ${MFHOSTNAME} (${MFHOSTNAME_FULL}, ${MFHOSTNAME_FULL_IP})"
     {% endif %}
     if test "${MFCONFIG:-}" != "GENERIC"; then
         echo "(module: ${MFMODULE}, config: ${MFCONFIG}, version: ${MFMODULE_VERSION})"
