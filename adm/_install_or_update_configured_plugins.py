@@ -12,7 +12,7 @@ MFMODULE = os.environ['MFMODULE']
 MFMODULE_RUNTIME_HOME = os.environ['MFMODULE_RUNTIME_HOME']
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
 EXTERNAL_PLUGINS_PATH = \
-    "/etc/metwork.config.d/%s/external_plugins" % MFMODULE.lower()
+    "/etc/metwork.config.d/%s/plugins" % MFMODULE.lower()
 plugins_manager = PluginsManager()
 
 

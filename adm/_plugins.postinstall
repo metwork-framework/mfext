@@ -39,3 +39,5 @@ if test -x "${PLUGIN_HOME}/postinstall"; then
     echo "Running post-installation plugin tasks"
     plugin_wrapper --cwd "${PLUGIN_HOME}" "${PLUGIN_HOME}/postinstall"
 fi
+
+_prepare_plugin_config.py "${NAME}"

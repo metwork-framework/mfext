@@ -17,9 +17,9 @@ requests_unixsocket
 six
 bash
 filelock
-ConfigArgParse
 netifaces
 cachetools
+ConfigUpdater
 pyinotify
 inotify-simple
 PyYAML
