@@ -88,26 +88,39 @@ if __name__ == '__main__':
         f.write("#       (if exists)\n")
         f.write("\n")
         f.write("\n")
-        to_write = []
+        current_section = None
+        current_key = []
+        current_section_has_a_key = False
         for line in lines:
             tmp = line.strip()
             if len(tmp) == 0:
-                to_write.append("")
+                if current_section is not None:
+                    if len(current_section) == 0 or current_section[-1] != "":
+                        current_section.append("")
                 continue
             first = tmp[0]
             if first == "[":
-                if tmp == "[general]":
-                    to_write = []
-                    continue
-                f.write("%s\n" % tmp)
-                to_write = []
+                if current_section_has_a_key:
+                    f.write("\n".join(current_section))
+                    f.write("\n")
+                current_section = [tmp]
+                current_key = []
+                current_section_has_a_key = False
                 continue
             if first == "#":
-                to_write.append(tmp)
+                if current_section is not None:
+                    current_key.append(tmp)
                 continue
             if first == "_":
-                to_write = []
+                current_key = []
                 continue
-            f.write("\n".join(to_write))
-            f.write("\n# %s\n" % tmp)
-            to_write = []
+            if current_section is not None:
+                current_section_has_a_key = True
+                current_section = current_section + current_key
+                current_section.append("# %s" % tmp)
+                current_key = []
+        if current_section_has_a_key:
+            if current_section[-1] == "":
+                current_section.pop()
+            f.write("\n".join(current_section))
+            f.write("\n")

@@ -55,6 +55,15 @@ def get_plugins_config_ini():
     return res
 
 
+def get_plugins_switch_rules_ini():
+    res = []
+    for home in _get_plugins_home():
+        config_path = "%s/switch_rules.ini" % home
+        if os.path.exists(config_path):
+            res.append(config_path)
+    return res
+
+
 def get_plugins_crontab():
     res = []
     for home in _get_plugins_home():
@@ -130,6 +139,7 @@ def register_watches(ih, wds):
     paths = \
         get_plugins_config_ini() + ["%s/config/nginx.conf" % MFMODULE_HOME,
                                     "%s/config/circus.ini" % MFMODULE_HOME] + \
+        get_plugins_switch_rules_ini() + \
         get_plugins_crontab() + ["%s/var/conf_monitor" % MFMODULE_RUNTIME_HOME]
     for path in paths:
         register_watch(ih, wds, path)
