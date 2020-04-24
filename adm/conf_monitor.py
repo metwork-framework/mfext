@@ -46,10 +46,20 @@ def _get_plugins_home():
     return [x['home'] for x in plugins]
 
 
+def _get_plugins_name():
+    plugins = get_installed_plugins()
+    return [x['name'] for x in plugins]
+
+
 def get_plugins_config_ini():
     res = []
     for home in _get_plugins_home():
         config_path = "%s/config.ini" % home
+        if os.path.exists(config_path):
+            res.append(config_path)
+    for name in _get_plugins_name():
+        config_path = "%s/config/plugins/%s.ini" % (MFMODULE_RUNTIME_HOME,
+                                                    name)
         if os.path.exists(config_path):
             res.append(config_path)
     return res

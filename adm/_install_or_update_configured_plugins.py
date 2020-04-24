@@ -19,6 +19,10 @@ plugins_manager = PluginsManager()
 def i_plugin(typ, name, fil):
     echo_running("- Installing %s plugin: %s..." % (typ, name))
     try:
+        os.unlink("%s/config/plugins/%s.ini" % (MFMODULE_RUNTIME_HOME, name))
+    except Exception:
+        pass
+    try:
         plugins_manager.install_plugin(fil)
     except Exception as e:
         echo_nok()
@@ -31,6 +35,11 @@ def u_plugin(typ, name, fil):
     echo_running("- Updating %s plugin: %s..." % (typ, name))
     try:
         plugins_manager.uninstall_plugin(name)
+        try:
+            os.unlink("%s/config/plugins/%s.ini" %
+                      (MFMODULE_RUNTIME_HOME, name))
+        except Exception:
+            pass
         plugins_manager.install_plugin(fil)
     except Exception as e:
         echo_nok()

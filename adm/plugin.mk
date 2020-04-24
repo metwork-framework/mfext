@@ -92,7 +92,7 @@ node_modules: package-lock.json
 	plugin_wrapper "$(shell pwd)" -- npm install
 
 prerelease_check:
-	@N=`plugins.info $(NAME) 2>/dev/null |wc -l` ; if test $${N} -gt 0; then echo "ERROR: please uninstall the plugin before doing 'make release'" ; exit 1; fi
+	HOME=$(plugins.info --just-home "$(NAME)" || true) ; if test -L "$${HOME}"; then echo "ERROR: the plugin is devlinked, please uninstall the plugin before doing 'make release'" ; exit 1; fi
 
 release: precustom check prerelease_check clean precustom $(PREREQ) custom
 	$(MAKE) precustom
