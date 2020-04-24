@@ -22,6 +22,7 @@ Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@114e65c8c5612fab866d886adba8c46f97c2d14e#egg=mflog
+mockredispy==2.9.3
 -e git+https://github.com/metwork-framework/mfutil.git@74ecf6fc3b803ec72916f74632bbdd062b3d50d6#egg=mfutil
 netifaces==0.10.9
 -e git+https://github.com/metwork-framework/opinionated_configparser.git@a737a27e35b7f7e8ce00b51e6f661cd2f036a9b0#egg=opinionated_configparser
@@ -44,3 +45,4 @@ terminaltables==3.1.0
 urllib3==1.25.3
 Unidecode==1.1.1
 whichcraft==0.5.2
+-e git+https://github.com/metwork-framework/xattrfile.git@babff1ffa4054f905347c50f7e532f96aa40d32c#egg=xattrfile

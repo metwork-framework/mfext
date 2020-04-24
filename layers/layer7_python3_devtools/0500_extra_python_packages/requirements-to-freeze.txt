@@ -8,7 +8,6 @@ Sphinx
 sphinx-rtd-theme
 pydocstyle
 flake8-docstrings
-mockredispy
 m2r
 pytest
 sphinx-automodapi
