@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add xattrfile from specific Metwork repo (was before included in mfdata)
 - add a new feature in circus_hooks with special exit code 200
 - add python3 package 'pika'
 - add extension plpython3u to postgresql
