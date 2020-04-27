@@ -88,39 +88,34 @@ if __name__ == '__main__':
         f.write("#       (if exists)\n")
         f.write("\n")
         f.write("\n")
-        current_section = None
-        current_key = []
-        current_section_has_a_key = False
+        to_write = []
         for line in lines:
             tmp = line.strip()
             if len(tmp) == 0:
-                if current_section is not None:
-                    if len(current_section) == 0 or current_section[-1] != "":
-                        current_section.append("")
+                to_write.append(tmp)
                 continue
             first = tmp[0]
             if first == "[":
-                if current_section_has_a_key:
-                    f.write("\n".join(current_section))
-                    f.write("\n")
-                current_section = [tmp]
-                current_key = []
-                current_section_has_a_key = False
+                if tmp == "[general]":
+                    to_write = []
+                    continue
+                if len(to_write) > 0:
+                    to_write.append("")
+                    f.write("\n".join(to_write))
+                f.write("%s\n" % tmp)
+                to_write = []
                 continue
             if first == "#":
-                if current_section is not None:
-                    current_key.append(tmp)
+                to_write.append(tmp)
                 continue
             if first == "_":
-                current_key = []
+                to_write = []
                 continue
-            if current_section is not None:
-                current_section_has_a_key = True
-                current_section = current_section + current_key
-                current_section.append("# %s" % tmp)
-                current_key = []
-        if current_section_has_a_key:
-            if current_section[-1] == "":
-                current_section.pop()
-            f.write("\n".join(current_section))
-            f.write("\n")
+            if len(to_write) > 0:
+                to_write.append("")
+                f.write("\n".join(to_write))
+            f.write("%s\n" % tmp)
+            to_write = []
+        if len(to_write) > 0:
+            to_write.append("")
+            f.write("\n".join(to_write))

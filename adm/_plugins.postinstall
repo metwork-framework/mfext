@@ -30,11 +30,6 @@ if test "${PLUGIN_HOME}" != ""; then
 fi
 _install_plugin_virtualenv "${1}" "${2}" "${3}"
 
-if ! test -L "${PLUGIN_HOME}"; then
-    rm -Rf "${PLUGIN_HOME}/python3_virtualenv_sources"
-    rm -Rf "${PLUGIN_HOME}/python2_virtualenv_sources"
-fi
-
 if test -x "${PLUGIN_HOME}/postinstall"; then
     echo "Running post-installation plugin tasks"
     plugin_wrapper --cwd "${PLUGIN_HOME}" "${PLUGIN_HOME}/postinstall"
