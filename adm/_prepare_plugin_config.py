@@ -114,7 +114,7 @@ if __name__ == '__main__':
             if len(to_write) > 0:
                 to_write.append("")
                 f.write("\n".join(to_write))
-            f.write("%s\n" % tmp)
+            f.write("# %s\n" % tmp)
             to_write = []
         if len(to_write) > 0:
             to_write.append("")
