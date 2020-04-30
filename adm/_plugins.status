@@ -109,7 +109,10 @@ for plugin in plugins:
             res = False
     if plugin_res:
         for app in plugin.configuration.apps:
-            endpoint = app.http_test_endpoint
+            try:
+                endpoint = app.http_test_endpoint
+            except AttributeError:
+                continue
             if endpoint == "":
                 continue
             expected_status_code = app.http_test_expected_status_code
