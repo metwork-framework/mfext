@@ -5,6 +5,7 @@ import signal
 import time
 import hashlib
 import filelock
+from pathlib import Path
 from inotify_simple import flags, INotify
 from mflog import getLogger
 from mfutil import BashWrapperOrRaise, BashWrapper
@@ -30,6 +31,20 @@ def handler_stop_signals(signum, frame):
 def init_signals():
     signal.signal(signal.SIGINT, handler_stop_signals)
     signal.signal(signal.SIGTERM, handler_stop_signals)
+
+
+def delete_idle_file():
+    try:
+        os.unlink("%s/var/conf_monitor_idle" % MFMODULE_RUNTIME_HOME)
+    except Exception:
+        pass
+
+
+def create_idle_file():
+    try:
+        Path("%s/var/conf_monitor_idle" % MFMODULE_RUNTIME_HOME).touch()
+    except Exception:
+        pass
 
 
 def is_status_running_or_error():
@@ -195,7 +210,9 @@ class ConfMonitorRunner(object):
             else:
                 events = ih.read(1000)
                 if events is None or len(events) == 0:
+                    create_idle_file()
                     continue
+            delete_idle_file()
             if len(events) > 0:
                 LOGGER.info("got events")
             for event in events:
@@ -206,9 +223,12 @@ class ConfMonitorRunner(object):
                 LOGGER.debug("%s on %s" % (event, path))
                 if not (event.mask & flags.IGNORED):
                     if event.mask & flags.DELETE_SELF:
-                        path = wds[event.wd]
-                        unregister_watch(ih, wds, event.wd)
-                        register_watch(ih, wds, path)
+                        try:
+                            path = wds[event.wd]
+                            unregister_watch(ih, wds, event.wd)
+                            register_watch(ih, wds, path)
+                        except KeyError:
+                            pass
             try:
                 lock = filelock.FileLock(get_plugin_lock_path(), timeout=300)
                 with lock.acquire(poll_intervall=1):
