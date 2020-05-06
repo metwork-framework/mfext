@@ -51,10 +51,6 @@ cleanup_pyc
 # Can be replaced by mfxxx.init.custom
 {% endblock %}
 
-{% if MFMODULE == "MFDATA" or MFMODULE == "MFSERV" or MFMODULE == "MFBASE" %}
-_plugins.init
-{% endif %}
-
 {% block custom_after %}
 # Can be replaced by mfxxx.init.custom_after
 {% endblock %}

@@ -4,7 +4,7 @@ import os
 import sys
 from mflog import get_logger
 from mfutil import BashWrapper, get_tmp_filepath
-from mfutil.plugins import get_installed_plugins
+from mfplugin.compat import get_installed_plugins
 
 MFMODULE_HOME = os.environ.get("MFMODULE_HOME", None)
 MFMODULE = os.environ.get("MFMODULE", None)

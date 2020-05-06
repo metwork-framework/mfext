@@ -1,6 +1,6 @@
 cached-property==1.5.1
 certifi==2019.3.9
--e git+https://github.com/thefab/circus.git@0f3c310cdae2e2e0fcee53b66ab97744547fb9ae#egg=circus
+-e git+https://github.com/thefab/circus.git@92262c050c397ae7a5159a77877b26e53cf4bd25#egg=circus
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@de459df45e5f4264a34154ed0aabed76139cc12a#egg=circus_autorestart_plugin
 gitignore-parser==0.0.4
 pyzmq==16.0.4

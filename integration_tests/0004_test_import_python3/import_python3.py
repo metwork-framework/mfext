@@ -11,7 +11,6 @@ import requests
 import six
 import bash
 import filelock
-import configargparse #ConfigArgParse
 import netifaces
 import cachetools
 import pyinotify
