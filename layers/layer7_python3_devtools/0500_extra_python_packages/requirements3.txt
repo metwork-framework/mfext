@@ -47,6 +47,7 @@ pylint==2.4.4
 pymdown-extensions==6.2.1
 pytest==5.3.2
 pytest-cov==2.8.1
+pytest-httpserver==0.3.4
 regex==2020.1.8
 repackage==0.7.3
 snowballstemmer==2.0.0
