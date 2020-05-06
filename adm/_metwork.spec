@@ -322,11 +322,11 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         if ! test -d /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}; then
             mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
             {% if MFMODULE == "MFDATA" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
             {% elif MFMODULE == "MFSERV" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
             {% elif MFMODULE == "MFBASE" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
             {% endif %}
         fi
     {% endif %}

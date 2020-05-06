@@ -11,7 +11,7 @@ import fnmatch
 from telegraf_unixsocket_client import TelegrafUnixSocketClient
 from mflog import getLogger
 from mfutil import BashWrapper
-import mfutil.plugins
+import mfplugin.compat
 import distro
 
 MFMODULE_RUNTIME_HOME = os.environ["MFMODULE_RUNTIME_HOME"]
@@ -83,7 +83,7 @@ def get_plugins():
     plugins = {}
     if MFMODULE in ("MFSERV", "MFDATA", "MFBASE"):
         try:
-            plugins = mfutil.plugins.get_installed_plugins()
+            plugins = mfplugin.compat.get_installed_plugins()
         except Exception:
             pass
     return plugins

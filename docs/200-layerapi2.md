@@ -78,7 +78,6 @@ $ layers
 - (*) python3@mfserv [/home/fab/metwork/mfserv/build/opt/python3]
 - (*) root@mfserv [/home/fab/metwork/mfserv/build]
 - (*) python3_vim@mfext [/home/fab/metwork/mfext/build/opt/python3_vim]
-- rpm@mfext [/home/fab/metwork/mfext/build/opt/rpm]
 - python2_devtools@mfext [/home/fab/metwork/mfext/build/opt/python2_devtools]
 - (*) core@mfext [/home/fab/metwork/mfext/build/opt/core]
 - (*) tcltk@mfext [/home/fab/metwork/mfext/build/opt/tcltk]

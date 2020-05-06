@@ -7,11 +7,9 @@ from mfutil import BashWrapper, get_tmp_filepath
 import psutil
 import requests
 from datetime import datetime
-from mfutil.plugins import get_installed_plugins, \
-    get_layer_home_from_plugin_name
 from mfutil.cli import echo_ok, echo_warning, echo_running, echo_bold
 from mfext.circus import MetWorkCircusClient
-from mfext.plugins_common import get_plugin_parser
+from mfplugin.manager import PluginsManager
 
 MFMODULE = os.environ.get("MFMODULE", "MFEXT")
 NGINX_PORT = int(os.environ.get("%s_NGINX_PORT" % MFMODULE, 0))
@@ -35,37 +33,38 @@ def check_pids(pids):
 
 
 echo_running("- Collecting infos about plugins...")
+manager = PluginsManager()
 client = MetWorkCircusClient()
 if not client.check():
     echo_warning("(circus stopped)")
     sys.exit(1)
 if len(sys.argv) >= 2:
-    plugins = [{"name": sys.argv[1]}]
+    plugins = [manager.get_plugin(sys.argv[1])]
 else:
-    plugins = get_installed_plugins()
+    plugins = PluginsManager().plugins.values()
 watchers = client.list_watchers()
 watchers_by_plugin = {}
 for plugin in plugins:
-    watchers = client.list_watchers_by_plugin_pattern(plugin['name'])
+    watchers = client.list_watchers_by_plugin_pattern(plugin.name)
     if watchers is not None and len(watchers) > 0:
-        watchers_by_plugin[plugin['name']] = watchers
+        watchers_by_plugin[plugin.name] = watchers
 echo_ok()
 
 res = True
-for plugin_dict in plugins:
+for plugin in plugins:
     plugin_res = True
-    plugin_name = plugin_dict['name']
-    echo_running("- Checking plugin: %s (basic)..." % plugin_name)
-    plugin_home = get_layer_home_from_plugin_name(plugin_name)
-    if plugin_home is None:
+    echo_running("- Checking plugin: %s (basic)..." % plugin.name)
+    try:
+        plugin.load_full()
+    except Exception as e:
         echo_warning()
-        echo_bold("=> can't find plugin_dir")
         res = False
+        echo_bold("=> %s" % e)
         continue
     echo_ok()
-    if plugin_name in watchers_by_plugin:
-        echo_running("- Checking plugin: %s (processes)..." % plugin_name)
-        watchers = watchers_by_plugin[plugin_name]
+    if plugin.name in watchers_by_plugin:
+        echo_running("- Checking plugin: %s (processes)..." % plugin.name)
+        watchers = watchers_by_plugin[plugin.name]
         for watcher in watchers:
             try:
                 status = client.statuses()[watcher]
@@ -109,24 +108,17 @@ for plugin_dict in plugins:
         else:
             res = False
     if plugin_res:
-        parser = get_plugin_parser(plugin_home, plugin_name,
-                                   ignore_sections_starting_with=None)
-        if parser.has_option("__advanced", "disable_nginx_conf"):
-            if parser.getboolean("__advanced", "disable_nginx_conf"):
+        for app in plugin.configuration.apps:
+            try:
+                endpoint = app.http_test_endpoint
+            except AttributeError:
                 continue
-        sections = [x for x in parser.sections() if x.startswith("app_")]
-        for section in sections:
-            endpoint = parser.get(section, "http_test_endpoint",
-                                  fallback="null").strip()
-            if endpoint == "null":
+            if endpoint == "":
                 continue
-            expected_status_code = \
-                parser.getint(section, "http_test_expected_status_code")
-            expected_body = \
-                parser.get(section, "http_test_expected_body")
-            timeout = \
-                parser.getint(section, "http_test_timeout")
-            echo_running("- Checking plugin: %s (http)..." % plugin_name)
+            expected_status_code = app.http_test_expected_status_code
+            expected_body = app.http_test_expected_body
+            timeout = app.http_test_timeout
+            echo_running("- Checking plugin: %s (http)..." % plugin.name)
             url = "http://127.0.0.1:%i%s" % (NGINX_PORT, endpoint)
             status = False
             before = datetime.now()
@@ -149,11 +141,11 @@ for plugin_dict in plugins:
                 res = False
             else:
                 echo_ok()
-    if plugin_res and os.path.exists("%s/bin/plugin.status" % plugin_home):
-        echo_running("- Checking plugin: %s (custom)..." % plugin_name)
+    if plugin_res and os.path.exists("%s/bin/plugin.status" % plugin.home):
+        echo_running("- Checking plugin: %s (custom)..." % plugin.name)
         status_log = get_tmp_filepath(prefix="plugins_status_")
         cmd = "timeout 30s plugin_wrapper --empty --cwd "\
-            "%s -- plugin.status >%s 2>&1" % (plugin_name, status_log)
+            "%s -- plugin.status >%s 2>&1" % (plugin.name, status_log)
         x = BashWrapper(cmd)
         if x:
             os.unlink(status_log)

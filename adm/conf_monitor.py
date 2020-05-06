@@ -5,16 +5,20 @@ import signal
 import time
 import hashlib
 import filelock
+from pathlib import Path
 from inotify_simple import flags, INotify
 from mflog import getLogger
 from mfutil import BashWrapperOrRaise, BashWrapper
-from mfutil.plugins import get_installed_plugins, get_plugin_lock_path
+from mfplugin.compat import get_installed_plugins
+from mfplugin.utils import get_plugin_lock_path
 
 RUN = True
 LOGGER = getLogger("conf_monitor")
 MFMODULE_RUNTIME_HOME = os.environ.get('MFMODULE_RUNTIME_HOME', None)
 MFMODULE_RUNTIME_USER = os.environ.get('MFMODULE_RUNTIME_USER', None)
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
+
+# This value will say to circus: "hey you can start automatically plugins"
 os.environ['METWORK_STARTING'] = '0'
 
 
@@ -27,6 +31,20 @@ def handler_stop_signals(signum, frame):
 def init_signals():
     signal.signal(signal.SIGINT, handler_stop_signals)
     signal.signal(signal.SIGTERM, handler_stop_signals)
+
+
+def delete_idle_file():
+    try:
+        os.unlink("%s/var/conf_monitor_idle" % MFMODULE_RUNTIME_HOME)
+    except Exception:
+        pass
+
+
+def create_idle_file():
+    try:
+        Path("%s/var/conf_monitor_idle" % MFMODULE_RUNTIME_HOME).touch()
+    except Exception:
+        pass
 
 
 def is_status_running_or_error():
@@ -43,10 +61,20 @@ def _get_plugins_home():
     return [x['home'] for x in plugins]
 
 
+def _get_plugins_name():
+    plugins = get_installed_plugins()
+    return [x['name'] for x in plugins]
+
+
 def get_plugins_config_ini():
     res = []
     for home in _get_plugins_home():
         config_path = "%s/config.ini" % home
+        if os.path.exists(config_path):
+            res.append(config_path)
+    for name in _get_plugins_name():
+        config_path = "%s/config/plugins/%s.ini" % (MFMODULE_RUNTIME_HOME,
+                                                    name)
         if os.path.exists(config_path):
             res.append(config_path)
     return res
@@ -182,7 +210,9 @@ class ConfMonitorRunner(object):
             else:
                 events = ih.read(1000)
                 if events is None or len(events) == 0:
+                    create_idle_file()
                     continue
+            delete_idle_file()
             if len(events) > 0:
                 LOGGER.info("got events")
             for event in events:
@@ -193,9 +223,12 @@ class ConfMonitorRunner(object):
                 LOGGER.debug("%s on %s" % (event, path))
                 if not (event.mask & flags.IGNORED):
                     if event.mask & flags.DELETE_SELF:
-                        path = wds[event.wd]
-                        unregister_watch(ih, wds, event.wd)
-                        register_watch(ih, wds, path)
+                        try:
+                            path = wds[event.wd]
+                            unregister_watch(ih, wds, event.wd)
+                            register_watch(ih, wds, path)
+                        except KeyError:
+                            pass
             try:
                 lock = filelock.FileLock(get_plugin_lock_path(), timeout=300)
                 with lock.acquire(poll_intervall=1):
