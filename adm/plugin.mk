@@ -1,10 +1,19 @@
-.PHONY: freeze clean prerelease_check all superclean
+.PHONY: freeze clean prerelease_check all superclean check custom precustom
 
-NAME:=$(shell cat .layerapi2_label |sed 's/^plugin_//g' |awk -F '@' '{print $$1;}')
-VERSION:=$(shell config.py config.ini general version |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
+NAME:=$(shell cat .layerapi2_label 2>/dev/null |sed 's/^plugin_//g' |awk -F '@' '{print $$1;}')
+ifeq ($(NAME),)
+	PWD=$(shell pwd)
+	NAME:=$(shell basename $(PWD))
+endif
+
+VERSION:=$(shell config.py config.ini general _version 2>/dev/null |sed "s/{{MFMODULE_VERSION}}/$${MFMODULE_VERSION}/g")
+ifeq ($(VERSION),)
+VERSION:=$(MFMODULE_VERSION)
+endif
+
 RELEASE:=1
 
-PREREQ:=.autorestart_includes .autorestart_excludes
+PREREQ:=.plugin_format_version
 DEPLOY:=
 ifneq ("$(wildcard python3_virtualenv_sources/requirements-to-freeze.txt)","")
 	REQUIREMENTS3:=python3_virtualenv_sources/requirements3.txt
@@ -30,17 +39,17 @@ ifneq ("$(wildcard package.json)","")
 endif
 LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
 
-all: $(PREREQ) custom $(DEPLOY)
+all: precustom check $(PREREQ) custom $(DEPLOY)
 
-.autorestart_includes: $(MFEXT_HOME)/share/plugin_autorestart_includes
-	@cp -f $< $@
-
-.autorestart_excludes: $(MFEXT_HOME)/share/plugin_autorestart_excludes
-	@cp -f $< $@
+.plugin_format_version:
+	echo $(MFMODULE_VERSION) >$@
 
 clean::
 	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules
 	find . -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
+
+precustom::
+	@echo "override me" >/dev/null
 
 custom::
 	@echo "override me" >/dev/null
@@ -76,17 +85,21 @@ python2_virtualenv_sources/src: $(REQUIREMENTS2)
 
 package-lock.json: package.json
 	rm -f $@
-	export LAYERAPI2_LAYERS_PATH=`pwd`:$(LAYERAPI2_LAYERS_PATH) ; plugin_wrapper $(NAME) -- npm install
+	plugin_wrapper "$(shell pwd)" -- npm install
 
 node_modules: package-lock.json
 	rm -Rf node_modules
-	export LAYERAPI2_LAYERS_PATH=`pwd`:$(LAYERAPI2_LAYERS_PATH) ; plugin_wrapper $(NAME) -- npm install
+	plugin_wrapper "$(shell pwd)" -- npm install
 
 prerelease_check:
-	@N=`plugins.info $(NAME) 2>/dev/null |wc -l` ; if test $${N} -gt 0; then echo "ERROR: please uninstall the plugin before doing 'make release'" ; exit 1; fi
+	HOME=$(plugins.info --just-home "$(NAME)" || true) ; if test -L "$${HOME}"; then echo "ERROR: the plugin is devlinked, please uninstall the plugin before doing 'make release'" ; exit 1; fi
 
-release: prerelease_check clean $(PREREQ) custom
-	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --show-plugin-path --ignored-files-path=.releaseignore
+release: precustom check prerelease_check clean precustom $(PREREQ) custom
+	$(MAKE) precustom
+	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --show-plugin-path
 
-develop: $(PREREQ) custom $(DEPLOY)
-	_plugins.develop $(NAME)
+develop: precustom check $(PREREQ) custom $(DEPLOY)
+	@_plugins.develop --ignore-already-installed $(NAME)
+
+check:
+	@plugins.check .

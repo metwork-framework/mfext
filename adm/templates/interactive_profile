@@ -15,6 +15,8 @@ function __prompt_without_x_mode() {
             if test "${VIRTUAL_ENV:-}" != ""; then
                 VENV_NAME=$(basename "${VIRTUAL_ENV}")
                 export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, venv: ${VENV_NAME}${LP_MARK_BATTERY}"
+                layer_unload python3_core@mfext >/dev/null 2>&1
+                layer_load python3_core@mfext >/dev/null 2>&1
                 unset VENV_NAME
             else
                 export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
@@ -62,7 +64,7 @@ function plugin_env() {
                 export PIP_PREFIX="$(pwd)/local"
                 _OLD_LAYERAPI2_LAYERS_PATH="${LAYERAPI2_LAYERS_PATH}"
                 field_prepend LAYERAPI2_LAYERS_PATH "$(pwd)"
-                TMPPROFILE=$(__get_plugin_env_profile_tmp_file "$(cat .layerapi2_label |grep '^plugin_' |head -1 |sed 's/plugin_//g' |awk -F '@' '{print $1;}')")
+                TMPPROFILE=$(__get_plugin_env_profile_tmp_file "$(pwd)")
                 env -i bash --rcfile "${TMPPROFILE}"
                 rm -f "${TMPPROFILE}"
                 export LAYERAPI2_LAYERS_PATH="${_OLD_LAYERAPI2_LAYERS_PATH}"
