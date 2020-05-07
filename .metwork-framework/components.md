@@ -14,6 +14,7 @@
 | [c-ares](https://c-ares.haxx.se/) | 1.15.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
+| [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
 | [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
 | [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3 |
@@ -27,6 +28,7 @@
 | [ciso8601](https://github.com/closeio/ciso8601) | 2.1.1 | monitoring |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [ConfigArgParse](https://github.com/bw2/ConfigArgParse) | 0.14.0 | python3 |
+| [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
 | [cookiecutter-hooks](https://pypi.org/project/cookiecutter-hooks) | custom | python3 |
 | [cookiecutter](https://github.com/audreyr/cookiecutter) | custom | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.0.2 | python3_devtools |
@@ -45,6 +47,8 @@
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3 |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.7.9 | python3_devtools |
+| [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | scientific_core |
+| [freetype](https://www.freetype.org/) | 2.10.1 | scientific_core |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
@@ -117,6 +121,7 @@
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.7.2 | python3_devtools |
 | [pep562](https://github.com/facelessuser/pep562) | 1.0 | python3_devtools |
+| [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
 | [pip](https://pip.pypa.io/) | 18.1 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
@@ -135,6 +140,9 @@
 | [pylint](https://github.com/PyCQA/pylint) | 2.4.4 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 6.2.1 | python3_devtools |
 | [pyparsing](http://pyparsing.wikispaces.com/) | 2.4.0 | python3_core |
+| [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
+| [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
+| [pytest-httpserver](https://www.github.com/csernazs/pytest-httpserver) | 0.3.4 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.3.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
 | [Python](http://python.org/) | 3.7.3 | python3_core |
@@ -148,7 +156,6 @@
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
-| [rpm](http://rpm.org) | 4.9.1.3 | rpm |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 3.3.3 | python3 |
 | [setuptools](https://pypi.python.org/pypi/setuptools) | 41.0.1 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
@@ -195,4 +202,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(194 components)*
+*(201 components)*
