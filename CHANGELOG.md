@@ -4,6 +4,15 @@
 ## [Unreleased]
 
 ### New Features
+- new plugin system
+- update log_proxy to version 0.1.0 (fix a potential deadlock in some corner cases)
+- add xattrfile from specific Metwork repo (was before included in mfdata)
+- add a new feature in circus_hooks with special exit code 200
+- add python3 package 'pika'
+- add extension plpython3u to postgresql
+- update mfutil to get explicit error messages in some cases when building plugin specfile
+- update log_proxy to fix problem when a maximum file size if set by ulimit
+- add fontconfig and freetype (moved from mfextaddon_scientific)
 - upgrade netcdf_c from 4.7.0 to 4.7.3
 - mflog update
 - we can use *_CURRENT_PLUGIN_* variables in plugin crontabs
@@ -70,6 +79,8 @@
 
 
 ### Bug Fixes
+- mfxxx.status must return 1 when errors occur
+- fix compatibility with old systemd versions
 - fix issue 745 (problem with blank lines while editing crontab)
 - custom sysctl.conf was not applied during startup
 - fix pip usage inside plugin_env (and change cwd for plugin_home)

@@ -26,6 +26,8 @@ elif test "${EXTENSION}" = "zip"; then
     unzip -o ${ARCHIVE_FILE}
 elif test "${EXTENSION}" = "tar.xz"; then
     xz -dc ${ARCHIVE_FILE} |tar -xf -
+elif test "${EXTENSION}" = "rpm"; then
+    rpm2cpio ${ARCHIVE_FILE} | cpio -imd
 else
     echo "ERROR: unknown extension [${EXTENSION}] => exit"
     exit 1

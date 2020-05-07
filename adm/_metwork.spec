@@ -94,8 +94,6 @@ Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
 {% if MFMODULE_LOWERCASE == "mfext" %}
-Obsoletes: metwork-mfcom
-Obsoletes: metwork-mfcom-minimal
 %description
 This package provides the {{TARGET_LINK}} symbolic link
 {% else %}
@@ -133,8 +131,6 @@ Obsoletes: metwork-mfext-python2
 Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
 Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
-Obsoletes: metwork-mfcom-layer-python2-{{MODULE_BRANCH}}
-Obsoletes: metwork-mfcom-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-layer-python2_misc-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-layer-python2_misc
 {% endif %}
@@ -326,11 +322,11 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         if ! test -d /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}; then
             mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
             {% if MFMODULE == "MFDATA" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
             {% elif MFMODULE == "MFSERV" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
             {% elif MFMODULE == "MFBASE" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/external_plugins
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
             {% endif %}
         fi
     {% endif %}

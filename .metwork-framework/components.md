@@ -14,8 +14,8 @@
 | [c-ares](https://c-ares.haxx.se/) | 1.15.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
-| [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
 | [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
+| [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
 | [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3 |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3_circus |
@@ -27,7 +27,6 @@
 | [circus](https://pypi.org/project/circus) | custom | python3_circus |
 | [ciso8601](https://github.com/closeio/ciso8601) | 2.1.1 | monitoring |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
-| [ConfigArgParse](https://github.com/bw2/ConfigArgParse) | 0.14.0 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
 | [cookiecutter-hooks](https://pypi.org/project/cookiecutter-hooks) | custom | python3 |
 | [cookiecutter](https://github.com/audreyr/cookiecutter) | custom | python3 |
@@ -35,7 +34,6 @@
 | [cronwrapper](https://github.com/thefab/cronwrapper) | custom | python3 |
 | [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
 | [curl](https://curl.haxx.se/) | 7.65.1 | core |
-| [db](http://www.oracle.com/technetwork/database/berkeleydb/overview/index.html) | 4.5.20 | rpm |
 | [deploycron](https://github.com/monklof/deploycron) | custom | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
 | [distro](https://github.com/nir0s/distro) | 1.4.0 | monitoring |
@@ -63,10 +61,10 @@
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
 | [jasper](http://www.ece.uvic.ca/~frodo/jasper/) | 2.0.14 | scientific_core |
-| [jinja2-fnmatch-extension](https://pypi.org/project/jinja2-fnmatch-extension) | custom | python3_devtools |
+| [jinja2-fnmatch-extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | custom | python3_devtools |
 | [jinja2-from-json-extension](https://pypi.org/project/jinja2-from-json-extension) | custom | python3_devtools |
-| [jinja2-getenv-extension](https://pypi.org/project/jinja2-getenv-extension) | custom | python3_devtools |
-| [jinja2-shell-extension](https://pypi.org/project/jinja2-shell-extension) | custom | python3_devtools |
+| [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | custom | python3_devtools |
+| [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | custom | python3_devtools |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
 | [jsmin](https://github.com/tikitu/jsmin/) | 2.2.2 | python3_devtools |
@@ -83,7 +81,7 @@
 | [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
-| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.0.5 | core |
+| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.1.0 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
 | [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
@@ -94,6 +92,7 @@
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | custom | python3 |
+| [mfplugin](https://pypi.org/project/mfplugin) | custom | python3 |
 | [mfutil](https://pypi.org/project/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
@@ -199,6 +198,7 @@
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.11.2 | python3_devtools |
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
+| [xattrfile](https://pypi.org/project/xattrfile) | custom | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 

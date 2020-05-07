@@ -4,7 +4,7 @@ import os
 import sys
 from mflog import get_logger
 from mfutil import BashWrapper, get_tmp_filepath
-from mfutil.plugins import get_installed_plugins
+from mfplugin.compat import get_installed_plugins
 
 MFMODULE_HOME = os.environ.get("MFMODULE_HOME", None)
 MFMODULE = os.environ.get("MFMODULE", None)
@@ -13,15 +13,6 @@ LOGGER = get_logger("_make_crontab.py")
 
 if not os.path.isfile(f"{MFMODULE_HOME}/config/crontab"):
     sys.exit(0)
-
-# FIXME: fix to ensure compatibility with existing plugins using
-# old variables names MODULE* (to be removed)
-for var in ["MODULE", "MODULE_HOME", "MODULE_LOWERCASE", "MODULE_VERSION",
-            "MODULE_STATUS", "MODULE_RUNTIME_HOME", "MODULE_RUNTIME_USER",
-            "MODULE_RUNTIME_SUFFIX", "MODULE_PLUGINS_BASE_DIR"]:
-    if var not in os.environ:
-        continue
-    os.environ[f"MF{var}"] = os.environ[var]
 
 # FIXME: deprecated => remove for 0.11 release
 os.environ["RUNTIME_SUFFIX"] = ""

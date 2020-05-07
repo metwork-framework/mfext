@@ -110,6 +110,7 @@ fi
 if test ${RES} -eq 1; then
     echo ""
     echo_bold "ERROR(S) DETECTED DURING {{MFMODULE}} CHECK"
+    exit 1
 elif test ${RES} -eq 0; then
     if test "$1" != "QUIET"; then
         echo " "

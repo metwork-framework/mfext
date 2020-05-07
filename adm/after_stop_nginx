@@ -1,3 +1,0 @@
-#!/bin/bash
-
-rm -f /tmp/nginx_error.log

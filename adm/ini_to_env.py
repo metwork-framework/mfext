@@ -53,7 +53,8 @@ def print_env_var(prefix, section, option, val):
 
 
 def add_env_var(env_var_dict, prefix, section, option, val):
-    name = "%s_%s_%s" % (prefix.upper(), section.upper(), option.upper())
+    name = "%s_%s_%s" % (prefix.upper(), section.upper().replace('-', '_'),
+                         option.upper().replace('-', '_'))
     env_var_dict[name] = val
 
 
@@ -86,6 +87,7 @@ def make_env_var_dict(
     resolve=False,
     legacy_file_inclusion_directory=None,
     generation_time=False,
+    ignore_keys_starting_with="_",
 ):
     if prefix is None:
         prefix = os.environ.get("MFMODULE", None)
@@ -106,6 +108,9 @@ def make_env_var_dict(
     env_var_dict = {}
     for section in parser.sections():
         for option in parser.options(section):
+            if ignore_keys_starting_with and \
+                    option.strip().startswith(ignore_keys_starting_with):
+                continue
             val = parser.get(section, option)
             if legacy_env:
                 val = _legacy_env(val)
