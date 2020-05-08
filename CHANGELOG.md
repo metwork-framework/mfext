@@ -2,6 +2,18 @@
 
 
 
+## v0.9.9 (2020-05-07)
+
+### New Features
+
+
+### Bug Fixes
+- fix systemctl startup with some circusctl versions
+
+
+
+
+
 ## v0.9.8 (2020-03-19)
 
 ### New Features
