@@ -7,6 +7,7 @@
 - new plugin system
 - update log_proxy to version 0.1.0 (fix a potential deadlock in some corner cases)
 - add xattrfile from specific Metwork repo (was before included in mfdata)
+- remove all references to MFCOM or mfcom, including backward compatibily stuff
 - add a new feature in circus_hooks with special exit code 200
 - add python3 package 'pika'
 - add extension plpython3u to postgresql
