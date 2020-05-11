@@ -104,7 +104,6 @@
 | [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) | 0.2.1 | python3_devtools |
 | [mkdocs](https://www.mkdocs.org) | 1.0.4 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 3.0.5 | python3_devtools |
-| [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3_devtools |
 | [more-itertools](https://github.com/erikrose/more-itertools) | 8.0.2 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
@@ -202,4 +201,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(201 components)*
+*(200 components)*
