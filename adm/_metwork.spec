@@ -36,7 +36,7 @@
 {% endif %}
 {% set version_release = [VERSION_BUILD, RELEASE_BUILD + RELEASE_BUILD_SUFFIX] %}
 {% set version_release_string = version_release|join('-') %}
-{% set epoch_vr = ["9", version_release_string] %}
+{% set epoch_vr = ["10", version_release_string] %}
 {% set FULL_VERSION = epoch_vr|join(':') %}
 {% set _TARGET_LINK = MFMODULE_HOME + "/../metwork-" + MFMODULE_LOWERCASE %}
 {% set _TARGET_LINK_COMMAND = "readlink -m " + _TARGET_LINK %}
@@ -79,7 +79,7 @@ Summary: metwork {{MFMODULE_LOWERCASE}} symbolic link and stuff around the {{MFM
 {% endif %}
 Version: {{VERSION_BUILD}}
 Release: {{RELEASE_BUILD}}{{RELEASE_BUILD_SUFFIX}}
-Epoch: 9
+Epoch: 10
 License: Meteo
 Source0: {{MFMODULE_LOWERCASE}}-{{VERSION_BUILD}}-{{RELEASE_BUILD}}-linux64.tar
 Group: Applications/Multimedia
@@ -119,6 +119,10 @@ Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
 {% if MFMODULE == "MFADMIN" %}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfadmin-layer-python3-{{MODULE_BRANCH}}
+{% elif MFMODULE == "MFSERV" %}
+Obsoletes: metwork-mfserv-layer-python2-{{MODULE_BRANCH}}
+{% elif MFMODULE == "MFDATA" %}
+Obsoletes: metwork-mfdata-layer-python2-{{MODULE_BRANCH}}
 {% elif MFMODULE == "MFEXT" %}
 Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-scientific
