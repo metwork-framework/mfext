@@ -19,6 +19,8 @@
 - we can use *_CURRENT_PLUGIN_* variables in plugin crontabs
 - cronwrapper update
 - custom prompt for virtualenv
+- do not build the layer if file .bypass_build_if_missing contains not available layers
+- move all python2 stuff out of mfext (moved in a dedicated mfext addon)
 - add possibility to exclude files when releasing a plugin and update mfutil
 - update log_proxy to get dot control files
 - publish metwork module status on mfadmin
