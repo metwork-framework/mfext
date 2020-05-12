@@ -8,6 +8,7 @@
 | [autopep8](https://github.com/hhatto/autopep8) | 1.4.4 | python3 |
 | [Babel](http://babel.pocoo.org/) | 2.8.0 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
+| [bcrypt](https://github.com/pyca/bcrypt/) | 3.1.7 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/thefab/bjoern/tree/metwork) | metwork-20190515 | python3 |
 | [black](https://github.com/psf/black) | 19.10b0 | python3_devtools |
@@ -32,6 +33,7 @@
 | [cookiecutter](https://github.com/audreyr/cookiecutter) | custom | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.0.2 | python3_devtools |
 | [cronwrapper](https://github.com/thefab/cronwrapper) | custom | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 2.9.2 | python3 |
 | [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
 | [curl](https://curl.haxx.se/) | 7.65.1 | core |
 | [deploycron](https://github.com/monklof/deploycron) | custom | python3 |
@@ -115,6 +117,7 @@
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
+| [paramiko](https://github.com/paramiko/paramiko/) | 2.7.1 | python3 |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.7.0 | python3_devtools |
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.7.2 | python3_devtools |
@@ -137,6 +140,7 @@
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://github.com/PyCQA/pylint) | 2.4.4 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 6.2.1 | python3_devtools |
+| [PyNaCl](https://github.com/pyca/pynacl/) | 1.3.0 | python3 |
 | [pyparsing](http://pyparsing.wikispaces.com/) | 2.4.0 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
@@ -201,4 +205,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(200 components)*
+*(204 components)*
