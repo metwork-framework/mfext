@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add paramiko (python implementation of SSHv2) and dependencies
 - new plugin system
 - update log_proxy to version 0.1.0 (fix a potential deadlock in some corner cases)
 - add xattrfile from specific Metwork repo (was before included in mfdata)
