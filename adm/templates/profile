@@ -72,10 +72,12 @@ export MFCONFIG
 # We set LC_NUMERIC to C
 export LC_NUMERIC=C
 
-# We modify PKG_CONFIG_PATH
-field_prepend PKG_CONFIG_PATH /usr/lib64/pkgconfig
-field_prepend PKG_CONFIG_PATH /lib64/pkgconfig
-export PKG_CONFIG_PATH
+if test "${PKG_CONFIG_PATH}" = ""; then
+    # We modify PKG_CONFIG_PATH
+    field_prepend PKG_CONFIG_PATH /usr/lib64/pkgconfig
+    field_prepend PKG_CONFIG_PATH /lib64/pkgconfig
+    export PKG_CONFIG_PATH
+fi
 
 # We set the MFMODULE_VERSION environnement variable
 MFMODULE_VERSION=$(cat ${MFMODULE_HOME}/config/version 2>/dev/null |head -1)
