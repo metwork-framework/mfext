@@ -17,6 +17,9 @@ function __prompt_without_x_mode() {
                 export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, venv: ${VENV_NAME}${LP_MARK_BATTERY}"
                 layer_unload python3_core@mfext >/dev/null 2>&1
                 layer_load python3_core@mfext >/dev/null 2>&1
+                PATH=$(_field_prepend "${PATH}" "${VIRTUAL_ENV}/bin")
+                export PATH
+                unset PYTHONPATH
                 unset VENV_NAME
             else
                 export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
