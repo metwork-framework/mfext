@@ -141,7 +141,6 @@
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 5.0.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.1.1 | python3_devtools |
 | [Pygments](https://pygments.org/) | 2.6.1 | python3 |
-| [Pygments](http://pygments.org/) | 2.5.2 | python3_devtools |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://github.com/PyCQA/pylint) | 2.4.4 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 6.2.1 | python3_devtools |
@@ -212,4 +211,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(211 components)*
+*(210 components)*
