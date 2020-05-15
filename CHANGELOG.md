@@ -1,6 +1,18 @@
 # release_0.9 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+
+
+
+
 
 ## v0.9.9 (2020-05-07)
 
