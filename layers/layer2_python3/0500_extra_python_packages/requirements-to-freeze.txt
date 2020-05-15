@@ -19,7 +19,6 @@ bash
 filelock
 netifaces
 cachetools
-ConfigUpdater
 pyinotify
 inotify-simple
 PyYAML

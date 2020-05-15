@@ -37,7 +37,7 @@ ifneq ("$(wildcard package.json)","")
 	PREREQ+=package-lock.json
 	PREREQ+=node_modules
 endif
-LAYERS=$(shell cat .layerapi2_dependencies |tr '\n' ',' |sed 's/,$$/\n/')
+LAYERS=$(shell ( echo "root@$(MFMODULE_LOWERCASE)" ; cat .layerapi2_dependencies ) |tr '\n' ',' |sed 's/,$$/\n/')
 
 all: precustom check $(PREREQ) custom $(DEPLOY)
 

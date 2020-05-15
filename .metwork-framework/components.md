@@ -28,6 +28,8 @@
 | [circus](https://pypi.org/project/circus) | custom | python3_circus |
 | [ciso8601](https://github.com/closeio/ciso8601) | 2.1.1 | monitoring |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
+| [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
+| [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
 | [cookiecutter-hooks](https://pypi.org/project/cookiecutter-hooks) | custom | python3 |
 | [cookiecutter](https://github.com/audreyr/cookiecutter) | custom | python3 |
@@ -53,6 +55,7 @@
 | [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
+| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.5 | python3_circus |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
@@ -129,6 +132,7 @@
 | [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
+| [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python3_devtools |
@@ -136,7 +140,7 @@
 | [pycparser](https://github.com/eliben/pycparser) | 2.19 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 5.0.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.1.1 | python3_devtools |
-| [Pygments](http://pygments.org/) | 2.5.2 | python3_devtools |
+| [Pygments](https://pygments.org/) | 2.6.1 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://github.com/PyCQA/pylint) | 2.4.4 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 6.2.1 | python3_devtools |
@@ -158,6 +162,7 @@
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
+| [rich](https://github.com/willmcgugan/rich) | 1.1.3 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 3.3.3 | python3 |
 | [setuptools](https://pypi.python.org/pypi/setuptools) | 41.0.1 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
@@ -190,6 +195,7 @@
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.3 | python3_devtools |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.0 | python3_devtools |
+| [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
@@ -205,4 +211,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(204 components)*
+*(210 components)*

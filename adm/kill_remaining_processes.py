@@ -6,6 +6,7 @@ import argparse
 import json
 
 from mfutil import kill_process_and_children, BashWrapper
+from mfutil.cli import MFProgress
 from mflog import getLogger
 
 LOG = getLogger('kill_remaining_processes')
@@ -27,39 +28,47 @@ def get_processes_to_kill():
 
 argparser = argparse.ArgumentParser(description="kill remaining non-terminal "
                                     "processes after a module stop")
-silent_doc = "silent mode: return only the number of processes killed and " \
-    "the number of remaining processes"
-argparser.add_argument("--silent", action="store_true", help=silent_doc)
+debug_doc = "debug mode: show processes killed"
+argparser.add_argument("--debug", action="store_true", help=debug_doc)
 args = argparser.parse_args()
 processes_to_kill = get_processes_to_kill()
 first_count = len(processes_to_kill)
-for pid in processes_to_kill:
-    if not args.silent:
-        try:
-            proc = psutil.Process(pid)
-            LOG.info("killing remaining process (and children): "
-                     "pid:%i, cmdline: %s" % (proc.pid,
-                                              " ".join(proc.cmdline())))
-        except Exception:
-            # we can have some exceptions here is some edge cases
-            pass
-    kill_process_and_children(pid)
+with MFProgress() as progress:
+    t = progress.add_task("- Killing remainging processes (if any)...",
+                          total=(first_count + 1))
+    for pid in processes_to_kill:
+        if args.debug:
+            try:
+                proc = psutil.Process(pid)
+                LOG.info("killing remaining process (and children): "
+                         "pid:%i, cmdline: %s" % (proc.pid,
+                                                  " ".join(proc.cmdline())))
+            except Exception:
+                # we can have some exceptions here is some edge cases
+                pass
+        kill_process_and_children(pid)
+        progress.update(t, advance=1)
 
-processes_to_kill = get_processes_to_kill()
-second_count = len(processes_to_kill)
-for pid in processes_to_kill:
-    if not args.silent:
-        try:
-            proc = psutil.Process(pid)
-            LOG.warning("remaining process not killed: "
-                        "pid:%i, cmdline: %s" % (proc.pid,
-                                                 " ".join(proc.cmdline())))
-        except Exception:
-            # we can have some exceptions here is some edge cases
-            pass
+    processes_to_kill = get_processes_to_kill()
+    second_count = len(processes_to_kill)
+    if second_count == 0:
+        if first_count > 0:
+            progress.complete_task_warning(t, "%i killed" % first_count)
+        else:
+            progress.complete_task(t)
+    else:
+        for pid in processes_to_kill:
+            progress.complete_task_nok(t, "%i remaining" % second_count)
+            if args.debug:
+                try:
+                    proc = psutil.Process(pid)
+                    LOG.warning("remaining process not killed: "
+                                "pid:%i, cmdline: %s" %
+                                (proc.pid, " ".join(proc.cmdline())))
+                except Exception:
+                    # we can have some exceptions here is some edge cases
+                    pass
 
-if args.silent:
-    print("%i,%i" % (first_count, second_count))
 if len(processes_to_kill) > 0:
     sys.exit(1)
 sys.exit(0)
