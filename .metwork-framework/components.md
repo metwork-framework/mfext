@@ -55,7 +55,6 @@
 | [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
-| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.5 | python3_circus |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
@@ -211,4 +210,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(210 components)*
+*(209 components)*
