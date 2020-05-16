@@ -83,6 +83,8 @@
 
 
 ### Bug Fixes
+- fix PKG_CONFIG_PATH order in some corner cases
+- fix python2 plugins build
 - mfxxx.status must return 1 when errors occur
 - fix compatibility with old systemd versions
 - fix issue 745 (problem with blank lines while editing crontab)
