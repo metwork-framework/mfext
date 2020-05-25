@@ -26,7 +26,7 @@ Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@afac597e0e565c4a65cba2199b1ee054850d390c#egg=mflog
--e git+https://github.com/metwork-framework/mfplugin.git@9e60bd59720e9c70d2333dcc2399a391206daf13#egg=mfplugin
+-e git+https://github.com/metwork-framework/mfplugin.git@c201de1b59802c59685feea63e72e426689456b6#egg=mfplugin
 -e git+https://github.com/metwork-framework/mfutil.git@0fe19ed2d039eab6ce3654ee25e242d8a8d773a8#egg=mfutil
 netifaces==0.10.9
 -e git+https://github.com/metwork-framework/opinionated_configparser.git@70bc04669eab0c6e5c1f2a2d1b5ffb821265366b#egg=opinionated_configparser
