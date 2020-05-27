@@ -11,6 +11,8 @@ plugins:
   - mkdocs-add-number-plugin:
       strict_mode: False
       order: 2
+      increment_topnav: False
+      increment_pages: False
   - awesome-pages
 
 markdown_extensions:
