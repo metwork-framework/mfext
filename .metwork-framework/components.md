@@ -1,5 +1,6 @@
 | Name | Version | Layer |
 | --- | --- | --- |
+| [acquisition](https://pypi.org/project/acquisition) | custom | python3 |
 | [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
