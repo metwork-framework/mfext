@@ -1,5 +1,6 @@
 | Name | Version | Layer |
 | --- | --- | --- |
+| [acquisition](https://pypi.org/project/acquisition) | custom | python3 |
 | [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
@@ -217,4 +218,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(216 components)*
+*(217 components)*
