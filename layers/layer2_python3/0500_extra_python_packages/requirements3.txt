@@ -16,6 +16,7 @@ commonmark==0.9.1
 -e git+https://github.com/metwork-framework/cronwrapper@a3c64ac721185faa5269ea57e074728dfaa3dbbe#egg=cronwrapper
 cryptography==2.9.2
 -e git+https://github.com/metwork-framework/deploycron.git@45aa24bad7805336d9d99b73d848c65ca63830f9#egg=deploycron
+-e git+https://github.com/metwork-framework/directory_observer.git@fbc92146e274119e175cb33ed789af55280b76cc#egg=directory_observer
 diskcache==3.1.1
 -e git+https://github.com/metwork-framework/envtpl.git@b7a86cef2667be57b530204f1b10763eb81c7643#egg=envtpl
 filelock==3.0.12
