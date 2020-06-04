@@ -41,7 +41,7 @@
 | [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
 | [curl](https://curl.haxx.se/) | 7.65.1 | core |
 | [deploycron](https://github.com/monklof/deploycron) | custom | python3 |
-| [directory-observer](https://pypi.org/project/directory_observer) | custom | python3 |
+| [directory-observer](https://pypi.org/project/directory-observer) | custom | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
 | [distro](https://github.com/nir0s/distro) | 1.4.0 | monitoring |
 | [docutils](http://docutils.sourceforge.net/) | 0.16 | python3_devtools |
