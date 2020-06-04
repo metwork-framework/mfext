@@ -30,3 +30,4 @@ pika
 -e git+https://github.com/metwork-framework/xattrfile.git#egg=xattrfile
 paramiko
 -e git+https://github.com/metwork-framework/acquisition.git#egg=acquisition
+-e git+https://github.com/metwork-framework/directory_observer.git#egg=directory_observer
