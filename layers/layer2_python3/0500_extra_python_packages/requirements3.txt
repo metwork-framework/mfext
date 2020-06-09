@@ -1,4 +1,4 @@
--e git+https://github.com/metwork-framework/acquisition.git@aa8bca3c67bd6c7de924dcd3f2c41e5df0f3767f#egg=acquisition
+-e git+https://github.com/metwork-framework/acquisition.git@edcce9cc77533dcfee1bb1cf12fa083639d778d8#egg=acquisition
 arrow==0.14.2
 autopep8==1.4.4
 bash==0.6
