@@ -27,6 +27,7 @@
 | [certifi](https://certifi.io/) | 2019.3.9 | python3_circus |
 | [certifi](https://certifi.io) | 2019.3.9 | python3_core |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3_devtools |
+| [certifi](https://certifi.io/) | 2019.3.9 | python3_scientific_core |
 | [cffi](http://cffi.readthedocs.org) | 1.12.3 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://pypi.org/project/circus-autorestart-plugin) | custom | python3_circus |
@@ -141,6 +142,7 @@
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
+| [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
 | [py](http://py.readthedocs.io/) | 1.8.1 | python3_devtools |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.6.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.19 | python3 |
@@ -222,4 +224,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(221 components)*
+*(223 components)*
