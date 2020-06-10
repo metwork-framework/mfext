@@ -1,11 +1,14 @@
 | Name | Version | Layer |
 | --- | --- | --- |
 | [acquisition](https://pypi.org/project/acquisition) | custom | python3 |
+| [aiohttp-metwork-middlewares](https://pypi.org/project/aiohttp-metwork-middlewares) | custom | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.6.2 | python3 |
 | [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
 | [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
 | [astroid](https://github.com/PyCQA/astroid) | 2.4.1 | python3_devtools |
+| [async-timeout](https://github.com/aio-libs/async_timeout/) | 3.0.1 | python3 |
 | [attrs](https://www.attrs.org/) | 19.3.0 | python3_devtools |
 | [autopep8](https://github.com/hhatto/autopep8) | 1.4.4 | python3 |
 | [Babel](http://babel.pocoo.org/) | 2.8.0 | python3_devtools |
@@ -219,4 +222,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(218 components)*
+*(221 components)*
