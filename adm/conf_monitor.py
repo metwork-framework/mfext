@@ -262,6 +262,17 @@ class ConfMonitorRunner(object):
             return False
         else:
             LOGGER.debug("circus conf didn't change")
+        # it can be a modification of a plugin configuration outside the
+        # plugin directory
+        configs = get_plugins_config_ini()
+        plugin_names = [x.split('/')[-1][:-4]
+                        for x in configs if x.endswith('.ini')
+                        and not x.endswith('config.ini')]
+        for plugin_name in plugin_names:
+            # if the configuration is modified, the .configuration_cache
+            # file will be modified by the following line
+            # then the plugin will be restarted
+            os.system("plugin_wrapper %s true >/dev/null 2>&1" % plugin_name)
         return True
 
     def manage_crontab(self):
