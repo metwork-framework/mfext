@@ -3,6 +3,7 @@ aiohttp==3.6.2
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@e25e4388a176a8921c1087ac95ad9b27ece44aac#egg=aiohttp_metwork_middlewares
 arrow==0.14.2
 async-timeout==3.0.1
+attrs==19.3.0
 autopep8==1.4.4
 bash==0.6
 bcrypt==3.1.7
