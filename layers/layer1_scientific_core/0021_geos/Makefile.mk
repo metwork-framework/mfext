@@ -14,4 +14,4 @@ LICENSE=LGPL
 
 all:: $(PREFIX)/lib/libgeos.so
 $(PREFIX)/lib/libgeos.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX)  OPTIONS="--disable-static" download uncompress configure build install
