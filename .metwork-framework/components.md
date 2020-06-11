@@ -9,7 +9,7 @@
 | [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
 | [astroid](https://github.com/PyCQA/astroid) | 2.4.1 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async_timeout/) | 3.0.1 | python3 |
-| [attrs](https://www.attrs.org/) | 19.3.0 | python3_devtools |
+| [attrs](https://www.attrs.org/) | 19.3.0 | python3 |
 | [autopep8](https://github.com/hhatto/autopep8) | 1.4.4 | python3 |
 | [Babel](http://babel.pocoo.org/) | 2.8.0 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
