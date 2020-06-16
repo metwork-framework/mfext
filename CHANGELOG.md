@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add python3 devtools components (pytest-xdist, pytest-mock, freezegun, recommonmark) and update other components
 - add paramiko (python implementation of SSHv2) and dependencies
 - new plugin system
 - update log_proxy to version 0.1.0 (fix a potential deadlock in some corner cases)
