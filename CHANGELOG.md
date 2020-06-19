@@ -4,6 +4,12 @@
 ## [Unreleased]
 
 ### New Features
+- add psycopg2 in new layer python3_scientific_core@mfext (for use by mfbase, mfserv, mfdata)
+- update acquisition to last version
+- add aiohttp-metwork-middlewares and dependencies
+- add directory_observer
+- add directory_observer
+- add module acquisition (previously in mfdata)
 - add python3 devtools components (pytest-xdist, pytest-mock, freezegun, recommonmark) and update other components
 - add paramiko (python implementation of SSHv2) and dependencies
 - new plugin system
@@ -84,6 +90,7 @@
 
 
 ### Bug Fixes
+- fix mfdata issue 288
 - fix PKG_CONFIG_PATH order in some corner cases
 - fix python2 plugins build
 - mfxxx.status must return 1 when errors occur
