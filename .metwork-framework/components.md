@@ -111,6 +111,7 @@
 | [mistune](https://github.com/lepture/mistune) | 0.8.4 | python3_devtools |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.1 | python3_devtools |
 | [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.2.1 | python3_devtools |
+| [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 0.4.9 | python3_devtools |
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.0 | python3_devtools |
 | [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 5.2.0 | python3_devtools |
@@ -224,4 +225,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(223 components)*
+*(224 components)*

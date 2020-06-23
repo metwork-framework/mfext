@@ -21,6 +21,7 @@ mkdocs-add-number-plugin
 mkdocs-macros-plugin
 mkdocs-awesome-pages-plugin
 mkdocs-material
+mkdocs-exclude
 pymdown-extensions
 pytest-cov
 -e git+https://github.com/metwork-framework/jinja2_shell_extension#egg=jinja2_shell_extension
