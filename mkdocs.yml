@@ -5,6 +5,10 @@ theme:
 repo_url: https://github.com/metwork-framework/mfext
 repo_name: 'GitHub'
 plugins:
+  - exclude:
+      glob:
+        - "_*.md"
+        - "850-reference/_*.md"
   - macros:
       module_name: mkdocs_main
   - search
