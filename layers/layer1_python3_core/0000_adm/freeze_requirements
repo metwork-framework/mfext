@@ -47,18 +47,20 @@ if test "${N}" -eq 0; then
     exit 0
 fi
 
+cat "${REQUIREMENTS}" |sed 's/^git+/-e git+/g' > "${REQUIREMENTS}.tmp"
+
 # shellcheck disable=SC2086
-unsafe_pip install --src=./tmp_src --prefix="${TEMPO_LAYER_PATH}" -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
+unsafe_pip install --src=./tmp_src --prefix="${TEMPO_LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} >&2
 PYTHONPATH=$(echo "${PYTHONPATH}" |awk -F ":" '{print $1;}')
 export PYTHONPATH
 unsafe_pip freeze -l |grep -v "^appdirs==" |grep -v "^packaging==" |grep -v "^pyparsing==" |grep -v "^six==" |grep -v "^virtualenv==" >${FREEZED_REQUIREMENTS}
-for req in $(grep "^http" "${REQUIREMENTS}"); do
+for req in $(grep "^http" "${REQUIREMENTS}.tmp"); do
     package=$(echo "$req" | awk -F "#egg=" '{print $2;}')
     grep -v "^$package==" ${FREEZED_REQUIREMENTS} > ${FREEZED_REQUIREMENTS}.2
     echo "$req" >> ${FREEZED_REQUIREMENTS}.2
     mv -f ${FREEZED_REQUIREMENTS}.2 ${FREEZED_REQUIREMENTS}
 done
-rm -Rf tmp_src src
+rm -Rf tmp_src src ${REQUIREMENTS}.tmp
 
 cat "${FREEZED_REQUIREMENTS}"
 rm -Rf "${TEMPO_LAYER_PATH}"
