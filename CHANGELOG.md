@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add mkdoc exclude plugin
 - add psycopg2 in new layer python3_scientific_core@mfext (for use by mfbase, mfserv, mfdata)
 - update acquisition to last version
 - add aiohttp-metwork-middlewares and dependencies
