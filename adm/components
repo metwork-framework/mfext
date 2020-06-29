@@ -45,11 +45,11 @@ parser.add_argument("--loaded-filter", help="loaded layer filter (default: no"
 parser.add_argument("--raw", help="raw output (can't be used with "
                     "json option)", action="store_true")
 parser.add_argument("--json", help="json output (can't be used with "
-                    "raw output)", action="store_true")
+                    "raw option)", action="store_true")
 parser.add_argument("--without-versions", help="remove versions in output "
-                    "(ignored with json or raw output)", action="store_true")
-parser.add_argument("--full", help="add all informations (bigger, don't work "
-                    "with raw output)",
+                    "(ignored with json or raw options)", action="store_true")
+parser.add_argument("--full", help="add all informations (bigger, can't be used "
+                    "with raw option)",
                     action="store_true")
 
 
