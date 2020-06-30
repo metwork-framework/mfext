@@ -52,7 +52,11 @@
 !!! note
     These utilities are only available when "python2" layers are loaded.
 
-{{ declare_utility("python3_wrapper", layers="python2@mfext") }}
+```console
+$ python3_wrapper --help
+usage: python3_wrapper [PYTHON_ARGS]
+  => launch a python3 command inside a python3 env (even if we are currently in a python2 env)
+```
 
 ## Dev layers
 
