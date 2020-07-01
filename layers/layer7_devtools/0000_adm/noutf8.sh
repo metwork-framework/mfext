@@ -3,7 +3,7 @@
 if test "${1:-}" = "--help"; then
     echo "usage: noutf8.sh"
     echo "  => find utf8 (non ascii) characters in the current directory"
-    echo "     (and exit 1 if we found some)"
+    echo "     (and exit 1 if found some)"
     exit 0
 fi
 
