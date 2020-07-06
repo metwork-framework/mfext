@@ -1,7 +1,4 @@
-libXft@centos6,centos7
 libexpat.so.1()(64bit)@generic
-libfontconfig.so.1()(64bit)@generic
-libfreetype.so.6()(64bit)@generic
 libX11.so.6()(64bit)@generic
 libXau.so.6()(64bit)@generic
 libxcb.so.1()(64bit)@generic
