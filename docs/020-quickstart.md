@@ -71,38 +71,42 @@ $ python --version
 Python 3.7.3
 
 $ # See installed layers (currently loaded layers are prefixed by (*))
+$ # (note: X.Y in the directory names below is corresponding to the current
+$ # stable Metwork version, i.e. 0.9 for example)
 $ layers
-- (*) python3@mfext [/opt/metwork-mfext-0.8/opt/python3]
-- (*) python3_core@mfext [/opt/metwork-mfext-0.8/opt/python3_core]
-- (*) default@mfext [/opt/metwork-mfext-0.8/opt/default]
-- (*) core@mfext [/opt/metwork-mfext-0.8/opt/core]
-- python2_core@mfext [/opt/metwork-mfext-0.8/opt/python2_core]
-- python2@mfext [/opt/metwork-mfext-0.8/opt/python2]
-- (*) root@mfext [/opt/metwork-mfext-0.8]
+- (*) core@mfext [/opt/metwork-mfext-X.Y/opt/core]
+- (*) default@mfext [/opt/metwork-mfext-X.Y/opt/default]
+- (*) python3@mfext [/opt/metwork-mfext-X.Y/opt/python3]
+- python3_circus@mfext [/opt/metwork-mfext-X.Y/opt/python3_circus]
+- (*) python3_core@mfext [/opt/metwork-mfext-X.Y/opt/python3_core]
+- python2_core@mfext [/opt/metwork-mfext-X.Y/opt/python2_core]
+- python2@mfext [/opt/metwork-mfext-X.Y/opt/python2]
+- (*) root@mfext [/opt/metwork-mfext-X.Y]
 
 $ # Let's load the python2 extra layer
 $ layer_load python2@mfext
 
 $ layers # note: currently loaded layers are prefixed by (*)
-- python3@mfext [/opt/metwork-mfext-0.8/opt/python3]
-- python3_core@mfext [/opt/metwork-mfext-0.8/opt/python3_core]
-- default@mfext [/opt/metwork-mfext-0.8/opt/default]
-- (*) core@mfext [/opt/metwork-mfext-0.8/opt/core]
-- (*) python2_core@mfext [/opt/metwork-mfext-0.8/opt/python2_core]
-- (*) python2@mfext [/opt/metwork-mfext-0.8/opt/python2]
-- (*) root@mfext [/opt/metwork-mfext-0.8]
+- (*) core@mfext [/opt/metwork-mfext-X.Y/opt/core]
+- default@mfext [/opt/metwork-mfext-X.Y/opt/default]
+- python3@mfext [/opt/metwork-mfext-X.Y/opt/python3]
+- python3_circus@mfext [/opt/metwork-mfext-X.Y/opt/python3_circus]
+- python3_core@mfext [/opt/metwork-mfext-X.Y/opt/python3_core]
+- (*) python2_core@mfext [/opt/metwork-mfext-X.Y/opt/python2_core]
+- (*) python2@mfext [/opt/metwork-mfext-X.Y/opt/python2]
+- (*) root@mfext [/opt/metwork-mfext-X.Y]
 
 $ python --version (latest Python 2.7 version, this is not the system version)
-Python 2.7.15
+Python 2.7.16
 
 $ # See available components for the current env
 $ components --loaded-filter=yes
-- (*) libressl-2.9.2 (module: mfext, layer: core@mfext)
-- (*) mfutil_c-0.0.4 (module: mfext, layer: core@mfext)
+- (*) c-ares-1.15.0 (module: mfext, layer: core@mfext)
+- (*) ctags-5.8 (module: mfext, layer: core@mfext)
+- (*) curl-7.65.1 (module: mfext, layer: core@mfext)
+- (*) dtreetrawl-master20190715 (module: mfext, layer: core@mfext)
 - (*) glib-2.56.4 (module: mfext, layer: core@mfext)
-- (*) yajl-2.1.0 (module: mfext, layer: core@mfext)
-- (*) libxml2-2.9.7 (module: mfext, layer: core@mfext)
-- (*) pcre-8.36 (module: mfext, layer: core@mfext)
+- (*) json-c-0.13.1-20180305 (module: mfext, layer: core@mfext)
 [...]
 
 $ # See full details about a given component
@@ -111,7 +115,7 @@ $ components --name=virtualenv --full
     => website: https://virtualenv.pypa.io/
     => description: Virtual Python Environment builder
     => license: MIT
-- (*) virtualenv-16.6.0 (module: mfext, layer: python2_core@mfext)
+- (*) virtualenv-16.6.0 (module: mfext (addon: python2), layer: python2_core@mfext)
     => website: https://virtualenv.pypa.io/
     => description: Virtual Python Environment builder
     => license: MIT
@@ -145,7 +149,7 @@ So, to use this module, you have to load a kind of "mfext environment". There ar
 
 ### For one command only
 
-If you want to load the "mfext environment" for one command only and return back to a standard running environment after that, you can use the specific wrapper:
+If you want to load the "mfext environment" for one command only and return back to a standard running environment after that, you can use the specific wrapper. Let's suppose the "mfext environment" is not loaded (see "Unloading the mfext environment" section below to learn how to unload the mfext environment):
 
 ```console
 $ # what is the version of the python command ?
@@ -174,8 +178,6 @@ for the whole shell session with:
 - `. /opt/metwork-mfext/share/interative_profile`
 - (or) `. /opt/metwork-mfext/share/profile` (for non interactive stuff)
 
-See "Quickstart" section below for a complete example.
-
 {{ opt_mfext_not_found() }}
 
 ### Automatically for one user
@@ -203,7 +205,7 @@ in `.bash_profile` file and use this `mfext` alias when you want to quickly load
 
 ## Unloading the mfext environment
 
-If you want to "unload" the "mfext environment" to launch an external command which doesn't play well with metwork libraries
+If the "mfext environment" is loaded and you want to temporarly "unload" it to launch an external command which doesn't play well with metwork libraries
 or tools (because of version conflicts for example), you can use the `outside` command wrapper.
 
 ```console
