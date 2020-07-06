@@ -8,26 +8,30 @@ MFADMIN_HOSTNAME_IP=$(env |grep "^{{MFMODULE}}_ADMIN_HOSTNAME_IP=" |awk -F '=' '
 
 function __prompt_without_x_mode() {
     PLUGIN_NAME={% raw %}${{% endraw %}{{MFMODULE}}_CURRENT_PLUGIN_NAME{% raw %}}{% endraw %}
-    if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
-        if test "${PLUGIN_NAME}" != ""; then
-            export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+    if test "${PLUGIN_NAME}" != ""; then
+        if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, plugin_env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
         else
-            if test "${VIRTUAL_ENV:-}" != ""; then
-                VENV_NAME=$(basename "${VIRTUAL_ENV}")
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, venv: ${VENV_NAME}${LP_MARK_BATTERY}"
-                layer_unload python3_core@mfext >/dev/null 2>&1
-                layer_load python3_core@mfext >/dev/null 2>&1
-                PATH=$(_field_prepend "${PATH}" "${VIRTUAL_ENV}/bin")
-                export PATH
-                unset PYTHONPATH
-                unset VENV_NAME
-            else
-                export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
-            fi
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}plugin_env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+        fi
+    elif test "${VIRTUAL_ENV:-}" != ""; then
+        local VENV_NAME=$(basename "${VIRTUAL_ENV}")
+        if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}, venv: ${VENV_NAME}${LP_MARK_BATTERY}"
+        else
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}venv: ${VENV_NAME}${LP_MARK_BATTERY}"
+        fi
+        local N=$(is_layer_loaded python${METWORK_PYTHON_MODE:-3}@mfext 2>/dev/null)
+        if test "${N}" != "0"; then
+            layer_unload python${METWORK_PYTHON_MODE:-3}_core@mfext >/dev/null 2>&1
+            layer_load python${METWORK_PYTHON_MODE:-2}_core@mfext >/dev/null 2>&1
+            PATH=$(_field_prepend "${PATH}" "${VIRTUAL_ENV}/bin")
+            export PATH
+            unset PYTHONPATH
         fi
     else
-        if test "${PLUGIN_NAME}" != ""; then
-            export LP_PS1_PREFIX="${LP_MARK_BATTERY}env: ${PLUGIN_NAME}${LP_MARK_BATTERY}"
+        if test "{{MFMODULE_LOWERCASE}}" != "`whoami`"; then
+            export LP_PS1_PREFIX="${LP_MARK_BATTERY}{{MFMODULE}}${LP_MARK_BATTERY}"
         fi
     fi
     unset PLUGIN_NAME
@@ -126,6 +130,7 @@ if test "${LAUNCH_CRONTAB}" != ""; then
     alias crontab="${LAUNCH_CRONTAB}"
 fi
 alias debug="metwork_debug"
+alias pip="${MFEXT_HOME}/bin/pip_wrapper"
 
 {% if MFMODULE != "MFEXT" %}
 alias circusctl="_circusctl --endpoint {% raw %}${{% endraw %}{{MFMODULE}}{% raw %}_CIRCUS_ENDPOINT}{% endraw %} --timeout=10"
