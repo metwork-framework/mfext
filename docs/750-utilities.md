@@ -52,7 +52,12 @@
 !!! note
     These utilities are only available when "python2" layers are loaded.
 
-{{ declare_utility("python3_wrapper", layers="python2@mfext") }}
+### python3_wrapper
+```console
+$ python3_wrapper --help
+usage: python3_wrapper [PYTHON_ARGS]
+  => launch a python3 command inside a python3 env (even if we are currently in a python2 env)
+```
 
 ## Dev layers
 
@@ -61,13 +66,22 @@
 
 {{ declare_utility("flake82.sh") }}
 {{ declare_utility("flake83.sh") }}
-{{ declare_utility("flake8.sh") }}
+
+### flake8.sh
+Execute flake83.sh if layer python3@mfext is loaded or flake82.sh if layer python2@mfext is loaded
+
 {{ declare_utility("pylint2.sh") }}
 {{ declare_utility("pylint3.sh") }}
-{{ declare_utility("pylint.sh") }}
+
+### pylint.sh
+Execute pylint3.sh if layer python3@mfext is loaded or pylint2.sh if layer python2@mfext is loaded
+
 {{ declare_utility("nosetests2.sh") }}
 {{ declare_utility("nosetests3.sh") }}
-{{ declare_utility("nosetests.sh") }}
+
+### nosetests.sh
+Execute nosetests3.sh if layer python3@mfext is loaded or nosetests2.sh if layer python2@mfext is loaded
+
 {{ declare_utility("shellchecks") }}
 {{ declare_utility("test_globals_in_lua.sh") }}
 {{ declare_utility("noutf8.sh") }}
