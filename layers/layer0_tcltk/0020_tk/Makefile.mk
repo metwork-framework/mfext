@@ -12,9 +12,12 @@ applications to a higher level than conventional approaches.
 WEBSITE=https://www.tcl.tk/
 LICENSE=Open Source (https://www.tcl.tk/software/tcltk/license.html)
 
+#FIXME
+#Try to build with xft but we need to have freetype and fontconfig built before
+
 EXPLICIT_NAME=$(NAME)8.6.9
 
 all:: $(PREFIX)/lib/libtk8.6.so
 $(PREFIX)/lib/libtk8.6.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" download uncompress
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="--disable-xft" download uncompress
 	cd build/$(EXPLICIT_NAME)/unix && ./configure --prefix=$(PREFIX) && make && make install
