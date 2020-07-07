@@ -42,6 +42,9 @@ configure_cmake3:
 build:
 	cd build/$(NAME_VERSION) && make $(MAKEOPT)
 
+check:
+	cd build/$(NAME_VERSION) && make $(MAKEOPT) check
+
 build_cmake:
 	cd build/$(NAME_VERSION)/build && make .. $(MAKEOPT)
 
