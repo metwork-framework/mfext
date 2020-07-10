@@ -21,10 +21,11 @@ function __prompt_without_x_mode() {
         else
             export LP_PS1_PREFIX="${LP_MARK_BATTERY}venv: ${VENV_NAME}${LP_MARK_BATTERY}"
         fi
-        local N=$(is_layer_loaded python${METWORK_PYTHON_MODE:-3}@mfext 2>/dev/null)
+        local PYTHON_MODE=${METWORK_PYTHON_MODE:-3}
+        local N=$(is_layer_loaded python${PYTHON_MODE}@mfext 2>/dev/null)
         if test "${N}" != "0"; then
-            layer_unload python${METWORK_PYTHON_MODE:-3}_core@mfext >/dev/null 2>&1
-            layer_load python${METWORK_PYTHON_MODE:-2}_core@mfext >/dev/null 2>&1
+            layer_unload python${PYTHON_MODE}_core@mfext >/dev/null 2>&1
+            layer_load python${PYTHON_MODE}_core@mfext >/dev/null 2>&1
             PATH=$(_field_prepend "${PATH}" "${VIRTUAL_ENV}/bin")
             export PATH
             unset PYTHONPATH
