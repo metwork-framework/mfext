@@ -123,9 +123,24 @@ if args.make:
         print("%s" % b.stderr)
         sys.exit(1)
 
+print()
+print()
 print("Plugin %s successfully created on directory %s" %
       (args.plugin, res))
-plugins_guide = "https://github.com/metwork-framework/" + MFMODULE_LOWERCASE + \
-    "/blob/master/.metwork-framework/plugins_guide.md"
-print("You can read the metwork-framework Plugins guide at \n    %s" %
-      plugins_guide)
+print()
+print()
+if os.path.isfile("%s/README.md" % template_path):
+    with open("%s/README.md" % template_path, "r") as f:
+        mark = f.read()
+    from rich.console import Console
+    from rich.markdown import Markdown
+    console = Console()
+    md = Markdown(mark)
+    console.print(md)
+print()
+print()
+
+plugins_guide = "https://metwork-framework.org/pub/metwork/" \
+    "continuous_integration/docs/integration/%s/350-plugin_guide/" % \
+    MFMODULE_LOWERCASE
+print("Whats next? Read the plugins guide at \n    %s" % plugins_guide)
