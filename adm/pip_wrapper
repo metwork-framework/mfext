@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if test "${ALLOWPIP:-}" != "1"; then
+    # ALLOWPIP is != 1
+    if test "${VIRTUAL_ENV:-}" = ""; then
+        # We are not in a virtualenv
+        _TMP=$(env |grep "^${MFMODULE}_CURRENT_PLUGIN_NAME=")
+        if test "${_TMP}" = ""; then
+            # We are not in a plugin env
+            echo "ERROR: you should only use pip when:" >>/dev/stderr
+            echo "" >>/dev/stderr
+            echo "- you are a standard python virtualenv" >>/dev/stderr
+            echo "- you are in a plugin_env (go to your plugin directory and use 'plugin_env'" >>/dev/stderr
+            echo "  command to get into the 'plugin_env'" >>/dev/stderr
+            echo "" >>/dev/stderr
+            echo "" >>/dev/stderr
+            echo "=> If you are REALLY SURE about what you are doing, you can override this" >>/dev/stderr
+            echo "by setting ALLOWPIP=1 env var before executing this command" >>/dev/stderr
+            echo "(but there is probably NO GOOD REASON TO DO THAT if you are not a MetWork guru)" >>/dev/stderr
+            exit 1
+        fi
+    fi
+fi
+exec pip "$@"

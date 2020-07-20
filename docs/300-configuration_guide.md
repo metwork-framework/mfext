@@ -249,3 +249,9 @@ EOF
 
 ??? warning "you are using a <= 0.9 version?"
     If you are using a <= 0.9 version, you also need a `[INCLUDE_config.ini]` special line at the very beginning of your `config.ini` file.
+
+## How to configure a MetWork plugin?
+
+Most of configuration concepts explained here are also available for MetWork plugins.
+
+Please refer ton the "Plugin Guide" for details and specific things.
