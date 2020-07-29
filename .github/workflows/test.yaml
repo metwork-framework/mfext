@@ -9,12 +9,6 @@ jobs:
     container:
       image: centos:centos6
     steps:
-      - name: pre
-        run: |
-          yum install -y http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-release-6-1.noarch.rpm
-          yum install -y git
-          which git
-          git version
       - name: checkout
         uses: actions/checkout@v1
       - name: test
