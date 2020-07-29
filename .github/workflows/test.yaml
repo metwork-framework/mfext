@@ -6,13 +6,12 @@ on:
 jobs:
   test:
     runs-on: self-hosted
-    container:
-      image: centos:centos6
     steps:
       - name: checkout
-        uses: actions/checkout@v1
-      - name: test
+        uses: actions/checkout@v2
+      - name: bootstrap
         run: |
-          pwd
-          cat /etc/redhat-release
-          find .
+          docker run -v .:/src centos:6 /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-master ; ./bootstrap.sh /opt/metwork-mfext-master"
+      - name: bootstrap2
+        run: |
+          docker run -v .:/src centos:6 /bin/bash -c "cd /src ; cat adm/root.mk"
