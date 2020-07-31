@@ -7,6 +7,8 @@ env:
     TARGET_DIR: master
     BUILDCACHE: /buildcache
     OS_VERSION: centos6
+    MFMODULE: MFEXT
+    MFMODULE_LOWERCASE: mfext
     DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -v /buildcache:/buildcache -v /private:/private -v /pub:/pub -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA -e TARGET_DIR -e BUILDCACHE -e OS_VERSION"
     WORKFLOW_SCRIPTS_DIR: /src/.github/workflows
 
@@ -19,9 +21,7 @@ jobs:
       - name: compute reference branch
         id: refrence_branch
         run: |
-          TMPREF=${GITHUB_REF#refs/heads/*/}
-          echo ::set-output name=name::${TMPREF}
-          echo ::set-output name=buildimage::metwork/mfext-${OS_VERSION}-buildimage:integration
+          ${WORKFLOW_SCRIPTS_DIR}/reference_branch.sh
       - name: debug env
         run: |
           env
