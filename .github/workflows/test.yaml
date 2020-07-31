@@ -30,4 +30,4 @@ jobs:
           docker run ${DOCKER_RUN_OPTIONS} --rm ${{ steps.refrence_branch.outputs.buildimage }} /bin/bash -c "${WORKFLOW_SCRIPTS_DIR}/bootstrap.sh"
       - name: build
         run: |
-          docker run ${DOCKER_RUN_OPTIONS} -e BRANCH=${{ steps.refrence_branch.outputs.bame }} --rm ${{ steps.refrence_branch.outputs.buildimage }} /bin/bash -c "${WORKFLOW_SCRIPTS_DIR}/build.sh"
+          docker run ${DOCKER_RUN_OPTIONS} -e BRANCH=${{ steps.refrence_branch.outputs.name }} --rm ${{ steps.refrence_branch.outputs.buildimage }} /bin/bash -c "${WORKFLOW_SCRIPTS_DIR}/build.sh"
