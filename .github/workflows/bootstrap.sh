@@ -5,6 +5,6 @@ set -eu
 
 cd /src
 ls
-mkdir -p "/opt/metwork-mfext-${TARGET_DIR}"
-./bootstrap.sh "/opt/metwork-mfext-${TARGET_DIR}"
+mkdir -p "/opt/metwork-${MFMODULE_LOWERCASE}-${TARGET_DIR}"
+./bootstrap.sh "/opt/metwork-${MFMODULE_LOWERCASE}-${TARGET_DIR}"
 cat adm/root.mk
