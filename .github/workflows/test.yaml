@@ -3,18 +3,27 @@ name: test
 on:
   push: {}
 
+env:
+    TARGET_DIR: master
+    OS_VERSION: centos6
+    DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA"
+
 jobs:
   test:
     runs-on: runner1
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: env
+      - name: compute reference branch
+        id: refrence_branch
+        run: |
+          TMPREF=${GITHUB_REF#refs/heads/*/}
+          echo ::set-output name=name::${TMPREF}
+          echo ::set-output buildimage=buildimage::metwork/mfext-${OS_VERSION}-buildimage:integration
+      - name: debug env
         run: |
           env
+          echo "{{ steps.reference_branch.outputs.name }} = ${{ steps.reference_branch.outputs.name }}"
       - name: bootstrap
         run: |
-          docker run -v ${GITHUB_WORKSPACE}:/src centos:6 /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-master ; ./bootstrap.sh /opt/metwork-mfext-master"
-      - name: bootstrap2
-        run: |
-          docker run -v ${GITHUB_WORKSPACE}:/src centos:6 /bin/bash -c "cd /src ; cat adm/root.mk"
+          docker run ${DOCKER_RUN_OPTIONS} --rm ${{ steps.refrence_branch.outputs.buildimage }} /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-${TARGET_DIR} ; ./bootstrap.sh /opt/metwork-mfext-${TARGET_DIR} ; cat adm/root.mk"
