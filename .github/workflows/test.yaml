@@ -14,7 +14,7 @@ jobs:
           env
       - name: bootstrap
         run: |
-          docker run -v .:/src centos:6 /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-master ; ./bootstrap.sh /opt/metwork-mfext-master"
+          docker run -v ${GITHUB_WORKSPACE}:/src centos:6 /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-master ; ./bootstrap.sh /opt/metwork-mfext-master"
       - name: bootstrap2
         run: |
-          docker run -v .:/src centos:6 /bin/bash -c "cd /src ; cat adm/root.mk"
+          docker run -v ${GITHUB_WORKSPACE}:/src centos:6 /bin/bash -c "cd /src ; cat adm/root.mk"
