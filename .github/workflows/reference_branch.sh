@@ -14,8 +14,8 @@ if test "${MFMODULE_LOWERCASE:-}" = ""; then
     exit 1
 fi
 
-B=${1#refs/heads/}
-case "$1" in
+B=${GITHUB_REF#refs/heads/}
+case "${GITHUB_REF}" in
     refs/heads/experimental* | refs/heads/master | refs/heads/release_*)
         BRANCH=${B};;
     *)
