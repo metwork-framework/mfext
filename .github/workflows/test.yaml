@@ -6,7 +6,8 @@ on:
 env:
     TARGET_DIR: master
     OS_VERSION: centos6
-    DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA"
+    DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -v /buildcache:/buildcache -v /private:/private -v /pub:/pub -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA -e TARGET_DIR"
+    WORKFLOW_SCRIPTS_DIR: /src/.github/workflows
 
 jobs:
   test:
@@ -23,7 +24,8 @@ jobs:
       - name: debug env
         run: |
           env
-          echo "{{ steps.reference_branch.outputs.name }} = ${{ steps.reference_branch.outputs.name }}"
+          echo "{{ steps.reference_branch.outputs.name }} = "${{ steps.reference_branch.outputs.name }}
+          echo "{{ steps.reference_branch.outputs.buildimage }} = "${{ steps.reference_branch.outputs.buildimage }}
       - name: bootstrap
         run: |
-          docker run ${DOCKER_RUN_OPTIONS} --rm ${{ steps.refrence_branch.outputs.buildimage }} /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-${TARGET_DIR} ; ./bootstrap.sh /opt/metwork-mfext-${TARGET_DIR} ; cat adm/root.mk"
+          docker run ${DOCKER_RUN_OPTIONS} --rm ${{ steps.refrence_branch.outputs.buildimage }} /bin/bash -c "${WORKFLOW_SCRIPTS_DIR}/boostrap.sh"
