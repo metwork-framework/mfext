@@ -3,7 +3,7 @@
 set -x
 set -eu
 
-cd /etc
+cd /src
 ls
 mkdir -p "/opt/metwork-mfext-${TARGET_DIR}"
 ./bootstrap.sh "/opt/metwork-mfext-${TARGET_DIR}"
