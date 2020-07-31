@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: env
+        run: |
+          env
       - name: bootstrap
         run: |
           docker run -v .:/src centos:6 /bin/bash -c "cd /src ; ls ; mkdir -p /opt/metwork-mfext-master ; ./bootstrap.sh /opt/metwork-mfext-master"
