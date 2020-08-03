@@ -4,6 +4,9 @@
 ## [Unreleased]
 
 ### New Features
+- better prompt with virtualenv and better pip management
+- update documentation
+- manage git requirements without "-e"
 - add mkdoc exclude plugin
 - add psycopg2 in new layer python3_scientific_core@mfext (for use by mfbase, mfserv, mfdata)
 - update acquisition to last version
