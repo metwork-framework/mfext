@@ -99,4 +99,3 @@ For example: `yum update metwork-*-0.8*`
 !!! note
     You can use use the standard procedure even if your starting version is < 0.9 as
     the "patch update" is supported for all versions (without reinstalling everything).
-
