@@ -73,7 +73,7 @@
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
 | [jasper](http://www.ece.uvic.ca/~frodo/jasper/) | 2.0.14 | scientific_core |
 | [jinja2-fnmatch-extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | custom | python3_devtools |
-| [jinja2-from-json-extension](https://pypi.org/project/jinja2-from-json-extension) | custom | python3_devtools |
+| [jinja2-from-json-extension](https://github.com/metwork-framework/jinja2_from_json_extension) | custom | python3_devtools |
 | [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | custom | python3_devtools |
 | [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | custom | python3_devtools |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
