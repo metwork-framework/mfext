@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- build nginx with http_auth_request module (#884)
 - better prompt with virtualenv and better pip management
 - update documentation
 - manage git requirements without "-e"
