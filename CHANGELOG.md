@@ -1,9 +1,16 @@
-# CHANGELOG
+# release_1.0 CHANGELOG
 
 
 ## [Unreleased]
 
 ### New Features
+- build nginx with http_auth_request module (#884)
+- better prompt with virtualenv and better pip management
+- manage git requirements without "-e"
+- update documentation
+- update documentation
+- manage git requirements without "-e"
+- add mkdoc exclude plugin
 - add mkdoc exclude plugin
 - add psycopg2 in new layer python3_scientific_core@mfext (for use by mfbase, mfserv, mfdata)
 - update acquisition to last version
