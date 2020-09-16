@@ -1,6 +1,6 @@
--e git+https://github.com/metwork-framework/acquisition.git@91cd99badb73c8bbefe24a9eeef8b5f4c1ab43b8#egg=acquisition
+-e git+https://github.com/metwork-framework/acquisition.git@09d076a3ee9ba70a2e1d30b472dd20c1095c933b#egg=acquisition
 aiohttp==3.6.2
--e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@e25e4388a176a8921c1087ac95ad9b27ece44aac#egg=aiohttp_metwork_middlewares
+-e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@d0feb6e25c632331325aae58462302d7d73c0e7c#egg=aiohttp_metwork_middlewares
 arrow==0.14.2
 async-timeout==3.0.1
 attrs==19.3.0
@@ -15,14 +15,14 @@ chardet==3.0.4
 Click==7.0
 colorama==0.4.3
 commonmark==0.9.1
--e git+https://github.com/metwork-framework/cookiecutter.git@883bd169fa9252f08631a764f7264434e373463b#egg=cookiecutter
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@92f299cc3789ff558a88d88c9736b9a590e22c27#egg=cookiecutter_hooks
--e git+https://github.com/metwork-framework/cronwrapper@a3c64ac721185faa5269ea57e074728dfaa3dbbe#egg=cronwrapper
+-e git+https://github.com/metwork-framework/cookiecutter.git@113331d0590bd0c9147ac8b608ff850e63b94e44#egg=cookiecutter
+-e git+https://github.com/metwork-framework/cookiecutter_hooks.git@ea3775ea1d919756a5c3bf246fd557eca7a57aca#egg=cookiecutter_hooks
+-e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
 cryptography==2.9.2
--e git+https://github.com/metwork-framework/deploycron.git@45aa24bad7805336d9d99b73d848c65ca63830f9#egg=deploycron
--e git+https://github.com/metwork-framework/directory_observer.git@2e3dc375fc85d3e39c4f72eed6b71325354618f4#egg=directory_observer
+-e git+https://github.com/metwork-framework/deploycron.git@c7d4e7b78fa8c9eb9f14ba49b5f90232af7d4709#egg=deploycron
+-e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==3.1.1
--e git+https://github.com/metwork-framework/envtpl.git@b7a86cef2667be57b530204f1b10763eb81c7643#egg=envtpl
+-e git+https://github.com/metwork-framework/envtpl.git@a7838100809b367451ddca6477616082b01f4c1c#egg=envtpl
 filelock==3.0.12
 future==0.17.1
 gitignore-parser==0.0.6
@@ -32,8 +32,8 @@ Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@c5a96d74ea5c8d1a81e856b3f4cd282bc44ef20e#egg=mflog
--e git+https://github.com/metwork-framework/mfplugin.git@0eb07c41a2ca9453dcb34ecaa3df7e42b25fc13b#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@25efa5d0e936429d1b0a0e7b69f0053c4960277f#egg=mfutil
+-e git+https://github.com/metwork-framework/mfplugin.git@01eb2568853f400b6baa11a4c477b5aa0eabe9e7#egg=mfplugin
+-e git+https://github.com/metwork-framework/mfutil.git@78f9fce51411cd293572f9ce89dbf2d7b8e370ea#egg=mfutil
 netifaces==0.10.9
 -e git+https://github.com/metwork-framework/opinionated_configparser.git@d8239a8906ec0f6296ec6a813ac244ec03033186#egg=opinionated_configparser
 paramiko==2.7.1
@@ -62,4 +62,4 @@ urllib3==1.25.3
 typing-extensions==3.7.4.2
 Unidecode==1.1.1
 whichcraft==0.5.2
--e git+https://github.com/metwork-framework/xattrfile.git@db24341265249b3b0bf4f89604e05cea3743374b#egg=xattrfile
+-e git+https://github.com/metwork-framework/xattrfile.git@740b1e406fbf1e3ba0763664f473640ff08a183d#egg=xattrfile
