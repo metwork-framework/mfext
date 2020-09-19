@@ -1,9 +1,11 @@
 # release_0.9 CHANGELOG
 
 
-## [Unreleased]
+
+## v0.9.10 (2020-09-01)
 
 ### New Features
+- build nginx with http_auth_request module (#884)
 
 
 ### Bug Fixes
