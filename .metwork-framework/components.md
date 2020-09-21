@@ -3,7 +3,6 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | custom | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | custom | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.6.2 | python3 |
-| [alabaster](https://alabaster.readthedocs.io) | 0.7.12 | python3_devtools |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
 | [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
@@ -11,7 +10,6 @@
 | [async-timeout](https://github.com/aio-libs/async_timeout/) | 3.0.1 | python3 |
 | [attrs](https://www.attrs.org/) | 19.3.0 | python3 |
 | [autopep8](https://github.com/hhatto/autopep8) | 1.4.4 | python3 |
-| [Babel](http://babel.pocoo.org/) | 2.8.0 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 3.1.7 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
@@ -48,7 +46,6 @@
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | custom | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
 | [distro](https://github.com/nir0s/distro) | 1.4.0 | monitoring |
-| [docutils](http://docutils.sourceforge.net/) | 0.16 | python3_devtools |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
 | [elasticsearch](https://github.com/elastic/elasticsearch-py) | 6.4.0 | monitoring |
 | [envtpl](https://github.com/metwork-framework/envtpl) | custom | python3 |
@@ -67,7 +64,6 @@
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
-| [imagesize](https://github.com/shibukawa/imagesize_py) | 1.2.0 | python3_devtools |
 | [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 1.6.0 | python3_devtools |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
@@ -98,7 +94,6 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://github.com/yeraydiazdiaz/lunr.py) | 0.5.8 | python3_devtools |
-| [m2r](https://github.com/miyakogi/m2r) | 0.2.1 | python3_devtools |
 | [Mako](https://www.makotemplates.org/) | 1.1.2 | python3_devtools |
 | [Markdown](https://Python-Markdown.github.io/) | 3.2.2 | python3_devtools |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
@@ -108,7 +103,6 @@
 | [mfutil](https://github.com/metwork-framework/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
-| [mistune](https://github.com/lepture/mistune) | 0.8.4 | python3_devtools |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.1 | python3_devtools |
 | [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.2.1 | python3_devtools |
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
@@ -168,11 +162,9 @@
 | [PyYAML](https://github.com/yaml/pyyaml) | 5.1.1 | python3 |
 | [pyzmq](https://pyzmq.readthedocs.org) | 16.0.4 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
-| [recommonmark](https://github.com/rtfd/recommonmark) | 0.6.0 | python3_devtools |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
-| [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.1.3 | python3 |
@@ -183,15 +175,6 @@
 | [six](https://pypi.python.org/pypi/six/) | 1.12.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.0.0 | python3_devtools |
-| [sphinx-automodapi](http://astropy.org) | 0.12 | python3_devtools |
-| [sphinx-rtd-theme](https://github.com/rtfd/sphinx_rtd_theme/) | 0.4.3 | python3_devtools |
-| [Sphinx](http://sphinx-doc.org/) | 3.0.3 | python3_devtools |
-| [sphinxcontrib-applehelp](http://sphinx-doc.org/) | 1.0.2 | python3_devtools |
-| [sphinxcontrib-devhelp](http://sphinx-doc.org/) | 1.0.2 | python3_devtools |
-| [sphinxcontrib-htmlhelp](http://sphinx-doc.org/) | 1.0.3 | python3_devtools |
-| [sphinxcontrib-jsmath](http://sphinx-doc.org/) | 1.0.1 | python3_devtools |
-| [sphinxcontrib-qthelp](http://sphinx-doc.org/) | 1.0.3 | python3_devtools |
-| [sphinxcontrib-serializinghtml](http://sphinx-doc.org/) | 1.1.4 | python3_devtools |
 | [sqlite](http://sqlite.org/) | 3300100 | core |
 | [statsd](https://github.com/jsocol/pystatsd) | custom | python3 |
 | [structlog](https://www.structlog.org/) | 19.1.0 | python3 |
@@ -201,20 +184,17 @@
 | [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
 | [termcolor](http://pypi.python.org/pypi/termcolor) | 1.1.0 | python3_devtools |
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
-| [testfixtures](https://github.com/Simplistix/testfixtures) | 6.14.1 | python3_devtools |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
 | [toml](https://github.com/uiri/toml) | 0.10.1 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
-| [tqdm](https://github.com/tqdm/tqdm) | 4.46.0 | python3_devtools |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
 | [virtualenv](https://virtualenv.pypa.io/) | 16.6.0 | python3_core |
-| [wcwidth](https://github.com/jquast/wcwidth) | 0.1.9 | python3_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3_devtools |
 | [wheel](https://github.com/pypa/wheel) | 0.33.4 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.5.2 | python3 |
@@ -225,4 +205,4 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(224 components)*
+*(204 components)*
