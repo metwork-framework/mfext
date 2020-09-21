@@ -6,7 +6,6 @@ before::
 	touch $(MFEXT_HOME)/.dhash_ignore_hash
 	echo "bin/python2" >>$(MFEXT_HOME)/.dhash_ignore_hash
 	echo "bin/python3" >>$(MFEXT_HOME)/.dhash_ignore_hash
-	echo "bin/sphinx_wrapper" >>$(MFEXT_HOME)/.dhash_ignore_hash
 
 all::
 	cd adm && $(MAKE) before_layers

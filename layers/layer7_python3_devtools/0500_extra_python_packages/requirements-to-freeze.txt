@@ -4,14 +4,10 @@ flake8
 pylint
 testfixtures
 isort
-Sphinx
-sphinx-rtd-theme
 pydocstyle
 pytest-httpserver
 flake8-docstrings
-m2r
 pytest
-sphinx-automodapi
 werkzeug
 nose
 black
@@ -31,4 +27,3 @@ pytest-cov
 pytest-xdist
 pytest-mock
 freezegun
-recommonmark
