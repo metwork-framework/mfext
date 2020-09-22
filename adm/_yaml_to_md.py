@@ -10,8 +10,6 @@ from unidecode import unidecode
 DESCRIPTION = "build a MD doc file about metwork components of the given layer"
 MFMODULE_HOME = os.environ['MFMODULE_HOME']
 parser = argparse.ArgumentParser(description=DESCRIPTION)
-parser.add_argument("--not-sphinx", action="store_true",
-                    help='not sphinx rendering')
 parser.add_argument("LAYER_HOME", help='a layer home (if set to ALL, '
                     'build for all layers)')
 
@@ -98,25 +96,13 @@ for tmp in sorted(yamls, key=lambda x: (x[0].lower(), x[1])):
                 if all_mode and addon:
                     continue
             lname = llabel.split('@')[0]
-            if args.not_sphinx:
-                description = lname
-            else:
-                description = ":ref:`%s <layer_%s>`" % (lname, lname)
+            description = lname
         else:
             description = flter(y['description'])
         count = count + 1
-        if args.not_sphinx:
-            print("| %s | %s | %s |" %
-                  (name_with_link, version,
-                   description))
-        else:
-            if all_mode:
-                index = version
-            else:
-                index = ":index:`{} <single: {} package>`".format(version,
-                                                                  name)
-            print("| %s | %s | %s |" %
-                  (name_with_link, index, description))
+        print("| %s | %s | %s |" %
+              (name_with_link, version,
+               description))
 print()
 if count == 0:
     print("*(0 component)*")

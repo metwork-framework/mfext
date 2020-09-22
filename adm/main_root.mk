@@ -42,7 +42,7 @@ adm/root.mk:
 after:: ;
 	if test "$(MFEXT_ADDON)" != "1"; then _layer_dhash root@$(MFMODULE_LOWERCASE) >$(MFMODULE_HOME)/.dhash; fi
 	@mkdir -p .metwork-framework
-	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py --not-sphinx ALL >.metwork-framework/components.md
+	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py ALL >.metwork-framework/components.md
 
 mrproper:: clean
 	if test "$(MFEXT_ADDON)" != ""; then $(MAKE) _addon_mrproper; else $(MAKE) _mrproper; fi
@@ -73,24 +73,12 @@ _mrproper:
 _addon_mrproper:
 	for L in $(MFMODULE_HOME)/opt/*; do A=`cat $${L}/.mfextaddon 2>/dev/null`; if test "$(MFEXT_ADDON_NAME)" != "" -a "$${A}" = "$(MFEXT_ADDON_NAME)"; then rm -Rf "$${L}"; fi; done
 
-doc:: predoc
-	cd doc && make clean
-	layer_wrapper --layers=python3_devtools@mfext -- _yaml_to_md.py $(MFMODULE_HOME) >packages.md
-	_doc_layer.sh root >$(SRC_DIR)/doc/layer_root.md
-	if test "$(MFEXT_ADDON)" != "1"; then _doc_layer.sh root >$(SRC_DIR)/doc/layer_root.md; fi
-	rm -f packages.md
-	if test -d layers; then cd layers && $(MAKE) doc; fi
-	if test -d extra_layers; then cd extra_layers && $(MAKE) doc; fi
-	if test -d doc; then cd doc && layer_wrapper --layers=devtools@mfext,-python3@$(MFMODULE_LOWERCASE) -- make html && rm -Rf $(MFMODULE_HOME)/html_doc && cp -Rf _build/html $(MFMODULE_HOME)/html_doc; fi
-
 .PHONY: docs
 docs::
 	cd docs && make
 	rm -Rf _docs_build
 	layer_wrapper --layers=python3_devtools@mfext -- mkdocs build --strict --site-dir _docs_build
 	rm -Rf $(MFMODULE_HOME)/html_doc && cp -Rf _docs_build $(MFMODULE_HOME)/html_doc
-
-predoc:: ;
 
 test::
 	layer_wrapper --layers=devtools@mfext -- shellcheck bootstrap.sh
