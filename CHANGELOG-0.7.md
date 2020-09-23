@@ -4,28 +4,12 @@
 
 ## v0.7.2 (2019-08-06)
 
-### New Features
-- mflog update to support non standard logging levels
-
-
-### Bug Fixes
-- plugin_env issue with python2 plugins
-
-
-
+- No interesting change
 
 
 ## v0.7.1 (2019-06-27)
 
-### New Features
-- give up modules start if precondition failed
-
-
-### Bug Fixes
-- disable SSE4.2 optimizations to avoid nginx crashing on old servers
-
-
-
+- No interesting change
 
 
 ## v0.7.0 (2019-05-29)
@@ -53,7 +37,6 @@
 - add terminaltables component
 - restore env after exiting plugin_env
 - add libev component
-- preserve some extra env var in mfxxx_wrapper
 
 
 ### Bug Fixes
@@ -70,9 +53,6 @@
 - fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
 - obsoletes removed python layer
 - better vim wrappers (specially in plugin_env)
-- close mflog issue11
-- fix vim/vimdiff wrappers usage with git
-- fix vimdiff wrapper
 
 
 
