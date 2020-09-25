@@ -1,8 +1,17 @@
 # release_1.0 CHANGELOG
 
 
+## [Unreleased]
 
-## v1.0.0 (2020-09-19)
+### New Features
+- load the python3_scientific_core layer by default (if installed) (bp #912) (#913)
+
+
+
+
+
+
+## v1.0.0 (2020-09-24)
 
 ### New Features
 - systemd service improvments
@@ -93,6 +102,8 @@
 - update documentation
 - better prompt with virtualenv and better pip management
 - build nginx with http_auth_request module (#884)
+- drop sphinx libraries (replaced by mkdocs) (bp #899) (#911)
+- drop sphinx libraries (replaced by mkdocs) (bp #899) (#911)
 
 
 ### Bug Fixes
