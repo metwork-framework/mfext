@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- load the python3_scientific_core layer by default (if installed) (#912)
 - drop sphinx libraries (replaced by mkdocs) (#899)
 - build nginx with http_auth_request module (#884)
 - better prompt with virtualenv and better pip management
