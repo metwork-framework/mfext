@@ -1,7 +1,8 @@
 # release_1.0 CHANGELOG
 
 
-## [Unreleased]
+
+## v1.0.1 (2020-09-25)
 
 ### New Features
 - load the python3_scientific_core layer by default (if installed) (bp #912) (#913)
