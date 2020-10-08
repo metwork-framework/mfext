@@ -22,3 +22,4 @@ $(PREFIX)/bin/psql:
 	cd build/$(NAME)-$(VERSION)/contrib/pg_trgm && make && make install
 	cd build/$(NAME)-$(VERSION)/contrib/btree_gin && make && make install
 	cd build/$(NAME)-$(VERSION)/contrib/pgcrypto && make && make install
+	cd build/$(NAME)-$(VERSION)/contrib/unaccent && make && make install
