@@ -2,6 +2,17 @@
 
 
 
+## v0.9.11 (2020-10-09)
+
+### New Features
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+
+
+
+
+
 ## v0.9.10 (2020-09-01)
 
 ### New Features
