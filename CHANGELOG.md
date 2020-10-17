@@ -98,6 +98,7 @@
 
 
 ### Bug Fixes
+- give up profile loading when a required layer is missing (with a… (#924)
 - fix mfdata issue 288
 - fix PKG_CONFIG_PATH order in some corner cases
 - fix python2 plugins build
