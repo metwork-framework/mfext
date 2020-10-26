@@ -368,6 +368,15 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 EOF
         fi
     {% endif %}
+    {% if MFMODULE == "MFEXT" %}
+        if test -f /etc/metwork.config.d/mfserv/set_cap_net_bind_service; then
+            NGINX="{{MFEXT_HOME}}/opt/openresty/nginx/sbin/nginx"
+            if test -f "${NGINX}"; then
+                echo "INFO: setting cap_net_bind_service on ${NGINX}"
+                setcap cap_net_bind_service=+ep "${NGINX}" >/dev/null 2>&1 || true
+            fi
+        fi
+    {% endif %}
 {% endif %}
 
 
