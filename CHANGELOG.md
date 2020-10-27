@@ -1,6 +1,17 @@
 # release_1.0 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#929)
+
+
+
+
 
 ## v1.0.1 (2020-09-25)
 
