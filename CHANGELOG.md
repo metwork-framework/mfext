@@ -98,6 +98,7 @@
 
 
 ### Bug Fixes
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (#927)
 - give up profile loading when a required layer is missing (with a… (#924)
 - fix mfdata issue 288
 - fix PKG_CONFIG_PATH order in some corner cases
