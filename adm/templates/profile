@@ -122,7 +122,17 @@ if test "${N}" = "1"; then
     # note: if we are in a plugin_env, we don't load default layers (issue mfserv#220)
     if test "{% raw %}${{% endraw %}{{MFMODULE}}_CURRENT_PLUGIN_NAME:-}" = ""; then
         # We load the default layer
-        layer_load default@${MFMODULE_LOWERCASE} >/dev/null
+        layer_load default@${MFMODULE_LOWERCASE} >"/tmp/layer_load_${MFMODULE_LOWERCASE}_$$" 2>&1
+        N=$("{{MFEXT_HOME}}/opt/core/bin/is_layer_loaded" default@${MFMODULE_LOWERCASE} 2>/dev/null)
+        if test "${N}" != "1"; then
+            ${MFEXT_HOME}/opt/core/bin/echo_bold "[ERROR]: Can't load layer default@${MFMODULE_LOWERCASE}"
+            ${MFEXT_HOME}/opt/core/bin/echo_bold "[INFO]: One of the required dependency layers is probably not installed ==> so no layer at all has been loaded"
+            ${MFEXT_HOME}/opt/core/bin/echo_bold "=> see /tmp/layer_load_${MFMODULE_LOWERCASE}_$$ for details"
+            export PROFILE_ERROR=1
+            unset METWORK_PROFILE_LOADING
+            return 1
+        fi
+        rm "/tmp/layer_load_${MFMODULE_LOWERCASE}_$$"
     fi
 else
     # The default layer is not installed
