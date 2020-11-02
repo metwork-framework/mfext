@@ -28,9 +28,14 @@ field_remove_with_wildcards() {
 }
 
 exit_if_root() {
-    if test "$(id -u)" -eq 0; then
-        echo "can't run this program as root"
-        exit 1
+    if test "${METWORK_ALLOW_USAGE_BY_ROOT:-}" != "1"; then
+        if test "$(id -u)" -eq 0; then
+            echo "can't run this program as root"
+            echo "(if you exactly know what you are doing (Continous Integration"
+            echo " for example), you can bypass this test by setting an env var"
+            echo " named METWORK_ALLOW_USAGE_BY_ROOT with a value of 1)"
+            exit 1
+        fi
     fi
 }
 
