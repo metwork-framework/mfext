@@ -2,6 +2,18 @@
 
 
 
+## v1.0.2 (2020-10-27)
+
+### New Features
+
+
+### Bug Fixes
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#929)
+
+
+
+
+
 ## v1.0.1 (2020-09-25)
 
 ### New Features
