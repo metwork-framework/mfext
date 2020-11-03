@@ -1,6 +1,17 @@
 # release_0.9 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- don't block root usage in CI configurations (bp #937) (#941)
+
+
+
+
 
 ## v0.9.12 (2020-10-27)
 
