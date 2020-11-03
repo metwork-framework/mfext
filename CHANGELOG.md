@@ -1,6 +1,19 @@
 # release_1.0 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- give up profile loading when a required layer is missing (with a… (bp #924) (#925)
+- fix an issue with inject_file command in mfdata (bp #944) (#945)
+- don't block root usage in CI configurations (bp #937) (#942)
+
+
+
+
 
 ## v1.0.2 (2020-10-27)
 
