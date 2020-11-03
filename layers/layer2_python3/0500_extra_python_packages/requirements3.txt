@@ -1,4 +1,4 @@
--e git+https://github.com/metwork-framework/acquisition.git@9731b57100edbdfa08e4a9ae0cd4db806de333d4#egg=acquisition
+-e git+https://github.com/metwork-framework/acquisition.git@db57df0c77f9ae762b07f3adcc608d25d654607c#egg=acquisition
 aiohttp==3.6.2
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@d0feb6e25c632331325aae58462302d7d73c0e7c#egg=aiohttp_metwork_middlewares
 arrow==0.14.2
