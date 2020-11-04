@@ -7,6 +7,18 @@
 
 
 ### Bug Fixes
+- fix an issue in mfdata acquisition about default values in get_config_value() (bp #950) (#951)
+
+
+
+
+
+## v1.0.3 (2020-11-03)
+
+### New Features
+
+
+### Bug Fixes
 - give up profile loading when a required layer is missing (with a… (bp #924) (#925)
 - fix an issue with inject_file command in mfdata (bp #944) (#945)
 - don't block root usage in CI configurations (bp #937) (#942)
