@@ -98,6 +98,7 @@
 
 
 ### Bug Fixes
+- fix an issue in mfdata acquisition about default values in get_config_value() (#950)
 - fix an issue with inject_file command in mfdata (#944)
 - don't block root usage in CI configurations (#937)
 - don't prevent mfserv/nginx to bind <1024 ports with setcap (#927)
