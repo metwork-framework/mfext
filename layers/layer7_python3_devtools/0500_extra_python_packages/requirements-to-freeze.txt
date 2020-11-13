@@ -28,3 +28,4 @@ pytest-xdist
 pytest-mock
 pytest-html
 freezegun
+nose-html-reporting
