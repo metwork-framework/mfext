@@ -26,5 +26,4 @@ pytest-cov
 -e git+https://github.com/metwork-framework/jinja2_from_json_extension#egg=jinja2_from_json_extension
 pytest-xdist
 pytest-mock
-pytes-html
 freezegun
