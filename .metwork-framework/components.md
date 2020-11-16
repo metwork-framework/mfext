@@ -76,8 +76,9 @@
 | [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 0.15.1 | python3_devtools |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
-| [jsonsyslog2elasticsearch](https://pypi.org/project/jsonsyslog2elasticsearch) | custom | monitoring |
+| [jsonsyslog2elasticsearch](https://github.com/metwork-framework/jsonsyslog2elasticsearch) | custom | monitoring |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
+| [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
@@ -98,7 +99,7 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.2.2 | python3_devtools |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
-| [mflog](https://github.com/metwork-framework/mflog) | custom | python3 |
+| [mflog](https://github.com/metwork-framework/mflog) | 0.0.4 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | custom | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
@@ -111,12 +112,15 @@
 | [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 5.2.0 | python3_devtools |
 | [mkdocs](https://www.mkdocs.org) | 1.1.2 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 4.0.2 | python3_devtools |
+| [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 8.3.0 | python3_devtools |
+| [multidict](https://github.com/aio-libs/multidict) | 4.7.6 | python3 |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
 | [nltk](http://nltk.org/) | 3.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
+| [nose-html-reporting](https://github.com/lysenkoivan/nose-html-reporting) | 0.2.3 | python3_devtools |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
@@ -152,7 +156,9 @@
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
 | [pytest-forked](https://github.com/pytest-dev/pytest-forked) | 1.1.3 | python3_devtools |
+| [pytest-html](https://github.com/pytest-dev/pytest-html) | 2.1.1 | python3_devtools |
 | [pytest-httpserver](https://www.github.com/csernazs/pytest-httpserver) | 0.3.4 | python3_devtools |
+| [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 1.10.0 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.1.0 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
@@ -165,6 +171,7 @@
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
+| [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.1.3 | python3 |
@@ -189,12 +196,14 @@
 | [toml](https://github.com/uiri/toml) | 0.10.1 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
+| [tqdm](https://github.com/tqdm/tqdm) | 4.51.0 | python3_devtools |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
 | [virtualenv](https://virtualenv.pypa.io/) | 16.6.0 | python3_core |
+| [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3_devtools |
 | [wheel](https://github.com/pypa/wheel) | 0.33.4 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.5.2 | python3 |
@@ -203,6 +212,7 @@
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
+| [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(204 components)*
+*(214 components)*
