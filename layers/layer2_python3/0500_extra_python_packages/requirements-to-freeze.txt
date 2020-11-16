@@ -5,10 +5,10 @@
 -e git+https://github.com/thefab/pystatsd.git#egg=statsd
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client#egg=telegraf_unixsocket_client
 -e git+https://github.com/metwork-framework/cookiecutter.git@metwork#egg=cookiecutter
--e git+https://github.com/metwork-framework/mflog.git#egg=mflog
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git#egg=cookiecutter_hooks
 -e git+https://github.com/metwork-framework/mfutil.git#egg=mfutil
 -e git+https://github.com/metwork-framework/mfplugin.git#egg=mfplugin
+mflog
 structlog
 psutil
 redis
