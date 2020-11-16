@@ -76,8 +76,9 @@
 | [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 0.15.1 | python3_devtools |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
-| [jsonsyslog2elasticsearch](https://pypi.org/project/jsonsyslog2elasticsearch) | custom | monitoring |
+| [jsonsyslog2elasticsearch](https://github.com/metwork-framework/jsonsyslog2elasticsearch) | custom | monitoring |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
+| [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
@@ -98,7 +99,7 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.2.2 | python3_devtools |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
-| [mflog](https://github.com/metwork-framework/mflog) | custom | python3 |
+| [mflog](https://github.com/metwork-framework/mflog) | 0.0.4 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | custom | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
@@ -111,7 +112,9 @@
 | [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 5.2.0 | python3_devtools |
 | [mkdocs](https://www.mkdocs.org) | 1.1.2 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 4.0.2 | python3_devtools |
+| [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 8.3.0 | python3_devtools |
+| [multidict](https://github.com/aio-libs/multidict) | 4.7.6 | python3 |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
@@ -209,6 +212,7 @@
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
+| [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(210 components)*
+*(214 components)*
