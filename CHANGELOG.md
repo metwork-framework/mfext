@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add nose-html-reporting (#961)
 - add pytest-html and missing dependencies on other packages (#960)
 - build postgresql with extension unaccent (for usage in mfbase) (#917)
 - load the python3_scientific_core layer by default (if installed) (#912)
