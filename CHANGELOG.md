@@ -100,6 +100,7 @@
 
 
 ### Bug Fixes
+- fix a cache issue with python custom functions with same name (#966)
 - fix an issue in mfdata acquisition about default values in get_config_value() (#950)
 - fix an issue with inject_file command in mfdata (#944)
 - don't block root usage in CI configurations (#937)
