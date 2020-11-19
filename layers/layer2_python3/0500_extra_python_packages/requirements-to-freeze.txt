@@ -32,5 +32,8 @@ paramiko
 -e git+https://github.com/metwork-framework/acquisition.git#egg=acquisition
 -e git+https://github.com/metwork-framework/directory_observer.git#egg=directory_observer
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git#egg=aiohttp_metwork_middlewares
-#attrs is required by both python3_devtools and python3_scientific
+#Common dependencies (python3_devtools and python3_scientific) below
 attrs
+wrapt
+#zipp<=2.0.0 doesn t build (to be investigated)
+zipp<2.0.0

@@ -64,5 +64,7 @@ typing-extensions==3.7.4.2
 Unidecode==1.1.1
 urllib3==1.25.3
 whichcraft==0.5.2
+wrapt==1.12.1
 -e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile
 yarl==1.6.2
+zipp==1.2.0

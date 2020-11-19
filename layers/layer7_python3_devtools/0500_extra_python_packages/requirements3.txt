@@ -58,5 +58,3 @@ tqdm==4.51.0
 typed-ast==1.4.1
 wcwidth==0.2.5
 Werkzeug==1.0.1
-wrapt==1.12.1
-zipp==1.2.0
