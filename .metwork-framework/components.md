@@ -207,12 +207,12 @@
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3_devtools |
 | [wheel](https://github.com/pypa/wheel) | 0.33.4 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.5.2 | python3 |
-| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.12.1 | python3_devtools |
+| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.12.1 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
-| [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
+| [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3 |
 
-*(214 components)*
+*(229 components)*
