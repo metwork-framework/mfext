@@ -8,6 +8,7 @@
 
 ### Bug Fixes
 - fix an issue in mfdata acquisition about default values in get_config_value() (bp #950) (#951)
+- fix a cache issue with python custom functions with same name (bp #966) (#967)
 
 
 
