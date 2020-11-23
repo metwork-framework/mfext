@@ -175,8 +175,8 @@
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.1.3 | python3 |
-| [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 3.3.3 | python3 |
-| [setuptools](https://pypi.python.org/pypi/setuptools) | 41.0.1 | python3_core |
+| [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 4.1.2 | python3 |
+| [setuptools](https://pypi.python.org/pypi/setuptools) | 42.0.2 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.10 | python3 |
 | [six](https://pypi.python.org/pypi/six/) | 1.12.0 | python3_core |
@@ -193,7 +193,7 @@
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
-| [toml](https://github.com/uiri/toml) | 0.10.1 | python3_devtools |
+| [toml](https://github.com/uiri/toml) | 0.10.2 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
 | [tqdm](https://github.com/tqdm/tqdm) | 4.51.0 | python3_devtools |
@@ -213,6 +213,6 @@
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
-| [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3 |
+| [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
 
 *(214 components)*
