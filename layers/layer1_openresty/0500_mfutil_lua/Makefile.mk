@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=mfutil_lua
-export VERSION=0.0.1
+export VERSION=0.0.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=bf6305f068b78cf3e08e2e4a437ed561
+export CHECKSUM=a9d930400d627e6273102a30fbff40f2
 DESCRIPTION=\
 MFUTIL_LUA is a lua binding of some parts of mfutil library.
 WEBSITE=https://github.com/metwork-framework/mfutil_lua
