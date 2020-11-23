@@ -35,7 +35,7 @@ MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mfplugin.git@01eb2568853f400b6baa11a4c477b5aa0eabe9e7#egg=mfplugin
 -e git+https://github.com/metwork-framework/mfutil.git@78f9fce51411cd293572f9ce89dbf2d7b8e370ea#egg=mfutil
 netifaces==0.10.9
--e git+https://github.com/metwork-framework/opinionated_configparser.git@d8239a8906ec0f6296ec6a813ac244ec03033186#egg=opinionated_configparser
+-e git+https://github.com/metwork-framework/opinionated_configparser.git@f4a62dce12794eb1f657c4651f32d3c72ed4f33a#egg=opinionated_configparser
 paramiko==2.7.1
 pika==1.1.0
 poyo==0.4.2
