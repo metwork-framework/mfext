@@ -118,11 +118,13 @@ fix_system() {
   if test -f /etc/metwork.config.d/mfserv/set_cap_net_bind_service; then
     NGINX="{{MFEXT_HOME}}/opt/openresty/nginx/sbin/nginx"
     if test -f "${NGINX}"; then
-      echo -n "System: setting cap_net_bind_service on ${NGINX} ..."
+      echo -n "System: setting cap_net_bind_service on ${NGINX}..."
       setcap cap_net_bind_service=+ep "${NGINX}" >/dev/null 2>&1
       CAPA=$(getcap "${NGINX}" |grep "cap_net_bind_service+ep" 2>/dev/null)
       if test "${CAPA}" = ""; then
         echo "ERROR (setcap command not installed?)"
+      else
+        echo "Ok"
       fi
     fi
   fi
