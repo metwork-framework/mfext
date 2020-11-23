@@ -38,7 +38,7 @@ mflog==0.0.4
 mockredispy==2.9.3
 multidict==4.7.6
 netifaces==0.10.9
--e git+https://github.com/metwork-framework/opinionated_configparser.git@0735fbda6d42bb61b10d3e3c3c2ba17463214974#egg=opinionated_configparser
+-e git+https://github.com/metwork-framework/opinionated_configparser.git@f4a62dce12794eb1f657c4651f32d3c72ed4f33a#egg=opinionated_configparser
 paramiko==2.7.1
 pika==1.1.0
 poyo==0.4.2
