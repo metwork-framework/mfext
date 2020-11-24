@@ -132,8 +132,7 @@
 | [mflog](https://github.com/metwork-framework/mflog) | custom | python2 |
 | [mflog](https://github.com/metwork-framework/mflog) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
-<<<<<<< HEAD
-| [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
+| [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
 | [mistune](https://github.com/lepture/mistune) | 0.8.4 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 3.0.5 | python2_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 3.0.5 | python3_devtools |
@@ -141,20 +140,6 @@
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3_devtools |
 | [more-itertools](https://github.com/erikrose/more-itertools) | 5.0.0 | python2_devtools |
 | [more-itertools](https://github.com/erikrose/more-itertools) | 7.2.0 | python3_devtools |
-=======
-| [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
-| [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.1 | python3_devtools |
-| [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.2.1 | python3_devtools |
-| [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
-| [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 0.4.9 | python3_devtools |
-| [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.0 | python3_devtools |
-| [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 5.2.0 | python3_devtools |
-| [mkdocs](https://www.mkdocs.org) | 1.1.2 | python3_devtools |
-| [mock](http://mock.readthedocs.org/en/latest/) | 4.0.2 | python3_devtools |
-| [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
-| [more-itertools](https://github.com/more-itertools/more-itertools) | 8.3.0 | python3_devtools |
-| [multidict](https://github.com/aio-libs/multidict) | 4.7.6 | python3 |
->>>>>>> 8080c0de... build: fix mfutil_lua version (#985)
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python2 |
