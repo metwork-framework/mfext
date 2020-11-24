@@ -103,7 +103,7 @@
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | custom | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
-| [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.1 | openresty |
+| [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.1 | python3_devtools |
 | [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.2.1 | python3_devtools |
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
