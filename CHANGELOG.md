@@ -1,6 +1,18 @@
 # release_1.0 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- update opinionated_configparser (bp #975) (#976)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#979)
+
+
+
+
 
 ## v1.0.4 (2020-11-19)
 
