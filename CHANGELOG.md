@@ -100,6 +100,8 @@
 
 
 ### Bug Fixes
+- fix error message in nginx_error with < 1024 port binding (#977)
+- update opinionated_configparser (#975)
 - fix a cache issue with python custom functions with same name (#966)
 - fix an issue in mfdata acquisition about default values in get_config_value() (#950)
 - fix an issue with inject_file command in mfdata (#944)
