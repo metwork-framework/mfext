@@ -35,5 +35,4 @@ paramiko
 #Common dependencies (python3_devtools and python3_scientific) below
 attrs
 wrapt
-#zipp<=2.0.0 doesn t build (to be investigated)
-zipp<2.0.0
+zipp

@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=setuptools
-export VERSION=41.0.1
+export VERSION=42.0.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=5493fb91984e98102b095e0df2490560
+export CHECKSUM=d9a460d503657ee184e438d53f3c0e63
 DESCRIPTION=\
 Setuptools is a package development process library designed to facilitate \
 download, build, install, upgrade, and uninstall Python packages
