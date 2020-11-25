@@ -21,13 +21,13 @@ REALPATH=$(readlink -m "${REQUIREMENTS}")
 REALDIRNAME=$(dirname "${REALPATH}")
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
     if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
-        BINARY="--no-binary :all:"
+        BINARY=""
     else
         BLIST=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
         BINARY="--no-binary :all: --only-binary ${BLIST}"
     fi
 else
-    BINARY=""
+    BINARY="--no-binary :all:"
 fi
 
 TEMPO_LAYER_LABEL="tempolayer$$"
