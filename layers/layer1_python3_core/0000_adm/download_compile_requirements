@@ -20,9 +20,14 @@ REQUIREMENTS="$1"
 REALPATH=$(readlink -m "${REQUIREMENTS}")
 REALDIRNAME=$(dirname "${REALPATH}")
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
-    INSTALL_REQUIREMENTS_ALLOW_BINARIES=1
+    if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
+        BINARY="--no-binary :all:"
+    else
+        BLIST=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
+        BINARY="--no-binary :all: --only-binary ${BLIST}"
+    fi
 else
-    INSTALL_REQUIREMENTS_ALLOW_BINARIES=0
+    BINARY=""
 fi
 
 TEMPO_LAYER_LABEL="tempolayer$$"
@@ -52,12 +57,6 @@ if test "${N}" -eq 0; then
     rm -Rf "${TEMPO_LAYER_PATH}"
     rm -Rf tmp_src
     exit 0
-fi
-
-if test "${INSTALL_REQUIREMENTS_ALLOW_BINARIES}" = "1"; then
-    BINARY=""
-else
-    BINARY="--no-binary :all:"
 fi
 
 if test "${METWORK_PYTHON_MODE:-}" = "3"; then
