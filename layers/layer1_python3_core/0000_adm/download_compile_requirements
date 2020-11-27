@@ -60,7 +60,10 @@ if test "${N}" -eq 0; then
 fi
 
 if test "${METWORK_PYTHON_MODE:-}" = "3"; then
-    BUILD_ISOLATION="--no-build-isolation"
+    #We remove --no-build-isolation to allow build dependencies (such as flit or poetry) to be installed during wheels building
+    #May be flit and poetry should be installed before (FIXME ?)
+    #BUILD_ISOLATION="--no-build-isolation"
+    BUILD_ISOLATION=""
 else
     BUILD_ISOLATION=""
 fi
