@@ -132,7 +132,7 @@ if test "${N}" = "1"; then
             unset METWORK_PROFILE_LOADING
             return 1
         fi
-        rm "/tmp/layer_load_${MFMODULE_LOWERCASE}_$$"
+        rm -f "/tmp/layer_load_${MFMODULE_LOWERCASE}_$$"
     fi
 else
     # The default layer is not installed
