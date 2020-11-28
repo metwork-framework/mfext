@@ -1,6 +1,17 @@
 # release_1.0 CHANGELOG
 
 
+## [Unreleased]
+
+### New Features
+
+
+### Bug Fixes
+- fix an interactive question in some cases during profile loading (bp #991) (#992)
+
+
+
+
 
 ## v1.0.5 (2020-11-24)
 
