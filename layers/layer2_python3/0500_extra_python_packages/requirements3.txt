@@ -63,3 +63,7 @@ typing-extensions==3.7.4.2
 Unidecode==1.1.1
 whichcraft==0.5.2
 -e git+https://github.com/metwork-framework/xattrfile.git@740b1e406fbf1e3ba0763664f473640ff08a183d#egg=xattrfile
+-e git+https://github.com/metwork-framework/jinja2_fnmatch_extension@014bee0ebdaca0e3dc96a2e322db1b5dd6f0e1a2#egg=jinja2_fnmatch_extension
+-e git+https://github.com/metwork-framework/jinja2_from_json_extension@4b1bf5e9408003dd858f6d8e1346d61b4075f1a3#egg=jinja2_from_json_extension
+-e git+https://github.com/metwork-framework/jinja2_getenv_extension@5c9b3e1f18e513a18e0c3b666f8b2f69032f548b#egg=jinja2_getenv_extension
+-e git+https://github.com/metwork-framework/jinja2_shell_extension@3d2c512ef132d0f9bb068fb69a78621636c28d4c#egg=jinja2_shell_extension
