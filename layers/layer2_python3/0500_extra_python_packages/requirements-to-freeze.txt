@@ -8,6 +8,10 @@
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git#egg=cookiecutter_hooks
 -e git+https://github.com/metwork-framework/mfutil.git#egg=mfutil
 -e git+https://github.com/metwork-framework/mfplugin.git#egg=mfplugin
+-e git+https://github.com/metwork-framework/jinja2_shell_extension#egg=jinja2_shell_extension
+-e git+https://github.com/metwork-framework/jinja2_getenv_extension#egg=jinja2_getenv_extension
+-e git+https://github.com/metwork-framework/jinja2_fnmatch_extension#egg=jinja2_fnmatch_extension
+-e git+https://github.com/metwork-framework/jinja2_from_json_extension#egg=jinja2_from_json_extension
 mflog
 structlog
 psutil
