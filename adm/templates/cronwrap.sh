@@ -14,4 +14,10 @@ if test -f ~/.metwork.custom_profile; then
 fi
 
 export NOINTERACTIVE=1
+for P in /sbin /usr/sbin /usr/local/sbin; do
+    if test -d "${P}"; then
+        PATH=${PATH}:${P}
+    fi
+done
+export PATH=${PATH}
 layer_wrapper --layers=python3@mfext -- cronwrap.py "$@"
