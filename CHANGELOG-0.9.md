@@ -8,6 +8,7 @@
 
 ### Bug Fixes
 - fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
 
 
 
