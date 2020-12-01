@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- move jinja2 extensions packages to python3 layer (#996)
 - add nose-html-reporting (#961)
 - add pytest-html and missing dependencies on other packages (#960)
 - build postgresql with extension unaccent (for usage in mfbase) (#917)
@@ -100,6 +101,8 @@
 
 
 ### Bug Fixes
+- fix missing deps in centos8 (#1003)
+- fix an issue with < 1024 port binding (#999)
 - fix an interactive question in some cases during profile loading (#991)
 - fix error message in nginx_error with < 1024 port binding (#977)
 - update opinionated_configparser (#975)
