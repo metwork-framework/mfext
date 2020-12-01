@@ -4,10 +4,12 @@
 ## [Unreleased]
 
 ### New Features
+- move jinja2 extensions packages to python3 layer (bp #996) (#997)
 
 
 ### Bug Fixes
 - fix an interactive question in some cases during profile loading (bp #991) (#992)
+- fix an issue with < 1024 port binding (bp #999) (#1002)
 
 
 
