@@ -9,10 +9,6 @@ flake8-docstrings==1.5.0
 freezegun==0.3.15
 importlib-metadata==1.6.0
 isort==4.3.21
--e git+https://github.com/metwork-framework/jinja2_fnmatch_extension@014bee0ebdaca0e3dc96a2e322db1b5dd6f0e1a2#egg=jinja2_fnmatch_extension
--e git+https://github.com/metwork-framework/jinja2_from_json_extension@4b1bf5e9408003dd858f6d8e1346d61b4075f1a3#egg=jinja2_from_json_extension
--e git+https://github.com/metwork-framework/jinja2_getenv_extension@5c9b3e1f18e513a18e0c3b666f8b2f69032f548b#egg=jinja2_getenv_extension
--e git+https://github.com/metwork-framework/jinja2_shell_extension@3d2c512ef132d0f9bb068fb69a78621636c28d4c#egg=jinja2_shell_extension
 joblib==0.15.1
 lazy-object-proxy==1.4.3
 livereload==2.6.1
