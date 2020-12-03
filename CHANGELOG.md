@@ -10,6 +10,9 @@
 ### Bug Fixes
 - fix an interactive question in some cases during profile loading (bp #991) (#992)
 - fix an issue with < 1024 port binding (bp #999) (#1002)
+- add missing postgresql support in gdal (bp #1010) (#1012)
+- fix missing deps in centos8 (bp #1003) (#1004)
+- fix template crontab (bp #1015) (#1016)
 
 
 
