@@ -101,6 +101,7 @@
 
 
 ### Bug Fixes
+- fix template crontab (#1015)
 - add missing postgresql support in gdal (#1010)
 - fix missing deps in centos8 (#1003)
 - fix an issue with < 1024 port binding (#999)
