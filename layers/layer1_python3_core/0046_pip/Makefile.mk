@@ -3,10 +3,10 @@ include ../../package.mk
 
 #Note : there is a problem when building python3_devtools with version 19.x (https://github.com/pypa/pip/issues/6222)
 export NAME=pip
-export VERSION=18.1
+export VERSION=20.2.4
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=75cad449ad62c88b22de317a26781714
+export CHECKSUM=3f309f50bbd2065b7c385d904cfed1f2
 DESCRIPTION=\
 The PyPA recommended tool for installing Python packages.
 WEBSITE=https://pip.pypa.io/

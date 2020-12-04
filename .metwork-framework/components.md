@@ -132,7 +132,7 @@
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.8.1 | python3_devtools |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
-| [pip](https://pip.pypa.io/) | 18.1 | python3_core |
+| [pip](https://pip.pypa.io/) | 20.2.4 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
