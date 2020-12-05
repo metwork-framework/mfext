@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- upgrade pip from 18.1 to 20.2.4 (18.1 is too old to install som… (#1011)
 - move jinja2 extensions packages to python3 layer (#996)
 - add nose-html-reporting (#961)
 - add pytest-html and missing dependencies on other packages (#960)
