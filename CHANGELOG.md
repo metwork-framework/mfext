@@ -1,7 +1,8 @@
 # release_1.0 CHANGELOG
 
 
-## [Unreleased]
+
+## v1.0.6 (2020-12-03)
 
 ### New Features
 - move jinja2 extensions packages to python3 layer (bp #996) (#997)
