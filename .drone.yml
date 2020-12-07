@@ -155,7 +155,7 @@ pipeline:
   integration_tests_integration:
     <<: *integration_tests_common
     
-    image: centos:${OS_VERSION}
+    image: metwork/${OS_VERSION}:latest
     
     environment:
       - DEP_BRANCH=integration
@@ -167,7 +167,7 @@ pipeline:
   integration_tests:
     <<: *integration_tests_common
     
-    image: centos:${OS_VERSION}
+    image: metwork/${OS_VERSION}:latest
     
     environment:
       - DEP_BRANCH=${DRONE_BRANCH}
