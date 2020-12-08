@@ -13,4 +13,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libxml2.so
 $(PREFIX)/lib/libxml2.so:
-	$(MAKE) --file=../../Makefile.standard OPTIONS="--enable-shared --disable-static --without-python" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard OPTIONS="--enable-shared --disable-static --without-python  -with-lzma=$(PREFIX)" download uncompress configure build install

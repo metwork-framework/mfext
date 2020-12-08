@@ -211,8 +211,9 @@
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
+| [xz](https://tukaani.org/xz/) | 5.2.5 | core |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
 
-*(214 components)*
+*(215 components)*

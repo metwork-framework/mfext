@@ -18,3 +18,4 @@ import inotify_simple #inotify-simple
 import yaml #PyYAML
 import diskcache
 import tkinter
+import lzma
