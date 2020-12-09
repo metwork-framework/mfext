@@ -1,0 +1,4 @@
+#Patch to add symbol XZ_5.1.2alpha for compatibility with CentOS7 yum/rpm (librpmio.so)
+#in case of use of rpm -q or yum list during build
+#See https://stackoverflow.com/questions/47633870/rpm-lib64-liblzma-so-5-version-xz-5-1-2alpha-not-found-required-by-lib-li
+xz5.1.2alpha.patch
