@@ -40,3 +40,5 @@ paramiko
 attrs
 wrapt
 zipp
+Markdown
+tqdm
