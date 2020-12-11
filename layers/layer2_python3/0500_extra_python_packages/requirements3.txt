@@ -27,10 +27,12 @@ filelock==3.0.12
 future==0.17.1
 gitignore-parser==0.0.6
 idna==2.8
+importlib-metadata==2.0.0
 inotify-simple==1.1.8
 Jinja2==2.10.1
 jinja2-time==0.2.0
 lazy-import==0.2.2
+Markdown==3.3.3
 MarkupSafe==1.1.1
 mflog==0.0.4
 -e git+https://github.com/metwork-framework/mfplugin.git@0cf569a70eb16b5e9ee3b3e07604d0216c6a16d6#egg=mfplugin
@@ -60,6 +62,7 @@ simpleeval==0.9.10
 structlog==19.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 terminaltables==3.1.0
+tqdm==4.53.0
 typing-extensions==3.7.4.2
 Unidecode==1.1.1
 urllib3==1.25.3

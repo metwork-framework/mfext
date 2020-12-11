@@ -7,14 +7,12 @@ execnet==1.7.1
 flake8==3.8.1
 flake8-docstrings==1.5.0
 freezegun==0.3.15
-importlib-metadata==1.6.0
 isort==4.3.21
 joblib==0.15.1
 lazy-object-proxy==1.4.3
 livereload==2.6.1
 lunr==0.5.8
 Mako==1.1.2
-Markdown==3.2.2
 mccabe==0.6.1
 mkdocs==1.1.2
 mkdocs-add-number-plugin==1.2.1
@@ -49,7 +47,6 @@ repackage==0.7.3
 snowballstemmer==2.0.0
 termcolor==1.1.0
 tornado==6.0.4
-tqdm==4.51.0
 typed-ast==1.4.1
 wcwidth==0.2.5
 Werkzeug==1.0.1
