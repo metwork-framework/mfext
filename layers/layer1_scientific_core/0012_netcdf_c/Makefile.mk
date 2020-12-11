@@ -13,6 +13,6 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libnetcdf.so
 $(PREFIX)/lib/libnetcdf.so:
-	# Build with cmake would need cmake >= 3.6.1, so we keep configure
+	# Since we build cmake in layer core, we could build netcdf-c with cmake
 	# There are no with-hdf5=DIR and with-curl=DIR options, so we keep EXTRALDFLAGS and EXTRACFLAGS
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRALDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/../core/lib" EXTRACFLAGS="-I$(PREFIX)/include -I$(PREFIX)/../core/include" OPTIONS="--disable-static" download uncompress configure build install
