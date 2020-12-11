@@ -32,6 +32,7 @@
 | [circus](https://pypi.org/project/circus) | custom | python3_circus |
 | [ciso8601](https://github.com/closeio/ciso8601) | 2.1.1 | monitoring |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
+| [cmake](https://cmake.org/) | 3.19.1 | core |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
@@ -64,7 +65,7 @@
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
-| [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 1.6.0 | python3_devtools |
+| [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 2.0.0 | python3 |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
 | [jasper](http://www.ece.uvic.ca/~frodo/jasper/) | 2.0.14 | scientific_core |
@@ -96,7 +97,7 @@
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://github.com/yeraydiazdiaz/lunr.py) | 0.5.8 | python3_devtools |
 | [Mako](https://www.makotemplates.org/) | 1.1.2 | python3_devtools |
-| [Markdown](https://Python-Markdown.github.io/) | 3.2.2 | python3_devtools |
+| [Markdown](https://Python-Markdown.github.io/) | 3.3.3 | python3 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.0.4 | python3 |
@@ -196,7 +197,7 @@
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
-| [tqdm](https://github.com/tqdm/tqdm) | 4.51.0 | python3_devtools |
+| [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
@@ -216,4 +217,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
 
-*(215 components)*
+*(216 components)*
