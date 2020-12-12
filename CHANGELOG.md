@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### New Features
+- add cmake 3.19.1 (a recent release is necessary to build some p… (#1028)
 - add xz (which allows to add lzma support in python, gdal, ...) (#1025)
 - upgrade pip from 18.1 to 20.2.4 (18.1 is too old to install som… (#1011)
 - move jinja2 extensions packages to python3 layer (#996)
