@@ -1,9 +1,20 @@
 # CHANGELOG
 
 
+
+
+
 ## [Unreleased]
 
+
+
+
+
+
+
 ### New Features
+
+
 - add cmake 3.19.1 (a recent release is necessary to build some p… (#1028)
 - add xz (which allows to add lzma support in python, gdal, ...) (#1025)
 - upgrade pip from 18.1 to 20.2.4 (18.1 is too old to install som… (#1011)
@@ -87,7 +98,6 @@
 - upgrade hdf5 from 1.10.2 to 1.10.5
 - upgrade postgresql from 10.1 to 10.11
 - upgrade openjpeg from 2.1.2 to 2.3.1
-- upgrade rpm from 4.9.1.3 to 4.15.1
 - upgrade libxslt from 1.1.28 to 1.1.34
 - upgrade c-ares from 1.12.0 to 1.15.0
 - add makefiles to install python modules with pip when an induced compilation with scls is necessary
@@ -103,7 +113,14 @@
 - systemd service improvments
 
 
+
+
+
+
+
 ### Bug Fixes
+
+
 - fix template crontab (#1015)
 - add missing postgresql support in gdal (#1010)
 - fix missing deps in centos8 (#1003)
@@ -133,6 +150,7 @@
 - mfserv_wrapper now loads custom metwork profiles
 - fix systemd service
 - fix metwork services start for systems where /sys is readonly
+
 
 
 
