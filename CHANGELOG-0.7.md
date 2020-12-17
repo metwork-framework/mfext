@@ -1,36 +1,29 @@
 # release_0.7 CHANGELOG
 
-
-
 ## v0.7.2 (2019-08-06)
 
 ### New Features
+
 - mflog update to support non standard logging levels
 
-
 ### Bug Fixes
+
 - plugin_env issue with python2 plugins
-
-
-
-
 
 ## v0.7.1 (2019-06-27)
 
 ### New Features
+
 - give up modules start if precondition failed
 
-
 ### Bug Fixes
+
 - disable SSE4.2 optimizations to avoid nginx crashing on old servers
-
-
-
-
 
 ## v0.7.0 (2019-05-29)
 
 ### New Features
+
 - try to keep a backup of user files during uninstall
 - split old scientific layer between scientific_core layer
 - introduce mflog2mfadmin feature
@@ -55,8 +48,8 @@
 - add libev component
 - preserve some extra env var in mfxxx_wrapper
 
-
 ### Bug Fixes
+
 - fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
 - only the layers corresponding to the current addon should be in the
 - upgrade mflog to fix metwork-framework/mflog#8
@@ -71,10 +64,7 @@
 - obsoletes removed python layer
 - better vim wrappers (specially in plugin_env)
 - close mflog issue11
-- fix vim/vimdiff wrappers usage with git
 - fix vimdiff wrapper
-
-
-
+- fix vim/vimdiff wrappers usage with git
 
 
