@@ -1,89 +1,57 @@
 # release_1.0 CHANGELOG
 
-
-
 ## v1.0.6 (2020-12-03)
 
 ### New Features
+
 - move jinja2 extensions packages to python3 layer (bp #996) (#997)
 
-
 ### Bug Fixes
+
 - fix an interactive question in some cases during profile loading (bp #991) (#992)
 - fix an issue with < 1024 port binding (bp #999) (#1002)
 - add missing postgresql support in gdal (bp #1010) (#1012)
 - fix missing deps in centos8 (bp #1003) (#1004)
 - fix template crontab (bp #1015) (#1016)
 
-
-
-
-
 ## v1.0.5 (2020-11-24)
 
-### New Features
-
-
 ### Bug Fixes
+
 - update opinionated_configparser (bp #975) (#976)
 - fix error message in nginx_error with < 1024 port binding (bp #977) (#979)
 
-
-
-
-
 ## v1.0.4 (2020-11-19)
 
-### New Features
-
-
 ### Bug Fixes
+
 - fix an issue in mfdata acquisition about default values in get_config_value() (bp #950) (#951)
 - fix a cache issue with python custom functions with same name (bp #966) (#967)
 
-
-
-
-
 ## v1.0.3 (2020-11-03)
 
-### New Features
-
-
 ### Bug Fixes
+
 - give up profile loading when a required layer is missing (with a… (bp #924) (#925)
 - fix an issue with inject_file command in mfdata (bp #944) (#945)
 - don't block root usage in CI configurations (bp #937) (#942)
 
-
-
-
-
 ## v1.0.2 (2020-10-27)
 
-### New Features
-
-
 ### Bug Fixes
+
 - don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#929)
-
-
-
-
 
 ## v1.0.1 (2020-09-25)
 
 ### New Features
+
 - load the python3_scientific_core layer by default (if installed) (bp #912) (#913)
-
-
-
-
-
 
 ## v1.0.0 (2020-09-24)
 
 ### New Features
+
 - systemd service improvments
 - add a banner about configured mfadmin module
 - better interactive/GUI processes detection
@@ -97,7 +65,6 @@
 - add makefiles to install python modules with pip when an induced compilation with scls is necessary
 - upgrade c-ares from 1.12.0 to 1.15.0
 - upgrade libxslt from 1.1.28 to 1.1.34
-- upgrade rpm from 4.9.1.3 to 4.15.1
 - upgrade openjpeg from 2.1.2 to 2.3.1
 - upgrade postgresql from 10.1 to 10.11
 - upgrade hdf5 from 1.10.2 to 1.10.5
@@ -173,10 +140,9 @@
 - better prompt with virtualenv and better pip management
 - build nginx with http_auth_request module (#884)
 - drop sphinx libraries (replaced by mkdocs) (bp #899) (#911)
-- drop sphinx libraries (replaced by mkdocs) (bp #899) (#911)
-
 
 ### Bug Fixes
+
 - fix metwork services start for systems where /sys is readonly
 - fix systemd service
 - mfserv_wrapper now loads custom metwork profiles
@@ -193,8 +159,5 @@
 - fix python2 plugins build
 - fix PKG_CONFIG_PATH order in some corner cases
 - fix mfdata issue 288
-
-
-
 
 
