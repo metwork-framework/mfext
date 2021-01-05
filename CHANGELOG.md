@@ -29,5 +29,6 @@
 - fix missing deps in centos8 (#1003)
 - add missing postgresql support in gdal (#1010)
 - fix template crontab (#1015)
+- update acquisition to fix a mfdata issue (#1046)
 
 
