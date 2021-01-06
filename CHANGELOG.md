@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- update acquisition to fix a mfdata issue (bp #1046) (#1047)
+
 ## v1.0.6 (2020-12-03)
 
 ### New Features
