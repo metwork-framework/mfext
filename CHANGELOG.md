@@ -9,108 +9,112 @@
 
 ## v0.9.13 (2020-11-03)
 
-### Bug Fixes
-
-- don't block root usage in CI configurations (bp #937) (#941)
-
-## v0.9.12 (2020-10-27)
-
-### Bug Fixes
-
-- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
-
-## v0.9.11 (2020-10-09)
-
 ### New Features
 
-- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
-
-## v0.9.10 (2020-09-01)
-
-### New Features
-
-- build nginx with http_auth_request module (#884)
-
-### Bug Fixes
-
-- fix plugins.info in python2
-- fix PKG_CONFIG_PATH order in some cases
-
-## v0.9.9 (2020-05-07)
-
-### Bug Fixes
-
-- fix systemctl startup with some circusctl versions
-
-## v0.9.8 (2020-03-19)
-
-### Bug Fixes
-
-- fix again a little warning
-
-## v0.9.7 (2020-03-19)
-
-### New Features
-
-- cronwrapper update to fix uid collisions when mfserv is launched several times
-- upgrade netcdf_c from 4.7.0 to 4.7.3
-
-## v0.9.6 (2020-02-14)
-
-### New Features
-
-- cronwrap load custom profiles like bashrc/profile
-- increase sysctl net.ipv4.tcp_max_syn_backlog
-
-### Bug Fixes
-
-- fix pip usage inside plugin_env (and change cwd for plugin_home)
-- custom sysctl.conf was not applied during startup
-
-## v0.9.5 (2020-01-24)
-
-### Bug Fixes
-
-- remove some old aliases for vim in python2_devtools
-- fix automatic restart
-- fix nasty warning in mfdata plugin_env when admin is set
-
-## v0.9.4 (2020-01-02)
-
-- No interesting change
-
-## v0.9.3 (2020-01-02)
-
-### New Features
-
-- update circus_autorestart_plugin
-
-### Bug Fixes
-
-- fix plugin_env behaviour in some corner cases
-
-## v0.9.2 (2019-11-01)
-
-### New Features
-
-- add a banner about configured mfadmin module
-- better interactive/GUI processes detection
-- add a clear warning...
-- systemd service improvments
-
-### Bug Fixes
-
-- fix metwork services start for systems where /sys is readonly
-- mfserv_wrapper now loads custom metwork profiles
-
-## v0.9.1 (2019-10-23)
-
-- No interesting change
-
-## v0.9.0 (2019-10-22)
-
-### New Features
-
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
 - upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
 - introduce build extra dependencies
 - new packaging + layerapi2 is now hosted in a dedicated repository
@@ -134,9 +138,63 @@
 - add wrk tool to devtools layer
 - add wrk tool to devtools layer
 - add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
 
 ### Bug Fixes
 
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
 - fix vi usage without devtools
 - use vi in python2 mode when we are in python2
 - fix issue #35 on addon scientific (build problem with python2 ESMF)
@@ -145,5 +203,2790 @@
 - fix dead link to plugins guide
 - external_plugins/ directory for mfbase
 - fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.12 (2020-10-27)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.11 (2020-10-09)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.10 (2020-09-01)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.9 (2020-05-07)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.8 (2020-03-19)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.7 (2020-03-19)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.6 (2020-02-14)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.5 (2020-01-24)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.4 (2020-01-02)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.3 (2020-01-02)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.2 (2019-11-01)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.1 (2019-10-23)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
+
+## v0.9.0 (2019-10-22)
+
+### New Features
+
+- first import
+- add websocket support for openresty
+- add websocket support for openresty
+- add integration_tests layer and rpm mfext-integration-tests
+- mapserver introduction
+- we increase some system limits (nofile and nproc)
+- upgrade python requests because of security alert
+- load mapserver layer by default (if available)
+- we can now use plugin_env function in a plugin directory
+- add pytest package and update some other ones
+- upgrade eccodes to 2.9.0
+- add mapserverapi library
+- add mapserverapi_python
+- Add postgresql support in gdal
+- now we can use pip inside a "plugin env"
+- add mapserverapi_python
+- patch certifi for using system certificates on centos
+- use normal "npm" workflow inside a "plugin_env"
+- add geos, lxml, pycurl, pyproj and sqlalchemy
+- check that module crontab is not empy in mfxxx.status
+- better default MODULE_RUNTIME_SUFFIX
+- Add possibility to pip install package from https url.
+- guess released versions with tags
+- add lxml, pycurl, pyproj and sqlalchemy as in python3
+- add basemap, cdsapi, graphviz, pandas and scikit-learn
+- telegraf is now monitoring itself
+- add graphviz in scientific layer
+- add pygraphviz in python[23]_scientific layers
+- add diskcache in python2 and python3 layers
+- telegraf update (1.7.1 => 1.7.4)
+- upgrade eccodes from 2.9.0 to 2.10.0 and
+- Add Fiona in python2 and python3 scientific layers
+- expose new function in layerapi2
+- update urllib3 (1.22 => 1.23) 
+- add openjdk as a non default layer
+- introduce monitoring layer (loaded by default) and move telegraf
+- add filebeat component
+- telegraf update (1.7.4 => 1.9.1)
+- upgrade netCDF4 python from 1.4.0 to 1.4.2
+- clean some useless files in .plugin files
+- upgrade python3 from 3.5.3 to 3.5.6 and python2 from 2.7.9 to
+- lua-resty-stats upgrade (0.0.2 => 0.0.3)
+- ignore lines starting with # in .layerapi2_dependencies/conflicts
+- Simplify _metwork.spec with self discovery of layer dependencies
+- add some metapackages aliases to have a cleaner installation doc
+- we remove the src directory from .plugin files
+- add a way to install binary python wheels
+- add a python3_ia layer
+- user-defined configuration name
+- execute integration tests directly from mfext module
+- new utility "outside" to execute commands outside the metwork env
+- introduce new mflog library
+- Upgrade geos from 3.6.2 to 3.7.1 (with scl for C++11 on centos6)
+- Upgrade postgis from 2.4.4 to 2.4.6
+- remove "aliases" rpms (replaced by the use of Provides in spec file)
+- prevent single rpm installation and make sure the layer root rpm is the last uninstalled rpm when uninstalling the module
+- upgrade mflog to latest master
+- upgrade mflog to latest master
+- introduce mfext addons
+- mflog update (again)
+- remove python3_ia layer (we are building an dedicated addon for
+- delete filebeat component
+- add a first version of jsonlog2elasticsearch
+- add sphinx-automodapi module
+- mfutil_c introduction and some profile changes
+- use our cookiecutter fork to add some features
+- upgrade glib2 from 2.40.2 to 2.56.4
+- mflog update to fix some issues about null files
+- use python27 scl (python 2.7.13) if python version < 2.8 (python 2.7.5 in centos7)
+- refuse mfxxx.stop/start if the config.ini is newer than the current env
+- try to keep a backup of user files during uninstall
+- split old scientific layer between scientific_core layer
+- introduce mflog2mfadmin feature
+- mflog update
+- telegraf update
+- update mflog and use new automatic context function
+- remove prerequirements files
+- update mflog
+- add graphviz in devtools layer (for documentation)
+- allow to build mfext behing a corporate http proxy
+- urllib3 update (1.23 => 1.24.2) because of upstream security issue
+- add search_paths feature to cookiecutter
+- add cookiecutter_hooks project
+- update openjdk 11.0.1 => 11.0.2 and add mirror
+- openresty update (1.11.2.2 => 1.13.6.2)
+- keep request_id field in logs
+- add sqlite3 and libspatialite supports to gdal
+- add werkzeug component (python wsgi toolbox)
+- add some sysctl tunings
+- add terminaltables component
+- restore env after exiting plugin_env
+- add libev component
+- preserve some extra env var in mfxxx_wrapper
+- upgrade envtpl (both in python requirements and under portable_envtpl devtool)
+- use envtpl new option --reduce-multi-blank-lines
+- update cookiecutter_hooks (reduce multi blank lines to a single one and conform python code to pep8)
+- upgrade python3 from 3.5.6 to 3.7.3, python2 from 2.7.15 to 2.7.16 and all python requirements with use of libressl instead of openssl
+- give up modules start if precondition failed
+- upgrade redis from 3 to 5
+- telegraf update (1.10.2 => 1.11.2)
+- nodejs/npm update (nodejs 8.11.2 => 10.16.0, npm/6.1.0 => npm/6.9.0)
+- add revert_ldd.sh and external_dependencies.sh utilities
+- mflog update to support non standard logging levels
+- update mfutil_c and introduce mfutil_lua
+- upgrade netcdf and build with gcc/gfortran >= 4.5 for fortran compatibily with esmf on addon scientific
+- introduce build extra dependencies
+- new packaging + layerapi2 is now hosted in a dedicated repository
+- embed libffi and use it instead of system library
+- embed readline and use it instead of the system library
+- move netcdf fortran from mfext to mfextaddon_scientific (so libgfortran is not needed any more as system dependency in mfext)
+- embed libpng
+- embed tcl/tk libraries and build python2/3 with them
+- refactoring about #437, #432, #420
+- add some system dependencies
+- no more default passwords, prelimininary systemd support
+- replace MODULE* environment variables names by MFMODULE* (MODULE_HOME becomes MFMODULE_HOME and so on)
+- introduce components utility
+- add black python component
+- add hmac openresty component
+- update layerapi2
+- integrate mfcom in mfext as 3 mfext layers (misc, python2_misc and python3_misc)
+- add NODE_PATH in metwork_debug output
+- add empty option to plugin_wrapper
+- infinite circus max_retry
+- add wrk tool to devtools layer
+- add wrk tool to devtools layer
+- add some layerapi2 functions in mfutil
+- add a banner about configured mfadmin module
+- better interactive/GUI processes detection
+- add a clear warning...
+- systemd service improvments
+- update circus_autorestart_plugin
+- cronwrap load custom profiles like bashrc/profile
+- increase sysctl net.ipv4.tcp_max_syn_backlog
+- cronwrapper update to fix uid collisions when mfserv is launched several times
+- upgrade netcdf_c from 4.7.0 to 4.7.3
+- build nginx with http_auth_request module (#884)
+- build postgresql with extension unaccent (for usage in mfbase) (bp #917) (#918)
+
+### Bug Fixes
+
+- fix branch guessing with drone ci
+- fix drone build caching
+- sqlite support for python2/python3
+- fix error in template spec file for package mfserv and others
+- depency issue with new mapserver subpackage
+- mfxxx login problems in docker mode
+- add mapserverapi_python
+- block mfxxx.start/stop/status/init calls from a plugin_env
+- fix build error
+- mapserverapi upgrade (0.1.0 => 0.1.1)
+- fix layer dependencies in new tests
+- rpm names were incorrect with release tags
+- do not include .git* files in the plugin RPM
+- circus update to fix some stop_signal issues (on circus itself)
+- no doc(s) directory in a plugin release
+- rpm names with release tags
+- force epoch=1 in centos7 openssl dependency
+- upgrade mapserverapi (0.1.1 => 0.1.2)
+- mapserverapi update (0.1.2 => 0.1.3)
+- fix mfxxx.start/stop/status when used in some special dirs
+- fix some installation issues in some corner cases
+- upgrade problems at RPM levels
+- fix some rpm upgrades
+- fix the making of circus.ini from template on mfadmin (mfadmin.start was not working anymore)
+- only the layers corresponding to the current addon should be in the
+- upgrade mflog to fix metwork-framework/mflog#8
+- more reliable checks about some circus watchers
+- don't launch mflog2mfadmin is admin hostname is null
+- jinja2 update (security) 2.10 => 2.10.1
+- fix building issues with proxy
+- update internal circus version to fix a bug with async_kill feature
+- use python3 to build glib2 python tools and remove references to python scl in these tools
+- add a patch for openresty about nginx upstreams
+- fix bug CHANGELOGS not generated when CHANGELOGS.md doesn't exist (for the first time)
+- obsoletes removed python layer
+- better vim wrappers (specially in plugin_env)
+- close mflog issue11
+- fix vimdiff wrapper
+- fix vim/vimdiff wrappers usage with git
+- add pycodestyle (missing dependency for autopep8)
+- add pycodestyle (missing dependency for autopep8)
+- disable SSE4.2 optimizations to avoid nginx crashing on old servers
+- plugin_env issue with python2 plugins
+- fix vi usage without devtools
+- use vi in python2 mode when we are in python2
+- fix issue #35 on addon scientific (build problem with python2 ESMF)
+- fix complex issues with some extra layers in plugin_env
+- don't write empty requirements{2,3}.txt file in case of errors
+- fix dead link to plugins guide
+- external_plugins/ directory for mfbase
+- fix systemd service
+- fix metwork services start for systems where /sys is readonly
+- mfserv_wrapper now loads custom metwork profiles
+- fix plugin_env behaviour in some corner cases
+- remove some old aliases for vim in python2_devtools
+- fix automatic restart
+- fix nasty warning in mfdata plugin_env when admin is set
+- fix pip usage inside plugin_env (and change cwd for plugin_home)
+- custom sysctl.conf was not applied during startup
+- fix again a little warning
+- fix systemctl startup with some circusctl versions
+- fix plugins.info in python2
+- fix PKG_CONFIG_PATH order in some cases
+- don't prevent mfserv/nginx to bind <1024 ports with setcap (bp #927) (#928)
+- don't block root usage in CI configurations (bp #937) (#941)
+- fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
+- fix an issue with < 1024 port binding (bp #999) (#1001)
 
 
