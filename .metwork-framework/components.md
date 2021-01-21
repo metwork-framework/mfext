@@ -203,11 +203,7 @@
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
-<<<<<<< HEAD
-| [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
-=======
 | [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
-| [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
->>>>>>> 3fe4d8d2... build: fix build (yarl is downgraded from 1.6.2 to 1.5.1) (#1051)
+| [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
 *(204 components)*
