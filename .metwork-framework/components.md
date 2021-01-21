@@ -2,7 +2,7 @@
 | --- | --- | --- |
 | [acquisition](https://github.com/metwork-framework/acquisition) | custom | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | custom | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.6.2 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.6.3 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.3 | python3_core |
 | [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
@@ -214,7 +214,7 @@
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | custom | python3 |
 | [xz](https://tukaani.org/xz/) | 5.2.5 | core |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
-| [yarl](https://github.com/aio-libs/yarl/) | 1.6.2 | python3 |
+| [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
 
 *(216 components)*
