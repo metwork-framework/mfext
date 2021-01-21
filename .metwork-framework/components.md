@@ -206,4 +206,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(204 components)*
+*(205 components)*
