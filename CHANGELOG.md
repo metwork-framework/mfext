@@ -30,5 +30,6 @@
 - add missing postgresql support in gdal (#1010)
 - fix template crontab (#1015)
 - update acquisition to fix a mfdata issue (#1046)
+- update aiohttp 3.6.2 => 3.6.3 (fix a bug with url encoding) (#1049)
 
 
