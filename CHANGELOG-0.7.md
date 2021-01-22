@@ -304,6 +304,7 @@
 - fix missing deps in centos8 (bp #1003) (#1004)
 - fix template crontab (bp #1015) (#1016)
 - update acquisition to fix a mfdata issue (bp #1046) (#1047)
+- update aiohttp 3.6.2 => 3.6.3 (fix a bug with url encoding) (bp #1049) (#1050)
 
 ## v0.7.1 (2019-06-27)
 
@@ -609,6 +610,7 @@
 - fix missing deps in centos8 (bp #1003) (#1004)
 - fix template crontab (bp #1015) (#1016)
 - update acquisition to fix a mfdata issue (bp #1046) (#1047)
+- update aiohttp 3.6.2 => 3.6.3 (fix a bug with url encoding) (bp #1049) (#1050)
 
 ## v0.7.0 (2019-05-29)
 
@@ -914,5 +916,6 @@
 - fix missing deps in centos8 (bp #1003) (#1004)
 - fix template crontab (bp #1015) (#1016)
 - update acquisition to fix a mfdata issue (bp #1046) (#1047)
+- update aiohttp 3.6.2 => 3.6.3 (fix a bug with url encoding) (bp #1049) (#1050)
 
 
