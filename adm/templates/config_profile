@@ -11,7 +11,7 @@ if test -f {{MFMODULE_HOME}}/config/config.ini; then
         if test -f ${MFMODULE_RUNTIME_HOME}/config/config.ini; then
             CONF_FILE=${MFMODULE_RUNTIME_HOME}/config/config.ini
         fi
-        _ini_to_env.py --prefix={{MFMODULE}} --resolve --legacy-env --generation-time "{{MFMODULE_HOME}}/config/config.ini" "${MFMODULE_RUNTIME_HOME}/config/config.ini" "/etc/metwork.config.d/mfserv/config.ini" >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID}
+        _ini_to_env.py --prefix={{MFMODULE}} --resolve --legacy-env --generation-time "{{MFMODULE_HOME}}/config/config.ini" "${MFMODULE_RUNTIME_HOME}/config/config.ini" "/etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/config.ini" >${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID}
         N=`grep dns_error ${MFMODULE_RUNTIME_HOME}/tmp/ini_to_env_{{MFMODULE_LOWERCASE}}.cache.write.${UUID} |wc -l`
         if test ${N} -gt 0; then
             # si l'erreur DNS est lie a une modification de conf, on la prend quand meme
