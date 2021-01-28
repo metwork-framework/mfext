@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- important fix about configuration overrides in /etc (bp #1056) (#1057)
+
 ## v1.0.10 (2021-01-25)
 
 ### Bug Fixes
