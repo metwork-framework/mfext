@@ -110,6 +110,7 @@ if test "${RES}" = "0"; then
 
     if test -f ${MFMODULE_HOME}/config/circus.ini; then
         _circus.start
+        _circus_wait.sh
     fi
 
     {% if MFMODULE != "MFADMIN" %}
@@ -130,23 +131,6 @@ if test "${RES}" = "0"; then
     fi
     {% endif %}
 
-    {% block custom %}
-    # Can be replaced by mfxxx.start.custom
-    {% endblock %}
-
-    _make_and_install_crontab.sh
-
-    {% if MFMODULE != "MFADMIN" %}
-    if test "${ADMIN_HOSTNAME}" != ""; then
-        if test "${ADMIN_HOSTNAME}" != "null"; then
-    {% endif %}
-    _circus_wait_watcher_started.sh telegraf || RES=1
-    _circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
-    {% if MFMODULE != "MFADMIN" %}
-        fi
-    fi
-    {% endif %}
-
     {% if MFMODULE != "MFADMIN" %}
     if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
         if test "${ADMIN_HOSTNAME}" != "null"; then
@@ -163,8 +147,31 @@ if test "${RES}" = "0"; then
     {% endif %}
 
     {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+    {% block custom_before_plugins %}
+    # Can be replaced by mfxxx.start.custom
+    {% endblock %}
+    {% endif %}
+
+    {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
     plugins.start
     {% endif %}
+
+    {% block custom %}
+    # Can be replaced by mfxxx.start.custom
+    {% endblock %}
+
+    {% if MFMODULE != "MFADMIN" %}
+    if test "${ADMIN_HOSTNAME}" != ""; then
+        if test "${ADMIN_HOSTNAME}" != "null"; then
+    {% endif %}
+    _circus_wait_watcher_started.sh telegraf || RES=1
+    _circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
+    {% if MFMODULE != "MFADMIN" %}
+        fi
+    fi
+    {% endif %}
+
+    _make_and_install_crontab.sh
 
     echo -n "- Wait 2 sec..."
     echo_running
