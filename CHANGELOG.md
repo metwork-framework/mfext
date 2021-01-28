@@ -32,5 +32,6 @@
 - update acquisition to fix a mfdata issue (#1046)
 - update aiohttp 3.6.2 => 3.6.3 (fix a bug with url encoding) (#1049)
 - update acquisition pkg to fix typo with some failure policy conf (#1054)
+- important fix about configuration overrides in /etc (#1056)
 
 
