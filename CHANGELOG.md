@@ -4,6 +4,12 @@
 
 ### Bug Fixes
 
+- avoid automatic cleaning of tmp/config_auto directory (bp #1058) (#1060)
+
+## v1.0.11 (2021-01-28)
+
+### Bug Fixes
+
 - important fix about configuration overrides in /etc (bp #1056) (#1057)
 
 ## v1.0.10 (2021-01-25)
