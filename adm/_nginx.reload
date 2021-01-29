@@ -21,9 +21,16 @@ def get_nginx_master_pids():
             cmdline = " ".join(proc.cmdline())
             if 'nginx: master process' not in cmdline:
                 continue
-            cwd = proc.cwd()
-            if not cwd.startswith(MFMODULE_RUNTIME_HOME):
+            if MFMODULE_RUNTIME_HOME + "/tmp/config_auto/nginx.conf" not in cmdline:
                 continue
+            print(cmdline)
+            try:
+                cwd = proc.cwd()
+                if not cwd.startswith(MFMODULE_RUNTIME_HOME):
+                    continue
+            except psutil.AccessDenied:
+                # we can get this is we bind nginx on priviligied port (< 1024)
+                pass
             pids.append(proc.pid)
         except Exception:
             LOG.debug("exception catched")
