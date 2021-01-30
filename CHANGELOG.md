@@ -1,10 +1,11 @@
 # release_1.0 CHANGELOG
 
-## [Unreleased]
+## v1.0.12 (2021-01-29)
 
 ### Bug Fixes
 
 - avoid automatic cleaning of tmp/config_auto directory (bp #1058) (#1060)
+- fix nginx reload if binded to < 1024 port (bp #1061) (#1062)
 
 ## v1.0.11 (2021-01-28)
 
