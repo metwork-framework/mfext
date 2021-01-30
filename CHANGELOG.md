@@ -34,5 +34,6 @@
 - update acquisition pkg to fix typo with some failure policy conf (#1054)
 - important fix about configuration overrides in /etc (#1056)
 - avoid automatic cleaning of tmp/config_auto directory (#1058)
+- fix nginx reload if binded to < 1024 port (#1061)
 
 
