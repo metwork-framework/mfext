@@ -29,6 +29,7 @@ trap rkill SIGINT
 
 while test 1 -eq 1; do
 
+    # shellcheck disable=SC2068
     $@ &
     PID=$!
     if test "${PID}" != ""; then
