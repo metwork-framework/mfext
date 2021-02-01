@@ -29,7 +29,7 @@ for plugin_dict in plugins:
     if plugin_name in watchers_by_plugin:
         print("- Scheduling stop of plugin: %s" % plugin_name)
         for watcher in watchers_by_plugin[plugin_name]:
-            client.stop_watcher(name=watcher, indent=4, check=False)
+            client.stop_watcher(name=watcher, indent=4)
 
 # Waiting
 res = True
@@ -40,8 +40,7 @@ for plugin_dict in plugins:
         print("- Waiting for stop of plugin: %s" % plugin_name)
         watchers = watchers_by_plugin[plugin_name]
         for watcher in watchers:
-            res = res and client.stop_watcher_and_wait(indent=4, name=watcher,
-                                                       scheduled=True)
+            res = res and client.wait_watcher_stopped(indent=4, name=watcher)
 
 if not res:
     sys.exit(1)

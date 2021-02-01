@@ -34,9 +34,9 @@ jinja2-time==0.2.0
 lazy-import==0.2.2
 Markdown==3.3.3
 MarkupSafe==1.1.1
-mflog==0.0.4
+mflog==0.1.0
 -e git+https://github.com/metwork-framework/mfplugin.git@0cf569a70eb16b5e9ee3b3e07604d0216c6a16d6#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@73c3dbbb65e91417add2e740299649f356e8aa95#egg=mfutil
+-e git+https://github.com/metwork-framework/mfutil.git@f4b58eaecef22f5a61b45d66b2fcbdf842201431#egg=mfutil
 mockredispy==2.9.3
 multidict==4.7.6
 netifaces==0.10.9
