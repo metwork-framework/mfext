@@ -63,13 +63,19 @@ if test "${KEEPCRON}" = "0"; then
     _uninstall_crontab.sh
 fi
 
+{% block custom %}
+# Can be replaced by mfxxx.stop.custom
+{% endblock %}
+
 {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
 plugins.stop
 {% endif %}
 
-{% block custom %}
+{% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+{% block custom_after_plugins %}
 # Can be replaced by mfxxx.stop.custom
 {% endblock %}
+{% endif %}
 
 if test -f ${MFMODULE_HOME}/config/circus.ini; then
     _circus.stop
