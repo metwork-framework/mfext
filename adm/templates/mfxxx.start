@@ -71,6 +71,9 @@ if test "${NOINIT}" = "0"; then
         if ! test -f "${MFMODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
             NEED_INIT=1
         fi
+        if ! test -d "${MFMODULE_RUNTIME_HOME}/var/influxdb/data/metrics"; then
+            NEED_INIT=1
+        fi
     fi
     if test "${MFADMIN_LAYER_LOGS_LOADED:-}" = "1"; then
         if ! test -f "${MFMODULE_RUNTIME_HOME}/var/kibana/uuid"; then
