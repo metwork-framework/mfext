@@ -100,7 +100,7 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.3.3 | python3 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.6.1 | python3_devtools |
-| [mflog](https://github.com/metwork-framework/mflog) | 0.0.4 | python3 |
+| [mflog](https://github.com/metwork-framework/mflog) | 0.1.0 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | custom | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | custom | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |

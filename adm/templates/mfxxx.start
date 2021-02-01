@@ -173,10 +173,7 @@ if test "${RES}" = "0"; then
 
     _make_and_install_crontab.sh
 
-    echo -n "- Wait 2 sec..."
-    echo_running
-    sleep 2
-    echo_ok
+    mfprogress --timeout=3 --title="- Wait 2 sec..." -- sleep 2
 
     MFMODULE_LOWERCASE=`echo ${MFMODULE} | tr '[:upper:]' '[:lower:]'`
     ${MFMODULE_LOWERCASE}.status QUIET
