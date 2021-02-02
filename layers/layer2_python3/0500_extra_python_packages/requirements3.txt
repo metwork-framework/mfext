@@ -31,17 +31,9 @@ inotify-simple==1.1.8
 Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
-<<<<<<< HEAD
--e git+https://github.com/metwork-framework/mflog.git@c5a96d74ea5c8d1a81e856b3f4cd282bc44ef20e#egg=mflog
+-e git+https://github.com/metwork-framework/mflog.git@dc013a41475b118a422b1e5645ade3d3e148157e#egg=mflog
 -e git+https://github.com/metwork-framework/mfplugin.git@01eb2568853f400b6baa11a4c477b5aa0eabe9e7#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@78f9fce51411cd293572f9ce89dbf2d7b8e370ea#egg=mfutil
-=======
-mflog==0.1.0
--e git+https://github.com/metwork-framework/mfplugin.git@0cf569a70eb16b5e9ee3b3e07604d0216c6a16d6#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@f4b58eaecef22f5a61b45d66b2fcbdf842201431#egg=mfutil
-mockredispy==2.9.3
-multidict==4.7.6
->>>>>>> b85d972c... fix: fix some various issues with stop/start of modules (#1059)
+-e git+https://github.com/metwork-framework/mfutil.git@ffec1721d7eac7a6e09518975e9c9c26dd8af474#egg=mfutil
 netifaces==0.10.9
 -e git+https://github.com/metwork-framework/opinionated_configparser.git@f4a62dce12794eb1f657c4651f32d3c72ed4f33a#egg=opinionated_configparser
 paramiko==2.7.1
