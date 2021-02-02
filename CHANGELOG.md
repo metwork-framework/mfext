@@ -35,5 +35,6 @@
 - important fix about configuration overrides in /etc (#1056)
 - avoid automatic cleaning of tmp/config_auto directory (#1058)
 - fix nginx reload if binded to < 1024 port (#1061)
+- fix some various issues with stop/start of modules (#1059)
 
 
