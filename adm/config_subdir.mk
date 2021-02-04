@@ -17,3 +17,7 @@ $(MFMODULE_HOME)/config/crontab: $(wildcard crontab.custom) $(MFEXT_HOME)/share/
 $(MFMODULE_HOME)/config/config.ini: $(wildcard config.ini*) $(MFEXT_HOME)/share/templates/config.ini
 	@mkdir -p $(MFMODULE_HOME)/config
 	if test -f config.ini.custom; then $(MFEXT_HOME)/bin/_make_file_from_template.sh config.ini .custom DONT_REDUCE >$@ || { rm -f $@ ; false ;}; else cp -f config.ini $@; fi
+
+$(MFMODULE_HOME)/config/vector.toml: $(wildcard vector.toml.custom) $(MFEXT_HOME)/share/templates/vector.toml
+	@mkdir -p $(MFMODULE_HOME)/config
+	_make_file_from_template.sh vector.toml .custom >$@ || { rm -f $@ ; false ; }
