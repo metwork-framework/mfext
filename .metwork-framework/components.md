@@ -203,6 +203,7 @@
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
+| [vector](https://vector.dev/) | 0.11.1 | monitoring |
 | [virtualenv](https://virtualenv.pypa.io/) | 16.6.0 | python3_core |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3_devtools |
@@ -217,4 +218,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
 
-*(216 components)*
+*(217 components)*

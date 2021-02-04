@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cat "${MFMODULE_HOME}/config/vector.toml" |envtpl --reduce-multi-blank-lines |sed 's/@@\([a-zA-Z0-9_ ]*\)@@/{{\1}}/g' >"${MFMODULE_RUNTIME_HOME}/tmp/config_auto/vector.toml"
+mkdir -p "${MFMODULE_RUNTIME_HOME}/var/vector"
+if test -s "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/vector.toml"; then
+    vector validate --config-toml "${MFMODULE_RUNTIME_HOME}/tmp/config_auto/vector.toml" --no-environment
+    if test $? -ne 0; then
+        exit 1
+    fi
+    exit 0
+else
+    exit 1
+fi
