@@ -135,18 +135,11 @@ if test "${RES}" = "0"; then
     {% endif %}
 
     {% if MFMODULE != "MFADMIN" %}
-    if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
         if test "${ADMIN_HOSTNAME}" != "null"; then
-            _circus_wait_watcher_started.sh mflogs2mfadmin || RES=1
+            _circus_wait_watcher_started.sh vector || RES=1
         fi
-    fi
-    if test "${ADMIN_SEND_NGINX_LOGS}" = "1"; then
-        if test "${ADMIN_HOSTNAME}" != "null"; then
-            if test "${NGINX_FLAG}" = "1"; then
-                _circus_wait_watcher_started.sh nginxlogs2mfadmin || RES=1
-            fi
-        fi
-    fi
+    {% else %}
+        _circus_wait_watcher_started.sh vector || RES=1
     {% endif %}
 
     {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}

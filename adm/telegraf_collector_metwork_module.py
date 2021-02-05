@@ -22,8 +22,7 @@ MFMODULE_VERSION = os.environ["MFMODULE_VERSION"]
 MFMODULE = os.environ['MFMODULE']
 CMD = "list_metwork_processes.py --output-format=json --include-current-family"
 MONITORING_CMDLINE_PATTERNS = ['*telegraf*', '*list_metwork_processes*',
-                               '*jsonlog2elasticsearch*',
-                               '*jsonsyslog2elasticsearch*']
+                               '*vector*']
 IS_MONITORING_MODULE = (MFMODULE in ['MFSYSMON', 'MFADMIN'])
 IS_LINUX = sys.platform.startswith("linux")
 OS_NAME = distro.name(pretty=True) if IS_LINUX else "unknown"
