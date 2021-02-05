@@ -13,6 +13,7 @@
 - upgrade pip from 18.1 to 20.2.4 (18.1 is too old to install som… (#1011)
 - add xz (which allows to add lzma support in python, gdal, ...) (#1025)
 - add cmake 3.19.1 (a recent release is necessary to build some p… (#1028)
+- add vector tool (for preparing loki) (#1068)
 
 ### Bug Fixes
 
