@@ -20,7 +20,6 @@
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
 | [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
 | [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
-| [certifi](https://certifi.io/) | 2019.3.9 | monitoring |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3 |
 | [certifi](https://certifi.io/) | 2019.3.9 | python3_circus |
 | [certifi](https://certifi.io) | 2019.3.9 | python3_core |
@@ -30,7 +29,6 @@
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | custom | python3_circus |
 | [circus](https://pypi.org/project/circus) | custom | python3_circus |
-| [ciso8601](https://github.com/closeio/ciso8601) | 2.1.1 | monitoring |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [cmake](https://cmake.org/) | 3.19.1 | core |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
@@ -48,7 +46,6 @@
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
 | [distro](https://github.com/nir0s/distro) | 1.4.0 | monitoring |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
-| [elasticsearch](https://github.com/elastic/elasticsearch-py) | 6.4.0 | monitoring |
 | [envtpl](https://github.com/metwork-framework/envtpl) | custom | python3 |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 1.7.1 | python3_devtools |
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3 |
@@ -77,7 +74,6 @@
 | [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 0.15.1 | python3_devtools |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
-| [jsonsyslog2elasticsearch](https://github.com/metwork-framework/jsonsyslog2elasticsearch) | custom | monitoring |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
@@ -200,7 +196,6 @@
 | [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
-| [ujson](http://www.esn.me) | 1.35 | monitoring |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
 | [vector](https://vector.dev/) | 0.11.1 | monitoring |
@@ -218,4 +213,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.0 | python3 |
 
-*(217 components)*
+*(212 components)*

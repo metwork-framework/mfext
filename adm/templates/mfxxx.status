@@ -70,18 +70,11 @@ else
 fi
 
 {% if MFMODULE != "MFADMIN" %}
-if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
     if test "${ADMIN_HOSTNAME}" != "null"; then
-        circus_status_watcher.sh mflogs2mfadmin || RES=1
+        circus_status_watcher.sh vector || RES=1
     fi
-fi
-if test "${ADMIN_SEND_NGINX_LOGS}" = "1"; then
-    if test "${ADMIN_HOSTNAME}" != "null"; then
-        if test "${NGINX_FLAG}" = "1"; then
-            circus_status_watcher.sh nginxlogs2mfadmin || RES=1
-        fi
-    fi
-fi
+{% else %}
+    circus_status_watcher.sh vector || RES=1
 {% endif %}
 
 {% block custom %}

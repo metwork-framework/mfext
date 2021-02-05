@@ -213,7 +213,7 @@ if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADMIN_FLAG{% raw %}:-}{% endr
     if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
         export MFLOG_SYSLOG_ADDRESS="null"
     else
-        export MFLOG_SYSLOG_ADDRESS="127.0.0.1:{% raw %}${{% endraw %}{{MFMODULE}}_JSONSYSLOG2ELASTICSEARCH_MFLOG_PORT{% raw %}:-}{% endraw %}"
+        export MFLOG_SYSLOG_ADDRESS="127.0.0.1:{% raw %}${{% endraw %}{{MFMODULE}}_VECTOR_MFLOG_PORT{% raw %}:-}{% endraw %}"
     fi
 fi
 export MFLOG_SYSLOG_MINIMAL_LEVEL="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MFADMIN_MINIMAL_LEVEL{% raw %}:-}{% endraw %}"
