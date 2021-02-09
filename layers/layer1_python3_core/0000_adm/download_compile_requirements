@@ -30,6 +30,7 @@ else
     BINARY="--no-binary :all:"
 fi
 
+     
 TEMPO_LAYER_LABEL="tempolayer$$"
 TEMPO_LAYER_PATH="$(pwd)/${TEMPO_LAYER_LABEL}"
 
@@ -60,10 +61,17 @@ if test "${N}" -eq 0; then
 fi
 
 if test "${METWORK_PYTHON_MODE:-}" = "3"; then
-    #We remove --no-build-isolation to allow build dependencies (such as flit or poetry) to be installed during wheels building
-    #May be flit and poetry should be installed before (FIXME ?)
-    #BUILD_ISOLATION="--no-build-isolation"
-    BUILD_ISOLATION=""
+    # If file build_isolate is not present (this is the default) pip wheel is run with option --no-build-isolation
+    #  ==> all dependencies must be installed before pip wheel is run (including build dependencies in PEP517 pyproject.toml)
+    # If file build_isolate is present, pip wheel is not run with option --no-build-isolation
+    #  ==> Build dependencies from pyproject.toml files (such as flit, poetry, numpy or Cython)
+    #      are installed during wheels building, regardless wheels already built
+    #  ==> It's practical but it can lead to complex binary incompatibilities (for example with Cython) 
+    if test -f "${REALDIRNAME}/build_isolate"; then
+        BUILD_ISOLATION=""
+    else
+        BUILD_ISOLATION="--no-build-isolation"
+    fi
 else
     BUILD_ISOLATION=""
 fi
