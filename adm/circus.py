@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
 
 import os
+import rich
 import fnmatch
 import datetime
 import time
 import mflog
-from mfutil.cli import is_interactive, echo_ok, echo_warning, echo_nok, \
-    echo_running
 from circus.client import CircusClient
 from circus.exc import CallError
+from mfutil.cli import MFProgress
 
 LOGGER = mflog.get_logger("circus.py")
 
 
 class MetWorkCircusClient(object):
     def __init__(self, timeout=10):
-        self.is_interactive = is_interactive()
         self.module = os.environ["MFMODULE"]
         self.endpoint = os.environ["%s_CIRCUS_ENDPOINT" % self.module]
         self.timeout = timeout
@@ -30,6 +29,23 @@ class MetWorkCircusClient(object):
         if tmp is None or (tmp.get('status', None) != 'ok'):
             return False
         return True
+
+    def wait(self, timeout=10, cli_display=True):
+        with self._mfprogress(cli_display=cli_display) as progress:
+            txt = "- Waiting for circus daemon..."
+            before = datetime.datetime.now()
+            after = datetime.datetime.now()
+            t = progress.add_task(txt, total=timeout)
+            while (after - before).total_seconds() < timeout:
+                if self.check():
+                    progress.complete_task(t)
+                    return True
+                time.sleep(1)
+                after = datetime.datetime.now()
+                delta = (after - before).total_seconds()
+                progress.update(t, completed=int(delta))
+            progress.complete_task_nok(t)
+            return False
 
     def _cmd(self, cmd, **properties):
         reply = self.client.call({"command": cmd, "properties": properties})
@@ -78,104 +94,124 @@ class MetWorkCircusClient(object):
                 res.append(watcher)
         return res
 
-    def stop_watcher(self, cli_display=True, check=True, indent=0,
+    def stop_watcher(self, cli_display=True, indent=0, timeout=10,
                      **properties):
         name = properties["name"]
-        if cli_display:
-            echo_running(" " * indent + "- Scheduling stop of %s" % name)
+        with self._mfprogress(cli_display=cli_display) as progress:
+            txt = " " * indent + "- Scheduling stop of %s" % name
+            t = progress.add_task(txt, total=timeout)
             statuses = self.statuses()
             if name not in statuses:
-                echo_warning("(not found)")
+                progress.complete_task_warning(t)
                 return None
             if statuses[name] == "stopped":
-                echo_warning("(already stopped)")
+                progress.complete_task_warning(t, "already stopped")
                 return "stopped"
             if statuses[name] == "stopping":
-                echo_warning("(already stopping)")
+                progress.complete_task_warning(t, "already stopping")
                 return "stopping"
-        tmp = self.cmd("stop", **properties)
-        status = tmp.get("status", None) if tmp is not None else None
-        if cli_display:
-            if not check:
-                echo_ok()
-            else:
-                if status in ["stopping", "stopped"]:
-                    echo_ok()
-                else:
-                    echo_nok()
-        return status
+            before = datetime.datetime.now()
+            after = datetime.datetime.now()
+            while (after - before).total_seconds() < timeout:
+                self.cmd("stop", **properties)
+                statuses = self.statuses()
+                if name not in statuses or statuses[name] in ("stopping", "stopped"):
+                    progress.complete_task(t)
+                    return statuses[name]
+                time.sleep(1)
+                after = datetime.datetime.now()
+                delta = (after - before).total_seconds()
+                progress.update(t, completed=int(delta))
+            progress.complete_task_nok(t)
+            return "failed"
 
-    def start_watcher(self, cli_display=True, indent=0, **properties):
+    def start_watcher(self, cli_display=True, indent=0, timeout=10, **properties):
         name = properties["name"]
-        if cli_display:
-            echo_running(" " * indent + "- Starting of %s" % name)
+        with self._mfprogress(cli_display=cli_display) as progress:
+            txt = " " * indent + "- Starting of %s" % name
+            t = progress.add_task(txt, total=timeout)
             statuses = self.statuses()
             if name not in statuses:
-                echo_nok("(not found)")
+                progress.complete_task_nok(t)
                 return None
             if statuses[name] == "starting":
-                echo_warning("(already starting)")
+                progress.complete_task_warning(t, "already starting")
                 return "starting"
             if statuses[name] == "active":
-                echo_warning("(already started)")
+                progress.complete_task_warning(t, "already started")
                 return "active"
-        tmp = self.cmd("start", **properties)
-        status = tmp.get("status", None) if tmp is not None else None
-        if cli_display:
-            if status == "ok":
-                echo_ok()
-            else:
-                echo_nok("(can't start)")
-        return status
-
-    def stop_watcher_and_wait(self, cli_display=True, timeout=300, slow=5,
-                              indent=0, scheduled=False, **properties):
-        first_iteration = True
-        res = 0
-        name = properties["name"]
-        if cli_display:
-            if scheduled:
-                echo_running(" " * indent + "- Waiting for stop "
-                             "of %s..." % name)
-            else:
-                echo_running(" " * indent + "- Stopping %s..." % name)
-        before = datetime.datetime.now()
-        after = datetime.datetime.now()
-        slow_display = False
-        while (after - before).total_seconds() < timeout:
-            statuses = self.statuses()
-            if name not in statuses:
-                res = 1 if first_iteration else 2
-                break
-            if statuses[name] == "stopped":
-                res = 1 if first_iteration and not scheduled else 2
-                break
-            first_iteration = False
-            if statuses[name] != "stopping":
-                self.stop_watcher(cli_display=False, check=False, **properties)
-            time.sleep(1)
+            before = datetime.datetime.now()
             after = datetime.datetime.now()
-            delta = (after - before).total_seconds()
-            if self.is_interactive and cli_display and delta > slow:
-                print()
-                print("    => waiting %i/%i" % (int(delta), timeout), end="")
-                print('\033[1A', end="")
-                slow_display = True
-        if slow_display:
-            print("\033[60C", end="")
-            print("\033[K", end="")
-        if cli_display:
-            if res == 2:
-                echo_ok()
-            elif res == 1:
-                echo_warning("(already stopped)")
-            else:
-                echo_nok()
-        if slow_display:
-            print("\033[K", end="")
-        if res != 0:
-            return True
-        else:
+            while (after - before).total_seconds() < timeout:
+                tmp = self.cmd("start", **properties)
+                status = tmp.get("status", None) if tmp is not None else None
+                if status == "ok":
+                    progress.complete_task(t)
+                    return status
+                time.sleep(1)
+                after = datetime.datetime.now()
+                delta = (after - before).total_seconds()
+                progress.update(t, completed=int(delta))
+            progress.complete_task_nok(t)
+            return "failed"
+
+    def start_watchers(self, cli_display=True, indent=0, **properties):
+        names = properties["names"]
+        for name in names:
+            self.start_watcher(cli_display=cli_display, indent=indent, name=name,
+                               **properties)
+
+    def wait_watcher_started(self, cli_display=True, timeout=20,
+                             indent=0, **properties):
+        name = properties["name"]
+        with self._mfprogress(cli_display=cli_display) as progress:
+            txt = " " * indent + "- Waiting for start of %s..." % name
+            t = progress.add_task(txt, total=timeout)
+            before = datetime.datetime.now()
+            after = datetime.datetime.now()
+            while (after - before).total_seconds() < timeout:
+                statuses = self.statuses()
+                if name in statuses:
+                    if statuses[name] == "active":
+                        progress.complete_task(t)
+                        return True
+                time.sleep(1)
+                after = datetime.datetime.now()
+                delta = (after - before).total_seconds()
+                progress.update(t, completed=int(delta))
+            progress.complete_task_nok(t)
+            return False
+
+    def _mfprogress(self, cli_display=True):
+        console = None
+        if not cli_display:
+            console = rich.console.Console(file=open(os.devnull, "w"))
+        return MFProgress(console=console)
+
+    def wait_watcher_stopped(self, cli_display=True, timeout=None,
+                             indent=0, **properties):
+        name = properties["name"]
+        if timeout is None:
+            timeout = 300
+            try:
+                timeout = int(self.options(name=name)['graceful_timeout'])
+            except Exception:
+                pass
+        with self._mfprogress(cli_display=cli_display) as progress:
+            txt = " " * indent + "- Waiting for stop of %s..." % name
+            t = progress.add_task(txt, total=timeout)
+            before = datetime.datetime.now()
+            after = datetime.datetime.now()
+            while (after - before).total_seconds() < timeout:
+                statuses = self.statuses()
+                if name not in statuses or statuses[name] == "stopped":
+                    progress.complete_task(t)
+                    return True
+                time.sleep(1)
+                after = datetime.datetime.now()
+                delta = (after - before).total_seconds()
+                progress.update(t, completed=int(delta))
+            progress.complete_task_nok(t)
             return False
 
     def statuses(self):

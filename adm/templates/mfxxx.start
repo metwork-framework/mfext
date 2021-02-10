@@ -71,6 +71,9 @@ if test "${NOINIT}" = "0"; then
         if ! test -f "${MFMODULE_RUNTIME_HOME}/var/grafana/grafana.db"; then
             NEED_INIT=1
         fi
+        if ! test -d "${MFMODULE_RUNTIME_HOME}/var/influxdb/data/metrics"; then
+            NEED_INIT=1
+        fi
     fi
     if test "${MFADMIN_LAYER_LOGS_LOADED:-}" = "1"; then
         if ! test -f "${MFMODULE_RUNTIME_HOME}/var/kibana/uuid"; then
@@ -110,6 +113,7 @@ if test "${RES}" = "0"; then
 
     if test -f ${MFMODULE_HOME}/config/circus.ini; then
         _circus.start
+        _circus_wait.sh
     fi
 
     {% if MFMODULE != "MFADMIN" %}
@@ -130,23 +134,6 @@ if test "${RES}" = "0"; then
     fi
     {% endif %}
 
-    {% block custom %}
-    # Can be replaced by mfxxx.start.custom
-    {% endblock %}
-
-    _make_and_install_crontab.sh
-
-    {% if MFMODULE != "MFADMIN" %}
-    if test "${ADMIN_HOSTNAME}" != ""; then
-        if test "${ADMIN_HOSTNAME}" != "null"; then
-    {% endif %}
-    _circus_wait_watcher_started.sh telegraf || RES=1
-    _circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
-    {% if MFMODULE != "MFADMIN" %}
-        fi
-    fi
-    {% endif %}
-
     {% if MFMODULE != "MFADMIN" %}
     if test "${ADMIN_SEND_MFLOG_LOGS}" = "1"; then
         if test "${ADMIN_HOSTNAME}" != "null"; then
@@ -163,13 +150,33 @@ if test "${RES}" = "0"; then
     {% endif %}
 
     {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
+    {% block custom_before_plugins %}
+    # Can be replaced by mfxxx.start.custom
+    {% endblock %}
+    {% endif %}
+
+    {% if MFMODULE in ["MFSERV", "MFDATA", "MFBASE"] %}
     plugins.start
     {% endif %}
 
-    echo -n "- Wait 2 sec..."
-    echo_running
-    sleep 2
-    echo_ok
+    {% block custom %}
+    # Can be replaced by mfxxx.start.custom
+    {% endblock %}
+
+    {% if MFMODULE != "MFADMIN" %}
+    if test "${ADMIN_HOSTNAME}" != ""; then
+        if test "${ADMIN_HOSTNAME}" != "null"; then
+    {% endif %}
+    _circus_wait_watcher_started.sh telegraf || RES=1
+    _circus_wait_watcher_started.sh telegraf_collector_metwork_module || RES=1
+    {% if MFMODULE != "MFADMIN" %}
+        fi
+    fi
+    {% endif %}
+
+    _make_and_install_crontab.sh
+
+    mfprogress --timeout=3 --title="- Wait 2 sec..." -- sleep 2
 
     MFMODULE_LOWERCASE=`echo ${MFMODULE} | tr '[:upper:]' '[:lower:]'`
     ${MFMODULE_LOWERCASE}.status QUIET
