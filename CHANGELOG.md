@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix some various issues with stop/start of modules (bp #1059) (#1063)
+
 ## v1.0.12 (2021-01-29)
 
 ### Bug Fixes
