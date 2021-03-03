@@ -37,5 +37,6 @@
 - avoid automatic cleaning of tmp/config_auto directory (#1058)
 - fix nginx reload if binded to < 1024 port (#1061)
 - fix some various issues with stop/start of modules (#1059)
+- remove old useless configuration key (#1073)
 
 
