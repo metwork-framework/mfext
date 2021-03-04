@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- remove old useless configuration key (bp #1073) (#1074)
+
 ## v1.0.13 (2021-02-11)
 
 ### Bug Fixes
