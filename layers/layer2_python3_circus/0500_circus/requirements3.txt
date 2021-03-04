@@ -1,12 +1,7 @@
 cached-property==1.5.1
 certifi==2019.3.9
-<<<<<<< HEAD
--e git+https://github.com/thefab/circus.git@567aa022cc88a8b77266ef7d2a841b141fbb03ed#egg=circus
+-e git+https://github.com/thefab/circus.git@7a895956a1543e8d1c915c860ab4aa518ef88f0c#egg=circus
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@de459df45e5f4264a34154ed0aabed76139cc12a#egg=circus_autorestart_plugin
 gitignore-parser==0.0.4
-=======
--e git+https://github.com/thefab/circus.git@7a895956a1543e8d1c915c860ab4aa518ef88f0c#egg=circus
--e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@61e4943f51d6d1e9088ea9025425842ddd7f54db#egg=circus_autorestart_plugin
->>>>>>> 68861e36... fix: prevent a circus crash in some corner cases (#1076)
 pyzmq==16.0.4
 tornado==4.5.2
