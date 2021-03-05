@@ -39,5 +39,6 @@
 - fix nginx reload if binded to < 1024 port (#1061)
 - fix some various issues with stop/start of modules (#1059)
 - remove old useless configuration key (#1073)
+- prevent a circus crash in some corner cases (#1076)
 
 
