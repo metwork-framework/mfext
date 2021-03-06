@@ -1,10 +1,11 @@
 # release_1.0 CHANGELOG
 
-## [Unreleased]
+## v1.0.14 (2021-03-05)
 
 ### Bug Fixes
 
 - remove old useless configuration key (bp #1073) (#1074)
+- prevent a circus crash in some corner cases (bp #1076) (#1078)
 
 ## v1.0.13 (2021-02-11)
 
