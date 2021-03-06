@@ -6,6 +6,7 @@
 
 - fix error message in nginx_error with < 1024 port binding (bp #977) (#978)
 - fix an issue with < 1024 port binding (bp #999) (#1001)
+- prevent a circus crash in some corner cases (bp #1076) (#1077)
 
 ## v0.9.13 (2020-11-03)
 
