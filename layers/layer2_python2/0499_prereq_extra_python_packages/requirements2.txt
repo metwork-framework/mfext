@@ -1,4 +1,5 @@
 certifi==2019.3.9
 cffi==1.12.3
 pycparser==2.19
+pytest-runner==5.2
 setuptools-scm==3.3.3

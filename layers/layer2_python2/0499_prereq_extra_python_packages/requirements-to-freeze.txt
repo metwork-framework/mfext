@@ -1,2 +1,4 @@
 cffi
 setuptools_scm
+#pytest-runner>5.2 is not python2 compliant
+pytest-runner<=5.2

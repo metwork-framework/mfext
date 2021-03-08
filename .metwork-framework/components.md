@@ -180,6 +180,7 @@
 | [pylint](https://github.com/PyCQA/pylint) | 2.3.1 | python3_devtools |
 | [pyparsing](http://pyparsing.wikispaces.com/) | 2.4.0 | python2_core |
 | [pyparsing](http://pyparsing.wikispaces.com/) | 2.4.0 | python3_core |
+| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.2 | python2 |
 | [pytest](https://docs.pytest.org/en/latest/) | 4.6.5 | python2_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.1.1 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
@@ -249,4 +250,4 @@
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python2_devtools |
 | [zipp](https://github.com/jaraco/zipp) | 0.6.0 | python3_devtools |
 
-*(248 components)*
+*(249 components)*
