@@ -15,6 +15,7 @@
 - add cmake 3.19.1 (a recent release is necessary to build some p… (#1028)
 - add vector tool (for preparing loki) (#1068)
 - upgrade aiohttp from 3.6.3 to 3.7.4 to fix security vulnerability (#1075)
+- upgrade python3 from 3.7.3 to 3.7.10 (#1081)
 
 ### Bug Fixes
 
