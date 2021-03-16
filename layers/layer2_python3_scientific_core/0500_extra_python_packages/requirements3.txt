@@ -1,2 +1,1 @@
-certifi==2019.3.9
 psycopg2==2.8.5
