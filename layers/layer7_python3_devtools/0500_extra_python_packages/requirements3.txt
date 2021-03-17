@@ -1,6 +1,7 @@
 apipkg==1.5
 astroid==2.4.1
 black==19.10b0
+certifi==2019.3.9
 coverage==5.1
 execnet==1.7.1
 flake8==3.8.1
