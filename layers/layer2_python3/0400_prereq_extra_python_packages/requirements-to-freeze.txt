@@ -1,3 +1,2 @@
 cffi
 pyscaffold
-setuptools_scm[toml]

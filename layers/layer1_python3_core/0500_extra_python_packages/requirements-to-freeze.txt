@@ -1,0 +1,5 @@
+six
+appdirs
+pyparsing
+packaging
+virtualenv
