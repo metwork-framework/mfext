@@ -11,7 +11,7 @@ Python is an interpreted, object-oriented, high-level programming language.
 WEBSITE=http://python.org/
 LICENSE=Python
 
-all:: $(PREFIX)/bin/python $(PREFIX)/share/python3_version $(PREFIX)/share/python3_short_version
+all:: $(PREFIX)/bin/python $(PREFIX)/share/python3_version $(PREFIX)/share/python3_short_version $(PREFIX)/bin/pip
 $(PREFIX)/bin/python:
 	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include -I$(PREFIX)/../tcltk/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib -L$(PREFIX)/../tcltk/lib" OPTIONS='--enable-shared --enable-loadable-sqlite-extensions --without-ensurepip --with-system-ffi -with-tcltk-includes="-I$(PREFIX)/../tcltk/include" --with-tcltk-libs="-L$(PREFIX)/../tcltk/lib -ltcl8.6 -ltk8.6"' download uncompress configure build install
 	cd $(PREFIX)/bin && ln -s python3 python
@@ -23,3 +23,7 @@ $(PREFIX)/share/python3_version:
 
 $(PREFIX)/share/python3_short_version: $(PREFIX)/share/python3_version
 	cat $< |awk -F '.' '{print $$1"."$$2;}' >$@
+
+$(PREFIX)/bin/pip:
+        # Install built-in pip and setuptools (they will be upgraded later)
+	python -m ensurepip --upgrade --default-pip
