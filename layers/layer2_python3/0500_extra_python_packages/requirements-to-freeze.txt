@@ -18,9 +18,7 @@ psutil
 redis
 requests
 requests_unixsocket
-six
 bash
-filelock
 netifaces
 cachetools
 pyinotify
@@ -39,6 +37,5 @@ paramiko
 #Common dependencies (python3_devtools and python3_scientific) below
 attrs
 wrapt
-zipp
 Markdown
 tqdm
