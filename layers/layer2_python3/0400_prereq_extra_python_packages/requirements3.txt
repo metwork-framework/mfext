@@ -1,3 +1,4 @@
+certifi==2019.3.9
 cffi==1.12.3
 pycparser==2.19
 PyScaffold==3.2.3
