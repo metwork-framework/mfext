@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=wheel
-export VERSION=0.36.2
+export VERSION=0.33.4
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=acf6ba4344efcec44bcab879c7e587d4
+export CHECKSUM=5bad0479ddf8d4dbfad212724a7b1f71
 DESCRIPTION=\
 A built-package format for Python.
 WEBSITE=https://github.com/pypa/wheel
