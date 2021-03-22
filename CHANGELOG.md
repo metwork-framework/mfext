@@ -16,6 +16,7 @@
 - add vector tool (for preparing loki) (#1068)
 - upgrade aiohttp from 3.6.3 to 3.7.4 to fix security vulnerability (#1075)
 - upgrade python3 from 3.7.3 to 3.7.10 (#1081)
+- upgrade setuptools from 42.0.2 to 54.1.2 with refactoring of la… (#1088)
 
 ### Bug Fixes
 
