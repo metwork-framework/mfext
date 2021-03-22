@@ -39,5 +39,3 @@ attrs
 wrapt
 Markdown
 tqdm
-#cryptography > 3.2 would requires a rust compiler (or install wheel from binary distribution)
-cryptography<=3.2
