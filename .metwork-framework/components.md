@@ -207,8 +207,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-<<<<<<< HEAD
-*(205 components)*
-=======
-*(215 components)*
->>>>>>> 8bcdf9e5... feat: add xz (which allows to add lzma support in python, gdal, ...) (#1025)
+*(206 components)*
