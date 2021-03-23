@@ -11,6 +11,6 @@ Parser like ConfigParser but for updating configuration files
 WEBSITE=https://github.com/pyscaffold/configupdater
 LICENSE=MIT
 
-all:: $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION)-py$(PYTHON3_SHORT_VERSION).egg/six.py
-$(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION)-py$(PYTHON3_SHORT_VERSION).egg/six.py:
-	$(MAKE) --file=../../Makefile.standard download uncompress python3build python3install
+all:: $(PYTHON3_SITE_PACKAGES)/configupdater/configupdater.py
+$(PYTHON3_SITE_PACKAGES)/configupdater/configupdater.py:
+	$(MAKE) --file=../../Makefile.standard download uncompress python3build python3install_pip

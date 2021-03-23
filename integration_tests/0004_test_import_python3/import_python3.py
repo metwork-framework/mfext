@@ -19,3 +19,5 @@ import yaml #PyYAML
 import diskcache
 import tkinter
 import lzma
+import bjoern
+import configupdater

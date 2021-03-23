@@ -102,6 +102,10 @@ python3install:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
+python3install_pip:
+	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && unsafe_pip install --prefix=$(PREFIX) --src=$(PYTHON3_SITE_PACKAGES) .
+
 python3install_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
