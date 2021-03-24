@@ -26,7 +26,7 @@ future==0.17.1
 gitignore-parser==0.0.6
 idna==2.8
 inotify-simple==1.1.8
-Jinja2==2.10.1
+Jinja2==2.11.3
 jinja2-time==0.2.0
 lazy-import==0.2.2
 Markdown==3.3.3

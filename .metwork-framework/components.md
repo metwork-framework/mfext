@@ -68,7 +68,7 @@
 | [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | custom | python3 |
 | [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | custom | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
-| [Jinja2](http://jinja.pocoo.org/) | 2.10.1 | python3 |
+| [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 0.15.1 | python3_devtools |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
