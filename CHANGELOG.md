@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add xz (which allows to add lzma support in python, gdal, ...) (bp #1025) (#1095)
+
 ## v1.0.14 (2021-03-05)
 
 ### Bug Fixes
