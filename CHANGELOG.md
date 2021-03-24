@@ -17,6 +17,7 @@
 - upgrade aiohttp from 3.6.3 to 3.7.4 to fix security vulnerability (#1075)
 - upgrade python3 from 3.7.3 to 3.7.10 (#1081)
 - upgrade setuptools from 42.0.2 to 54.1.2 with refactoring of la… (#1088)
+- upgrade from python 3.7.10 to python 3.8.8 (#1091)
 
 ### Bug Fixes
 
