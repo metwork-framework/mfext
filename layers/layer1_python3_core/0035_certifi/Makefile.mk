@@ -11,6 +11,6 @@ Python package for providing Mozilla s CA Bundle (patched for centos)
 WEBSITE=https://certifi.io
 LICENSE=MPL
 
-all:: $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION)-py$(PYTHON3_SHORT_VERSION).egg
-$(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION)-py$(PYTHON3_SHORT_VERSION).egg:
-	$(MAKE) --file=../../Makefile.standard download uncompress python3build python3install
+all:: $(PYTHON3_SITE_PACKAGES)/$(NAME)
+$(PYTHON3_SITE_PACKAGES)/$(NAME):
+	$(MAKE) --file=../../Makefile.standard download uncompress python3build python3install_pip

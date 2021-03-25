@@ -13,4 +13,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/bin/wheel
 $(PREFIX)/bin/wheel:
-	$(MAKE) --file=../../Makefile.standard download uncompress python3build python3install
+	$(MAKE) --file=../../Makefile.standard download uncompress python3build python3install_pip
