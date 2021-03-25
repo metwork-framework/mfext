@@ -5,6 +5,7 @@
 ### New Features
 
 - add xz (which allows to add lzma support in python, gdal, ...) (bp #1025) (#1095)
+- upgrade Jinja2 from 2.10.1 to 2.11.3 to fix security vulnerability (#1093)
 
 ## v1.0.14 (2021-03-05)
 
