@@ -69,7 +69,7 @@
 | [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | custom | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
-| [joblib](https://joblib.readthedocs.io) | 0.15.1 | python3_devtools |
+| [joblib](https://joblib.readthedocs.io) | 0.17.0 | python3 |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
@@ -198,7 +198,7 @@
 | [vector](https://vector.dev/) | 0.11.1 | monitoring |
 | [virtualenv](https://virtualenv.pypa.io/) | 20.4.3 | python3_core |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
-| [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3_devtools |
+| [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3 |
 | [wheel](https://github.com/pypa/wheel) | 0.36.2 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.5.2 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.12.1 | python3 |

@@ -28,6 +28,7 @@ idna==2.8
 inotify-simple==1.1.8
 Jinja2==2.11.3
 jinja2-time==0.2.0
+joblib==0.17.0
 lazy-import==0.2.2
 Markdown==3.3.3
 MarkupSafe==1.1.1
@@ -62,6 +63,7 @@ terminaltables==3.1.0
 tqdm==4.53.0
 Unidecode==1.1.1
 urllib3==1.25.3
+Werkzeug==1.0.1
 whichcraft==0.5.2
 wrapt==1.12.1
 -e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile
