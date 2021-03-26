@@ -34,7 +34,7 @@
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | custom | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | custom | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 3.2.1 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 3.3.2 | python3 |
 | [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
 | [curl](https://curl.haxx.se/) | 7.65.1 | core |
 | [deploycron](https://github.com/metwork-framework/deploycron) | custom | python3 |
