@@ -34,7 +34,7 @@
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | custom | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | custom | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 3.2.1 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 3.3.2 | python3 |
 | [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
 | [curl](https://curl.haxx.se/) | 7.65.1 | core |
 | [deploycron](https://github.com/metwork-framework/deploycron) | custom | python3 |
@@ -159,7 +159,7 @@
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
 | [Python](http://python.org/) | 3.8.8 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
-| [PyYAML](https://github.com/yaml/pyyaml) | 5.1.1 | python3 |
+| [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyzmq](https://pyzmq.readthedocs.org) | 16.0.4 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
