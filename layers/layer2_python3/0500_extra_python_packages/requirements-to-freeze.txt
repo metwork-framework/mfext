@@ -42,4 +42,4 @@ tqdm
 joblib
 Werkzeug
 #cryptography>3.2 would require a rust compiler (or install from binary distribution)
-cryptography<=3.2
+cryptography<3.4
