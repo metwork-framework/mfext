@@ -20,6 +20,7 @@
 - upgrade from python 3.7.10 to python 3.8.8 (#1091)
 - upgrade Jinja2 from 2.10.1 to 2.11.3 to fix security vulnerability (#1093)
 - upgrade cryptography from 2.9.2 to 3.2.1 to fix security vulner… (#1094)
+- security updates (pyyaml 5.4.1 and cryptography 3.3.2) (#1102)
 
 ### Bug Fixes
 
