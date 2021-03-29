@@ -110,19 +110,40 @@ python3install_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
+python3install_cmake_pip:
+	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION)/build && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && unsafe_pip install --prefix=$(PREFIX) --src=$(PYTHON3_SITE_PACKAGES) . && rm -f $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION).dist-info/direct_url.json
+
 python3pyinstall:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	cd build/$(NAME_VERSION)/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
+
+python3pyinstall_pip:
+	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION)/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && unsafe_pip install --prefix=$(PREFIX) --src=$(PYTHON3_SITE_PACKAGES) . && rm -f $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION).dist-info/direct_url.json
 
 python3pyinstall_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	if ! test -d build/$(NAME_VERSION)/build/python; then if test -d build/$(NAME_VERSION)/build/python3; then cd build/$(NAME_VERSION)/build; ln -s python3 python; fi; fi
 	cd build/$(NAME_VERSION)/build/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX) --install-lib=$(PYTHON3_SITE_PACKAGES)
 
+python3pyinstall_cmake_pip:
+	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
+	if ! test -d build/$(NAME_VERSION)/build/python; then if test -d build/$(NAME_VERSION)/build/python3; then cd build/$(NAME_VERSION)/build; ln -s python3 python; fi; fi
+	cd build/$(NAME_VERSION)/build/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && unsafe_pip install --prefix=$(PREFIX) --src=$(PYTHON3_SITE_PACKAGES) . && rm -f $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION).dist-info/direct_url.json
+
 python3swiginstall:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	cd build/$(NAME_VERSION) && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX)/opt/python3 --install-lib=$(PYTHON3_SITE_PACKAGES); fi
 
+python3swiginstall_pip:
+	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION) && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && unsafe_pip install --prefix=$(PREFIX) --src=$(PYTHON3_SITE_PACKAGES) . && rm -f $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION).dist-info/direct_url.json; fi
+
 python3swiginstall_cmake:
 	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
 	cd build/$(NAME_VERSION)/build && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && python3 setup.py install --prefix=$(PREFIX)/opt/python3 --install-lib=$(PYTHON3_SITE_PACKAGES); fi
+
+python3swiginstall_cmake_pip:
+	if ! test -d $(PYTHON3_SITE_PACKAGES); then mkdir -p $(PYTHON3_SITE_PACKAGES); fi
+	cd build/$(NAME_VERSION)/build && if [ -a swig/python/setup.py ] ; then cd swig/python && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS=$(EXTRALDFLAGS); fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS=$(EXTRACFLAGS); fi && unsafe_pip install --prefix=$(PREFIX) --src=$(PYTHON3_SITE_PACKAGES) . && rm -f $(PYTHON3_SITE_PACKAGES)/$(NAME)-$(VERSION).dist-info/direct_url.json; fi
