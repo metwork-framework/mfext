@@ -114,7 +114,6 @@
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
 | [nltk](http://nltk.org/) | 3.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
-| [nose-html-reporting](https://github.com/lysenkoivan/nose-html-reporting) | 0.2.3 | python3_devtools |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
@@ -210,4 +209,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(209 components)*
+*(208 components)*
