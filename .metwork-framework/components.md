@@ -140,7 +140,7 @@
 | [pycparser](https://github.com/eliben/pycparser) | 2.19 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 5.0.2 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.2.0 | python3_devtools |
-| [Pygments](https://pygments.org/) | 2.6.1 | python3 |
+| [Pygments](https://pygments.org/) | 2.7.4 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://github.com/PyCQA/pylint) | 2.5.2 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 7.1 | python3_devtools |
