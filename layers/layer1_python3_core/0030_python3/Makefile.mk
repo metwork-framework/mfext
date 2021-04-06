@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=Python
-export VERSION=3.8.8
+export VERSION=3.8.9
 export EXTENSION=tar.xz
 export CHECKTYPE=MD5
-export CHECKSUM=23e6b769857233c1ac07b6be7442eff4
+export CHECKSUM=51b5bbf2ab447e66d15af4883db1c133
 DESCRIPTION=\
 Python is an interpreted, object-oriented, high-level programming language.
 WEBSITE=http://python.org/
