@@ -23,6 +23,7 @@
 - security updates (pyyaml 5.4.1 and cryptography 3.3.2) (#1102)
 - remove nose-html-reporting which is not python3 compliant (#1104)
 - bump pygments from 2.6.1 to 2.7.4 to fix security vulnerability (#1106)
+- upgrade Python 3.8 to 3.8.9 (security updates) (#1107)
 
 ### Bug Fixes
 
