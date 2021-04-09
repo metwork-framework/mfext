@@ -19,16 +19,15 @@ export DRONE=true
 cd /src
 
 
-
+if test -d /pub; then mkdir -p /pub/metwork/continuous_integration/buildlogs/${BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}; fi
 
 mkdir -p "/opt/metwork-mfext-${TARGET_DIR}"
 
-mkdir -p buildlogs
-export BUILDLOGS=buildlogs
+export BUILDLOGS=/pub/metwork/continuous_integration/buildlogs/${BRANCH}/mfext/${OS_VERSION}/${DRONE_BUILD_NUMBER}
 
 make >${BUILDLOGS}/make.log 2>&1 || ( tail -200 ${BUILDLOGS}/make.log ; exit 1 )
 
-OUTPUT=$(git status --short | grep -v buildlogs | grep -v buildcache)
+OUTPUT=$(git status --short)
 
 if test "${OUTPUT}" != ""; then
     echo "ERROR non empty git status output ${OUTPUT}"
