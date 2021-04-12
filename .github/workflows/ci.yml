@@ -79,10 +79,9 @@ jobs:
           mkdir -p ${{ steps.SetVariables.outputs.doc_dir }}
           if test -d ${{ github.workspace }}/html_doc; then cp -Rf ${{ github.workspace }}/html_doc/* ${{ steps.SetVariables.outputs.doc_dir }} ; fi
 
-      - name: clean on failure
+      - name: clean cache on failure
         if: failure()
         run: |
-          echo ${{ steps.BuildStep.outputs.buildcache }}
           rm -f ${{ steps.BuildStep.outputs.buildcache }}
 
       - name: dispatch mfxxx buildimage centos6
@@ -109,7 +108,7 @@ jobs:
           repository: metwork-framework/docker-mfxxx-centos8-buildimage
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
-      - name: clean
+      - name: chown on build outputs
         if: always()
         run: |
           sudo chown -R github_runner:metworkpub .

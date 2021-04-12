@@ -42,6 +42,7 @@ cat module_hash.debug |sort |uniq ; rm -f module_hash.debug
 echo "${MODULEHASH}${DRONE_TAG}${DRONE_BRANCH}" |md5sum |cut -d ' ' -f1 >.build_hash
 if test -f "${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`"; then
     echo "::set-output name=bypass::true"
+    echo "::set-output name=buildcache::null"
     exit 0
 fi
 
