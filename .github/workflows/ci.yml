@@ -112,5 +112,9 @@ jobs:
       - name: chown on build outputs
         if: always()
         run: |
-          sudo chown -R github_runner:metworkpub .
-          sudo chown -RL github_runner:metworkpub /buildcache 
+          sudo chown -R metworkpub:metworkpub .
+          sudo chmod -R 775 .
+          sudo chown -RL metworkpub:metworkpub /buildcache 
+          sudo chmod -R 775 /buildcache
+          sudo chown -RL metworkpub:metworkpub /pub/metwork
+          sudo chmod -R 775 /pub/metwork
