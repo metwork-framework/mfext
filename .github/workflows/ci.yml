@@ -68,6 +68,7 @@ jobs:
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
         run: |
           mkdir -p ${{ steps.SetVariables.outputs.rpm_dir }}
+          cd ${{ steps.SetVariables.outputs.rpm_dir }}
           if ! test -L /pub/metwork/continuous_integration/rpms/${BRANCH}/portable; then ln -s centos6 /pub/metwork/continuous_integration/rpms/${BRANCH}/portable; fi
           cp ${{ github.workspace }}/rpms/*.rpm ${{ steps.SetVariables.outputs.rpm_dir }}
           cp ${{ github.workspace }}/.github/workflows/createrepo.sh ${{ steps.SetVariables.outputs.rpm_dir }}
