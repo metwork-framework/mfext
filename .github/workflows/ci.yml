@@ -82,6 +82,7 @@ jobs:
       - name: clean on failure
         if: failure()
         run: |
+          echo ${{ steps.BuildStep.outputs.buildcache }}
           rm -f ${{ steps.BuildStep.outputs.buildcache }}
 
       - name: dispatch mfxxx buildimage centos6

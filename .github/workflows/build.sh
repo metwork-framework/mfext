@@ -56,8 +56,9 @@ mkdir rpms
 mv /opt/metwork-mfext-${TARGET_DIR}/*.rpm rpms
 
 rm -f ${BUILDCACHE}/build_hash_mfext_${BRANCH}_*
-touch ${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`
+hash_file=${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`
+touch ${hash_file}
 ls -l ${BUILDCACHE}
 
 echo "::set-output name=bypass::false"
-echo "::set-output name=buildcache::${BUILDCACHE}"
+echo "::set-output name=buildcache::${hash_file}"
