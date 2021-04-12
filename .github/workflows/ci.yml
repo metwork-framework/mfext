@@ -79,6 +79,11 @@ jobs:
           mkdir -p ${{ steps.SetVariables.outputs.doc_dir }}
           if test -d ${{ github.workspace }}/html_doc; then cp -Rf ${{ github.workspace }}/html_doc/* ${{ steps.SetVariables.outputs.doc_dir }} ; fi
 
+      - name: clean on failure
+        if: failure()
+        run: |
+          rm -f ${{ steps.BuildStep.outputs.buildcache }}
+
       - name: dispatch mfxxx buildimage centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' }}
         uses: peter-evans/repository-dispatch@v1
@@ -106,4 +111,4 @@ jobs:
       - name: clean
         if: always()
         run: |
-          sudo chown -R github_runner:github_runner .
+          sudo chown -R github_runner:metworkpub .

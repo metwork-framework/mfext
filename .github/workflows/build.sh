@@ -60,3 +60,4 @@ touch ${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`
 ls -l ${BUILDCACHE}
 
 echo "::set-output name=bypass::false"
+echo "::set-output name=buildcache::${BUILDCACHE}"
