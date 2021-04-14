@@ -114,7 +114,9 @@ jobs:
         run: |
           sudo chown -R metworkpub:metworkpub .
           sudo chmod -R 775 .
-          sudo chown -RL metworkpub:metworkpub /buildcache 
-          sudo chmod -R 775 /buildcache
-          sudo chown -RL metworkpub:metworkpub /pub/metwork
-          sudo chmod -R 775 /pub/metwork
+          cd /buildcache
+          sudo chown -R metworkpub:metworkpub .
+          sudo chmod -R 775 .
+          cd /pub/metwork
+          sudo chown -R metworkpub:metworkpub .
+          sudo chmod -R 775 .
