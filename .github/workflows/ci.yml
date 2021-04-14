@@ -1,0 +1,124 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - master
+      - integration
+      - experimental*
+      - release_*
+      - ci*
+      - pci* 
+    tags:
+      - v*
+  pull_request:
+  repository_dispatch:
+    types:
+      - metwork-trigger*
+
+env:
+    OS_VERSION: centos6
+    DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -v /buildcache:/buildcache -v /pub:/pub -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA -e GITHUB_REPOSITORY -e OS_VERSION"
+    WORKFLOW_SCRIPTS_DIR: .github/workflows
+    DOCKER_WORKFLOW_SCRIPTS_DIR: /src/.github/workflows
+    PAYLOAD_BRANCH: ${{ github.event.client_payload.branch}}
+
+jobs:
+  ci_build:
+    runs-on: [self-hosted, metwork]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.client_payload.branch || github.ref }}
+      - name: set variables
+        id: SetVariables
+        run: |
+          ${WORKFLOW_SCRIPTS_DIR}/set_variables.sh
+      - name: debug env
+        run: |
+          env
+      - name: bootstrap
+        if: ${{ steps.SetVariables.outputs.branch != 'null' }}
+        run: |
+          TARGET_DIR=${{ steps.SetVariables.outputs.target_dir }}
+          BRANCH=${{ steps.SetVariables.outputs.branch }}
+          TAG=${{ steps.SetVariables.outputs.tag }}
+          DEP_DIR=${{ steps.SetVariables.outputs.dep_dir }}
+          BUILDIMAGE=${{ steps.SetVariables.outputs.buildimage }}
+          docker run ${DOCKER_RUN_OPTIONS} -e TARGET_DIR=${TARGET_DIR} -e BRANCH=${BRANCH} -e TAG=${TAG} -e DEP_DIR=${DEP_DIR} --rm ${BUILDIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/bootstrap_ci.sh"
+      - name: build
+        if: ${{ steps.SetVariables.outputs.branch != 'null' }}
+        id: BuildStep
+        run: |
+          TARGET_DIR=${{ steps.SetVariables.outputs.target_dir }}
+          BRANCH=${{ steps.SetVariables.outputs.branch }}
+          TAG=${{ steps.SetVariables.outputs.tag }}
+          DEP_BRANCH=${{ steps.SetVariables.outputs.dep_branch }}
+          BUILDIMAGE=${{ steps.SetVariables.outputs.buildimage }}
+          docker run ${DOCKER_RUN_OPTIONS} -e TARGET_DIR=${TARGET_DIR} -e BRANCH=${BRANCH} -e DEP_BRANCH=${DEP_BRANCH} -e TAG=${TAG} --rm ${BUILDIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/build.sh"
+      - name: integration tests
+        if: ${{ steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        run: |
+          TESTIMAGE=${{ steps.SetVariables.outputs.testimage }}
+          DEP_BRANCH=${{ steps.SetVariables.outputs.dep_branch }}
+          docker run ${DOCKER_RUN_OPTIONS} -e DEP_BRANCH=${DEP_BRANCH} --rm ${TESTIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/integration_tests.sh"
+      - name: publish rpms and docs
+        if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        run: |
+          mkdir -p ${{ steps.SetVariables.outputs.rpm_dir }}
+          cd ${{ steps.SetVariables.outputs.rpm_dir }}
+          if ! test -L ${{ steps.SetVariables.outputs.rpm_dir }}/../portable; then ln -s  ${{ steps.SetVariables.outputs.rpm_dir }} ${{ steps.SetVariables.outputs.rpm_dir }}/../portable; fi
+          cp ${{ github.workspace }}/rpms/*.rpm ${{ steps.SetVariables.outputs.rpm_dir }}
+          cp ${{ github.workspace }}/.github/workflows/createrepo.sh ${{ steps.SetVariables.outputs.rpm_dir }}
+          cd ${{ steps.SetVariables.outputs.rpm_dir }}
+          chmod +x createrepo.sh
+          ./createrepo.sh .
+          rm -f createrepo.sh
+          rm -Rf ${{ steps.SetVariables.outputs.doc_dir }}
+          mkdir -p ${{ steps.SetVariables.outputs.doc_dir }}
+          if test -d ${{ github.workspace }}/html_doc; then cp -Rf ${{ github.workspace }}/html_doc/* ${{ steps.SetVariables.outputs.doc_dir }} ; fi
+      - name: clean cache on failure
+        if: failure()
+        run: |
+          rm -f ${{ steps.BuildStep.outputs.buildcache }}
+
+
+
+      - name: dispatch mfxxx buildimage centos6
+        if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
+          repository: metwork-framework/docker-mfxxx-centos6-buildimage
+          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
+      - name: dispatch mfxxx buildimage centos7
+        if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
+          repository: metwork-framework/docker-mfxxx-centos7-buildimage
+          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
+      - name: dispatch mfxxx buildimage centos8
+        if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
+          repository: metwork-framework/docker-mfxxx-centos8-buildimage
+          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
+
+      - name: chown on build outputs
+        if: always()
+        run: |
+          sudo chown -R metworkpub:metworkpub .
+          sudo chmod -R 775 .
+          cd /buildcache
+          sudo chown -R metworkpub:metworkpub .
+          sudo chmod -R 775 .
+          cd /pub/metwork
+          sudo chown -R metworkpub:metworkpub .
+          sudo chmod -R 775 .
