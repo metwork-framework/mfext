@@ -112,7 +112,7 @@ jobs:
       - name: chown on build outputs
         if: always()
         run: |
-          sudo chown -RL metworkpub:metworkpub .
+          sudo chown -R metworkpub:metworkpub .
           sudo chmod -R 775 .
           sudo chown -RL metworkpub:metworkpub /buildcache 
           sudo chmod -R 775 /buildcache
