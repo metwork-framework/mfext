@@ -74,7 +74,7 @@ jobs:
           cp ${{ github.workspace }}/.github/workflows/createrepo.sh ${{ steps.SetVariables.outputs.rpm_dir }}
           cd ${{ steps.SetVariables.outputs.rpm_dir }}
           chmod +x createrepo.sh
-          sudo ./createrepo.sh .
+          ./createrepo.sh .
           rm -f createrepo.sh
           rm -Rf ${{ steps.SetVariables.outputs.doc_dir }}
           mkdir -p ${{ steps.SetVariables.outputs.doc_dir }}
@@ -112,7 +112,7 @@ jobs:
       - name: chown on build outputs
         if: always()
         run: |
-          sudo chown -R metworkpub:metworkpub .
+          sudo chown -RL metworkpub:metworkpub .
           sudo chmod -R 775 .
           sudo chown -RL metworkpub:metworkpub /buildcache 
           sudo chmod -R 775 /buildcache
