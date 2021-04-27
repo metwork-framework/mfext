@@ -86,6 +86,22 @@ jobs:
 
 
 
+      - name: dispatch mfxxx testimage centos6
+        if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
+          repository: metwork-framework/docker-mfxxx-centos6-testimage
+          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
+      - name: dispatch mfxxx testimage centos7
+        if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
+          repository: metwork-framework/docker-mfxxx-centos7-testimage
+          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
       - name: dispatch mfxxx buildimage centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
