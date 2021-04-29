@@ -16,11 +16,7 @@ Click==7.0
 colorama==0.4.3
 commonmark==0.9.1
 -e git+https://github.com/metwork-framework/cookiecutter.git@113331d0590bd0c9147ac8b608ff850e63b94e44#egg=cookiecutter
-<<<<<<< HEAD
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@ea3775ea1d919756a5c3bf246fd557eca7a57aca#egg=cookiecutter_hooks
-=======
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@5bc1f3295495ded12a95e2d0b35878f3fd7ae1dd#egg=cookiecutter_hooks
->>>>>>> 5edbd518... build: update cookiecutter_hooks (#1111)
 -e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
 cryptography==2.9.2
 -e git+https://github.com/metwork-framework/deploycron.git@c7d4e7b78fa8c9eb9f14ba49b5f90232af7d4709#egg=deploycron
