@@ -24,8 +24,8 @@ cd /src
 
 mkdir -p "/opt/metwork-mfext-${TARGET_DIR}"
 
-if test -d /pub; then mkdir -p /pub/metwork/continuous_integration/buildlogs/${BRANCH}/mfext/${OS_VERSION}/${GITHUB_RUN_NUMBER}; fi
-export BUILDLOGS=/pub/metwork/continuous_integration/buildlogs/${BRANCH}/mfext/${OS_VERSION}/${GITHUB_RUN_NUMBER}
+mkdir -p buildlogs
+export BUILDLOGS=buildlogs
 
 make >${BUILDLOGS}/make.log 2>&1 || ( tail -200 ${BUILDLOGS}/make.log ; exit 1 )
 
@@ -38,6 +38,7 @@ if test "${OUTPUT}" != ""; then
     exit 1
 fi
 
+
 MODULEHASH=`/opt/metwork-mfext-${TARGET_DIR}/bin/mfext_wrapper module_hash 2>module_hash.debug`
 if test -f /opt/metwork-mfext-${TARGET_DIR}/.dhash; then cat /opt/metwork-mfext-${TARGET_DIR}/.dhash; fi
 cat module_hash.debug |sort |uniq ; rm -f module_hash.debug
@@ -47,6 +48,7 @@ if test -f "${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`"; then
     echo "::set-output name=buildcache::null"
     exit 0
 fi
+ 
 
 if test -d docs; then make docs >${BUILDLOGS}/make_doc.log 2>&1 || ( tail -200 ${BUILDLOGS}/make_doc.log ; exit 1 ); fi
 if test -d doc; then make doc >${BUILDLOGS}/make_doc.log 2>&1 || ( tail -200 ${BUILDLOGS}/make_doc.log ; exit 1 ); fi
@@ -58,9 +60,12 @@ make RELEASE_BUILD=${GITHUB_RUN_NUMBER} rpm >${BUILDLOGS}/make_rpm.log 2>&1 || (
 mkdir rpms
 mv /opt/metwork-mfext-${TARGET_DIR}/*.rpm rpms
 
+
 rm -f ${BUILDCACHE}/build_hash_mfext_${BRANCH}_*
 hash_file=${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`
 touch ${hash_file}
+chown 1018:1018 ${hash_file}
+ 
 
 echo "::set-output name=bypass::false"
 echo "::set-output name=buildcache::${hash_file}"
