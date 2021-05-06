@@ -193,7 +193,7 @@
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.3 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
-| [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
+| [urllib3](https://urllib3.readthedocs.io/) | 1.25.11 | python3 |
 | [vector](https://vector.dev/) | 0.11.1 | monitoring |
 | [virtualenv](https://virtualenv.pypa.io/) | 20.4.3 | python3_core |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
