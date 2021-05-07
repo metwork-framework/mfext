@@ -58,16 +58,9 @@ simpleeval==0.9.10
 structlog==19.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 terminaltables==3.1.0
-<<<<<<< HEAD
-urllib3==1.25.3
+urllib3==1.25.11
 typing-extensions==3.7.4.2
 Unidecode==1.1.1
-=======
-tqdm==4.53.0
-Unidecode==1.1.1
-urllib3==1.25.11
-Werkzeug==1.0.1
->>>>>>> b9297c1b... feat: bump urllib3 from 1.25.3 to 1.25.11 to fix a security vulnerabi… (#1121)
 whichcraft==0.5.2
 -e git+https://github.com/metwork-framework/xattrfile.git@740b1e406fbf1e3ba0763664f473640ff08a183d#egg=xattrfile
 yarl==1.5.1
