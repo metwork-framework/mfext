@@ -58,7 +58,7 @@ simpleeval==0.9.10
 structlog==19.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 terminaltables==3.1.0
-urllib3==1.25.3
+urllib3==1.25.11
 typing-extensions==3.7.4.2
 Unidecode==1.1.1
 whichcraft==0.5.2

@@ -193,7 +193,7 @@
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
-| [urllib3](https://urllib3.readthedocs.io/) | 1.25.3 | python3 |
+| [urllib3](https://urllib3.readthedocs.io/) | 1.25.11 | python3 |
 | [virtualenv](https://virtualenv.pypa.io/) | 16.6.0 | python3_core |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3_devtools |
 | [wheel](https://github.com/pypa/wheel) | 0.33.4 | python3_core |
