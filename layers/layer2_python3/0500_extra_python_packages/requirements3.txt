@@ -28,7 +28,7 @@ future==0.17.1
 gitignore-parser==0.0.6
 idna==2.8
 inotify-simple==1.1.8
-Jinja2==2.11.3
+Jinja2==2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@dc013a41475b118a422b1e5645ade3d3e148157e#egg=mflog
