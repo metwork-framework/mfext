@@ -1,5 +1,12 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- update py from 1.8.1 to 1.10.0 to fix security alert (CVE-2020-… (backport #1119) (#1126)
+- bump urllib3 from 1.25.3 to 1.25.11 to fix a security vulnerabi… (backport #1121) (#1124)
+
 ## v1.1.1 (2021-05-04)
 
 - No interesting change
