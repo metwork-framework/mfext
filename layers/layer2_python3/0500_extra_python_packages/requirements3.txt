@@ -33,7 +33,7 @@ jinja2-time==0.2.0
 MarkupSafe==1.1.1
 -e git+https://github.com/metwork-framework/mflog.git@dc013a41475b118a422b1e5645ade3d3e148157e#egg=mflog
 -e git+https://github.com/metwork-framework/mfplugin.git@01eb2568853f400b6baa11a4c477b5aa0eabe9e7#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@ffec1721d7eac7a6e09518975e9c9c26dd8af474#egg=mfutil
+-e git+https://github.com/metwork-framework/mfutil.git@ce333df67210c7ac2c0cc03bb3701655bd22238d#egg=mfutil
 netifaces==0.10.9
 -e git+https://github.com/metwork-framework/opinionated_configparser.git@f4a62dce12794eb1f657c4651f32d3c72ed4f33a#egg=opinionated_configparser
 paramiko==2.7.1
