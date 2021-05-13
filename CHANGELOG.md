@@ -7,6 +7,10 @@
 - go back to Jinja2 2.10.1 (Magics 4.2.0 on mfextaddon_scientific does not build with 2.11.3 and python 3.7) (#1122)
 - bump urllib3 from 1.25.3 to 1.25.11 to fix a security vulnerabi… (backport #1121) (#1123)
 
+### Bug Fixes
+
+- mfutil update to fix some minor display issues with some term emulators (backport #1128) (#1129)
+
 ## v1.0.16 (2021-04-29)
 
 - No interesting change
