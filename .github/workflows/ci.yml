@@ -19,7 +19,9 @@ on:
 env:
     OS_VERSION: centos6
 
+
     DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -v /buildcache:/buildcache -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA -e GITHUB_REPOSITORY -e OS_VERSION"
+
 
 
     WORKFLOW_SCRIPTS_DIR: .github/workflows
