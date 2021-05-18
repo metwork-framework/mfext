@@ -1,4 +1,5 @@
 {% raw %}
+{% set SINK_SET = "0" %}
 data_dir = "{{MFMODULE_RUNTIME_HOME}}/var/vector"
 {% set SYSLOG_PORT_MFLOG = MFMODULE + "_VECTOR_MFLOG_PORT" %}
 {% set SYSLOG_PORT_NGINXLOG = MFMODULE + "_VECTOR_NGINXLOG_PORT" %}
@@ -111,7 +112,8 @@ type = "remove_fields"
 inputs = ["add_json_mflog"]
 fields = ["appname", "facility", "host", "severity", "source_ip", "source_type"]
 
-{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOADED"|getenv("0") == "1") or (ADMIN_ELASTICSEARCH_HTTP_PORT|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|getenv("null") != "null") %}
+{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOADED"|getenv("0") == "1") or (ADMIN_ELASTICSEARCH_HTTP_PORT|default('')|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|default('')|getenv("null") != "null") %}
+{% set SINK_SET = "1" %}
 [sinks.elasticsearch_mflog]
 type = "elasticsearch"
 inputs = ["remove_json_mflog"]
@@ -123,7 +125,8 @@ endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_P
 index = "mflog-%Y.%m.%d"
 {% endif %}
 
-{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOKI_LOADED"|getenv("0") == "1") or (ADMIN_LOKI_HTTP_PORT|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|getenv("null") != "null") %}
+{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOKI_LOADED"|getenv("0") == "1") or (ADMIN_LOKI_HTTP_PORT|default('')|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|default('')|getenv("null") != "null") %}
+{% set SINK_SET = "1" %}
 [sinks.loki_mflog]
 type = "loki"
 inputs = ["remove_json_mflog"]
@@ -140,6 +143,11 @@ labels.name = "@@ name @@"
 labels.hostname = "@@ hostname @@"
 labels.module = "@@ module @@"
 labels.plugin = "@@ plugin @@"
+{% endif %}
+{% if SINK_SET == "0" %}
+[sinks.blackhole]
+type = "blackhole"
+inputs = ["remove_json_mflog"]
 {% endif %}
 {% endif %}
 
