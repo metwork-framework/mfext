@@ -19,7 +19,9 @@ on:
 env:
     OS_VERSION: centos6
 
+
     DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -v /buildcache:/buildcache -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA -e GITHUB_REPOSITORY -e OS_VERSION"
+
 
 
     WORKFLOW_SCRIPTS_DIR: .github/workflows
@@ -84,7 +86,8 @@ jobs:
         run: |
           TESTIMAGE=${{ steps.SetVariables.outputs.testimage }}
           DEP_BRANCH=${{ steps.SetVariables.outputs.dep_branch }}
-          docker run ${DOCKER_RUN_OPTIONS} -e DEP_BRANCH=${DEP_BRANCH} --rm ${TESTIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/integration_tests.sh"
+          BRANCH=${{ steps.SetVariables.outputs.branch }}
+          docker run ${DOCKER_RUN_OPTIONS} -e DEP_BRANCH=${DEP_BRANCH} -e BRANCH=${BRANCH} --rm ${TESTIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/integration_tests.sh"
       - name: publish rpms
         if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.branch != 'null' }}
         uses: thebaptiste/ssh-scp-ssh-pipelines@metwork
@@ -126,7 +129,10 @@ jobs:
           password: ${{ secrets.METWORKPUB_PASSWORD }}
           port: 22
           script: |
+
             docker run -v /pub:/pub --rm mageia:6 /bin/bash -c "genhdlist2 --allow-empty-media ${{ steps.SetVariables.outputs.rpm_dir }}"
+
+
       - name: publish doc
         if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.branch != 'null' }}
         uses: thebaptiste/ssh-scp-ssh-pipelines@metwork
@@ -147,7 +153,7 @@ jobs:
       - name: clean cache on failure
         if: failure()
         run: |
-          rm -f ${{ steps.BuildStep.outputs.buildcache }}
+          sudo rm -f ${{ steps.BuildStep.outputs.buildcache }}
 
 
 
@@ -191,6 +197,10 @@ jobs:
           repository: metwork-framework/docker-mfxxx-centos8-buildimage
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
+
+
+
+
 
 
       - name: chown on build outputs
