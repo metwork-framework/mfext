@@ -5,9 +5,14 @@ export METWORK_PROFILE_LOADING=1
 # We se the umask
 umask 0022
 
-# We set MFEXT_HOME
-export MFEXT_HOME={{MFEXT_HOME}}
-export MFEXT_VERSION={{MFEXT_VERSION}}
+# We set MFEXT_HOME and MFEXT_VERSION
+export MFEXT_HOME="{{MFEXT_HOME}}"
+MFEXT_VERSION=$(cat "${MFEXT_HOME}/config/version" 2>/dev/null)
+if test "${MFEXT_VERSION}" = ""; then
+    # we use build version (config/version is better with released versions)
+    MFEXT_VERSION={{MFEXT_VERSION}}
+fi
+export MFEXT_VERSION
 
 # We load bash_utils functions
 # shellcheck disable=SC1091
