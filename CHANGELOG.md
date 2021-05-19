@@ -10,5 +10,6 @@
 ### Bug Fixes
 
 - mfutil update to fix some minor display issues with some term emulators (#1128)
+- fix vector usage in mfadmin module (#1131)
 
 
