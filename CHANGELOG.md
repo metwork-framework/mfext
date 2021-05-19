@@ -1,6 +1,6 @@
 # release_1.1 CHANGELOG
 
-## [Unreleased]
+## v1.1.2 (2021-05-18)
 
 ### New Features
 
@@ -10,6 +10,7 @@
 ### Bug Fixes
 
 - mfutil update to fix some minor display issues with some term emulators (backport #1128) (#1130)
+- fix vector usage in mfadmin module (#1131)
 
 ## v1.1.1 (2021-05-04)
 
