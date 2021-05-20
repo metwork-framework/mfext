@@ -27,10 +27,6 @@ if [[ "${_BRANCH}" == release_* ]]; then
     if test "${DRONE_TAG:-}" != ""; then
         # We have a tag event forced by drone, let's use it
         TAG="${DRONE_TAG}"
-    else
-        # for release_* branches, we will test if there is a tag, if there is a
-        # tag, we have maybe already our version name
-        TAG=$(git describe --tags 2>/dev/null)
     fi
     if test "${TAG}" != ""; then
         if [[ ${TAG} == v* ]]; then
