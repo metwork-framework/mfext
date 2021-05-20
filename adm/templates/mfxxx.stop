@@ -80,7 +80,7 @@ plugins.stop
 if test -f ${MFMODULE_HOME}/config/circus.ini; then
     _circus.stop
 fi
-kill_remaining_processes.py
+timeout 60s kill_remaining_processes.py
 rm -f ${MFMODULE_RUNTIME_HOME}/var/*.socket >/dev/null 2>&1
 
 echo STOPPED >${MFMODULE_RUNTIME_HOME}/var/status
