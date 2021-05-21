@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix MFEXT_VERSION env with released versions (backport #1134) (#1138)
+
 ## v1.0.17 (2021-05-13)
 
 ### New Features
