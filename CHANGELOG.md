@@ -1,5 +1,12 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix MFEXT_VERSION env with released versions (backport #1134) (#1139)
+- update vector component to fix some loki issues (backport #1140) (#1142)
+
 ## v1.1.2 (2021-05-18)
 
 ### New Features
