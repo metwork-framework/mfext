@@ -11,5 +11,8 @@
 
 - mfutil update to fix some minor display issues with some term emulators (#1128)
 - fix vector usage in mfadmin module (#1131)
+- fix MFEXT_VERSION env with released versions
+- update vector component to fix some loki issues (#1140)
+- add a timeout in kill remaining processes (#1141)
 
 
