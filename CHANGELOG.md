@@ -5,6 +5,7 @@
 ### Bug Fixes
 
 - fix MFEXT_VERSION env with released versions (backport #1134) (#1138)
+- add a timeout in kill remaining processes (backport #1141) (#1143)
 
 ## v1.0.17 (2021-05-13)
 
