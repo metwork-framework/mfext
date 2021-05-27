@@ -70,6 +70,7 @@
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 0.17.0 | python3 |
+| [jq](https://stedolan.github.io/jq/) | 1.6 | core |
 | [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
@@ -115,6 +116,7 @@
 | [nltk](http://nltk.org/) | 3.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
+| [onig](https://github.com/kkos/oniguruma) | 6.9.7.1 | core |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
@@ -209,4 +211,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(208 components)*
+*(210 components)*
