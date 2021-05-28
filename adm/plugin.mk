@@ -45,7 +45,7 @@ all: precustom check $(PREREQ) custom $(DEPLOY)
 	echo $(MFMODULE_VERSION) >$@
 
 clean::
-	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules
+	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules .configuration_cache
 	find . -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 
 precustom::
