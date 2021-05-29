@@ -15,5 +15,6 @@
 - fix MFEXT_VERSION env with released versions
 - update vector component to fix some loki issues (#1140)
 - add a timeout in kill remaining processes (#1141)
+- delete .configuration_cache during make clean (#1147)
 
 
