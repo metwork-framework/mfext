@@ -3,7 +3,6 @@ libX11@centos6,centos7
 libXext@centos6,centos7
 libjpeg-turbo@centos6,centos7
 libexpat.so.1()(64bit)@generic
-libgfortran.so.5()(64bit)@generic
 libjpeg.so.62()(64bit)@generic
 libX11.so.6()(64bit)@generic
 libXau.so.6()(64bit)@generic
