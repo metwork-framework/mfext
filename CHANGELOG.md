@@ -7,6 +7,7 @@
 - fix MFEXT_VERSION env with released versions (backport #1134) (#1139)
 - update vector component to fix some loki issues (backport #1140) (#1142)
 - add a timeout in kill remaining processes (backport #1141) (#1144)
+- update acquisition package to fix some issues in mfdata (backport #1150) (#1152)
 
 ## v1.1.2 (2021-05-18)
 
