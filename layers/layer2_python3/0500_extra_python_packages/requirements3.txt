@@ -1,4 +1,4 @@
--e git+https://github.com/metwork-framework/acquisition.git@af2fabc0c84c79ba6e9f9f83fa06d994d4e974df#egg=acquisition
+-e git+https://github.com/metwork-framework/acquisition.git@b465bc2357121a07867df68a387e41c1167d0286#egg=acquisition
 aiohttp==3.7.4
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
 arrow==0.14.2
@@ -52,7 +52,7 @@ python-dateutil==2.8.0
 pytz==2019.1
 PyYAML==5.4.1
 redis==3.2.1
-requests==2.22.0
+requests==2.25.1
 requests-unixsocket==0.2.0
 rich==1.2.3
 simpleeval==0.9.10
@@ -62,7 +62,7 @@ structlog==19.1.0
 terminaltables==3.1.0
 tqdm==4.53.0
 Unidecode==1.1.1
-urllib3==1.25.11
+urllib3==1.26.5
 Werkzeug==1.0.1
 whichcraft==0.5.2
 wrapt==1.12.1

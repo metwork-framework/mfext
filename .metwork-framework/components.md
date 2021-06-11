@@ -169,7 +169,7 @@
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
-| [requests](http://python-requests.org) | 2.22.0 | python3 |
+| [requests](http://python-requests.org) | 2.25.1 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 54.1.2 | python3_core |
@@ -196,7 +196,7 @@
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.3 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
-| [urllib3](https://urllib3.readthedocs.io/) | 1.25.11 | python3 |
+| [urllib3](https://urllib3.readthedocs.io/) | 1.26.5 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
 | [virtualenv](https://virtualenv.pypa.io/) | 20.4.3 | python3_core |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
