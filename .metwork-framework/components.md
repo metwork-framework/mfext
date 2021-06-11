@@ -166,8 +166,13 @@
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
+<<<<<<< HEAD
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.1.3 | python3 |
+=======
+| [requests](https://requests.readthedocs.io) | 2.25.1 | python3 |
+| [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
+>>>>>>> 6215f67 (fix: fix deadlock issue in rich lib by updating (#1156))
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 54.1.2 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
