@@ -167,7 +167,7 @@
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](http://python-requests.org) | 2.22.0 | python3 |
-| [rich](https://github.com/willmcgugan/rich) | 1.1.3 | python3 |
+| [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 3.3.3 | python3 |
 | [setuptools](https://pypi.python.org/pypi/setuptools) | 41.0.1 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
