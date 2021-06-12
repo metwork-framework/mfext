@@ -19,5 +19,6 @@
 - add a timeout in kill remaining processes (#1141)
 - delete .configuration_cache during make clean (#1147)
 - update acquisition package to fix some issues in mfdata (#1150)
+- fix deadlock issue in rich lib by updating (#1156)
 
 
