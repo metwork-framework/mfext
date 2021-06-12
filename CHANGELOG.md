@@ -1,6 +1,6 @@
 # release_1.1 CHANGELOG
 
-## [Unreleased]
+## v1.1.3 (2021-06-11)
 
 ### Bug Fixes
 
@@ -8,6 +8,7 @@
 - update vector component to fix some loki issues (backport #1140) (#1142)
 - add a timeout in kill remaining processes (backport #1141) (#1144)
 - update acquisition package to fix some issues in mfdata (backport #1150) (#1152)
+- fix deadlock issue in rich lib by updating (backport #1156) (#1158)
 
 ## v1.1.2 (2021-05-18)
 
