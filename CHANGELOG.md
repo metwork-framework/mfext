@@ -1,12 +1,13 @@
 # release_1.0 CHANGELOG
 
-## [Unreleased]
+## v1.0.18 (2021-06-11)
 
 ### Bug Fixes
 
 - fix MFEXT_VERSION env with released versions (backport #1134) (#1138)
 - add a timeout in kill remaining processes (backport #1141) (#1143)
 - update acquisition package to fix some issues in mfdata (backport #1150) (#1151)
+- fix deadlock issue in rich lib by updating (backport #1156) (#1157)
 
 ## v1.0.17 (2021-05-13)
 
