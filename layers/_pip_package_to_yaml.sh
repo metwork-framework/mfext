@@ -25,6 +25,7 @@ if test "${N}" -gt 0; then
     # https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz#egg=basemap
     SOURCE=$(echo "${PACKAGE}" |awk -F "#egg=" '{print $1;}' |sed 's/^-e //g')
     PACKAGE=$(echo "${PACKAGE}" |awk -F "#egg=" '{print $2;}')
+    GIT_REF=$(echo "${SOURCE}" | awk -F "@" '{print $2;}')
     if test "${PACKAGE}" = ""; then
         echo "can't find egg name in $2 => missing #egg=xxxxx part in the url ?"
         exit 1
@@ -61,7 +62,13 @@ echo "name: ${NAME}" >>"${TARGET}"
 if test "${SOURCE:-}" = ""; then
     echo "version: '${VERSION}'" >>"${TARGET}"
 else
-    echo "version: 'custom'" >>"${TARGET}"
+    if [[ ${GIT_REF} =~ ^([[:xdigit:]]){40}$ ]]; then
+        # Probably a commit number ==> version = short commit number
+        echo "version :" `echo ${GIT_REF} | cut -c 1-7` >>"${TARGET}"
+    else
+        # Probably a tag ==> version = tag
+        echo "version: '${GIT_REF}'" >>"${TARGET}"
+    fi
 fi
 echo "extension: 'wheel'" >>"${TARGET}"
 echo "checktype: 'none'" >>"${TARGET}"
