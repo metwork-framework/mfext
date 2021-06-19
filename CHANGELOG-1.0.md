@@ -1,5 +1,9 @@
 # release_1.0 CHANGELOG
 
+## v1.0.19 (2021-06-17)
+
+- No interesting change
+
 ## v1.0.18 (2021-06-11)
 
 ### Bug Fixes
