@@ -121,13 +121,8 @@
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
-<<<<<<< HEAD
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | custom | python3 |
 | [packaging](https://github.com/pypa/packaging) | 19.0 | python3_core |
-=======
-| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 2e99654 | python3 |
-| [packaging](https://github.com/pypa/packaging) | 20.9 | python3_core |
->>>>>>> 4811f35 (fix: fix opinionated_configparser in a mfdata corner case (#1165))
 | [paramiko](https://github.com/paramiko/paramiko/) | 2.7.1 | python3 |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
 | [pcre](http://www.pcre.org) | 8.43 | core |
