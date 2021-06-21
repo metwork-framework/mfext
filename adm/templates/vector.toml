@@ -1,67 +1,173 @@
 {% raw %}
-{% set SINK_SET = "0" %}
-data_dir = "{{MFMODULE_RUNTIME_HOME}}/var/vector"
-{% set SYSLOG_PORT_MFLOG = MFMODULE + "_VECTOR_MFLOG_PORT" %}
-{% set SYSLOG_PORT_NGINXLOG = MFMODULE + "_VECTOR_NGINXLOG_PORT" %}
-{% set LOG_MINIMAL_LEVEL_VAR = MFMODULE + "_LOG_MINIMAL_LEVEL" %}
+    data_dir = "{{MFMODULE_RUNTIME_HOME}}/var/vector"
+    {% set SYSLOG_PORT_MFLOG_VAR = MFMODULE + "_VECTOR_MFLOG_PORT" %}
+    {% set SYSLOG_PORT_MFLOG = SYSLOG_PORT_MFLOG_VAR|getenv("0") %}
+    {% set ILISTENER_PORT_VAR = MFMODULE + "_TELEGRAF_ILISTENER_PORT" %}
+    {% set ILISTENER_PORT = ILISTENER_PORT_VAR|getenv("0") %}
+    {% set SEND_TO_LOKI = "0" %}
+    {% set SEND_TO_ES = "0" %}
+    {% set SEND_MFLOG_LOGS = "0" %}
+    {% set SEND_NGINX_LOGS = "0" %}
+    {% set SEND_HTTP_STATS = "0" %}
+    {% if MFMODULE != "MFADMIN" %}
+        {% set ADMIN_HOSTNAME_IP_VAR = MFMODULE + "_ADMIN_HOSTNAME_IP" %}
+        {% set ADMIN_ELASTICSEARCH_HTTP_PORT_VAR = MFMODULE + "_ADMIN_ELASTICSEARCH_HTTP_PORT" %}
+        {% set ADMIN_LOKI_HTTP_PORT_VAR = MFMODULE + "_ADMIN_LOKI_HTTP_PORT" %}
+        {% set ADMIN_HOSTNAME_IP = ADMIN_HOSTNAME_IP_VAR|getenv("null") %}
+        {% set ADMIN_SEND_MFLOG_LOGS_VAR = MFMODULE + "_ADMIN_SEND_MFLOG_LOGS" %}
+        {% set ADMIN_SEND_NGINX_LOGS_VAR = MFMODULE + "_ADMIN_SEND_NGINX_LOGS" %}
+        {% set ADMIN_SEND_HTTP_STATS_VAR = MFMODULE + "_ADMIN_SEND_HTTP_STATS" %}
+        {% if ADMIN_HOSTNAME_IP != "null" %}
+            {% if SYSLOG_PORT_MFLOG != "0" and ADMIN_SEND_MFLOG_LOGS_VAR|getenv("0") == "1" %}
+                {% if ADMIN_LOKI_HTTP_PORT_VAR|getenv("0") != "0" %}
+                    {% set SEND_TO_LOKI = "1" %}
+                    {% set SEND_MFLOG_LOGS = "1" %}
+                {% endif %}
+                {% if ADMIN_ELASTICSEARCH_HTTP_PORT_VAR|getenv("0") != "0" %}
+                    {% set SEND_TO_ES = "1" %}
+                    {% set SEND_MFLOG_LOGS = "1" %}
+                {% endif %}
+            {% endif %}
+            {% if ADMIN_SEND_NGINX_LOGS_VAR|getenv("0") == "1" %}
+                {% if ADMIN_LOKI_HTTP_PORT_VAR|getenv("0") != "0" %}
+                    {% set SEND_TO_LOKI = "1" %}
+                    {% set SEND_NGINX_LOGS = "1" %}
+                {% endif %}
+                {% if ADMIN_ELASTICSEARCH_HTTP_PORT_VAR|getenv("0") != "0" %}
+                    {% set SEND_TO_ES = "1" %}
+                    {% set SEND_NGINX_LOGS = "1" %}
+                {% endif %}
+            {% endif %}
+            {% if ADMIN_SEND_HTTP_STATS_VAR|getenv("0") == "1" %}
+                {% if ILISTENER_PORT != "0" %}
+                    {% set SEND_HTTP_STATS = "1" %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% else %}
+        {% if MFADMIN_LAYER_LOGS_LOKI_LOADED|default("0") == "1" %}
+            {% set SEND_TO_LOKI = "1" %}
+            {% set SEND_MFLOG_LOGS = "1" %}
+            {% set SEND_NGINX_LOGS = "1" %}
+        {% endif %}
+        {% if MFADMIN_LAYER_LOGS_LOADED|default("0") == "1" %}
+            {% set SEND_TO_ES = "1" %}
+            {% set SEND_MFLOG_LOGS = "1" %}
+            {% set SEND_NGINX_LOGS = "1" %}
+        {% endif %}
+        {% if MFADMIN_LAYER_METRICS_LOADED|default("0") == "1" %}
+            {% if ILISTENER_PORT != "0" %}
+                {% set SEND_HTTP_STATS = "1" %}
+            {% endif %}
+        {% endif %}
+        {% set ADMIN_HOSTNAME_IP = "127.0.0.1" %}
+        {% set ADMIN_ELASTICSEARCH_HTTP_PORT_VAR = "MFADMIN_ELASTICSEARCH_HTTP_PORT" %}
+        {% set ADMIN_LOKI_HTTP_PORT_VAR = "MFADMIN_LOKI_HTTP_PORT" %}
+    {% endif %}
+    {% set ADMIN_ELASTICSEARCH_HTTP_PORT = ADMIN_ELASTICSEARCH_HTTP_PORT_VAR|getenv("0") %}
+    {% set ADMIN_LOKI_HTTP_PORT = ADMIN_LOKI_HTTP_PORT_VAR|getenv("0") %}
 {% endraw %}
-{% if MFMODULE != "MFADMIN" %}
-{% raw %}
-{% set ADMIN_HOSTNAME_VAR = MFMODULE + "_ADMIN_HOSTNAME" %}
-{% set ADMIN_HOSTNAME_IP_VAR = MFMODULE + "_ADMIN_HOSTNAME_IP" %}
-{% set ADMIN_ELASTICSEARCH_HTTP_PORT = MFMODULE + "_ADMIN_ELASTICSEARCH_HTTP_PORT" %}
-{% set ADMIN_LOKI_HTTP_PORT = MFMODULE + "_ADMIN_LOKI_HTTP_PORT" %}
-{% endraw %}
-{% endif %}
 
 {% raw %}
 
-{% if SYSLOG_PORT_NGINXLOG|getenv('0') != '0' %}
-[sources.syslog_nginx]
-type = "syslog"
-address = "0.0.0.0:{{SYSLOG_PORT_NGINXLOG|getenv}}"
-mode = "udp"
+{% if SEND_HTTP_STATS == "1" or SEND_NGINX_LOGS == "1" %}
+[sources.nginx_access]                                                          
+type = "file"                                                                   
+include = ["{{MFMODULE_RUNTIME_HOME}}/log/nginx_access.log*"]
+read_from = "end"                                                               
+oldest_first = true     
 
 [transforms.json_nginx]
 type = "json_parser"
-inputs = ["syslog_nginx"]
+inputs = ["nginx_access"]
 drop_field = true
 drop_invalid = true
 field = "message"
 
+{% if SEND_HTTP_STATS == '1' %}
+[transforms.nginx_access_to_metric1]                                               
+type = "log_to_metric"                                                          
+inputs = ["json_nginx"]                                                  
+[[transforms.nginx_access_to_metric1.metrics]]                                     
+field = "duration"                                                              
+name = "request_timer2"                                                         
+type = "histogram"                                                              
+tags.status_code = "@@ status @@"                                               
+tags.method = "@@ method @@"                                                    
+tags.plugin = "@@ plugin @@"                                                    
+tags.app = "@@ app @@"  
+tags.hostname = "{{MFHOSTNAME}}"
+
+[transforms.nginx_access_to_metric2]       
+type = "log_to_metric"    
+inputs = ["json_nginx"]            
+[[transforms.nginx_access_to_metric2.metrics]] 
+field = "status"       
+name = "request_counter2"      
+type = "counter"       
+tags.status_code = "@@ status @@"
+tags.method = "@@ method @@"
+tags.plugin = "@@ plugin @@"
+tags.app = "@@ app @@"
+tags.hostname = "{{MFHOSTNAME}}"
+
+[transforms.add_status_tag]
+type = "lua"
+inputs = ["nginx_access_to_metric1", "nginx_access_to_metric2"]
+version = "2"      
+hooks.process = '''
+    function (event, emit)
+        event.metric.tags.metric_type = nil
+        local s = tonumber(event.metric.tags.status_code)
+        if s ~= nil then
+            if s >= 500 and s < 600 then
+                event.metric.tags.simplified_status_code = "5xx"
+            elseif s >= 400 then
+                event.metric.tags.simplified_status_code = "4xx"
+            elseif s >= 300 then
+                event.metric.tags.simplified_status_code = "3xx"
+            elseif s >= 200 then
+                event.metric.tags.simplified_status_code = "2xx"
+            elseif s >= 100 then
+                event.metric.tags.simplified_status_code = "1xx"
+            else
+                event.metric.tags.simplified_status_code = "xxx"
+            end
+        end
+        emit(event)
+    end
+'''
+
+[sinks.telegraf]         
+type = "influxdb_metrics"    
+inputs = ["add_status_tag"]       
+database = "vector-database"          
+endpoint = "http://127.0.0.1:{{ILISTENER_PORT}}/"
+{% endif %}
+
+{% if (SEND_TO_ES == "1" and SEND_NGINX_LOGS == "1") or (SEND_TO_LOKI == "1" and SEND_NGINX_LOGS == "1") %}
 [transforms.add_json_nginx]
 type = "add_fields"
 inputs = ["json_nginx"]
 fields.module = "{{MFMODULE}}"
 fields.module_version = "{{MFMODULE_VERSION}}"
 fields.hostname = "{{MFHOSTNAME}}"
+{% endif %}
 
-[transforms.remove_json_nginx]
-type = "remove_fields" 
-inputs = ["add_json_nginx"]
-fields = ["appname", "facility", "host", "severity", "source_ip", "source_type"]
-
-{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOADED"|getenv("0") == "1") or (ADMIN_ELASTICSEARCH_HTTP_PORT|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|getenv("null") != "null") %}
+{% if SEND_TO_ES == "1" and SEND_NGINX_LOGS == "1" %}
 [sinks.elasticsearch_nginx]
 type = "elasticsearch"
-inputs = ["remove_json_nginx"]
-{% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}"
-{% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}"
-{% endif %}
+inputs = ["add_json_nginx"]
+endpoint = "http://{{ADMIN_HOSTNAME_IP}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT}}"
 index = "nginx-%Y.%m.%d"
 {% endif %}
 
-{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOKI_LOADED"|getenv("0") == "1") or (ADMIN_LOKI_HTTP_PORT|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|getenv("null") != "null") %}
+{% if SEND_TO_LOKI == "1" and SEND_NGINX_LOGS == "1" %}
 [sinks.loki_nginx]
 type = "loki"
-inputs = ["remove_json_nginx"]
-{% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}"
-{% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}"
-{% endif %}
+inputs = ["add_json_nginx"]
+out_of_order_action = "rewrite_timestamp"    
+endpoint = "http://{{ADMIN_HOSTNAME_IP}}:{{ADMIN_LOKI_HTTP_PORT}}"
 encoding.codec = "json" 
 encoding.except_fields = ["method", "status", "hostname", "module", "plugin"]
 labels.source = "nginx"
@@ -73,10 +179,10 @@ labels.plugin = "@@ plugin @@"
 {% endif %}
 {% endif %}
 
-{% if SYSLOG_PORT_MFLOG|getenv('0') != '0' %}
+{% if SEND_MFLOG_LOGS == '1' %}
 [sources.syslog_mflog]
 type = "syslog"
-address = "0.0.0.0:{{SYSLOG_PORT_MFLOG|getenv}}"
+address = "0.0.0.0:{{SYSLOG_PORT_MFLOG}}"
 mode = "udp"
 
 [transforms.fix_mflog_json]
@@ -112,29 +218,20 @@ type = "remove_fields"
 inputs = ["add_json_mflog"]
 fields = ["appname", "facility", "host", "severity", "source_ip", "source_type"]
 
-{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOADED"|getenv("0") == "1") or (ADMIN_ELASTICSEARCH_HTTP_PORT|default('')|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|default('')|getenv("null") != "null") %}
-{% set SINK_SET = "1" %}
+{% if SEND_TO_ES == "1" %}
 [sinks.elasticsearch_mflog]
 type = "elasticsearch"
 inputs = ["remove_json_mflog"]
-{% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}"
-{% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}"
-{% endif %}
+endpoint = "http://{{ADMIN_HOSTNAME_IP}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT}}"
 index = "mflog-%Y.%m.%d"
 {% endif %}
 
-{% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOKI_LOADED"|getenv("0") == "1") or (ADMIN_LOKI_HTTP_PORT|default('')|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|default('')|getenv("null") != "null") %}
-{% set SINK_SET = "1" %}
+{% if SEND_TO_LOKI == "1" %}
 [sinks.loki_mflog]
 type = "loki"
+out_of_order_action = "rewrite_timestamp"
 inputs = ["remove_json_mflog"]
-{% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}"
-{% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}"
-{% endif %}
+endpoint = "http://{{ADMIN_HOSTNAME_IP}}:{{ADMIN_LOKI_HTTP_PORT}}"
 encoding.codec = "json" 
 encoding.except_fields = ["level", "status", "hostname", "name", "module", "plugin"]
 labels.source = "mflog"
@@ -144,11 +241,23 @@ labels.hostname = "@@ hostname @@"
 labels.module = "@@ module @@"
 labels.plugin = "@@ plugin @@"
 {% endif %}
-{% if SINK_SET == "0" %}
-[sinks.blackhole]
-type = "blackhole"
-inputs = ["remove_json_mflog"]
+
 {% endif %}
+
+{% if SEND_MFLOG_LOGS == "0" and SEND_NGINX_LOGS == "0" and SEND_HTTP_STATS == "0" %}
+# Just to be sure to have one valid source and sink
+[sources.dummy1]
+type = "file"
+include = ["{{MFMODULE_RUNTIME_HOME}}/log/vector.log*"]
+read_from = "end"                                                               
+oldest_first = true     
+
+[sinks.dummy2]
+type = "blackhole"
+inputs = ["dummy1"]
 {% endif %}
 
 {% endraw %}
+
+{% block custom %}
+{% endblock %}

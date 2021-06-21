@@ -17,7 +17,7 @@ TARGET_LIBS_BEFORE:=$(addprefix $(MFEXT_HOME)/lib/,$(LIBS_BEFORE))
 TEMPLATES=$(shell find templates ! -type d)
 TARGET_TEMPLATES:=$(addprefix $(MFEXT_HOME)/share/,$(TEMPLATES))
 
-all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile $(PREFIX)/lib/mfext/__init__.py $(PREFIX)/lib/mfext/ini_to_env.py $(PREFIX)/lib/mfext/circus_hooks.py $(PREFIX)/lib/mfext/mflog_addon.py $(PREFIX)/lib/mfext/conf_monitor.py $(PREFIX)/lib/mfext/circus.py $(PREFIX)/bin/metwork
+all:: profiles load_env $(TARGET_TEMPLATES) $(PREFIX)/share/profile $(PREFIX)/lib/mfext/__init__.py $(PREFIX)/lib/mfext/ini_to_env.py $(PREFIX)/lib/mfext/circus_hooks.py $(PREFIX)/lib/mfext/mflog_addon.py $(PREFIX)/lib/mfext/conf_monitor.py $(PREFIX)/lib/mfext/circus.py $(PREFIX)/bin/metwork $(PREFIX)/lib/mfext/metwork_processes.py
 
 before_layers: $(TARGET_BINS_BEFORE) $(TARGET_SHARES_BEFORE) $(TARGET_LIBS_BEFORE)
 
@@ -34,6 +34,9 @@ $(PREFIX)/bin/metwork: metwork
 $(PREFIX)/lib/mfext/__init__.py:
 	mkdir -p $(PREFIX)/lib/mfext
 	touch $@
+
+$(PREFIX)/lib/mfext/metwork_processes.py: metwork_processes.py
+	cp -f $< $@
 
 $(PREFIX)/lib/mfext/ini_to_env.py: ini_to_env.py
 	cp -f $< $@

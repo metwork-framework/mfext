@@ -6,13 +6,12 @@
 import os
 import sys
 import time
-import json
 import fnmatch
 from telegraf_unixsocket_client import TelegrafUnixSocketClient
 from mflog import getLogger
-from mfutil import BashWrapper
 import mfplugin.compat
 import distro
+import mfext.metwork_processes as mfp
 
 MFMODULE_RUNTIME_HOME = os.environ["MFMODULE_RUNTIME_HOME"]
 SOCKET_PATH = os.path.join(MFMODULE_RUNTIME_HOME, "var", "telegraf.socket")
@@ -20,7 +19,6 @@ LOGGER = getLogger("telegraf_collector_metwork_module")
 MFEXT_VERSION = os.environ["MFEXT_VERSION"]
 MFMODULE_VERSION = os.environ["MFMODULE_VERSION"]
 MFMODULE = os.environ['MFMODULE']
-CMD = "list_metwork_processes.py --output-format=json --include-current-family"
 MONITORING_CMDLINE_PATTERNS = ['*telegraf*', '*list_metwork_processes*',
                                '*vector*']
 IS_MONITORING_MODULE = (MFMODULE in ['MFSYSMON', 'MFADMIN'])
@@ -39,15 +37,8 @@ def is_cmdline_monitoring(cmdline):
 
 def get_stats():
     stats = {}
-    results = BashWrapper(CMD)
-    if not results:
-        LOGGER.warning("can't execute %s: %s" % (CMD, results))
-        return None
-    try:
-        processes = json.loads(results.stdout)
-    except Exception:
-        LOGGER.warning("can't parse %s output as JSON" % CMD)
-        return None
+    processes = mfp.get_processes_dict(exclude_same_family=None,
+                                       pids_only=False)
     plugins = set([x['plugin'] for x in processes if x['plugin'] != ''])
     plugins.add('#monitoring#')
     if not IS_MONITORING_MODULE:
@@ -106,8 +97,8 @@ def get_status():
 
 
 while True:
-    LOGGER.debug("waiting 10s...")
-    time.sleep(10)
+    LOGGER.debug("waiting 60s...")
+    time.sleep(60)
     client = TelegrafUnixSocketClient(SOCKET_PATH)
     try:
         client.connect()
