@@ -48,8 +48,8 @@
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
-| [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | scientific_core |
-| [freetype](https://www.freetype.org/) | 2.10.1 | scientific_core |
+| [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | core |
+| [freetype](https://www.freetype.org/) | 2.10.1 | core |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
@@ -77,7 +77,7 @@
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
-| [libpng](http://www.libpng.org/) | 1.6.37 | scientific_core |
+| [libpng](http://www.libpng.org/) | 1.6.37 | core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
