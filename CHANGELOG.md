@@ -1,5 +1,11 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix opinionated_configparser in a mfdata corner case (backport #1165) (#1167)
+
 ## v1.1.4 (2021-06-17)
 
 - No interesting change
