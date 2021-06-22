@@ -9,6 +9,7 @@
 - add jq and its dependency onig (#1145)
 - add PostGreSQL extension postgresql_airtide (#1148)
 - bump urllib3 from 1.25.11 to 1.26.5 to fix security alert GHSA-… (#1153)
+- move libpng, freetype and fontconfig to layer core and build tk… (#1168)
 
 ### Bug Fixes
 
@@ -20,5 +21,6 @@
 - delete .configuration_cache during make clean (#1147)
 - update acquisition package to fix some issues in mfdata (#1150)
 - fix deadlock issue in rich lib by updating (#1156)
+- fix opinionated_configparser in a mfdata corner case (#1165)
 
 
