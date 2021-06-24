@@ -1,12 +1,7 @@
 | Name | Version | Layer |
 | --- | --- | --- |
-<<<<<<< HEAD
 | [acquisition](https://github.com/metwork-framework/acquisition) | custom | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | custom | python3 |
-=======
-| [acquisition](https://github.com/metwork-framework/acquisition) | e21af9f | python3 |
-| [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
->>>>>>> b6a9ff3 (fix: fix bad acquisition update (#1173))
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.7.4 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
