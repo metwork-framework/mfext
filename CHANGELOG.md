@@ -22,5 +22,6 @@
 - update acquisition package to fix some issues in mfdata (#1150)
 - fix deadlock issue in rich lib by updating (#1156)
 - fix opinionated_configparser in a mfdata corner case (#1165)
+- update acquisition package to fix an issue in mfdata (#1170)
 
 
