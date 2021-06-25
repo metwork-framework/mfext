@@ -1,5 +1,17 @@
 # release_1.0 CHANGELOG
 
+## v1.0.22 (2021-06-24)
+
+### Bug Fixes
+
+- fix bad acquisition update (backport #1173) (#1174)
+
+## v1.0.21 (2021-06-24)
+
+### Bug Fixes
+
+- update acquisition package to fix an issue in mfdata (backport #1170) (#1171)
+
 ## v1.0.20 (2021-06-22)
 
 ### Bug Fixes
