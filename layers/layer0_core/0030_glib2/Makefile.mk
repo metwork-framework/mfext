@@ -13,8 +13,6 @@ LICENSE=LGPL
 ARCHIVE_FILE=$(NAME)-$(VERSION).$(EXTENSION)
 SHELL := /bin/bash
 
-PYTHON_VERSION = `python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}.{2}".format(*version))' | cut -d"." -f1-2`
-
 all:: $(PREFIX)/lib/libglib-2.0.so $(PREFIX)/share/metwork_packages/glib.yaml
 
 build/$(NAME)-$(VERSION)/configure:
@@ -22,26 +20,15 @@ build/$(NAME)-$(VERSION)/configure:
 	cd build && ../../../_download_helper.sh $(ARCHIVE_FILE) ../sources $(CHECKTYPE) $(CHECKSUM)
 	cd build && ../../../_uncompress_helper.sh $(ARCHIVE_FILE) $(EXTENSION)
 
-ifeq ($(shell expr $(PYTHON_VERSION) \< "3.5" ), 1)
-
-export PYTHON=/opt/rh/rh-python35/root/usr/bin/python
-
-$(PREFIX)/lib/libglib-2.0.so: Makefile Makefile.mk sources
-	$(MAKE) build/$(NAME)-$(VERSION)/configure
-	LD_LIBRARY_PATH=/opt/rh/rh-python35/root/usr/lib64/:$(LD_LIBRARY_PATH) && export LD_LIBRARY_PATH && cd build/$(NAME)-$(VERSION) && scl enable rh-python35 './configure --prefix=$(PREFIX) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --disable-libmount' && make && make install
-	rm -Rf $(PREFIX)/share/gtk-doc
-	for fic in `grep -rl rh-python35 $(PREFIX)/bin`; do cat $$fic | sed 's|/opt/rh/rh-python35/root/usr/bin/python|zzzz/opt/python3_core/bin/python3|g' > $$fic.new; cat $$fic.new | sed "s|zzzz|$(PREFIX)|g" > $$fic; rm $$fic.new; done
-
-else
-
-export PYTHON=/usr/bin/python
+export PYTHON=/usr/bin/python3
 
 $(PREFIX)/lib/libglib-2.0.so:
 	$(MAKE) build/$(NAME)-$(VERSION)/configure
-	cd build/$(NAME)-$(VERSION) && ./configure --prefix=$(PREFIX) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --without-python && make && make install
+	cd build/$(NAME)-$(VERSION) && ./configure --prefix=$(PREFIX) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --disable-libmount && make && make install
 	rm -Rf $(PREFIX)/share/gtk-doc
-
-endif
+	grep -rl python $(PREFIX)/bin
+	for fic in `grep -rl python3 $(PREFIX)/bin`; do cat $$fic | sed 's|/usr/bin/python3|zzzz/opt/python3_core/bin/python3|g' > $$fic.new; cat $$fic.new | sed "s|zzzz|$(PREFIX)|g" > $$fic; rm $$fic.new; done
+	grep -rl python $(PREFIX)/bin
 
 $(PREFIX)/share/metwork_packages/%.yaml:
 	@mkdir -p $(PREFIX)/share/metwork_packages
