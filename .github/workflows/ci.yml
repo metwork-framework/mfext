@@ -17,7 +17,7 @@ on:
       - metwork-trigger*
 
 env:
-    OS_VERSION: centos6
+    OS_VERSION: centos8
 
 
     DOCKER_RUN_OPTIONS: "-v ${{ github.workspace }}:/src -v /buildcache:/buildcache -e GITHUB_REF -e GITHUB_RUN_NUMBER -e GITHUB_SHA -e GITHUB_REPOSITORY -e OS_VERSION"
@@ -160,36 +160,12 @@ jobs:
 
 
 
-      - name: dispatch mfxxx testimage centos6
+      - name: dispatch mfxxx testimage centos8
         if: ${{ github.event_name != 'pull_request' && github.event_name != 'tags' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
-          repository: metwork-framework/docker-mfxxx-centos6-testimage
-          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
-      - name: dispatch mfxxx testimage centos7
-        if: ${{ github.event_name != 'pull_request' && github.event_name != 'tags' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
-          repository: metwork-framework/docker-mfxxx-centos7-testimage
-          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
-      - name: dispatch mfxxx buildimage centos6
-        if: ${{ github.event_name != 'pull_request' && github.event_name != 'tags' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
-          repository: metwork-framework/docker-mfxxx-centos6-buildimage
-          event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
-      - name: dispatch mfxxx buildimage centos7
-        if: ${{ github.event_name != 'pull_request' && github.event_name != 'tags' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' }}
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.METWORK_ACCESS_TOKEN }}
-          repository: metwork-framework/docker-mfxxx-centos7-buildimage
+          repository: metwork-framework/docker-mfxxx-centos8-testimage
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}"}'
       - name: dispatch mfxxx buildimage centos8
