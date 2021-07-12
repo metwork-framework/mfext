@@ -27,7 +27,7 @@ $(PREFIX)/lib/libglib-2.0.so:
 	cd build/$(NAME)-$(VERSION) && ./configure --prefix=$(PREFIX) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --disable-libmount && make && make install
 	rm -Rf $(PREFIX)/share/gtk-doc
 	grep -r python $(PREFIX)/bin
-	for fic in `grep -rl python3 $(PREFIX)/bin`; do cat $$fic | sed 's|/usr/bin/python3|zzzz/opt/python3_core/bin/python3|g' > $$fic.new; cat $$fic.new | sed "s|zzzz|$(PREFIX)|g" > $$fic; rm $$fic.new; done
+	for fic in `grep -rl python3 $(PREFIX)/bin`; do cat $$fic | sed 's|/usr/bin/python3|$(PREFIX)/../python3_core/bin/python3|g' > $$fic.new; mv $$fic.new $$fic; done
 	grep -r python $(PREFIX)/bin
 
 $(PREFIX)/share/metwork_packages/%.yaml:
