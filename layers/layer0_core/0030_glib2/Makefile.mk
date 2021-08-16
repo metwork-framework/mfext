@@ -30,7 +30,7 @@ $(PREFIX)/lib/libglib-2.0.so: Makefile Makefile.mk sources
 	$(MAKE) build/$(NAME)-$(VERSION)/configure
 	LD_LIBRARY_PATH=/opt/rh/rh-python35/root/usr/lib64/:$(LD_LIBRARY_PATH) && export LD_LIBRARY_PATH && cd build/$(NAME)-$(VERSION) && scl enable rh-python35 './configure --prefix=$(PREFIX) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --disable-libmount' && make && make install
 	rm -Rf $(PREFIX)/share/gtk-doc
-	for fic in `grep -rl rh-python35 $(PREFIX)/bin`; do cat $$fic | sed 's|/opt/rh/rh-python35/root/usr/bin/python|$(PREFIX)/../python3_core/bin/python3|g' > $$fic.new; mv $$fic.new $$fic; done
+	for fic in `grep -rl rh-python35 $(PREFIX)/bin`; do cat $$fic | sed 's|/opt/rh/rh-python35/root/usr/bin/python|$(PREFIX)/../python3_core/bin/python3_wrapper|g' > $$fic.new; cp $$fic.new $$fic; rm $$fic.new; done
 
 else
 
@@ -40,7 +40,7 @@ $(PREFIX)/lib/libglib-2.0.so:
 	$(MAKE) build/$(NAME)-$(VERSION)/configure
 	cd build/$(NAME)-$(VERSION) && ./configure --prefix=$(PREFIX) --enable-shared --disable-static --disable-man --disable-gtk-doc --disable-gtk-doc-html --without-python && make && make install
 	rm -Rf $(PREFIX)/share/gtk-doc
-	for fic in `grep -rl python3 $(PREFIX)/bin`; do cat $$fic | sed 's|/usr/bin/python|$(PREFIX)/../python3_core/bin/python3|g' > $$fic.new; mv $$fic.new $$fic; done
+	for fic in `grep -rl python3 $(PREFIX)/bin`; do cat $$fic | sed 's|/usr/bin/python|$(PREFIX)/../python3_core/bin/python3_wrapper|g' > $$fic.new; cp $$fic.new $$fic; rm $$fic.new; done
 
 endif
 
