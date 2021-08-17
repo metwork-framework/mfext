@@ -130,6 +130,7 @@
 | [pip](https://pip.pypa.io/) | 20.2.4 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
+| [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
@@ -212,4 +213,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(211 components)*
+*(212 components)*
