@@ -76,6 +76,7 @@
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
+| [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libpng](http://www.libpng.org/) | 1.6.37 | core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
@@ -126,6 +127,7 @@
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.8.1 | python3_devtools |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
 | [pip](https://pip.pypa.io/) | 20.2.4 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
@@ -213,4 +215,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(212 components)*
+*(214 components)*
