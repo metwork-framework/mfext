@@ -10,6 +10,9 @@
 - add PostGreSQL extension postgresql_airtide (#1148)
 - bump urllib3 from 1.25.11 to 1.26.5 to fix security alert GHSA-… (#1153)
 - move libpng, freetype and fontconfig to layer core and build tk… (#1168)
+- use a python3 wrapper for usages of python3 by glib  (#1177)
+- add postgis-geohash (#1180)
+- add pgbouncer and its dependency libevent (#1183)
 
 ### Bug Fixes
 
@@ -24,5 +27,6 @@
 - fix opinionated_configparser in a mfdata corner case (#1165)
 - update acquisition package to fix an issue in mfdata (#1170)
 - fix bad acquisition update (#1173)
+- fix log_proxy crash in corner cases  (#1179)
 
 
