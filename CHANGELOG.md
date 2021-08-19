@@ -13,6 +13,7 @@
 - use a python3 wrapper for usages of python3 by glib  (#1177)
 - add postgis-geohash (#1180)
 - add pgbouncer and its dependency libevent (#1183)
+- add extension pg_partman to PostgreSQL (#1185)
 
 ### Bug Fixes
 
