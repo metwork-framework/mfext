@@ -114,6 +114,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
+| [nginx-upload-module](https://www.nginx.com/nginx-wiki/build/dirhtml/modules/upload/) | 2.3.0 | openresty |
 | [nltk](http://nltk.org/) | 3.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
@@ -216,4 +217,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(215 components)*
+*(216 components)*
