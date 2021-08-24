@@ -1,2 +1,4 @@
 cffi
+nose
+pbr
 pyscaffold
