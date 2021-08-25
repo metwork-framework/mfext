@@ -16,5 +16,5 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libgdal.so
 $(PREFIX)/lib/libgdal.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--enable-shared --disable-static --with-pg=yes --with-png=$(PREFIX)/../core --with-proj=$(PREFIX) --with-openjpeg=$(PREFIX) --with-jasper=$(PREFIX) --with-hdf5=$(PREFIX) --with-curl=$(PREFIX)/../core/bin/curl-config --with-sqlite3=$(PREFIX)/../core --with-libjson-c=$(PREFIX)/../core --with-spatialite=$(PREFIX) --with-netcdf --with-python=no" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--enable-shared --disable-static --with-pg=yes --with-png=$(PREFIX)/../core --with-proj=$(PREFIX) --with-openjpeg=$(PREFIX) --with-jasper=$(PREFIX) --with-hdf5=$(PREFIX) --with-hdf4=$(PREFIX) --with-curl=$(PREFIX)/../core/bin/curl-config --with-sqlite3=$(PREFIX)/../core --with-libjson-c=$(PREFIX)/../core --with-spatialite=$(PREFIX) --with-netcdf --with-python=no" download uncompress configure build install
 
