@@ -87,12 +87,7 @@ fi
 
 
     
-    case "${OS_VERSION}" in
-        centos6)
-            ;;
-        *)
-            ;;
-    esac
+    
 
 
 echo "::set-output name=branch::${B}"
@@ -101,7 +96,7 @@ echo "::set-output name=dep_branch::${DEP_BRANCH}"
 echo "::set-output name=target_dir::${TARGET_DIR}"
 echo "::set-output name=dep_dir::${DEP_DIR}"
 echo "::set-output name=buildimage::metwork/mfext-${OS_VERSION}-buildimage:${DEP_BRANCH}"
-echo "::set-output name=testimage::centos:${OS_VERSION}"
+echo "::set-output name=testimage::metwork/${OS_VERSION}:latest"
 echo "::set-output name=buildlog_dir::/pub/metwork/${CI}/buildlogs/${B}/mfext/${OS_VERSION}/${GITHUB_RUN_NUMBER}"
 
 echo "::set-output name=rpm_dir::/pub/metwork/${CI}/rpms/${B}/${OS_VERSION}"
