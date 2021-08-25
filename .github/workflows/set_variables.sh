@@ -89,9 +89,9 @@ fi
     
     case "${OS_VERSION}" in
         centos6)
-            
+            ;;
         *)
-            
+            ;;
     esac
 
 
