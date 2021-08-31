@@ -24,6 +24,5 @@ pytest-xdist
 pytest-mock
 pytest-html
 freezegun
-setuptools-git
 #nose-html-reporting is not python3 compliant
 #nose-html-reporting
