@@ -2,3 +2,5 @@ cffi
 nose
 pbr
 pyscaffold
+pytest-runner
+setuptools-git

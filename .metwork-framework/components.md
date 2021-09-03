@@ -157,7 +157,7 @@
 | [pytest-httpserver](https://www.github.com/csernazs/pytest-httpserver) | 0.3.4 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 1.10.0 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.1.0 | python3_devtools |
-| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.3.1 | python3_devtools |
+| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.3.1 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
@@ -173,7 +173,7 @@
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.25.1 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
-| [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3_devtools |
+| [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 54.1.2 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
