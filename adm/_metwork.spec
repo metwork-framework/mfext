@@ -30,6 +30,8 @@
         {% set RELEASE_BUILD_SUFFIX = ".el6" %}
     {% elif METWORK_BUILD_OS == "centos7" %}
         {% set RELEASE_BUILD_SUFFIX = ".el7" %}
+    {% elif METWORK_BUILD_OS == "centos8" %}
+        {% set RELEASE_BUILD_SUFFIX = ".el8" %}
     {% elif METWORK_BUILD_OS == "generic" %}
         {% set RELEASE_BUILD_SUFFIX = ".gen" %}
     {% endif %}
