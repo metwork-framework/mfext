@@ -24,5 +24,6 @@ pytest-xdist
 pytest-mock
 pytest-html
 freezegun
+pytest-asyncio
 #nose-html-reporting is not python3 compliant
 #nose-html-reporting

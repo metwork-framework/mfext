@@ -21,3 +21,4 @@ import tkinter
 import lzma
 import bjoern
 import configupdater
+import pytest_asyncio
