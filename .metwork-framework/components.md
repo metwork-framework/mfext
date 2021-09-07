@@ -155,6 +155,7 @@
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.3.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 2.4.7 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
+| [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.15.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
 | [pytest-forked](https://github.com/pytest-dev/pytest-forked) | 1.1.3 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 2.1.1 | python3_devtools |
@@ -217,4 +218,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(216 components)*
+*(217 components)*
