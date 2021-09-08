@@ -15,4 +15,4 @@ LICENSE=??
 all:: $(PREFIX)/lib/postgresql/postgresql_airtide.so
 
 $(PREFIX)/lib/postgresql/postgresql_airtide.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure build install

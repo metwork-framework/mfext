@@ -57,6 +57,7 @@
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
+| [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
 | [importlib-metadata](https://github.com/python/importlib_metadata) | 3.7.3 | python3_core |
@@ -76,6 +77,7 @@
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
+| [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libpng](http://www.libpng.org/) | 1.6.37 | core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
@@ -84,7 +86,7 @@
 | [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
-| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.1.0 | core |
+| [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.5.0 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
 | [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
@@ -127,10 +129,13 @@
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.6.0 | python3 |
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.8.1 | python3_devtools |
+| [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
 | [pip](https://pip.pypa.io/) | 20.2.4 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
+| [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
@@ -151,6 +156,7 @@
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.3.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 2.4.7 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
+| [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.15.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
 | [pytest-forked](https://github.com/pytest-dev/pytest-forked) | 1.1.3 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 2.1.1 | python3_devtools |
@@ -215,4 +221,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(214 components)*
+*(220 components)*
