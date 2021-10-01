@@ -117,7 +117,7 @@
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
 | [nltk](http://nltk.org/) | 3.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
-| [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3_devtools |
+| [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3 |
 | [onig](https://github.com/kkos/oniguruma) | 6.9.7.1 | core |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
@@ -126,6 +126,7 @@
 | [packaging](https://github.com/pypa/packaging) | 20.9 | python3_core |
 | [paramiko](https://github.com/paramiko/paramiko/) | 2.7.1 | python3 |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
+| [pbr](https://docs.openstack.org/pbr/latest/) | 5.6.0 | python3 |
 | [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.8.1 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
@@ -162,13 +163,14 @@
 | [pytest-httpserver](https://www.github.com/csernazs/pytest-httpserver) | 0.3.4 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 1.10.0 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.1.0 | python3_devtools |
+| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.3.1 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
-| [Python](http://python.org/) | 3.8.9 | python3_core |
+| [Python](http://python.org/) | 3.9.7 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
-| [pyzmq](https://pyzmq.readthedocs.org) | 16.0.4 | python3_circus |
+| [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
@@ -177,6 +179,7 @@
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.25.1 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
+| [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 54.1.2 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
@@ -216,6 +219,7 @@
 | [xz](https://tukaani.org/xz/) | 5.2.5 | core |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
+| [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(217 components)*
+*(221 components)*
