@@ -56,7 +56,7 @@
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
-| [graphviz](https://graphviz.org) | 2.40.1 | devtools |
+| [graphviz](https://graphviz.org) | 2.40.1 | core |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
