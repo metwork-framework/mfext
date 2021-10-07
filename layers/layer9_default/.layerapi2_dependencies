@@ -6,7 +6,6 @@ core@mfext
 python3@mfext
 -scientific@mfext
 -python3_scientific@mfext
--python3_ia@mfext
 -python3_mapserverapi@mfext
 -python3_vim@mfext
 -python3_devtools@mfext
