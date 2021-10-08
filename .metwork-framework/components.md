@@ -115,7 +115,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
-| [nltk](http://nltk.org/) | 3.5 | python3_devtools |
+| [nltk](http://nltk.org/) | 3.6.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3 |
 | [onig](https://github.com/kkos/oniguruma) | 6.9.7.1 | core |
@@ -174,7 +174,7 @@
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
-| [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
+| [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2021.8.28 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.25.1 | python3 |
