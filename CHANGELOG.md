@@ -1,5 +1,12 @@
 # release_1.1 CHANGELOG
 
+## v1.1.8 (2021-10-07)
+
+### Bug Fixes
+
+- fix log_proxy crash in corner cases  (backport #1179) (#1182)
+- if both layers python3_ia and python3_scientific are available, python3_scientific is loaded by default (backport #1203) (#1204)
+
 ## v1.1.7 (2021-06-24)
 
 ### Bug Fixes
