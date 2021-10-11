@@ -56,7 +56,7 @@
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
-| [graphviz](https://graphviz.org) | 2.40.1 | devtools |
+| [graphviz](https://graphviz.org) | 2.40.1 | core |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
@@ -115,7 +115,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
-| [nltk](http://nltk.org/) | 3.5 | python3_devtools |
+| [nltk](http://nltk.org/) | 3.6.5 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3 |
 | [onig](https://github.com/kkos/oniguruma) | 6.9.7.1 | core |
@@ -136,9 +136,9 @@
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
-| [postgis](http://postgis.refractions.net/) | 3.0.0 | scientific_core |
+| [postgis](https://postgis.net) | 3.1.4 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
-| [postgresql](http://postgresql.org/) | 12.1 | scientific_core |
+| [postgresql](http://postgresql.org/) | 13.4 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
@@ -167,14 +167,14 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
-| [Python](http://python.org/) | 3.8.9 | python3_core |
+| [Python](http://python.org/) | 3.9.7 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
-| [pyzmq](https://pyzmq.readthedocs.org) | 16.0.4 | python3_circus |
+| [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
-| [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2020.5.14 | python3_devtools |
+| [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2021.8.28 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.25.1 | python3 |
@@ -219,6 +219,7 @@
 | [xz](https://tukaani.org/xz/) | 5.2.5 | core |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
+| [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(220 components)*
+*(221 components)*

@@ -14,6 +14,12 @@
 - add postgis-geohash (#1180)
 - add pgbouncer and its dependency libevent (#1183)
 - add extension pg_partman to PostgreSQL (#1185)
+- add hdf4 + hdf4 support in netcdf and gdal (#1187)
+- add pytest-asyncio (#1190)
+- upgrade postgresql from 12.1 to 13.4 and postgis from 3.0.0 to 3.1.4 (#1197)
+- switch from python 3.8 to python 3.9 (#1202)
+- if both layers python3_ia and python3_scientific are available, python3_scientific is loaded by default
+- upgrade nltk from 3.5 to 3.6.5 to fix a security vulnerability (#1205)
 
 ### Bug Fixes
 
@@ -29,5 +35,6 @@
 - update acquisition package to fix an issue in mfdata (#1170)
 - fix bad acquisition update (#1173)
 - fix log_proxy crash in corner cases  (#1179)
+- do not load python3_ia by default (favor to python3_scientific)
 
 
