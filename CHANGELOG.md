@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix log_proxy crash in corner cases  (backport #1179) (#1181)
+
 ## v1.0.22 (2021-06-24)
 
 ### Bug Fixes
