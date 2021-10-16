@@ -1,5 +1,11 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- update log_proxy to fix log_proxy_wrapper issue on CentOS 8 (backport #1207) (#1209)
+
 ## v1.1.8 (2021-10-07)
 
 ### Bug Fixes
