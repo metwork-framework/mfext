@@ -34,7 +34,7 @@ args = argparser.parse_args()
 processes_to_kill = get_processes_to_kill()
 first_count = len(processes_to_kill)
 with MFProgress() as progress:
-    t = progress.add_task("- Killing remainging processes (if any)...",
+    t = progress.add_task("- Killing remaining processes (if any)...",
                           total=(first_count + 1))
     for pid in processes_to_kill:
         if args.debug:
