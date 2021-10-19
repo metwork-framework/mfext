@@ -1,6 +1,6 @@
 # release_1.0 CHANGELOG
 
-## [Unreleased]
+## v1.0.23 (2021-10-16)
 
 ### New Features
 
