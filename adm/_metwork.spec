@@ -90,8 +90,7 @@ Buildroot: %{_topdir}/tmp/%{name}-root
 Packager: Fabien MARTY <fabien.marty@meteo.fr>
 Vendor: Metwork
 ExclusiveOs: linux
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
@@ -113,8 +112,7 @@ and the stuff around the {{MFMODULE_LOWERCASE}} unix user.
 %package {{MODULE_BRANCH}}
 Summary: metwork {{MFMODULE_LOWERCASE}} minimal module (default layer)
 Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 # <to be removed someday>
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
@@ -172,8 +170,7 @@ Everything is in {{MFMODULE_HOME}}/
 %package full
 Summary: metwork {{MFMODULE_LOWERCASE}} module (with all layers)
 Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 Requires: metwork-{{MFMODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% for DEP in layers %}
     {% if DEP.module == MFMODULE_LOWERCASE %}
@@ -199,8 +196,7 @@ Everything is in {{MFMODULE_HOME}}/
 %package layer-{{LAYER.name}}-{{MODULE_BRANCH}}
 Summary: metwork {{MFMODULE_LOWERCASE}} {{LAYER.name}} extra layer
 Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} < {{FULL_VERSION}}
