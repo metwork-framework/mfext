@@ -73,6 +73,7 @@
 %define __jar_repack %{nil}
 %define __os_install_post %{nil}
 %define debug_package %{nil}
+%define _build_id_links none
 Name: metwork-{{MFMODULE_LOWERCASE}}
 {% if MFMODULE_LOWERCASE == "mfext" %}
 Summary: metwork {{MFMODULE_LOWERCASE}} symbolic link
@@ -110,6 +111,7 @@ and the stuff around the {{MFMODULE_LOWERCASE}} unix user.
 #################################
 # Content: everything in {{MFMODULE_HOME}} and all minimal layers
 %package {{MODULE_BRANCH}}
+%define _build_id_links none
 Summary: metwork {{MFMODULE_LOWERCASE}} minimal module (default layer)
 Group: Applications/Multimedia
 AutoReqProv: no
@@ -168,6 +170,7 @@ Everything is in {{MFMODULE_HOME}}/
 ########################
 # Content: everything in {{MFMODULE_HOME}} and all available layers
 %package full
+%define _build_id_links none
 Summary: metwork {{MFMODULE_LOWERCASE}} module (with all layers)
 Group: Applications/Multimedia
 AutoReqProv: no
@@ -194,6 +197,7 @@ Everything is in {{MFMODULE_HOME}}/
 {% for LAYER in layers %}
     {% if LAYER.label not in minimal_layers %}
 %package layer-{{LAYER.name}}-{{MODULE_BRANCH}}
+%define _build_id_links none
 Summary: metwork {{MFMODULE_LOWERCASE}} {{LAYER.name}} extra layer
 Group: Applications/Multimedia
 AutoReqProv: no
