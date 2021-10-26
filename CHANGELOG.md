@@ -21,6 +21,7 @@
 - if both layers python3_ia and python3_scientific are available, python3_scientific is loaded by default
 - upgrade nltk from 3.5 to 3.6.5 to fix a security vulnerability (#1205)
 - update log_proxy to fix log_proxy_wrapper issue on CentOS 8 (#1207)
+- increase vm.max_map_count for elasticsearch needs (#1214)
 
 ### Bug Fixes
 
