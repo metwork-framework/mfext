@@ -1,2 +1,4 @@
 python3@mfext
 tcltk@mfext
+python3_scientific_core@mfext
+python3_circus@mfext
