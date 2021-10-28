@@ -199,7 +199,7 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
-| [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_circus |
+| [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
 | [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
