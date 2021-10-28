@@ -96,7 +96,7 @@ prerelease_check:
 
 release: precustom check prerelease_check clean precustom $(PREREQ) custom
 	$(MAKE) precustom
-	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --show-plugin-path
+	layer_wrapper --empty --layers=python3@mfext -- _plugins.make --show-plugin-path
 
 develop: precustom check $(PREREQ) custom $(DEPLOY)
 	@_plugins.develop --ignore-already-installed $(NAME)
