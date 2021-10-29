@@ -39,5 +39,6 @@
 - fix log_proxy crash in corner cases  (#1179)
 - do not load python3_ia by default (favor to python3_scientific)
 - minor typo in code (#1212)
+- fix some special plugin builds (#1218)
 
 
