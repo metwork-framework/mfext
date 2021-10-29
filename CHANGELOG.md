@@ -1,5 +1,11 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix some special plugin builds (backport #1218) (#1219)
+
 ## v1.1.9 (2021-10-16)
 
 ### New Features
