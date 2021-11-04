@@ -62,6 +62,10 @@ for req in $(grep "^http" "${REQUIREMENTS}.tmp"); do
 done
 rm -Rf tmp_src src ${REQUIREMENTS}.tmp
 
+N=$(cat "${REQUIREMENTS}" |grep '^--' |wc -l)
+if test ${N} -gt 0; then
+  cat "${REQUIREMENTS}" |grep '^--'
+fi
 cat "${FREEZED_REQUIREMENTS}"
 rm -Rf "${TEMPO_LAYER_PATH}"
 rm -f "${FREEZED_REQUIREMENTS}"
