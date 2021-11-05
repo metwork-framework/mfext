@@ -1,5 +1,11 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix pip options usage (backport #1220) (#1221)
+
 ## v1.1.10 (2021-10-29)
 
 ### Bug Fixes
