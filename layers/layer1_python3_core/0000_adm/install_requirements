@@ -39,7 +39,7 @@ else
         export HTTPS_PROXY=http://127.0.0.1:9999
     fi
     export FORCED_INDEX_DIR_STRING="--no-cache-dir --no-index --find-links=$3"
-    cat "${REQUIREMENTS}" |sed 's/^-e git.*egg=\(.*\)$/\1/g' |sed 's/^git.*egg=\(.*\)$/\1/g' |sed 's/^https.*egg=\(.*\)$/\1/g' >"${REQUIREMENTS}.tmp"
+    cat "${REQUIREMENTS}" |sed 's/^-e git.*egg=\(.*\)$/\1/g' |sed 's/^git.*egg=\(.*\)$/\1/g' |sed 's/^https.*egg=\(.*\)$/\1/g' |grep -v '^--' >"${REQUIREMENTS}.tmp"
 fi
 
 
