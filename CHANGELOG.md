@@ -40,5 +40,6 @@
 - do not load python3_ia by default (favor to python3_scientific)
 - minor typo in code (#1212)
 - fix some special plugin builds (#1218)
+- fix pip options usage (#1220)
 
 
