@@ -54,7 +54,7 @@ unsafe_pip install --src=./tmp_src --prefix="${TEMPO_LAYER_PATH}" -r "${REQUIREM
 PYTHONPATH=$(echo "${PYTHONPATH}" |awk -F ":" '{print $1;}')
 export PYTHONPATH
 unsafe_pip freeze -l |grep -v "^appdirs==" |grep -v "^packaging==" |grep -v "^pyparsing==" |grep -v "^six==" |grep -v "^virtualenv==" >${FREEZED_REQUIREMENTS}
-for req in $(grep "^http" "${REQUIREMENTS}.tmp"); do
+for req in $(grep "^http:" "${REQUIREMENTS}.tmp"); do
     package=$(echo "$req" | awk -F "#egg=" '{print $2;}')
     grep -v "^$package==" ${FREEZED_REQUIREMENTS} > ${FREEZED_REQUIREMENTS}.2
     echo "$req" >> ${FREEZED_REQUIREMENTS}.2
