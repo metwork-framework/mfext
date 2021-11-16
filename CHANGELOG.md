@@ -41,5 +41,6 @@
 - minor typo in code (#1212)
 - fix some special plugin builds (#1218)
 - fix pip options usage (#1220)
+- fix regex which block the installation of httpx package (#1227)
 
 
