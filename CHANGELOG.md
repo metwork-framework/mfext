@@ -1,5 +1,11 @@
 # release_1.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix regex which block the installation of httpx package (backport #1227) (#1228)
+
 ## v1.1.11 (2021-11-06)
 
 ### Bug Fixes
