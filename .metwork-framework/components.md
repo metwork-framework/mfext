@@ -82,6 +82,7 @@
 | [libpng](http://www.libpng.org/) | 1.6.37 | core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
+| [libtiff](http://www.libtiff.org) | 4.3.0 | scientific_core |
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
 | [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
@@ -222,4 +223,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(221 components)*
+*(222 components)*
