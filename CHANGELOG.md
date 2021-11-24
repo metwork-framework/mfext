@@ -22,6 +22,7 @@
 - upgrade nltk from 3.5 to 3.6.5 to fix a security vulnerability (#1205)
 - update log_proxy to fix log_proxy_wrapper issue on CentOS 8 (#1207)
 - increase vm.max_map_count for elasticsearch needs (#1214)
+- add libtiff to add tiff support in several scientific packages … (backport #1232) (#1233)
 
 ### Bug Fixes
 
