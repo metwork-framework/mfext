@@ -51,6 +51,7 @@ esac
 if [ -z ${B} ]; then
   B=null
 fi
+SKIP_DISPATCH=true
 if [ "${GITHUB_EVENT_NAME}" != "repository_dispatch" ]; then
     case "${GITHUB_REF}" in
         refs/heads/experimental* | refs/heads/master | refs/heads/release_*)
@@ -66,6 +67,7 @@ if [ "${GITHUB_EVENT_NAME}" != "repository_dispatch" ]; then
             DEP_BRANCH=${B}
             DEP_DIR=${B##release_}
             TARGET_DIR=${B##release_};;
+            SKIP_DISPATCH=false
         refs/pull/*)
 #No build on pull requests on these repositories
             B=null
@@ -114,6 +116,7 @@ echo "::set-output name=dep_dir::${DEP_DIR}"
 echo "::set-output name=buildimage::metwork/mfext-${OS_VERSION}-buildimage:${DEP_BRANCH}"
 echo "::set-output name=testimage::metwork/${OS_VERSION}:latest"
 echo "::set-output name=buildlog_dir::/pub/metwork/${CI}/buildlogs/${B}/mfext/${OS_VERSION}/${GITHUB_RUN_NUMBER}"
+echo "::set-output name=skip_dispatch::${SKIP_DISPATCH}"
 
 echo "::set-output name=rpm_dir::/pub/metwork/${CI}/rpms/${B}/${OS_VERSION}"
 echo "::set-output name=doc_dir::/pub/metwork/${CI}/docs/${B}/mfext"
