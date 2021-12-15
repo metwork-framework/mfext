@@ -25,6 +25,12 @@ if test "${2:-}" = ""; then
     exit 1
 fi
 REQUIREMENTS="$2"
+REALPATH=$(readlink -m "${REQUIREMENTS}")
+REALDIRNAME=$(dirname "${REALPATH}")
+OVERRIDE=0
+if test -f "${REALDIRNAME}/override"; then
+    OVERRIDE=1
+fi
 if test "${3:-}" = ""; then
     export INDEX_DIR=""
     export FORCED_INDEX_DIR_STRING=""
@@ -68,6 +74,10 @@ if test "${N}" -eq 0; then
     rm -f "${REQUIREMENTS}.tmp"
     rm -Rf "${LAYER_PATH}/tmp/install_requirements"
     exit 0
+fi
+
+if test ${OVERRIDE} = 1; then
+    CONSTRAINT="--ignore-installed"
 fi
 
 # shellcheck disable=SC2086
