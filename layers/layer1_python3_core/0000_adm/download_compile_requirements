@@ -19,6 +19,10 @@ fi
 REQUIREMENTS="$1"
 REALPATH=$(readlink -m "${REQUIREMENTS}")
 REALDIRNAME=$(dirname "${REALPATH}")
+OVERRIDE=0
+if test -f "${REALDIRNAME}/override"; then
+    OVERRIDE=1
+fi
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
     if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
         BINARY=""
@@ -75,6 +79,11 @@ if test "${METWORK_PYTHON_MODE:-}" = "3"; then
 else
     BUILD_ISOLATION=""
 fi
+
+if test ${OVERRIDE} = 1; then
+    CONSTRAINT=""
+fi
+
 # shellcheck disable=SC2086
 unsafe_pip wheel ${BUILD_ISOLATION} --wheel-dir=./src --src=./tmp_src ${BINARY} -r "${REQUIREMENTS}" ${CONSTRAINT} >&2
 rm -Rf tmp_src
