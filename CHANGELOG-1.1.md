@@ -1,5 +1,11 @@
 # release_1.1 CHANGELOG
 
+## v1.1.13 (2021-12-16)
+
+### New Features
+
+- add a new control file "override" to override metwork python pa… (backport #1242) (#1243)
+
 ## v1.1.12 (2021-11-16)
 
 ### Bug Fixes

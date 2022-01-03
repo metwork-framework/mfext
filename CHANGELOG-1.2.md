@@ -1,5 +1,11 @@
 # release_1.2 CHANGELOG
 
+## v1.2.1 (2021-12-11)
+
+### Bug Fixes
+
+- fix acquisition module with python 3.9 (backport #1237) (#1238)
+
 ## v1.2.0 (2021-11-24)
 
 ### New Features
