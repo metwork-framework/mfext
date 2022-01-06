@@ -17,3 +17,5 @@ python3@mfext
 -nodejs@mfext
 -openresty@mfext
 -python3_scientific_core@mfext
+-elasticsearch@mfext
+-python3_radartools@mfext

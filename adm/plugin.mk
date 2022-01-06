@@ -45,7 +45,7 @@ all: precustom check $(PREREQ) custom $(DEPLOY)
 	echo $(MFMODULE_VERSION) >$@
 
 clean::
-	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules .configuration_cache
+	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules
 	find . -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 
 precustom::
@@ -96,7 +96,7 @@ prerelease_check:
 
 release: precustom check prerelease_check clean precustom $(PREREQ) custom
 	$(MAKE) precustom
-	layer_wrapper --empty --layers=$(LAYERS) -- _plugins.make --show-plugin-path
+	layer_wrapper --empty --layers=python3@mfext,root@$(MFMODULE_LOWERCASE) -- _plugins.make --show-plugin-path
 
 develop: precustom check $(PREREQ) custom $(DEPLOY)
 	@_plugins.develop --ignore-already-installed $(NAME)

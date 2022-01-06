@@ -17,6 +17,12 @@ if test "${1:-}" = ""; then
     exit 1
 fi
 REQUIREMENTS="$1"
+REALPATH=$(readlink -m "${REQUIREMENTS}")
+REALDIRNAME=$(dirname "${REALPATH}")
+OVERRIDE=0
+if test -f "${REALDIRNAME}/override"; then
+    OVERRIDE=1
+fi
 
 TEMPO_LAYER_LABEL="tempolayer$$"
 TEMPO_LAYER_PATH="$(pwd)/${TEMPO_LAYER_LABEL}"
@@ -49,12 +55,16 @@ fi
 
 cat "${REQUIREMENTS}" |sed 's/^git+/-e git+/g' > "${REQUIREMENTS}.tmp"
 
+if test ${OVERRIDE} = 1; then
+    CONSTRAINT="--ignore-installed"
+fi
+    
 # shellcheck disable=SC2086
 unsafe_pip install --src=./tmp_src --prefix="${TEMPO_LAYER_PATH}" -r "${REQUIREMENTS}.tmp" ${CONSTRAINT} >&2
 PYTHONPATH=$(echo "${PYTHONPATH}" |awk -F ":" '{print $1;}')
 export PYTHONPATH
 unsafe_pip freeze -l |grep -v "^appdirs==" |grep -v "^packaging==" |grep -v "^pyparsing==" |grep -v "^six==" |grep -v "^virtualenv==" >${FREEZED_REQUIREMENTS}
-for req in $(grep "^http" "${REQUIREMENTS}.tmp"); do
+for req in $(grep "^http:" "${REQUIREMENTS}.tmp"); do
     package=$(echo "$req" | awk -F "#egg=" '{print $2;}')
     grep -v "^$package==" ${FREEZED_REQUIREMENTS} > ${FREEZED_REQUIREMENTS}.2
     echo "$req" >> ${FREEZED_REQUIREMENTS}.2
@@ -62,6 +72,10 @@ for req in $(grep "^http" "${REQUIREMENTS}.tmp"); do
 done
 rm -Rf tmp_src src ${REQUIREMENTS}.tmp
 
+N=$(cat "${REQUIREMENTS}" |grep '^--' |wc -l)
+if test ${N} -gt 0; then
+  cat "${REQUIREMENTS}" |grep '^--'
+fi
 cat "${FREEZED_REQUIREMENTS}"
 rm -Rf "${TEMPO_LAYER_PATH}"
 rm -f "${FREEZED_REQUIREMENTS}"

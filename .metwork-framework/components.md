@@ -1,6 +1,6 @@
 | Name | Version | Layer |
 | --- | --- | --- |
-| [acquisition](https://github.com/metwork-framework/acquisition) | e21af9f | python3 |
+| [acquisition](https://github.com/metwork-framework/acquisition) | 3b8c540 | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.7.4 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
@@ -82,6 +82,7 @@
 | [libpng](http://www.libpng.org/) | 1.6.37 | core |
 | [libressl](https://www.libressl.org/) | 2.9.2 | core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
+| [libtiff](http://www.libtiff.org) | 4.3.0 | scientific_core |
 | [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
 | [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
@@ -222,4 +223,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(221 components)*
+*(222 components)*
