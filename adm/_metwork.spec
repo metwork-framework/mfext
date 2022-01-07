@@ -30,6 +30,8 @@
         {% set RELEASE_BUILD_SUFFIX = ".el6" %}
     {% elif METWORK_BUILD_OS == "centos7" %}
         {% set RELEASE_BUILD_SUFFIX = ".el7" %}
+    {% elif METWORK_BUILD_OS == "centos8" %}
+        {% set RELEASE_BUILD_SUFFIX = ".el8" %}
     {% elif METWORK_BUILD_OS == "generic" %}
         {% set RELEASE_BUILD_SUFFIX = ".gen" %}
     {% endif %}
@@ -71,6 +73,7 @@
 %define __jar_repack %{nil}
 %define __os_install_post %{nil}
 %define debug_package %{nil}
+%define _build_id_links none
 Name: metwork-{{MFMODULE_LOWERCASE}}
 {% if MFMODULE_LOWERCASE == "mfext" %}
 Summary: metwork {{MFMODULE_LOWERCASE}} symbolic link
@@ -88,8 +91,7 @@ Buildroot: %{_topdir}/tmp/%{name}-root
 Packager: Fabien MARTY <fabien.marty@meteo.fr>
 Vendor: Metwork
 ExclusiveOs: linux
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-minimal < {{FULL_VERSION}}
@@ -109,10 +111,10 @@ and the stuff around the {{MFMODULE_LOWERCASE}} unix user.
 #################################
 # Content: everything in {{MFMODULE_HOME}} and all minimal layers
 %package {{MODULE_BRANCH}}
+%define _build_id_links none
 Summary: metwork {{MFMODULE_LOWERCASE}} minimal module (default layer)
 Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 # <to be removed someday>
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-core-{{MODULE_BRANCH}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
@@ -168,10 +170,10 @@ Everything is in {{MFMODULE_HOME}}/
 ########################
 # Content: everything in {{MFMODULE_HOME}} and all available layers
 %package full
+%define _build_id_links none
 Summary: metwork {{MFMODULE_LOWERCASE}} module (with all layers)
 Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 Requires: metwork-{{MFMODULE_LOWERCASE}} = {{FULL_VERSION}}
 {% for DEP in layers %}
     {% if DEP.module == MFMODULE_LOWERCASE %}
@@ -195,10 +197,10 @@ Everything is in {{MFMODULE_HOME}}/
 {% for LAYER in layers %}
     {% if LAYER.label not in minimal_layers %}
 %package layer-{{LAYER.name}}-{{MODULE_BRANCH}}
+%define _build_id_links none
 Summary: metwork {{MFMODULE_LOWERCASE}} {{LAYER.name}} extra layer
 Group: Applications/Multimedia
-AutoReq: no
-AutoProv: no
+AutoReqProv: no
 Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} < {{FULL_VERSION}}
