@@ -22,6 +22,9 @@ exit_if_root
 
 cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
+#To avoid problems with rich on machines where standard output encoding is not utf-8
+export PYTHONIOENCODING=utf-8
+
 NOINIT=0
 if test "${1:-}" = "NOINIT"; then
     NOINIT=1
