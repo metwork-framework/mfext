@@ -17,6 +17,9 @@ fi
 
 cd "${MFMODULE_RUNTIME_HOME}" || exit 1
 
+#To avoid problems with rich on machines where standard output encoding is not utf-8
+export PYTHONIOENCODING=utf-8
+
 {% if MFMODULE != "MFEXT" %}
 CONFIG_TARGET=$(readlink -f "${MFMODULE_RUNTIME_HOME}/config/config.ini" 2>/dev/null)
 if test "${CONFIG_TARGET}" != ""; then
