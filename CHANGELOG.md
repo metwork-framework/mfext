@@ -6,6 +6,10 @@
 
 - add a new control file "override" to override metwork python pa… (backport #1242) (#1244)
 
+### Bug Fixes
+
+- fix modules init/start/stop/status crashes on machines where sta… (backport #1254) (#1255)
+
 ## v1.2.1 (2021-12-11)
 
 ### Bug Fixes
