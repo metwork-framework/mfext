@@ -90,15 +90,17 @@ if test "${PKG_CONFIG_PATH}" = ""; then
 fi
 
 # We set the MFMODULE_VERSION environnement variable
-MFMODULE_VERSION=$(cat ${MFMODULE_HOME}/config/version 2>/dev/null |head -1)
-if test "${MFMODULE_VERSION}" = ""; then
+if test -f ${MFMODULE_HOME}/config/version; then
+    MFMODULE_VERSION=$(cat ${MFMODULE_HOME}/config/version 2>/dev/null |head -1)
+else
     MFMODULE_VERSION=unknown
 fi
 export MFMODULE_VERSION
 
 # We set the MFMODULE_STATUS environnement variable
-MFMODULE_STATUS=$(cat ${MFMODULE_HOME}/var/status 2>/dev/null)
-if test "${MFMODULE_STATUS}" = ""; then
+if test -f ${MFMODULE_HOME}/var/status; then
+    MFMODULE_STATUS=$(cat ${MFMODULE_HOME}/var/status 2>/dev/null)
+else
     MFMODULE_STATUS=unknown
 fi
 export MFMODULE_STATUS
