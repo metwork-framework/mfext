@@ -9,6 +9,7 @@
 ### Bug Fixes
 
 - fix modules init/start/stop/status crashes on machines where sta… (backport #1254) (#1255)
+- fix profile loading when 'set -e' has been done (backport #1257) (#1258)
 
 ## v1.2.1 (2021-12-11)
 
