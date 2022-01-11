@@ -12,5 +12,6 @@
 
 - fix acquisition module with python 3.9 (#1237)
 - fix modules init/start/stop/status crashes on machines where sta… (#1254)
+- fix profile loading when 'set -e' has been done (#1257)
 
 
