@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Bug Fixes
+
+- fix wrong directory cleaning by garbage_collector.sh (backport #1259) (#1260)
+
+## v1.2.2 (2022-01-11)
+
 ### New Features
 
 - add a new control file "override" to override metwork python pa… (backport #1242) (#1244)
