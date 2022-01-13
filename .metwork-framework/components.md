@@ -48,19 +48,21 @@
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
+| [flit-core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
 | [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | core |
 | [freetype](https://www.freetype.org/) | 2.10.1 | core |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
+| [ghp-import](https://github.com/c-w/ghp-import) | 2.0.2 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
 | [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
 | [graphviz](https://graphviz.org) | 2.40.1 | core |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
-| [importlib-metadata](https://github.com/python/importlib_metadata) | 3.7.3 | python3_core |
+| [importlib-metadata](https://github.com/python/importlib_metadata) | 3.10.0 | python3_core |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
 | [jasper](http://www.ece.uvic.ca/~frodo/jasper/) | 2.0.14 | scientific_core |
@@ -108,7 +110,7 @@
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 0.4.9 | python3_devtools |
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.0 | python3_devtools |
 | [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 5.2.0 | python3_devtools |
-| [mkdocs](https://www.mkdocs.org) | 1.1.2 | python3_devtools |
+| [mkdocs](https://www.mkdocs.org) | 1.2.3 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 4.0.2 | python3_devtools |
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 8.3.0 | python3_devtools |
@@ -167,9 +169,10 @@
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.3.1 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
-| [python-dateutil](https://dateutil.readthedocs.io) | 2.8.0 | python3 |
+| [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
 | [Python](http://python.org/) | 3.9.7 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
+| [pyyaml-env-tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
@@ -209,6 +212,7 @@
 | [urllib3](https://urllib3.readthedocs.io/) | 1.26.5 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
 | [virtualenv](https://virtualenv.pypa.io/) | 20.4.3 | python3_core |
+| [watchdog](https://github.com/gorakhargosh/watchdog) | 2.1.6 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3 |
 | [wheel](https://github.com/pypa/wheel) | 0.36.2 | python3_core |
@@ -223,4 +227,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(222 components)*
+*(226 components)*

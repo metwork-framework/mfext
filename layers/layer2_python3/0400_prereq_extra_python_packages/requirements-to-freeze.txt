@@ -4,3 +4,4 @@ pbr
 pyscaffold
 pytest-runner
 setuptools-git
+flit_core
