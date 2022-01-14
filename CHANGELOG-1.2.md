@@ -1,5 +1,16 @@
 # release_1.2 CHANGELOG
 
+## v1.2.2 (2022-01-11)
+
+### New Features
+
+- add a new control file "override" to override metwork python pa… (backport #1242) (#1244)
+
+### Bug Fixes
+
+- fix modules init/start/stop/status crashes on machines where sta… (backport #1254) (#1255)
+- fix profile loading when 'set -e' has been done (backport #1257) (#1258)
+
 ## v1.2.1 (2021-12-11)
 
 ### Bug Fixes
