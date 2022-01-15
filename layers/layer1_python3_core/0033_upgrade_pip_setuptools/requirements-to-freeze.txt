@@ -1,4 +1,4 @@
 #pip<+21 has problems in centos6 (with pip 1.7) for requirements such as
 #-e git+https://github.com/metwork-framework/acquisition.git@af2fabc0c84c79ba6e9f9f83fa06d994d4e974df#egg=acquisition
-pip<21
+pip<22
 setuptools
