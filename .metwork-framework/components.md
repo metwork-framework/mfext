@@ -41,7 +41,7 @@
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
 | [distlib](https://bitbucket.org/pypa/distlib) | 0.3.1 | python3_core |
-| [distro](https://github.com/nir0s/distro) | 1.4.0 | monitoring |
+| [distro](https://github.com/python-distro/distro) | 1.6.0 | python3_core |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
 | [envtpl](https://github.com/metwork-framework/envtpl) | a783810 | python3 |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 1.7.1 | python3_devtools |

@@ -3,3 +3,4 @@ appdirs
 pyparsing
 packaging
 virtualenv
+distro
