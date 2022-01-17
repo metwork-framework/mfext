@@ -1,0 +1,30 @@
+diff -up certifi-2021.10.8/certifi/core.py.orig certifi-2021.10.8/certifi/core.py
+--- certifi-2021.10.8/certifi/core.py.orig	2020-06-07 11:35:28.000000000 +0200
++++ certifi-2021.10.8/certifi/core.py	2022-01-17 11:40:19.010485634 +0100
+@@ -7,6 +7,16 @@ certifi.py
+ This module returns the installation location of cacert.pem or its contents.
+ """
+ import os
++import distro
++
++def is_centos_rhel_rocky():
++    try:
++        distribution_name = distro.id()
++    except Exception:
++        return False
++    return ( ('centos' in distribution_name) or
++             ('redhat' in distribution_name) or
++             ('rocky' in distribution_name) )
+ 
+ try:
+     from importlib.resources import path as get_path, read_text
+@@ -15,6 +25,9 @@ try:
+     _CACERT_PATH = None
+ 
+     def where():
++        if is_centos_rhel_rocky():
++            return "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
++ 
+         # This is slightly terrible, but we want to delay extracting the file
+         # in cases where we're inside of a zipimport situation until someone
+         # actually calls where(), but we don't want to re-extract the file
