@@ -48,7 +48,7 @@
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
-| [flit-core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
+| [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
 | [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | core |
 | [freetype](https://www.freetype.org/) | 2.10.1 | core |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
@@ -135,7 +135,7 @@
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
-| [pip](https://pip.pypa.io/) | 20.2.4 | python3_core |
+| [pip](https://pip.pypa.io/) | 21.2.3 | python3_core |
 | [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
@@ -172,8 +172,8 @@
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
 | [Python](http://python.org/) | 3.9.7 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
-| [pyyaml-env-tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
+| [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
@@ -185,7 +185,7 @@
 | [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
-| [setuptools](https://github.com/pypa/setuptools) | 54.1.2 | python3_core |
+| [setuptools](https://github.com/pypa/setuptools) | 57.4.0 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.10 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.15.0 | python3_core |
