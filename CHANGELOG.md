@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### New Features
+
+- add certifi patch for RockyLinux, upgrade certifi and distro (#1266)
+
 ### Bug Fixes
 
 - fix wrong directory cleaning by garbage_collector.sh (backport #1259) (#1260)
