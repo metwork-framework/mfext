@@ -8,6 +8,8 @@
 - add a new control file "override" to override metwork python pa… (#1242)
 - build under centos8 (#1253)
 - upgrade mkdocs from 1.1.2 to 1.2.3 to fix security vulnerability (#1263)
+- upgrade pip to 21.2.3 and setuptools to 57.4.0 (#1264)
+- add certifi patch for RockyLinux, upgrade certifi and distro (#1265)
 
 ### Bug Fixes
 
