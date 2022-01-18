@@ -118,7 +118,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
-| [nltk](http://nltk.org/) | 3.6.5 | python3_devtools |
+| [nltk](https://www.nltk.org/) | 3.6.7 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3 |
 | [onig](https://github.com/kkos/oniguruma) | 6.9.7.1 | core |
