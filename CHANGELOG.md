@@ -5,6 +5,7 @@
 ### New Features
 
 - add certifi patch for RockyLinux, upgrade certifi and distro (#1266)
+- bump nltk from 3.6.5 to 3.6.7 to fix a security vulnerability (backport #1269) (#1270)
 
 ### Bug Fixes
 
