@@ -1,5 +1,5 @@
 include ../../../adm/root.mk
-include ../../package.mk
+include ../../package_python3.mk
 
 ifeq ($(PROXY_SET),0)
         unexport http_proxy

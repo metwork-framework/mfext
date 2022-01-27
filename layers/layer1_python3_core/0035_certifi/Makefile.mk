@@ -1,5 +1,5 @@
 include ../../../adm/root.mk
-include ../../package.mk
+include ../../package_python3.mk
 
 export NAME=certifi
 export VERSION=2021.10.8

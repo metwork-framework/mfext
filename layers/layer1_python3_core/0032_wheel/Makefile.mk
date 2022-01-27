@@ -1,5 +1,5 @@
 include ../../../adm/root.mk
-include ../../package.mk
+include ../../package_python3.mk
 
 export NAME=wheel
 export VERSION=0.36.2
