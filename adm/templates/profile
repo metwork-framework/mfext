@@ -197,11 +197,7 @@ fi
 
 # A little kind of magic to deal with [log]/json_file=AUTO
 if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
-    if test "{% raw %}${{% endraw %}{{MFMODULE}}_ADMIN_HOSTNAME{% raw %}:-}{% endraw %}" = "null"; then
-        export MFLOG_JSON_FILE="null"
-    else
-        export MFLOG_JSON_FILE="{% raw %}${MFMODULE_RUNTIME_HOME}{% endraw %}/log/json_logs.log"
-    fi
+    export MFLOG_JSON_FILE="null"
 fi
 
 if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_NUMBER_OF_ROTATED_FILES{% raw %}:-}{% endraw %}" != ""; then
