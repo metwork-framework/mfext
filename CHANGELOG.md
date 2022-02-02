@@ -18,5 +18,6 @@
 - fix modules init/start/stop/status crashes on machines where sta… (#1254)
 - fix profile loading when 'set -e' has been done (#1257)
 - fix wrong directory cleaning by garbage_collector.sh (#1259)
+- json_file=AUTO is now the same than json_file=null (#1272)
 
 
