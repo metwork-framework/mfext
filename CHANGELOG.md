@@ -10,6 +10,7 @@
 ### Bug Fixes
 
 - fix wrong directory cleaning by garbage_collector.sh (backport #1259) (#1260)
+- json_file=AUTO is now the same than json_file=null (backport #1272) (#1273)
 
 ## v1.2.2 (2022-01-11)
 
