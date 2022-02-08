@@ -1,0 +1,4 @@
+/usr/lib64/libaec.so.0
+/usr/lib64/libaec.so.0.0.*
+/usr/lib64/libsz.so.2
+/usr/lib64/libsz.so.2.0.1
