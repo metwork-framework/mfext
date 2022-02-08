@@ -1,5 +1,17 @@
 # release_1.2 CHANGELOG
 
+## v1.2.3 (2022-02-02)
+
+### New Features
+
+- add certifi patch for RockyLinux, upgrade certifi and distro (#1266)
+- bump nltk from 3.6.5 to 3.6.7 to fix a security vulnerability (backport #1269) (#1270)
+
+### Bug Fixes
+
+- fix wrong directory cleaning by garbage_collector.sh (backport #1259) (#1260)
+- json_file=AUTO is now the same than json_file=null (backport #1272) (#1273)
+
 ## v1.2.2 (2022-01-11)
 
 ### New Features
