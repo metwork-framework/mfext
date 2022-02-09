@@ -13,4 +13,4 @@ LICENSE=BSD
 
 all:: $(PREFIX)/lib/libhdf5.so
 $(PREFIX)/lib/libhdf5.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--enable-cxx --disable-static" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--enable-cxx --disable-static --with-szlib" download uncompress configure build install
