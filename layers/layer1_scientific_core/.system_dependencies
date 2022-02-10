@@ -1,12 +1,5 @@
-libexpat.so.1()(64bit)@generic
 libgfortran.so.5()(64bit)@generic
 libjpeg.so.62()(64bit)@generic
-libX11.so.6()(64bit)@generic
-libXau.so.6()(64bit)@generic
+libopenblas.so.0()(64bit)@generic
 libxcb-render.so.0()(64bit)@generic
 libxcb-shm.so.0()(64bit)@generic
-libxcb.so.1()(64bit)@generic
-libXext.so.6()(64bit)@generic
-libXrender.so.1()(64bit)@generic
-libXft.so.2()(64bit)@generic
-libopenblas.so.0()(64bit)@generic
