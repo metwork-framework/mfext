@@ -11,6 +11,7 @@
 - upgrade pip to 21.2.3 and setuptools to 57.4.0 (#1264)
 - add certifi patch for RockyLinux, upgrade certifi and distro (#1265)
 - bump nltk from 3.6.5 to 3.6.7 to fix a security vulnerability (#1269)
+- build hdf5 with szlib support and update system dependencies (#1274)
 
 ### Bug Fixes
 
