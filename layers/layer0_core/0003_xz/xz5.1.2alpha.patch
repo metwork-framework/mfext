@@ -1,7 +1,7 @@
 diff -up xz-5.2.5/src/liblzma/liblzma.map.orig xz-5.2.5/src/liblzma/liblzma.map
---- xz-5.2.5/src/liblzma/liblzma.map.orig	2020-12-08 20:31:47.843496051 +0100
-+++ xz-5.2.5/src/liblzma/liblzma.map	2020-12-08 20:36:47.943742752 +0100
-@@ -95,14 +95,18 @@ global:
+--- xz-5.2.5/src/liblzma/liblzma.map.orig	2020-03-17 15:28:54.000000000 +0100
++++ xz-5.2.5/src/liblzma/liblzma.map	2022-02-11 13:10:27.256220340 +0100
+@@ -95,6 +95,12 @@ global:
  	lzma_vli_size;
  };
  
@@ -14,10 +14,7 @@ diff -up xz-5.2.5/src/liblzma/liblzma.map.orig xz-5.2.5/src/liblzma/liblzma.map
  XZ_5.2 {
  global:
  	lzma_block_uncomp_encode;
- 	lzma_cputhreads;
- 	lzma_get_progress;
--	lzma_stream_encoder_mt;
--	lzma_stream_encoder_mt_memusage;
+@@ -105,4 +111,4 @@ global:
  
  local:
  	*;
