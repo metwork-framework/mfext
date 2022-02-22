@@ -205,6 +205,9 @@ if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_NUMBER_OF_ROTATED_FILES{% raw %
     export LOGPROXY_ROTATION_TIME="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MAX_AGE_BEFORE_ROTATION{% raw %}:-}{% endraw %}"
     export LOGPROXY_ROTATION_SIZE="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_MAX_SIZE_BEFORE_ROTATION{% raw %}:-}{% endraw %}"
 fi
+if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_CHMOD{% raw %}:-}{% endraw %}" != ""; then
+    export LOGPROXY_CHMOD="{% raw %}${{% endraw %}{{MFMODULE}}_LOG_CHMOD{% raw %}:-}{% endraw %}"
+fi
 
 {% if MFMODULE != "MFEXT" %}
 # MFLOG configuration
