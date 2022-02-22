@@ -15,7 +15,6 @@
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/thefab/bjoern/tree/metwork) | metwork-20190515 | python3 |
 | [black](https://github.com/psf/black) | 19.10b0 | python3_devtools |
-| [c-ares](https://c-ares.haxx.se/) | 1.15.0 | core |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
 | [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
@@ -26,7 +25,6 @@
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
 | [circus](https://pypi.org/project/circus) | 7a89595 | python3_circus |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
-| [cmake](https://cmake.org/) | 3.19.1 | core |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
@@ -35,8 +33,6 @@
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | 828f7f1 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 3.3.2 | python3 |
-| [ctags](http://ctags.sourceforge.net/) | 5.8 | core |
-| [curl](https://curl.haxx.se/) | 7.65.1 | core |
 | [deploycron](https://github.com/metwork-framework/deploycron) | c7d4e7b | python3 |
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
@@ -49,16 +45,12 @@
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
 | [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
-| [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/) | 2.13.92 | core |
-| [freetype](https://www.freetype.org/) | 2.10.1 | core |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.0.2 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
-| [glib](https://developer.gnome.org/glib/) | 2.56.4 | core |
-| [graphviz](https://graphviz.org) | 2.40.1 | core |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
@@ -74,19 +66,12 @@
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 0.17.0 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.6 | core |
-| [json-c](https://github.com/json-c/json-c) | 0.13.1-20180305 | core |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
-| [libev](http://software.schmorp.de/pkg/libev.html) | 4.25 | core |
-| [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
-| [libpng](http://www.libpng.org/) | 1.6.37 | core |
-| [libressl](https://www.libressl.org/) | 2.9.2 | core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
 | [libtiff](http://www.libtiff.org) | 4.3.0 | scientific_core |
-| [libxml2](http://xmlsoft.org/) | 2.9.7 | core |
-| [libxslt](http://xmlsoft.org/XSLT/) | 1.1.34 | core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.5.1 | core |
@@ -121,7 +106,6 @@
 | [nltk](https://www.nltk.org/) | 3.6.7 | python3_devtools |
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3 |
-| [onig](https://github.com/kkos/oniguruma) | 6.9.7.1 | core |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
@@ -130,7 +114,6 @@
 | [paramiko](https://github.com/paramiko/paramiko/) | 2.7.1 | python3 |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.6.0 | python3 |
-| [pcre](http://www.pcre.org) | 8.43 | core |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.8.1 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
@@ -191,7 +174,6 @@
 | [six](https://github.com/benjaminp/six) | 1.15.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.0.0 | python3_devtools |
-| [sqlite](http://sqlite.org/) | 3300100 | core |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [structlog](https://www.structlog.org/) | 19.1.0 | python3 |
 | [tcl](https://www.tcl.tk/) | 8.6.9 | tcltk |
@@ -221,10 +203,9 @@
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 9c0b297 | python3 |
-| [xz](https://tukaani.org/xz/) | 5.2.5 | core |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(226 components)*
+*(207 components)*
