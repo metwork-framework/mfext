@@ -67,7 +67,7 @@ for tmp in sorted(yamls, key=lambda x: (x[0].lower(), x[1])):
     fpath = tmp[1]
     with open(fpath, 'r', encoding="utf-8") as f:
         raw_content = f.read()
-        y = yaml.load(unidecode(raw_content))
+        y = yaml.load(unidecode(raw_content), Loader=yaml.FullLoader)
         name = flter(y['name'])
         version = flter(y['version'])
         website = flter(y['website'])
