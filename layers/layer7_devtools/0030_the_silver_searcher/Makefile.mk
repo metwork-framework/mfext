@@ -14,4 +14,4 @@ LICENSE=Apache License 2.0
 all:: $(PREFIX)/bin/ag
 $(PREFIX)/bin/ag:
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress
-	cd build/$(NAME)-$(VERSION) && ./build.sh --disable-lzma && cp ag $(PREFIX)/bin
+	cd build/$(NAME)-$(VERSION) && ./build.sh --enable-lzma && cp ag $(PREFIX)/bin

@@ -13,4 +13,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/bin/jq
 $(PREFIX)/bin/jq:
-	$(MAKE) --file=../../Makefile.standard OPTIONS="--enable-static=no --disable-maintainer-mode --with-oniguruma=$(PREFIX)" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard OPTIONS="--enable-static=no --disable-maintainer-mode" download uncompress configure build install
