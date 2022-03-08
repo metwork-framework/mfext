@@ -482,11 +482,13 @@ rm -fr %{buildroot}
 
 {% for LAYER in layers %}
     {% if LAYER.label not in minimal_layers %}
+        {% if LAYER.name != "root" %}
 ###########################################################################
 #### files SECTION FOR layer-{{LAYER.name}}-{{MODULE_BRANCH}} PACKAGE #####
 ###########################################################################
 %files layer-{{LAYER.name}}-{{MODULE_BRANCH}}
 %defattr(-,root,root,-)
 {{MFMODULE_HOME}}/opt/{{LAYER.name}}
+        {% endif %}
     {% endif %}
 {% endfor %}
