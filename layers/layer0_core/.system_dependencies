@@ -27,7 +27,9 @@ libSM.so.6()(64bit)@generic
 libsqlite3.so.0()(64bit)@generic
 libssl.so.1.1()(64bit)@generic
 libstdc++.so.6()(64bit)@generic
+libtcl8.6.so()(64bit)@generic
 libtinfo.so.5()(64bit)@generic
+libtk8.6.so()(64bit)@generic
 libX11.so.6()(64bit)@generic
 libXau.so.6()(64bit)@generic
 libXaw.so.7()(64bit)@generic
