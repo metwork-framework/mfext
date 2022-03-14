@@ -176,14 +176,12 @@
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.0.0 | python3_devtools |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [structlog](https://www.structlog.org/) | 19.1.0 | python3 |
-| [tcl](https://www.tcl.tk/) | 8.6.9 | tcltk |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
 | [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
 | [termcolor](http://pypi.python.org/pypi/termcolor) | 1.1.0 | python3_devtools |
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
-| [tk](https://www.tcl.tk/) | 8.6.9.1 | tcltk |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
@@ -208,4 +206,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(207 components)*
+*(205 components)*
