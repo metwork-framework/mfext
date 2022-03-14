@@ -31,7 +31,9 @@ env:
 jobs:
   ci_build:
 
+
     runs-on: [self-hosted, metwork]
+
 
 
     steps:
