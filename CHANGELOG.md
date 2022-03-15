@@ -14,6 +14,7 @@
 - build hdf5 with szlib support and update system dependencies (#1274)
 - upgrade log_proxy to change mode on logs (0644) (#1279)
 - remove 19 components in core layer (replaced by system components) (#1287)
+- remove tcltk layer (replaced by usage of system libraries) (#1304)
 
 ### Bug Fixes
 
