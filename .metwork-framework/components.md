@@ -17,7 +17,6 @@
 | [black](https://github.com/psf/black) | 19.10b0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
-| [cairo](https://www.cairographics.org/) | 1.17.2 | scientific_core |
 | [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
 | [certifi](https://certifi.io) | 2021.10.8 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.12.3 | python3 |
@@ -57,7 +56,6 @@
 | [importlib-metadata](https://github.com/python/importlib_metadata) | 3.10.0 | python3_core |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
-| [jasper](http://www.ece.uvic.ca/~frodo/jasper/) | 2.0.14 | scientific_core |
 | [jinja2-fnmatch-extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 014bee0 | python3 |
 | [jinja2-from-json-extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 4b1bf5e | python3 |
 | [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 5c9b3e1 | python3 |
@@ -71,7 +69,6 @@
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
-| [libtiff](http://www.libtiff.org) | 4.3.0 | scientific_core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.5.2 | core |
@@ -107,7 +104,6 @@
 | [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
 | [nose](http://readthedocs.org/docs/nose/) | 1.3.7 | python3 |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
-| [openjpeg](http://www.openjpeg.org/) | 2.3.1 | scientific_core |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 2e99654 | python3 |
 | [packaging](https://github.com/pypa/packaging) | 20.9 | python3_core |
@@ -119,7 +115,6 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
 | [pip](https://pip.pypa.io/) | 21.2.3 | python3_core |
-| [pixman](http://www.pixman.org/) | 0.38.4 | scientific_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](https://postgis.net) | 3.1.4 | scientific_core |
@@ -206,4 +201,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(205 components)*
+*(200 components)*
