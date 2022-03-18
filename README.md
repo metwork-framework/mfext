@@ -74,3 +74,4 @@ See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 *(If you are officially paid to work on MetWork Framework, please contact us to add your company logo here!)*
 
 [![logo](https://raw.githubusercontent.com/metwork-framework/resources/master/sponsors/meteofrance-small.jpeg)](http://www.meteofrance.com)
+
