@@ -3,3 +3,9 @@ libjpeg.so.62()(64bit)@generic
 libopenblas.so.0()(64bit)@generic
 libxcb-render.so.0()(64bit)@generic
 libxcb-shm.so.0()(64bit)@generic
+libtiff.so.5()(64bit)@generic
+libopenjp2.so.7()(64bit)@generic
+libjasper.so.4()(64bit)@generic
+libpixman-1.so.0()(64bit)@generic
+libcairo.so.2()(64bit)@generic
+
