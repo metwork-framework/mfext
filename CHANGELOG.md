@@ -15,6 +15,7 @@
 - upgrade log_proxy to change mode on logs (0644) (#1279)
 - remove 19 components in core layer (replaced by system components) (#1287)
 - remove tcltk layer (replaced by usage of system libraries) (#1304)
+- remove libtiff, openjpeg2, jasper, pixman and cairo builds (replaced by usage of system libraries) (#1309)
 
 ### Bug Fixes
 
