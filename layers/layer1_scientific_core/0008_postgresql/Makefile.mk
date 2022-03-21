@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=postgresql
-export VERSION=13.4
+export VERSION=14.2
 export EXTENSION=tar.bz2
 export CHECKTYPE=MD5
-export CHECKSUM=7bda65a37c46b8b2c1933d9d1cd677f2
+export CHECKSUM=aae1ede6de233e2d44437d66bc1cd3b8
 DESCRIPTION=\
 POSTGRESQL is an object-relational database system
 WEBSITE=http://postgresql.org/
