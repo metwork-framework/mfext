@@ -16,6 +16,7 @@
 - remove 19 components in core layer (replaced by system components) (#1287)
 - remove tcltk layer (replaced by usage of system libraries) (#1304)
 - remove libtiff, openjpeg2, jasper, pixman and cairo builds (replaced by usage of system libraries) (#1309)
+- upgrade postgresql from 13.4 to 14.2 (#1310)
 
 ### Bug Fixes
 
