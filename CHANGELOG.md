@@ -17,6 +17,7 @@
 - remove tcltk layer (replaced by usage of system libraries) (#1304)
 - remove libtiff, openjpeg2, jasper, pixman and cairo builds (replaced by usage of system libraries) (#1309)
 - upgrade postgresql from 13.4 to 14.2 (#1310)
+- add libgeotiff 1.7.1 and geotiff support in gdal (#1311)
 
 ### Bug Fixes
 
