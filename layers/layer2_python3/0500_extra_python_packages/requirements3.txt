@@ -19,6 +19,7 @@ ConfigUpdater==1.0.1
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@5bc1f3295495ded12a95e2d0b35878f3fd7ae1dd#egg=cookiecutter_hooks
 -e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
 cryptography==3.3.2
+decorator==4.4.0
 -e git+https://github.com/metwork-framework/deploycron.git@c7d4e7b78fa8c9eb9f14ba49b5f90232af7d4709#egg=deploycron
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==3.1.1
@@ -62,6 +63,7 @@ structlog==19.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 terminaltables==3.1.0
 tqdm==4.53.0
+traitlets==5.1.1
 Unidecode==1.1.1
 urllib3==1.26.5
 Werkzeug==1.0.1
