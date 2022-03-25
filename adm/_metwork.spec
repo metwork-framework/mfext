@@ -126,6 +126,7 @@ Obsoletes: metwork-mfserv-layer-python2-{{MODULE_BRANCH}}
 {% elif MFMODULE == "MFDATA" %}
 Obsoletes: metwork-mfdata-layer-python2-{{MODULE_BRANCH}}
 {% elif MFMODULE == "MFEXT" %}
+Obsoletes: metwork-mfext-layer-tcltk-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-scientific
 Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
