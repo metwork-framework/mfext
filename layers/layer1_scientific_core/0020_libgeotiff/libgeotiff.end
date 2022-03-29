@@ -1,0 +1,2 @@
+Libs: -L\${libdir} -lgeotiff
+Cflags: -I\${includedir}
