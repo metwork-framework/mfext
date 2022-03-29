@@ -14,7 +14,7 @@ LICENSE=BSD
 $(shell echo "prefix=$(PREFIX)" > libgeotiff.pc)
 $(shell echo "exec_prefix=$(PREFIX)" >> libgeotiff.pc)
 $(shell echo "libdir=$(PREFIX)/lib" >> libgeotiff.pc)
-$(shell echo "includedir=$(PREFIX)/include/$(NAME)" >> libgeotiff.pc)
+$(shell echo "includedir=$(PREFIX)/include" >> libgeotiff.pc)
 $(shell echo "" >> libgeotiff.pc)
 $(shell echo "Name: $(NAME)" >> libgeotiff.pc)
 $(shell echo "Description: GeoTIFF file format library" >> libgeotiff.pc)
@@ -23,6 +23,6 @@ $(shell cat libgeotiff.end >> libgeotiff.pc)
 
 all:: $(PREFIX)/lib/libgeotiff.so.5
 $(PREFIX)/lib/libgeotiff.so.5:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--includedir=$(PREFIX)/include/$(NAME) --with-zlib=yes --with-jpeg=yes --with-proj=$(PREFIX)" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--with-zlib=yes --with-jpeg=yes --with-proj=$(PREFIX)" download uncompress configure build install
 	cp libgeotiff.pc $(PREFIX)/lib/pkgconfig
 	rm -f libgeotiff.pc
