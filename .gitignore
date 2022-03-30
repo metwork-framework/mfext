@@ -34,6 +34,7 @@ layerapi/is_layer_loaded
 layerapi/is_layer_installed
 layerapi2/test_layerapi2
 layerapi2/get_layer_home
+layers/layer1_scientific_core/0020_libgeotiff/libgeotiff.pc
 layers/python2_layer.mk
 layers/python3_layer.mk
 layers/python2_layer_scl.mk
