@@ -116,7 +116,7 @@
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 2e99654 | python3 |
 | [packaging](https://github.com/pypa/packaging) | 20.9 | python3_core |
-| [paramiko](https://github.com/paramiko/paramiko/) | 2.7.1 | python3 |
+| [paramiko](https://paramiko.org) | 2.10.3 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.6.0 | python3 |
