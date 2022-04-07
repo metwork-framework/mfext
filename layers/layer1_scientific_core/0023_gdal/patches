@@ -1,0 +1,3 @@
+#Patch to rename internal g2clib symbols to avoid conflicts with ncl
+#from https://github.com/rouault/gdal/commit/94fde15830b77a0150dda5ed075bfd8da364879f
+rename_g2clib_symbols.patch
