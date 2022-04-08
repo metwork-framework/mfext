@@ -41,7 +41,6 @@ libXrender.so.1()(64bit)@generic
 libxslt.so.1()(64bit)@generic
 libXt.so.6()(64bit)@generic
 libz.so.1()(64bit)@generic
-/usr/bin/ctags@generic
 /usr/bin/curl@generic
 /usr/bin/wget@generic
 /usr/bin/which@generic
