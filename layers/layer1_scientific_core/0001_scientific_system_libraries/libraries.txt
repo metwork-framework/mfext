@@ -4,5 +4,3 @@
 /usr/lib64/libsz.so.2.0.1
 /usr/lib64/libjasper.so.4
 /usr/lib64/libjasper.so.4.0.0
-/usr/lib64/libopenblas.so.0
-/usr/lib64/libopenblas-r0.3.12.so
