@@ -1,2 +1,5 @@
 libjvm.so
 libpython2.7.so.1.0
+libhogweed.so.4
+libnettle.so.6
+libjbig.so.2.1
