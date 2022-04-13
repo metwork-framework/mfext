@@ -139,10 +139,6 @@ Obsoletes: metwork-mfext-layer-python2_misc
 #Libraries provided as copies of el8 system libraries
 Provides: libjson-c.so.4()(64bit)
 Provides: libevent-2.1.so.6()(64bit)
-Provides: libaec.so.0()(64bit)
-Provides: libgsl.so.23()(64bit)
-Provides: libjasper.so.4()(64bit)
-Provides: libsz.so.2()(64bit)
 {% endif %}
 # </to be removed someday>
 Provides: metwork-{{MFMODULE_LOWERCASE}}-minimal-{{MODULE_BRANCH}} = {{FULL_VERSION}}
@@ -213,6 +209,18 @@ Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} = {{FULL_VERSION}}
 Provides: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}} < {{FULL_VERSION}}
 Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}} < {{FULL_VERSION}}
+#Libraries provided as copies of el8 system libraries
+{% if LAYER.name == "scientific_core" %}
+Provides: libaec.so.0()(64bit)
+Provides: libgsl.so.23()(64bit)
+Provides: libjasper.so.4()(64bit)
+Provides: libsz.so.2()(64bit)
+{% endif %}
+{% if LAYER.name == "radartools" %}
+Provides: libboost_filesystem.so.1.66.0()(64bit)
+Provides: libboost_program_options.so.1.66.0()(64bit)
+Provides: libboost_system.so.1.66.0()(64bit)
+{% endif %}
 {% if MFEXT_ADDON == "0" %}
 Requires: metwork-{{MFMODULE_LOWERCASE}}-{{MODULE_BRANCH}} = {{FULL_VERSION}}
 {% else %}
