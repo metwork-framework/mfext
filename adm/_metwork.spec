@@ -213,6 +213,7 @@ Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-{{LAYER.name}}-{{MODULE_BRANCH}}
 {% if LAYER.name == "scientific_core" %}
 Provides: libaec.so.0()(64bit)
 Provides: libgsl.so.23()(64bit)
+Provides: libgslcblas.so.0()(64bit)
 Provides: libjasper.so.4()(64bit)
 Provides: libsz.so.2()(64bit)
 {% endif %}
