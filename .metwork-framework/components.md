@@ -25,7 +25,7 @@
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
 | [circus](https://pypi.org/project/circus) | 7a89595 | python3_circus |
-| [click](https://palletsprojects.com/p/click/) | 8.1.2 | python3 |
+| [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
