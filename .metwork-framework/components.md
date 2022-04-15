@@ -161,7 +161,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.1.0 | python3_devtools |
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.3.1 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 7.1.1 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
 | [Python](http://python.org/) | 3.9.7 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
