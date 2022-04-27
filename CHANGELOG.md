@@ -21,6 +21,7 @@
 - add ipython in python3_devtools@mfext
 - bump paramiko to 2.10.3 to fix a security vulnerability (#1317)
 - manage system dependencies to be able to install on fedora >= 34 (#1321)
+- bump typing-extensions to 3.10.0.2 (for bokeh 2.4.2) (#1338)
 
 ### Bug Fixes
 
