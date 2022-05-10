@@ -1,5 +1,4 @@
 cffi
-nose
 pbr
 pyscaffold
 pytest-runner
