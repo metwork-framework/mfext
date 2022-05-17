@@ -14,7 +14,6 @@ libglib-2.0.so.0()(64bit)@generic
 libICE.so.6()(64bit)@generic
 liblzma.so.5()(64bit)@generic
 libm.so.6()(64bit)@generic
-libncurses.so.5()(64bit)@generic
 libonig.so.5()(64bit)@generic
 libpcre.so.1()(64bit)@generic
 libpng16.so.16()(64bit)@generic
@@ -26,7 +25,6 @@ libsqlite3.so.0()(64bit)@generic
 libssl.so.1.1()(64bit)@generic
 libstdc++.so.6()(64bit)@generic
 libtcl8.6.so()(64bit)@generic
-libtinfo.so.5()(64bit)@generic
 libtk8.6.so()(64bit)@generic
 libX11.so.6()(64bit)@generic
 libXau.so.6()(64bit)@generic

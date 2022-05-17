@@ -1,7 +1,5 @@
 libbz2.so.1()(64bit)@generic
 libcrypt.so.1()(64bit)@generic
 libfreebl3.so()(64bit)@generic
-libncursesw.so.5()(64bit)@generic
 libnsl.so.1()(64bit)@generic
 libutil.so.1()(64bit)@generic
-libpanelw.so.5()(64bit)@generic
