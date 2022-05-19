@@ -43,7 +43,11 @@
 | [distlib](https://bitbucket.org/pypa/distlib) | 0.3.1 | python3_core |
 | [distro](https://github.com/nir0s/distro) | 1.4.0 | python3 |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
+<<<<<<< HEAD
 | [envtpl](https://github.com/metwork-framework/envtpl) | custom | python3 |
+=======
+| [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
+>>>>>>> 3a56199 (build: fix ci (#1351))
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 1.7.1 | python3_devtools |
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
