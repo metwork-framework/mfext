@@ -48,9 +48,12 @@ ADDON_NAME = os.environ.get('MFEXT_ADDON_NAME', None)
 
 
 def flter(value):
-    value = value.replace('|', ' ')
     if value is None:
         return "Unknown"
+    try:
+        value = value.replace('|', ' ')
+    except Exception:
+        value = str(value).replace('|', ' ')
     try:
         return unidecode(value)
     except Exception:
