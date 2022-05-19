@@ -57,7 +57,7 @@ redis==3.2.1
 requests==2.25.1
 requests-unixsocket==0.2.0
 rich==1.2.3
-simpleeval==0.9.10
+simpleeval==0.9.12
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
 structlog==19.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client

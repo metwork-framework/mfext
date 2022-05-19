@@ -89,7 +89,6 @@ import more_itertools
 import multidict
 import netifaces
 import nltk
-import nose
 import opinionated_configparser
 import packaging
 import paramiko
