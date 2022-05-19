@@ -21,7 +21,7 @@ cryptography==3.3.2
 -e git+https://github.com/metwork-framework/deploycron.git@c7d4e7b78fa8c9eb9f14ba49b5f90232af7d4709#egg=deploycron
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==3.1.1
--e git+https://github.com/metwork-framework/envtpl.git@a7838100809b367451ddca6477616082b01f4c1c#egg=envtpl
+-e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
 future==0.17.1
 gitignore-parser==0.0.6
 idna==2.8
