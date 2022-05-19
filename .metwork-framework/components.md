@@ -41,7 +41,7 @@
 | [distlib](https://bitbucket.org/pypa/distlib) | 0.3.1 | python3_core |
 | [distro](https://github.com/python-distro/distro) | 1.6.0 | python3_core |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
-| [envtpl](https://github.com/metwork-framework/envtpl) | a783810 | python3 |
+| [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 1.7.1 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 0.8.3 | python3_devtools |
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3_core |
