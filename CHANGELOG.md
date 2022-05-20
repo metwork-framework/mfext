@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## v2.0.1 (2022-05-19)
+
+### Bug Fixes
+
+- update envtpl to fix issues with jinja2 new major version (in so… (backport #1346) (#1349)
+
 ## v2.0.0 (2022-04-27)
 
 ### New Features
