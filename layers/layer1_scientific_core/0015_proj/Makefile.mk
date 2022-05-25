@@ -7,10 +7,10 @@ include ../../package.mk
 #will be released in cartopy
 
 export NAME=proj
-export VERSION=6.2.1
+export VERSION=6.3.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=9f874e227d221daf95f7858dc55dfa3e
+export CHECKSUM=2ca6366e12cd9d34d73b4602049ee480
 DESCRIPTION=\
 PROJ4 is a generic coordinate transformation software that transforms geospatial coordinates \
 from one coordinate reference system (CRS) to another.
