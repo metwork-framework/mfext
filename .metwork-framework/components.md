@@ -50,7 +50,7 @@
 | [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
-| [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.0.4 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.0.2 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
