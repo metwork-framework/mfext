@@ -50,7 +50,7 @@
 | [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
-| [gdal](http://www.gdal.org) | 3.0.2 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.0.4 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.8.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.0.2 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
@@ -134,7 +134,7 @@
 | [postgresql](http://postgresql.org/) | 14.2 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
-| [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
+| [proj](http://trac.osgeo.org/proj/) | 6.3.2 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.28 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
