@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- upgrade proj from 6.2.1 to 6.3.2 and gdal from 3.0.2 to 3.0.4 (#1358)
+
 ## v2.0.1 (2022-05-19)
 
 ### Bug Fixes
