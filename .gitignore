@@ -20,13 +20,9 @@ layerapi/_layer_load_bash_cmd
 layerapi/_layer_unload_bash_cmd
 layerapi/layer_wrapper
 layerapi/plugin_wrapper
-layerapi/python2_wrapper
 layerapi/python3_wrapper
-layerapi/python2
-layerapi/pip2
 layerapi/python3
 layerapi/virtualenv3
-layerapi/virtualenv2
 layerapi/pip3
 layerapi/test_layerapi
 layerapi/app.info
@@ -35,11 +31,8 @@ layerapi/is_layer_installed
 layerapi2/test_layerapi2
 layerapi2/get_layer_home
 layers/layer1_scientific_core/0020_libgeotiff/libgeotiff.pc
-layers/python2_layer.mk
 layers/python3_layer.mk
-layers/python2_layer_scl.mk
 layers/python3_layer_scl.mk
-layerapi/_layer_load_python2_bash_cmd
 layerapi/_layer_load_python3_bash_cmd
 layers/layer*/packages.md
 packages.md

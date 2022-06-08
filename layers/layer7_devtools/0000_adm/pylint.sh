@@ -1,7 +1,9 @@
 #!/bin/bash
 
-if test "${METWORK_PYTHON_MODE:-}" = "2"; then
-    exec pylint2.sh $@
-else
-    exec pylint3.sh $@
+if test "${1:-}" == "--help"; then
+    echo "usage: pylint.sh [PYLINT_ARG1] [PYLINT_ARG2] [...]"
+    echo "  => execute pylint command with given args in a python3 env"
+    exit 0
 fi
+export METWORK_PYTHON_MODE=3
+layer_wrapper --layers=python3_devtools@mfext,-python3@"${MODULE_LOWERCASE}" -- pylint "$@"

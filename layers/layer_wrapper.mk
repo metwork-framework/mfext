@@ -25,7 +25,7 @@ clean:
 	$(MAKE) -f Makefile.mk clean
 
 .DEFAULT:
-	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- $(subst ',,$(SCL)) make -f Makefile.mk $(MAKECMDGOALS)
+	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER) -- $(subst ',,$(SCL)) make -f Makefile.mk $(MAKECMDGOALS)
 
 test:
-	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,PYTHON2_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER),devtools@mfext -- $(subst ',,$(SCL)) make -f Makefile.mk test
+	layer_wrapper --empty-env --empty-env-keeps=LANG,PATH,LAYERAPI2_LAYERS_PATH,PYTHON3_SHORT_VERSION,FORCED_PATHS,BUILDCACHE --force-prepend --layers=$(LAYERS_TO_LOAD),$(CURRENT_LAYER),devtools@mfext -- $(subst ',,$(SCL)) make -f Makefile.mk test

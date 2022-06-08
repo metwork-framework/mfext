@@ -121,21 +121,12 @@ Obsoletes: metwork-{{MFMODULE_LOWERCASE}}-layer-python-{{MODULE_BRANCH}}
 {% if MFMODULE == "MFADMIN" %}
 Obsoletes: metwork-mfadmin-layer-monitoring-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfadmin-layer-python3-{{MODULE_BRANCH}}
-{% elif MFMODULE == "MFSERV" %}
-Obsoletes: metwork-mfserv-layer-python2-{{MODULE_BRANCH}}
-{% elif MFMODULE == "MFDATA" %}
-Obsoletes: metwork-mfdata-layer-python2-{{MODULE_BRANCH}}
 {% elif MFMODULE == "MFEXT" %}
 Obsoletes: metwork-mfext-layer-tcltk-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-scientific-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-scientific
-Obsoletes: metwork-mfext-python2-{{MODULE_BRANCH}}
-Obsoletes: metwork-mfext-python2
 Obsoletes: metwork-mfext-devtools-{{MODULE_BRANCH}}
 Obsoletes: metwork-mfext-devtools
-Obsoletes: metwork-mfext-layer-python3_devtools_jupyter-{{MODULE_BRANCH}}
-Obsoletes: metwork-mfext-layer-python2_misc-{{MODULE_BRANCH}}
-Obsoletes: metwork-mfext-layer-python2_misc
 #Libraries provided as copies of el8 system libraries
 Provides: libjson-c.so.4()(64bit)
 Provides: libevent-2.1.so.6()(64bit)

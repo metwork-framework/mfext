@@ -16,7 +16,8 @@ previous commands.
 WEBSITE=https://www.gnu.org/software/readline
 LICENSE=GNU GPLv3
 
-# Patch readline-link-to-libtinfo.patch is necessary for use with python2
+# Patch readline-link-to-libtinfo.patch was necessary for use with python2
+# Should we keep it ?
 
 all::$(PREFIX)/lib/libreadline.so
 $(PREFIX)/lib/libreadline.so:

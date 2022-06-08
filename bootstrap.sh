@@ -84,7 +84,6 @@ fi
 
 # FIXME: do not hardcode this
 # FIXME: move to layer root extra_env ?
-echo "export PYTHON2_SHORT_VERSION := 2.7" >>adm/root.mk
 echo "export PYTHON3_SHORT_VERSION := 3.9" >>adm/root.mk
 
 echo "BOOTSTRAP DONE !"
