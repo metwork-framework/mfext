@@ -1,5 +1,0 @@
-#Accept use of deprecated proj_api.h
-accept_use_of_deprecated_proj_api_h.patch
-#Support projection Skew Mercator AERO
-#patch 4.8 to port in 6.1
-#proj4-skewmercator.patch
