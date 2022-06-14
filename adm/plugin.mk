@@ -24,15 +24,6 @@ ifneq ("$(REQUIREMENTS3)","")
 	PREREQ+=$(REQUIREMENTS3) python3_virtualenv_sources/src
 	DEPLOY+=local/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/requirements3.txt
 endif
-ifneq ("$(wildcard python2_virtualenv_sources/requirements-to-freeze.txt)","")
-	REQUIREMENTS2:=python2_virtualenv_sources/requirements2.txt
-else
-	REQUIREMENTS2:=
-endif
-ifneq ("$(REQUIREMENTS2)","")
-	PREREQ+=$(REQUIREMENTS2) python2_virtualenv_sources/src
-	DEPLOY+=local/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/requirements2.txt
-endif
 ifneq ("$(wildcard package.json)","")
 	PREREQ+=package-lock.json
 	PREREQ+=node_modules
@@ -62,25 +53,12 @@ local/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/requirements3.txt: $(REQU
 	# to force an autorestart
 	touch config.ini
 
-local/lib/python$(PYTHON2_SHORT_VERSION)/site-packages/requirements2.txt: $(REQUIREMENTS2) python2_virtualenv_sources/src
-	_install_plugin_virtualenv $(NAME) $(VERSION) $(RELEASE)
-	# to force an autorestart
-	touch config.ini
-
 python3_virtualenv_sources/requirements3.txt: python3_virtualenv_sources/requirements-to-freeze.txt
 	cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements3.txt || { echo "ERROR with freeze_requirements"; rm -f requirements3.txt; exit 1; }
-
-python2_virtualenv_sources/requirements2.txt: python2_virtualenv_sources/requirements-to-freeze.txt
-	cd python2_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements2.txt || { echo "ERROR with freeze_requirements"; rm -f requirements2.txt; exit 1; }
 
 python3_virtualenv_sources/src: $(REQUIREMENTS3)
 	if test -f python3_virtualenv_sources/requirements3.txt; then \
 	    cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- download_compile_requirements requirements3.txt; \
-	fi
-
-python2_virtualenv_sources/src: $(REQUIREMENTS2)
-	if test -f python2_virtualenv_sources/requirements2.txt; then \
-	    cd python2_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- download_compile_requirements requirements2.txt; \
 	fi
 
 package-lock.json: package.json

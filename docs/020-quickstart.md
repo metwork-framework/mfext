@@ -39,8 +39,8 @@ yum -y install metwork-mfext
 # Done :-)
 
 # Then let's install (for the example only) an extra layer
-# (to add Python2 support)
-yum -y install metwork-mfext-layer-python2
+# (to add Python3 devtools)
+yum -y install metwork-mfext-layer-python3_devtools
 ```
 
 ## Usage
@@ -68,7 +68,7 @@ $ . /opt/metwork-mfext/share/interactive_profile
 
 $ # Test your new python version (recent Python3 version)
 $ python --version
-Python 3.7.3
+Python 3.9.12
 
 $ # See installed layers (currently loaded layers are prefixed by (*))
 $ # (note: X.Y in the directory names below is corresponding to the current
@@ -79,25 +79,7 @@ $ layers
 - (*) python3@mfext [/opt/metwork-mfext-X.Y/opt/python3]
 - python3_circus@mfext [/opt/metwork-mfext-X.Y/opt/python3_circus]
 - (*) python3_core@mfext [/opt/metwork-mfext-X.Y/opt/python3_core]
-- python2_core@mfext [/opt/metwork-mfext-X.Y/opt/python2_core]
-- python2@mfext [/opt/metwork-mfext-X.Y/opt/python2]
 - (*) root@mfext [/opt/metwork-mfext-X.Y]
-
-$ # Let's load the python2 extra layer
-$ layer_load python2@mfext
-
-$ layers # note: currently loaded layers are prefixed by (*)
-- (*) core@mfext [/opt/metwork-mfext-X.Y/opt/core]
-- default@mfext [/opt/metwork-mfext-X.Y/opt/default]
-- python3@mfext [/opt/metwork-mfext-X.Y/opt/python3]
-- python3_circus@mfext [/opt/metwork-mfext-X.Y/opt/python3_circus]
-- python3_core@mfext [/opt/metwork-mfext-X.Y/opt/python3_core]
-- (*) python2_core@mfext [/opt/metwork-mfext-X.Y/opt/python2_core]
-- (*) python2@mfext [/opt/metwork-mfext-X.Y/opt/python2]
-- (*) root@mfext [/opt/metwork-mfext-X.Y]
-
-$ python --version (latest Python 2.7 version, this is not the system version)
-Python 2.7.16
 
 $ # See available components for the current env
 $ components --loaded-filter=yes
@@ -115,14 +97,6 @@ $ components --name=virtualenv --full
     => website: https://virtualenv.pypa.io/
     => description: Virtual Python Environment builder
     => license: MIT
-- (*) virtualenv-16.6.0 (module: mfext (addon: python2), layer: python2_core@mfext)
-    => website: https://virtualenv.pypa.io/
-    => description: Virtual Python Environment builder
-    => license: MIT
-
-$ # Note: you have two virtualenv components because you have one in
-$ #       python2_core layer (currently loaded because you have
-$ #       the (*) sign before) and one in (not loaded) python3_core layer.
 
 ```
 

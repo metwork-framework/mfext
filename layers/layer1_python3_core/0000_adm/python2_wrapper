@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if test "${1:-}" = "--help"; then
-    echo "usage: python2_wrapper [PYTHON_ARGS]"
-    echo "  => launch a python2 command inside a python2 env (even if we are currently in a python3 env)"
-    exit 0
-fi
-layer_wrapper --layers="python2_core@mfext,-python2@mfext,-python2${MODULE_LOWERCASE}" -- python "$@"

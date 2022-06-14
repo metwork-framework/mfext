@@ -8,8 +8,6 @@ function usage()
     echo "  => the directory is automatically created (if it does not exist)"
     echo "     and the .layerapi2_label file is created (if it does not exist)"
     echo "  => a bin/, lib/ and lib/pkgconfig/ subdirectories are also created"
-    echo "  => if \${METWORK_PYTHON_MODE} environnement variable == 2,"
-    echo  "      a lib/python\${PYTHON2_SHORT_VERSION}/site-packages is created"
     echo "  => if \${METWORK_PYTHON_MODE} environnement variable == 3,"
     echo  "      a lib/python\${PYTHON3_SHORT_VERSION}/site-packages is created"
 }
@@ -34,13 +32,7 @@ fi
 
 mkdir -p "${LAYER_HOME}/bin"
 mkdir -p "${LAYER_HOME}/lib/pkgconfig"
-if test "${METWORK_PYTHON_MODE}" = "2"; then
-    mkdir -p "${LAYER_HOME}/lib/python${PYTHON2_SHORT_VERSION:-}/site-packages"
-else
-    if test "${METWORK_PYTHON_MODE}" = "3"; then
-        mkdir -p "${LAYER_HOME}/lib/python${PYTHON3_SHORT_VERSION:-}/site-packages"
-    fi
-fi
+mkdir -p "${LAYER_HOME}/lib/python${PYTHON3_SHORT_VERSION:-}/site-packages"
 if ! test -f "${LAYER_HOME}/.layerapi2_label"; then
     echo "${LAYER_LABEL}" >"${LAYER_HOME}/.layerapi2_label"
 fi

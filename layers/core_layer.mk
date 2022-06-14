@@ -11,5 +11,4 @@ export LAYER_DIR := $(shell dirname $(SOURCE))
 export LAYER_NAME := $(shell basename $(LAYER_DIR) |sed 's/^layer[0-9]_//g')
 export PREFIX := $(MFMODULE_HOME)/opt/$(LAYER_NAME)
 export LAYER_HOME := $(MFMODULE_HOME)/opt/$(LAYER_NAME)
-export PYTHON2_SITE_PACKAGES := $(PREFIX)/lib/python$(PYTHON2_SHORT_VERSION)/site-packages
 export PYTHON3_SITE_PACKAGES := $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/site-packages

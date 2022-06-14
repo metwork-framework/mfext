@@ -36,24 +36,19 @@ if ! test -f "${PLUGIN_HOME}/.layerapi2_dependencies"; then
 fi
 
 LAYERS=$(cat "${PLUGIN_HOME}/.layerapi2_dependencies" |tr '\n' ',' |sed 's/,$/\n/')
-for PYTHON_MAJOR_VERSION in 2 3; do
-    if test "${PYTHON_MAJOR_VERSION}" = "2"; then
-        SHORT_VERSION="${PYTHON2_SHORT_VERSION}"
-    else
-        SHORT_VERSION="${PYTHON3_SHORT_VERSION}"
+PYTHON_MAJOR_VERSION=3
+SHORT_VERSION="${PYTHON3_SHORT_VERSION}"
+REQ="requirements${PYTHON_MAJOR_VERSION}.txt"
+if test -f "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/${REQ}"; then
+    OLDPWD=$(pwd)
+    cd "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" && layer_wrapper --empty --layers="${LAYERS}" -- install_requirements "${PLUGIN_HOME}/local" "${REQ}" "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/src"
+    cd "${OLDPWD}" || exit 1
+fi
+if test -d "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources"; then
+    N=$(find "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" -maxdepth 1 -type f -name "*requirements${PYTHON_MAJOR_VERSION}.txt" |wc -l)
+    if test "${N}" -gt 0; then
+        # shellcheck disable=2086
+        cat ${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/requirements${PYTHON_MAJOR_VERSION}.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$/\1/g' >"${PLUGIN_HOME}/local/lib/python${SHORT_VERSION}/site-packages/requirements${PYTHON_MAJOR_VERSION}.txt"
     fi
-    REQ="requirements${PYTHON_MAJOR_VERSION}.txt"
-    if test -f "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/${REQ}"; then
-        OLDPWD=$(pwd)
-        cd "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" && layer_wrapper --empty --layers="${LAYERS}" -- install_requirements "${PLUGIN_HOME}/local" "${REQ}" "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/src"
-        cd "${OLDPWD}" || exit 1
-    fi
-    if test -d "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources"; then
-        N=$(find "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" -maxdepth 1 -type f -name "*requirements${PYTHON_MAJOR_VERSION}.txt" |wc -l)
-        if test "${N}" -gt 0; then
-            # shellcheck disable=2086
-            cat ${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/requirements${PYTHON_MAJOR_VERSION}.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$/\1/g' >"${PLUGIN_HOME}/local/lib/python${SHORT_VERSION}/site-packages/requirements${PYTHON_MAJOR_VERSION}.txt"
-        fi
-    fi
-done
+fi
 rm -f "${PLUGIN_HOME}/local/.layerapi2*"

@@ -4,7 +4,6 @@
 before::
 	rm -f $(MFEXT_HOME)/.dhash_ignore_hash
 	touch $(MFEXT_HOME)/.dhash_ignore_hash
-	echo "bin/python2" >>$(MFEXT_HOME)/.dhash_ignore_hash
 	echo "bin/python3" >>$(MFEXT_HOME)/.dhash_ignore_hash
 
 all::

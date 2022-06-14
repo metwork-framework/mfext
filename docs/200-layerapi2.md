@@ -73,26 +73,21 @@ $ layers
 
 - plugin_welcome@mfserv [/home/fab/metwork/mfserv/var/plugins/welcome]
 - (*) default@mfserv [/home/fab/metwork/mfserv/build/opt/default]
-- python2@mfserv [/home/fab/metwork/mfserv/build/opt/python2]
 - nodejs@mfserv [/home/fab/metwork/mfserv/build/opt/nodejs]
 - (*) python3@mfserv [/home/fab/metwork/mfserv/build/opt/python3]
 - (*) root@mfserv [/home/fab/metwork/mfserv/build]
 - (*) python3_vim@mfext [/home/fab/metwork/mfext/build/opt/python3_vim]
-- python2_devtools@mfext [/home/fab/metwork/mfext/build/opt/python2_devtools]
 - (*) core@mfext [/home/fab/metwork/mfext/build/opt/core]
 - (*) tcltk@mfext [/home/fab/metwork/mfext/build/opt/tcltk]
 - (*) default@mfext [/home/fab/metwork/mfext/build/opt/default]
 - (*) devtools@mfext [/home/fab/metwork/mfext/build/opt/devtools]
 - (*) openresty@mfext [/home/fab/metwork/mfext/build/opt/openresty]
-- python2@mfext [/home/fab/metwork/mfext/build/opt/python2]
 - (*) nodejs@mfext [/home/fab/metwork/mfext/build/opt/nodejs]
 - (*) python3_core@mfext [/home/fab/metwork/mfext/build/opt/python3_core]
-- python2_core@mfext [/home/fab/metwork/mfext/build/opt/python2_core]
 - (*) scientific_core@mfext [/home/fab/metwork/mfext/build/opt/scientific_core]
 - (*) python3_devtools@mfext [/home/fab/metwork/mfext/build/opt/python3_devtools]
 - python3_circus@mfext [/home/fab/metwork/mfext/build/opt/python3_circus]
 - (*) monitoring@mfext [/home/fab/metwork/mfext/build/opt/monitoring]
-- python2_vim@mfext [/home/fab/metwork/mfext/build/opt/python2_vim]
 - (*) python3@mfext [/home/fab/metwork/mfext/build/opt/python3]
 - (*) java@mfext [/home/fab/metwork/mfext/build/opt/java]
 - (*) vim@mfext [/home/fab/metwork/mfext/build/opt/vim]
@@ -143,5 +138,5 @@ an installed layer.
 For example:
 
 ```none
-layer_load python2@mfext
+layer_load python3_devtools@mfext
 ```
