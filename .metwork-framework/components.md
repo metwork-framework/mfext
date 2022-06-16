@@ -163,7 +163,7 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 7.1.1 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
 | [Python](http://python.org/) | 3.9.12 | python3_core |
-| [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
+| [pytz](http://pythonhosted.org/pytz) | 2022.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
