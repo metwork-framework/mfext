@@ -7,10 +7,10 @@ include ../../package.mk
 #will be released in cartopy
 
 export NAME=proj
-export VERSION=6.2.1
+export VERSION=8.2.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=9f874e227d221daf95f7858dc55dfa3e
+export CHECKSUM=03ed0375ba8c9dd245bdbbf40ed7a786
 DESCRIPTION=\
 PROJ4 is a generic coordinate transformation software that transforms geospatial coordinates \
 from one coordinate reference system (CRS) to another.
@@ -19,4 +19,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libproj.so
 $(PREFIX)/lib/libproj.so:
-	$(MAKE) --file=../../Makefile.standard OPTIONS="--without-jni" PREFIX=$(PREFIX) download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure build install

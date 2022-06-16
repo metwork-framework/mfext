@@ -75,7 +75,7 @@
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libgeotiff](https://www.hdfgroup.org) | 1.7.1 | scientific_core |
-| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.0-beta0 | scientific_core |
+| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.1 | scientific_core |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.5.2 | core |
@@ -133,7 +133,7 @@
 | [postgresql](http://postgresql.org/) | 14.2 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
-| [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
+| [proj](http://trac.osgeo.org/proj/) | 8.2.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.28 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
