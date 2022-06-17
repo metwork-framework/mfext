@@ -10,6 +10,7 @@
 - upgrade gdal from 3.0.2 to 3.3.3 (#1344)
 - upgrade python 3.9 to 3.9.12; remove deprecated nose (#1345)
 - remove all references to python2 (#1361)
+- upgrade proj from 6.2.1 to 8.2.1 (#1364)
 
 ### Bug Fixes
 
