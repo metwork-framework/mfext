@@ -11,6 +11,7 @@
 - upgrade python 3.9 to 3.9.12; remove deprecated nose (#1345)
 - remove all references to python2 (#1361)
 - upgrade proj from 6.2.1 to 8.2.1 (#1364)
+- upgrade pytz from 2019.1 to 2022.1 (required to upgrade pandas) (#1365)
 
 ### Bug Fixes
 
