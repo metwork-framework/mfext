@@ -58,6 +58,7 @@
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
 | [importlib-metadata](https://github.com/python/importlib_metadata) | 3.10.0 | python3_core |
+| [iniconfig](http://github.com/RonnyPfannschmidt/iniconfig) | 1.1.1 | python3_devtools |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [ipython](https://ipython.org) | 8.1.1 | python3_devtools |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
@@ -68,6 +69,7 @@
 | [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | 3d2c512 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
+| [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
 | [joblib](https://joblib.readthedocs.io) | 0.17.0 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.6 | core |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
@@ -119,7 +121,7 @@
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.8.1 | python3 |
-| [pdoc3](https://pdoc3.github.io/pdoc/) | 0.8.1 | python3_devtools |
+| [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
@@ -193,6 +195,7 @@
 | [terminaltables](https://github.com/Robpol86/terminaltables) | 3.1.0 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
+| [tomli](https://pypi.org/project/tomli) | 2.0.1 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
 | [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
@@ -217,4 +220,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(216 components)*
+*(219 components)*

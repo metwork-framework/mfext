@@ -28,3 +28,4 @@ pytest-asyncio
 #nose-html-reporting is not python3 compliant
 #nose-html-reporting
 ipython
+jmespath
