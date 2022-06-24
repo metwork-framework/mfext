@@ -13,9 +13,11 @@
 - upgrade proj from 6.2.1 to 8.2.1 (#1364)
 - upgrade pytz from 2019.1 to 2022.1 (required to upgrade pandas) (#1365)
 - add jmespath and upgrade pdoc3 to 0.10.0 (#1366)
+- allow plugins.uninstall to be called with plugin path or plugin name (#1369)
 
 ### Bug Fixes
 
 - update envtpl to fix issues with jinja2 new major version (in so… (#1346)
+- .configuration_cache deletion during make clean (#1367) (#1368)
 
 
