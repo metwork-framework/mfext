@@ -78,6 +78,7 @@
 | [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libgeotiff](https://www.hdfgroup.org) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.1 | scientific_core |
+| [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.1 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.5.2 | core |
@@ -220,4 +221,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(219 components)*
+*(220 components)*
