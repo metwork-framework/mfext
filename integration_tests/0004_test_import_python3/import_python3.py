@@ -3,6 +3,7 @@ import aiohttp_metwork_middlewares
 import aiohttp
 import apipkg
 import appdirs
+import argcomplete
 import arrow
 import astroid
 import asttokens
@@ -172,7 +173,9 @@ import wheel
 import whichcraft
 import wrapt
 import xattrfile
+import xmltodict
 import yarl
+import yq
 import zipp
 #python3_core dyn-load (required)
 import lzma

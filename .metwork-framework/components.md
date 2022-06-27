@@ -5,6 +5,7 @@
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.7.4 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
+| [argcomplete](https://github.com/kislyuk/argcomplete) | 2.0.0 | python3 |
 | [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
 | [astroid](https://github.com/PyCQA/astroid) | 2.4.1 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.0.5 | python3_devtools |
@@ -216,9 +217,11 @@
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 9c0b297 | python3 |
+| [xmltodict](https://github.com/martinblech/xmltodict) | 0.13.0 | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl/) | 1.6.3 | python3 |
+| [yq](https://github.com/kislyuk/yq) | 2.14.0 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(220 components)*
+*(223 components)*
