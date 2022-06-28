@@ -15,14 +15,14 @@ Click==7.0
 colorama==0.4.3
 commonmark==0.9.1
 ConfigUpdater==1.0.1
--e git+https://github.com/metwork-framework/cookiecutter.git@113331d0590bd0c9147ac8b608ff850e63b94e44#egg=cookiecutter
+-e git+https://github.com/metwork-framework/cookiecutter.git@4e6aad439db5d83ada89f71ed49bcede057dbf01#egg=cookiecutter
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@5bc1f3295495ded12a95e2d0b35878f3fd7ae1dd#egg=cookiecutter_hooks
 -e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
 cryptography==3.3.2
 decorator==4.4.0
 -e git+https://github.com/metwork-framework/deploycron.git@c7d4e7b78fa8c9eb9f14ba49b5f90232af7d4709#egg=deploycron
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
-diskcache==3.1.1
+diskcache==5.4.0
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
 future==0.17.1
 gitignore-parser==0.0.6

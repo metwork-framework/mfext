@@ -1,3 +1,4 @@
+import importlib_metadata
 import acquisition
 import aiohttp_metwork_middlewares
 import aiohttp

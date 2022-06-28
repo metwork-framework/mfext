@@ -4,3 +4,7 @@ pyparsing
 packaging
 virtualenv
 distro
+#importlib-metadata 4.4.0 was used to build importlib.metadata in the first release of the 3.10 standard python library
+#4.11.3 was merge in last release of python 3.10 
+#upgrade if necessary... or remove ?
+importlib-metadata >= 4.4.0
