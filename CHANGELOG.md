@@ -14,6 +14,8 @@
 - upgrade pytz from 2019.1 to 2022.1 (required to upgrade pandas) (#1365)
 - add jmespath and upgrade pdoc3 to 0.10.0 (#1366)
 - allow plugins.uninstall to be called with plugin path or plugin name (#1369)
+- add yq (jq wrapper for YAML/XML documents) (#1371)
+- add libtree tool (ldd as a tree) (#1370)
 
 ### Bug Fixes
 
