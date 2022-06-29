@@ -16,6 +16,8 @@
 - allow plugins.uninstall to be called with plugin path or plugin name (#1369)
 - add yq (jq wrapper for YAML/XML documents) (#1371)
 - add libtree tool (ldd as a tree) (#1370)
+- add hiredis and hiredis-py (#1373)
+- upgrade nodejs from 10.16.3 to 16.15.1  (#1375)
 
 ### Bug Fixes
 
