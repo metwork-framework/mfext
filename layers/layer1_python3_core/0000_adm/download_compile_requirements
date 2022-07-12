@@ -81,7 +81,7 @@ else
 fi
 
 if test ${OVERRIDE} = 1; then
-    CONSTRAINT=""
+    CONSTRAINT="--ignore-installed"
 fi
 
 # shellcheck disable=SC2086
