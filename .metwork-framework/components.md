@@ -30,7 +30,7 @@
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
-| [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2  | python3 |
+| [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 113331d | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | 828f7f1 | python3 |
