@@ -17,7 +17,7 @@ colorama==0.4.3
 commonmark==0.9.1
 ConfigUpdater==1.0.1
 -e git+https://github.com/metwork-framework/cookiecutter.git@113331d0590bd0c9147ac8b608ff850e63b94e44#egg=cookiecutter
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@5bc1f3295495ded12a95e2d0b35878f3fd7ae1dd#egg=cookiecutter_hooks
+-e git+https://github.com/metwork-framework/cookiecutter_hooks.git@c9124c2b54c1c05cd83eb3d3454cc4214485c45d#egg=cookiecutter_hooks
 -e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
 cryptography==3.3.2
 decorator==4.4.0
