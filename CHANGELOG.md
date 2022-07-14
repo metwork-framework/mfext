@@ -23,5 +23,7 @@
 
 - update envtpl to fix issues with jinja2 new major version (in so… (#1346)
 - .configuration_cache deletion during make clean (#1367) (#1368)
+- do not remove empty file "override" which is meaningful for Metwork
+- do not remove empty file "override" which is meaningful for Metwork (#1377)
 
 
