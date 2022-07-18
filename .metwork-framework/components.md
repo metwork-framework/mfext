@@ -6,7 +6,7 @@
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 2.0.0 | python3 |
-| [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
+| [arrow](https://arrow.readthedocs.io) | 0.17.0 | python3 |
 | [astroid](https://github.com/PyCQA/astroid) | 2.4.1 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.0.5 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async_timeout/) | 3.0.1 | python3 |
@@ -26,11 +26,11 @@
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
 | [circus](https://pypi.org/project/circus) | 28c16b2 | python3_circus |
-| [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
+| [click](https://palletsprojects.com/p/click/) | 8.1.3 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
-| [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 5bc1f32 | python3 |
+| [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 4e6aad4 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | 828f7f1 | python3 |
@@ -57,6 +57,8 @@
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
+| [hiredis](https://redis.com/lp/hiredis/) | 1.0.2 | core |
+| [hiredis](https://github.com/redis/hiredis-py) | 2.0.0 | python3 |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
 | [importlib-metadata](https://github.com/python/importlib_metadata) | 4.11.3 | python3_core |
 | [iniconfig](http://github.com/RonnyPfannschmidt/iniconfig) | 1.1.1 | python3_devtools |
@@ -114,7 +116,7 @@
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.10.9 | python3 |
 | [nltk](https://www.nltk.org/) | 3.6.7 | python3_devtools |
-| [nodejs](http://nodejs.org) | 10.16.3 | nodejs |
+| [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 2e99654 | python3 |
@@ -224,4 +226,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(223 components)*
+*(225 components)*

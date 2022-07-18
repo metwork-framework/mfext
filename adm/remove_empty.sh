@@ -13,7 +13,7 @@ if test "${1:-}" = "--help"; then
 fi
 
 # Remove empty files
-find . -type f -empty -not -name "*.py" -not -name "allow_binary_packages" -delete
+find . -type f -empty -not -name "*.py" -not -name "allow_binary_packages" -not -name "override" -delete
 
 # Remove recursively empty dirs
 RECURSION=0

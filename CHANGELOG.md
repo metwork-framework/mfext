@@ -16,10 +16,14 @@
 - allow plugins.uninstall to be called with plugin path or plugin name (#1369)
 - add yq (jq wrapper for YAML/XML documents) (#1371)
 - add libtree tool (ldd as a tree) (#1370)
+- add hiredis and hiredis-py (#1373)
+- upgrade nodejs from 10.16.3 to 16.15.1  (#1375)
 
 ### Bug Fixes
 
 - update envtpl to fix issues with jinja2 new major version (in so… (#1346)
 - .configuration_cache deletion during make clean (#1367) (#1368)
+- do not remove empty file "override" which is meaningful for Metwork
+- do not remove empty file "override" which is meaningful for Metwork (#1377)
 
 
