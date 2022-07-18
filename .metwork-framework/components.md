@@ -6,7 +6,7 @@
 | [apipkg](https://github.com/pytest-dev/apipkg) | 1.5 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 2.0.0 | python3 |
-| [arrow](https://arrow.readthedocs.io/en/latest/) | 0.14.2 | python3 |
+| [arrow](https://arrow.readthedocs.io) | 0.17.0 | python3 |
 | [astroid](https://github.com/PyCQA/astroid) | 2.4.1 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.0.5 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async_timeout/) | 3.0.1 | python3 |
