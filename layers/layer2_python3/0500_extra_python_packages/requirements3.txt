@@ -2,7 +2,7 @@
 aiohttp==3.7.4
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
 argcomplete==2.0.0
-arrow==0.14.2
+arrow==0.17.0
 async-timeout==3.0.1
 attrs==19.3.0
 autopep8==1.4.4
