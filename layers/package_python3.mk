@@ -29,5 +29,6 @@ $(PREFIX)/share/metwork_packages/%.yaml:
 	if test -s sources; then echo "sources: ">>$@; cat sources |sed 's/^/    - url: /' >>$@; fi
 	if test -s patches; then echo "patches: ">>$@; cat patches |sed 's/^/    - filename: /' >>$@; fi
 	echo $(NAME)'=='$(VERSION) > requirements3.txt
+	if ! test -d $(LAYER_SITE_PACKAGES); then mkdir -p $(LAYER_SITE_PACKAGES); fi
 	if test -f $(LAYER_SITE_REQUIREMENTS); then cat $(LAYER_SITE_REQUIREMENTS) requirements3.txt |sort |uniq  >$(LAYER_SITE_REQUIREMENTS).tmp; mv $(LAYER_SITE_REQUIREMENTS).tmp $(LAYER_SITE_REQUIREMENTS); else cat requirements3.txt |sort |uniq >$(LAYER_SITE_REQUIREMENTS) ;fi
 	rm requirements3.txt
