@@ -20,6 +20,7 @@
 - upgrade nodejs from 10.16.3 to 16.15.1  (#1375)
 - upgrade click from 7.0 to 8.1.3 (#1379)
 - upgrade arrow from 0.14.2 to 0.17.0 (security update) (#1380)
+- upgrade from python 3.9.12 to python 3.10.5 (#1383)
 
 ### Bug Fixes
 
