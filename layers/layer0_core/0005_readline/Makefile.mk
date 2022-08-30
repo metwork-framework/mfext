@@ -21,4 +21,4 @@ LICENSE=GNU GPLv3
 
 all::$(PREFIX)/lib/libreadline.so
 $(PREFIX)/lib/libreadline.so:
-	$(MAKE) --file=../../Makefile.standard OPTIONS="--disable-static" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard download uncompress configure build install
