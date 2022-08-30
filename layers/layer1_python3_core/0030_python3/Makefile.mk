@@ -13,7 +13,7 @@ LICENSE=Python
 
 all:: $(PREFIX)/bin/python $(PREFIX)/share/python3_version $(PREFIX)/share/python3_short_version $(PREFIX)/bin/pip
 $(PREFIX)/bin/python:
-	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS='--enable-shared --enable-loadable-sqlite-extensions --without-ensurepip --with-system-ffi' download uncompress configure build install
+	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS='--enable-shared --enable-loadable-sqlite-extensions --without-ensurepip' download uncompress configure build install
 	cd $(PREFIX)/bin && ln -s python3 python
 	rm -Rf $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/test
 
