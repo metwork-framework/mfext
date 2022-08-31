@@ -7,6 +7,7 @@ libdl.so.2()(64bit)@generic
 libelf.so.1()(64bit)@generic
 libexpat.so.1()(64bit)@generic
 libev.so.4()(64bit)@generic
+libffi.so.6()(64bit)@generic
 libfontconfig.so.1()(64bit)@generic
 libfreetype.so.6()(64bit)@generic
 libgcc_s.so.1()(64bit)@generic

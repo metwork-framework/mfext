@@ -78,7 +78,6 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.4.3 | python3_devtools |
-| [libffi](https://sourceware.org/libffi/) | 3.2 | core |
 | [libgeotiff](https://www.hdfgroup.org) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.1 | scientific_core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
@@ -226,4 +225,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(225 components)*
+*(224 components)*
