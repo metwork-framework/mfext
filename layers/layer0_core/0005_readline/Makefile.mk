@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=readline
-export VERSION=8.0
+export VERSION=8.1.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=7e6c1f16aee3244a69aba6e438295ca3
+export CHECKSUM=12819fa739a78a6172400f399ab34f81
 DESCRIPTION=\
 The GNU Readline library provides a set of functions for use by applications\
 that allow users to edit command lines as they are typed in. Both Emacs and\
@@ -15,9 +15,6 @@ and perhaps reedit those lines, and perform csh-like history expansion on\
 previous commands.
 WEBSITE=https://www.gnu.org/software/readline
 LICENSE=GNU GPLv3
-
-# Patch readline-link-to-libtinfo.patch was necessary for use with python2
-# Should we keep it ?
 
 all::$(PREFIX)/lib/libreadline.so
 $(PREFIX)/lib/libreadline.so:
