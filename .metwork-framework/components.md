@@ -36,7 +36,7 @@
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | 828f7f1 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 3.3.2 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 4.4.0 | python3 |
-| [deploycron](https://github.com/metwork-framework/deploycron) | c7d4e7b | python3 |
+| [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.4.0 | python3 |
 | [distlib](https://bitbucket.org/pypa/distlib) | 0.3.1 | python3_core |
