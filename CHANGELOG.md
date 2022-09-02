@@ -22,6 +22,8 @@
 - upgrade arrow from 0.14.2 to 0.17.0 (security update) (#1380)
 - upgrade from python 3.9.12 to python 3.10.5 (#1383)
 - do not build anymore libffi (using system library) (#1391)
+- upgrade readline from 8.0 to 8.1.2 (#1393)
+- upgrade deploycron to fix string formatting on ValueError (#1394)
 
 ### Bug Fixes
 
