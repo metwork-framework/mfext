@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- upgrade deploycron to fix string formatting on ValueError (backport #1394) (#1395)
+
 ## v2.0.2 (2022-06-01)
 
 ### New Features
