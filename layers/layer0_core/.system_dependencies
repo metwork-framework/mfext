@@ -41,5 +41,6 @@ libxslt.so.1()(64bit)@generic
 libXt.so.6()(64bit)@generic
 libz.so.1()(64bit)@generic
 /usr/bin/curl@generic
+/usr/bin/file@generic
 /usr/bin/wget@generic
 /usr/bin/which@generic
