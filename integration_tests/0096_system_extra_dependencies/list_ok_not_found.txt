@@ -3,3 +3,4 @@ libhogweed.so.4
 libjbig.so.2.1
 libnettle.so.6
 libjvm.so
+libcuda.so.1
