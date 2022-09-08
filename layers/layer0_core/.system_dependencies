@@ -25,6 +25,7 @@ libsqlite3.so.0()(64bit)@generic
 libssl.so.1.1()(64bit)@generic
 libstdc++.so.6()(64bit)@generic
 libtcl8.6.so()(64bit)@generic
+libtinfo.so.6()(64bit)@generic
 libtirpc.so.3()(64bit)@generic
 libtk8.6.so()(64bit)@generic
 libX11.so.6()(64bit)@generic
