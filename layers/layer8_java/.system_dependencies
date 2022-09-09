@@ -1,7 +1,7 @@
+libasound.so.2()(64bit)@generic
 libfreetype.so.6()(64bit)@generic
 libX11.so.6()(64bit)@generic
 libXau.so.6()(64bit)@generic
 libxcb.so.1()(64bit)@generic
 libXrender.so.1()(64bit)@generic
 libXtst.so.6()(64bit)@generic
-libasound.so.2()(64bit)@generic
