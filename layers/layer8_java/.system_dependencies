@@ -1,5 +1,7 @@
-libfreetype.so.6()(64bit)@all
-libX11.so.6()(64bit)@all
-libXau.so.6()(64bit)@all
-libxcb.so.1()(64bit)@all
-libXrender.so.1()(64bit)@all
+libasound.so.2()(64bit)@generic
+libfreetype.so.6()(64bit)@generic
+libX11.so.6()(64bit)@generic
+libXau.so.6()(64bit)@generic
+libxcb.so.1()(64bit)@generic
+libXrender.so.1()(64bit)@generic
+libXtst.so.6()(64bit)@generic
