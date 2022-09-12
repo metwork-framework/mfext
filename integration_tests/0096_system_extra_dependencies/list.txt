@@ -1,3 +1,4 @@
+ld-linux-x86-64.so.2
 libacl.so.1
 libasound.so.2
 libattr.so.1
@@ -23,6 +24,7 @@ libdl.so.2
 libdw.so.1
 libelf.so.1
 libev.so.4
+libevent-2.1.so.7
 libexpat.so.1
 libexslt.so.0
 libffi.so.6
@@ -58,12 +60,15 @@ libICE.so.6
 libidn2.so.0
 libjbig.so.2.1
 libjpeg.so.62
+libjvm.so
 libk5crypto.so.3
 libkeyutils.so.1
 libkrb5.so.3
 libkrb5support.so.0
 liblapack.so.3
+liblber.so.2
 liblber-2.4.so.2
+libldap.so.2
 libldap-2.4.so.2
 libldap_r-2.4.so.2
 libltdl.so.7
