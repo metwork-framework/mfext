@@ -1,4 +1,4 @@
-#We set in requirements3.txt pip 22.0.4 and setuptools 58.1.0 which are the built-in versions in python 3.9.12
+#We set in requirements3.txt pip 22.2.2 and setuptools 63.2.0 which are the built-in versions in python 3.10.7
 #It's possible to upgrade them if needed
 pip
 setuptools

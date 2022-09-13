@@ -21,7 +21,7 @@
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
 | [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
-| [certifi](https://certifi.io) | 2021.10.8 | python3_core |
+| [certifi](https://certifi.io) | 2022.6.15.1 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.15.0 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
@@ -130,7 +130,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
-| [pip](https://pip.pypa.io/) | 22.0.4 | python3_core |
+| [pip](https://pip.pypa.io/) | 22.2.2 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](https://postgis.net) | 3.1.4 | scientific_core |
@@ -167,12 +167,12 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 7.1.1 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
-| [Python](http://python.org/) | 3.10.5 | python3_core |
+| [Python](http://python.org/) | 3.10.7 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
-| [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
+| [readline](https://www.gnu.org/software/readline) | 8.0 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2021.8.28 | python3_devtools |
@@ -182,7 +182,7 @@
 | [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
-| [setuptools](https://github.com/pypa/setuptools) | 58.1.0 | python3_core |
+| [setuptools](https://github.com/pypa/setuptools) | 63.2.0 | python3_core |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.12 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.15.0 | python3_core |
