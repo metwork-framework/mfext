@@ -172,7 +172,7 @@
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
-| [readline](https://www.gnu.org/software/readline) | 8.0 | core |
+| [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2021.8.28 | python3_devtools |
@@ -212,7 +212,7 @@
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 2.1.6 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 1.0.1 | python3 |
-| [wheel](https://github.com/pypa/wheel) | 0.36.2 | python3_core |
+| [wheel](https://github.com/pypa/wheel) | 0.37.1 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.5.2 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.12.1 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
