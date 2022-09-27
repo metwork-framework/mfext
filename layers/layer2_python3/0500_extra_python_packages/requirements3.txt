@@ -1,4 +1,4 @@
--e git+https://github.com/metwork-framework/acquisition.git@1c11e44df6da758b2735c9771cdc62aa33fcac06#egg=acquisition
+-e git+https://github.com/metwork-framework/acquisition.git@83d161432e08f27375589f16077b4f8226f3154f#egg=acquisition
 aiohttp==3.7.4
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
 argcomplete==2.0.0
@@ -38,7 +38,7 @@ Markdown==3.3.3
 MarkupSafe==1.1.1
 mflog==0.1.0
 -e git+https://github.com/metwork-framework/mfplugin.git@0b039f0ef1678777f8da0b066ea689997fb8c2f1#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@b9e938493875af31e9909b174de2494277d3f145#egg=mfutil
+-e git+https://github.com/metwork-framework/mfutil.git@3d5274c252a1e53c2349554c6cddac637783cf9e#egg=mfutil
 mockredispy==2.9.3
 multidict==4.7.6
 netifaces==0.10.9

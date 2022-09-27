@@ -8,8 +8,8 @@
 {% set misc_tmp_max_age = misc_tmp_max_age_env|getenv("0")|int %}
 {% if misc_tmp_max_age > 0 %}
 # Cleaning of tmp subdirectory
-0 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- find {{MFMODULE_RUNTIME_HOME}}/tmp -type f -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto/*" -mtime +{{misc_tmp_max_age}} -delete
-30 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- find {{MFMODULE_RUNTIME_HOME}}/tmp -type d -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto" -mtime +{{misc_tmp_max_age}} -exec rmdir {} \;
+0 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type f -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto/*" -mtime +{{misc_tmp_max_age}} -delete'
+30 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type d -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto" -mtime +{{misc_tmp_max_age}} -exec rmdir {} \;'
 {% endif %}
 {% endraw %}
 
