@@ -97,7 +97,7 @@
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.1.0 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | 0b039f0 | python3 |
-| [mfutil](https://github.com/metwork-framework/mfutil) | b9e9384 | python3 |
+| [mfutil](https://github.com/metwork-framework/mfutil) | 3d5274c | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.1 | python3_devtools |
