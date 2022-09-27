@@ -31,5 +31,7 @@
 - .configuration_cache deletion during make clean (#1367) (#1368)
 - do not remove empty file "override" which is meaningful for Metwork
 - do not remove empty file "override" which is meaningful for Metwork (#1377)
+- #1408 temporary log files are not purged by the cron (#1411)
+- use MFDATA_DATA_IN_DIR for tmp files (#1413)
 
 
