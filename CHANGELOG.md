@@ -1,6 +1,6 @@
 # release_2.0 CHANGELOG
 
-## [Unreleased]
+## v2.0.3 (2022-09-28)
 
 ### New Features
 
@@ -10,6 +10,7 @@
 
 - #1408 temporary log files are not purged by the cron (backport #1411) (#1412)
 - use MFDATA_DATA_IN_DIR for tmp files (backport #1413) (#1414)
+- fix init error when [module]_LOG_MINIMAL_LEVEL is set to DEBUG (backport #1415) (#1416)
 
 ## v2.0.2 (2022-06-01)
 
