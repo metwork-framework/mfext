@@ -1,10 +1,10 @@
-diff -up certifi-2021.10.8/certifi/core.py.orig certifi-2021.10.8/certifi/core.py
---- certifi-2021.10.8/certifi/core.py.orig	2020-06-07 11:35:28.000000000 +0200
-+++ certifi-2021.10.8/certifi/core.py	2022-01-17 16:49:02.528238288 +0100
-@@ -7,6 +7,16 @@ certifi.py
+diff -up certifi-2022.6.15.1/certifi/core.py.orig certifi-2022.6.15.1/certifi/core.py
+--- certifi-2022.6.15.1/certifi/core.py.orig	2022-09-13 11:22:26.674138774 +0000
++++ certifi-2022.6.15.1/certifi/core.py	2022-09-13 11:28:21.061398598 +0000
+@@ -5,6 +5,17 @@ certifi.py
  This module returns the installation location of cacert.pem or its contents.
  """
- import os
+ import sys
 +import distro
 +
 +def is_centos_rhel_rocky():
@@ -15,23 +15,34 @@ diff -up certifi-2021.10.8/certifi/core.py.orig certifi-2021.10.8/certifi/core.p
 +    return ( ('centos' in distribution_name) or
 +             ('redhat' in distribution_name) or
 +             ('rocky' in distribution_name) )
++
  
- try:
-     from importlib.resources import path as get_path, read_text
-@@ -15,6 +25,9 @@ try:
+ 
+ if sys.version_info >= (3, 9):
+@@ -15,6 +26,9 @@ if sys.version_info >= (3, 9):
      _CACERT_PATH = None
  
-     def where():
+     def where() -> str:
 +        if is_centos_rhel_rocky():
 +            return "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
-+ 
++
          # This is slightly terrible, but we want to delay extracting the file
          # in cases where we're inside of a zipimport situation until someone
          # actually calls where(), but we don't want to re-extract the file
-@@ -51,6 +64,9 @@ except ImportError:
+@@ -49,6 +63,9 @@ elif sys.version_info >= (3, 7):
+     _CACERT_PATH = None
+ 
+     def where() -> str:
++        if is_centos_rhel_rocky():
++            return "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
++
+         # This is slightly terrible, but we want to delay extracting the
+         # file in cases where we're inside of a zipimport situation until
+         # someone actually calls where(), but we don't want to re-extract
+@@ -100,6 +117,9 @@ else:
      # If we don't have importlib.resources, then we will just do the old logic
      # of assuming we're on the filesystem and munge the path directly.
-     def where():
+     def where() -> str:
 +        if is_centos_rhel_rocky():
 +            return "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
 +
