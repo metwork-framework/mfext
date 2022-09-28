@@ -18,7 +18,7 @@ jmespath==1.0.1
 lazy-object-proxy==1.4.3
 livereload==2.6.1
 lunr==0.6.2
-Mako==1.1.2
+Mako==1.2.3
 matplotlib-inline==0.1.3
 mccabe==0.6.1
 mergedeep==1.3.4
