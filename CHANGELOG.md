@@ -33,5 +33,6 @@
 - do not remove empty file "override" which is meaningful for Metwork (#1377)
 - #1408 temporary log files are not purged by the cron (#1411)
 - use MFDATA_DATA_IN_DIR for tmp files (#1413)
+- fix init error when [module]_LOG_MINIMAL_LEVEL is set to DEBUG (#1415)
 
 
