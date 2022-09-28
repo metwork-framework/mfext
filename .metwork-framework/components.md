@@ -89,7 +89,7 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://github.com/yeraydiazdiaz/lunr.py) | 0.6.2 | python3_devtools |
-| [Mako](https://www.makotemplates.org/) | 1.1.2 | python3_devtools |
+| [Mako](https://www.makotemplates.org/) | 1.2.3 | python3_devtools |
 | [Markdown](https://Python-Markdown.github.io/) | 3.3.3 | python3 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 1.1.1 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.3 | python3_devtools |
