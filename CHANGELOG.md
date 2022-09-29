@@ -24,6 +24,8 @@
 - do not build anymore libffi (using system library) (#1391)
 - upgrade readline from 8.0 to 8.1.2 (#1393)
 - upgrade deploycron to fix string formatting on ValueError (#1394)
+- upgrade python from 3.10.5 to 3.10.7 (#1417)
+- bump Mako from 1.1.2 to 1.2.3 (security update) (#1418)
 
 ### Bug Fixes
 
