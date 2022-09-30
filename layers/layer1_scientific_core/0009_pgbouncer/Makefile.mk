@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=pgbouncer
-export VERSION=1.16.0
+export VERSION=1.17.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=49f632962dfeb57629e7f033d6a12d43
+export CHECKSUM=b57212a12ba58fe11e934ea2e40bd610
 DESCRIPTION=\
 PGBOUNCER is a lightweight connection pooler for PostgreSQL
 WEBSITE=https://www.pgbouncer.org/
