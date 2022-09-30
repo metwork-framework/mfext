@@ -73,7 +73,7 @@
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
-| [joblib](https://joblib.readthedocs.io) | 0.17.0 | python3 |
+| [joblib](https://joblib.readthedocs.io) | 1.2.0 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.6 | core |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
