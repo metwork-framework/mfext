@@ -56,7 +56,7 @@
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.0.2 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.0.6 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
-| [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.10.9 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.0.2 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.0.0 | python3 |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
