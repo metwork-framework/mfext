@@ -138,7 +138,7 @@
 | [postgresql](http://postgresql.org/) | 14.5 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
-| [proj](http://trac.osgeo.org/proj/) | 8.2.1 | scientific_core |
+| [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.28 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
