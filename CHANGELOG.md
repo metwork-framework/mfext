@@ -26,6 +26,8 @@
 - upgrade deploycron to fix string formatting on ValueError (#1394)
 - upgrade python from 3.10.5 to 3.10.7 (#1417)
 - bump Mako from 1.1.2 to 1.2.3 (security update) (#1418)
+- upgrade postgresql from 14.2 to 14.5 and pgbouncer to 1.17.0 (#1420)
+- bump joblib from 0.17.0 to 1.2.0 (security update) (#1422)
 
 ### Bug Fixes
 
