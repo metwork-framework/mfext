@@ -1,5 +1,4 @@
 cffi==1.15.0
-flit_core==3.2.0
 pbr==5.8.1
 pycparser==2.19
 PyScaffold==3.2.3

@@ -1,1 +1,2 @@
 setuptools_scm[toml]>5
+flit-core
