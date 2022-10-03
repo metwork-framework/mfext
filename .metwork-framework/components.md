@@ -133,7 +133,7 @@
 | [pip](https://pip.pypa.io/) | 22.2.2 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
-| [postgis](https://postgis.net) | 3.1.4 | scientific_core |
+| [postgis](https://postgis.net) | 3.3.1 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 14.5 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
