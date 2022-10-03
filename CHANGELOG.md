@@ -27,7 +27,10 @@
 - upgrade python from 3.10.5 to 3.10.7 (#1417)
 - bump Mako from 1.1.2 to 1.2.3 (security update) (#1418)
 - upgrade postgresql from 14.2 to 14.5 and pgbouncer to 1.17.0 (#1420)
+- upgrade hdf5 from 1.10.5 to 1.10.9
 - bump joblib from 0.17.0 to 1.2.0 (security update) (#1422)
+- upgrade proj from 8.2.1 to 9.0.1
+- upgrade geos from 3.8.0 to 3.10.3
 
 ### Bug Fixes
 
