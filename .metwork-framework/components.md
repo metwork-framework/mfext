@@ -48,7 +48,7 @@
 | [filelock](https://github.com/benediktschmitt/py-filelock) | 3.0.12 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
-| [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3 |
+| [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3_core |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [gdal](http://www.gdal.org) | 3.5.2 | scientific_core |
@@ -141,7 +141,8 @@
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.28 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
-| [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
+| [psycopg](https://psycopg.org/psycopg3/) | 3.1.2 | python3_scientific_core |
+| [psycopg2](https://psycopg.org/) | 2.9.3 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
 | [py](https://py.readthedocs.io/) | 1.10.0 | python3_devtools |
@@ -179,7 +180,7 @@
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.2.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.25.1 | python3 |
-| [rich](https://github.com/willmcgugan/rich) | 1.2.3 | python3 |
+| [rich](https://github.com/willmcgugan/rich) | 10.16.2 | python3 |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 5.0.2 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 63.2.0 | python3_core |
@@ -204,7 +205,7 @@
 | [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.1.1 | python3 |
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.3 | python3_devtools |
-| [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.10.0.2 | python3_core |
+| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.2.0 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.26.5 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
@@ -225,4 +226,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(224 components)*
+*(225 components)*
