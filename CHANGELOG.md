@@ -31,6 +31,9 @@
 - bump joblib from 0.17.0 to 1.2.0 (security update) (#1422)
 - upgrade proj from 8.2.1 to 9.0.1
 - upgrade geos from 3.8.0 to 3.10.3
+- upgrade gdal from 3.3.3 to 3.5.2 (#1433)
+- upgrade postgis from 3.1.4 to 3.3.1 (#1434)
+- upgrade psycopg2 add add psycopg = psycopg3 (#1436)
 
 ### Bug Fixes
 
