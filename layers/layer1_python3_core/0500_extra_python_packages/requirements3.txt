@@ -1,4 +1,4 @@
-certifi==2022.6.15.1
+appdirs==1.4.4
 distlib==0.3.5
 distro==1.6.0
 filelock==3.4.1
@@ -6,7 +6,6 @@ flit_core==3.2.0
 importlib-metadata==4.11.3
 platformdirs==2.4.1
 setuptools-scm==7.0.5
-toml==0.10.2
-tomli==2.0.1
-typing_extensions==4.2.0
+six==1.16.0
+virtualenv==20.16.5
 zipp==3.4.1
