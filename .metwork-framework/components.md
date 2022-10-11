@@ -48,7 +48,7 @@
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.4.1 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
-| [flit_core](https://github.com/takluyver/flit) | 3.2.0 | python3_core |
+| [flit_core](https://pypi.org/project/flit_core) | 3.7.1 | python3_core |
 | [freezegun](https://github.com/spulec/freezegun) | 0.3.15 | python3_devtools |
 | [future](https://python-future.org) | 0.17.1 | python3 |
 | [gdal](http://www.gdal.org) | 3.5.2 | scientific_core |
@@ -119,7 +119,7 @@
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 2e99654 | python3 |
-| [packaging](https://github.com/pypa/packaging) | 20.9 | python3_core |
+| [packaging](https://github.com/pypa/packaging) | 21.3 | python3_core |
 | [paramiko](https://paramiko.org) | 2.10.3 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
@@ -156,7 +156,7 @@
 | [pylint](https://github.com/PyCQA/pylint) | 2.5.2 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 7.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.3.0 | python3 |
-| [pyparsing](https://github.com/pyparsing/pyparsing/) | 2.4.7 | python3_core |
+| [pyparsing](https://pypi.org/project/pyparsing) | 3.0.9 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.15.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
