@@ -21,7 +21,7 @@
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
 | [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
-| [certifi](https://github.com/certifi/python-certifi) | 2022.6.15.1 | python3_core |
+| [certifi](https://certifi.io) | 2022.6.15.1 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.15.0 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
