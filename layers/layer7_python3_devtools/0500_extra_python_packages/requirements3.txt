@@ -61,7 +61,6 @@ repackage==0.7.3
 snowballstemmer==2.0.0
 stack-data==0.2.0
 termcolor==1.1.0
-tomli==2.0.1
 tornado==6.0.4
 typed-ast==1.5.3
 watchdog==2.1.6
