@@ -34,6 +34,7 @@
 - upgrade gdal from 3.3.3 to 3.5.2 (#1433)
 - upgrade postgis from 3.1.4 to 3.3.1 (#1434)
 - upgrade psycopg2 add add psycopg = psycopg3 (#1436)
+- upgrade python packages in layer python3_core (#1444)
 
 ### Bug Fixes
 
