@@ -22,14 +22,14 @@
 | [cachetools](https://github.com/tkem/cachetools) | 3.1.1 | python3 |
 | [Cerberus](http://docs.python-cerberus.org) | 1.3.2 | python3 |
 | [certifi](https://certifi.io) | 2022.6.15.1 | python3_core |
-| [cffi](http://cffi.readthedocs.org) | 1.15.0 | python3 |
+| [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 3.0.4 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
 | [circus](https://pypi.org/project/circus) | 28c16b2 | python3_circus |
 | [click](https://palletsprojects.com/p/click/) | 8.1.3 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
-| [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
+| [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.1.1 | python3 |
 | [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 4e6aad4 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
@@ -123,7 +123,7 @@
 | [paramiko](https://paramiko.org) | 2.10.3 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://github.com/cpburnz/python-path-specification) | 0.8.0 | python3_devtools |
-| [pbr](https://docs.openstack.org/pbr/latest/) | 5.8.1 | python3 |
+| [pbr](https://docs.openstack.org/pbr/latest/) | 5.10.0 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
@@ -148,7 +148,7 @@
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
 | [py](https://py.readthedocs.io/) | 1.10.0 | python3_devtools |
 | [pycodestyle](https://pycodestyle.readthedocs.io/) | 2.6.0 | python3 |
-| [pycparser](https://github.com/eliben/pycparser) | 2.19 | python3 |
+| [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 5.0.2 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.2.0 | python3_devtools |
 | [Pygments](https://pygments.org/) | 2.7.4 | python3 |
@@ -157,7 +157,7 @@
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 7.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.3.0 | python3 |
 | [pyparsing](https://pypi.org/project/pyparsing) | 3.0.9 | python3_core |
-| [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 3.2.3 | python3 |
+| [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.3.1 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.15.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 2.8.1 | python3_devtools |
 | [pytest-forked](https://github.com/pytest-dev/pytest-forked) | 1.1.3 | python3_devtools |
@@ -165,7 +165,7 @@
 | [pytest-httpserver](https://www.github.com/csernazs/pytest-httpserver) | 0.3.4 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 1.10.0 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.1.0 | python3_devtools |
-| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 5.3.1 | python3 |
+| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 7.1.1 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
@@ -201,6 +201,7 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tomli](https://pypi.org/project/tomli) | 2.0.1 | python3_core |
+| [tomlkit](https://github.com/sdispater/tomlkit) | 0.11.5 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
 | [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
@@ -227,4 +228,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(226 components)*
+*(227 components)*
