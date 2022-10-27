@@ -1,4 +1,3 @@
--e git+https://github.com/metwork-framework/opinionated_configparser.git#egg=opinionated_configparser
 cron-wrapper
 -e git+https://github.com/metwork-framework/deploycron.git#egg=deploycron
 -e git+https://github.com/metwork-framework/envtpl.git#egg=envtpl
@@ -6,13 +5,14 @@ cron-wrapper
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client#egg=telegraf_unixsocket_client
 -e git+https://github.com/metwork-framework/cookiecutter.git@metwork#egg=cookiecutter
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git#egg=cookiecutter_hooks
--e git+https://github.com/metwork-framework/mfutil.git#egg=mfutil
 -e git+https://github.com/metwork-framework/mfplugin.git#egg=mfplugin
 jinja2-shell-extension
 jinja2-getenv-extension
 jinja2-fnmatch-extension
 jinja2-from-json-extension
 mflog
+mfutil
+opinionated-configparser
 structlog
 psutil
 redis
