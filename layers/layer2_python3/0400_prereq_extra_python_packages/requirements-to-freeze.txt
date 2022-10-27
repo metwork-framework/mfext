@@ -1,4 +1,5 @@
 cffi
+fastentrypoints
 pbr
 pyscaffold
 pytest-runner
