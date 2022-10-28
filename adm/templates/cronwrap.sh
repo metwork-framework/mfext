@@ -21,4 +21,4 @@ done
 export PATH=${PATH}
 
 # shellcheck disable=SC2068
-exec cronwrap.py $@
+exec cronwrap $@

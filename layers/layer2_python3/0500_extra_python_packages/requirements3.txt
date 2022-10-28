@@ -15,10 +15,9 @@ chardet==3.0.4
 Click==8.1.3
 colorama==0.4.3
 commonmark==0.9.1
-ConfigUpdater==1.0.1
 -e git+https://github.com/metwork-framework/cookiecutter.git@4e6aad439db5d83ada89f71ed49bcede057dbf01#egg=cookiecutter
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@c9124c2b54c1c05cd83eb3d3454cc4214485c45d#egg=cookiecutter_hooks
--e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
+cron-wrapper==0.1.2
 cryptography==3.3.2
 decorator==4.4.0
 -e git+https://github.com/metwork-framework/deploycron.git@8d31e6d3f5be2d13018b523c9ebd94b4e0b27061#egg=deploycron
@@ -31,6 +30,10 @@ hiredis==2.0.0
 idna==2.8
 inotify-simple==1.1.8
 Jinja2==2.11.3
+jinja2-from-json-extension==1.0.0
+jinja2-fnmatch-extension==1.0.2
+jinja2-getenv-extension==1.0.2
+jinja2-shell-extension==1.0.0
 jinja2-time==0.2.0
 joblib==1.2.0
 lazy-import==0.2.2
@@ -38,11 +41,11 @@ Markdown==3.3.3
 MarkupSafe==1.1.1
 mflog==0.1.0
 -e git+https://github.com/metwork-framework/mfplugin.git@0b039f0ef1678777f8da0b066ea689997fb8c2f1#egg=mfplugin
--e git+https://github.com/metwork-framework/mfutil.git@3d5274c252a1e53c2349554c6cddac637783cf9e#egg=mfutil
+mfutil==0.2.0
 mockredispy==2.9.3
 multidict==4.7.6
 netifaces==0.10.9
--e git+https://github.com/metwork-framework/opinionated_configparser.git@2e99654a17fc74628ec5290c417bebe86fb37cad#egg=opinionated_configparser
+opinionated-configparser==1.0.1
 paramiko==2.10.3
 pika==1.1.0
 poyo==0.4.2
@@ -75,7 +78,3 @@ wrapt==1.12.1
 xmltodict==0.13.0
 yarl==1.6.3
 yq==2.14.0
--e git+https://github.com/metwork-framework/jinja2_fnmatch_extension@014bee0ebdaca0e3dc96a2e322db1b5dd6f0e1a2#egg=jinja2_fnmatch_extension
--e git+https://github.com/metwork-framework/jinja2_from_json_extension@4b1bf5e9408003dd858f6d8e1346d61b4075f1a3#egg=jinja2_from_json_extension
--e git+https://github.com/metwork-framework/jinja2_getenv_extension@5c9b3e1f18e513a18e0c3b666f8b2f69032f548b#egg=jinja2_getenv_extension
--e git+https://github.com/metwork-framework/jinja2_shell_extension@3d2c512ef132d0f9bb068fb69a78621636c28d4c#egg=jinja2_shell_extension
