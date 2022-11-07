@@ -24,6 +24,7 @@ cryptography==37.0.4
 decorator==5.1.1
 -e git+https://github.com/metwork-framework/deploycron.git@8d31e6d3f5be2d13018b523c9ebd94b4e0b27061#egg=deploycron
 Deprecated==1.2.13
+dill==0.3.6
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==5.4.0
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl

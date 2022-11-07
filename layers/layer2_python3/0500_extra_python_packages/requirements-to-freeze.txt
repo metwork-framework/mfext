@@ -48,3 +48,4 @@ traitlets
 cryptography<3.4
 yq
 hiredis
+dill
