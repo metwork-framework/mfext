@@ -41,7 +41,7 @@
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.13 | python3 |
-| [dill](https://github.com/uqfoundation/dill) | 0.3.6 | python3_devtools |
+| [dill](https://github.com/uqfoundation/dill) | 0.3.6 | python3 |
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.4.0 | python3 |
 | [distlib](https://github.com/pypa/distlib) | 0.3.6 | python3_core |

@@ -4,7 +4,6 @@ asttokens==2.0.5
 backcall==0.2.0
 black==19.10b0
 coverage==5.1
-dill==0.3.6
 execnet==1.7.1
 executing==0.8.3
 flake8==5.0.4
