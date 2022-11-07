@@ -33,7 +33,7 @@
 | [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 4e6aad4 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 5.1 | python3_devtools |
-| [cronwrapper](https://github.com/metwork-framework/cronwrapper) | 828f7f1 | python3 |
+| [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 3.3.2 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 4.4.0 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
@@ -45,6 +45,7 @@
 | [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 1.7.1 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 0.8.3 | python3_devtools |
+| [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.8.0 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.5.0 | python3_devtools |
 | [flake8](https://gitlab.com/pycqa/flake8) | 3.8.1 | python3_devtools |
@@ -66,10 +67,10 @@
 | [ipython](https://ipython.org) | 8.1.1 | python3_devtools |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
 | [jedi](https://github.com/davidhalter/jedi) | 0.18.1 | python3_devtools |
-| [jinja2-fnmatch-extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 014bee0 | python3 |
-| [jinja2-from-json-extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 4b1bf5e | python3 |
-| [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 5c9b3e1 | python3 |
-| [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | 3d2c512 | python3 |
+| [jinja2-fnmatch-extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 1.0.2 | python3 |
+| [jinja2-from-json-extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 1.0.0 | python3 |
+| [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 1.0.2 | python3 |
+| [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | 1.0.0 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 2.11.3 | python3 |
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
@@ -97,7 +98,7 @@
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.1.0 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | 0b039f0 | python3 |
-| [mfutil](https://github.com/metwork-framework/mfutil) | 3d5274c | python3 |
+| [mfutil](https://github.com/metwork-framework/mfutil) | 0.2.0 | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.1 | python3_devtools |
@@ -118,7 +119,7 @@
 | [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
-| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 2e99654 | python3 |
+| [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://github.com/pypa/packaging) | 21.3 | python3_core |
 | [paramiko](https://paramiko.org) | 2.10.3 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
@@ -228,4 +229,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(227 components)*
+*(228 components)*
