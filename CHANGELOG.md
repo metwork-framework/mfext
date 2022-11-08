@@ -35,6 +35,7 @@
 - upgrade postgis from 3.1.4 to 3.3.1 (#1434)
 - upgrade psycopg2 add add psycopg = psycopg3 (#1436)
 - upgrade python packages in layer python3_core (#1444)
+- upgrade PyScaffold, ConfigUpdater and others in python3 layer (#1449)
 
 ### Bug Fixes
 

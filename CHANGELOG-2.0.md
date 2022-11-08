@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## v2.0.4 (2022-10-28)
+
+### New Features
+
+- upgrade postgresql from 14.2 to 14.5 (#1447)
+
 ## v2.0.3 (2022-09-28)
 
 ### New Features
