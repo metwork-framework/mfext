@@ -68,7 +68,7 @@ import lunr
 import mako
 import markdown
 import markupsafe
-import matplotlib_inline
+#import matplotlib_inline
 import mccabe
 import mergedeep
 import mflog
