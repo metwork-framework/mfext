@@ -68,7 +68,7 @@ import lunr
 import mako
 import markdown
 import markupsafe
-import matplotlib_inline
+#import matplotlib_inline
 import mccabe
 import mergedeep
 import mflog
@@ -78,7 +78,7 @@ import mkdocs_add_number_plugin
 import mkdocs_awesome_pages_plugin
 import mkdocs.config.config_options #necessary to succeed to import mkdocs_exclude
 import mkdocs_exclude
-import macros #mkdocs-macro-plugin
+import mkdocs_macros
 import materialx #mkdocs-material-extensions
 import material #mkdocs-material
 import mkdocs

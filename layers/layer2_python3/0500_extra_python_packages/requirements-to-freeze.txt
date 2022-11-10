@@ -49,3 +49,7 @@ cryptography<3.4
 yq
 hiredis
 dill
+hatch-vcs
+hatch-fancy-pypi-readme
+hatch-nodejs-version
+hatch-requirements-txt
