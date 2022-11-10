@@ -38,7 +38,7 @@
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 4e6aad4 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 6.5.0 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 37.0.4 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 38.0.3 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.13 | python3 |
