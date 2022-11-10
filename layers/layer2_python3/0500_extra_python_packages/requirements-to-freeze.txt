@@ -44,8 +44,7 @@ joblib
 Werkzeug
 decorator
 traitlets
-#cryptography>=3.4 would require a rust compiler (or install from binary distribution)
-cryptography<3.4
+cryptography
 yq
 hiredis
 dill
