@@ -62,7 +62,7 @@
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.3.1 | python3 |
 | [future](https://python-future.org) | 0.18.2 | python3 |
-| [gdal](http://www.gdal.org) | 3.5.2 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.5.3 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.0 | python3 |
@@ -72,7 +72,7 @@
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.2.0 | python3 |
 | [hatchling](https://pypi.org/project/hatchling) | 1.11.1 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
-| [hdf5](https://www.hdfgroup.org) | 1.10.9 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.12.2 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.0.2 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.0.0 | python3 |
 | [idna](https://pypi.org/project/idna) | 3.4 | python3 |
@@ -128,8 +128,8 @@
 | [more-itertools](https://pypi.org/project/more-itertools) | 9.0.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.0.2 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.2.0 | python3_devtools |
-| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.7.3 | scientific_core |
-| [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.0 | scientific_core |
+| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.0 | scientific_core |
+| [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
 | [nltk](https://www.nltk.org/) | 3.7 | python3_devtools |
 | [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
