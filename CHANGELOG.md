@@ -37,6 +37,8 @@
 - upgrade python packages in layer python3_core (#1444)
 - upgrade PyScaffold, ConfigUpdater and others in python3 layer (#1449)
 - upgrade to Jinja3 and upgrade many other python3 packages (#1453)
+- upgrade many python3 packages in layer python3_devtools (#1457)
+- bump cryptography from 37.0.4 to 38.0.3 (security update) (#1459)
 
 ### Bug Fixes
 
