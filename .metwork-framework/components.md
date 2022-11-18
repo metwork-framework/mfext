@@ -12,7 +12,7 @@
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.1.0 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async-timeout) | 4.0.2 | python3 |
 | [attrs](https://www.attrs.org/) | 22.1.0 | python3 |
-| [autopep8](https://github.com/hhatto/autopep8) | 1.7.1 | python3 |
+| [autopep8](https://github.com/hhatto/autopep8) | 2.0.0 | python3 |
 | [Babel](https://babel.pocoo.org/) | 2.10.3 | python3_devtools |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
@@ -57,7 +57,7 @@
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.8.0 | python3_core |
 | [flake8-docstrings](https://gitlab.com/pycqa/flake8-docstrings) | 1.6.0 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 5.0.4 | python3_devtools |
-| [flit_core](https://pypi.org/project/flit_core) | 3.7.1 | python3_core |
+| [flit_core](https://pypi.org/project/flit_core) | 3.8.0 | python3_core |
 | [flit_scm](https://pypi.org/project/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.3.1 | python3 |
@@ -194,7 +194,7 @@
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/redis/redis-py) | 4.3.4 | python3 |
-| [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3_devtools |
+| [regex](https://github.com/mrabarnett/mrab-regex) | 2022.3.2 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.3.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.28.1 | python3 |
