@@ -1,0 +1,4 @@
+hatch-fancy-pypi-readme==22.8.0
+hatch-nodejs-version==0.3.0
+hatch-requirements-txt==0.2.0
+hatch-vcs==0.2.0

@@ -48,8 +48,6 @@ cryptography
 yq
 hiredis
 dill
-hatch-vcs
-hatch-fancy-pypi-readme
-hatch-nodejs-version
-hatch-requirements-txt
 regex
+#termcolor is a dependency in layers python3_devtools and python3_ia
+termcolor

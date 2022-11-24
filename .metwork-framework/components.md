@@ -215,7 +215,7 @@
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
 | [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
-| [termcolor](https://pypi.org/project/termcolor) | 2.1.0 | python3_devtools |
+| [termcolor](https://pypi.org/project/termcolor) | 2.1.1 | python3 |
 | [terminaltables](https://github.com/matthewdeanmartin/terminaltables) | 3.1.10 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
