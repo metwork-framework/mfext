@@ -13,7 +13,7 @@ LICENSE=BSD
 
 # Version 1.13 is experimental (10/11/2022) and gdal 3.5.3 or 3.6.0 doesn't build against release 1.13.2 or 1.13.3 (it will be ok in release 3.6.1)
 # See https://github.com/OSGeo/gdal/issues/6657
-# force build
+
 all:: $(PREFIX)/lib/libhdf5.so
 $(PREFIX)/lib/libhdf5.so:
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--enable-cxx --disable-static --with-szlib" download uncompress configure build install
