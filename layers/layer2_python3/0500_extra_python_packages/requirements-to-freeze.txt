@@ -48,9 +48,6 @@ cryptography
 yq
 hiredis
 dill
-hatch-vcs
-hatch-fancy-pypi-readme
-hatch-nodejs-version
-hatch-requirements-txt
-#dateparser 1.1.3 in addon scientific requires regex<2022.3.15
-regex<2022.3.15
+regex
+#termcolor is a dependency in layers python3_devtools and python3_ia
+termcolor

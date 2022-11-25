@@ -1,0 +1,4 @@
+hatch-fancy-pypi-readme
+hatch-nodejs-version
+hatch-requirements-txt
+hatch-vcs

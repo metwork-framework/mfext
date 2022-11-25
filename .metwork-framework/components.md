@@ -24,7 +24,7 @@
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.2.0 | python3 |
 | [Cerberus](http://docs.python-cerberus.org) | 1.3.4 | python3 |
-| [certifi](https://certifi.io) | 2022.6.15.1 | python3_core |
+| [certifi](https://certifi.io) | 2022.9.24 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 5.0.0 | python3 |
 | [charset-normalizer](https://github.com/ousret/charset_normalizer) | 2.1.1 | python3 |
@@ -186,7 +186,7 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.0.2 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
-| [Python](http://python.org/) | 3.10.7 | python3_core |
+| [Python](http://python.org/) | 3.10.8 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
 | [PyYAML](https://pyyaml.org/) | 6.0 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
@@ -194,7 +194,7 @@
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/redis/redis-py) | 4.3.4 | python3 |
-| [regex](https://github.com/mrabarnett/mrab-regex) | 2022.3.2 | python3 |
+| [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.3.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.28.1 | python3 |
@@ -215,7 +215,7 @@
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
 | [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
-| [termcolor](https://pypi.org/project/termcolor) | 2.1.0 | python3_devtools |
+| [termcolor](https://pypi.org/project/termcolor) | 2.1.1 | python3 |
 | [terminaltables](https://github.com/matthewdeanmartin/terminaltables) | 3.1.10 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
@@ -235,7 +235,7 @@
 | [wcmatch](https://pypi.org/project/wcmatch) | 8.4.1 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
 | [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 2.2.2 | python3 |
-| [wheel](https://github.com/pypa/wheel) | 0.37.1 | python3_core |
+| [wheel](https://github.com/pypa/wheel) | 0.38.4 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.14.1 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |
