@@ -130,15 +130,18 @@ EOF
 
 You just have to execute the following command (as `root` user):
 
-```console tab="CentOS/Fedora"
+=== "CentOS/Fedora"
+```console
 yum install metwork-mfext
 ```
 
-```console tab="Mageia"
+=== "Mageia"
+```console
 urpmi metwork-mfext
 ```
 
-```console tab="SUSE"
+=== "SUSE"
+```console
 zypper install metwork-mfext
 ```
 
@@ -150,15 +153,18 @@ zypper install metwork-mfext
 
 If you prefer a full installation (as `root` user):
 
-```console tab="CentOS/Fedora"
+=== "CentOS/Fedora"
+```console
 yum install metwork-mfext-full
 ```
 
-```console tab="Mageia"
+=== "Mageia"
+```console
 urpmi metwork-mfext-full
 ```
 
-```console tab="SUSE"
+=== "SUSE"
+```console
 zypper install metwork-mfext-full
 ```
 
@@ -169,7 +175,8 @@ zypper install metwork-mfext-full
 
 You can also add extra (optional) `mfext` layers.
 
-```console tab="CentOS/Fedora"
+=== "CentOS/Fedora"
+```console
 # To install some devtools
 yum install metwork-mfext-layer-python3_devtools
 
@@ -181,7 +188,8 @@ yum install metwork-mfext-layer-nodejs
 yum install metwork-mfext-layer-java
 ```
 
-```console tab="Mageia"
+=== "Mageia"
+```console
 # To install some devtools
 urpmi metwork-mfext-layer-python3_devtools
 
@@ -193,7 +201,8 @@ urpmi metwork-mfext-layer-nodejs
 urpmi metwork-mfext-layer-java
 ```
 
-```console tab="SUSE"
+=== "SUSE"
+```console
 # To install some devtools
 zypper install metwork-mfext-layer-python3_devtools
 
@@ -212,7 +221,8 @@ in the same way and with the same repository (for official [add-ons]({{addons}})
 
 For example (please refer to corresponding add-on documentation)
 
-```console tab="CentOS/Fedora"
+=== "CentOS/Fedora"
+```console
 # To install python3 devtools
 yum install metwork-mfext-layer-python3_devtools
 
@@ -231,7 +241,8 @@ yum install metwork-mfext-layer-python3_mapserverapi
 # [...]
 ```
 
-```console tab="Mageia"
+=== "Mageia"
+```console
 # To install python3 devtools
 urpmi metwork-mfext-layer-python3_devtools
 
@@ -251,7 +262,8 @@ urpmi metwork-mfext-layer-python3_mapserverapi
 # [...]
 ```
 
-```console tab="SUSE"
+=== "SUSE"
+```console
 # To install python3 devtools
 zypper install metwork-mfext-layer-python3_devtools
 
@@ -313,17 +325,19 @@ You can install several "major/minor" versions (for example: `0.8.Z` and `0.9.T`
 of the mfext module on the same machine by configuring two package repositories
 (one for `release_0.8` and one of `release_0.9`) and by using this special procedure:
 
-```console tab="CentOS/Fedora"
+=== "CentOS/Fedora"
+```console
 yum install metwork-mfext-0.8
 yum install metwork-mfext-0.9
 ```
 
-```console tab="Mageia"
+=== "Mageia"
+```console
 urpmi metwork-mfext-0.8
 urpmi metwork-mfext-0.9
 ```
 
-```console tab="SUSE"
+```console
 zypper install metwork-mfext-0.8
 zypper install metwork-mfext-0.9
 ```
