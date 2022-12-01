@@ -151,6 +151,7 @@ import xdist #pytest-xdist
 import pytest
 import dateutil #python-dateutil
 import pytz
+import pywget
 import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag
 import redis
@@ -164,6 +165,7 @@ import setuptools_git
 import setuptools_rust
 import setuptools_scm
 import setuptools
+import sftp_py
 import simpleeval
 import six
 import snowballstemmer
