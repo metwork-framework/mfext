@@ -29,3 +29,5 @@ pytest-asyncio
 #nose-html-reporting
 ipython
 jmespath
+pywget
+sftp-py

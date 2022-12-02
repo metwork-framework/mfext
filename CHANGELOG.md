@@ -40,6 +40,8 @@
 - upgrade many python3 packages in layer python3_devtools (#1457)
 - bump cryptography from 37.0.4 to 38.0.3 (security update) (#1459)
 - upgrade hdf5 to 1.12.2 and netcdf-c to 4.9.0 (#1461)
+- upgrade from python 3.10.7 to python 3.10.8 (#1466)
+- add pywget and sftp_py (#1467)
 
 ### Bug Fixes
 

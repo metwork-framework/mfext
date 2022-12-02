@@ -159,7 +159,8 @@
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.32 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.3 | python3 |
-| [psycopg](https://psycopg.org/psycopg3/) | 3.1.2 | python3_scientific_core |
+| [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.4 | python3_scientific_core |
+| [psycopg](https://psycopg.org/psycopg3/) | 3.1.4 | python3_scientific_core |
 | [psycopg2](https://psycopg.org/) | 2.9.3 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
@@ -188,6 +189,7 @@
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [Python](http://python.org/) | 3.10.8 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
+| [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
@@ -204,6 +206,7 @@
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.5.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 7.0.5 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 63.2.0 | python3_core |
+| [sftp-py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.12 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
@@ -248,4 +251,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(247 components)*
+*(250 components)*
