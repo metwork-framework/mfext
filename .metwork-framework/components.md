@@ -159,7 +159,8 @@
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.32 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.3 | python3 |
-| [psycopg](https://psycopg.org/psycopg3/) | 3.1.2 | python3_scientific_core |
+| [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.4 | python3_scientific_core |
+| [psycopg](https://psycopg.org/psycopg3/) | 3.1.4 | python3_scientific_core |
 | [psycopg2](https://psycopg.org/) | 2.9.3 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
@@ -250,4 +251,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(249 components)*
+*(250 components)*
