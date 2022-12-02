@@ -124,6 +124,7 @@ import pprintpp
 import prompt_toolkit
 import psutil
 import psycopg
+import psycopg_c
 import psycopg2
 import ptyprocess
 import pure_eval
