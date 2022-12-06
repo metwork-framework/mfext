@@ -52,7 +52,7 @@ function __prompt_without_x_mode() {
 function __get_plugin_env_profile_tmp_file() {
     TMPPROFILE="${MFMODULE_RUNTIME_HOME}/tmp/$(get_unique_hexa_identifier).profile"
     touch "${TMPPROFILE}"
-    for VAR in HOME TERM DISPLAY COLORTERM HOSTNAME LANG LOGNAME USER USERNAME XAUTHORITY MFMODULE_RUNTIME_HOME MFMODULE_RUNTIME_SUFFIX PIP_PREFIX; do
+    for VAR in LAYERAPI2_LAYERS_PATH HOME TERM DISPLAY COLORTERM HOSTNAME LANG LOGNAME USER USERNAME XAUTHORITY MFMODULE_RUNTIME_HOME MFMODULE_RUNTIME_SUFFIX PIP_PREFIX; do
         local N=$(env |grep "^${VAR}=..*$" |wc -l)
         if test "${N}" -gt 0; then
            local VAL=$(printenv "${VAR}")
