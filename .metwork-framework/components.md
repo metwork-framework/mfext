@@ -1,6 +1,6 @@
 | Name | Version | Layer |
 | --- | --- | --- |
-| [acquisition](https://github.com/metwork-framework/acquisition) | 83d1614 | python3 |
+| [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.8.3 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.2.0 | python3 |
