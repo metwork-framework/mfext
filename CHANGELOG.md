@@ -52,5 +52,6 @@
 - #1408 temporary log files are not purged by the cron (#1411)
 - use MFDATA_DATA_IN_DIR for tmp files (#1413)
 - fix init error when [module]_LOG_MINIMAL_LEVEL is set to DEBUG (#1415)
+- fix #956 (backport #1473) (#1474)
 
 
