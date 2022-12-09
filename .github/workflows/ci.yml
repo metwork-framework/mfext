@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: ${{ github.event.client_payload.branch || github.ref }}
@@ -72,6 +72,7 @@ jobs:
           BUILDIMAGE=${{ steps.SetVariables.outputs.buildimage }}
           docker pull ${BUILDIMAGE}
           docker run ${DOCKER_RUN_OPTIONS} -e TARGET_DIR=${TARGET_DIR} -e BRANCH=${BRANCH} -e DEP_BRANCH=${DEP_BRANCH} -e TAG=${TAG} -e OS_VERSION=${OS_VERSION} --rm ${BUILDIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/build.sh"
+          cat  ${{ github.workspace }}/github_output >> ${GITHUB_OUTPUT}
 
       - name: publish buildlogs
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' }}
@@ -129,18 +130,16 @@ jobs:
             cd ${REMOTE}
             chmod +x createrepo.sh
             ./createrepo.sh .
-      - name: mageia_repo
-        if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.branch != 'null' }}
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.METWORKPUB_HOST }}
-          username: ${{ secrets.METWORKPUB_USERNAME }}
-          password: ${{ secrets.METWORKPUB_PASSWORD }}
-          port: 22
-          script: |
 
-            docker run -v /pub:/pub --rm mageia:6 /bin/bash -c "genhdlist2 --nolock --allow-empty-media ${{ steps.SetVariables.outputs.rpm_dir }}"
-
+      - name: upload private rpms on nexus
+        if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.nexus_dir != 'null' }}
+        run: |
+          cd ${{ github.workspace }}/rpms/
+          sudo chown -R githubactions:metworkpub .
+          sudo chmod -R 775 .
+          for rpm in *.rpm; do
+          curl -v -w "%{http_code}\n" --user ${{ secrets.METWORK_NEXUS_USER }}:${{ secrets.METWORK_NEXUS_PASSWORD }} --upload-file $rpm ${{ steps.SetVariables.outputs.nexus_dir }};
+          done
 
       - name: publish doc
         if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.branch != 'null' }}
@@ -168,7 +167,7 @@ jobs:
 
       - name: dispatch mfxxx testimage centos6 from centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos6' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos6-testimage
@@ -176,7 +175,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
       - name: dispatch mfxxx testimage centos7 from centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos6' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos7-testimage
@@ -184,7 +183,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
       - name: dispatch mfxxx testimage centos8 from centos8
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos8-testimage
@@ -192,7 +191,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
       - name: dispatch mfxxx buildimage centos6 from centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos6' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos6-buildimage
@@ -200,7 +199,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
       - name: dispatch mfxxx buildimage centos7 from centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos6' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos7-buildimage
@@ -208,7 +207,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
       - name: dispatch mfxxx buildimage centos8 from centos6
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos6' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos8-buildimage
@@ -216,13 +215,12 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
       - name: dispatch mfxxx buildimage centos8 from centos8
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.skip_dispatch == 'false' && steps.SetVariables.outputs.branch != 'null' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/docker-mfxxx-centos8-buildimage
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
-
 
 
 
