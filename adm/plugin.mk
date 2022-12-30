@@ -11,7 +11,10 @@ ifeq ($(VERSION),)
 VERSION:=$(MFMODULE_VERSION)
 endif
 
+RELEASE:=$(shell config.py config.ini general _release 2>/dev/null)
+ifeq ($(RELEASE),)
 RELEASE:=1
+endif
 
 PREREQ:=.plugin_format_version
 DEPLOY:=
