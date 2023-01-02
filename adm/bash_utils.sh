@@ -112,7 +112,7 @@ function layer_unload()
 {
     local LAYER_UNLOAD_TMP
     LAYER_UNLOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/opt/core/bin/layer_unload_bash_cmds" "--debug" "$@" 2>"${LAYER_UNLOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_unload_bash_cmds" "$@" 2>"${LAYER_UNLOAD_TMP}")"
     cat "${LAYER_UNLOAD_TMP}"
     rm -f "${LAYER_UNLOAD_TMP}"
 }
@@ -121,7 +121,7 @@ function layer_load()
 {
     local LAYER_LOAD_TMP
     LAYER_LOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--debug" "$@" 2>"${LAYER_LOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "$@" 2>"${LAYER_LOAD_TMP}")"
     cat "${LAYER_LOAD_TMP}"
     rm -f "${LAYER_LOAD_TMP}"
 }
@@ -130,7 +130,7 @@ function layer_load_without_optional()
 {
     local LAYER_LOAD_TMP
     LAYER_LOAD_TMP=$(mktemp)
-    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--debug" "--dont-load-optional" "$@" 2>"${LAYER_LOAD_TMP}")"
+    eval "$("${MFEXT_HOME}/opt/core/bin/layer_load_bash_cmds" "--dont-load-optional" "$@" 2>"${LAYER_LOAD_TMP}")"
     cat "${LAYER_LOAD_TMP}"
     rm -f "${LAYER_LOAD_TMP}"
 }
