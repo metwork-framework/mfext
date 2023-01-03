@@ -39,8 +39,8 @@ all: precustom check $(PREREQ) custom $(DEPLOY)
 	echo $(MFMODULE_VERSION) >$@
 
 clean::
-	rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules .configuration_cache
-	find . -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
+	@rm -Rf local *.plugin *.tar.gz python?_virtualenv_sources/*.tmp python?_virtualenv_sources/src python?_virtualenv_sources/freezed_requirements.* python?_virtualenv_sources/tempolayer* tmp_build node_modules .configuration_cache
+	@find . -type d -name "__pycache__" -exec rm -Rf {} \; >/dev/null 2>&1 || true
 
 precustom::
 	@echo "override me" >/dev/null
@@ -49,34 +49,34 @@ custom::
 	@echo "override me" >/dev/null
 
 superclean: clean
-	rm -Rf python?_virtualenv_sources/requirements?.txt package-lock.json
+	@rm -Rf python?_virtualenv_sources/requirements?.txt package-lock.json
 
 local/lib/python$(PYTHON3_SHORT_VERSION)/site-packages/requirements3.txt: $(REQUIREMENTS3) python3_virtualenv_sources/src
-	_install_plugin_virtualenv $(NAME) $(VERSION) $(RELEASE)
-	# to force an autorestart
-	touch config.ini
+	@_install_plugin_virtualenv $(NAME) $(VERSION) $(RELEASE)
+	@# to force an autorestart
+	@touch config.ini
 
 python3_virtualenv_sources/requirements3.txt: python3_virtualenv_sources/requirements-to-freeze.txt
-	cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements3.txt || { echo "ERROR with freeze_requirements"; rm -f requirements3.txt; exit 1; }
+	@cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- freeze_requirements requirements-to-freeze.txt >requirements3.txt || { echo "ERROR with freeze_requirements"; rm -f requirements3.txt; exit 1; }
 
 python3_virtualenv_sources/src: $(REQUIREMENTS3)
-	if test -f python3_virtualenv_sources/requirements3.txt; then \
+	@if test -f python3_virtualenv_sources/requirements3.txt; then \
 	    cd python3_virtualenv_sources && layer_wrapper --empty --layers=$(LAYERS) -- download_compile_requirements requirements3.txt; \
 	fi
 
 package-lock.json: package.json
-	rm -f $@
-	plugin_wrapper "$(shell pwd)" -- npm install
+	@rm -f $@
+	@plugin_wrapper "$(shell pwd)" -- npm install
 
 node_modules: package-lock.json
-	rm -Rf node_modules
+	@rm -Rf node_modules
 	plugin_wrapper "$(shell pwd)" -- npm install
 
 prerelease_check:
-	HOME=$(plugins.info --just-home "$(NAME)" || true) ; if test -L "$${HOME}"; then echo "ERROR: the plugin is devlinked, please uninstall the plugin before doing 'make release'" ; exit 1; fi
+	@HOME=$(plugins.info --just-home "$(NAME)" || true) ; if test -L "$${HOME}"; then echo "ERROR: the plugin is devlinked, please uninstall the plugin before doing 'make release'" ; exit 1; fi
 
 release: precustom check prerelease_check clean precustom $(PREREQ) custom
-	$(MAKE) precustom
+	@$(MAKE) precustom
 	layer_wrapper --empty --layers=python3@mfext,root@$(MFMODULE_LOWERCASE) -- _plugins.make --show-plugin-path
 
 develop: precustom check $(PREREQ) custom $(DEPLOY)
