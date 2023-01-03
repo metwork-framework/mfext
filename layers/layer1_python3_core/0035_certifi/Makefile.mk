@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package_python3.mk
 
 export NAME=certifi
-export VERSION=2022.9.24
+export VERSION=2022.12.7
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=ff9c8d5c7e7fb083de6b874609c5ca68
+export CHECKSUM=d00966473b8ac42c2c033b75f4bed6f4
 DESCRIPTION=\
 Python package for providing Mozilla s CA Bundle (patched for centos)
 WEBSITE=https://certifi.io
