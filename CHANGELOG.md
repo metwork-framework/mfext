@@ -10,5 +10,6 @@
 ### Bug Fixes
 
 - fix #956 (#1473)
+- plugin make - hide commands being executed (#1485) (#1486)
 
 
