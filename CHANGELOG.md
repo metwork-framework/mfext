@@ -5,6 +5,7 @@
 ### New Features
 
 - add release in mfplugin configuration (backport #1482) (#1484)
+- upgrade certifi to 2022.12.7 (security upgrade) (backport #1483) (#1487)
 
 ## v2.1.0 (2022-12-08)
 
