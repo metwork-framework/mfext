@@ -45,7 +45,7 @@ lazy-import==0.2.2
 Markdown==3.3.7
 MarkupSafe==2.1.1
 mflog==0.1.0
--e git+https://github.com/metwork-framework/mfplugin.git@c4c33e5c748cb0ba932c0b86f4c3d4c8adf4512d#egg=mfplugin
+-e git+https://github.com/metwork-framework/mfplugin.git@ef1a1343392fa1c08838b0e21355f432e00db4e6#egg=mfplugin
 mfutil==0.2.0
 mockredispy==2.9.3
 multidict==6.0.2
