@@ -11,5 +11,6 @@
 
 - fix #956 (#1473)
 - plugin make - hide commands being executed (#1485) (#1486)
+- .releaseignore / make release : incorrect exclusion with lines beginning with ! (#1490)
 
 
