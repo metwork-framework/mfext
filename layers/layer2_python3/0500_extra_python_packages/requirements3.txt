@@ -45,11 +45,7 @@ lazy-import==0.2.2
 Markdown==3.3.7
 MarkupSafe==2.1.1
 mflog==0.1.0
-<<<<<<< HEAD
--e git+https://github.com/metwork-framework/mfplugin.git@c4c33e5c748cb0ba932c0b86f4c3d4c8adf4512d#egg=mfplugin
-=======
 -e git+https://github.com/metwork-framework/mfplugin.git@ddd178e6420a961c648bda96f3ac7653e660176c#egg=mfplugin
->>>>>>> 9532219 (fix: update mfplugin to fix a tmpdir plugins issue (mfbase #212)  (#1492))
 mfutil==0.2.0
 mockredispy==2.9.3
 multidict==6.0.2
