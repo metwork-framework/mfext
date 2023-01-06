@@ -10,6 +10,8 @@
 ### Bug Fixes
 
 - plugin make - hide commands being executed (#1485) (backport #1486) (#1489)
+- .releaseignore / make release : incorrect exclusion with lines beginning with ! (backport #1490) (#1491)
+- update mfplugin to fix a tmpdir plugins issue (mfbase #212)  (backport #1492) (#1493)
 
 ## v2.1.0 (2022-12-08)
 
