@@ -1,5 +1,18 @@
 # release_2.1 CHANGELOG
 
+## v2.1.1 (2023-01-06)
+
+### New Features
+
+- add release in mfplugin configuration (backport #1482) (#1484)
+- upgrade certifi to 2022.12.7 (security upgrade) (backport #1483) (#1487)
+
+### Bug Fixes
+
+- plugin make - hide commands being executed (#1485) (backport #1486) (#1489)
+- .releaseignore / make release : incorrect exclusion with lines beginning with ! (backport #1490) (#1491)
+- update mfplugin to fix a tmpdir plugins issue (mfbase #212)  (backport #1492) (#1493)
+
 ## v2.1.0 (2022-12-08)
 
 ### New Features
