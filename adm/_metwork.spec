@@ -251,8 +251,12 @@ rm -f mf*_link
 %pre {{MODULE_BRANCH}}
         N=`cat /etc/group |grep '^metwork:' |wc -l`
         if test ${N} -eq 0; then
-            echo "INFO: creating metwork unix local group"
-            groupadd metwork >/dev/null 2>&1 || true
+            # try with getent
+            R=`getent group metwork |grep '^metwork:' |wc -l`
+            if test ${R} -eq 0; then
+                echo "INFO: creating metwork unix local group"
+                groupadd metwork >/dev/null 2>&1 || true
+            fi
         fi
         N=`cat /etc/passwd |grep '^{{MFMODULE_LOWERCASE}}:' |wc -l`
         if test ${N} -eq 0; then
