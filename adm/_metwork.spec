@@ -360,7 +360,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
-        if test -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
+        if test -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt; then
             setfacl --restore /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         fi
     {% endif %}
