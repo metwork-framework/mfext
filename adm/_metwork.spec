@@ -267,7 +267,7 @@ rm -f mf*_link
         fi
         {% if MFMODULE == "MFDATA" %}
         rm -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
-        if test -d /home/{{MFMODULE_LOWERCASE}};
+        if test -d /home/{{MFMODULE_LOWERCASE}}; then
             getfacl /home/{{MFMODULE_LOWERCASE}} >> /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         fi
         {% endif % }
