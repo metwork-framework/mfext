@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- issue when metwork group exists but is missing in /etc/group (backport #1495) (#1496)
+
 ## v2.1.1 (2023-01-06)
 
 ### New Features
