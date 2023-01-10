@@ -267,8 +267,8 @@ rm -f mf*_link
         fi
         {% if MFMODULE == "MFDATA" %}
         rm -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
+        echo "INFO: sauvegarde permissions mfdata"
         if test -d /home/{{MFMODULE_LOWERCASE}}; then
-            echo "INFO: sauvegarde permissions mfdata"
             cd /home
             getfacl {{MFMODULE_LOWERCASE}} > /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         fi
@@ -290,19 +290,17 @@ rm -f mf*_link
 %install
 mkdir -p %{buildroot}/{{MFMODULE_HOME}} 2>/dev/null
 ln -s {{MFMODULE_HOME}} %{buildroot}{{TARGET_LINK}}
+{% if MODULE_HAS_HOME_DIR == "1" %}
+    mkdir -p %{buildroot}/home/{{MFMODULE_LOWERCASE}} 2>/dev/null
+{% endif %}
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MFMODULE_HOME}}/
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
-    # do not remove permissions if directory exists
-    # (important for MFDATA if for some reason ftp user is not in metwork group)
-    if ! test -d %{buildroot}/home/{{MFMODULE_LOWERCASE}}; then
-        mkdir -p %{buildroot}/home/{{MFMODULE_LOWERCASE}} 2>/dev/null
-        chmod -R go-rwx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
-    fi
     ln -s {{MFMODULE_HOME}}/share/bashrc %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bashrc
     ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
+    chmod -R go-rwx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
     chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
     {% if MFMODULE == "MFDATA" %}
         chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
@@ -362,8 +360,9 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+        echo "INFO: restoration permissions mfdata"
         if test -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt; then
-            echo "INFO: restoration permissions mfdata"
+            ls -l /home
             cat /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
             cd /home
             setfacl --restore /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
