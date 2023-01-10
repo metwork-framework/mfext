@@ -270,8 +270,8 @@ rm -f mf*_link
         if test -d /home/{{MFMODULE_LOWERCASE}}; then
             getfacl /home/{{MFMODULE_LOWERCASE}} >> /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         fi
-        {% endif % }
-    {% endif % }
+        {% endif %}
+    {% endif %}
 {% endif %}
 
 
