@@ -268,7 +268,8 @@ rm -f mf*_link
         {% if MFMODULE == "MFDATA" %}
         rm -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         if test -d /home/{{MFMODULE_LOWERCASE}}; then
-            getfacl /home/{{MFMODULE_LOWERCASE}} >> /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
+            cd /home
+            getfacl {{MFMODULE_LOWERCASE}} > /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         fi
         {% endif %}
     {% endif %}
@@ -361,6 +362,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
         if test -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt; then
+            cd /home
             setfacl --restore /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
         fi
     {% endif %}
