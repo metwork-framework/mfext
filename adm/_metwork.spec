@@ -265,14 +265,6 @@ rm -f mf*_link
             rm -Rf /home/{{MFMODULE_LOWERCASE}}
             chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
         fi
-        {% if MFMODULE == "MFDATA" %}
-        rm -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
-        echo "INFO: sauvegarde permissions mfdata"
-        if test -d /home/{{MFMODULE_LOWERCASE}}; then
-            cd /home
-            getfacl {{MFMODULE_LOWERCASE}} > /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
-        fi
-        {% endif %}
     {% endif %}
 {% endif %}
 
@@ -360,14 +352,6 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
         chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
-        echo "INFO: restoration permissions mfdata"
-        if test -f /tmp/perm_{{MFMODULE_LOWERCASE}}.txt; then
-            ls -l /home
-            cat /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
-            cd /home
-            setfacl --restore /tmp/perm_{{MFMODULE_LOWERCASE}}.txt
-            ls -l /home
-        fi
     {% endif %}
     {% if MFMODULE != "MFEXT" %}
         if test -d /etc/security/limits.d; then
@@ -456,7 +440,7 @@ rm -fr %{buildroot}
 {{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
 %defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
-/home/{{MFMODULE_LOWERCASE}}
+%config(noreplace) /home/{{MFMODULE_LOWERCASE}}
 {% endif %}
 
 
