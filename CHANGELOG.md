@@ -13,5 +13,6 @@
 - plugin make - hide commands being executed (#1485) (#1486)
 - .releaseignore / make release : incorrect exclusion with lines beginning with ! (#1490)
 - update mfplugin to fix a tmpdir plugins issue (mfbase #212)  (#1492)
+- issue when metwork group exists but is missing in /etc/group (#1495)
 
 
