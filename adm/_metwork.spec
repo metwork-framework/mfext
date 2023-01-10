@@ -270,8 +270,10 @@ rm -f mf*_link
             chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
             chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
             {% if MFMODULE == "MFDATA" %}
-                chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+                chmod g+rx /home/{{MFMODULE_LOWERCASE}}
             {% endif %}
+            ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc
+            ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile
         fi
     {% endif %}
 {% endif %}
@@ -294,10 +296,6 @@ mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERC
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
-{% if MODULE_HAS_HOME_DIR == "1" %}
-    ln -s {{MFMODULE_HOME}}/share/bashrc %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bashrc
-    ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
-{% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 
