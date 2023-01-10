@@ -262,8 +262,16 @@ rm -f mf*_link
         if test ${N} -eq 0; then
             echo "INFO: creating {{MFMODULE_LOWERCASE}} unix local user"
             useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
-            rm -Rf /home/{{MFMODULE_LOWERCASE}}
+        fi
+        if ! test -d /home/{{MFMODULE_LOWERCASE}}; then
+            echo "INFO: creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
+            mkdir -p /home/{{MFMODULE_LOWERCASE}}
             chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
+            chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
+            chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
+            {% if MFMODULE == "MFDATA" %}
+                chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+            {% endif %}
         fi
     {% endif %}
 {% endif %}
@@ -282,9 +290,6 @@ rm -f mf*_link
 %install
 mkdir -p %{buildroot}/{{MFMODULE_HOME}} 2>/dev/null
 ln -s {{MFMODULE_HOME}} %{buildroot}{{TARGET_LINK}}
-{% if MODULE_HAS_HOME_DIR == "1" %}
-    mkdir -p %{buildroot}/home/{{MFMODULE_LOWERCASE}} 2>/dev/null
-{% endif %}
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MFMODULE_HOME}}/
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
@@ -292,11 +297,6 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
     ln -s {{MFMODULE_HOME}}/share/bashrc %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bashrc
     ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
-    chmod -R go-rwx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
-    chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
-    {% if MFMODULE == "MFDATA" %}
-        chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
-    {% endif %}
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
@@ -438,10 +438,6 @@ rm -fr %{buildroot}
 %files
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
-{% if MODULE_HAS_HOME_DIR == "1" %}
-%defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
-%config(noreplace) /home/{{MFMODULE_LOWERCASE}}
-{% endif %}
 
 
 {% if MFEXT_ADDON == "0" %}
