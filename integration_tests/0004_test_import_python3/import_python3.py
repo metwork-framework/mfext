@@ -141,7 +141,6 @@ import pyparsing
 import pyscaffold
 import pytest_asyncio
 import pytest_cov
-import pytest_forked
 import pytest_html
 import pytest_httpserver
 import pytest_metadata
