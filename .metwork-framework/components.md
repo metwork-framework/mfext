@@ -178,7 +178,6 @@
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.3.1 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.20.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 4.0.0 | python3_devtools |
-| [pytest-forked](https://github.com/pytest-dev/pytest-forked) | 1.4.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 3.2.0 | python3_devtools |
 | [pytest-httpserver](https://github.com/csernazs/pytest-httpserver) | 1.0.6 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 2.0.4 | python3_devtools |
@@ -251,4 +250,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(250 components)*
+*(249 components)*

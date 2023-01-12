@@ -22,6 +22,7 @@ pymdown-extensions
 pytest-cov
 pytest-xdist
 pytest-mock
+#py dependency should be removed when new pytest-html will be available
 pytest-html
 freezegun
 pytest-asyncio
