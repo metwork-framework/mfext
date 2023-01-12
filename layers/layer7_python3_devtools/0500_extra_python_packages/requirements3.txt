@@ -50,7 +50,6 @@ pymdown-extensions==9.8
 pytest==7.2.0
 pytest-asyncio==0.20.1
 pytest-cov==4.0.0
-pytest-forked==3.2.0
 pytest-html==3.2.0
 pytest-httpserver==1.0.6
 pytest-metadata==2.0.4
