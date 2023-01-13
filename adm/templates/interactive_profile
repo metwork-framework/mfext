@@ -42,7 +42,7 @@ function __prompt_without_x_mode() {
         # the prompt
         set +x
     fi
-    _lp_set_prompt
+    #__lp_set_prompt
     if test ${X_MODE} -gt 0; then
         set -x
     fi
@@ -115,9 +115,9 @@ if test "${LIQUIDPROMPT}" != "0"; then
         export LP_ENABLE_BZR=0
         export LP_ENABLE_RUNTIME=0
         export LP_ENABLE_VIRTUALENV=0
+        PROMPT_COMMAND=__prompt_without_x_mode
         PLUGIN_NAME=$(env |grep "^${MFMODULE}_CURRENT_PLUGIN_NAME" |awk -F '=' '{print $2;}')
         . {{MFEXT_HOME}}/opt/core/share/liquidprompt/liquidprompt >/dev/null 2>&1
-        PROMPT_COMMAND=__prompt_without_x_mode
         unset PLUGIN_NAME
     fi
 fi
