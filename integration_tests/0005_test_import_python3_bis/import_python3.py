@@ -55,7 +55,6 @@ import flit_core
 import flit_scm
 import freezegun
 import frozenlist
-import future
 import ghp_import
 import gitignore_parser
 import hatch_fancy_pypi_readme
