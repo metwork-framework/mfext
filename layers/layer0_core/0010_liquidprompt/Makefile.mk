@@ -2,11 +2,11 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=liquidprompt
-export VERSION=v_1.11
+export VERSION=2.1.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=4b2562a5cc66829d18c0bffe368af8f0
-export ARCHIVE=$(VERSION).$(EXTENSION)
+export CHECKSUM=e1226b4019bcdd354a836590c391afa2
+export ARCHIVE=v$(VERSION).$(EXTENSION)
 DESCRIPTION=\
 LIQUIDPROMPT is a full-featured & carefully designed adaptive prompt for Bash & Zsh
 WEBSITE=https://github.com/nojhan/liquidprompt
