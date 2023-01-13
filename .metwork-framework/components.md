@@ -61,7 +61,6 @@
 | [flit_scm](https://pypi.org/project/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.3.1 | python3 |
-| [future](https://python-future.org) | 0.18.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.5.3 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
@@ -250,4 +249,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(249 components)*
+*(248 components)*
