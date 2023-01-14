@@ -6,6 +6,8 @@
 
 - add release in mfplugin configuration (#1482)
 - upgrade certifi to 2022.12.7 (security upgrade) (#1483)
+- upgrade liquidprompt to 2.1.2 (#1510)
+- remove python package future, useless since python2 is dead (#1511)
 
 ### Bug Fixes
 
