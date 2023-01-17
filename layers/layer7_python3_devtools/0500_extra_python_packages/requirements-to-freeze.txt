@@ -32,3 +32,4 @@ ipython
 jmespath
 pywget
 sftp-py
+python-ldap
