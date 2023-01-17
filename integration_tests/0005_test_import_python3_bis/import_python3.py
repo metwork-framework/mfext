@@ -55,7 +55,6 @@ import flit_core
 import flit_scm
 import freezegun
 import frozenlist
-import future
 import ghp_import
 import gitignore_parser
 import hatch_fancy_pypi_readme
@@ -129,6 +128,8 @@ import psycopg2
 import ptyprocess
 import pure_eval
 import py
+import pyasn1
+import pyasn1_modules
 import pycodestyle
 import pycparser
 import pydocstyle
@@ -150,6 +151,7 @@ import ptr #pytest-runner
 import xdist #pytest-xdist
 import pytest
 import dateutil #python-dateutil
+import ldap #python-ldap
 import pytz
 import pywget
 import yaml #PyYAML

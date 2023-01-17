@@ -61,7 +61,6 @@
 | [flit_scm](https://pypi.org/project/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.3.1 | python3 |
-| [future](https://python-future.org) | 0.18.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.5.3 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
@@ -97,7 +96,7 @@
 | [libgeotiff](https://www.hdfgroup.org) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.1 | scientific_core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
-| [liquidprompt](https://github.com/nojhan/liquidprompt) | v_1.11 | core |
+| [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.3 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.5.2 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
@@ -165,6 +164,8 @@
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
 | [py](https://py.readthedocs.io/) | 1.11.0 | python3_devtools |
+| [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3_devtools |
+| [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3_devtools |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.9.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
@@ -186,6 +187,7 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.0.2 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
+| [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3_devtools |
 | [Python](http://python.org/) | 3.10.8 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
@@ -250,4 +252,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(249 components)*
+*(251 components)*

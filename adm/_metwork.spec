@@ -393,15 +393,19 @@ EOF
             if test -d /home/{{MFMODULE_LOWERCASE}}; then
                 echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
                 mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+                mkdir /home/{{MFMODULE_LOWERCASE}}
+                if test -d /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh; then
+                    cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}
+                fi
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
                 {% if MFMODULE == "MFDATA" %}
                     rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
-                mkdir /home/{{MFMODULE_LOWERCASE}}
+                chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}
             fi
-            userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
-            rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
+            #userdel -f {{MFMODULE_LOWERCASE}} 2>/dev/null
+            #rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
         {% endif %}
         {% if MFMODULE == "MFEXT" %}
             if test -f /etc/rc.d/init.d/metwork; then

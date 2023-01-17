@@ -43,6 +43,8 @@ prompt-toolkit==3.0.32
 ptyprocess==0.7.0
 pure-eval==0.2.2
 py==1.11.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
 pydocstyle==6.1.1
 pyflakes==2.5.0
 pylint==2.15.5
@@ -55,6 +57,7 @@ pytest-httpserver==1.0.6
 pytest-metadata==2.0.4
 pytest-mock==3.10.0
 pytest-xdist==3.0.2
+python-ldap==3.4.3
 pywget==0.31
 pyyaml-env-tag==0.1
 repackage==0.7.3
