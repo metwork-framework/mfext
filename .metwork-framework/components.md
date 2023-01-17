@@ -165,6 +165,8 @@
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
 | [py](https://py.readthedocs.io/) | 1.11.0 | python3_devtools |
+| [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3_devtools |
+| [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3_devtools |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.9.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
@@ -187,6 +189,7 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.0.2 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
+| [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3_devtools |
 | [Python](http://python.org/) | 3.10.8 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
@@ -251,4 +254,8 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
+<<<<<<< HEAD
 *(250 components)*
+=======
+*(251 components)*
+>>>>>>> 9c1a2e1 (feat: add python-ldap and dependencies in layer python3_devtools (#1515))

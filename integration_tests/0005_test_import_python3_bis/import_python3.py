@@ -129,6 +129,8 @@ import psycopg2
 import ptyprocess
 import pure_eval
 import py
+import pyasn1
+import pyasn1_modules
 import pycodestyle
 import pycparser
 import pydocstyle
@@ -151,6 +153,7 @@ import ptr #pytest-runner
 import xdist #pytest-xdist
 import pytest
 import dateutil #python-dateutil
+import ldap #python-ldap
 import pytz
 import pywget
 import yaml #PyYAML
