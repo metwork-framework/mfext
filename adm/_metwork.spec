@@ -402,7 +402,8 @@ EOF
                 {% if MFMODULE == "MFDATA" %}
                     rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
-                chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}
+                chown -R --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
+                chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
             fi
             #userdel -f {{MFMODULE_LOWERCASE}} 2>/dev/null
             #rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
