@@ -1,2 +1,2 @@
-setuptools==63.2.0
+setuptools==65.5.1
 pip==22.2.2
