@@ -254,8 +254,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-<<<<<<< HEAD
-*(250 components)*
-=======
-*(251 components)*
->>>>>>> 9c1a2e1 (feat: add python-ldap and dependencies in layer python3_devtools (#1515))
+*(253 components)*
