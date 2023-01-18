@@ -312,7 +312,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         touch /etc/metwork.config >/dev/null 2>&1
     fi
     {% if MFMODULE != "MFEXT" %}
-        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm
+        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
             #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
             chmod --reference=/home/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
         fi
