@@ -8,6 +8,7 @@
 - upgrade certifi to 2022.12.7 (security upgrade) (#1483)
 - upgrade liquidprompt to 2.1.2 (#1510)
 - remove python package future, useless since python2 is dead (#1511)
+- add python-ldap and dependencies in layer python3_devtools (#1515)
 
 ### Bug Fixes
 
