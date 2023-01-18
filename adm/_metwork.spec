@@ -303,6 +303,19 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 
 
 {% if MFEXT_ADDON == "0" %}
+############################################################
+##### post SECTION (POSTINSTALLATION) FOR MAIN PACKAGE #####
+############################################################
+%post
+    {% if MFMODULE != "MFEXT" %}
+        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
+            #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            chmod --reference=/home/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
+        fi
+    {% endif %}
+{% endif %}
+
+{% if MFEXT_ADDON == "0" %}
 #####################################################################
 ##### post SECTION (POSTINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #####################################################################
@@ -311,12 +324,6 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         # to flush caches
         touch /etc/metwork.config >/dev/null 2>&1
     fi
-    {% if MFMODULE != "MFEXT" %}
-        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
-            #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
-            chmod --reference=/home/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
-        fi
-    {% endif %}
     {% if MFMODULE != "MFEXT" %}
         if ! test -f /etc/metwork.config; then
             echo GENERIC >/etc/metwork.config
@@ -403,6 +410,7 @@ EOF
                 #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
                 touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
                 chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+                chown --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/.home_{{MFMODULE_LOWERCASE}}.perm
                 #Keep .ssh directory for the next install
                 if test -d /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh; then
                     cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}
