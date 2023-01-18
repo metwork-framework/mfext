@@ -312,6 +312,12 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
         touch /etc/metwork.config >/dev/null 2>&1
     fi
     {% if MFMODULE != "MFEXT" %}
+        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm
+            #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            chmod --reference=/home/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
+        fi
+    {% endif %}
+    {% if MFMODULE != "MFEXT" %}
         if ! test -f /etc/metwork.config; then
             echo GENERIC >/etc/metwork.config
         fi
@@ -394,6 +400,10 @@ EOF
                 echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
                 mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
                 mkdir /home/{{MFMODULE_LOWERCASE}}
+                #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+                touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
+                chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+                #Keep .ssh directory for the next install
                 if test -d /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh; then
                     cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}
                 fi
@@ -405,6 +415,7 @@ EOF
                 chown -R --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
                 chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
             fi
+            #Keep /home/{{MFMODULE_LOWERCASE}} (almost empty) to keep permanent stuff such as .ssh directory
             #userdel -f {{MFMODULE_LOWERCASE}} 2>/dev/null
             #rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
         {% endif %}
