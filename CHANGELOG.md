@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### New Features
+
+- add python-ldap and dependencies in layer python3_devtools (backport #1515) (#1516)
+
 ### Bug Fixes
 
 - issue when metwork group exists but is missing in /etc/group (backport #1495) (#1496)
