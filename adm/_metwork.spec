@@ -413,7 +413,7 @@ EOF
                 mkdir /home/{{MFMODULE_LOWERCASE}}
                 #Keep .ssh directory for the next install
                 if test -d /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh; then
-                    cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}
+                    cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}/
                 fi
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
