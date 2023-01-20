@@ -396,6 +396,10 @@ EOF
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
 %postun {{MODULE_BRANCH}}
+    #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+    touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
+    chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+    chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{TARGET_LINK}} 2>/dev/null
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
@@ -407,10 +411,6 @@ EOF
                 echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
                 mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
                 mkdir /home/{{MFMODULE_LOWERCASE}}
-                #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
-                touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
-                chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/.home_{{MFMODULE_LOWERCASE}}.perm
-                chown --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/.home_{{MFMODULE_LOWERCASE}}.perm
                 #Keep .ssh directory for the next install
                 if test -d /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh; then
                     cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}
