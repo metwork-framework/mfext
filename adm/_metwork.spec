@@ -303,6 +303,19 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 
 
 {% if MFEXT_ADDON == "0" %}
+############################################################
+##### post SECTION (POSTINSTALLATION) FOR MAIN PACKAGE #####
+############################################################
+%post
+    {% if MFMODULE != "MFEXT" %}
+        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
+            #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            chmod --reference=/home/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
+        fi
+    {% endif %}
+{% endif %}
+
+{% if MFEXT_ADDON == "0" %}
 #####################################################################
 ##### post SECTION (POSTINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #####################################################################
@@ -383,6 +396,10 @@ EOF
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
 %postun {{MODULE_BRANCH}}
+    #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+    touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
+    chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+    chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{TARGET_LINK}} 2>/dev/null
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
@@ -393,15 +410,22 @@ EOF
             if test -d /home/{{MFMODULE_LOWERCASE}}; then
                 echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
                 mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+                mkdir /home/{{MFMODULE_LOWERCASE}}
+                #Keep .ssh directory for the next install
+                if test -d /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh; then
+                    cp -Rp /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/.ssh /home/{{MFMODULE_LOWERCASE}}/
+                fi
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
                 {% if MFMODULE == "MFDATA" %}
                     rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
-                mkdir /home/{{MFMODULE_LOWERCASE}}
+                chown -R --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
+                chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
             fi
-            userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
-            rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
+            #Keep /home/{{MFMODULE_LOWERCASE}} (almost empty) to keep permanent stuff such as .ssh directory
+            #userdel -f {{MFMODULE_LOWERCASE}} 2>/dev/null
+            #rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
         {% endif %}
         {% if MFMODULE == "MFEXT" %}
             if test -f /etc/rc.d/init.d/metwork; then
