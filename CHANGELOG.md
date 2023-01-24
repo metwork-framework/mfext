@@ -5,10 +5,12 @@
 ### New Features
 
 - add python-ldap and dependencies in layer python3_devtools (backport #1515) (#1516)
+- keep permissions on /home/mfxxx and .ssh directory when upgrading (backport #1525) (#1529)
 
 ### Bug Fixes
 
 - issue when metwork group exists but is missing in /etc/group (backport #1495) (#1496)
+- do not echo on /dev/stderr, which doesn't work after sudo (backport #1530) (#1531)
 
 ## v2.1.1 (2023-01-06)
 
