@@ -64,7 +64,7 @@
 | [graphviz](https://graphviz.org) | 2.40.1 | devtools |
 | [hdf5](https://www.hdfgroup.org) | 1.10.5 | scientific_core |
 | [idna](https://github.com/kjd/idna) | 2.8 | python3 |
-| [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 1.6.0 | python3_devtools |
+| [importlib-metadata](http://importlib-metadata.readthedocs.io/) | 1.6.0 | python3 |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.1.8 | python3 |
 | [isort](https://github.com/timothycrosley/isort) | 4.3.21 | python3_devtools |
 | [jasper](http://www.ece.uvic.ca/~frodo/jasper/) | 2.0.14 | scientific_core |
