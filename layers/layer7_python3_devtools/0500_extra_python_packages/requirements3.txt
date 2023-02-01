@@ -48,4 +48,3 @@ tornado==6.0.4
 typed-ast==1.4.1
 Werkzeug==1.0.1
 wrapt==1.12.1
-zipp==1.2.0
