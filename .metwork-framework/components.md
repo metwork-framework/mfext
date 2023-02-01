@@ -189,6 +189,7 @@
 | [toml](https://github.com/uiri/toml) | 0.10.1 | python3_devtools |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
+| [tqdm](https://github.com/tqdm/tqdm) | 4.52.0 | python3_devtools |
 | [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.7.4.2 | python3 |
 | [ujson](http://www.esn.me) | 1.35 | monitoring |
@@ -207,4 +208,4 @@
 | [yarl](https://github.com/aio-libs/yarl/) | 1.5.1 | python3 |
 | [zipp](https://github.com/jaraco/zipp) | 1.2.0 | python3_devtools |
 
-*(206 components)*
+*(207 components)*
