@@ -1,5 +1,11 @@
 # release_1.0 CHANGELOG
 
+## v1.0.24 (2023-02-01)
+
+### New Features
+
+- upgrade log_proxy to change mode on logs (0644) (#1279)
+
 ## v1.0.23 (2021-10-16)
 
 ### New Features
