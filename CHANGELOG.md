@@ -10,6 +10,7 @@
 - remove python package future, useless since python2 is dead (#1511)
 - add python-ldap and dependencies in layer python3_devtools (#1515)
 - keep permissions on /home/mfxxx and .ssh directory when upgrading (#1525)
+- upgrade from python 3.10.8 to 3.10.9 (#1540)
 
 ### Bug Fixes
 
