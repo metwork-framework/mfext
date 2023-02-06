@@ -23,15 +23,18 @@ OVERRIDE=0
 if test -f "${REALDIRNAME}/override"; then
     OVERRIDE=1
 fi
+#Until pip 23, wheel cache was not used with option --no-binary
+#With pip 23, wheel cache will be used with option --no-binary (it will speed up Metwork build)
+#Option --use-feature=no-binary-enable-wheel-cache reproduce this behavior with pip 22
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
     if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
         BINARY=""
     else
         BLIST=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
-        BINARY="--no-binary :all: --only-binary ${BLIST}"
+        BINARY="--use-feature=no-binary-enable-wheel-cache --no-binary :all: --only-binary ${BLIST}"
     fi
 else
-    BINARY="--no-binary :all:"
+    BINARY="--use-feature=no-binary-enable-wheel-cache --no-binary :all:"
 fi
 
      

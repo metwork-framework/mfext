@@ -8,6 +8,9 @@
 - upgrade certifi to 2022.12.7 (security upgrade) (#1483)
 - upgrade liquidprompt to 2.1.2 (#1510)
 - remove python package future, useless since python2 is dead (#1511)
+- add python-ldap and dependencies in layer python3_devtools (#1515)
+- keep permissions on /home/mfxxx and .ssh directory when upgrading (#1525)
+- upgrade from python 3.10.8 to 3.10.9 (#1540)
 
 ### Bug Fixes
 
@@ -16,5 +19,6 @@
 - .releaseignore / make release : incorrect exclusion with lines beginning with ! (#1490)
 - update mfplugin to fix a tmpdir plugins issue (mfbase #212)  (#1492)
 - issue when metwork group exists but is missing in /etc/group (#1495)
+- do not echo on /dev/stderr, which doesn't work after sudo (#1530)
 
 
