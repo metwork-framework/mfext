@@ -10,7 +10,6 @@ python3@mfext
 -python3_mapserverapi@mfext
 -python3_vim@mfext
 -python3_devtools@mfext
--python3_devtools_jupyter@mfext
 -monitoring@mfext
 -java@mfext
 -nodejs@mfext
@@ -18,3 +17,4 @@ python3@mfext
 -python3_scientific_core@mfext
 -elasticsearch@mfext
 -python3_radartools@mfext
+-php@mfext
