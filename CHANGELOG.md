@@ -11,6 +11,7 @@
 - add python-ldap and dependencies in layer python3_devtools (#1515)
 - keep permissions on /home/mfxxx and .ssh directory when upgrading (#1525)
 - upgrade from python 3.10.8 to 3.10.9 (#1540)
+- upgrade cryptography from 38.0.3 to 39.0.1 (security upgrade) (#1546)
 
 ### Bug Fixes
 

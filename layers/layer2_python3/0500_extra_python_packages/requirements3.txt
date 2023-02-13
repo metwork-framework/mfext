@@ -20,7 +20,7 @@ commonmark==0.9.1
 -e git+https://github.com/metwork-framework/cookiecutter.git@4e6aad439db5d83ada89f71ed49bcede057dbf01#egg=cookiecutter
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@c9124c2b54c1c05cd83eb3d3454cc4214485c45d#egg=cookiecutter_hooks
 cron-wrapper==0.1.2
-cryptography==38.0.3
+cryptography==39.0.1
 decorator==5.1.1
 -e git+https://github.com/metwork-framework/deploycron.git@8d31e6d3f5be2d13018b523c9ebd94b4e0b27061#egg=deploycron
 Deprecated==1.2.13
