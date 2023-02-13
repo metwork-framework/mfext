@@ -78,7 +78,7 @@
 | [importlib-metadata](https://github.com/python/importlib_metadata) | 4.11.4 | python3_core |
 | [iniconfig](http://github.com/RonnyPfannschmidt/iniconfig) | 1.1.1 | python3_devtools |
 | [inotify-simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
-| [ipython](https://ipython.org) | 8.6.0 | python3_devtools |
+| [ipython](https://ipython.org) | 8.10.0 | python3_devtools |
 | [isort](https://pycqa.github.io/isort/) | 5.10.1 | python3_devtools |
 | [jedi](https://github.com/davidhalter/jedi) | 0.18.1 | python3_devtools |
 | [jinja2-fnmatch-extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 1.0.2 | python3 |
