@@ -13,7 +13,7 @@ flake8-docstrings==1.6.0
 freezegun==1.2.2
 ghp-import==2.1.0
 iniconfig==1.1.1
-ipython==8.6.0
+ipython==8.10.0
 isort==5.10.1
 jedi==0.18.1
 jmespath==1.0.1
