@@ -12,6 +12,7 @@
 - keep permissions on /home/mfxxx and .ssh directory when upgrading (#1525)
 - upgrade from python 3.10.8 to 3.10.9 (#1540)
 - upgrade cryptography from 38.0.3 to 39.0.1 (security upgrade) (#1546)
+- bump ipython from 8.6.0 to 8.10.0 (security update) (#1548)
 
 ### Bug Fixes
 
