@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if test "$METWORK_PROFILE_LOADED" == "1"; then
+    if test "$MFEXT_HOME" != "{{MFEXT_HOME}}"; then
+        echo "Metwork profile is already loaded with MFEXT_HOME = $MFEXT_HOME"
+        echo "ERROR : can't load Metwork profile with MFEXT_HOME = {{MFEXT_HOME}}"
+        exit 1
+    fi
+fi
+
 export METWORK_PROFILE_LOADING=1
 
 # We se the umask
