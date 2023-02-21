@@ -6,6 +6,7 @@
 
 - add python-ldap and dependencies in layer python3_devtools (backport #1515) (#1516)
 - keep permissions on /home/mfxxx and .ssh directory when upgrading (backport #1525) (#1529)
+- upgrade Werkzeug to 2.2.3 (security upgrade) (backport #1551) (#1552)
 
 ### Bug Fixes
 
