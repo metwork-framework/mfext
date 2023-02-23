@@ -14,6 +14,7 @@
 - upgrade cryptography from 38.0.3 to 39.0.1 (security upgrade) (#1546)
 - bump ipython from 8.6.0 to 8.10.0 (security update) (#1548)
 - upgrade Werkzeug to 2.2.3 (security upgrade) (#1551)
+- add a warning when loading a second and different Metwork profile (#1556)
 
 ### Bug Fixes
 
