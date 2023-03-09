@@ -54,6 +54,7 @@ pytest-asyncio==0.20.1
 pytest-cov==4.0.0
 pytest-html==3.2.0
 pytest-httpserver==1.0.6
+pytest-json-report==1.5.0
 pytest-metadata==2.0.4
 pytest-mock==3.10.0
 pytest-xdist==3.0.2
@@ -61,6 +62,7 @@ python-ldap==3.4.3
 pywget==0.31
 pyyaml-env-tag==0.1
 repackage==0.7.3
+setuptools-git-versioning==1.13.2
 sftp-py==0.2.1
 snowballstemmer==2.2.0
 stack-data==0.6.0
