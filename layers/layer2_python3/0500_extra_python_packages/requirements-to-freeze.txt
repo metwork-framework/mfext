@@ -51,3 +51,5 @@ dill
 regex
 #termcolor is a dependency in layers python3_devtools and python3_ia
 termcolor
+#mypy-extensions is a dependency for both python3_devtools and python3_scientific
+mypy-extensions
