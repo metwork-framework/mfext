@@ -15,6 +15,7 @@
 - bump ipython from 8.6.0 to 8.10.0 (security update) (#1548)
 - upgrade Werkzeug to 2.2.3 (security upgrade) (#1551)
 - add a warning when loading a second and different Metwork profile (#1556)
+- add pytest-json-report, setuptools-git-versioning, mypy-extensions (#1559)
 
 ### Bug Fixes
 
