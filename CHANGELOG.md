@@ -16,6 +16,7 @@
 - upgrade Werkzeug to 2.2.3 (security upgrade) (#1551)
 - add a warning when loading a second and different Metwork profile (#1556)
 - add pytest-json-report, setuptools-git-versioning, mypy-extensions (#1559)
+- migrate from Python 3.10.9 to 3.10.10 (#1561)
 
 ### Bug Fixes
 
