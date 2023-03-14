@@ -154,7 +154,6 @@
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 14.5 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
-| [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.32 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.3 | python3 |
@@ -188,12 +187,12 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3_devtools |
-| [Python](http://python.org/) | 3.10.9 | python3_core |
+| [Python](http://python.org/) | 3.11.2 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
-| [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
+| [pyzmq](https://pyzmq.readthedocs.org) | 23.2.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/redis/redis-py) | 4.3.4 | python3 |
@@ -252,4 +251,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(251 components)*
+*(250 components)*
