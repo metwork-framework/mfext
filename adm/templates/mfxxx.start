@@ -58,7 +58,11 @@ if test "${PLUGIN_NAME}" != ""; then
     exit 1
 fi
 if test "${NOINIT}" = "0"; then
-    if ! test -d ${MFMODULE_RUNTIME_HOME}/var/plugins; then
+    DIR_INIT="plugins"
+    {% if MFMODULE == "MFBASE" %}
+    DIR_INIT="pgsql"
+    {% endif %}
+    if ! test -d ${MFMODULE_RUNTIME_HOME}/var/${DIR_INIT}; then
         {{MFMODULE_LOWERCASE}}.init
     fi
     {% if MFMODULE != "MFBASE" %}
