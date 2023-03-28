@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- remove useless and dangerous call to mfxxx.init in mfxxx.start (backport #1563) (#1564)
+
 ## v2.1.2 (2023-02-23)
 
 ### New Features
