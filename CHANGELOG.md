@@ -27,5 +27,6 @@
 - issue when metwork group exists but is missing in /etc/group (#1495)
 - do not echo on /dev/stderr, which doesn't work after sudo (#1530)
 - remove useless and dangerous call to mfxxx.init in mfxxx.start (#1563)
+- update redis to 4.3.6 to fix vulnerability (#1567)
 
 
