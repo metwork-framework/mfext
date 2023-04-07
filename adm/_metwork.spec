@@ -397,9 +397,11 @@ EOF
 #########################################################################
 %postun {{MODULE_BRANCH}}
     #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
-    touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
-    chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
-    chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+    if test -d /home/{{MFMODULE_LOWERCASE}}; then
+        touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
+        chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+        chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+    fi
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{TARGET_LINK}} 2>/dev/null
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
