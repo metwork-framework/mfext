@@ -5,6 +5,7 @@
 ### Bug Fixes
 
 - remove useless and dangerous call to mfxxx.init in mfxxx.start (backport #1563) (#1564)
+- prevent error messages when uninstalling rpms in some corny case (backport #1570) (#1571)
 
 ## v2.1.2 (2023-02-23)
 
