@@ -28,5 +28,6 @@
 - do not echo on /dev/stderr, which doesn't work after sudo (#1530)
 - remove useless and dangerous call to mfxxx.init in mfxxx.start (#1563)
 - update redis to 4.3.6 to fix vulnerability (#1567)
+- prevent error messages when uninstalling rpms in some corny case (#1570)
 
 
