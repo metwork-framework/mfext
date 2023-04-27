@@ -17,6 +17,7 @@
 - add a warning when loading a second and different Metwork profile (#1556)
 - add pytest-json-report, setuptools-git-versioning, mypy-extensions (#1559)
 - migrate from Python 3.10.9 to 3.10.10 (#1561)
+- save module status to json file (#1572) (#1573)
 
 ### Bug Fixes
 
