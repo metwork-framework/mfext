@@ -164,7 +164,6 @@
 | [psycopg2](https://psycopg.org/) | 2.9.3 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
-| [py](https://py.readthedocs.io/) | 1.11.0 | python3_devtools |
 | [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3_devtools |
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3_devtools |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.9.1 | python3 |
@@ -180,7 +179,7 @@
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.3.1 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.20.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 4.0.0 | python3_devtools |
-| [pytest-html](https://github.com/pytest-dev/pytest-html) | 3.2.0 | python3_devtools |
+| [pytest-html](https://pypi.org/project/pytest-html) | 4.0.0rc4 | python3_devtools |
 | [pytest-httpserver](https://github.com/csernazs/pytest-httpserver) | 1.0.6 | python3_devtools |
 | [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 2.0.4 | python3_devtools |
@@ -255,4 +254,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(254 components)*
+*(253 components)*
