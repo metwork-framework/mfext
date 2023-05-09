@@ -78,7 +78,7 @@ tqdm==4.64.1
 traitlets==5.5.0
 Unidecode==1.3.6
 urllib3==1.26.12
-Werkzeug==2.2.3
+Werkzeug==2.3.4
 whichcraft==0.6.1
 wrapt==1.14.1
 -e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile

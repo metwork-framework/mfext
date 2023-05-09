@@ -240,7 +240,7 @@
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 2.1.9 | python3_devtools |
 | [wcmatch](https://pypi.org/project/wcmatch) | 8.4.1 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
-| [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 2.2.3 | python3 |
+| [Werkzeug](https://pypi.org/project/Werkzeug) | 2.3.4 | python3 |
 | [wheel](https://github.com/pypa/wheel) | 0.38.4 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.14.1 | python3 |
