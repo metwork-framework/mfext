@@ -42,7 +42,6 @@ pickleshare==0.7.5
 prompt-toolkit==3.0.32
 ptyprocess==0.7.0
 pure-eval==0.2.2
-py==1.11.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pydocstyle==6.1.1
@@ -52,7 +51,7 @@ pymdown-extensions==9.8
 pytest==7.2.0
 pytest-asyncio==0.20.1
 pytest-cov==4.0.0
-pytest-html==3.2.0
+pytest-html==4.0.0rc4
 pytest-httpserver==1.0.6
 pytest-json-report==1.5.0
 pytest-metadata==2.0.4

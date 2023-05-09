@@ -128,7 +128,6 @@ import psycopg_c
 import psycopg2
 import ptyprocess
 import pure_eval
-import py
 import pyasn1
 import pyasn1_modules
 import pycodestyle
