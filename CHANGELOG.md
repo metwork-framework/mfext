@@ -18,6 +18,8 @@
 - add pytest-json-report, setuptools-git-versioning, mypy-extensions (#1559)
 - migrate from Python 3.10.9 to 3.10.10 (#1561)
 - save module status to json file (#1572) (#1573)
+- upgrade pytest-html to 4.0.0 and remove py dependency (#1576)
+- upgrade Werkzeug from 2.2.3 to 2.3.4 (#1577)
 
 ### Bug Fixes
 
