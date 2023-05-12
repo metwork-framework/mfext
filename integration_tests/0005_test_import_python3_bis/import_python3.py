@@ -120,7 +120,6 @@ import pip
 import platformdirs
 import pluggy
 import poyo
-import pprintpp
 import prompt_toolkit
 import psutil
 import psycopg

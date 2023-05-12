@@ -35,7 +35,7 @@
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.1.1 | python3 |
 | [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
-| [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 4e6aad4 | python3 |
+| [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 6d12c5b | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 6.5.0 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 39.0.1 | python3 |
@@ -64,7 +64,7 @@
 | [gdal](http://www.gdal.org) | 3.5.3 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
-| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.0 | python3 |
+| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.3 | python3 |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 22.8.0 | python3 |
 | [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.0 | python3 |
 | [hatch-requirements-txt](https://pypi.org/project/hatch-requirements-txt) | 0.2.0 | python3 |
@@ -155,7 +155,6 @@
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 14.5 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
-| [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.32 | python3_devtools |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.3 | python3 |
@@ -189,12 +188,12 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3_devtools |
-| [Python](http://python.org/) | 3.10.10 | python3_core |
+| [Python](http://python.org/) | 3.11.3 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
-| [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
+| [pyzmq](https://pyzmq.readthedocs.org) | 23.2.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
 | [redis](https://github.com/redis/redis-py) | 4.3.6 | python3 |
@@ -254,4 +253,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(253 components)*
+*(252 components)*
