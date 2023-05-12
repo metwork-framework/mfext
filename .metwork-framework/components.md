@@ -126,6 +126,7 @@
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
 | [more-itertools](https://pypi.org/project/more-itertools) | 9.0.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.0.2 | python3 |
+| [mypy-extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.2.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
@@ -162,7 +163,6 @@
 | [psycopg2](https://psycopg.org/) | 2.9.3 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
-| [py](https://py.readthedocs.io/) | 1.11.0 | python3_devtools |
 | [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3_devtools |
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3_devtools |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.9.1 | python3 |
@@ -178,8 +178,9 @@
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.3.1 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.20.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 4.0.0 | python3_devtools |
-| [pytest-html](https://github.com/pytest-dev/pytest-html) | 3.2.0 | python3_devtools |
+| [pytest-html](https://pypi.org/project/pytest-html) | 4.0.0rc4 | python3_devtools |
 | [pytest-httpserver](https://github.com/csernazs/pytest-httpserver) | 1.0.6 | python3_devtools |
+| [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 2.0.4 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.10.0 | python3_devtools |
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
@@ -195,13 +196,14 @@
 | [pyzmq](https://pyzmq.readthedocs.org) | 23.2.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
-| [redis](https://github.com/redis/redis-py) | 4.3.4 | python3 |
+| [redis](https://github.com/redis/redis-py) | 4.3.6 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.3.0 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.28.1 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 12.6.0 | python3 |
 | [semantic-version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
+| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.2 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.5.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 7.0.5 | python3_core |
@@ -237,7 +239,7 @@
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 2.1.9 | python3_devtools |
 | [wcmatch](https://pypi.org/project/wcmatch) | 8.4.1 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
-| [Werkzeug](https://palletsprojects.com/p/werkzeug/) | 2.2.3 | python3 |
+| [Werkzeug](https://pypi.org/project/Werkzeug) | 2.3.4 | python3 |
 | [wheel](https://github.com/pypa/wheel) | 0.38.4 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.14.1 | python3 |
@@ -251,4 +253,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(250 components)*
+*(252 components)*

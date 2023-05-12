@@ -101,6 +101,7 @@ import mock
 import mockredis
 import more_itertools
 import multidict
+import mypy_extensions
 import natsort
 import netifaces
 import nltk
@@ -125,7 +126,6 @@ import psycopg_c
 import psycopg2
 import ptyprocess
 import pure_eval
-import py
 import pyasn1
 import pyasn1_modules
 import pycodestyle
@@ -143,6 +143,7 @@ import pytest_asyncio
 import pytest_cov
 import pytest_html
 import pytest_httpserver
+import pytest_jsonreport
 import pytest_metadata
 import pytest_mock
 import ptr #pytest-runner
@@ -162,6 +163,7 @@ import requests
 import rich
 import semantic_version
 import setuptools_git
+import setuptools_git_versioning
 import setuptools_rust
 import setuptools_scm
 import setuptools

@@ -1,5 +1,26 @@
 # release_2.1 CHANGELOG
 
+## v2.1.3 (2023-04-08)
+
+### Bug Fixes
+
+- remove useless and dangerous call to mfxxx.init in mfxxx.start (backport #1563) (#1564)
+- prevent error messages when uninstalling rpms in some corny case (backport #1570) (#1571)
+
+## v2.1.2 (2023-02-23)
+
+### New Features
+
+- add python-ldap and dependencies in layer python3_devtools (backport #1515) (#1516)
+- keep permissions on /home/mfxxx and .ssh directory when upgrading (backport #1525) (#1529)
+- upgrade Werkzeug to 2.2.3 (security upgrade) (backport #1551) (#1552)
+- add a warning when loading a second and different Metwork profile (backport #1556) (#1558)
+
+### Bug Fixes
+
+- issue when metwork group exists but is missing in /etc/group (backport #1495) (#1496)
+- do not echo on /dev/stderr, which doesn't work after sudo (backport #1530) (#1531)
+
 ## v2.1.1 (2023-01-06)
 
 ### New Features
