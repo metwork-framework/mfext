@@ -14,14 +14,13 @@ CURRENT_LAYER=$(shell cat $(_PARENT_PWD)/.layerapi2_label)
 #Use gcc-toolset-10 if gcc version < 10
 GCC_VERSION=`gcc --version | head -1 | cut -d" " -f3 | cut -d"." -f1`
 
-#ifeq ($(shell expr $(GCC_VERSION) = "8" ), 1)
-#    export SCL='scl enable gcc-toolset-10 --'
-#else ifeq ($(shell expr $(GCC_VERSION) = "9" ), 1)
-#    export SCL='scl enable gcc-toolset-10 --'
-#else
-#    export SCL=''
-#endif
-export SCL=''
+ifeq ($(shell expr $(GCC_VERSION) = "8" ), 1)
+    export SCL='scl enable gcc-toolset-10 --'
+else ifeq ($(shell expr $(GCC_VERSION) = "9" ), 1)
+    export SCL='scl enable gcc-toolset-10 --'
+else
+    export SCL=''
+endif
 
 .DEFAULT_GOAL := all
 
