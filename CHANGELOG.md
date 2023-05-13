@@ -20,6 +20,7 @@
 - save module status to json file (#1572) (#1573)
 - upgrade pytest-html to 4.0.0 and remove py dependency (#1576)
 - upgrade Werkzeug from 2.2.3 to 2.3.4 (#1577)
+- upgrade from Python 3.10.10 to Python 3.11.3 (#1578)
 
 ### Bug Fixes
 
