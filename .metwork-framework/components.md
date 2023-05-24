@@ -172,7 +172,7 @@
 | [Pygments](https://pygments.org/) | 2.13.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://pypi.org/project/pylint) | 2.15.5 | python3_devtools |
-| [pymdown-extensions](https://pypi.org/project/pymdown-extensions) | 9.8 | python3_devtools |
+| [pymdown-extensions](https://pypi.org/project/pymdown-extensions) | 10.0.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://pypi.org/project/pyparsing) | 3.0.9 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.3.1 | python3 |
