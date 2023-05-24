@@ -21,6 +21,8 @@
 - upgrade pytest-html to 4.0.0 and remove py dependency (#1576)
 - upgrade Werkzeug from 2.2.3 to 2.3.4 (#1577)
 - upgrade from Python 3.10.10 to Python 3.11.3 (#1578)
+- bump pymdown-extensions from 9.8 to 10.0 (security update) (#1581)
+- bump requests from 2.28.1 to 2.31.0 (security update) (#1582)
 
 ### Bug Fixes
 
