@@ -200,7 +200,7 @@
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.3.0 | python3 |
-| [requests](https://requests.readthedocs.io) | 2.28.1 | python3 |
+| [requests](https://requests.readthedocs.io) | 2.31.0 | python3 |
 | [rich](https://github.com/willmcgugan/rich) | 12.6.0 | python3 |
 | [semantic-version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.2 | python3_devtools |
