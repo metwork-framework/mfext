@@ -53,3 +53,4 @@ regex
 termcolor
 #mypy-extensions is a dependency for both python3_devtools and python3_scientific
 mypy-extensions
+geojson
