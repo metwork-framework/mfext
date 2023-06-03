@@ -25,6 +25,7 @@
 - bump requests from 2.28.1 to 2.31.0 (security update) (#1582)
 - bump tornado from 6.2 to 6.3.2 (for security reason) (#1585)
 - bump importlib-metadata from 4.11.4 to 4.13.0 (#1586)
+- add python package geojson (#1587)
 
 ### Bug Fixes
 
