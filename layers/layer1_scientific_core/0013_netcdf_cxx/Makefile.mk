@@ -5,7 +5,7 @@ export NAME=netcdf-cxx4
 export VERSION=4.3.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=b4a9783b2b0b98d4e6f36cc19c8d08ef
+export CHECKSUM=f840a75d3c68390fb7392be5c3f663cd
 DESCRIPTION=\
 NETCDF_CXX4 is the C++ API of NETCDF4
 WEBSITE=http://www.unidata.ucar.edu/software/netcdf/
