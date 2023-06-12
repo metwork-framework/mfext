@@ -143,6 +143,8 @@
 | [poyo](https://github.com/hackebrot/poyo) | 0.4.2 | python3 |
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
+| [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
+| [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
 | [py](https://py.readthedocs.io/) | 1.10.0 | python3_devtools |
@@ -223,4 +225,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(222 components)*
+*(224 components)*
