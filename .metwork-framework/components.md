@@ -158,6 +158,8 @@
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.32 | python3_devtools |
+| [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
+| [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.3 | python3 |
 | [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.4 | python3_scientific_core |
 | [psycopg](https://psycopg.org/psycopg3/) | 3.1.4 | python3_scientific_core |
@@ -254,4 +256,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(253 components)*
+*(255 components)*
