@@ -9,6 +9,7 @@
 | [astroid](https://github.com/PyCQA/astroid) | 2.4.1 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async_timeout/) | 3.0.1 | python3 |
 | [attrs](https://www.attrs.org/) | 19.3.0 | python3 |
+| [autoconf](https://www.gnu.org/software/autoconf) | 2.64 | core |
 | [autopep8](https://github.com/hhatto/autopep8) | 1.4.4 | python3 |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 3.1.7 | python3 |
@@ -144,7 +145,7 @@
 | [pprintpp](https://github.com/wolever/pprintpp) | 0.4.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 6.2.1 | scientific_core |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
-| [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
+| [protobuf](https://developers.google.com/protocol-buffers) | 3.12.2 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
 | [py](https://py.readthedocs.io/) | 1.10.0 | python3_devtools |
@@ -225,4 +226,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.4.1 | python3_core |
 
-*(224 components)*
+*(225 components)*
