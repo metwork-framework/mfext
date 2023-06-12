@@ -5,7 +5,7 @@ export NAME=netcdf-c
 export VERSION=4.7.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=f6eedb82de4c601cc1f70e5a42bb285e
+export CHECKSUM=5ebcafd3fee1d48559687b5ace414fe8
 DESCRIPTION=\
 NETCDF-C is the C API of NETCDF format
 WEBSITE=http://www.unidata.ucar.edu/software/netcdf/
