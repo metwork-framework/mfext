@@ -1,5 +1,14 @@
 # release_1.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add protobuf-c and add protobuf support in postgis
+- add protobuf-c and add protobuf support in postgis (#1590)
+- add autoconf 2.64
+- add autoconf 2.64 (#1591)
+
 ## v1.2.6 (2022-05-19)
 
 ### Bug Fixes
