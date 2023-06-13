@@ -26,6 +26,7 @@
 - bump tornado from 6.2 to 6.3.2 (for security reason) (#1585)
 - bump importlib-metadata from 4.11.4 to 4.13.0 (#1586)
 - add python package geojson (#1587)
+- add protobuf-c and add protobuf support in postgis (#1589)
 
 ### Bug Fixes
 
