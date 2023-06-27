@@ -28,6 +28,7 @@
 - add python package geojson (#1587)
 - add protobuf-c and add protobuf support in postgis (#1589)
 - bump cryptography from 39.0.1 to 41.0.1 (for security reason) (#1598)
+- mfadmin crontab : keep kibana web interface and ES config (#1600)
 
 ### Bug Fixes
 
