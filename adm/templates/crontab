@@ -10,7 +10,7 @@
 # Cleaning of tmp subdirectory
 {% if MFMODULE == "MFADMIN" %}
 0 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type f -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto/*" -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/kibana/*" -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/elasticsearch/config/*" -mtime +{{misc_tmp_max_age}} -delete'
-30 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type d -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto" --not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/kibana/*" -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/elasticsearch/config/" -mtime +{{misc_tmp_max_age}} -exec rmdir {} \;'
+30 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type d -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto" -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/kibana/*" -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/elasticsearch/config/" -mtime +{{misc_tmp_max_age}} -exec rmdir {} \;'
 {% else %}
 0 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type f -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto/*" -mtime +{{misc_tmp_max_age}} -delete'
 30 2 * * * {{MFMODULE_HOME}}/bin/cronwrap.sh --lock --timeout=3600 --log-capture-to=NULL -- 'find {{MFMODULE_RUNTIME_HOME}}/tmp -type d -not -path "{{MFMODULE_RUNTIME_HOME}}/tmp/config_auto" -mtime +{{misc_tmp_max_age}} -exec rmdir {} \;'
