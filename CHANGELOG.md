@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- mfadmin crontab : keep kibana web interface and ES config (backport #1600) (#1602)
+
 ## v2.0.4 (2022-10-28)
 
 ### New Features
