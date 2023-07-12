@@ -47,11 +47,11 @@ fi
 TMPFILE="${TMPDIR:-/tmp}/pip_show.$$"
 pip --disable-pip-version-check show "${PACKAGE}" >"${TMPFILE}"
 
-NAME=$(cat "${TMPFILE}" |grep "^Name: " |sed 's/^Name: //g')
-VERSION=$(cat "${TMPFILE}" |grep "^Version: " |sed 's/^Version: //g')
-DESCRIPTION=$(cat "${TMPFILE}" |grep "^Summary: " |sed 's/^Summary: //g')
-WEBSITE=$(cat "${TMPFILE}" |grep "^Home-page: " |sed 's/^Home-page: //g')
-LICENSE=$(cat "${TMPFILE}" |grep "^License: " |sed 's/^License: //g')
+NAME=$(cat "${TMPFILE}" |grep "^Name: " | head -1 | sed 's/^Name: //g')
+VERSION=$(cat "${TMPFILE}" |grep "^Version: " | head -1 | sed 's/^Version: //g')
+DESCRIPTION=$(cat "${TMPFILE}" |grep "^Summary: " | head -1 | sed 's/^Summary: //g')
+WEBSITE=$(cat "${TMPFILE}" |grep "^Home-page: " | head -1 | sed 's/^Home-page: //g')
+LICENSE=$(cat "${TMPFILE}" |grep "^License: " | head -1 | sed 's/^License: //g')
 
 TARGET="${METWORK_PACKAGES}/${NAME}.yaml"
 
