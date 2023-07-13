@@ -65,7 +65,7 @@
 | [geojson](https://github.com/jazzband/geojson) | 3.0.1 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
-| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.3 | python3 |
+| [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.4 | python3 |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 22.8.0 | python3 |
 | [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.0 | python3 |
 | [hatch-requirements-txt](https://pypi.org/project/hatch-requirements-txt) | 0.2.0 | python3 |
