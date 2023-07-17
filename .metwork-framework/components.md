@@ -137,7 +137,7 @@
 | [proj](http://trac.osgeo.org/proj/) | 6.3.2 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.28 | python3_devtools |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
-| [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
+| [protobuf](https://developers.google.com/protocol-buffers) | 3.12.2 | scientific |
 | [psutil](https://github.com/giampaolo/psutil) | 5.6.6 | python3 |
 | [psycopg2](https://psycopg.org/) | 2.8.5 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
