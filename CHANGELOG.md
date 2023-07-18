@@ -4,6 +4,12 @@
 
 ### New Features
 
+- add protobuf support in postgis (#1612)
+
+## v2.0.5 (2023-06-30)
+
+### New Features
+
 - mfadmin crontab : keep kibana web interface and ES config (backport #1600) (#1602)
 
 ## v2.0.4 (2022-10-28)
