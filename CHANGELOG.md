@@ -30,6 +30,7 @@
 - bump cryptography from 39.0.1 to 41.0.1 (for security reason) (#1598)
 - mfadmin crontab : keep kibana web interface and ES config (#1600)
 - update gitignore-parser to 0.1.4 (#1606)
+- bump cryptography to 41.0.2 (security update) (#1608)
 
 ### Bug Fixes
 
