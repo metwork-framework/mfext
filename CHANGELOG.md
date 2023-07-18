@@ -1,10 +1,11 @@
 # release_2.1 CHANGELOG
 
-## [Unreleased]
+## v2.1.4 (2023-07-17)
 
 ### New Features
 
 - mfadmin crontab : keep kibana web interface and ES config (backport #1600) (#1603)
+- add protobuf-c and add protobuf support in postgis (backport #1589) (#1610)
 
 ## v2.1.3 (2023-04-08)
 
