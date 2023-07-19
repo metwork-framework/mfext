@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## v2.0.6 (2023-07-18)
+
+### New Features
+
+- add protobuf support in postgis (#1612)
+
 ## v2.0.5 (2023-06-30)
 
 ### New Features
