@@ -1,6 +1,6 @@
 # release_2.0 CHANGELOG
 
-## [Unreleased]
+## v2.0.6 (2023-07-18)
 
 ### New Features
 
