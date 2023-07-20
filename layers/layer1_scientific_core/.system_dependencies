@@ -1,6 +1,7 @@
 libcairo.so.2()(64bit)@generic
 libgfortran.so.5()(64bit)@generic
 libjpeg.so.62()(64bit)@generic
+libldap-2.4.so.2()(64bit)@generic
 libopenblas.so.0()(64bit)@generic
 libpixman-1.so.0()(64bit)@generic
 libtiff.so.5()(64bit)@generic
