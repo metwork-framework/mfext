@@ -1,7 +1,8 @@
 #!/bin/bash
 
 
-OK_DEPS=$(cat list.txt list_ok_not_found.txt |xargs)
+OK_DEPS=$(cat list.txt|xargs)
+OK_NOT_FOUND=$(cat list_ok_not_found.txt |xargs)
 
 #N=$(cat /etc/redhat-release 2>/dev/null |grep -c "^CentOS release 6")
 #if test "${N}" -eq 0; then
@@ -31,6 +32,24 @@ for layer in `ls`; do
         fi
     done
     echo "--- external dependencies ---" ${DEPS2}
+    for DEP in ${DEPS2}; do
+        FOUND=0
+        for OK_DEP in ${OK_DEPS}; do
+            if test "${DEP}" = "${OK_DEP}"; then
+                FOUND=1
+                break
+            fi
+        done
+        if test "${FOUND}" = "1"; then
+            continue
+        fi
+        echo "***** ${DEP} *****"
+        echo "=== revert ldd ==="
+        revert_ldd.sh "${DEP}"
+        echo
+        echo
+        RET=1
+    done
     DEPS3=$(layer_wrapper --layers=${current_layer} -- external_dependencies_not_found.sh |xargs)
     # We don t consider libraries available in the layer (they should not be here, probably a LD_LIBRARY_PATH issue)
     DEPS4=""
@@ -41,10 +60,9 @@ for layer in `ls`; do
         fi
     done
     echo "--- dependencies not found ---" ${DEPS4}
-    DEPS=$(echo $DEPS2 $DEPS4)
-    for DEP in ${DEPS}; do
+    for DEP in ${DEPS4}; do
         FOUND=0
-        for OK_DEP in ${OK_DEPS}; do
+        for OK_DEP in ${OK_NOT_FOUND}; do
             if test "${DEP}" = "${OK_DEP}"; then
                 FOUND=1
                 break
@@ -65,6 +83,6 @@ done
 
 
 if test "${RET}" = "1"; then
-    echo "extra dependencies found"
+    echo "Failure of dependencies test"
     exit 1
 fi
