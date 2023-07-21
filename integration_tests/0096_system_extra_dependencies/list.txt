@@ -9,6 +9,7 @@ libcares.so.2
 libcdt.so.5
 libcgraph.so.6
 libcom_err.so.2
+libcroco-0.6.so.3
 libcrypt.so.1
 libcrypto.so.1.1
 libcurl.so.4
@@ -46,8 +47,10 @@ libgvc.so.6
 libgssapi_krb5.so.2
 libgthread-2.0.so.0
 libharfbuzz.so.0
+libhogweed.so.4
 libICE.so.6
 libidn2.so.0
+libjbig.so.2.1
 libjpeg.so.62
 libk5crypto.so.3
 libkeyutils.so.1
@@ -65,6 +68,7 @@ libncurses.so.5
 libncurses.so.6
 libncursesw.so.5
 libncursesw.so.6
+libnettle.so.6
 libnghttp2.so.14
 libnsl.so.1
 libnspr4.so
