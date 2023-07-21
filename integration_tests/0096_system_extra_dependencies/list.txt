@@ -5,6 +5,8 @@ libblkid.so.1
 libbrotlicommon.so.1
 libbrotlidec.so.1
 libbz2.so.1
+libbrotlicommon.so.1
+libbrotlidec.so.1
 libc.so.6
 libcairo.so.2
 libcairo-gobject.so.2
