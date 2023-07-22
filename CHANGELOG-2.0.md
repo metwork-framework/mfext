@@ -1,5 +1,9 @@
 # release_2.0 CHANGELOG
 
+## v2.0.7 (2023-07-21)
+
+- No interesting change
+
 ## v2.0.6 (2023-07-18)
 
 ### New Features
