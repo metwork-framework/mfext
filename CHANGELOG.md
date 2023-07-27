@@ -31,6 +31,7 @@
 - mfadmin crontab : keep kibana web interface and ES config (#1600)
 - update gitignore-parser to 0.1.4 (#1606)
 - bump cryptography to 41.0.2 (security update) (#1608)
+- upgrade psycopg, psycopg2, psycopg-c to last releases (#1627)
 
 ### Bug Fixes
 
