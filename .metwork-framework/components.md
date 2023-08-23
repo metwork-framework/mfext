@@ -2,7 +2,7 @@
 | --- | --- | --- |
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.8.3 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.8.5 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.2.0 | python3 |
 | [apipkg](https://pypi.org/project/apipkg) | 3.0.1 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
@@ -38,7 +38,7 @@
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 6d12c5b | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 6.5.0 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://pypi.org/project/cryptography) | 41.0.2 | python3 |
+| [cryptography](https://pypi.org/project/cryptography) | 41.0.3 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.13 | python3 |
@@ -172,7 +172,7 @@
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 2.5.0 | python3_devtools |
-| [Pygments](https://pygments.org/) | 2.13.0 | python3 |
+| [Pygments](https://pypi.org/project/Pygments) | 2.15.1 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pylint](https://pypi.org/project/pylint) | 2.15.5 | python3_devtools |
 | [pymdown-extensions](https://pypi.org/project/pymdown-extensions) | 10.0.1 | python3_devtools |
