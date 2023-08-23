@@ -230,7 +230,7 @@
 | [tomli](https://pypi.org/project/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.11.5 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
-| [tornado](http://www.tornadoweb.org/) | 6.3.2 | python3_devtools |
+| [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.64.1 | python3 |
 | [traitlets](https://pypi.org/project/traitlets) | 5.5.0 | python3 |
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.4 | python3_devtools |
