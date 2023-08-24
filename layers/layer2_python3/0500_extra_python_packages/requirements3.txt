@@ -20,7 +20,7 @@ ConfigUpdater==1.0.1
 -e git+https://github.com/metwork-framework/cronwrapper@828f7f1743224bcda739518698a71a65f1289e74#egg=cronwrapper
 cryptography==3.3.2
 decorator==4.4.0
--e git+https://github.com/metwork-framework/deploycron.git@8d31e6d3f5be2d13018b523c9ebd94b4e0b27061#egg=deploycron
+-e git+https://github.com/metwork-framework/deploycron.git@27342219bc00ce9c90b18107ec321b722b3c90bb#egg=deploycron
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==3.1.1
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
