@@ -32,6 +32,9 @@
 - update gitignore-parser to 0.1.4 (#1606)
 - bump cryptography to 41.0.2 (security update) (#1608)
 - upgrade psycopg, psycopg2, psycopg-c to last releases (#1627)
+- update certifi to 2023.7.22 (security update) (#1631)
+- bump tornado to 6.3.3 (security update) (#1632)
+- security : cryptography 41.0.3, aiohttp 3.8.5, Pygments 2.15.1 (#1633)
 
 ### Bug Fixes
 
