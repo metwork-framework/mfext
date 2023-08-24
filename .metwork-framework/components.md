@@ -28,7 +28,6 @@
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
-<<<<<<< HEAD
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
 | [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 5bc1f32 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 113331d | python3 |
@@ -36,19 +35,7 @@
 | [cronwrapper](https://github.com/metwork-framework/cronwrapper) | 828f7f1 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 3.3.2 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 4.4.0 | python3 |
-| [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
-=======
-| [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.1.1 | python3 |
-| [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
-| [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 6d12c5b | python3 |
-| [coverage](https://github.com/nedbat/coveragepy) | 6.5.0 | python3_devtools |
-| [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://pypi.org/project/cryptography) | 41.0.3 | python3 |
-| [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
-| [Deprecated](https://github.com/tantale/deprecated) | 1.2.13 | python3 |
-| [dill](https://github.com/uqfoundation/dill) | 0.3.6 | python3 |
->>>>>>> 56ae0f5 (build: update deploycron (for fedora < 33) (#1634))
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 3.1.1 | python3 |
 | [distlib](https://bitbucket.org/pypa/distlib) | 0.3.1 | python3_core |
