@@ -40,7 +40,7 @@
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
 | [cryptography](https://pypi.org/project/cryptography) | 41.0.3 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
-| [deploycron](https://github.com/metwork-framework/deploycron) | 8d31e6d | python3 |
+| [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.13 | python3 |
 | [dill](https://github.com/uqfoundation/dill) | 0.3.6 | python3 |
 | [directory-observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
