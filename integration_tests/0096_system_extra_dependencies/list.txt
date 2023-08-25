@@ -132,6 +132,7 @@ libtk8.6.so
 libutil.so.1
 libuuid.so.1
 libunistring.so.2
+libunistring.so.5
 libX11.so.6
 libXau.so.6
 libXaw.so.7
