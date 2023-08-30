@@ -29,7 +29,7 @@
 | [chardet](https://github.com/chardet/chardet) | 5.0.0 | python3 |
 | [charset-normalizer](https://github.com/ousret/charset_normalizer) | 2.1.1 | python3 |
 | [circus-autorestart-plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
-| [circus](https://pypi.org/project/circus) | 28c16b2 | python3_circus |
+| [circus](https://pypi.org/project/circus) | 0.18.0 | python3_circus |
 | [click](https://palletsprojects.com/p/click/) | 8.1.3 | python3 |
 | [colorama](https://pypi.org/project/colorama) | 0.4.6 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
@@ -229,8 +229,7 @@
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tomli](https://pypi.org/project/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.11.5 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 4.5.2 | python3_circus |
-| [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3_devtools |
+| [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3 |
 | [tqdm](https://tqdm.github.io) | 4.64.1 | python3 |
 | [traitlets](https://pypi.org/project/traitlets) | 5.5.0 | python3 |
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.4 | python3_devtools |
@@ -256,4 +255,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(255 components)*
+*(254 components)*

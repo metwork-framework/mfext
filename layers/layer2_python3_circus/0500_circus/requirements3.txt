@@ -1,5 +1,4 @@
 cached-property==1.5.1
--e git+https://github.com/thefab/circus.git@28c16b2958fb9b106d9efd828a4588aafeba5563#egg=circus
+circus==0.18.0
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@61e4943f51d6d1e9088ea9025425842ddd7f54db#egg=circus_autorestart_plugin
 pyzmq==23.2.1
-tornado==4.5.2
