@@ -199,7 +199,7 @@
 | [pyzmq](https://pyzmq.readthedocs.org) | 23.2.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.5 | core |
-| [redis](https://github.com/redis/redis-py) | 4.3.6 | python3 |
+| [redis](https://github.com/redis/redis-py) | 4.4.4 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.3.0 | python3 |
