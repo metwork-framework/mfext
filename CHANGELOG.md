@@ -35,6 +35,7 @@
 - update certifi to 2023.7.22 (security update) (#1631)
 - bump tornado to 6.3.3 (security update) (#1632)
 - security : cryptography 41.0.3, aiohttp 3.8.5, Pygments 2.15.1 (#1633)
+- bump redis from 4.3.6 to 4.4.4 (security update) (#1640)
 
 ### Bug Fixes
 
