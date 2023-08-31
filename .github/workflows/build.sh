@@ -20,6 +20,7 @@ rm -rf html_doc rpms .build_hash
 
 
 
+git config --global --add safe.directory /src
 cd /src
 
 
