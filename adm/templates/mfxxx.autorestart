@@ -7,7 +7,7 @@ function usage() {
 
 function module_status() {
     STATUS_STDOUT="${MFMODULE_RUNTIME_HOME}/tmp/status.stdout"
-    timeout 60s mfdata.status >"${STATUS_STDOUT}" 2>&1
+    timeout 60s {{MFMODULE_LOWERCASE}}.status >"${STATUS_STDOUT}" 2>&1
     RETURN_VALUE=$?
     cat "${STATUS_STDOUT}" | _module_status_json.py
     if test "${RETURN_VALUE}" -ne 0; then
