@@ -1,3 +1,0 @@
-#pip 22.3.1 and setuptools 65.5.0 are the built-in versions in python 3.10.9
-pip
-setuptools
