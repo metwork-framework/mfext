@@ -148,7 +148,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.17.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pypi.org/project/pika) | 1.3.1 | python3 |
-| [pip](https://pip.pypa.io/) | 22.3.1 | python3_core |
+| [pip](https://pip.pypa.io/) | 23.2.1 | python3_core |
 | [platformdirs](https://github.com/platformdirs/platformdirs) | 2.4.1 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.0.0 | python3 |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
@@ -191,7 +191,7 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3_devtools |
-| [Python](http://python.org/) | 3.11.3 | python3_core |
+| [Python](http://python.org/) | 3.11.5 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2022.5 | python3 |
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0 | python3 |
@@ -242,7 +242,7 @@
 | [wcmatch](https://pypi.org/project/wcmatch) | 8.4.1 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.5 | python3_devtools |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 2.3.4 | python3 |
-| [wheel](https://github.com/pypa/wheel) | 0.38.4 | python3_core |
+| [wheel](https://pypi.org/project/wheel) | 0.41.2 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.14.1 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.1.0 | devtools |

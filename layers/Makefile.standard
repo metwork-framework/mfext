@@ -22,7 +22,7 @@ else
 endif
 PFIX_STRING:=--prefix=$(PREFIX)
 
-.PHONY: autoconf autoreconf configure cmake build install download uncompress python3build python3install
+.PHONY: autoconf autoreconf configure cmake build install download uncompress python3build python3install python3install_pip
 
 autoconf:
 	cd build/$(NAME_VERSION) && autoconf
