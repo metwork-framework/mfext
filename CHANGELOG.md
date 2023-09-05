@@ -37,6 +37,7 @@
 - security : cryptography 41.0.3, aiohttp 3.8.5, Pygments 2.15.1 (#1633)
 - bump redis from 4.3.6 to 4.4.4 (security update) (#1640)
 - upgrade de circus en 0.18.0 et suppression de tornado 4.5.2 dans la layer circus (#1646)
+- bump Python to 3.11.5, pip to 23.2.1 and wheel to 0.41.2 (#1647)
 
 ### Bug Fixes
 
