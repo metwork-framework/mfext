@@ -73,8 +73,8 @@
 | [hatchling](https://pypi.org/project/hatchling) | 1.11.1 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.12.2 | scientific_core |
-| [hiredis](https://redis.com/lp/hiredis/) | 1.0.2 | core |
-| [hiredis](https://github.com/redis/hiredis-py) | 2.0.0 | python3 |
+| [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
+| [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
 | [idna](https://pypi.org/project/idna) | 3.4 | python3 |
 | [importlib-metadata](https://github.com/python/importlib_metadata) | 4.13.0 | python3_core |
 | [iniconfig](http://github.com/RonnyPfannschmidt/iniconfig) | 1.1.1 | python3_devtools |
