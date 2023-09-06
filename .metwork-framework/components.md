@@ -210,7 +210,7 @@
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.5.2 | python3 |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 7.0.5 | python3_core |
-| [setuptools](https://github.com/pypa/setuptools) | 65.5.1 | python3_core |
+| [setuptools](https://github.com/pypa/setuptools) | 68.1.2 | python3_core |
 | [sftp-py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.12 | python3 |
