@@ -107,7 +107,7 @@ if test "${STATUS}" != "ok"; then
     echo "ERROR" > "${MFMODULE_RUNTIME_HOME}/var/status"
     exit 1
 else
-    log CRITICAL "the {{MFMODULE_LOWERCASE}}.status is now ok after the automatic stop/start => no problem anymore"
+    log WARNING "the {{MFMODULE_LOWERCASE}}.status is now ok after the automatic stop/start => no problem anymore"
     echo "RUNNING" >"${MFMODULE_RUNTIME_HOME}/var/status"
     exit 0
 fi
