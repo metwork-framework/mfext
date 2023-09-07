@@ -1,5 +1,11 @@
 # release_1.2 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- log level is not CRITICAL if status is ok after restart (backport #1650) (#1653)
+
 ## v1.2.7 (2023-06-13)
 
 ### New Features
