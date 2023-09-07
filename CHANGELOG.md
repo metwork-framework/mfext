@@ -38,6 +38,8 @@
 - bump redis from 4.3.6 to 4.4.4 (security update) (#1640)
 - upgrade de circus en 0.18.0 et suppression de tornado 4.5.2 dans la layer circus (#1646)
 - bump Python to 3.11.5, pip to 23.2.1 and wheel to 0.41.2 (#1647)
+- bump redis from 5.0.5 to 5.0.14 (#1648)
+- bump hiredis to 1.2.0 and hiredis-py to 2.2.3 (#1649)
 
 ### Bug Fixes
 
@@ -51,5 +53,6 @@
 - update redis to 4.3.6 to fix vulnerability (#1567)
 - prevent error messages when uninstalling rpms in some corny case (#1570)
 - fix mfxxx.autorestart (bug introduced by #1573) (#1645)
+- log level is not CRITICAL if status is ok after restart (#1650)
 
 
