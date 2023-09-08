@@ -235,7 +235,7 @@
 | [traitlets](https://pypi.org/project/traitlets) | 5.5.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.4 | python3_devtools |
-| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.7.1 | python3_core |
+| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.5.0 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.26.12 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
