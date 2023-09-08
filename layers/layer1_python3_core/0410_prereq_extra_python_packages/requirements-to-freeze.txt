@@ -1,1 +1,4 @@
-packaging
+calver
+setuptools-scm
+#tensorflow 2.13.0 requires typing-extensions<4.6.0
+typing-extensions<4.6.0

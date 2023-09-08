@@ -1,1 +1,3 @@
-setuptools_scm[toml]>5
+pathspec
+pluggy
+trove-classifiers
