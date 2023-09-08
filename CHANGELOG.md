@@ -40,6 +40,7 @@
 - bump Python to 3.11.5, pip to 23.2.1 and wheel to 0.41.2 (#1647)
 - bump redis from 5.0.5 to 5.0.14 (#1648)
 - bump hiredis to 1.2.0 and hiredis-py to 2.2.3 (#1649)
+- upgrade setuptools from 65.5.1 to 68.1.2 (#1654)
 
 ### Bug Fixes
 
