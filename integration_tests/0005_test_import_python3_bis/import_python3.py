@@ -85,9 +85,11 @@ import livereload
 import lunr
 import mako
 import markdown
+import markdown_it #markdown_it_py
 import markupsafe
 #import matplotlib_inline
 import mccabe
+import mdurl
 import mergedeep
 import mflog
 import mfplugin
