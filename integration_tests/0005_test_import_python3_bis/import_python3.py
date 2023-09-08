@@ -21,6 +21,7 @@ import bjoern
 import black
 import bracex
 import cachetools
+import calver
 import cerberus
 import certifi
 import cffi
@@ -185,6 +186,7 @@ import tomlkit
 import tornado
 import tqdm
 import traitlets
+import trove_classifiers
 import typed_ast
 import typing_extensions
 import unidecode
