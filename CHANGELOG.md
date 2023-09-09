@@ -41,6 +41,8 @@
 - bump redis from 5.0.5 to 5.0.14 (#1648)
 - bump hiredis to 1.2.0 and hiredis-py to 2.2.3 (#1649)
 - upgrade setuptools from 65.5.1 to 68.1.2 (#1654)
+- upgrade many python packages in layer python3_core (#1655)
+- many upgrades of python packages in layer python3 (#1657)
 
 ### Bug Fixes
 
