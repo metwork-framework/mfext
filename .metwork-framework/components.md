@@ -18,7 +18,7 @@
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 4.0.1 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
-| [bjoern](https://github.com/thefab/bjoern/tree/metwork) | metwork-20190515 | python3 |
+| [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 22.10.0 | python3_devtools |
 | [bracex](https://pypi.org/project/bracex) | 2.3.post1 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
