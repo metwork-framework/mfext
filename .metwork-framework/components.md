@@ -239,7 +239,7 @@
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.4 | python3_devtools |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.5.0 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
-| [urllib3](https://pypi.org/project/urllib3) | 1.26.16 | python3 |
+| [urllib3](https://urllib3.readthedocs.io/) | 1.26.16 | python3 
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
 | [virtualenv](https://pypi.org/project/virtualenv) | 20.24.4 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 2.1.9 | python3_devtools |
