@@ -43,6 +43,7 @@
 - upgrade setuptools from 65.5.1 to 68.1.2 (#1654)
 - upgrade many python packages in layer python3_core (#1655)
 - many upgrades of python packages in layer python3 (#1657)
+- use original jonashaag/bjoern instead of our fork (#1664)
 
 ### Bug Fixes
 
@@ -57,5 +58,6 @@
 - prevent error messages when uninstalling rpms in some corny case (#1570)
 - fix mfxxx.autorestart (bug introduced by #1573) (#1645)
 - log level is not CRITICAL if status is ok after restart (#1650)
+- downgrade urllib3 to 1.26.16 for compatibility with requests>=2.29 (#1659)
 
 
