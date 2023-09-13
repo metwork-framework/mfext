@@ -69,7 +69,7 @@ PyYAML==6.0.1
 redis==5.0.0
 regex==2023.8.8
 requests==2.31.0
-requests-unixsocket==0.3.0
+-e git+https://github.com/metwork-framework/requests-unixsocket.git@0.3.1#egg=requests_unixsocket
 rich==13.5.2
 simpleeval==0.9.13
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
@@ -81,7 +81,7 @@ tornado==6.3.3
 tqdm==4.66.1
 traitlets==5.9.0
 Unidecode==1.3.6
-urllib3==1.26.16
+urllib3==2.0.4
 Werkzeug==2.3.7
 whichcraft==0.6.1
 wrapt==1.15.0
