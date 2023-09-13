@@ -205,7 +205,7 @@
 | [redis](https://github.com/redis/redis-py) | 5.0.0 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2023.8.8 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
-| [requests-unixsocket](https://github.com/msabramo/requests-unixsocket) | 0.3.0 | python3 |
+| [requests-unixsocket](https://github.com/metwork-framework/requests-unixsocket) | 0.3.1 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.31.0 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.5.2 | python3 |
 | [semantic-version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
@@ -239,7 +239,7 @@
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.4 | python3_devtools |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.5.0 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
-| [urllib3](https://urllib3.readthedocs.io/) | 1.26.16 | python3 |
+| [urllib3](https://pypi.org/project/urllib3) | 2.0.4 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
 | [virtualenv](https://pypi.org/project/virtualenv) | 20.24.4 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 2.1.9 | python3_devtools |
