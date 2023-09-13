@@ -21,7 +21,7 @@
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 22.10.0 | python3_devtools |
 | [bracex](https://pypi.org/project/bracex) | 2.3.post1 | python3_devtools |
-| [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
+| [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.3.1 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
@@ -199,7 +199,7 @@
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
-| [pyzmq](https://pyzmq.readthedocs.org) | 23.2.1 | python3_circus |
+| [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.14 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.0 | python3 |
