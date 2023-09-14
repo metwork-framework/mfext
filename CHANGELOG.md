@@ -44,6 +44,8 @@
 - upgrade many python packages in layer python3_core (#1655)
 - many upgrades of python packages in layer python3 (#1657)
 - use original jonashaag/bjoern instead of our fork (#1664)
+- use a fork of requests-unixsocket with urllib3 > 2 (#1665)
+- bump cached-property to 1.5.2 and pyzmq to 25.1.1 (layer circus) (#1666)
 
 ### Bug Fixes
 
