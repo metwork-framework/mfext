@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ogrinfo list > gdal_supports
+ogrinfo --formats > gdal_supports
 for support in PostgreSQL netCDF JP2OpenJPEG SQLite GeoJSON SVG; do
     grep ${support} gdal_supports >/dev/null
     if [ $? != 0 ]; then
