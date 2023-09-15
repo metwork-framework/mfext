@@ -46,6 +46,7 @@
 - use original jonashaag/bjoern instead of our fork (#1664)
 - use a fork of requests-unixsocket with urllib3 > 2 (#1665)
 - bump cached-property to 1.5.2 and pyzmq to 25.1.1 (layer circus) (#1666)
+- upgrade postgresql to 15.4 and pgbouncer to 1.20.1 (#1667)
 
 ### Bug Fixes
 

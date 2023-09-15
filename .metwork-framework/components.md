@@ -148,7 +148,7 @@
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
-| [pgbouncer](https://www.pgbouncer.org/) | 1.17.0 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.20.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pypi.org/project/pika) | 1.3.2 | python3 |
 | [pip](https://pip.pypa.io/) | 23.2.1 | python3_core |
@@ -157,7 +157,7 @@
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](https://postgis.net) | 3.3.1 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
-| [postgresql](http://postgresql.org/) | 14.5 | scientific_core |
+| [postgresql](http://postgresql.org/) | 15.4 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 9.0.1 | scientific_core |
 | [prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.32 | python3_devtools |
