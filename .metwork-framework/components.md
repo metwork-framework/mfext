@@ -72,8 +72,8 @@
 | [hatch-requirements-txt](https://pypi.org/project/hatch-requirements-txt) | 0.4.0 | python3 |
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.3.0 | python3_core |
 | [hatchling](https://pypi.org/project/hatchling) | 1.18.0 | python3_core |
-| [hdf4](https://www.hdfgroup.org) | 4.2.15 | scientific_core |
-| [hdf5](https://www.hdfgroup.org) | 1.12.2 | scientific_core |
+| [hdf4](https://www.hdfgroup.org) | 4.2.16-2 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.14.2 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
 | [idna](https://pypi.org/project/idna) | 3.4 | python3 |
