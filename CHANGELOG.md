@@ -47,6 +47,11 @@
 - use a fork of requests-unixsocket with urllib3 > 2 (#1665)
 - bump cached-property to 1.5.2 and pyzmq to 25.1.1 (layer circus) (#1666)
 - upgrade postgresql to 15.4 and pgbouncer to 1.20.1 (#1667)
+- upgrade gdal from 3.5.3 to 3.7.1
+- upgrade gdal from 3.5.3 to 3.7.1 (#1668)
+- upgrade to gdal 3.7.2 (#1671)
+- upgrade hdf4 to 4.2.16-2 and hdf5 to 1.14.2 + add fortran support in hdf5 (#1669)
+- upgrade netcdf_c from 4.9.0 to 4.9.2 (#1672)
 
 ### Bug Fixes
 
