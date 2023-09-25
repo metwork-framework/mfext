@@ -130,17 +130,6 @@ jobs:
             cd ${REMOTE}
             chmod +x createrepo.sh
             ./createrepo.sh .
-
-      - name: upload private rpms on nexus
-        if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.nexus_dir != 'null' }}
-        run: |
-          cd ${{ github.workspace }}/rpms/
-          sudo chown -R githubactions:metworkpub .
-          sudo chmod -R 775 .
-          for rpm in *.rpm; do
-          curl -v -w "%{http_code}\n" --user ${{ secrets.METWORK_NEXUS_USER }}:${{ secrets.METWORK_NEXUS_PASSWORD }} --upload-file $rpm ${{ steps.SetVariables.outputs.nexus_dir }};
-          done
-
       - name: publish doc
         if: ${{ github.event_name != 'pull_request' && steps.BuildStep.outputs.bypass == 'false' && steps.SetVariables.outputs.branch != 'null' }}
         uses: thebaptiste/ssh-scp-ssh-pipelines@metwork

@@ -113,7 +113,6 @@ echo "buildimage=metwork/mfext-${OS_VERSION}-buildimage:${DEP_BRANCH}" >> ${GITH
 echo "testimage=rockylinux:8.5" >> ${GITHUB_OUTPUT}
 echo "buildlog_dir=/pub/metwork/${CI}/buildlogs/${B}/mfext/${OS_VERSION}/${GITHUB_RUN_NUMBER}" >> ${GITHUB_OUTPUT}
 echo "skip_dispatch=${SKIP_DISPATCH}" >> ${GITHUB_OUTPUT}
-
 echo "rpm_dir=/pub/metwork/${CI}/rpms/${B}/${OS_VERSION}" >> ${GITHUB_OUTPUT}
 echo "doc_dir=/pub/metwork/${CI}/docs/${B}/mfext" >> ${GITHUB_OUTPUT}
 echo "nexus_dir=null" >> ${GITHUB_OUTPUT}
