@@ -65,6 +65,7 @@ setuptools-git-versioning==1.13.2
 sftp-py==0.2.1
 snowballstemmer==2.2.0
 stack-data==0.6.0
+tornado==6.3.3
 typed-ast==1.5.4
 watchdog==2.1.9
 wcmatch==8.4.1

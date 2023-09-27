@@ -232,7 +232,8 @@
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tomli](https://pypi.org/project/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3 |
+| [tornado](http://www.tornadoweb.org/) | 5.1.1 | python3_circus |
+| [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3_devtools |
 | [tqdm](https://pypi.org/project/tqdm) | 4.66.1 | python3 |
 | [traitlets](https://pypi.org/project/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
@@ -259,4 +260,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(258 components)*
+*(259 components)*
