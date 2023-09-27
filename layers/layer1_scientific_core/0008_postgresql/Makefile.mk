@@ -11,12 +11,12 @@ POSTGRESQL is an object-relational database system
 WEBSITE=http://postgresql.org/
 LICENSE=PostgreSQL (similar MIT or BSD)
 
-#Other supports suggested by M. Rechte : --with-llvm, --with-perl, --with-systemd, --with-system-tzdata=/usr/share/zoneinfo (?)
+#Other supports suggested by M. Rechte : --with-icu --with-llvm, --with-perl, --with-systemd, --with-system-tzdata=/usr/share/zoneinfo (?)
 #But requiring more devels, so not set for the time being
 
 all:: $(PREFIX)/bin/psql
 $(PREFIX)/bin/psql:
-	$(MAKE) --file=../../Makefile.standard MAKELEVEL=0 PREFIX=$(PREFIX) OPTIONS="--with-includes=$(PREFIX)/include:$(PREFIX)/../core/include --with-libraries=$(PREFIX)/lib:$(PREFIX)/../core/lib --with-libxml --with-ssl=openssl --with-python --with-ldap --with-libxslt --with-icu --enable-nls --with-uuid=e2fs" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard MAKELEVEL=0 PREFIX=$(PREFIX) OPTIONS="--with-includes=$(PREFIX)/include:$(PREFIX)/../core/include --with-libraries=$(PREFIX)/lib:$(PREFIX)/../core/lib --with-libxml --with-ssl=openssl --with-python --with-ldap --with-libxslt --enable-nls --with-uuid=e2fs" download uncompress configure build install
 	cd build/$(NAME)-$(VERSION)/contrib/hstore && make && make install
 	cd build/$(NAME)-$(VERSION)/contrib/pg_stat_statements && make && make install
 	cd build/$(NAME)-$(VERSION)/contrib/btree_gist && make && make install
