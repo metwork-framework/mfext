@@ -53,6 +53,7 @@
 - upgrade hdf4 to 4.2.16-2 and hdf5 to 1.14.2 + add fortran support in hdf5 (#1669)
 - upgrade netcdf_c from 4.9.0 to 4.9.2 (#1672)
 - bump cryptography to 41.0.4 (security update) (#1675)
+- enable hdf5 plugin dir for netcdf_c (#1676)
 
 ### Bug Fixes
 
