@@ -83,7 +83,7 @@ Unidecode==1.3.6
 urllib3==2.0.4
 Werkzeug==2.3.7
 whichcraft==0.6.1
-wrapt==1.15.0
+wrapt==1.14.1
 -e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile
 xmltodict==0.13.0
 yarl==1.9.2
