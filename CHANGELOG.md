@@ -54,6 +54,10 @@
 - upgrade netcdf_c from 4.9.0 to 4.9.2 (#1672)
 - bump cryptography to 41.0.4 (security update) (#1675)
 - enable hdf5 plugin dir for netcdf_c (#1676)
+- back to our circus fork with tornado 4.5.3 in layer circus (#1685)
+- upgrade proj from 9.0.1 to 9.3.0 (#1686)
+- downgrade wrapt to 1.14.1 (compatibility with tensorflow 1.14) (#1687)
+- upgrade typing-extensions from 4.5.0 to 4.8.0 (#1688)
 
 ### Bug Fixes
 
