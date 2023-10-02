@@ -16,3 +16,4 @@ libstdc++.so.6()(64bit)@generic
 /usr/bin/lscpu@generic
 /usr/bin/clear@generic
 /usr/bin/lockfile@generic
+/usr/bin/make@generic
