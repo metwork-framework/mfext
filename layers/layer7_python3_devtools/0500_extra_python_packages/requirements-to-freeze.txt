@@ -31,7 +31,6 @@ ipython
 jmespath
 pywget
 sftp-py
-python-ldap
 setuptools-git-versioning
 pytest-json-report
 tornado

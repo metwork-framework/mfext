@@ -169,8 +169,8 @@
 | [psycopg2](https://psycopg.org/) | 2.9.6 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure-eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
-| [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3_devtools |
-| [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3_devtools |
+| [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3 |
+| [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
@@ -193,7 +193,7 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.0.2 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 7.2.0 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
-| [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3_devtools |
+| [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.11.5 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
