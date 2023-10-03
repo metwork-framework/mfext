@@ -8,8 +8,8 @@ export CHECKTYPE=MD5
 export CHECKSUM=22879ac6f83460605f9c39147a2ccc7a
 DESCRIPTION=\
 Libgeotiff is designed to permit the extraction and parsing of the "GeoTIFF" Key directories, as well as definition and installation of GeoTIFF keys in new files
-WEBSITE=https://www.hdfgroup.org
-LICENSE=BSD
+WEBSITE=https://github.com/OSGeo/libgeotiff
+LICENSE=MIT
 
 $(shell echo "prefix=$(PREFIX)" > libgeotiff.pc)
 $(shell echo "exec_prefix=$(PREFIX)" >> libgeotiff.pc)
