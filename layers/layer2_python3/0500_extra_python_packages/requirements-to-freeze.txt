@@ -56,6 +56,6 @@ termcolor
 mypy-extensions
 geojson
 #urllib3>=2 doesn't work with requests>=2.29 (see https://github.com/docker/docker-py/issues/3113)
-urllib3<2
+urllib3<3
 bjoern
 python-ldap
