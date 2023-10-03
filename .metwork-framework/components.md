@@ -96,7 +96,7 @@
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.8.0 | python3_devtools |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
-| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.1 | scientific_core |
+| [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.3 | python3_devtools |
