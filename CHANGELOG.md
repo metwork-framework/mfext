@@ -58,6 +58,8 @@
 - upgrade proj from 9.0.1 to 9.3.0 (#1686)
 - downgrade wrapt to 1.14.1 (compatibility with tensorflow 1.14) (#1687)
 - upgrade typing-extensions from 4.5.0 to 4.8.0 (#1688)
+- move python_ldap from layer python3_devtools to layer python3 (#1689)
+- add make as dependency (for plugins build) (#1691)
 
 ### Bug Fixes
 
