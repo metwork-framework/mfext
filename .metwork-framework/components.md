@@ -64,7 +64,7 @@
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.4.0 | python3 |
 | [gdal](http://www.gdal.org) | 3.7.2 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.0.1 | python3 |
-| [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
+| [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.6 | python3 |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 23.1.0 | python3 |
@@ -95,7 +95,7 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.8.0 | python3_devtools |
-| [libgeotiff](https://www.hdfgroup.org) | 1.7.1 | scientific_core |
+| [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.0.1 | scientific_core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
