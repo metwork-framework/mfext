@@ -155,7 +155,7 @@
 | [platformdirs](https://pypi.org/project/platformdirs) | 3.10.0 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.3.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
-| [postgis](https://postgis.net) | 3.3.1 | scientific_core |
+| [postgis](https://postgis.net) | 3.4.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 15.4 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
