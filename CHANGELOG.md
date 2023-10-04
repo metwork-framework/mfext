@@ -1,6 +1,10 @@
 # release_2.1 CHANGELOG
 
-## [Unreleased]
+## v2.1.6 (2023-10-03)
+
+### New Features
+
+- add make as dependency (for plugins build) (backport #1691) (#1693)
 
 ### Bug Fixes
 
