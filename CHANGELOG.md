@@ -60,6 +60,10 @@
 - upgrade typing-extensions from 4.5.0 to 4.8.0 (#1688)
 - move python_ldap from layer python3_devtools to layer python3 (#1689)
 - add make as dependency (for plugins build) (#1691)
+- bump urllib3 to 2.0.6 (security update) (#1695)
+- upgrade geos to 3.12.0 and fix gdal build (#1697)
+- upgrade libspatialite from 5.0.1 to 5.1.0 (#1698)
+- upgrade postgis from 3.3.1 to 3.4.0 (#1699)
 
 ### Bug Fixes
 
