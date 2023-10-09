@@ -53,20 +53,15 @@ For each version, you will find the `BaseURL` in the following table:
 
 Version | BaseURL
 ------- | -------
-released stable | http://metwork-framework.org/pub/metwork/releases/rpms/release_1.0/portable/
-continuous stable | http://metwork-framework.org/pub/metwork/continuous_integration/rpms/release_1.0/portable/
+released stable (example for release 2.1) | http://metwork-framework.org/pub/metwork/releases/rpms/release_2.1/portable/
+continuous stable (example for release 2.1) | http://metwork-framework.org/pub/metwork/continuous_integration/rpms/release_2.1/portable/
 continuous master | http://metwork-framework.org/pub/metwork/continuous_integration/rpms/master/portable/
 continuous integration | http://metwork-framework.org/pub/metwork/continuous_integration/rpms/integration/portable/
 
-??? question "Want to install a released old version ?"
-    You have to change the `BaseURL` and replace `/release_1.0/` by `/release_X.Y/`. For example, use
-    http://metwork-framework.org/pub/metwork/releases/rpms/release_0.9/portable/
-    as `BaseURL` for installing a `0.9.Z` released old version.
-
-??? question "Want to install a < 0.9 version?"
-    Before `0.9` version, the `portable` subdirectory did not exist, it was replaced
-    by `centos6` and `centos7` directory with dedicated builds inside. If you are
-    using a `< 0.9` version, please change `portable` by the corresponding value.
+??? question "Want to install a released version different from 2.1 ?"
+    You have to change the `BaseURL` and replace `/release_2.1/` by `/release_X.Y/`. For example, use
+    http://metwork-framework.org/pub/metwork/releases/rpms/release_1.2/portable/
+    as `BaseURL` for installing a `1.2.Z` released old version.
 
 ### Configure
 
@@ -75,9 +70,9 @@ you just have to create a new `/etc/yum.repos.d/metwork.repo` with the following
 content (example for a **released stable** version):
 
 ```cfg
-[metwork_1_0]
+[metwork_2_1]
 name=MetWork Repository Stable
-baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/release_1.0/portable/
+baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/release_2.1/portable/
 gpgcheck=0
 enabled=1
 metadata_expire=0
@@ -90,7 +85,7 @@ If you prefer to copy/paste something, you can do that with following root comma
 cat >/etc/yum.repos.d/metwork.repo <<EOF
 [metwork]
 name=MetWork Repository
-baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/release_1.0/portable/
+baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/release_2.1/portable/
 gpgcheck=0
 enabled=1
 metadata_expire=0
@@ -100,13 +95,13 @@ EOF
 ??? question "For Mageia distributions?"
     To configure the metwork RPM repository for Mageia distributions, use the following `root` command:
     ```console
-    urpmi.addmedia metwork http://metwork-framework.org/pub/metwork/releases/rpms/release_1.0/portable/
+    urpmi.addmedia metwork http://metwork-framework.org/pub/metwork/releases/rpms/release_2.1/portable/
     ```
 
 ??? question "For SUSE distributions?"
     To configure the metwork RPM repository for SUSE distributions, use the following `root` command:
     ```console
-    zypper ar -G http://metwork-framework.org/pub/metwork/releases/rpms/release_1.0/portable/ metwork
+    zypper ar -G http://metwork-framework.org/pub/metwork/releases/rpms/release_2.1/portable/ metwork
     ```
 
 !!! warning
@@ -321,25 +316,25 @@ a minimal version. Then after the move and the symbolic link, this space is migr
 
 ### How to install multiple versions of mfext module on the same machine?
 
-You can install several "major/minor" versions (for example: `0.8.Z` and `0.9.T`)
+You can install several "major/minor" versions (for example: `2.1.Z` and `1.2.T`)
 of the mfext module on the same machine by configuring two package repositories
-(one for `release_0.8` and one of `release_0.9`) and by using this special procedure:
+(one for `release_2.1` and one of `release_1.2`) and by using this special procedure:
 
 === "CentOS/Fedora"
 ```console
-yum install metwork-mfext-0.8
-yum install metwork-mfext-0.9
+yum install metwork-mfext-1.2
+yum install metwork-mfext-2.1
 ```
 
 === "Mageia"
 ```console
-urpmi metwork-mfext-0.8
-urpmi metwork-mfext-0.9
+urpmi metwork-mfext-1.2
+urpmi metwork-mfext-2.1
 ```
 
 ```console
-zypper install metwork-mfext-0.8
-zypper install metwork-mfext-0.9
+zypper install metwork-mfext-1.2
+zypper install metwork-mfext-2.1
 ```
 
 !!! note
@@ -347,15 +342,15 @@ zypper install metwork-mfext-0.9
     optional layers and addons)
 
 !!! warning
-    You can't install several "patch" versions (for example: `0.8.1` and `0.8.2`)
+    You can't install several "patch" versions (for example: `2.1.1` and `2.1.2`)
     of the mfext module on the same machine. But but this is not usually a
     need because backward compatibility is guaranteed.
 
 With this special procedure, you must not get a `/opt/metwork-mfext` symbolic link
-but (only) two `/opt/metwork-mfext-0.8` and `/opt/metwork-mfext-0.9` directories.
+but (only) two `/opt/metwork-mfext-1.2` and `/opt/metwork-mfext-2.1` directories.
 
 Of course, to load the `mfext` profile, you have to point directly to the choosen
-suffixed directory. So an app can load and use `mfext 0.8 ` and another one `mfext 0.9`.
+suffixed directory. So an app can load and use `mfext 1.2 ` and another one `mfext 2.1`.
 
 ### What about other modules?
 
