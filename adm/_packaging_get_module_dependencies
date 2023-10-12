@@ -6,6 +6,7 @@ function usage() {
     echo "      (including system dependencies read in .system_dependencies files)"
 }
 
+# shellcheck disable=SC1091
 . "${MFEXT_HOME}/lib/bash_utils.sh"
 
 if test "${1:-}" = "--help"; then
