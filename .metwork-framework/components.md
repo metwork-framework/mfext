@@ -215,7 +215,7 @@
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | 7.1.0 | python3_core |
 | [setuptools](https://github.com/pypa/setuptools) | 68.1.2 | python3_core |
 | [sftp-py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
-| [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
+| [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.13 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
