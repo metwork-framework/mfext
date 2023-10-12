@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=wrk
-export VERSION=4.1.0
+export VERSION=4.2.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=1dffe26f74b7ae3408cfbcd9700d4d4f
+export CHECKSUM=bd3ee6407b1aa8b66abfa6ee2c166849
 DESCRIPTION=\
 A modern HTTP benchmarking tool capable of generating significant load when run\
 on a single multi-core CPU
