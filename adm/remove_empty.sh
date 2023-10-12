@@ -17,7 +17,7 @@ find . -type f -empty -not -name "*.py" -not -name "allow_binary_packages" -not 
 
 # Remove recursively empty dirs
 RECURSION=0
-while test ${RECURSION} -le 10; do
+while test "${RECURSION}" -le 10; do
     N=$(find . -type d -empty |wc -l)
     if test "${N}" -gt 0; then
         find . -type d -empty -delete
@@ -25,5 +25,5 @@ while test ${RECURSION} -le 10; do
         break
     fi
     # shellcheck disable=SC2003
-    RECURSION=$(expr ${RECURSION} + 1)
+    RECURSION=$(expr "${RECURSION}" + 1)
 done

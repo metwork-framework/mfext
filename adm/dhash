@@ -26,15 +26,19 @@ TMPF="/tmp/dhash.sed.$$"
 rm -f "${TMPF}"
 touch "${TMPF}"
 ABS=$(get_abs_dirname "${1}")/
+# shellcheck disable=SC2028
 echo "s|^${ABS}\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~\5|" >>"${TMPF}"
 echo "s|^|${4}|" >>"${TMPF}"
+# shellcheck disable=SC2028
 echo 's/^\(.*\)~~~DIR~~~\(.*\)~~~\(.*\)~~~\(.*\)$/\1~~~DIR~~~ignored~~~\3~~~ignored/' >>"${TMPF}"
 for LINE in $(cat "${MFEXT_HOME}/config/dhash_ignore_hash" 2>/dev/null); do
+# shellcheck disable=SC2028
     echo "s|^\(${LINE}\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~ignored|" >>"${TMPF}"
 done
 if test "${2}" != ""; then
     if test -f "${2}"; then
         for LINE in $(cat "${2}"); do
+# shellcheck disable=SC2028
             echo "s|^\(${LINE}\)~~~\(.*\)~~~\(.*\)~~~\(.*\)~~~\(.*\)$|\1~~~\2~~~\3~~~\4~~~ignored|" >>"${TMPF}"
         done
     fi

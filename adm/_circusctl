@@ -10,6 +10,7 @@ fi
 
 # because of https://github.com/circus-tent/circus/issues/962
 
+# shellcheck disable=SC1091
 . "${MFEXT_HOME}/lib/bash_utils.sh"
 layer_load python3_circus@mfext >/dev/null 2>&1
 
