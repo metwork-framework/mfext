@@ -64,6 +64,10 @@
 - upgrade geos to 3.12.0 and fix gdal build (#1697)
 - upgrade libspatialite from 5.0.1 to 5.1.0 (#1698)
 - upgrade postgis from 3.3.1 to 3.4.0 (#1699)
+- upgrade psycopg2, psycopg and psycopg-c to last releases (#1702)
+- upgrade shellcheck to 0.9.0 (#1703)
+- build nginx with ssi module (#1705)
+- upgrade wrk to 4.2.0 (#1707)
 
 ### Bug Fixes
 
@@ -79,5 +83,7 @@
 - fix mfxxx.autorestart (bug introduced by #1573) (#1645)
 - log level is not CRITICAL if status is ok after restart (#1650)
 - downgrade urllib3 to 1.26.16 for compatibility with requests>=2.29 (#1659)
+- fix missing double quote in python3_wrapper (#1704)
+- fix or disable shellcheck info (#1706)
 
 
