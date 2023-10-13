@@ -4,7 +4,8 @@ flake8
 pylint
 testfixtures
 isort
-pydocstyle
+#pydocstyle > 6.1.1 requires poetry to build
+pydocstyle<=6.1.1
 pytest-httpserver
 flake8-docstrings
 pytest
