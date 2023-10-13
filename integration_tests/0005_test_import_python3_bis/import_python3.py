@@ -112,6 +112,7 @@ import netifaces
 import nltk
 import opinionated_configparser
 import packaging
+import paginate
 import paramiko
 import parso
 import pathspec
