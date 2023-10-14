@@ -68,6 +68,7 @@
 - upgrade shellcheck to 0.9.0 (#1703)
 - build nginx with ssi module (#1705)
 - upgrade wrk to 4.2.0 (#1707)
+- upgrade all packages in python3_devtools to last release (#1709)
 
 ### Bug Fixes
 
