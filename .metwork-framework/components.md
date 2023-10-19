@@ -149,7 +149,7 @@
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
-| [pgbouncer](https://www.pgbouncer.org/) | 1.20.1 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.21.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pypi.org/project/pika) | 1.3.2 | python3 |
 | [pip](https://pip.pypa.io/) | 23.2.1 | python3_core |
