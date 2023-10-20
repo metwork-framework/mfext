@@ -69,6 +69,10 @@
 - build nginx with ssi module (#1705)
 - upgrade wrk to 4.2.0 (#1707)
 - upgrade all packages in python3_devtools to last release (#1709)
+- bump python redis to 5.0.1 (#1712)
+- bump urllib3 to 2.0.7 (security update) (#1713)
+- upgrade gitignore-parser to 0.1.9 (#1714)
+- upgrade pgbouncer from 1.20.1 to 1.21.0 (#1715)
 
 ### Bug Fixes
 
