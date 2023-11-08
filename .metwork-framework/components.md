@@ -62,7 +62,7 @@
 | [flit_scm](https://pypi.org/project/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.4.0 | python3 |
-| [gdal](http://www.gdal.org) | 3.7.2 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.7.3 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.0.1 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
