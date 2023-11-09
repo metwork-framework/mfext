@@ -1,3 +1,4 @@
+pydantic-core
 rich
 terminaltables
 tomlkit

@@ -58,3 +58,4 @@ geojson
 urllib3
 bjoern
 python-ldap
+pydantic
