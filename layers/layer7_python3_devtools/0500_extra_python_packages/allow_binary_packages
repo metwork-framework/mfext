@@ -1,5 +1,7 @@
 isort
+libcst
 mkdocs-awesome-pages-plugin
 pytest-httpserver
 pytest-metadata
+rich
 tomlkit

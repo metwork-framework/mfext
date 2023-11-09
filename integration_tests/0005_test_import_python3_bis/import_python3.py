@@ -3,6 +3,7 @@ import acquisition
 import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
+import annotated_types
 import apipkg
 import appdirs
 import argcomplete
@@ -20,6 +21,7 @@ import binaryornot
 import bjoern
 import black
 import bracex
+import bump_pydantic
 import cachetools
 import calver
 import cerberus
@@ -81,12 +83,14 @@ import jmespath
 import joblib
 import lazy_import
 import lazy_object_proxy
+import libcst
 import livereload
 import lunr
 import mako
 import markdown
 import markdown_it #markdown_it_py
 import markupsafe
+import maturin
 #import matplotlib_inline
 import mccabe
 import mdurl
@@ -136,6 +140,8 @@ import pyasn1
 import pyasn1_modules
 import pycodestyle
 import pycparser
+import pydantic
+import pydantic_core
 import pydocstyle
 import pyflakes
 import pygments

@@ -4,6 +4,7 @@
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.8.5 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.1 | python3 |
+| [annotated-types](https://pypi.org/project/annotated-types) | 0.6.0 | python3 |
 | [apipkg](https://pypi.org/project/apipkg) | 3.0.2 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.1.1 | python3 |
@@ -21,6 +22,7 @@
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 23.9.1 | python3_devtools |
 | [bracex](https://pypi.org/project/bracex) | 2.4 | python3_devtools |
+| [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.7.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.3.1 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
@@ -53,7 +55,7 @@
 | [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.1.3 | python3_devtools |
 | [execnet](https://pypi.org/project/execnet) | 2.0.2 | python3_devtools |
-| [executing](https://github.com/alexmojaki/executing) | 2.0.0 | python3_devtools |
+| [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3_devtools |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://pypi.org/project/filelock) | 3.12.3 | python3_core |
 | [flake8-docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
@@ -95,6 +97,7 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.9.0 | python3_devtools |
+| [libcst](https://pypi.org/project/libcst) | 1.1.0 | python3_devtools |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
@@ -111,6 +114,7 @@
 | [Markdown](https://pypi.org/project/Markdown) | 3.4.4 | python3 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 2.1.3 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.6 | python3_devtools |
+| [maturin](https://github.com/pyo3/maturin) | 1.3.1 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.7.0 | python3_devtools |
 | [mdurl](https://pypi.org/project/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
@@ -174,6 +178,8 @@
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
+| [pydantic](https://pypi.org/project/pydantic) | 2.4.2 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.10.1 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
 | [Pygments](https://pypi.org/project/Pygments) | 2.16.1 | python3 |
@@ -261,4 +267,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(260 components)*
+*(266 components)*
