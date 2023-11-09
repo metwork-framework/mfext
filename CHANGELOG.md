@@ -73,6 +73,8 @@
 - bump urllib3 to 2.0.7 (security update) (#1713)
 - upgrade gitignore-parser to 0.1.9 (#1714)
 - upgrade pgbouncer from 1.20.1 to 1.21.0 (#1715)
+- upgrade Werkzeug from 2.3.7 to 3.0.1 (#1720)
+- upgrade gdal from 3.7.2 to 3.7.3 (#1721)
 
 ### Bug Fixes
 
