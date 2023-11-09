@@ -140,7 +140,7 @@
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
 | [nltk](https://www.nltk.org/) | 3.8.1 | python3_devtools |
-| [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
+| [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openresty](http://openresty.org) | 1.15.8.1 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
