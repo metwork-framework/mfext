@@ -1,2 +1,2 @@
-setuptools==68.1.2
-pip==23.2.1
+setuptools==68.2.2
+pip==23.3.1
