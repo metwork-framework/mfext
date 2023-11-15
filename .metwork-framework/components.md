@@ -75,7 +75,7 @@
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.3.0 | python3_core |
 | [hatchling](https://pypi.org/project/hatchling) | 1.18.0 | python3_core |
 | [hdf4](https://www.hdfgroup.org) | 4.2.16-2 | scientific_core |
-| [hdf5](https://www.hdfgroup.org) | 1.14.2 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.14.3 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
 | [idna](https://pypi.org/project/idna) | 3.4 | python3 |
@@ -198,7 +198,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 7.4.2 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 7.4.3 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.11.6 | python3_core |
