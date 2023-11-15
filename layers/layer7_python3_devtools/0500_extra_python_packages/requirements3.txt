@@ -49,10 +49,10 @@ pydocstyle==6.1.1
 pyflakes==3.1.0
 pylint==3.0.1
 pymdown-extensions==10.3
-pytest==7.4.2
+pytest==7.4.3
 pytest-asyncio==0.21.1
 pytest-cov==4.1.0
-pytest-html==4.0.2
+pytest-html==4.1.1
 pytest-httpserver==1.0.8
 pytest-metadata==3.0.0
 pytest-json-report==1.5.0
