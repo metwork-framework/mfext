@@ -77,6 +77,8 @@
 - upgrade gdal from 3.7.2 to 3.7.3 (#1721)
 - add pydantic and bump-pydantic (#1722)
 - upgrade postgresql from 15.4 to 16.1 (#1724)
+- upgrade Python to 3.11.6, pip to 23.3.1, setuptools to 68.2.2 (#1726)
+- bump pytest-html to 4.1.1 (#1727)
 
 ### Bug Fixes
 
