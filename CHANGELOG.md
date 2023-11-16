@@ -79,6 +79,10 @@
 - upgrade postgresql from 15.4 to 16.1 (#1724)
 - upgrade Python to 3.11.6, pip to 23.3.1, setuptools to 68.2.2 (#1726)
 - bump pytest-html to 4.1.1 (#1727)
+- bump hdf5 to 1.14.3 and pytest to 7.4.3 (#1729)
+- bump aiohttp from 3.8.5 to 3.8.6 (security update) (#1730)
+- upgrade nodejs from 16.15.1 to 20.9.0 (#1732)
+- upgrade gdal from 3.7.3 to 3.8.0 (#1731)
 
 ### Bug Fixes
 
