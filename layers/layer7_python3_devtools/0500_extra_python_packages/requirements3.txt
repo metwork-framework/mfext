@@ -3,7 +3,7 @@ astroid==3.0.0
 asttokens==2.4.0
 backcall==0.2.0
 bracex==2.4
-black==23.9.1
+black==23.11.0
 bump-pydantic==0.7.0
 coverage==7.3.2
 exceptiongroup==1.1.3
