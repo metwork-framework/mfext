@@ -83,6 +83,8 @@
 - bump aiohttp from 3.8.5 to 3.8.6 (security update) (#1730)
 - upgrade nodejs from 16.15.1 to 20.9.0 (#1732)
 - upgrade gdal from 3.7.3 to 3.8.0 (#1731)
+- upgrade black to 23.11.0 (#1733)
+- upgrade urllib3 from 2.0.7 to 2.1.0 (#1734)
 
 ### Bug Fixes
 
