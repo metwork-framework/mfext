@@ -70,3 +70,4 @@ typed-ast==1.5.5
 watchdog==3.0.0
 wcmatch==8.5
 wcwidth==0.2.8
+pipdeptree==2.13.1

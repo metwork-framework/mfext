@@ -36,3 +36,4 @@ setuptools-git-versioning
 pytest-json-report
 tornado
 bump-pydantic
+pipdeptree
