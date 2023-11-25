@@ -86,6 +86,7 @@
 - upgrade black to 23.11.0 (#1733)
 - upgrade urllib3 from 2.0.7 to 2.1.0 (#1734)
 - upgrade setuptools from 68.2.2 to 69.0.2 (#1736)
+- add pipdeptree (#1737)
 
 ### Bug Fixes
 
