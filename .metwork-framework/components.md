@@ -2,7 +2,7 @@
 | --- | --- | --- |
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohttp-metwork-middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.8.6 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.9.1 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.1 | python3 |
 | [annotated-types](https://pypi.org/project/annotated-types) | 0.6.0 | python3 |
 | [apipkg](https://pypi.org/project/apipkg) | 3.0.2 | python3_devtools |
