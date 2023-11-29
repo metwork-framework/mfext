@@ -87,6 +87,7 @@
 - upgrade urllib3 from 2.0.7 to 2.1.0 (#1734)
 - upgrade setuptools from 68.2.2 to 69.0.2 (#1736)
 - add pipdeptree (#1737)
+- bump aiohttp from 3.8.6 to 3.9.1 (for security reason) (backport #1742) (#1743)
 
 ### Bug Fixes
 
@@ -104,5 +105,6 @@
 - downgrade urllib3 to 1.26.16 for compatibility with requests>=2.29 (#1659)
 - fix missing double quote in python3_wrapper (#1704)
 - fix or disable shellcheck info (#1706)
+- upgrade mfplugin to fix issue on terminaltables (backport #1739) (#1741)
 
 
