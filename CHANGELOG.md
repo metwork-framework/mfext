@@ -6,6 +6,10 @@
 
 - fix link to rpms repository in installation guide (#1701)
 
+### Bug Fixes
+
+- upgrade mfplugin to fix issue on terminaltables (backport #1739) (#1740)
+
 ## v2.1.6 (2023-10-03)
 
 ### New Features
