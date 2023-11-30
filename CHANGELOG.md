@@ -88,6 +88,7 @@
 - upgrade setuptools from 68.2.2 to 69.0.2 (#1736)
 - add pipdeptree (#1737)
 - bump aiohttp from 3.8.6 to 3.9.1 (for security reason) (backport #1742) (#1743)
+- bump cryptography from 41.0.4 to 41.0.7 (security) (backport #1745) (#1746)
 
 ### Bug Fixes
 
