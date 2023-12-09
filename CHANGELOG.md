@@ -6,6 +6,7 @@
 
 - bump aiohttp from 3.8.6 to 3.9.1 (for security reason) (#1742)
 - bump cryptography from 41.0.4 to 41.0.7 (security) (#1745)
+- bump gdal from 3.8.0 to 3.8.1 (#1747)
 
 ### Bug Fixes
 
