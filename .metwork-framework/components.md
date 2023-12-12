@@ -200,7 +200,7 @@
 | [tornado](http://www.tornadoweb.org/) | 6.0.4 | python3_devtools |
 | [tqdm](https://github.com/tqdm/tqdm) | 4.53.0 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.1.1 | python3 |
-| [typed-ast](https://github.com/python/typed_ast) | 1.4.1 | python3_devtools |
+| [typed-ast](https://github.com/python/typed_ast) | 1.5.4 | python3_devtools |
 | [typing-extensions](https://github.com/python/typing/blob/master/typing_extensions/README.rst) | 3.10.0.2 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.1.1 | python3 |
 | [urllib3](https://urllib3.readthedocs.io/) | 1.26.5 | python3 |
