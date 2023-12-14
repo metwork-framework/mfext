@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## v2.0.9 (2023-12-13)
+
+### New Features
+
+- upgrade Python 3.9 from 3.9.7 to 3.9.18 (#1752)
+
 ## v2.0.8 (2023-10-02)
 
 ### New Features
