@@ -1,5 +1,16 @@
 # release_2.1 CHANGELOG
 
+## v2.1.7 (2023-12-13)
+
+### New Features
+
+- fix link to rpms repository in installation guide (#1701)
+- upgrade Python3.10 from 3.10.8 to 3.10.13 (#1751)
+
+### Bug Fixes
+
+- upgrade mfplugin to fix issue on terminaltables (backport #1739) (#1740)
+
 ## v2.1.6 (2023-10-03)
 
 ### New Features
