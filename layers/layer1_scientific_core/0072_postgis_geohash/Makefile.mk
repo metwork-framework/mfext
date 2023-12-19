@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=postgis-geohash
-export VERSION=0.2.0
+export VERSION=0.1.2
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=434f2bd9ff93de9a0d901d1901d4cbc3
+export CHECKSUM=6779625e04815b3161a4e775b7a181eb
 DESCRIPTION=\
 Postgis Geohash is a PostGreSQL/Postgis extension to calculate per bit precision geohash
 WEBSITE=https://github.com/adelplanque/postgis-geohash
