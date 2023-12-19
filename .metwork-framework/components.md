@@ -160,7 +160,7 @@
 | [pipdeptree](https://pypi.org/project/pipdeptree) | 2.13.1 | python3_devtools |
 | [platformdirs](https://pypi.org/project/platformdirs) | 3.10.0 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.3.0 | python3_core |
-| [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
+| [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.4.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 16.1 | scientific_core |
