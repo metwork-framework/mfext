@@ -12,5 +12,6 @@
 ### Bug Fixes
 
 - upgrade mfplugin to fix issue on terminaltables (#1739)
+- downgrade gitignore-parser to 0.1.8 (#1755)
 
 
