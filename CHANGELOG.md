@@ -7,6 +7,10 @@
 - bump gdal from 3.8.0 to 3.8.1 (backport #1747) (#1748)
 - upgrade Python 3.11 from 3.11.6 to 3.11.7 (backport #1749) (#1750)
 
+### Bug Fixes
+
+- downgrade gitignore-parser to 0.1.8 (backport #1755) (#1756)
+
 ## v2.2.0 (2023-11-30)
 
 ### New Features
