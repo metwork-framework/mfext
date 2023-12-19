@@ -146,7 +146,7 @@
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 23.1 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
-| [paramiko](https://paramiko.org) | 3.3.1 | python3 |
+| [paramiko](https://paramiko.org) | 3.4.0 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://pypi.org/project/pathspec) | 0.11.2 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.11.1 | python3 |
