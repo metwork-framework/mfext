@@ -1,6 +1,6 @@
 # release_2.2 CHANGELOG
 
-## [Unreleased]
+## v2.2.1 (2023-12-20)
 
 ### New Features
 
@@ -8,6 +8,7 @@
 - upgrade Python 3.11 from 3.11.6 to 3.11.7 (backport #1749) (#1750)
 - upgrade psutil from 5.9.5 to 5.9.7 (#1757)
 - upgrade postgis-geohash to 0.1.2 (fix for PostGreSQL 16) (backport #1759) (#1760)
+- bump paramiko to 3.4.0 (security against Terrapin attack) (#1762)
 
 ### Bug Fixes
 
