@@ -392,15 +392,6 @@ EOF
 
 
 {% if MFEXT_ADDON == "0" %}
-################################################################
-##### postun SECTION (POSTUNINSTALLATION) FOR MAIN PACKAGE #####
-################################################################
-%postun
-    {% if MODULE_HAS_HOME_DIR == "1" %}
-        #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
-        crontab -r -u {{MFMODULE_LOWERCASE}} || true
-    {% endif %}
-
 #########################################################################
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
@@ -411,6 +402,10 @@ EOF
         chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
         chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
     fi
+    {% if MODULE_HAS_HOME_DIR == "1" %}
+        #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
+        crontab -r -u {{MFMODULE_LOWERCASE}} || true
+    {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{TARGET_LINK}} 2>/dev/null
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
