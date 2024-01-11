@@ -396,12 +396,16 @@ EOF
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
 %postun {{MODULE_BRANCH}}
-    #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
-    if test -d /home/{{MFMODULE_LOWERCASE}}; then
-        touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
-        chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
-        chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
-    fi
+    {% if MODULE_HAS_HOME_DIR == "1" %}
+        #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+        if test -d /home/{{MFMODULE_LOWERCASE}}; then
+            touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
+            chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+            chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+        fi
+        #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
+        rm -f /var/spool/cron/{{MFMODULE_LOWERCASE}}
+    {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{TARGET_LINK}} 2>/dev/null
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
