@@ -404,6 +404,7 @@ EOF
             chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
         fi
         #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
+        su --command="crontab -r" {{MFMODULE_LOWERCASE}} || true
         rm -f /var/spool/cron/{{MFMODULE_LOWERCASE}}
     {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
