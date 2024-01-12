@@ -11,6 +11,8 @@
 - upgrade psutil from 5.9.5 to 5.9.7 (#1757)
 - upgrade postgis-geohash to 0.1.2 (fix for PostGreSQL 16) (#1759)
 - bump paramiko to 3.4.0 (security against Terrapin attack) (#1762)
+- remove module's system crontab when uninstalling (#1766)
+- upgrade gdal from 3.8.1 to 3.8.3 (#1777)
 
 ### Bug Fixes
 
