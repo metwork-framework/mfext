@@ -199,7 +199,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 7.4.3 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 7.4.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.11.7 | python3_core |
@@ -246,6 +246,8 @@
 | [traitlets](https://pypi.org/project/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
 | [typed-ast](https://github.com/python/typed_ast) | 1.5.5 | python3_devtools |
+| [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
+| [typing-inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.8.0 | python3_core |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.1.0 | python3 |
@@ -268,4 +270,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(267 components)*
+*(269 components)*
