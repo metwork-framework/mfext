@@ -1,5 +1,13 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- upgrade gdal from 3.8.1 to 3.8.3 (backport #1777) (#1778)
+- remove module's system crontab when uninstalling (#1776)
+- bump pytest to 7.4.4 and add typer and typing-inspect (missing) (#1779)
+
 ## v2.2.1 (2023-12-20)
 
 ### New Features
