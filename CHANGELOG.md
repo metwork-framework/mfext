@@ -13,6 +13,7 @@
 - bump paramiko to 3.4.0 (security against Terrapin attack) (#1762)
 - remove module's system crontab when uninstalling (#1766)
 - upgrade gdal from 3.8.1 to 3.8.3 (#1777)
+- bump pytest to 7.4.4 and add typer and typing-inspect (missing) (#1779)
 
 ### Bug Fixes
 
