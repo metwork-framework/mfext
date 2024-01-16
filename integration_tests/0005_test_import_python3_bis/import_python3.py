@@ -196,7 +196,6 @@ import tornado
 import tqdm
 import traitlets
 import trove_classifiers
-import typed_ast
 import typer
 import typing_extensions
 import typing_inspect

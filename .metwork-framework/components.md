@@ -245,7 +245,6 @@
 | [tqdm](https://pypi.org/project/tqdm) | 4.66.1 | python3 |
 | [traitlets](https://pypi.org/project/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
-| [typed_ast](https://github.com/python/typed_ast) | 1.5.5 | python3_devtools |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.8.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
@@ -270,4 +269,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(269 components)*
+*(268 components)*
