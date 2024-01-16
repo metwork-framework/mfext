@@ -23,7 +23,6 @@ libpthread.so.0()(64bit)@generic
 libresolv.so.2()(64bit)@generic
 librt.so.1()(64bit)@generic
 libSM.so.6()(64bit)@generic
-libsqlite3.so.0()(64bit)@generic
 libssl.so.1.1()(64bit)@generic
 libstdc++.so.6()(64bit)@generic
 libtcl8.6.so()(64bit)@generic
