@@ -14,6 +14,7 @@
 - remove module's system crontab when uninstalling (#1766)
 - upgrade gdal from 3.8.1 to 3.8.3 (#1777)
 - bump pytest to 7.4.4 and add typer and typing-inspect (missing) (#1779)
+- upgrade pip to 23.3.2 and setuptools to 69.0.3 (#1781)
 
 ### Bug Fixes
 
