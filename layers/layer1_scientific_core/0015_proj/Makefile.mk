@@ -17,4 +17,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libproj.so
 $(PREFIX)/lib/libproj.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="-DBUILD_TESTING=OFF" download uncompress configure_cmake build_cmake install_cmake
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="-DBUILD_TESTING=OFF -DCMAKE_PREFIX_PATH='$(PREFIX);$(PREFIX)/../core'" download uncompress configure_cmake build_cmake install_cmake
