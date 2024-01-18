@@ -228,6 +228,7 @@
 | [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
+| [sqlite](http://sqlite.org/) | 3450000 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3_devtools |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [structlog](https://pypi.org/project/structlog) | 23.1.0 | python3 |
@@ -269,4 +270,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(268 components)*
+*(269 components)*
