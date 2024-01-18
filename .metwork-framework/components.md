@@ -16,6 +16,7 @@
 | [autopep8](https://github.com/hhatto/autopep8) | 2.0.4 | python3 |
 | [Babel](https://babel.pocoo.org/) | 2.13.0 | python3_devtools |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3_devtools |
+| [bandit](https://bandit.readthedocs.io/) | 1.7.6 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 4.0.1 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
@@ -58,17 +59,21 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3_devtools |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://pypi.org/project/filelock) | 3.12.3 | python3_core |
+| [filprofiler](https://pythonspeed.com/fil/) | 2023.3.1 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 6.1.0 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
 | [flit_scm](https://pypi.org/project/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.4.0 | python3 |
+| [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.8.3 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.0.1 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
+| [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.8 | python3 |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.41 | python3_devtools |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 23.1.0 | python3 |
 | [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.2 | python3 |
 | [hatch-requirements-txt](https://pypi.org/project/hatch-requirements-txt) | 0.4.0 | python3 |
@@ -175,6 +180,7 @@
 | [psycopg2](https://psycopg.org/) | 2.9.9 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
+| [py-spy](https://github.com/benfred/py-spy) | 0.3.14 | python3_devtools |
 | [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3 |
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
@@ -227,10 +233,12 @@
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.13 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
+| [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sqlite](http://sqlite.org/) | 3450000 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3_devtools |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
+| [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.1.0 | python3_devtools |
 | [structlog](https://pypi.org/project/structlog) | 23.1.0 | python3 |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
@@ -238,6 +246,7 @@
 | [termcolor](https://pypi.org/project/termcolor) | 2.3.0 | python3 |
 | [terminaltables](https://github.com/matthewdeanmartin/terminaltables) | 3.1.10 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
+| [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.2.0 | python3 |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tomli](https://pypi.org/project/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
@@ -270,4 +279,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(269 components)*
+*(278 components)*
