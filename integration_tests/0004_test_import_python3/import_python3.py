@@ -72,7 +72,6 @@ import hatch_requirements_txt
 import hatch_vcs
 import hatchling
 import hiredis
-import huggingface_hub
 import idna
 import iniconfig
 import inotify_simple
