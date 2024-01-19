@@ -3,6 +3,7 @@ import acquisition
 import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
+import altgraph
 import annotated_types
 import apipkg
 import appdirs
@@ -15,6 +16,7 @@ import attr #attrs
 import autopep8
 import babel
 import backcall
+import bandit
 import bash
 import bcrypt
 import binaryornot
@@ -52,14 +54,18 @@ import execnet
 import executing
 import fastentrypoints
 import filelock
+import filprofiler
 import flake8_docstrings
 import flake8
 import flit_core
 import flit_scm
 import freezegun
 import frozenlist
+import fsspec
 import geojson
 import ghp_import
+import git
+import gitdb
 import gitignore_parser
 import hatch_fancy_pypi_readme
 import hatch_nodejs_version
@@ -146,6 +152,7 @@ import pydocstyle
 import pyflakes
 import pygments
 import pyinotify
+import _pyinstaller_hooks_contrib
 import pylint
 import pymdownx
 import nacl #PyNaCl
@@ -182,13 +189,16 @@ import setuptools
 import sftp_py
 import simpleeval
 import six
+import smmap
 import snowballstemmer
 import stack_data
 import statsd
+import stevedore
 import structlog
 import telegraf_unixsocket_client
 import termcolor
 import terminaltables
+import threadpoolctl
 import toml
 import tomli
 import tomlkit
