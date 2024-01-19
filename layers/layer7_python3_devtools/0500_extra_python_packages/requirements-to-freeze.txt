@@ -41,3 +41,4 @@ py-spy
 filprofiler
 bandit
 GitPython
+pyinstaller

@@ -2,6 +2,7 @@ import acquisition
 import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
+import altgraph
 import annotated_types
 import apipkg
 import appdirs
@@ -144,6 +145,7 @@ import pydantic_core
 import pydocstyle
 import pyflakes
 import pygments
+import _pyinstaller_hooks_contrib
 import pyinotify
 import pylint
 import pymdownx

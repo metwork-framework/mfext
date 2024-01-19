@@ -3,6 +3,7 @@ import acquisition
 import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
+import altgraph
 import annotated_types
 import apipkg
 import appdirs
@@ -146,6 +147,7 @@ import pydocstyle
 import pyflakes
 import pygments
 import pyinotify
+import _pyinstaller_hooks_contrib
 import pylint
 import pymdownx
 import nacl #PyNaCl
