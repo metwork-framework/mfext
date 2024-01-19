@@ -1,6 +1,8 @@
+filprofiler
 isort
 libcst
 mkdocs-awesome-pages-plugin
+py-spy
 pytest-httpserver
 pytest-metadata
 rich

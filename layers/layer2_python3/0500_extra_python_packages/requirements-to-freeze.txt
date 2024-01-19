@@ -62,3 +62,5 @@ pydantic
 #There is a problem with circus_autorestart_plugin with gitignore-parser 0.1.9
 #Cf https://github.com/metwork-framework/circus_autorestart_plugin/issues/6
 gitignore-parser<0.1.9
+threadpoolctl
+fsspec
