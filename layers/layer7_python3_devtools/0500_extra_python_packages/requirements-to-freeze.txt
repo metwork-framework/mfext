@@ -42,4 +42,3 @@ filprofiler
 bandit
 GitPython
 pyinstaller
-huggingface_hub

@@ -84,7 +84,6 @@
 | [hdf5](https://www.hdfgroup.org) | 1.14.3 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
-| [huggingface_hub](https://github.com/huggingface/huggingface_hub) | 0.20.2 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.4 | python3 |
 | [importlib_metadata](https://github.com/python/importlib_metadata) | 6.8.0 | python3_core |
 | [iniconfig](https://pypi.org/project/iniconfig) | 2.0.0 | python3_devtools |
@@ -283,4 +282,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(282 components)*
+*(281 components)*
