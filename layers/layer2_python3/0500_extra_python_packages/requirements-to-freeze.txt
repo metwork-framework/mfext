@@ -59,6 +59,12 @@ urllib3
 bjoern
 python-ldap
 pydantic
+<<<<<<< HEAD
 #There is a problem with circus_autorestart_plugin with gitignore-parser 0.1.9
 #Cf https://github.com/metwork-framework/circus_autorestart_plugin/issues/6
 gitignore-parser<0.1.9
+=======
+gitignore-parser
+threadpoolctl
+fsspec
+>>>>>>> 141eb69f (feat: upgrade gitignore-parser to 0.1.11 (with our fix for symlinks)  (#1795))

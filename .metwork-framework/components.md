@@ -68,7 +68,13 @@
 | [geojson](https://github.com/jazzband/geojson) | 3.0.1 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
+<<<<<<< HEAD
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.8 | python3 |
+=======
+| [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
+| [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.11 | python3 |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.41 | python3_devtools |
+>>>>>>> 141eb69f (feat: upgrade gitignore-parser to 0.1.11 (with our fix for symlinks)  (#1795))
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 23.1.0 | python3 |
 | [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.2 | python3 |
 | [hatch-requirements-txt](https://pypi.org/project/hatch-requirements-txt) | 0.4.0 | python3 |
