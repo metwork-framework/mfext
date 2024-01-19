@@ -1,4 +1,4 @@
-py-spy==0.3.14
+altgraph==0.17.4
 apipkg==3.0.2
 astroid==3.0.0
 asttokens==2.4.0
@@ -50,8 +50,11 @@ pickleshare==0.7.5
 prompt-toolkit==3.0.39
 ptyprocess==0.7.0
 pure-eval==0.2.2
+py-spy==0.3.14
 pydocstyle==6.1.1
 pyflakes==3.1.0
+pyinstaller-hooks-contrib==2024.0
+pyinstaller==6.3.0
 pylint==3.0.1
 pymdown-extensions==10.3
 pytest==7.4.4

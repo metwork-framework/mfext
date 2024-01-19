@@ -4,6 +4,7 @@
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.9.1 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.1 | python3 |
+| [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
 | [annotated-types](https://pypi.org/project/annotated-types) | 0.6.0 | python3 |
 | [apipkg](https://pypi.org/project/apipkg) | 3.0.2 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
@@ -191,6 +192,8 @@
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
 | [Pygments](https://pypi.org/project/Pygments) | 2.16.1 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
+| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.0 | python3_devtools |
+| [pyinstaller](https://www.pyinstaller.org/) | 6.3.0 | python3_devtools |
 | [pylint](https://pypi.org/project/pylint) | 3.0.1 | python3_devtools |
 | [pymdown-extensions](https://pypi.org/project/pymdown-extensions) | 10.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
@@ -279,4 +282,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(278 components)*
+*(281 components)*
