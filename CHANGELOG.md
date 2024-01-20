@@ -16,6 +16,8 @@
 - bump pytest to 7.4.4 and add typer and typing-inspect (missing) (#1779)
 - upgrade pip to 23.3.2 and setuptools to 69.0.3 (#1781)
 - build sqlite 3.45.0 (for django5 requiring sqlite >= 3.27) (#1786)
+- add bandit, filprofiler, GitPython, py-spy, pyinstaller (layer python3_devtools) (#1794)
+- upgrade gitignore-parser to 0.1.11 (with our fix for symlinks)  (#1795)
 
 ### Bug Fixes
 
