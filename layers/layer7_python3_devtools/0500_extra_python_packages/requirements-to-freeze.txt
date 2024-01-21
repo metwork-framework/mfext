@@ -37,3 +37,8 @@ pytest-json-report
 tornado
 bump-pydantic
 pipdeptree
+py-spy
+filprofiler
+bandit
+GitPython
+pyinstaller
