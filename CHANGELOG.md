@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add bandit, filprofiler, GitPython, py-spy, pyinstaller (layer python3_devtools) (#1794)
+
 ## v2.2.2 (2024-01-16)
 
 ### New Features
