@@ -73,7 +73,7 @@
 | [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
-| [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.8 | python3 |
+| [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.11 | python3 |
 | [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.41 | python3_devtools |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 23.1.0 | python3 |
 | [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.2 | python3 |
