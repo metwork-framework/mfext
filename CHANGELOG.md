@@ -18,6 +18,7 @@
 - build sqlite 3.45.0 (for django5 requiring sqlite >= 3.27) (#1786)
 - add bandit, filprofiler, GitPython, py-spy, pyinstaller (layer python3_devtools) (#1794)
 - upgrade gitignore-parser to 0.1.11 (with our fix for symlinks)  (#1795)
+- bump Jinja2 from 3.1.2 to 3.1.3 (fix GHSA-h5c8-rqwp-cp95) (#1799)
 
 ### Bug Fixes
 
