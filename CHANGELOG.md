@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump aiohttp from 3.9.1 to 3.9.3 (for security reasons) (#1802)
+
 ## v2.2.3 (2024-01-23)
 
 ### New Features
