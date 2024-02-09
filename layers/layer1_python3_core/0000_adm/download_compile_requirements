@@ -26,15 +26,16 @@ fi
 #Until pip 23, wheel cache was not used with option --no-binary
 #With pip 23, wheel cache will be used with option --no-binary (it will speed up Metwork build)
 #Option --use-feature=no-binary-enable-wheel-cache reproduce this behavior with pip 22
+#Option --use-feature=no-binary-enable-wheel-cache is now always enabled
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
     if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
         BINARY=""
     else
         BLIST=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
-        BINARY="--use-feature=no-binary-enable-wheel-cache --no-binary :all: --only-binary ${BLIST}"
+        BINARY="--no-binary :all: --only-binary ${BLIST}"
     fi
 else
-    BINARY="--use-feature=no-binary-enable-wheel-cache --no-binary :all:"
+    BINARY="--no-binary :all:"
 fi
 
      
