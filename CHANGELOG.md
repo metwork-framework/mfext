@@ -22,6 +22,7 @@
 - bump aiohttp from 3.9.1 to 3.9.3 (for security reasons) (#1802)
 - bump cryptography from 41.0.7 to 42.0.2 (security update) (#1806)
 - upgrade log_proxy to 0.7.1 (new functionality) (#1807)
+- upgrade log_proxy to last release (0.7.3) (#1809)
 
 ### Bug Fixes
 
