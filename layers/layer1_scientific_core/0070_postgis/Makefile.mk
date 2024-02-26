@@ -25,3 +25,4 @@ $(PREFIX)/lib/postgresql/postgis-$(SHORT_VERSION).so:
 $(PREFIX)/contrib/postgis-$(SHORT_VERSION)/postgis_comments.sql:
 	mkdir -p $(PREFIX)/contrib/postgis-$(SHORT_VERSION)
 	cd build/$(NAME)-$(VERSION) && cp -f doc/postgis_comments.sql $(PREFIX)/contrib/postgis-$(SHORT_VERSION)/
+	echo "trusted = true" >> $(PREFIX)/share/postgresql/extension/postgis.control
