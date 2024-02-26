@@ -43,7 +43,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.3.2 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://pypi.org/project/cryptography) | 42.0.2 | python3 |
+| [cryptography](https://pypi.org/project/cryptography) | 42.0.5 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.14 | python3 |
