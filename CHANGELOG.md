@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- set postgis extension as trusted (#1811)
+
 ## v2.2.4 (2024-02-01)
 
 ### New Features
