@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 cached-property==1.5.1
 -e git+https://github.com/thefab/circus.git@7a895956a1543e8d1c915c860ab4aa518ef88f0c#egg=circus
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@61e4943f51d6d1e9088ea9025425842ddd7f54db#egg=circus_autorestart_plugin
 pyzmq==22.3.0
 tornado==4.5.2
+=======
+cached-property==1.5.2
+-e git+https://github.com/metwork-framework/circus.git@bf2089ddff3b6337a51843d2f3e90e888baa0b08#egg=circus
+-e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@61e4943f51d6d1e9088ea9025425842ddd7f54db#egg=circus_autorestart_plugin
+pyzmq==25.1.1
+tornado==4.5.3
+
+>>>>>>> 38dd0c2f (fix: update circus (to fix preexec_fn issue) (#1816))

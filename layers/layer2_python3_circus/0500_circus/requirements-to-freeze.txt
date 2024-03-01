@@ -1,5 +1,9 @@
 #For python 3.9, we need pyzmq > 18
 pyzmq>18
+<<<<<<< HEAD
 -e git+https://github.com/thefab/circus.git@metwork#egg=circus
 tornado==4.5.2
+=======
+-e git+https://github.com/metwork-framework/circus.git#egg=circus
+>>>>>>> 38dd0c2f (fix: update circus (to fix preexec_fn issue) (#1816))
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git#egg=circus_autorestart_plugin

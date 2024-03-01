@@ -15,6 +15,7 @@
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 3.1.7 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
+<<<<<<< HEAD
 | [bjoern](https://github.com/thefab/bjoern/tree/metwork) | metwork-20190515 | python3 |
 | [black](https://github.com/psf/black) | 19.10b0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.1 | python3_circus |
@@ -27,6 +28,24 @@
 | [circus](https://pypi.org/project/circus) | 7a89595 | python3_circus |
 | [Click](https://palletsprojects.com/p/click/) | 7.0 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.3 | python3 |
+=======
+| [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
+| [black](https://pypi.org/project/black) | 23.11.0 | python3_devtools |
+| [bracex](https://pypi.org/project/bracex) | 2.4 | python3_devtools |
+| [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.7.0 | python3_devtools |
+| [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
+| [cachetools](https://github.com/tkem/cachetools/) | 5.3.1 | python3 |
+| [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
+| [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
+| [certifi](https://certifi.io) | 2023.7.22 | python3_core |
+| [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
+| [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
+| [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
+| [circus](https://pypi.org/project/circus) | bf2089d | python3_circus |
+| [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
+| [click](https://palletsprojects.com/p/click/) | 8.1.7 | python3 |
+| [colorama](https://pypi.org/project/colorama) | 0.4.6 | python3 |
+>>>>>>> 38dd0c2f (fix: update circus (to fix preexec_fn issue) (#1816))
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 1.0.1 | python3 |
 | [cookiecutter-hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 5bc1f32 | python3 |
