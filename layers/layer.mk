@@ -29,7 +29,7 @@ all: before layer after
 else
 
 all:
-    $(info layer ${LAYER_NAME}@${MFMODULE_LOWERCASE} not built because of missing layers${MISSING_LAYERS})
+	$(info layer ${LAYER_NAME}@${MFMODULE_LOWERCASE} not built because of missing layers${MISSING_LAYERS})
 
 endif
 
