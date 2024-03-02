@@ -24,11 +24,13 @@
 - upgrade log_proxy to 0.7.1 (new functionality) (#1807)
 - upgrade log_proxy to last release (0.7.3) (#1809)
 - bump cryptography from 42.0.2 to 42.0.5 (security update) (#1813)
+- add security patch for nginx  (#1815)
 
 ### Bug Fixes
 
 - upgrade mfplugin to fix issue on terminaltables (#1739)
 - downgrade gitignore-parser to 0.1.8 (#1755)
 - set postgis extension as trusted (#1811)
+- update circus (to fix preexec_fn issue) (#1816)
 
 
