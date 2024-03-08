@@ -10,6 +10,7 @@
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.1.1 | python3 |
 | [arrow](https://arrow.readthedocs.io) | 1.2.3 | python3 |
+| [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.4.0 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async-timeout) | 4.0.3 | python3 |
@@ -282,4 +283,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(281 components)*
+*(282 components)*
