@@ -25,6 +25,7 @@
 - upgrade log_proxy to last release (0.7.3) (#1809)
 - bump cryptography from 42.0.2 to 42.0.5 (security update) (#1813)
 - add security patch for nginx  (#1815)
+- add python package astral (#1820)
 
 ### Bug Fixes
 
