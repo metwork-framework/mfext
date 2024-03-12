@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## v2.2.6 (2024-03-09)
+
+### New Features
+
+- add python package astral (#1820)
+
 ## v2.2.5 (2024-02-27)
 
 ### Bug Fixes
