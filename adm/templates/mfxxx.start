@@ -195,8 +195,10 @@ else
 fi
 
 {% if MFMODULE == "MFBASE" %}
-if test ${RES} -eq 0 && test "${NOINIT}" = "0"; then
-     _install_or_update_configured_plugins.py
+if test ${RES} -eq 0; then
+    if test "${NOINIT}" = "0"; then
+        _install_or_update_configured_plugins.py
+    fi
 fi
 {% endif %}
 
