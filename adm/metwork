@@ -2,7 +2,7 @@
 # chkconfig: 345 98 02
 # description: metwork services
 
-MODULES="mffront mfdata mfserv mfbase mfbus mfadmin mfsysmon"
+MODULES="mfdata mfserv mfbase mfbus mfadmin mfsysmon"
 MODULES_FULL="${MODULES} mfext"
 
 start_module() {
