@@ -58,8 +58,9 @@ if test "${PLUGIN_NAME}" != ""; then
     exit 1
 fi
 if test "${NOINIT}" = "0"; then
+    {% if MFMODULE != "MFBASE" %}
     DIR_INIT="plugins"
-    {% if MFMODULE == "MFBASE" %}
+    {% else %}
     DIR_INIT="pgsql"
     {% endif %}
     if ! test -d ${MFMODULE_RUNTIME_HOME}/var/${DIR_INIT}; then
@@ -195,7 +196,9 @@ fi
 
 {% if MFMODULE == "MFBASE" %}
 if test ${RES} -eq 0; then
-    _install_or_update_configured_plugins.py
+    if test "${NOINIT}" = "0"; then
+        _install_or_update_configured_plugins.py
+    fi
 fi
 {% endif %}
 
