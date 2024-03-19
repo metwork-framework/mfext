@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- fix mfbase.start in case NOINIT (#1825)
+
 ## v2.2.6 (2024-03-09)
 
 ### New Features
