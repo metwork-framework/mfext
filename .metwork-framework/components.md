@@ -153,6 +153,7 @@
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 23.1 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
+| [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.4.0 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://pypi.org/project/pathspec) | 0.11.2 | python3_core |
@@ -234,6 +235,7 @@
 | [setuptools_scm](https://github.com/pypa/setuptools_scm/) | 7.1.0 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
+| [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.4 | python3_devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.13 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
@@ -283,4 +285,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(282 components)*
+*(284 components)*
