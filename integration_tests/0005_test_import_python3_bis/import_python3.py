@@ -124,6 +124,7 @@ import nltk
 import opinionated_configparser
 import packaging
 import paginate
+import panoply
 import paramiko
 import parso
 import pathspec
@@ -188,6 +189,7 @@ import setuptools_rust
 import setuptools_scm
 import setuptools
 import sftp_py
+import simple_term_menu
 import simpleeval
 import six
 import smmap
