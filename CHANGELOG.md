@@ -26,6 +26,8 @@
 - bump cryptography from 42.0.2 to 42.0.5 (security update) (#1813)
 - add security patch for nginx  (#1815)
 - add python package astral (#1820)
+- add panoply in layer python3_devtools
+- bump black from 23.11.0 to 24.3.0 (security update) (#1836)
 
 ### Bug Fixes
 
