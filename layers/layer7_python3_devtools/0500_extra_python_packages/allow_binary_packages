@@ -2,6 +2,7 @@ filprofiler
 isort
 libcst
 mkdocs-awesome-pages-plugin
+panoply
 py-spy
 pytest-httpserver
 pytest-metadata

@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### New Features
+
+- add panoply in layer python3_devtools
+
 ### Bug Fixes
 
 - fix mfbase.start in case NOINIT (#1825)
