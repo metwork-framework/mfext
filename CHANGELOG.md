@@ -5,6 +5,7 @@
 ### New Features
 
 - add panoply in layer python3_devtools
+- bump black from 23.11.0 to 24.3.0 (security update) (backport #1836) (#1837)
 
 ### Bug Fixes
 
