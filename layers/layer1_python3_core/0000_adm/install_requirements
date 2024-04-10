@@ -77,7 +77,7 @@ if test "${N}" -eq 0; then
 fi
 
 if test ${OVERRIDE} = 1; then
-    CONSTRAINT="--ignore-installed"
+    CONSTRAINT="--ignore-installed --no-warn-conflicts"
 fi
 
 # shellcheck disable=SC2086
