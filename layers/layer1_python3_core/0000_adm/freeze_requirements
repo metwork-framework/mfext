@@ -56,7 +56,7 @@ fi
 cat "${REQUIREMENTS}" |sed 's/^git+/-e git+/g' > "${REQUIREMENTS}.tmp"
 
 if test ${OVERRIDE} = 1; then
-    CONSTRAINT="--ignore-installed"
+    CONSTRAINT="--ignore-installed --no-warn-conflicts"
 fi
     
 # shellcheck disable=SC2086
