@@ -404,13 +404,10 @@ EOF
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
 %postun {{MODULE_BRANCH}}
-<<<<<<< HEAD
-=======
     {% if MODULE_HAS_HOME_DIR == "1" %}
         #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
         crontab -r -u {{MFMODULE_LOWERCASE}} || true
     {% endif %}
->>>>>>> 67eefc01 (build: fix _metwork.spec (problem on module's HOME permission) (#1846))
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
         # see https://stackoverflow.com/questions/40396945/
@@ -418,22 +415,13 @@ EOF
         export SAVE_SUFFIX="rpmsave`date '+%Y%m%d%H%M%''S'`"
         {% if MODULE_HAS_HOME_DIR == "1" %}
             if test -d /home/{{MFMODULE_LOWERCASE}}; then
-<<<<<<< HEAD
-                echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-                mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
-=======
                 echo "INFO: saving (but not removing) old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
                 cp -Rp /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
->>>>>>> 67eefc01 (build: fix _metwork.spec (problem on module's HOME permission) (#1846))
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
                 {% if MFMODULE == "MFDATA" %}
                     rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
-<<<<<<< HEAD
-                mkdir /home/{{MFMODULE_LOWERCASE}}
-=======
->>>>>>> 67eefc01 (build: fix _metwork.spec (problem on module's HOME permission) (#1846))
             fi
             userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
             rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
@@ -452,13 +440,8 @@ EOF
         {% endif %}
         N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
-<<<<<<< HEAD
-            echo "INFO: saving old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-            mv /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
-=======
             echo "INFO: saving (but not removing) old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
             cp -Rp /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
->>>>>>> 67eefc01 (build: fix _metwork.spec (problem on module's HOME permission) (#1846))
         fi
         rm -Rf /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
     fi
