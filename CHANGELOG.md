@@ -28,6 +28,8 @@
 - add python package astral (#1820)
 - add panoply in layer python3_devtools
 - bump black from 23.11.0 to 24.3.0 (security update) (#1836)
+- do not remove module's HOME nor metwork service when uninstalling (#1842)
+- upgrade Python from 3.11.7 to 3.11.9 (#1845)
 
 ### Bug Fixes
 
@@ -37,5 +39,6 @@
 - fix mfbase.start in case NOINIT
 - fix mfbase.start in case NOINIT (#1825)
 - useless module mffront in service usage (closes #1829) (#1830)
+- remove pip conflicts warnings when using override (#1840)
 
 
