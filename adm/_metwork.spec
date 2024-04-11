@@ -412,8 +412,8 @@ EOF
         export SAVE_SUFFIX="rpmsave`date '+%Y%m%d%H%M%''S'`"
         {% if MODULE_HAS_HOME_DIR == "1" %}
             if test -d /home/{{MFMODULE_LOWERCASE}}; then
-                echo "INFO: saving old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-                mv /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+                echo "INFO: saving (but not removing) old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+                cp -R /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
                 {% if MFMODULE == "MFDATA" %}
@@ -421,27 +421,12 @@ EOF
                 {% endif %}
                 mkdir /home/{{MFMODULE_LOWERCASE}}
             fi
-            userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
-            rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
-        {% endif %}
-        {% if MFMODULE == "MFEXT" %}
-            if test -f /etc/rc.d/init.d/metwork; then
-                rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
-                if test -f /usr/lib/systemd/system/metwork.service; then
-                    systemctl disable metwork.service >/dev/null 2>&1 || true
-                    rm -f /usr/lib/systemd/system/metwork.service >/dev/null 2>&1
-                    systemctl daemon-reload >/dev/null 2>&1 || true
-                    systemctl reset-failed >/dev/null 2>&1 || true
-                fi
-            fi
-            rm -f /etc/security/limits.d/50-metwork.conf >/dev/null 2>&1
         {% endif %}
         N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
-            echo "INFO: saving old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-            mv /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+            echo "INFO: saving (but not removing) old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
+            cp -R /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
         fi
-        rm -Rf /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
     fi
 {% endif %}
 
