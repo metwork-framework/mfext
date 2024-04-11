@@ -423,27 +423,12 @@ EOF
                     rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
             fi
-            userdel -f -r {{MFMODULE_LOWERCASE}} 2>/dev/null
-            rm -Rf /home/{{MFMODULE_LOWERCASE}} 2>/dev/null
-        {% endif %}
-        {% if MFMODULE == "MFEXT" %}
-            if test -f /etc/rc.d/init.d/metwork; then
-                rm -f /etc/rc.d/init.d/metwork >/dev/null 2>&1
-                if test -f /usr/lib/systemd/system/metwork.service; then
-                    systemctl disable metwork.service >/dev/null 2>&1 || true
-                    rm -f /usr/lib/systemd/system/metwork.service >/dev/null 2>&1
-                    systemctl daemon-reload >/dev/null 2>&1 || true
-                    systemctl reset-failed >/dev/null 2>&1 || true
-                fi
-            fi
-            rm -f /etc/security/limits.d/50-metwork.conf >/dev/null 2>&1
         {% endif %}
         N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
             echo "INFO: saving (but not removing) old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
             cp -Rp /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
         fi
-        rm -Rf /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
     fi
 {% endif %}
 
