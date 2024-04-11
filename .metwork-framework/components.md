@@ -164,7 +164,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.21.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pypi.org/project/pika) | 1.3.2 | python3 |
-| [pip](https://pip.pypa.io/) | 23.3.2 | python3_core |
+| [pip](https://pypi.org/project/pip) | 24.0 | python3_core |
 | [pipdeptree](https://pypi.org/project/pipdeptree) | 2.13.1 | python3_devtools |
 | [platformdirs](https://pypi.org/project/platformdirs) | 3.10.0 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.3.0 | python3_core |
