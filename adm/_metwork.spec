@@ -403,7 +403,6 @@ EOF
         chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
     fi
     if [ "$1" = "0" ]; then # last uninstall only
-        rm -Rf {{TARGET_LINK}} 2>/dev/null
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
         # see https://stackoverflow.com/questions/40396945/
         # date-command-is-giving-erroneous-output-while-using-inside-rpm-spec-file
@@ -411,20 +410,18 @@ EOF
         {% if MODULE_HAS_HOME_DIR == "1" %}
             if test -d /home/{{MFMODULE_LOWERCASE}}; then
                 echo "INFO: saving (but not removing) old /home/{{MFMODULE_LOWERCASE}} to /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-                cp -R /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+                cp -Rp /home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/log
                 rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/tmp
                 {% if MFMODULE == "MFDATA" %}
                     rm -Rf /home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}/var/in
                 {% endif %}
-                chown -R --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
-                chmod --reference=/home/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} /home/{{MFMODULE_LOWERCASE}}
             fi
         {% endif %}
         N=`find /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} -type f 2>/dev/null |wc -l`
         if test ${N} -gt 0; then
             echo "INFO: saving (but not removing) old /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} to /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX} ..."
-            cp -R /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
+            cp -Rp /etc/metwork.config.d/{{MFMODULE_LOWERCASE}} /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}.${SAVE_SUFFIX}
         fi
     fi
 {% endif %}
