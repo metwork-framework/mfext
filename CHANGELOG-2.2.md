@@ -1,5 +1,15 @@
 # release_2.2 CHANGELOG
 
+## v2.2.8 (2024-04-11)
+
+### New Features
+
+- do not remove module's HOME nor metwork service when uninstalling (backport #1842) (#1844)
+
+### Bug Fixes
+
+- remove pip conflicts warnings when using override (#1840)
+
 ## v2.2.7 (2024-04-05)
 
 ### New Features
