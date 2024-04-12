@@ -1,5 +1,15 @@
 # release_2.1 CHANGELOG
 
+## v2.1.8 (2024-04-11)
+
+### New Features
+
+- do not remove module's HOME nor metwork service when uninstalling (#1842)
+
+### Bug Fixes
+
+- fix mfbase.start in case NOINIT (#1825)
+
 ## v2.1.7 (2023-12-13)
 
 ### New Features
