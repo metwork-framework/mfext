@@ -30,6 +30,7 @@
 - bump black from 23.11.0 to 24.3.0 (security update) (#1836)
 - do not remove module's HOME nor metwork service when uninstalling (#1842)
 - upgrade Python from 3.11.7 to 3.11.9 (#1845)
+- upgrade pip from 23.3.2 to 24.0 (built-in version in Python 3.1.9) (#1849)
 
 ### Bug Fixes
 
