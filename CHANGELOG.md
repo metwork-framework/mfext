@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- do not remove module's HOME nor metwork service when uninstalling (backport #1842) (#1854)
+
 ## v2.0.9 (2023-12-13)
 
 ### New Features
