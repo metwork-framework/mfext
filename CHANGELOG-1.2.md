@@ -1,5 +1,15 @@
 # release_1.2 CHANGELOG
 
+## v1.2.8 (2023-10-03)
+
+### New Features
+
+- add make as dependency (for plugins build) (#1691)
+
+### Bug Fixes
+
+- log level is not CRITICAL if status is ok after restart (backport #1650) (#1653)
+
 ## v1.2.7 (2023-06-13)
 
 ### New Features

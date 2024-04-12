@@ -1,5 +1,21 @@
 # release_2.0 CHANGELOG
 
+## v2.0.9 (2023-12-13)
+
+### New Features
+
+- upgrade Python 3.9 from 3.9.7 to 3.9.18 (#1752)
+
+## v2.0.8 (2023-10-02)
+
+### New Features
+
+- add make as dependency (for plugins build) (#1691)
+
+### Bug Fixes
+
+- log level is not CRITICAL if status is ok after restart (backport #1650) (#1651)
+
 ## v2.0.7 (2023-07-21)
 
 - No interesting change

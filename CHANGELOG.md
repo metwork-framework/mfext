@@ -1,5 +1,36 @@
 # release_2.1 CHANGELOG
 
+## v2.1.8 (2024-04-11)
+
+### New Features
+
+- do not remove module's HOME nor metwork service when uninstalling (#1842)
+
+### Bug Fixes
+
+- fix mfbase.start in case NOINIT (#1825)
+
+## v2.1.7 (2023-12-13)
+
+### New Features
+
+- fix link to rpms repository in installation guide (#1701)
+- upgrade Python3.10 from 3.10.8 to 3.10.13 (#1751)
+
+### Bug Fixes
+
+- upgrade mfplugin to fix issue on terminaltables (backport #1739) (#1740)
+
+## v2.1.6 (2023-10-03)
+
+### New Features
+
+- add make as dependency (for plugins build) (backport #1691) (#1693)
+
+### Bug Fixes
+
+- log level is not CRITICAL if status is ok after restart (backport #1650) (#1652)
+
 ## v2.1.5 (2023-07-20)
 
 - No interesting change
