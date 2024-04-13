@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- Upgrade Python 3.10 from 3.10.13 to 3.10.14 (#1858)
+
 ## v2.1.8 (2024-04-11)
 
 ### New Features
