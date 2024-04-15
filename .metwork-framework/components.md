@@ -85,7 +85,7 @@
 | [hdf5](https://www.hdfgroup.org) | 1.14.3 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
-| [idna](https://pypi.org/project/idna) | 3.4 | python3 |
+| [idna](https://pypi.org/project/idna) | 3.7 | python3 |
 | [importlib_metadata](https://github.com/python/importlib_metadata) | 6.8.0 | python3_core |
 | [iniconfig](https://pypi.org/project/iniconfig) | 2.0.0 | python3_devtools |
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
