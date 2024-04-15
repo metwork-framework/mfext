@@ -65,6 +65,7 @@
 | [gdal](http://www.gdal.org) | 3.5.3 | scientific_core |
 | [geos](http://trac.osgeo.org/geos/) | 3.10.3 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
+<<<<<<< HEAD
 | [gitignore-parser](https://github.com/mherrmann/gitignore_parser) | 0.1.0 | python3 |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 22.8.0 | python3 |
 | [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.0 | python3 |
@@ -86,6 +87,27 @@
 | [jinja2-from-json-extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 1.0.0 | python3 |
 | [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 1.0.2 | python3 |
 | [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | 1.0.0 | python3 |
+=======
+| [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
+| [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.11 | python3 |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.41 | python3_devtools |
+| [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 23.1.0 | python3 |
+| [hatch-nodejs-version](https://pypi.org/project/hatch-nodejs-version) | 0.3.2 | python3 |
+| [hatch-requirements-txt](https://pypi.org/project/hatch-requirements-txt) | 0.4.0 | python3 |
+| [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.3.0 | python3_core |
+| [hatchling](https://pypi.org/project/hatchling) | 1.18.0 | python3_core |
+| [hdf4](https://www.hdfgroup.org) | 4.2.16-2 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.14.3 | scientific_core |
+| [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
+| [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
+| [idna](https://pypi.org/project/idna) | 3.7 | python3 |
+| [importlib_metadata](https://github.com/python/importlib_metadata) | 6.8.0 | python3_core |
+| [iniconfig](https://pypi.org/project/iniconfig) | 2.0.0 | python3_devtools |
+| [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
+| [ipython](https://ipython.org) | 8.16.1 | python3_devtools |
+| [isort](https://pycqa.github.io/isort/) | 5.12.0 | python3_devtools |
+| [jedi](https://github.com/davidhalter/jedi) | 0.19.1 | python3_devtools |
+>>>>>>> eb5d7e21 (feat: bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (#1860))
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://palletsprojects.com/p/jinja/) | 3.1.2 | python3 |
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
