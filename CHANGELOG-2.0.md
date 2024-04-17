@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## v2.0.11 (2024-04-14)
+
+### New Features
+
+- upgrade Python 3.9 from 3.9.18 to 3.9.19 (#1859)
+
 ## v2.0.10 (2024-04-12)
 
 ### New Features
