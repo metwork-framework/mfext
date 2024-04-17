@@ -4,6 +4,12 @@
 
 ### New Features
 
+- bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (backport #1860) (#1862)
+
+## v2.1.9 (2024-04-13)
+
+### New Features
+
 - Upgrade Python 3.10 from 3.10.13 to 3.10.14 (#1858)
 
 ## v2.1.8 (2024-04-11)
