@@ -1,11 +1,12 @@
 # release_2.2 CHANGELOG
 
-## [Unreleased]
+## v2.2.9 (2024-04-15)
 
 ### New Features
 
 - upgrade Python from 3.11.7 to 3.11.9 (backport #1845) (#1850)
 - upgrade pip from 23.3.2 to 24.0 (built-in version in Python 3.1.9) (backport #1849) (#1851)
+- bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (#1860)
 
 ## v2.2.8 (2024-04-11)
 
