@@ -31,6 +31,7 @@
 - do not remove module's HOME nor metwork service when uninstalling (#1842)
 - upgrade Python from 3.11.7 to 3.11.9 (#1845)
 - upgrade pip from 23.3.2 to 24.0 (built-in version in Python 3.1.9) (#1849)
+- bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (#1860)
 
 ### Bug Fixes
 
