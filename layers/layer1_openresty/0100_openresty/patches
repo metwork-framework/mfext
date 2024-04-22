@@ -1,2 +1,10 @@
 github_pr67.patch
 github_issue384.patch
+<<<<<<< HEAD
+=======
+#patch https://nginx.org/download/patch.2022.mp4.txt
+ngx_http_mp4_module.patch
+#patch https://github.com/openresty/openresty/blob/4e8b4c395f842a078e429c80dd063b2323999957/patches/ngx_http_lua-0.10.15-fix_location_capture_content_length_chunked.patch
+#(fixing CVE-2020-11724)
+ngx_http_lua-fix_CVE-2020-11724.patch
+>>>>>>> e281c60 (feat: fix CVE-2020-11724 on openresty 1.15.8  (#1865))
