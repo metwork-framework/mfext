@@ -62,3 +62,5 @@ pydantic
 gitignore-parser
 threadpoolctl
 fsspec
+#pyasyncore for compatibility with Python3.12
+pyasyncore

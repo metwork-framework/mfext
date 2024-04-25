@@ -55,7 +55,7 @@ import execnet
 import executing
 import fastentrypoints
 import filelock
-import filprofiler
+#import filprofiler
 import flake8_docstrings
 import flake8
 import flit_core
@@ -146,6 +146,7 @@ import ptyprocess
 import pure_eval
 import pyasn1
 import pyasn1_modules
+import asyncore #pyasyncore
 import pycodestyle
 import pycparser
 import pydantic
@@ -173,7 +174,7 @@ import pytest
 import dateutil #python-dateutil
 import ldap #python-ldap
 import pytz
-import pywget
+#import pywget
 import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag
 import redis
