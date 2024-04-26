@@ -1,5 +1,12 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- fix CVE-2020-11724 on openresty 1.15.8  (backport #1865) (#1868)
+- bump aiohttp to 3.9.5 to fix CVE-2024-27306 (#1867)
+
 ## v2.2.9 (2024-04-15)
 
 ### New Features
