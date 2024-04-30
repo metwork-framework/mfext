@@ -54,7 +54,6 @@ import execnet
 import executing
 import fastentrypoints
 import filelock
-#import filprofiler
 import flake8_docstrings
 import flake8
 import flit_core
@@ -97,7 +96,6 @@ import markdown
 import markdown_it #markdown_it_py
 import markupsafe
 import maturin
-#import matplotlib_inline
 import mccabe
 import mdurl
 import mergedeep
@@ -173,7 +171,6 @@ import pytest
 import ldap #python-ldap
 import dateutil #python-dateutil
 import pytz
-#import pywget
 import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag
 import redis
@@ -227,6 +224,5 @@ import xmltodict
 import yarl
 import yq
 import zipp
-#python3_core dyn-load (required)
 import lzma
 import tkinter
