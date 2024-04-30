@@ -32,7 +32,7 @@ diskcache==5.6.3
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
 frozenlist==1.4.0
 fsspec==2023.9.2
-geojson==3.0.1
+geojson==3.1.0
 gitignore-parser==0.1.11
 hiredis==2.2.3
 idna==3.7
@@ -63,6 +63,7 @@ poyo==0.5.0
 psutil==5.9.7
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
+pyasyncore==1.0.4
 pycodestyle==2.11.0
 pydantic==2.4.2
 pydantic-core==2.10.1

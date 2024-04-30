@@ -1,0 +1,2 @@
+#setuptools is not provided anymore within Python 3.12
+setuptools

@@ -61,7 +61,6 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3_devtools |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://pypi.org/project/filelock) | 3.12.3 | python3_core |
-| [filprofiler](https://pythonspeed.com/fil/) | 2023.3.1 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 6.1.0 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
@@ -70,7 +69,7 @@
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.4.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.8.3 | scientific_core |
-| [geojson](https://github.com/jazzband/geojson) | 3.0.1 | python3 |
+| [geojson](https://github.com/jazzband/geojson) | 3.1.0 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
@@ -186,6 +185,7 @@
 | [py-spy](https://github.com/benfred/py-spy) | 0.3.14 | python3_devtools |
 | [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3 |
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
+| [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
 | [pydantic](https://pypi.org/project/pydantic) | 2.4.2 | python3 |
@@ -213,9 +213,8 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 7.4.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
-| [Python](http://python.org/) | 3.11.9 | python3_core |
+| [Python](http://python.org/) | 3.12.3 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
-| [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
@@ -231,7 +230,7 @@
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://pypi.org/project/setuptools-rust) | 1.7.0 | python3 |
-| [setuptools](https://github.com/pypa/setuptools) | 69.0.3 | python3_core |
+| [setuptools](https://github.com/pypa/setuptools) | 69.5.1 | python3_core |
 | [setuptools_scm](https://github.com/pypa/setuptools_scm/) | 7.1.0 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
@@ -285,4 +284,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(284 components)*
+*(283 components)*
