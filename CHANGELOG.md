@@ -34,6 +34,7 @@
 - bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (#1860)
 - bump aiohttp to 3.9.5 to fix CVE-2024-27306 (#1866)
 - fix CVE-2020-11724 on openresty 1.15.8  (#1865)
+- Upgrade from Python 3.11.9 to Python 3.12.3 (#1871)
 
 ### Bug Fixes
 
