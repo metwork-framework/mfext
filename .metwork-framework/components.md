@@ -257,7 +257,7 @@
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 4.5.3 | python3_circus |
 | [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3_devtools |
-| [tqdm](https://pypi.org/project/tqdm) | 4.66.1 | python3 |
+| [tqdm](https://pypi.org/project/tqdm) | 4.66.4 | python3 |
 | [traitlets](https://pypi.org/project/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
 | [typed_ast](https://github.com/python/typed_ast) | 1.5.5 | python3_devtools |
