@@ -35,6 +35,7 @@
 - bump aiohttp to 3.9.5 to fix CVE-2024-27306 (#1866)
 - fix CVE-2020-11724 on openresty 1.15.8  (#1865)
 - Upgrade from Python 3.11.9 to Python 3.12.3 (#1871)
+- bump tqdm to 4.66.4 (fix CVE-2024-34062) (#1879)
 
 ### Bug Fixes
 
