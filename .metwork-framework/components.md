@@ -87,7 +87,7 @@
 | [jinja2-getenv-extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 1.0.2 | python3 |
 | [jinja2-shell-extension](https://github.com/metwork-framework/jinja2_shell_extension) | 1.0.0 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
-| [Jinja2](https://palletsprojects.com/p/jinja/) | 3.1.2 | python3 |
+| [Jinja2](https://pypi.org/project/Jinja2) | 3.1.4 | python3 |
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
 | [joblib](https://joblib.readthedocs.io) | 1.2.0 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.6 | core |
