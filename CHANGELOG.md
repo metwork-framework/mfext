@@ -6,6 +6,7 @@
 
 - fix CVE-2020-11724 on openresty 1.15.8  (backport #1865) (#1868)
 - bump aiohttp to 3.9.5 to fix CVE-2024-27306 (#1867)
+- bump tqdm to 4.66.4 (fix CVE-2024-34062) (backport #1879) (#1880)
 
 ## v2.2.9 (2024-04-15)
 
