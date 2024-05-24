@@ -76,7 +76,7 @@ pytz==2023.3.post1
 PyYAML==6.0.1
 redis==5.0.1
 regex==2023.8.8
-requests==2.31.0
+requests==2.32.2
 -e git+https://github.com/metwork-framework/requests-unixsocket.git@0.3.1#egg=requests_unixsocket
 rich==13.5.2
 simpleeval==0.9.13
