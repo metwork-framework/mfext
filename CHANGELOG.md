@@ -37,6 +37,7 @@
 - Upgrade from Python 3.11.9 to Python 3.12.3 (#1871)
 - bump tqdm to 4.66.4 (fix CVE-2024-34062) (#1879)
 - bump Werkzeug from 3.0.1 to 3.0.3 (fix CVE-2024-34069) (#1882)
+- bump Jinja2 to 3.1.4 (fix CVE-2024-34064) (#1884)
 
 ### Bug Fixes
 
