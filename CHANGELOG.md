@@ -5,6 +5,7 @@
 ### New Features
 
 - bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (backport #1860) (#1862)
+- bump Jinja2 to 3.1.4 (fix CVE-2024-34064) (backport #1884) (#1885)
 
 ## v2.1.9 (2024-04-13)
 
