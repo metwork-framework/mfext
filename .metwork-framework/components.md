@@ -224,7 +224,7 @@
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2023.8.8 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket](https://github.com/metwork-framework/requests-unixsocket) | 0.3.1 | python3 |
-| [requests](https://requests.readthedocs.io) | 2.31.0 | python3 |
+| [requests](https://requests.readthedocs.io) | 2.32.2 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.5.2 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
