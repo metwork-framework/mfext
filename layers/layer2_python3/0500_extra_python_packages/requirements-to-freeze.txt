@@ -17,7 +17,7 @@ structlog
 psutil
 redis
 requests
--e git+https://github.com/metwork-framework/requests-unixsocket.git#egg=requests_unixsocket
+requests-unixsocket2
 bash
 netifaces
 cachetools
