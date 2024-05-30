@@ -1,7 +1,6 @@
 libc.so.6()(64bit)@generic
 libcares.so.2()(64bit)@generic
 libcgraph.so.6()(64bit)@generic
-libcrypto.so.1.1()(64bit)@generic
 libcurl.so.4()(64bit)@generic
 libdl.so.2()(64bit)@generic
 libelf.so.1()(64bit)@generic
@@ -23,8 +22,11 @@ libpthread.so.0()(64bit)@generic
 libresolv.so.2()(64bit)@generic
 librt.so.1()(64bit)@generic
 libSM.so.6()(64bit)@generic
+<<<<<<< HEAD
 libsqlite3.so.0()(64bit)@generic
 libssl.so.1.1()(64bit)@generic
+=======
+>>>>>>> 60472dac (feat: add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (#1889))
 libstdc++.so.6()(64bit)@generic
 libtcl8.6.so()(64bit)@generic
 libtinfo.so.6()(64bit)@generic
