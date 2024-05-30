@@ -39,6 +39,7 @@
 - bump Werkzeug from 3.0.1 to 3.0.3 (fix CVE-2024-34069) (#1882)
 - bump Jinja2 to 3.1.4 (fix CVE-2024-34064) (#1884)
 - bump requests to 2.32.2 (fix CVE-2024-35195) (#1887)
+- replace requests-unixsocket (unmaintained) by requests-unixsocket2 (#1888)
 
 ### Bug Fixes
 
