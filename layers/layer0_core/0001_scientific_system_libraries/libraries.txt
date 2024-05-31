@@ -2,3 +2,12 @@
 /usr/lib64/libjson-c.so.4.0.0
 /usr/lib64/libevent-2.1.so.6
 /usr/lib64/libevent-2.1.so.6.0.2
+<<<<<<< HEAD
+=======
+/usr/lib64/libffi.so.6
+/usr/lib64/libffi.so.6.0.2
+/usr/lib64/libssl.so.1.1
+/usr/lib64/libssl.so.1.1.1k
+/usr/lib64/libcrypto.so.1.1
+/usr/lib64/libcrypto.so.1.1.1k
+>>>>>>> 60472dac (feat: add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (#1889))
