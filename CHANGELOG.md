@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (#1889)
+
 ## v2.0.11 (2024-04-14)
 
 ### New Features
