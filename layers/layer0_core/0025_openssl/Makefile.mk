@@ -13,4 +13,4 @@ LICENSE=Apache 2.0
 
 all:: $(PREFIX)/lib/libssl.so
 $(PREFIX)/lib/libssl.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=$(PREFIX)/lib" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=$(PREFIX)/lib" download uncompress Configure build install
