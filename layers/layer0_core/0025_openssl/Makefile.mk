@@ -14,3 +14,5 @@ LICENSE=Apache 2.0
 all:: $(PREFIX)/lib/libssl.so
 $(PREFIX)/lib/libssl.so:
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=$(PREFIX)/lib" download uncompress Configure build install
+	rm -f /usr/lib64/libssl.so /usr/lib64/libcrypto.so
+	cd /usr/lib64 && ln -s $(PREFIX)/lib/libssl.so libssl.so && ln -s $(PREFIX)/lib/libcrypto.so libcrypto.so
