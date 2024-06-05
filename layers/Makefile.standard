@@ -31,6 +31,9 @@ autoreconf:
 	cd build/$(NAME_VERSION) && autoreconf --force --install
 
 configure:
+	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS="$(EXTRALDFLAGS)"; fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS="$(EXTRACFLAGS)";export CPPFLAGS="$(EXTRACFLAGS)"; fi && if test "$(EXTRAENV)" != ""; then export "$(EXTRAENV)"; fi && if test "$(EXTRAPKGCONFIGPATH)" != ""; then export PKG_CONFIG_PATH="$(EXTRAPKGCONFIGPATH)"; fi && ./Configure $(PFIX_STRING) $(OPTIONS)
+
+Configure:
 	cd build/$(NAME_VERSION) && if test "$(EXTRALDFLAGS)" != ""; then export LDFLAGS="$(EXTRALDFLAGS)"; fi && if test "$(EXTRACFLAGS)" != ""; then export CFLAGS="$(EXTRACFLAGS)";export CPPFLAGS="$(EXTRACFLAGS)"; fi && if test "$(EXTRAENV)" != ""; then export "$(EXTRAENV)"; fi && if test "$(EXTRAPKGCONFIGPATH)" != ""; then export PKG_CONFIG_PATH="$(EXTRAPKGCONFIGPATH)"; fi && ./configure $(PFIX_STRING) $(OPTIONS)
 
 configure_cmake:
