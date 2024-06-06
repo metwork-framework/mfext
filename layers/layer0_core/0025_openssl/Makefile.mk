@@ -13,11 +13,4 @@ LICENSE=Apache 2.0
 
 all:: $(PREFIX)/lib/libssl.so
 $(PREFIX)/lib/libssl.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=$(PREFIX)/lib" download uncompress Configure build install
-	#below fix for libssl.pc and libcrypto.pc
-	echo -n $(shell grep "libdir=" $(PREFIX)/lib/pkgconfig/libssl.pc)/lib > libssl.pc
-	sed "s#libdir=.*##" $(PREFIX)/lib/pkgconfig/libssl.pc >> libssl.pc
-	mv libssl.pc $(PREFIX)/lib/pkgconfig/libssl.pc
-	echo -n $(shell grep "libdir=" $(PREFIX)/lib/pkgconfig/libcrypto.pc)/lib > libcrypto.pc
-	sed "s#libdir=.*##" $(PREFIX)/lib/pkgconfig/libcrypto.pc >> libcrypto.pc
-	mv libcrypto.pc $(PREFIX)/lib/pkgconfig/libcrypto.pc
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=lib" download uncompress Configure build install
