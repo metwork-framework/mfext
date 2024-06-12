@@ -1,0 +1,11 @@
+diff -up wrk2-master/Makefile.orig wrk2-master/Makefile
+--- wrk2-master/Makefile.orig	2024-06-12 10:46:10.370836176 +0000
++++ wrk2-master/Makefile	2024-06-12 10:47:21.514790409 +0000
+@@ -1,5 +1,5 @@
+-CFLAGS  := -std=c99 -Wall -O2 -D_REENTRANT
+-LIBS    := -lpthread -lm -lcrypto -lssl
++CFLAGS  := -std=c99 -Wall -O2 -D_REENTRANT -I$(OPENSSL_HOME)/include
++LIBS    := -lpthread -lm -L$(OPENSSL_HOME)/lib -lcrypto -lssl
+ 
+ TARGET  := $(shell uname -s | tr '[A-Z]' '[a-z]' 2>/dev/null || echo unknown)
+ 
