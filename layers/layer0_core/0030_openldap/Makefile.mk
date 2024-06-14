@@ -13,4 +13,4 @@ LICENSE=OpenLDAP Public License
 
 all:: $(PREFIX)/lib/libldap.so
 $(PREFIX)/lib/libldap.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--disable-static" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/include -I$(PREFIX)/include/openssl" EXTRALDFLAGS="-L$(PREFIX)/lib" OPTIONS="--disable-static" download uncompress configure build install

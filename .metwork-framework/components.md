@@ -45,6 +45,8 @@
 | [coverage](https://github.com/nedbat/coveragepy) | 7.3.2 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
 | [cryptography](https://pypi.org/project/cryptography) | 42.0.5 | python3 |
+| [curl](https://curl.haxx.se/) | 7.88.1 | core |
+| [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.14 | python3 |
@@ -107,6 +109,7 @@
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
+| [libtirpc](https://sourceforge.net/projects/libtirpc/) | 4.3.3 | core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.3 | python3_devtools |
@@ -287,4 +290,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-*(286 components)*
+*(289 components)*
