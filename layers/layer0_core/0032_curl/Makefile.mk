@@ -13,4 +13,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libcurl.so
 $(PREFIX)/lib/libcurl.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--disable-static --without-libidn2 --disable-ipv6 --disable-tftp --disable-telnet --disable-dict --with-ssl --enable-ldaps --enable-crypto-auth --disable-sspi --enable-ldap --without-libssh2 --without-gnutls --without-nss" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/include" EXTRALDFLAGS="-L$(PREFIX)/lib" OPTIONS="--disable-static --without-libidn2 --disable-ipv6 --disable-tftp --disable-telnet --disable-dict --with-ssl --enable-ldaps --enable-crypto-auth --disable-sspi --enable-ldap --without-libssh2 --without-gnutls --without-nss" download uncompress configure build install
