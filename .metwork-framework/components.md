@@ -109,7 +109,7 @@
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
-| [libtirpc](https://sourceforge.net/projects/libtirpc/) | 4.3.3 | core |
+| [libtirpc](https://sourceforge.net/projects/libtirpc/) | 1.3.3 | core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.3 | python3_devtools |
