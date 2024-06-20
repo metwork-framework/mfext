@@ -13,5 +13,6 @@ LICENSE=Apache 2.0
 
 all:: $(PREFIX)/lib/libssl.so
 $(PREFIX)/lib/libssl.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=lib" download uncompress Configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--libdir=lib no-docs" download uncompress Configure build install
 	rm -f $(PREFIX)/lib/libssl.a $(PREFIX)/lib/libcrypto.a
+	cd $(PREFIX)/ssl && ln -s /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem cert.pem
