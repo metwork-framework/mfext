@@ -42,6 +42,7 @@
 - replace requests-unixsocket (unmaintained) by requests-unixsocket2 (#1888)
 - add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (#1889)
 - upgrade requests from 2.32.2 to 2.32.3 (#1894)
+- bump urllib3 from 2.1.0 to 2.2.0 (fix CVE-2024-37891) (#1897)
 
 ### Bug Fixes
 
