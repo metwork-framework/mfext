@@ -14,4 +14,5 @@ LICENSE=BSD
 all:: $(PREFIX)/lib/libhiredis.so.1.1.0
 $(PREFIX)/lib/libhiredis.so.1.1.0:
 	$(MAKE) --file=../../Makefile.standard download uncompress
-	cd build/$(NAME)-$(VERSION) && make USE_SSL=1 install
+	cd build/$(NAME)-$(VERSION) && make USE_SSL=1 OPENSSL_PREFIX=$(PREFIX) install
+	rm -f $(PREFIX)/lib/libhiredis*.a

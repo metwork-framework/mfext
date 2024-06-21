@@ -15,4 +15,4 @@ export EXPLICIT_NAME=hdf-$(VERSION)
 
 all:: $(PREFIX)/lib/libdf.so
 $(PREFIX)/lib/libdf.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME=$(EXPLICIT_NAME) OPTIONS="--enable-shared --disable-static --disable-netcdf --disable-java --disable-fortran" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME=$(EXPLICIT_NAME) EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS="--enable-shared --disable-static --disable-netcdf --disable-java --disable-fortran" download uncompress configure build install

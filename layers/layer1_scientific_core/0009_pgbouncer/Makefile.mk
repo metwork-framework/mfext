@@ -14,4 +14,4 @@ LICENSE=ISC
 all:: $(PREFIX)/bin/pgbouncer
 
 $(PREFIX)/bin/pgbouncer:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--with-openssl=$(PREFIX)/../core" download uncompress configure build install

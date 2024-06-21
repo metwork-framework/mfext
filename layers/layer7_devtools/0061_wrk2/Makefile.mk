@@ -11,6 +11,7 @@ A constant throughput, correct latency recording variant of wrk
 WEBSITE=https://github.com/giltene/wrk2
 LICENSE=Modified Apache 2.0 License (Version 2.0.1, February 2015)
 export EXPLICIT_NAME=$(NAME)-master
+
 export OPENSSL_HOME=$(PREFIX)/../core
 
 all:: $(PREFIX)/bin/wrk2
