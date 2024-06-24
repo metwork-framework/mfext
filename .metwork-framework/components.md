@@ -25,7 +25,7 @@
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 24.3.0 | python3_devtools |
 | [bracex](https://pypi.org/project/bracex) | 2.4 | python3_devtools |
-| [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.7.0 | python3_devtools |
+| [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.3.1 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
@@ -194,8 +194,8 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
-| [pydantic](https://pypi.org/project/pydantic) | 2.4.2 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.10.1 | python3 |
+| [pydantic](https://pypi.org/project/pydantic) | 2.7.4 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.18.4 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
 | [Pygments](https://pypi.org/project/Pygments) | 2.16.1 | python3 |
