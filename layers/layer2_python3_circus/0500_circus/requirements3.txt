@@ -2,4 +2,4 @@ cached-property==1.5.2
 -e git+https://github.com/metwork-framework/circus.git@605a0dc585ded51786e00ed4f4cb123e9f737f60#egg=circus
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git@61e4943f51d6d1e9088ea9025425842ddd7f54db#egg=circus_autorestart_plugin
 pyzmq==25.1.1
-tornado==4.5.3
+tornado==6.4.1
