@@ -44,6 +44,8 @@
 - upgrade requests from 2.32.2 to 2.32.3 (#1894)
 - bump urllib3 from 2.1.0 to 2.2.0 (fix CVE-2024-37891) (#1897)
 - add openssl 3, openldap, libevent, curl, libtirpc, cyrus-sasl in layer core (#1898)
+- upgrade Python 3.12 to 3.12.4 (#1900)
+- upgrade pydantic and pydantic-core for Python 3.12.4 compatibility (#1901)
 
 ### Bug Fixes
 
