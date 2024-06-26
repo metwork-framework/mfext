@@ -34,7 +34,7 @@
 | [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
-| [circus](https://pypi.org/project/circus) | 0.18.0 | python3_circus |
+| [circus](https://pypi.org/project/circus) | 63ea3ea | python3_circus |
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
 | [click](https://palletsprojects.com/p/click/) | 8.1.7 | python3 |
 | [colorama](https://pypi.org/project/colorama) | 0.4.6 | python3 |
@@ -226,7 +226,7 @@
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.14 | core |
-| [redis](https://github.com/redis/redis-py) | 5.0.1 | python3 |
+| [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2023.8.8 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.0 | python3 |
