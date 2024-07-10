@@ -46,6 +46,7 @@
 - add openssl 3, openldap, libevent, curl, libtirpc, cyrus-sasl in layer core (#1898)
 - upgrade Python 3.12 to 3.12.4 (#1900)
 - upgrade pydantic and pydantic-core for Python 3.12.4 compatibility (#1901)
+- bump certifi to 2024.7.4 (to fix CVE-2024-39689) (#1904)
 
 ### Bug Fixes
 
