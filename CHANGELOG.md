@@ -47,6 +47,7 @@
 - upgrade Python 3.12 to 3.12.4 (#1900)
 - upgrade pydantic and pydantic-core for Python 3.12.4 compatibility (#1901)
 - bump certifi to 2024.7.4 (to fix CVE-2024-39689) (#1904)
+- bump zipp from 3.16.2 to 3.19.2 (fix CVE-2024-5569) (#1906)
 
 ### Bug Fixes
 
