@@ -40,7 +40,7 @@ mkdocs-material-extensions==1.2
 mock==5.1.0
 more-itertools==10.1.0
 natsort==8.4.0
-nltk==3.8.1
+nltk==3.9.1
 paginate==0.5.6
 panoply==0.1.56
 parso==0.8.3
