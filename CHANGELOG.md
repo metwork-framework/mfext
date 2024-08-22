@@ -51,6 +51,9 @@
 - bump nltk to 3.9.1 (fix CVE-2024-39705) (#1909)
 - upgrade setuptools from 69.5.1 to 70.3.0 (fix CVE-2024-6345) (#1910)
 - bump aiohttp from 3.9.5 to 3.10.5 (fix CVE-2024-42367) (#1911)
+- add zstd support in PostGreSQL (#1914)
+- add lz4 support in PostGreSQL (#1915)
+- upgrade Python 3.12 from 3.12.4 to 3.12.5 and pip to 24.2 (#1917)
 
 ### Bug Fixes
 
