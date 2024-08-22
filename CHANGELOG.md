@@ -48,6 +48,9 @@
 - upgrade pydantic and pydantic-core for Python 3.12.4 compatibility (#1901)
 - bump certifi to 2024.7.4 (to fix CVE-2024-39689) (#1904)
 - bump zipp from 3.16.2 to 3.19.2 (fix CVE-2024-5569) (#1906)
+- bump nltk to 3.9.1 (fix CVE-2024-39705) (#1909)
+- upgrade setuptools from 69.5.1 to 70.3.0 (fix CVE-2024-6345) (#1910)
+- bump aiohttp from 3.9.5 to 3.10.5 (fix CVE-2024-42367) (#1911)
 
 ### Bug Fixes
 

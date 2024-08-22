@@ -1,7 +1,8 @@
 | Name | Version | Layer |
 | --- | --- | --- |
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.9.5 | python3 |
+| [aiohappyeyeballs](https://github.com/aio-libs/aiohappyeyeballs) | 2.4.0 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.10.5 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.1 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
@@ -149,7 +150,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.2 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
-| [nltk](https://www.nltk.org/) | 3.8.1 | python3_devtools |
+| [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openldap](https://www.openldap.org/) | 2.6.8 | core |
@@ -236,7 +237,7 @@
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://pypi.org/project/setuptools-rust) | 1.7.0 | python3 |
-| [setuptools](https://github.com/pypa/setuptools) | 69.5.1 | python3_core |
+| [setuptools](https://pypi.org/project/setuptools) | 70.3.0 | python3_core |
 | [setuptools_scm](https://github.com/pypa/setuptools_scm/) | 7.1.0 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
@@ -290,4 +291,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.19.2 | python3_core |
 
-*(289 components)*
+*(290 components)*
