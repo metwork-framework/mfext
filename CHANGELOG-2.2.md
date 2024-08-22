@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## v2.2.11 (2024-08-22)
+
+### New Features
+
+- add zstd support in PostGreSQL (backport #1914) (#1918)
+
 ## v2.2.10 (2024-05-31)
 
 ### New Features
