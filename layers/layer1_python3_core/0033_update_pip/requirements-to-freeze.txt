@@ -1,2 +1,2 @@
-#pip 24.0 is the built-in versions in python 3.12.3
+#pip 24.2 is the built-in versions in python 3.12.5
 pip
