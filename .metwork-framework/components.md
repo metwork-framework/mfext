@@ -25,7 +25,7 @@
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://github.com/psf/black) | 24.3.0 | python3_devtools |
-| [bracex](https://github.com/facelessuser/bracex) | 2.4 | python3_devtools | 
+| [bracex](https://github.com/facelessuser/bracex) | 2.4 | python3_devtools |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.3.1 | python3 |
@@ -45,7 +45,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.3.2 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 42.0.5 | python3 ||
+| [cryptography](https://github.com/pyca/cryptography) | 42.0.5 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
