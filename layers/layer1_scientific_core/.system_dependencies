@@ -4,6 +4,5 @@ libjbig.so.2.1()(64bit)@generic
 libjpeg.so.62()(64bit)@generic
 libopenblas.so.0()(64bit)@generic
 libpixman-1.so.0()(64bit)@generic
-libtiff.so.5()(64bit)@generic
 libxcb-render.so.0()(64bit)@generic
 libxcb-shm.so.0()(64bit)@generic
