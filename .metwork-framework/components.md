@@ -180,7 +180,7 @@
 | [postgresql](http://postgresql.org/) | 16.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 9.3.0 | scientific_core |
-| [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.39 | python3 |
+| [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.36 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.7 | python3 |
