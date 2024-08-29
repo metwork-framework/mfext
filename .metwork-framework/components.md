@@ -180,7 +180,7 @@
 | [postgresql](http://postgresql.org/) | 16.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [proj](http://trac.osgeo.org/proj/) | 9.3.0 | scientific_core |
-| [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.39 | python3_devtools |
+| [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.39 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.7 | python3 |
@@ -268,7 +268,7 @@
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
-| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.8.0 | python3_core |
+| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.10.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.2.2 | python3 |
@@ -276,7 +276,7 @@
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.24.6 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 3.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 8.5 | python3_devtools |
-| [wcwidth](https://github.com/jquast/wcwidth) | 0.2.8 | python3_devtools |
+| [wcwidth](https://github.com/jquast/wcwidth) | 0.2.8 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.0.3 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.41.3 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |

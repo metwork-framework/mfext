@@ -64,3 +64,6 @@ threadpoolctl
 fsspec
 #pyasyncore for compatibility with Python3.12
 pyasyncore
+#transferred from python3_devtools
+prompt-toolkit
+wcwidth
