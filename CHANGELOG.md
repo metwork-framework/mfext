@@ -54,6 +54,8 @@
 - add zstd support in PostGreSQL (#1914)
 - add lz4 support in PostGreSQL (#1915)
 - upgrade Python 3.12 from 3.12.4 to 3.12.5 and pip to 24.2 (#1917)
+- upgrade typing-extensions from 4.8.0 to 4.10.0  (#1928)
+- downgrade prompt-toolkit to 3.0.36 (compat questionary 2.0.1) (#1929)
 
 ### Bug Fixes
 
