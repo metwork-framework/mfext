@@ -96,7 +96,7 @@ wcwidth==0.2.8
 Werkzeug==3.0.3
 whichcraft==0.6.1
 wrapt==1.14.1
--e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile
+-e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
 yarl==1.9.2
 yq==3.2.2
