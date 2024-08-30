@@ -202,6 +202,16 @@ fi
     export LOGPROXY_LOG_DIRECTORY="${MFMODULE_RUNTIME_HOME}/log"
 {% endif %}
 
+# Create salem data file in .salem_cache
+if test -f ${MFEXT_HOME}/opt/python3_scientific/share/salem/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip; then
+	if test ! -d ${HOME}/.salem_cache; then
+		mkdir -p ${HOME}/.salem_cache
+	else
+		rm -f ${HOME}/.salem_cache/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip
+	fi
+	ln -s ${MFEXT_HOME}/opt/python3_scientific/share/salem/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip ${HOME}/.salem_cache/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip
+fi
+
 # A little kind of magic to deal with [log]/json_file=AUTO
 if test "{% raw %}${{% endraw %}{{MFMODULE}}_LOG_JSON_FILE{% raw %}:-}{% endraw %}" = "AUTO"; then
     export MFLOG_JSON_FILE="null"
