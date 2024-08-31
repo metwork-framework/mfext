@@ -56,6 +56,7 @@
 - upgrade Python 3.12 from 3.12.4 to 3.12.5 and pip to 24.2 (#1917)
 - upgrade typing-extensions from 4.8.0 to 4.10.0  (#1928)
 - downgrade prompt-toolkit to 3.0.36 (compat questionary 2.0.1) (#1929)
+- create salem sample data file to avoid further http requests (#1931)
 
 ### Bug Fixes
 
@@ -66,5 +67,6 @@
 - fix mfbase.start in case NOINIT (#1825)
 - useless module mffront in service usage (closes #1829) (#1830)
 - remove pip conflicts warnings when using override (#1840)
+- upgrade xattrfile to fix mfdata issue 486 (#1935)
 
 
