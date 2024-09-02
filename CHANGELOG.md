@@ -8,6 +8,10 @@
 - bump Jinja2 to 3.1.4 (fix CVE-2024-34064) (backport #1884) (#1885)
 - add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (backport #1889) (#1892)
 
+### Bug Fixes
+
+- upgrade xattrfile to fix mfdata issue 486 (backport #1935) (#1936)
+
 ## v2.1.9 (2024-04-13)
 
 ### New Features
