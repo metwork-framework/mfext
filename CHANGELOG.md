@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- upgrade xattrfile to fix mfdata issue 486 (backport #1935) (#1937)
+
 ## v2.2.11 (2024-08-22)
 
 ### New Features
