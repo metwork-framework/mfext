@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### New Features
+
+- create salem sample data file to avoid further http requests (backport #1931) (#1932)
+
 ### Bug Fixes
 
 - upgrade xattrfile to fix mfdata issue 486 (backport #1935) (#1937)
