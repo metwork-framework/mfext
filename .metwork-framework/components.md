@@ -45,7 +45,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.3.2 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 42.0.5 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 43.0.1 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
