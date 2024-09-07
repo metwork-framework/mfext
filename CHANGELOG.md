@@ -57,6 +57,8 @@
 - upgrade typing-extensions from 4.8.0 to 4.10.0  (#1928)
 - downgrade prompt-toolkit to 3.0.36 (compat questionary 2.0.1) (#1929)
 - create salem sample data file to avoid further http requests (#1931)
+- bump cryptography from 42.0.5 to 43.0.1 (CWE-1395 with openssl) (#1939)
+- bump openssl to 3.3.2 (fix CVE-2024-6119 and CVE-2024-5535) (#1942)
 
 ### Bug Fixes
 
