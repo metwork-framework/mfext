@@ -30,4 +30,8 @@ fi
 if ! test -d "${PLUGIN_HOME}"; then
     exit 0
 fi
+
+#Always stop plugin before uninstalling (security)
+#plugins.stop "${1}"
+
 _remove_plugin_config.py "${1}"
