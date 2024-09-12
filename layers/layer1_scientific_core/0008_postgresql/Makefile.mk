@@ -16,7 +16,7 @@ LICENSE=PostgreSQL (similar MIT or BSD)
 
 all:: $(PREFIX)/bin/psql
 $(PREFIX)/bin/psql:
-	$(MAKE) --file=../../Makefile.standard MAKELEVEL=0 PREFIX=$(PREFIX) OPTIONS="--with-includes=$(PREFIX)/include:$(PREFIX)/../core/include --with-libraries=$(PREFIX)/lib:$(PREFIX)/../core/lib --with-libxml --with-ssl=openssl --with-python --with-ldap --with-libxslt --with-icu=no --enable-nls --with-uuid=e2fs" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard MAKELEVEL=0 PREFIX=$(PREFIX) OPTIONS="--with-includes=$(PREFIX)/include:$(PREFIX)/../core/include --with-libraries=$(PREFIX)/lib:$(PREFIX)/../core/lib --with-libxml --with-ssl=openssl --with-python --with-ldap --with-libxslt --with-icu=no --enable-nls --with-uuid=e2fs --with-zstd --with-lz4" download uncompress configure build install
 	cd build/$(NAME)-$(VERSION)/contrib/hstore && make && make install
 	cd build/$(NAME)-$(VERSION)/contrib/pg_stat_statements && make && make install
 	cd build/$(NAME)-$(VERSION)/contrib/btree_gist && make && make install
