@@ -2,4 +2,3 @@
 pyzmq>18
 -e git+https://github.com/metwork-framework/circus.git#egg=circus
 -e git+https://github.com/metwork-framework/circus_autorestart_plugin.git#egg=circus_autorestart_plugin
-tornado<5
