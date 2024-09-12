@@ -30,5 +30,4 @@ fi
 if ! test -d "${PLUGIN_HOME}"; then
     exit 0
 fi
-
 _remove_plugin_config.py "${1}"
