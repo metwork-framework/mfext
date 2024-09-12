@@ -1,5 +1,22 @@
 # release_2.2 CHANGELOG
 
+## v2.2.11 (2024-08-22)
+
+### New Features
+
+- add zstd support in PostGreSQL (backport #1914) (#1918)
+
+## v2.2.10 (2024-05-31)
+
+### New Features
+
+- fix CVE-2020-11724 on openresty 1.15.8  (backport #1865) (#1868)
+- bump aiohttp to 3.9.5 to fix CVE-2024-27306 (#1867)
+- bump tqdm to 4.66.4 (fix CVE-2024-34062) (backport #1879) (#1880)
+- bump Werkzeug from 3.0.1 to 3.0.3 (fix CVE-2024-34069) (backport #1882) (#1883)
+- bump Jinja2 to 3.1.4 (fix CVE-2024-34064) (backport #1884) (#1886)
+- add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (#1889)
+
 ## v2.2.9 (2024-04-15)
 
 ### New Features

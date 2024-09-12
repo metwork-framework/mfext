@@ -1,5 +1,6 @@
 -e git+https://github.com/metwork-framework/acquisition.git@8205f0c2fcd323d7e36cbeecac05e74935def06c#egg=acquisition
-aiohttp==3.9.5
+aiohappyeyeballs==2.4.0
+aiohttp==3.10.5
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
 aiosignal==1.3.1
 annotated-types==0.6.0
@@ -22,7 +23,7 @@ commonmark==0.9.1
 -e git+https://github.com/metwork-framework/cookiecutter.git@6d12c5bc04390cb019d9d01b47cb3d50e6276a9d#egg=cookiecutter
 -e git+https://github.com/metwork-framework/cookiecutter_hooks.git@c9124c2b54c1c05cd83eb3d3454cc4214485c45d#egg=cookiecutter_hooks
 cron-wrapper==0.1.2
-cryptography==42.0.5
+cryptography==43.0.1
 decorator==5.1.1
 -e git+https://github.com/metwork-framework/deploycron.git@27342219bc00ce9c90b18107ec321b722b3c90bb#egg=deploycron
 Deprecated==1.2.14
@@ -60,6 +61,7 @@ opinionated-configparser==1.0.1
 paramiko==3.4.0
 pika==1.3.2
 poyo==0.5.0
+prompt-toolkit==3.0.36
 psutil==5.9.7
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -90,10 +92,11 @@ tqdm==4.66.4
 traitlets==5.9.0
 Unidecode==1.3.6
 urllib3==2.2.2
+wcwidth==0.2.8
 Werkzeug==3.0.3
 whichcraft==0.6.1
 wrapt==1.14.1
--e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile
+-e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
 yarl==1.9.2
 yq==3.2.2

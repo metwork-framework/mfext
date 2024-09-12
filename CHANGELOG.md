@@ -44,6 +44,21 @@
 - upgrade requests from 2.32.2 to 2.32.3 (#1894)
 - bump urllib3 from 2.1.0 to 2.2.0 (fix CVE-2024-37891) (#1897)
 - add openssl 3, openldap, libevent, curl, libtirpc, cyrus-sasl in layer core (#1898)
+- upgrade Python 3.12 to 3.12.4 (#1900)
+- upgrade pydantic and pydantic-core for Python 3.12.4 compatibility (#1901)
+- bump certifi to 2024.7.4 (to fix CVE-2024-39689) (#1904)
+- bump zipp from 3.16.2 to 3.19.2 (fix CVE-2024-5569) (#1906)
+- bump nltk to 3.9.1 (fix CVE-2024-39705) (#1909)
+- upgrade setuptools from 69.5.1 to 70.3.0 (fix CVE-2024-6345) (#1910)
+- bump aiohttp from 3.9.5 to 3.10.5 (fix CVE-2024-42367) (#1911)
+- add zstd support in PostGreSQL (#1914)
+- add lz4 support in PostGreSQL (#1915)
+- upgrade Python 3.12 from 3.12.4 to 3.12.5 and pip to 24.2 (#1917)
+- upgrade typing-extensions from 4.8.0 to 4.10.0  (#1928)
+- downgrade prompt-toolkit to 3.0.36 (compat questionary 2.0.1) (#1929)
+- create salem sample data file to avoid further http requests (#1931)
+- bump cryptography from 42.0.5 to 43.0.1 (CWE-1395 with openssl) (#1939)
+- bump openssl to 3.3.2 (fix CVE-2024-6119 and CVE-2024-5535) (#1942)
 
 ### Bug Fixes
 
@@ -54,5 +69,6 @@
 - fix mfbase.start in case NOINIT (#1825)
 - useless module mffront in service usage (closes #1829) (#1830)
 - remove pip conflicts warnings when using override (#1840)
+- upgrade xattrfile to fix mfdata issue 486 (#1935)
 
 

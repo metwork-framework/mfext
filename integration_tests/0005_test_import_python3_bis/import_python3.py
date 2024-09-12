@@ -1,5 +1,5 @@
-import importlib_metadata
 import acquisition
+import aiohappyeyeballs
 import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
@@ -75,6 +75,7 @@ import hatch_vcs
 import hatchling
 import hiredis
 import idna
+import importlib_metadata
 import iniconfig
 import inotify_simple
 import IPython
