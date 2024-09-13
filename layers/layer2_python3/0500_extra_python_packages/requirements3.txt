@@ -37,7 +37,7 @@ gitignore-parser==0.1.11
 hiredis==2.2.3
 idna==3.7
 inotify-simple==1.3.5
-Jinja2==3.1.3
+Jinja2==3.1.4
 jinja2-from-json-extension==1.0.0
 jinja2-fnmatch-extension==1.0.2
 jinja2-getenv-extension==1.0.2
@@ -85,14 +85,14 @@ structlog==23.1.0
 termcolor==2.3.0
 terminaltables==3.1.10
 threadpoolctl==3.2.0
-tqdm==4.66.1
+tqdm==4.66.4
 traitlets==5.9.0
 Unidecode==1.3.6
 urllib3==2.1.0
-Werkzeug==3.0.1
+Werkzeug==3.0.3
 whichcraft==0.6.1
 wrapt==1.14.1
--e git+https://github.com/metwork-framework/xattrfile.git@9c0b2974deeafed59caa3659c685a89e686a0159#egg=xattrfile
+-e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
 yarl==1.9.2
 yq==3.2.2
