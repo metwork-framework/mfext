@@ -68,3 +68,4 @@ pyasyncore
 #questionary 2.0.1 requires prompt-toolkit<=3.0.36
 prompt-toolkit<=3.0.36
 wcwidth
+tornado

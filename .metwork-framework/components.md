@@ -35,8 +35,8 @@
 | [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
-| [circus](https://pypi.org/project/circus) | 605a0dc | python3_circus |
-| [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 61e4943 | python3_circus |
+| [circus](https://pypi.org/project/circus) | 2d5b6d6 | python3_circus |
+| [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 9d208a1 | python3_circus |
 | [click](https://palletsprojects.com/p/click/) | 8.1.7 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
@@ -220,14 +220,14 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 7.4.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
-| [Python](http://python.org/) | 3.12.5 | python3_core |
+| [Python](http://python.org/) | 3.12.6 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 6.0.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.14 | core |
-| [redis](https://github.com/redis/redis-py) | 5.0.1 | python3 |
+| [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2023.8.8 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.0 | python3 |
@@ -262,8 +262,7 @@
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tomli](https://github.com/hukkin/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 4.5.3 | python3_circus |
-| [tornado](http://www.tornadoweb.org/) | 6.3.3 | python3_devtools |
+| [tornado](http://www.tornadoweb.org/) | 6.4.1 | python3 |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
@@ -291,4 +290,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(290 components)*
+*(289 components)*
