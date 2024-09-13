@@ -1,4 +1,4 @@
-#pip 23.0.1 and setuptools 65.5.0 are the built-in versions in python 3.10.14
+#pip 23.0.1 and setuptools 65.5.0 are the built-in versions in python 3.10.15
 #numpy 1.23.5 doesn't build (--no-binary --no-build-isolation) with setuptools > 63
 #so we keep setuptools 63.2.0
 pip
