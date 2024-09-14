@@ -5,6 +5,7 @@
 ### New Features
 
 - create salem sample data file to avoid further http requests (backport #1931) (#1932)
+- upgrade Python 3.11 from 3.11.9 to 3.11.10  (#1948)
 
 ### Bug Fixes
 
