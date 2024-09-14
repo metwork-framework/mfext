@@ -7,6 +7,7 @@
 - bump idna from 3.4 to 3.7 (to fix CVE-2024-3651) (backport #1860) (#1862)
 - bump Jinja2 to 3.1.4 (fix CVE-2024-34064) (backport #1884) (#1885)
 - add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (backport #1889) (#1892)
+- upgrade Python 3.10 from 3.10.14 to 3.10.15 (#1947)
 
 ### Bug Fixes
 
