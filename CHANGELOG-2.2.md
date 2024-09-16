@@ -1,5 +1,16 @@
 # release_2.2 CHANGELOG
 
+## v2.2.12 (2024-09-14)
+
+### New Features
+
+- create salem sample data file to avoid further http requests (backport #1931) (#1932)
+- upgrade Python 3.11 from 3.11.9 to 3.11.10  (#1948)
+
+### Bug Fixes
+
+- upgrade xattrfile to fix mfdata issue 486 (backport #1935) (#1937)
+
 ## v2.2.11 (2024-08-22)
 
 ### New Features
