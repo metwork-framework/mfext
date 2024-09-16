@@ -1,5 +1,12 @@
 # release_2.0 CHANGELOG
 
+## v2.0.12 (2024-09-14)
+
+### New Features
+
+- add libssl.so.1.1 and libcrypto.so.1.1 in embedded system dependencies (#1889)
+- upgrade python 3.9 from 3.9.19 to 3.19.20 (#1946)
+
 ## v2.0.11 (2024-04-14)
 
 ### New Features
