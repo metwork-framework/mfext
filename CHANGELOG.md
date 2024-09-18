@@ -72,5 +72,6 @@
 - useless module mffront in service usage (closes #1829) (#1830)
 - remove pip conflicts warnings when using override (#1840)
 - upgrade xattrfile to fix mfdata issue 486 (#1935)
+- bump to paramiko 3.4.1 to prevent warning messages with cryptography (#1949)
 
 
