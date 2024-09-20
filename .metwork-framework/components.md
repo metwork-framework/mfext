@@ -15,7 +15,7 @@
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.4.0 | python3_devtools |
 | [async-timeout](https://github.com/aio-libs/async-timeout) | 4.0.3 | python3 |
-| [attrs](https://pypi.org/project/attrs) | 23.1.0 | python3 |
+| [attrs](https://pypi.org/project/attrs) | 23.2.0 | python3 |
 | [autopep8](https://github.com/hhatto/autopep8) | 2.0.4 | python3 |
 | [Babel](https://babel.pocoo.org/) | 2.13.0 | python3_devtools |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3_devtools |
