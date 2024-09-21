@@ -61,6 +61,7 @@
 - bump openssl to 3.3.2 (fix CVE-2024-6119 and CVE-2024-5535) (#1942)
 - upgrade to tornado 6 with merge of circus 0.18 in layer python3_circus (#1943)
 - upgrade Python 3.12 from 3.12.5 to 3.12.6 (#1945)
+- bump attrs from 23.1.0 to 23.2.0 (#1950)
 
 ### Bug Fixes
 
