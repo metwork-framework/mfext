@@ -62,6 +62,7 @@
 - upgrade to tornado 6 with merge of circus 0.18 in layer python3_circus (#1943)
 - upgrade Python 3.12 from 3.12.5 to 3.12.6 (#1945)
 - bump attrs from 23.1.0 to 23.2.0 (#1950)
+- add jsonschema and dependencies (#1951)
 
 ### Bug Fixes
 
