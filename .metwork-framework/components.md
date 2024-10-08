@@ -283,7 +283,7 @@
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.0.3 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.41.3 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
-| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.14.1 | python3 |
+| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.16.0 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 6df2a84 | python3 |
