@@ -36,8 +36,7 @@ paramiko
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git#egg=aiohttp_metwork_middlewares
 #Common dependencies (python3_devtools and python3_scientific) below
 attrs
-#wrapt 1.15 doesn't work with tensorflow 1.14
-wrapt<1.15
+wrapt
 #mkdocs 1.4.1 or 1.4.2 requires Markdown < 3.4
 Markdown<3.4
 tqdm
