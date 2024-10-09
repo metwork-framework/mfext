@@ -63,6 +63,7 @@
 - upgrade Python 3.12 from 3.12.5 to 3.12.6 (#1945)
 - bump attrs from 23.1.0 to 23.2.0 (#1950)
 - add jsonschema and dependencies (#1951)
+- bump wrapt from 1.14.1 to 1.16.0 (#1952)
 
 ### Bug Fixes
 
