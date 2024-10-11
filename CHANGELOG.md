@@ -64,6 +64,7 @@
 - bump attrs from 23.1.0 to 23.2.0 (#1950)
 - add jsonschema and dependencies (#1951)
 - bump wrapt from 1.14.1 to 1.16.0 (#1952)
+- bump setuptools-scm from 7.1.0 to 8.1.0 (#1954)
 
 ### Bug Fixes
 
