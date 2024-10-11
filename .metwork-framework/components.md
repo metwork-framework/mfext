@@ -161,6 +161,7 @@
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3_devtools |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
+| [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.21.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pypi.org/project/pika) | 1.3.2 | python3 |
@@ -285,4 +286,8 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
+<<<<<<< HEAD
 *(284 components)*
+=======
+*(294 components)*
+>>>>>>> 256bfa26 (feat: add PostGreSQL extension pg_uuidv7 (#1957))
