@@ -114,7 +114,7 @@ fi
 export MFMODULE_STATUS
 
 # FIXME: do not hardcode this
-export PYTHON3_SHORT_VERSION=3.12
+export PYTHON3_SHORT_VERSION=3.13
 
 # We configure the layers system
 field_prepend LAYERAPI2_LAYERS_PATH {{MFEXT_HOME}}
