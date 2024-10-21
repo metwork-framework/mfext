@@ -22,6 +22,7 @@
 | [bandit](https://bandit.readthedocs.io/) | 1.7.6 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 4.0.1 | python3 |
+| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.12.2 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://github.com/psf/black) | 24.3.0 | python3_devtools |
@@ -58,6 +59,7 @@
 | [distro](https://github.com/python-distro/distro) | 1.8.0 | python3_core |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
 | [editables](https://pypi.org/project/editables) | 0.5 | python3_core |
+| [entrypoints](https://github.com/takluyver/entrypoints) | 0.4 | python3 |
 | [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.1.3 | python3_devtools |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
@@ -252,6 +254,7 @@
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.5 | python3 |
 | [sqlite](http://sqlite.org/) | 3450000 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
@@ -295,4 +298,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(294 components)*
+*(297 components)*
