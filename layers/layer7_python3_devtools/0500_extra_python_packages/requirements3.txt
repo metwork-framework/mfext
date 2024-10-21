@@ -1,8 +1,6 @@
 altgraph==0.17.4
 apipkg==3.0.2
 astroid==3.0.0
-asttokens==2.4.0
-backcall==0.2.0
 bandit==1.7.6
 bracex==2.4
 black==24.3.0
@@ -10,7 +8,6 @@ bump-pydantic==0.8.0
 coverage==7.3.2
 exceptiongroup==1.1.3
 execnet==2.0.2
-executing==2.0.1
 flake8==6.1.0
 flake8-docstrings==1.7.0
 freezegun==1.2.2
@@ -18,16 +15,13 @@ ghp-import==2.1.0
 gitdb==4.0.11
 GitPython==3.1.41
 iniconfig==2.0.0
-ipython==8.16.1
 isort==5.12.0
-jedi==0.19.1
 jmespath==1.0.1
 lazy-object-proxy==1.9.0
 libcst==1.1.0
 livereload==2.6.3
 lunr==0.7.0.post1
 Mako==1.2.4
-matplotlib-inline==0.1.6
 mccabe==0.7.0
 mergedeep==1.3.4
 mkdocs==1.5.3
@@ -43,13 +37,8 @@ natsort==8.4.0
 nltk==3.9.1
 paginate==0.5.6
 panoply==0.1.56
-parso==0.8.3
 pdoc3==0.10.0
-pexpect==4.8.0
-pickleshare==0.7.5
 pipdeptree==2.13.1
-ptyprocess==0.7.0
-pure-eval==0.2.2
 py-spy==0.3.14
 pydocstyle==6.1.1
 pyflakes==3.1.0
@@ -73,7 +62,6 @@ sftp-py==0.2.1
 simple-term-menu==1.6.4
 smmap==5.0.1
 snowballstemmer==2.2.0
-stack-data==0.6.3
 stevedore==5.1.0
 typer==0.9.0
 typing-inspect==0.9.0
