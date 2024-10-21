@@ -70,3 +70,7 @@ wcwidth
 tornado
 #jsonschema is a dependency in layers python3_scientific and python3_mapserverapi
 jsonschema
+ipython
+Babel
+backcall
+pickleshare
