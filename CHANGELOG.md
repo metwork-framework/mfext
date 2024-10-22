@@ -66,6 +66,7 @@
 - bump wrapt from 1.14.1 to 1.16.0 (#1952)
 - bump setuptools-scm from 7.1.0 to 8.1.0 (#1954)
 - add PostGreSQL extension pg_uuidv7 (#1957)
+- bump Python 3.12 from 3.12.6 to 3.12.7 (#1961)
 
 ### Bug Fixes
 
