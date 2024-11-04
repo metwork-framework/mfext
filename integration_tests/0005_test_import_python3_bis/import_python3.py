@@ -57,7 +57,7 @@ import execnet
 import executing
 import fastentrypoints
 import filelock
-#import filprofiler
+import filprofiler
 import flake8_docstrings
 import flake8
 import flit_core

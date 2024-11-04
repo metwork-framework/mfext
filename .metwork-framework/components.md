@@ -66,6 +66,7 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3 |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.12.3 | python3_core |
+| [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 6.1.0 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
@@ -298,4 +299,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(297 components)*
+*(298 components)*
