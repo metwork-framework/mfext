@@ -285,7 +285,7 @@
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 3.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 8.5 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.8 | python3 |
-| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.0.3 | python3 |
+| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.0.6 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.41.3 | python3_core |
 | [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.16.0 | python3 |
