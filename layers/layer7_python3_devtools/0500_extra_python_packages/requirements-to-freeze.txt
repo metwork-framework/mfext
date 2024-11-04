@@ -37,8 +37,7 @@ pytest-json-report
 bump-pydantic
 pipdeptree
 py-spy
-#Wheels for python 3.12 are missing for filprofiler on pypi
-#filprofiler
+filprofiler
 bandit
 GitPython
 pyinstaller
