@@ -1,9 +1,6 @@
 include ../../../adm/root.mk
 include ../../package.mk
 
-#TODO : port SkewMercator patch (proj4-skewmercator.patch with PJ_skmerc.c)
-#from 4.8 to 5.2 or 6.1 (projections/skmerc.cpp)
-
 export NAME=proj
 export VERSION=9.3.0
 export EXTENSION=tar.gz
