@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=log_proxy
-export VERSION=0.7.3
+export VERSION=0.7.4
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=f59cda49e3c4bd21efa22de7499508f0
+export CHECKSUM=576fe5363f68727262654346ef22cf8a
 DESCRIPTION=\
 log_proxy is a tiny C utility for log rotation for apps that write their logs to stdout/stderr
 WEBSITE=https://github.com/metwork-framework/log_proxy
