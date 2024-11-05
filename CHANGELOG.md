@@ -67,6 +67,9 @@
 - bump setuptools-scm from 7.1.0 to 8.1.0 (#1954)
 - add PostGreSQL extension pg_uuidv7 (#1957)
 - bump Python 3.12 from 3.12.6 to 3.12.7 (#1961)
+- add filprofiler (Python 3.12 wheels are now available) (#1963)
+- upgrade Werkzeug from 3.0.3 to 3.0.6 to fix moderate security issues (#1964)
+- add proj patch from synopsis with skew mercator projection (#1965)
 
 ### Bug Fixes
 
