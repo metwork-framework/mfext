@@ -70,6 +70,8 @@
 - add filprofiler (Python 3.12 wheels are now available) (#1963)
 - upgrade Werkzeug from 3.0.3 to 3.0.6 to fix moderate security issues (#1964)
 - add proj patch from synopsis with skew mercator projection (#1965)
+- bump psutil to 5.9.8 (#1974)
+- upgrade log_proxy to 0.7.4 (security fix in case of FS full) (#1975)
 
 ### Bug Fixes
 
