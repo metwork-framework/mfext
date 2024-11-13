@@ -34,6 +34,7 @@
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
 | [certifi](https://certifi.io) | 2024.7.4 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
+| [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
 | [circus](https://pypi.org/project/circus) | 2d5b6d6 | python3_circus |
@@ -90,6 +91,7 @@
 | [hdf5](https://www.hdfgroup.org) | 1.14.3 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
+| [identify](https://github.com/pre-commit/identify) | 2.6.2 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.7 | python3 |
 | [importlib_metadata](https://github.com/python/importlib_metadata) | 6.8.0 | python3_core |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.0.0 | python3_devtools |
@@ -156,6 +158,7 @@
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
 | [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
+| [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
 | [openldap](https://www.openldap.org/) | 2.6.8 | core |
@@ -185,6 +188,7 @@
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 16.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
+| [pre_commit](https://github.com/pre-commit/pre-commit) | 4.0.1 | python3_devtools |
 | [proj](http://trac.osgeo.org/proj/) | 9.5.0 | scientific_core |
 | [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.36 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
@@ -299,4 +303,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(298 components)*
+*(302 components)*
