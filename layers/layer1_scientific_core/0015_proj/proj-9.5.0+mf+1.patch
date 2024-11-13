@@ -1,0 +1,1669 @@
+diff -crB --new-file proj-9.5.0/data/mf.proj4 proj-9.5.0+mf.1/data/mf.proj4
+*** proj-9.5.0/data/mf.proj4	1970-01-01 01:00:00.000000000 +0100
+--- proj-9.5.0+mf.1/data/mf.proj4	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 0 ****
+--- 1,50 ----
++ # Stéréo Nord 0
++ <900914> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=0 +units=m +no_defs
++ # Mercator
++ <900915> +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs  <>
++ # skmerc
++ <900916> +proj=skmerc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +gamma=-45.0 +units=m +nadgrids=@null +no_defs
++ # Stéréo Nord -155
++ <900917> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-155.0 +units=m +no_defs
++ # Stéréo Sud -141.7
++ <900918> +proj=stere +a=6378160 +b=6356000 +lat_0=-90 +lat_ts=-45 +lon_0=-141.7 +units=m +no_defs
++ # Stéréo Nord -103
++ <900919> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-103.0 +units=m +no_defs
++ # Stéréo Nord -45
++ <900920> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-45.0 +units=m +no_defs
++ # Stéréo Nord -20
++ <900921> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-20.0 +units=m +no_defs
++ # Stéréo Nord 11.1
++ <900922> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=11.1 +units=m +no_defs
++ # Stéréo Nord 65
++ <900923> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=65.0 +units=m +no_defs
++ # Stéréo Sud 96.7
++ <900924> +proj=stere +a=6378160 +b=6356000 +lat_0=-90 +lat_ts=-45 +lon_0=96.7 +units=m +no_defs
++ # Stéréo Nord -65
++ <900925> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-65.0 +units=m +no_defs
++ # Stéréo Nord -50
++ <900926> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-50.0 +units=m +no_defs
++ # Stéréo Nord -35
++ <900927> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-35.0 +units=m +no_defs
++ # Stéréo Nord -30
++ <900928> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-30.0 +units=m +no_defs
++ # Stéréo Nord -25
++ <900929> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=-25.0 +units=m +no_defs
++ # Stéréo Nord 5
++ <900930> +proj=stere +a=6378160 +b=6356000 +lat_0=90 +lat_ts=45 +lon_0=5.0 +units=m +no_defs
++ # MSG en 0°
++ <900941> +proj=geos +lon_0=0 +h=35785834 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs
++ # MSG rapid scan
++ <900942> +proj=geos +lon_0=9.5 +h=35785834 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs
++ # MSG sur l'Océan Indien
++ <900943> +proj=geos +lon_0=41.5 +h=35785834 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs
++ # FY (Chine)
++ <900944> +proj=geos +lon_0=104.5 +h=35785864 +x_0=0 +y_0=0 +a=6378137 +rf=298.252840776246 +units=m +no_defs
++ # geos
++ <900945> +proj=geos +lon_0=79 +h=35785864 +x_0=0 +y_0=0 +a=6378137 +rf=298.252840776246 +units=m +no_defs
++ # Himawari (Japon)
++ <900946> +proj=geos +lon_0=140.7 +h=35785863 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs
++ # GOES-west
++ <900947> +proj=geos +lon_0=-137 +h=35786023 +x_0=0 +y_0=0 +sweep=x +ellps=GRS80 +units=m +no_defs
++ # GOES-east
++ <900948> +proj=geos +lon_0=-75 +h=35786023 +x_0=0 +y_0=0 +sweep=x +ellps=GRS80 +units=m +no_defs
+diff -crB --new-file proj-9.5.0/data/sql/mf.sql proj-9.5.0+mf.1/data/sql/mf.sql
+*** proj-9.5.0/data/sql/mf.sql	1970-01-01 01:00:00.000000000 +0100
+--- proj-9.5.0+mf.1/data/sql/mf.sql	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 0 ****
+--- 1,1154 ----
++ -- Généré automatiquement par build_mf.py à partir du fichier mf.proj4
++ DELETE
++ FROM "ellipsoid"
++ WHERE "auth_name"='MF';
++ DELETE
++ FROM "geodetic_datum"
++ WHERE "auth_name"='MF';
++ DELETE
++ FROM "geodetic_crs"
++ WHERE "auth_name"='MF';
++ DELETE
++ FROM "conversion_table"
++ WHERE "auth_name"='MF';
++ INSERT INTO "ellipsoid" ("auth_name",
++                          "code",
++                          "name",
++                          "celestial_body_auth_name",
++                          "celestial_body_code",
++                          "semi_major_axis",
++                          "uom_auth_name",
++                          "uom_code",
++                          "semi_minor_axis",
++                          "deprecated")
++ VALUES ('MF',10,'MF Stéréo','PROJ','EARTH',6378160.0,'EPSG',9001,6356000.0,0);
++ INSERT INTO "geodetic_datum" ("auth_name",
++                               "code",
++                               "name",
++                               "ellipsoid_auth_name",
++                               "ellipsoid_code",
++                               "prime_meridian_auth_name",
++                               "prime_meridian_code",
++                               "deprecated")
++ VALUES ('MF',20,'MF Stéréo','MF',10,'EPSG',8901,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('geodetic_datum','MF',20,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "geodetic_crs" ("auth_name",
++                             "code",
++                             "name",
++                             "type",
++                             "coordinate_system_auth_name",
++                             "coordinate_system_code",
++                             "datum_auth_name",
++                             "datum_code",
++                             "deprecated")
++ VALUES ('MF',30,'MF Stéréo','geographic 2D','EPSG',6422,'MF',20,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('geodetic_crs','MF',30,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900914;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900914,'Stéréo Nord 0','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,0,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900914,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900914,'Stéréo Nord 0','EPSG',1024,'MF',30,'MF',900914,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900914,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900915;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code",
++                                 "param5_auth_name",
++                                 "param5_code",
++                                 "param5_value",
++                                 "param5_uom_auth_name",
++                                 "param5_uom_code")
++ VALUES ('MF',900915,'Mercator','EPSG',9804,0,'EPSG',8801,0,'EPSG',9102,'EPSG',8802,0,'EPSG',9102,'EPSG',8805,1,'EPSG',9201,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900915,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900915,'Mercator','EPSG',1024,'EPSG',4326,'MF',900915,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900915,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900916;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900916,'skmerc','+proj=skmerc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +gamma=-45.0 +units=m +nadgrids=@null +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900916,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900917;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900917,'Stéréo Nord -155','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-155,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900917,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900917,'Stéréo Nord -155','EPSG',1024,'MF',30,'MF',900917,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900917,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900918;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900918,'Stéréo Sud -141.7','EPSG',9829,0,'EPSG',8832,-45,'EPSG',9102,'EPSG',8833,-141.7,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900918,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900918,'Stéréo Sud -141.7','EPSG',1024,'MF',30,'MF',900918,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900918,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900919;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900919,'Stéréo Nord -103','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-103,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900919,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900919,'Stéréo Nord -103','EPSG',1024,'MF',30,'MF',900919,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900919,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900920;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900920,'Stéréo Nord -45','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-45,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900920,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900920,'Stéréo Nord -45','EPSG',1024,'MF',30,'MF',900920,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900920,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900921;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900921,'Stéréo Nord -20','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-20,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900921,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900921,'Stéréo Nord -20','EPSG',1024,'MF',30,'MF',900921,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900921,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900922;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900922,'Stéréo Nord 11.1','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,11.1,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900922,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900922,'Stéréo Nord 11.1','EPSG',1024,'MF',30,'MF',900922,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900922,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900923;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900923,'Stéréo Nord 65','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,65,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900923,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900923,'Stéréo Nord 65','EPSG',1024,'MF',30,'MF',900923,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900923,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900924;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900924,'Stéréo Sud 96.7','EPSG',9829,0,'EPSG',8832,-45,'EPSG',9102,'EPSG',8833,96.7,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900924,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900924,'Stéréo Sud 96.7','EPSG',1024,'MF',30,'MF',900924,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900924,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900925;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900925,'Stéréo Nord -65','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-65,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900925,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900925,'Stéréo Nord -65','EPSG',1024,'MF',30,'MF',900925,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900925,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900926;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900926,'Stéréo Nord -50','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-50,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900926,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900926,'Stéréo Nord -50','EPSG',1024,'MF',30,'MF',900926,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900926,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900927;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900927,'Stéréo Nord -35','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-35,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900927,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900927,'Stéréo Nord -35','EPSG',1024,'MF',30,'MF',900927,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900927,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900928;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900928,'Stéréo Nord -30','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-30,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900928,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900928,'Stéréo Nord -30','EPSG',1024,'MF',30,'MF',900928,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900928,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900929;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900929,'Stéréo Nord -25','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,-25,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900929,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900929,'Stéréo Nord -25','EPSG',1024,'MF',30,'MF',900929,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900929,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900930;
++ INSERT INTO "conversion_table" ("auth_name",
++                                 "code",
++                                 "name",
++                                 "method_auth_name",
++                                 "method_code",
++                                 "deprecated",
++                                 "param1_auth_name",
++                                 "param1_code",
++                                 "param1_value",
++                                 "param1_uom_auth_name",
++                                 "param1_uom_code",
++                                 "param2_auth_name",
++                                 "param2_code",
++                                 "param2_value",
++                                 "param2_uom_auth_name",
++                                 "param2_uom_code",
++                                 "param3_auth_name",
++                                 "param3_code",
++                                 "param3_value",
++                                 "param3_uom_auth_name",
++                                 "param3_uom_code",
++                                 "param4_auth_name",
++                                 "param4_code",
++                                 "param4_value",
++                                 "param4_uom_auth_name",
++                                 "param4_uom_code")
++ VALUES ('MF',900930,'Stéréo Nord 5','EPSG',9829,0,'EPSG',8832,45,'EPSG',9102,'EPSG',8833,5,'EPSG',9102,'EPSG',8806,0,'EPSG',9001,'EPSG',8807,0,'EPSG',9001);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('conversion','MF',900930,'EPSG',1262,'EPSG',1024);
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "coordinate_system_auth_name",
++                              "coordinate_system_code",
++                              "geodetic_crs_auth_name",
++                              "geodetic_crs_code",
++                              "conversion_auth_name",
++                              "conversion_code",
++                              "deprecated")
++ VALUES ('EPSG',900930,'Stéréo Nord 5','EPSG',1024,'MF',30,'MF',900930,0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900930,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900941;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900941,'MSG en 0°','+proj=geos +lon_0=0 +h=35785834 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900941,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900942;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900942,'MSG rapid scan','+proj=geos +lon_0=9.5 +h=35785834 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900942,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900943;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900943,'MSG sur l''Océan Indien','+proj=geos +lon_0=41.5 +h=35785834 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900943,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900944;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900944,'FY (Chine)','+proj=geos +lon_0=104.5 +h=35785864 +x_0=0 +y_0=0 +a=6378137 +rf=298.252840776246 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900944,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900945;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900945,'geos','+proj=geos +lon_0=79 +h=35785864 +x_0=0 +y_0=0 +a=6378137 +rf=298.252840776246 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900945,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900946;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900946,'Himawari (Japon)','+proj=geos +lon_0=140.7 +h=35785863 +x_0=0 +y_0=0 +a=6378169 +rf=295.488065897 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900946,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900947;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900947,'GOES-west','+proj=geos +lon_0=-137 +h=35786023 +x_0=0 +y_0=0 +sweep=x +ellps=GRS80 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900947,'EPSG',1262,'EPSG',1024);
++ DELETE
++ FROM "projected_crs"
++ WHERE "auth_name"='EPSG'
++   AND "code"=900948;
++ INSERT INTO "projected_crs" ("auth_name",
++                              "code",
++                              "name",
++                              "text_definition",
++                              "deprecated")
++ VALUES ('EPSG',900948,'GOES-east','+proj=geos +lon_0=-75 +h=35786023 +x_0=0 +y_0=0 +sweep=x +ellps=GRS80 +units=m +no_defs',0);
++ INSERT INTO "usage" ("object_table_name",
++                      "object_auth_name",
++                      "object_code",
++                      "extent_auth_name",
++                      "extent_code",
++                      "scope_auth_name",
++                      "scope_code")
++ VALUES ('projected_crs','EPSG',900948,'EPSG',1262,'EPSG',1024);
+diff -crB --new-file proj-9.5.0/data/sql/proj_db_table_defs.sql proj-9.5.0+mf.1/data/sql/proj_db_table_defs.sql
+*** proj-9.5.0/data/sql/proj_db_table_defs.sql	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/data/sql/proj_db_table_defs.sql	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 236,241 ****
+--- 236,242 ----
+      ('ESRI'),
+      ('IAU_2015'),
+      ('IGNF'),
++     ('MF'),
+      ('NKG'),
+      ('NRCAN'),
+      ('OGC'),
+diff -crB --new-file proj-9.5.0/data/sql_filelist.cmake proj-9.5.0+mf.1/data/sql_filelist.cmake
+*** proj-9.5.0/data/sql_filelist.cmake	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/data/sql_filelist.cmake	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 34,39 ****
+--- 34,40 ----
+    "${SQL_DIR}/deprecation.sql"
+    "${SQL_DIR}/esri.sql"
+    "${SQL_DIR}/ignf.sql"
++   "${SQL_DIR}/mf.sql"
+    "${SQL_DIR}/nkg.sql"
+    "${SQL_DIR}/iau.sql"
+    "${SQL_DIR}/nrcan.sql"
+diff -crB --new-file proj-9.5.0/src/iso19111/io.cpp proj-9.5.0+mf.1/src/iso19111/io.cpp
+*** proj-9.5.0/src/iso19111/io.cpp	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/src/iso19111/io.cpp	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 11728,11733 ****
+--- 11728,11736 ----
+      } else if (step.name == "geos") {
+          mapping =
+              getMapping(PROJ_WKT2_NAME_METHOD_GEOSTATIONARY_SATELLITE_SWEEP_Y);
++     } else if (step.name == "skmerc") {
++         mapping =
++             getMapping(MF_WKT2_NAME_METHOD_SKEW_MERCATOR);
+      } else if (step.name == "omerc") {
+          if (hasParamValue(step, "no_rot")) {
+              mapping = nullptr;
+diff -crB --new-file proj-9.5.0/src/iso19111/operation/parammappings.cpp proj-9.5.0+mf.1/src/iso19111/operation/parammappings.cpp
+*** proj-9.5.0/src/iso19111/operation/parammappings.cpp	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/src/iso19111/operation/parammappings.cpp	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 589,594 ****
+--- 589,603 ----
+      &paramLatTopoOrigin, &paramLongTopoOrigin, &paramHeightTopoOriginWithH0,
+      nullptr};
+  
++ static const ParamMapping *const paramsSkewMercator[] = {
++     &paramLatStdParallel,
++     &paramLongitudeFalseOrigin,
++     &paramEastingFalseOrigin,
++     &paramNorthingFalseOrigin,
++     &paramScaleFactorK,
++     &paramAngleToSkewGrid,
++     nullptr};
++ 
+  static const MethodMapping projectionMethodMappings[] = {
+      {EPSG_NAME_METHOD_TRANSVERSE_MERCATOR, EPSG_CODE_METHOD_TRANSVERSE_MERCATOR,
+       "Transverse_Mercator", "tmerc", nullptr, paramsNatOriginScaleK},
+***************
+*** 751,756 ****
+--- 760,768 ----
+      {PROJ_WKT2_NAME_METHOD_GNOMONIC, 0, "Gnomonic", "gnom", nullptr,
+       paramsNatOrigin},
+  
++     {MF_WKT2_NAME_METHOD_SKEW_MERCATOR, 0, "Skew_Mercator", "skmerc", nullptr,
++      paramsSkewMercator},
++ 
+      {EPSG_NAME_METHOD_HOTINE_OBLIQUE_MERCATOR_VARIANT_A,
+       EPSG_CODE_METHOD_HOTINE_OBLIQUE_MERCATOR_VARIANT_A,
+       "Hotine_Oblique_Mercator", "omerc", "no_uoff", paramsHomVariantA},
+***************
+*** 1474,1480 ****
+  static const ParamMapping *const paramsPoleRotationNetCDFCFConvention[] = {
+      &paramGridNorthPoleLatitudeNetCDF, &paramGridNorthPoleLongitudeNetCDF,
+      &paramNorthPoleGridLongitudeNetCDF, nullptr};
+! 
+  static const MethodMapping otherMethodMappings[] = {
+      {EPSG_NAME_METHOD_CHANGE_VERTICAL_UNIT,
+       EPSG_CODE_METHOD_CHANGE_VERTICAL_UNIT, nullptr, nullptr, nullptr,
+--- 1486,1492 ----
+  static const ParamMapping *const paramsPoleRotationNetCDFCFConvention[] = {
+      &paramGridNorthPoleLatitudeNetCDF, &paramGridNorthPoleLongitudeNetCDF,
+      &paramNorthPoleGridLongitudeNetCDF, nullptr};
+!     
+  static const MethodMapping otherMethodMappings[] = {
+      {EPSG_NAME_METHOD_CHANGE_VERTICAL_UNIT,
+       EPSG_CODE_METHOD_CHANGE_VERTICAL_UNIT, nullptr, nullptr, nullptr,
+diff -crB --new-file proj-9.5.0/src/lib_proj.cmake proj-9.5.0+mf.1/src/lib_proj.cmake
+*** proj-9.5.0/src/lib_proj.cmake	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/src/lib_proj.cmake	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 140,145 ****
+--- 140,146 ----
+    projections/calcofi.cpp
+    projections/eqearth.cpp
+    projections/col_urban.cpp
++   projections/skmerc.cpp
+  )
+  
+  set(SRC_LIBPROJ_CONVERSIONS
+diff -crB --new-file proj-9.5.0/src/pj_list.h proj-9.5.0+mf.1/src/pj_list.h
+*** proj-9.5.0/src/pj_list.h	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/src/pj_list.h	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 123,128 ****
+--- 123,129 ----
+  PROJ_HEAD(ob_tran, "General Oblique Transformation")
+  PROJ_HEAD(ocea, "Oblique Cylindrical Equal Area")
+  PROJ_HEAD(oea, "Oblated Equal Area")
++ PROJ_HEAD(skmerc, "Skew Mercator AERO")
+  PROJ_HEAD(omerc, "Oblique Mercator")
+  PROJ_HEAD(ortel, "Ortelius Oval")
+  PROJ_HEAD(ortho, "Orthographic")
+diff -crB --new-file proj-9.5.0/src/proj_constants.h proj-9.5.0+mf.1/src/proj_constants.h
+*** proj-9.5.0/src/proj_constants.h	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/src/proj_constants.h	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 153,159 ****
+  
+  #define PROJ_WKT2_NAME_METHOD_GNOMONIC "Gnomonic"
+  
+! #define EPSG_NAME_METHOD_HOTINE_OBLIQUE_MERCATOR_VARIANT_A                     \
+      "Hotine Oblique Mercator (variant A)"
+  #define EPSG_CODE_METHOD_HOTINE_OBLIQUE_MERCATOR_VARIANT_A 9812
+  
+--- 153,161 ----
+  
+  #define PROJ_WKT2_NAME_METHOD_GNOMONIC "Gnomonic"
+  
+! #define MF_WKT2_NAME_METHOD_SKEW_MERCATOR "Skew Mercator AERO"
+! 
+! #define EPSG_NAME_METHOD_HOTINE_OBLIQUE_MERCATOR_VARIANT_A  \
+      "Hotine Oblique Mercator (variant A)"
+  #define EPSG_CODE_METHOD_HOTINE_OBLIQUE_MERCATOR_VARIANT_A 9812
+  
+diff -crB --new-file proj-9.5.0/src/projections/skmerc.cpp proj-9.5.0+mf.1/src/projections/skmerc.cpp
+*** proj-9.5.0/src/projections/skmerc.cpp	1970-01-01 01:00:00.000000000 +0100
+--- proj-9.5.0+mf.1/src/projections/skmerc.cpp	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 0 ****
+--- 1,108 ----
++ #include <errno.h>
++ #include <math.h>
++ 
++ #include "proj.h"
++ #include "proj_internal.h"
++ 
++ PROJ_HEAD(skmerc, "Skew Mercator AERO") "\n\tCyl, Sph&Ell\n\tlat_ts= gamma=";
++ 
++ namespace { // anonymous namespace
++ struct pj_opaque {
++     double sinrot, cosrot;
++ };
++ } // anonymous namespace
++ 
++ #define EPS10 1.e-10
++ 
++ static PJ_XY skmerc_e_forward(PJ_LP lp, PJ *P) { /* Ellipsoidal, forward */
++     PJ_XY xy = {0.0, 0.0};
++     struct pj_opaque *Q = static_cast<struct pj_opaque *>(P->opaque);
++ 	double u, v;
++ 	if (fabs(fabs(lp.phi) - M_HALFPI) <= EPS10) {
++         proj_errno_set(P, PROJ_ERR_COORD_TRANSFM_OUTSIDE_PROJECTION_DOMAIN);
++         return xy;
++     }
++ 	u = P->k0 * lp.lam;
++ 	v = - P->k0 * log(pj_tsfn(lp.phi, sin(lp.phi), P->e));
++ 	xy.x = u * Q->cosrot - v * Q->sinrot;
++ 	xy.y = v * Q->cosrot + u * Q->sinrot;
++ 	return xy;
++ }
++ 
++ static PJ_XY skmerc_s_forward(PJ_LP lp, PJ *P) { /* Spheroidal, forward */
++     PJ_XY xy = {0.0, 0.0};
++     struct pj_opaque *Q = static_cast<struct pj_opaque *>(P->opaque);
++ 	double u, v;
++ 	if (fabs(fabs(lp.phi) - M_HALFPI) <= EPS10) {
++         proj_errno_set(P, PROJ_ERR_COORD_TRANSFM_OUTSIDE_PROJECTION_DOMAIN);
++         return xy;
++     }
++ 	u = P->k0 * lp.lam;
++ 	v = P->k0 * log(tan(M_FORTPI + .5 * lp.phi));
++ 	xy.x = u * Q->cosrot - v * Q->sinrot;
++ 	xy.y = v * Q->cosrot + u * Q->sinrot;
++ 	return xy;
++ }
++ 
++ static PJ_LP skmerc_e_inverse(PJ_XY xy, PJ *P) { /* Ellipsoidal, inverse */
++     PJ_LP lp = {0.0, 0.0};
++     struct pj_opaque *Q = static_cast<struct pj_opaque *>(P->opaque);
++ 	double u, v;
++ 	u = xy.x * Q->cosrot + xy.y * Q->sinrot;
++ 	v = xy.y * Q->cosrot - xy.x * Q->sinrot;
++ 	if ((lp.phi = pj_phi2(P->ctx, exp(- v / P->k0), P->e)) == HUGE_VAL) {
++         proj_errno_set(P, PROJ_ERR_COORD_TRANSFM_OUTSIDE_PROJECTION_DOMAIN);
++         return lp;
++     }
++ 	lp.lam = u / P->k0;
++ 	return lp;
++ }
++ 
++ static PJ_LP skmerc_s_inverse(PJ_XY xy, PJ *P) { /* Spheroidal, inverse */
++     PJ_LP lp = {0.0, 0.0};
++     struct pj_opaque *Q = static_cast<struct pj_opaque *>(P->opaque);
++ 	double u, v;
++ 	u = xy.x * Q->cosrot + xy.y * Q->sinrot;
++ 	v = xy.y * Q->cosrot - xy.x * Q->sinrot;
++ 	lp.phi = M_HALFPI - 2. * atan(exp(-v / P->k0));
++ 	lp.lam = u / P->k0;
++ 	return lp;
++ }
++ 
++ PJ *PJ_PROJECTION(skmerc) {
++ 	double phits=0.0, gamma=0.0;
++ 	int is_phits, gam;
++ 
++     struct pj_opaque *Q =
++         static_cast<struct pj_opaque *>(calloc(1, sizeof(struct pj_opaque)));
++     if (nullptr == Q)
++         return pj_default_destructor(P, PROJ_ERR_OTHER /*ENOMEM*/);
++     P->opaque = Q;
++ 
++ 	if( (is_phits = pj_param(P->ctx, P->params, "tlat_ts").i) ) {
++ 		phits = fabs(pj_param(P->ctx, P->params, "rlat_ts").f);
++ 		if (phits >= M_HALFPI) {
++             proj_log_error(P, _("Invalid value for rlat_ts: |rlat_ts| should be < 90Â°"));
++             return pj_default_destructor(P, PROJ_ERR_INVALID_OP_ILLEGAL_ARG_VALUE);
++         } 
++ 	}
++ 	if ((gam = pj_param(P->ctx, P->params, "tgamma").i) != 0)
++ 		gamma = pj_param(P->ctx, P->params, "rgamma").f;
++ 
++ 	Q->sinrot = sin(gamma);
++ 	Q->cosrot = cos(gamma);
++ 
++ 	if (P->es) { /* ellipsoid */
++ 		if (is_phits)
++ 			P->k0 = pj_msfn(sin(phits), cos(phits), P->es);
++ 		P->inv = skmerc_e_inverse;
++ 		P->fwd = skmerc_e_forward;
++ 	} else { /* sphere */
++ 		if (is_phits)
++ 			P->k0 = cos(phits);
++ 		P->inv = skmerc_s_inverse;
++ 		P->fwd = skmerc_s_forward;
++ 	}
++ 
++     return P;
++ }
+diff -crB --new-file proj-9.5.0/test/CMakeLists.txt proj-9.5.0+mf.1/test/CMakeLists.txt
+*** proj-9.5.0/test/CMakeLists.txt	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/test/CMakeLists.txt	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 84,89 ****
+--- 84,90 ----
+  proj_add_gie_test("geotiff_grids" "gie/geotiff_grids.gie")
+  proj_add_gie_test("defmodel" "gie/defmodel.gie")
+  proj_add_gie_test("gridshift" "gie/gridshift.gie")
++ proj_add_gie_test("skmerc" "gie/skmerc.gie")
+  # Does not really require the network, but test running with PROJ_NETWORK=ON
+  proj_add_gie_network_dependent_test("gridshift_network_enabled" "gie/gridshift.gie")
+  endif()
+diff -crB --new-file proj-9.5.0/test/gie/skmerc.gie proj-9.5.0+mf.1/test/gie/skmerc.gie
+*** proj-9.5.0/test/gie/skmerc.gie	1970-01-01 01:00:00.000000000 +0100
+--- proj-9.5.0+mf.1/test/gie/skmerc.gie	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 0 ****
+--- 1,30 ----
++ <gie>
++ 
++ operation +proj=skmerc +a=6378137 +b=6378137
++           +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +gamma=-45.0 +units=m +nadgrids=@null +no_defs
++ tolerance 1 mm
++ 
++ accept    0 45
++ expect    3975015.9634 3975015.9634
++ 
++ accept    0 0
++ expect    0 0
++ 
++ accept    45 0
++ expect    3542164.5068 -3542164.5068
++ 
++ operation +proj=skmerc +a=6378137 +b=6378137
++           +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +gamma=-45.0 +units=m +nadgrids=@null +no_defs
++ tolerance 1 mm
++ direction inverse
++ 
++ accept    3975015.9634 3975015.9634
++ expect    0 45
++ 
++ accept    0 0
++ expect    0 0
++ 
++ accept    3542164.5068 -3542164.5068
++ expect    45 0
++ 
++ </gie>
+diff -crB --new-file proj-9.5.0/test/unit/CMakeLists.txt proj-9.5.0+mf.1/test/unit/CMakeLists.txt
+*** proj-9.5.0/test/unit/CMakeLists.txt	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/test/unit/CMakeLists.txt	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 170,176 ****
+    test_datum.cpp
+    test_factory.cpp
+    test_c_api.cpp
+!   test_grids.cpp)
+  add_executable(proj_test_cpp_api ${PROJ_TEST_CPP_API_SOURCES})
+  set_property(SOURCE ${PROJ_TEST_CPP_API_SOURCES} PROPERTY SKIP_UNITY_BUILD_INCLUSION ON)
+  
+--- 170,177 ----
+    test_datum.cpp
+    test_factory.cpp
+    test_c_api.cpp
+!   test_grids.cpp
+!   test_skmerc.cpp)
+  add_executable(proj_test_cpp_api ${PROJ_TEST_CPP_API_SOURCES})
+  set_property(SOURCE ${PROJ_TEST_CPP_API_SOURCES} PROPERTY SKIP_UNITY_BUILD_INCLUSION ON)
+  
+diff -crB --new-file proj-9.5.0/test/unit/test_c_api.cpp proj-9.5.0+mf.1/test/unit/test_c_api.cpp
+*** proj-9.5.0/test/unit/test_c_api.cpp	2024-11-12 18:58:38.000000000 +0100
+--- proj-9.5.0+mf.1/test/unit/test_c_api.cpp	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 1506,1519 ****
+      ASSERT_TRUE(list[3] != nullptr);
+      EXPECT_EQ(list[3], std::string("IGNF"));
+      ASSERT_TRUE(list[4] != nullptr);
+!     EXPECT_EQ(list[4], std::string("NKG"));
+      ASSERT_TRUE(list[5] != nullptr);
+!     EXPECT_EQ(list[5], std::string("NRCAN"));
+      ASSERT_TRUE(list[6] != nullptr);
+!     EXPECT_EQ(list[6], std::string("OGC"));
+      ASSERT_TRUE(list[7] != nullptr);
+!     EXPECT_EQ(list[7], std::string("PROJ"));
+!     EXPECT_EQ(list[8], nullptr);
+  }
+  
+  // ---------------------------------------------------------------------------
+--- 1506,1521 ----
+      ASSERT_TRUE(list[3] != nullptr);
+      EXPECT_EQ(list[3], std::string("IGNF"));
+      ASSERT_TRUE(list[4] != nullptr);
+!     EXPECT_EQ(list[4], std::string("MF"));
+      ASSERT_TRUE(list[5] != nullptr);
+!     EXPECT_EQ(list[5], std::string("NKG"));
+      ASSERT_TRUE(list[6] != nullptr);
+!     EXPECT_EQ(list[6], std::string("NRCAN"));
+      ASSERT_TRUE(list[7] != nullptr);
+!     EXPECT_EQ(list[7], std::string("OGC"));
+!     ASSERT_TRUE(list[8] != nullptr);
+!     EXPECT_EQ(list[8], std::string("PROJ"));
+!     EXPECT_EQ(list[9], nullptr);
+  }
+  
+  // ---------------------------------------------------------------------------
+***************
+*** 4029,4034 ****
+--- 4031,4040 ----
+          bool found3901 = false;
+          for (int i = 0; i < result_count; i++) {
+              // EPSG should only include Earth CRS, at least for now...
++             if (std::stoi(list[i]->code) >= 900913) {
++                 // Pseudo-code EPSG synopsis, pas de test
++                 continue;
++             }
+              EXPECT_EQ(std::string(list[i]->celestial_body_name), "Earth");
+              auto code = std::string(list[i]->code);
+              if (code == "4326") {
+diff -crB --new-file proj-9.5.0/test/unit/test_skmerc.cpp proj-9.5.0+mf.1/test/unit/test_skmerc.cpp
+*** proj-9.5.0/test/unit/test_skmerc.cpp	1970-01-01 01:00:00.000000000 +0100
+--- proj-9.5.0+mf.1/test/unit/test_skmerc.cpp	2024-11-12 18:31:09.000000000 +0100
+***************
+*** 0 ****
+--- 1,75 ----
++ /******************************************************************************
++  *
++  * Project:  PROJ
++  * Purpose:  Test ISO19111:2019 implementation
++  * Author:   Even Rouault <even dot rouault at spatialys dot com>
++  *
++  ******************************************************************************
++  * Copyright (c) 2018, Even Rouault <even dot rouault at spatialys dot com>
++  *
++  * Permission is hereby granted, free of charge, to any person obtaining a
++  * copy of this software and associated documentation files (the "Software"),
++  * to deal in the Software without restriction, including without limitation
++  * the rights to use, copy, modify, merge, publish, distribute, sublicense,
++  * and/or sell copies of the Software, and to permit persons to whom the
++  * Software is furnished to do so, subject to the following conditions:
++  *
++  * The above copyright notice and this permission notice shall be included
++  * in all copies or substantial portions of the Software.
++  *
++  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
++  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
++  * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
++  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
++  * DEALINGS IN THE SOFTWARE.
++  ****************************************************************************/
++ 
++ #include "gtest_include.h"
++ 
++ // to be able to use internal::toString
++ #define FROM_PROJ_CPP
++ 
++ #include "proj/common.hpp"
++ #include "proj/coordinateoperation.hpp"
++ #include "proj/coordinates.hpp"
++ #include "proj/coordinatesystem.hpp"
++ #include "proj/crs.hpp"
++ #include "proj/datum.hpp"
++ #include "proj/io.hpp"
++ #include "proj/metadata.hpp"
++ #include "proj/util.hpp"
++ 
++ #include "proj/internal/internal.hpp"
++ 
++ #include "proj_constants.h"
++ 
++ #include <string>
++ 
++ using namespace osgeo::proj::common;
++ using namespace osgeo::proj::coordinates;
++ using namespace osgeo::proj::crs;
++ using namespace osgeo::proj::cs;
++ using namespace osgeo::proj::datum;
++ using namespace osgeo::proj::internal;
++ using namespace osgeo::proj::io;
++ using namespace osgeo::proj::metadata;
++ using namespace osgeo::proj::operation;
++ using namespace osgeo::proj::util;
++ 
++ // ---------------------------------------------------------------------------
++ 
++ TEST(io, projparse_skmerc) {
++     auto obj = PROJStringParser().createFromPROJString(
++         "+proj=skmerc +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +gamma=-45.0 +type=crs");
++     auto crs = nn_dynamic_pointer_cast<ProjectedCRS>(obj);
++     ASSERT_TRUE(crs != nullptr);
++     WKTFormatterNNPtr f(WKTFormatter::create());
++     f->simulCurNodeHasId();
++     f->setMultiLine(false);
++     crs->exportToWKT(f.get());
++     auto wkt = f->toString();
++     EXPECT_TRUE(wkt.find("Skew Mercator AERO") != std::string::npos)
++         << wkt;
++ }
