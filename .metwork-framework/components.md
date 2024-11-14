@@ -286,8 +286,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.16.2 | python3_core |
 
-<<<<<<< HEAD
-*(284 components)*
-=======
-*(294 components)*
->>>>>>> 256bfa26 (feat: add PostGreSQL extension pg_uuidv7 (#1957))
+*(285 components)*
