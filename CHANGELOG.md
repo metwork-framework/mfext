@@ -72,6 +72,8 @@
 - add proj patch from synopsis with skew mercator projection (#1965)
 - bump psutil to 5.9.8 (#1974)
 - upgrade log_proxy to 0.7.4 (security fix in case of FS full) (#1975)
+- upgrade proj from 9.3.0 to 9.5.0 (with MF patch for skmerc) (#1977)
+- add pre-commit and dependencies in layer python3_devtools (#1978)
 
 ### Bug Fixes
 
