@@ -70,5 +70,3 @@ wcwidth
 tornado
 #jsonschema is a dependency in layers python3_scientific and python3_mapserverapi
 jsonschema
-#temporarly removed in python 3.13
-#geojson==3.1.0
