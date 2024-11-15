@@ -42,6 +42,7 @@ import cookiecutter
 import coverage
 import cronwrapper
 import cryptography
+import Cython
 import decorator
 import deploycron
 import deprecated
