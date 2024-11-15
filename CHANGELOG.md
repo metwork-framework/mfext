@@ -74,6 +74,8 @@
 - upgrade log_proxy to 0.7.4 (security fix in case of FS full) (#1975)
 - upgrade proj from 9.3.0 to 9.5.0 (with MF patch for skmerc) (#1977)
 - add pre-commit and dependencies in layer python3_devtools (#1978)
+- upgrade pydantic to 2.8.2 and pydantic-core to 2.20.1 (#1981)
+- bump typing-extensions from 4.10.0 to 4.12.2 (#1982)
 
 ### Bug Fixes
 
