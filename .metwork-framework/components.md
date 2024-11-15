@@ -196,8 +196,8 @@
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.8 | python3 |
-| [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.12 | python3_scientific_core |
-| [psycopg](https://psycopg.org/psycopg3/) | 3.1.12 | python3_scientific_core |
+| [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.20 | python3_scientific_core |
+| [psycopg](https://psycopg.org/psycopg3/) | 3.1.20 | python3_scientific_core |
 | [psycopg2](https://psycopg.org/) | 2.9.9 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3 |
 | [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3 |
