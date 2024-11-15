@@ -31,9 +31,8 @@ dill==0.3.7
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==5.6.3
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
-frozenlist==1.4.0
+frozenlist==1.5.0
 fsspec==2023.9.2
-geojson==3.1.0
 gitignore-parser==0.1.11
 hiredis==2.2.3
 idna==3.7
@@ -69,15 +68,15 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pyasyncore==1.0.4
 pycodestyle==2.11.0
-pydantic==2.7.4
-pydantic-core==2.18.4
+pydantic==2.8.2
+pydantic-core==2.20.1
 Pygments==2.16.1
 pyinotify==0.9.6
 PyNaCl==1.5.0
 python-dateutil==2.8.2
 python-ldap==3.4.3
 pytz==2023.3.post1
-PyYAML==6.0.1
+PyYAML==6.0.2
 redis==5.0.6
 referencing==0.31.0
 regex==2023.8.8
@@ -103,5 +102,5 @@ whichcraft==0.6.1
 wrapt==1.16.0
 -e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
-yarl==1.9.2
+yarl==1.9.11
 yq==3.2.2

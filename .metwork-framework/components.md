@@ -32,7 +32,7 @@
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
 | [certifi](https://certifi.io) | 2024.7.4 | python3_core |
-| [cffi](http://cffi.readthedocs.org) | 1.15.1 | python3 |
+| [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
 | [circus](https://pypi.org/project/circus) | 2d5b6d6 | python3_circus |
@@ -48,6 +48,7 @@
 | [cryptography](https://github.com/pyca/cryptography) | 43.0.1 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
+| [Cython](https://cython.org/) | 3.0.11 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.14 | python3 |
@@ -62,6 +63,7 @@
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.1.3 | python3_devtools |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3_devtools |
+| [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.12.3 | python3_core |
 | [flake8](https://github.com/pycqa/flake8) | 6.1.0 | python3_devtools |
@@ -69,10 +71,9 @@
 | [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
-| [frozenlist](https://github.com/aio-libs/frozenlist) | 1.4.0 | python3 |
+| [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.8.3 | scientific_core |
-| [geojson](https://github.com/jazzband/geojson) | 3.1.0 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
@@ -108,7 +109,7 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.9.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
-| [libcst](https://pypi.org/project/libcst) | 1.1.0 | python3_devtools |
+| [libcst](https://pypi.org/project/libcst) | 1.5.0 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
@@ -186,8 +187,8 @@
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.7 | python3 |
-| [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.12 | python3_scientific_core |
-| [psycopg](https://psycopg.org/psycopg3/) | 3.1.12 | python3_scientific_core |
+| [psycopg-c](https://psycopg.org/psycopg3/) | 3.1.20 | python3_scientific_core |
+| [psycopg](https://psycopg.org/psycopg3/) | 3.1.20 | python3_scientific_core |
 | [psycopg2](https://psycopg.org/) | 2.9.9 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3_devtools |
 | [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3_devtools |
@@ -197,14 +198,14 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.7.4 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.18.4 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.8.2 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.20.1 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.16.1 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
-| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.0 | python3_devtools |
-| [pyinstaller](https://www.pyinstaller.org/) | 6.3.0 | python3_devtools |
+| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.8 | python3_devtools |
+| [pyinstaller](https://www.pyinstaller.org/) | 6.10.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.0.1 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
@@ -224,7 +225,7 @@
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.13.0 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
-| [PyYAML](https://pyyaml.org/) | 6.0.1 | python3 |
+| [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
@@ -271,7 +272,7 @@
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
-| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.10.0 | python3_core |
+| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.12.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.2.2 | python3 |
@@ -289,9 +290,9 @@
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 6df2a84 | python3 |
 | [xmltodict](https://github.com/martinblech/xmltodict) | 0.13.0 | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
-| [yarl](https://github.com/aio-libs/yarl/) | 1.9.2 | python3 |
+| [yarl](https://github.com/aio-libs/yarl) | 1.9.11 | python3 |
 | [yq](https://github.com/kislyuk/yq) | 3.2.2 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(293 components)*
+*(294 components)*
