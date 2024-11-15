@@ -50,6 +50,7 @@
 | [cryptography](https://github.com/pyca/cryptography) | 43.0.1 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
+| [Cython](https://cython.org/) | 3.0.11 | python3 |
 | [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.14 | python3 |
@@ -303,4 +304,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(302 components)*
+*(303 components)*

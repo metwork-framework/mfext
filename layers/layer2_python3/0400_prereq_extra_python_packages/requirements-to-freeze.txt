@@ -1,3 +1,4 @@
+Cython
 cffi
 fastentrypoints
 pbr
