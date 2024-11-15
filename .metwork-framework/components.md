@@ -115,7 +115,7 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.9.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
-| [libcst](https://pypi.org/project/libcst) | 1.1.0 | python3_devtools |
+| [libcst](https://pypi.org/project/libcst) | 1.5.0 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
@@ -213,8 +213,8 @@
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.16.1 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
-| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.0 | python3_devtools |
-| [pyinstaller](https://www.pyinstaller.org/) | 6.3.0 | python3_devtools |
+| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.8 | python3_devtools |
+| [pyinstaller](https://www.pyinstaller.org/) | 6.10.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.0.1 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
