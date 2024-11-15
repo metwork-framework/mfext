@@ -66,6 +66,7 @@
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.1.3 | python3_devtools |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3 |
+| [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.12.3 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
@@ -74,7 +75,7 @@
 | [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
-| [frozenlist](https://github.com/aio-libs/frozenlist) | 1.4.0 | python3 |
+| [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.8.3 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.1.0 | python3 |
@@ -299,9 +300,9 @@
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 6df2a84 | python3 |
 | [xmltodict](https://github.com/martinblech/xmltodict) | 0.13.0 | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
-| [yarl](https://github.com/aio-libs/yarl/) | 1.9.2 | python3 |
+| [yarl](https://github.com/aio-libs/yarl) | 1.9.11 | python3 |
 | [yq](https://github.com/kislyuk/yq) | 3.2.2 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(303 components)*
+*(304 components)*

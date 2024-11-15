@@ -1,3 +1,4 @@
+expandvars
 hatch-fancy-pypi-readme
 hatch-nodejs-version
 hatch-requirements-txt
