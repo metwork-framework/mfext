@@ -76,6 +76,12 @@
 - add pre-commit and dependencies in layer python3_devtools (#1978)
 - upgrade pydantic to 2.8.2 and pydantic-core to 2.20.1 (#1981)
 - bump typing-extensions from 4.10.0 to 4.12.2 (#1982)
+- add Cython (previously in layer python3_scientific) (#1983)
+- bump PyYAML to 6.0.2 (Cython 3 compatibility) (#1984)
+- upgrade cffi from 1.15.1 to 1.17.1 (Python 3.13 compatibility) (#1985)
+- bump frozenlist to 1.5.0 and yarl to 1.9.11 (for Python 3.13) (#1986)
+- bump psycopg and psycopg_c to 3.1.20 (Python 3.13 compatibility) (#1987)
+- bump libcst to 1.5.0 and pyinstaller to 6.3.0 (for Python 3.13) (#1988)
 
 ### Bug Fixes
 
