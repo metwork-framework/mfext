@@ -70,7 +70,7 @@
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
-| [freezegun](https://github.com/spulec/freezegun) | 1.2.2 | python3_devtools |
+| [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.8.3 | scientific_core |
