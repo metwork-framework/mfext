@@ -37,7 +37,7 @@
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
-| [circus](https://pypi.org/project/circus) | 2d5b6d6 | python3_circus |
+| [circus](https://pypi.org/project/circus) | 6fdf573 | python3_circus |
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 9d208a1 | python3_circus |
 | [click](https://palletsprojects.com/p/click/) | 8.1.7 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
