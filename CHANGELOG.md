@@ -82,6 +82,8 @@
 - bump frozenlist to 1.5.0 and yarl to 1.9.11 (for Python 3.13) (#1986)
 - bump psycopg and psycopg_c to 3.1.20 (Python 3.13 compatibility) (#1987)
 - bump libcst to 1.5.0 and pyinstaller to 6.3.0 (for Python 3.13) (#1988)
+- upgrade freezegun from 1.2.2 to 1.5.1 (Python 3.13 compatibility) (#1989)
+- upgrade psycopg2 from 2.9.9 to 2.9.10 (Python 3.13 compatibility) (#1990)
 
 ### Bug Fixes
 
