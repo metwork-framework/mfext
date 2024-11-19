@@ -37,7 +37,7 @@
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://github.com/Ousret/charset_normalizer) | 3.2.0 | python3 |
-| [circus](https://pypi.org/project/circus) | 2d5b6d6 | python3_circus |
+| [circus](https://pypi.org/project/circus) | 6fdf573 | python3_circus |
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 9d208a1 | python3_circus |
 | [click](https://palletsprojects.com/p/click/) | 8.1.7 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
@@ -280,7 +280,7 @@
 | [tornado](http://www.tornadoweb.org/) | 6.4.1 | python3 |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
-| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2023.8.7 | python3_core |
+| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2024.10.16 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.12.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
