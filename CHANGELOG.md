@@ -86,6 +86,7 @@
 - upgrade psycopg2 from 2.9.9 to 2.9.10 (Python 3.13 compatibility) (#1990)
 - upgrade circus for Python 3.13 compatibility (pipes -> shlex) (#1991)
 - upgrade trove-classifiers to 2024.10.16 (for Pillow 11.0.0) (#1992)
+- bump aiohttp to 3.10.11 (CVE-2024-52304) and yarl to 1.12.1 (#1994)
 
 ### Bug Fixes
 
