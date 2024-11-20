@@ -84,6 +84,8 @@
 - bump libcst to 1.5.0 and pyinstaller to 6.3.0 (for Python 3.13) (#1988)
 - upgrade freezegun from 1.2.2 to 1.5.1 (Python 3.13 compatibility) (#1989)
 - upgrade psycopg2 from 2.9.9 to 2.9.10 (Python 3.13 compatibility) (#1990)
+- upgrade circus for Python 3.13 compatibility (pipes -> shlex) (#1991)
+- upgrade trove-classifiers to 2024.10.16 (for Pillow 11.0.0) (#1992)
 
 ### Bug Fixes
 

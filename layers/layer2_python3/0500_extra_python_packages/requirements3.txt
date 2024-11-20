@@ -119,5 +119,5 @@ whichcraft==0.6.1
 wrapt==1.16.0
 -e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
-yarl==1.9.11
+yarl==1.12.1
 yq==3.2.2
