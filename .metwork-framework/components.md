@@ -277,7 +277,7 @@
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
 | [tomli](https://github.com/hukkin/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 6.4.1 | python3 |
+| [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2024.10.16 | python3_core |
