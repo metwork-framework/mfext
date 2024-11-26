@@ -20,6 +20,7 @@ import backcall
 import bandit
 import bash
 import bcrypt
+import bs4 #beautifulsoup4
 import binaryornot
 import bjoern
 import black
@@ -41,6 +42,7 @@ import cookiecutter
 import coverage
 import cronwrapper
 import cryptography
+import Cython
 import decorator
 import deploycron
 import deprecated
@@ -49,6 +51,7 @@ import diskcache
 import distlib
 import distro
 import editables
+import entrypoints
 import envtpl
 import exceptiongroup
 import execnet
@@ -192,6 +195,7 @@ import simpleeval
 import six
 import smmap
 import snowballstemmer
+import soupsieve
 import stack_data
 import statsd
 import stevedore

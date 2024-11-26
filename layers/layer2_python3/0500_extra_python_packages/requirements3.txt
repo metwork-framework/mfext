@@ -1,16 +1,20 @@
 -e git+https://github.com/metwork-framework/acquisition.git@8205f0c2fcd323d7e36cbeecac05e74935def06c#egg=acquisition
 aiohappyeyeballs==2.4.0
-aiohttp==3.10.5
+aiohttp==3.10.11
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
 aiosignal==1.3.1
 annotated-types==0.6.0
 argcomplete==3.1.1
 arrow==1.2.3
+asttokens==2.4.0
 async-timeout==4.0.3
 attrs==23.2.0
 autopep8==2.0.4
+Babel==2.13.0
+backcall==0.2.0
 bash==0.6
 bcrypt==4.0.1
+beautifulsoup4==4.12.2
 binaryornot==0.4.4
 bjoern==3.2.2
 cachetools==5.3.1
@@ -30,7 +34,9 @@ Deprecated==1.2.14
 dill==0.3.7
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==5.6.3
+entrypoints==0.4
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
+executing==2.0.1
 frozenlist==1.5.0
 fsspec==2023.9.2
 geojson==3.1.0
@@ -38,11 +44,13 @@ gitignore-parser==0.1.11
 hiredis==2.2.3
 idna==3.7
 inotify-simple==1.3.5
+ipython==8.16.1
+jedi==0.19.1
 Jinja2==3.1.4
 jinja2-from-json-extension==1.0.0
 jinja2-fnmatch-extension==1.0.2
 jinja2-getenv-extension==1.0.2
-jinja2-shell-extension==2.0.1
+jinja2-shell-extension==2.1.0
 jinja2-time==0.2.0
 joblib==1.3.2
 jsonschema==4.19.2
@@ -51,6 +59,7 @@ lazy-import==0.2.2
 Markdown==3.4.4
 markdown-it-py==3.0.0
 MarkupSafe==2.1.3
+matplotlib-inline==0.1.6
 mdurl==0.1.2
 mflog==0.1.0
 -e git+https://github.com/metwork-framework/mfplugin.git@5de463640d478622309d6949d21075c6810f1344#egg=mfplugin
@@ -61,10 +70,15 @@ mypy-extensions==1.0.0
 netifaces==0.11.0
 opinionated-configparser==1.0.1
 paramiko==3.4.1
+parso==0.8.3
+pexpect==4.8.0
+pickleshare==0.7.5
 pika==1.3.2
 poyo==0.5.0
 prompt-toolkit==3.0.36
-psutil==5.9.7
+psutil==5.9.8
+ptyprocess==0.7.0
+pure-eval==0.2.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pyasyncore==1.0.4
@@ -86,22 +100,24 @@ requests-unixsocket2==0.4.0
 rich==13.5.2
 rpds-py==0.12.0
 simpleeval==0.9.13
+soupsieve==2.5
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
+stack-data==0.6.3
 structlog==23.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 termcolor==2.3.0
 terminaltables==3.1.10
 threadpoolctl==3.2.0
-tornado==6.4.1
+tornado==6.4.2
 tqdm==4.66.4
 traitlets==5.9.0
 Unidecode==1.3.6
 urllib3==2.2.2
 wcwidth==0.2.8
-Werkzeug==3.0.3
+Werkzeug==3.0.6
 whichcraft==0.6.1
 wrapt==1.16.0
 -e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
-yarl==1.9.11
+yarl==1.12.1
 yq==3.2.2

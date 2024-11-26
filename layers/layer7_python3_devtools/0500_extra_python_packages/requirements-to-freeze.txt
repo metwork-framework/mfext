@@ -28,7 +28,6 @@ freezegun
 pytest-asyncio
 #nose-html-reporting is not python3 compliant
 #nose-html-reporting
-ipython
 jmespath
 #pywget is not Python 3.12 compliant because of the use of imp (deprecated in favor of importlib)
 #pywget
@@ -38,9 +37,9 @@ pytest-json-report
 bump-pydantic
 pipdeptree
 py-spy
-#Wheels for python 3.12 are missing for filprofiler on pypi
-#filprofiler
+filprofiler
 bandit
 GitPython
 pyinstaller
 panoply
+pre-commit
