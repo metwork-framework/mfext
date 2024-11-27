@@ -88,6 +88,7 @@
 - upgrade trove-classifiers to 2024.10.16 (for Pillow 11.0.0) (#1992)
 - bump aiohttp to 3.10.11 (CVE-2024-52304) and yarl to 1.12.1 (#1994)
 - bump tornado from 6.4.1 to 6.4.2 (fix CVE-2024-52804) (#1997)
+- upgrade jinja2-shell-extension to last release 2.1.0 (#1998)
 
 ### Bug Fixes
 
