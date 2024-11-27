@@ -1,3 +1,0 @@
-pathspec
-pluggy
-trove-classifiers

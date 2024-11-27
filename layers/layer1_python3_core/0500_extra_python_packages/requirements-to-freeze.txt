@@ -3,9 +3,12 @@
 #and by matplotlib<=3.6.1 in addon scientific
 six
 appdirs
-virtualenv
 distro
+packaging
+pathspec
+virtualenv
 #importlib-metadata 4.4.0 was used to build importlib.metadata in the first release of the 3.10 standard python library
 #4.11.3 was merge in last release of python 3.10 and 4.13.0 for python 3.11
 #upgrade if necessary... or remove ?
 importlib-metadata >= 4.13.0
+typing-extensions

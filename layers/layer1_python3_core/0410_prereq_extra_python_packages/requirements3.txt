@@ -1,3 +1,0 @@
-calver==2022.6.26
-setuptools-scm==7.1.0
-typing-extensions==4.8.0

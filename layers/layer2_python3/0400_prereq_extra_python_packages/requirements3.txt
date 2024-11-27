@@ -1,11 +1,4 @@
 cffi==1.15.1
 ConfigUpdater==3.1.1
-fastentrypoints==0.12
-pbr==5.11.1
 pycparser==2.21
-PyScaffold==4.5
-pytest-runner==6.0.0
-semantic-version==2.10.0
-setuptools-git==1.2
-setuptools-rust==1.7.0
 tomlkit==0.12.1

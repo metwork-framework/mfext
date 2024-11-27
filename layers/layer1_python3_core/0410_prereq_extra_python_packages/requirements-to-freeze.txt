@@ -1,3 +1,0 @@
-calver
-setuptools-scm
-typing-extensions
