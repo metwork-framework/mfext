@@ -11,17 +11,18 @@ _PARENT_PWD=$(shell dirname $(_PWD))
 LAYERS_TO_LOAD=$(shell cat $(_PARENT_PWD)/.layerapi2_dependencies $(_PARENT_PWD)/.build_extra_dependencies .build_extra_dependencies 2>/dev/null |grep '^[a-zA-Z0-9]' |xargs |sed 's/ /,/g')
 CURRENT_LAYER=$(shell cat $(_PARENT_PWD)/.layerapi2_label)
 
-#Use gcc-toolset-10 if gcc version < 10
+#Use gcc-toolset-11 if gcc version < 11
 GCC_VERSION=`gcc --version | head -1 | cut -d" " -f3 | cut -d"." -f1`
 
-#ifeq ($(shell expr $(GCC_VERSION) = "8" ), 1)
-#    export SCL='scl enable gcc-toolset-10 --'
-#else ifeq ($(shell expr $(GCC_VERSION) = "9" ), 1)
-#    export SCL='scl enable gcc-toolset-10 --'
-#else
-#    export SCL=''
-#endif
-export SCL=''
+ifeq ($(shell expr $(GCC_VERSION) = "8" ), 1)
+    export SCL='scl enable gcc-toolset-11 --'
+else ifeq ($(shell expr $(GCC_VERSION) = "9" ), 1)
+    export SCL='scl enable gcc-toolset-11 --'
+else ifeq ($(shell expr $(GCC_VERSION) = "10" ), 1)
+    export SCL='scl enable gcc-toolset-11 --'
+else
+    export SCL=''
+endif
 
 .DEFAULT_GOAL := all
 
