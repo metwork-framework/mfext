@@ -1,4 +1,4 @@
 #Patch to build without lzma
 no_lzma.patch
-#Fix build with gcc>=10
+#Fix build with gcc >= 10
 Fix-multiple-global-symbols-definitions.patch
