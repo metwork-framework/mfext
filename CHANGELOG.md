@@ -90,6 +90,7 @@
 - bump tornado from 6.4.1 to 6.4.2 (fix CVE-2024-52804) (#1997)
 - upgrade jinja2-shell-extension to last release 2.1.0 (#1998)
 - patch to fix ag build with gcc >=10 (#1999)
+- build with gcc 11 with patch for the_silver_searcher (#2000)
 
 ### Bug Fixes
 
