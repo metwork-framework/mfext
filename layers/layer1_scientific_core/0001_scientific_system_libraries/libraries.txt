@@ -10,3 +10,5 @@
 /usr/lib64/libsz.so.2.0.1
 /usr/lib64/libjasper.so.4
 /usr/lib64/libjasper.so.4.0.0
+/usr/lib64/libtiff.so.5
+/usr/lib64/libtiff.so.5.3.0
