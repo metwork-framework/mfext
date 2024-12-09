@@ -1,4 +1,4 @@
-#pip 23.0.1 and setuptools 58.1.0 are the built-in versions in Python 3.9.19
+#pip 23.0.1 and setuptools 58.1.0 are the built-in versions in Python 3.9.20
 #But somme packages still using 'use_2to3' (simpleeval 0.9.10, GDAL 3.0.4...) are not compatible with setuptools>=58
 #and there is a versioneer/dask issue on python3_scientific@mfext with pip 23.0.1
 #So we keep previous pip 21.2.3 setuptools 57.4.0
