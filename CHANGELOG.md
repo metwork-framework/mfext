@@ -6,6 +6,7 @@
 
 - add proj patch from synopsis with skew mercator projection (backport #1965) (#1980)
 - add PostGreSQL extension pg_uuidv7 (backport #1957) (#1979)
+- bump Python 3.11 from 3.11.10 to 3.11.11 (#2003)
 
 ## v2.2.13 (2024-11-04)
 
