@@ -91,6 +91,8 @@
 - upgrade jinja2-shell-extension to last release 2.1.0 (#1998)
 - patch to fix ag build with gcc >=10 (#1999)
 - build with gcc 11 with patch for the_silver_searcher (#2000)
+- bump Python 3.12 from 3.12.7 to 3.12.8 (#2002)
+- upgrade packaging from 23.1 to 24.2 (for recent xarray release) (#2006)
 
 ### Bug Fixes
 
