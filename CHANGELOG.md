@@ -105,5 +105,6 @@
 - remove pip conflicts warnings when using override (#1840)
 - upgrade xattrfile to fix mfdata issue 486 (#1935)
 - bump to paramiko 3.4.1 to prevent warning messages with cryptography (#1949)
+- add patches for next 9.5.1 release (#2007)
 
 
