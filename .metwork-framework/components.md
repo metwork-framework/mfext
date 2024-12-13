@@ -191,7 +191,7 @@
 | [postgresql](http://postgresql.org/) | 16.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [pre_commit](https://github.com/pre-commit/pre-commit) | 4.0.1 | python3_devtools |
-| [proj](http://trac.osgeo.org/proj/) | 9.5.0 | scientific_core |
+| [proj](http://trac.osgeo.org/proj/) | 9.5.1 | scientific_core |
 | [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.36 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
