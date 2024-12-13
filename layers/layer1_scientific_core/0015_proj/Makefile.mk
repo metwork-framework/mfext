@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=proj
-export VERSION=9.5.0
+export VERSION=9.5.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=ac46b4e31562890d012ea6b31e579cf6
+export CHECKSUM=07c44ca4a65a0664ce823c8448707c78
 DESCRIPTION=\
 PROJ4 is a generic coordinate transformation software that transforms geospatial coordinates \
 from one coordinate reference system (CRS) to another.

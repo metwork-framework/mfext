@@ -88,6 +88,11 @@
 - upgrade trove-classifiers to 2024.10.16 (for Pillow 11.0.0) (#1992)
 - bump aiohttp to 3.10.11 (CVE-2024-52304) and yarl to 1.12.1 (#1994)
 - bump tornado from 6.4.1 to 6.4.2 (fix CVE-2024-52804) (#1997)
+- upgrade jinja2-shell-extension to last release 2.1.0 (#1998)
+- patch to fix ag build with gcc >=10 (#1999)
+- build with gcc 11 with patch for the_silver_searcher (#2000)
+- bump Python 3.12 from 3.12.7 to 3.12.8 (#2002)
+- upgrade packaging from 23.1 to 24.2 (for recent xarray release) (#2006)
 
 ### Bug Fixes
 
@@ -100,5 +105,6 @@
 - remove pip conflicts warnings when using override (#1840)
 - upgrade xattrfile to fix mfdata issue 486 (#1935)
 - bump to paramiko 3.4.1 to prevent warning messages with cryptography (#1949)
+- add patches for next 9.5.1 release (#2007)
 
 

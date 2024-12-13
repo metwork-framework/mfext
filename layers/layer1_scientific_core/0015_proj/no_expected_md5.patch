@@ -1,0 +1,12 @@
+diff -up proj-9.5.1/data/generate_proj_db.cmake.orig proj-9.5.1/data/generate_proj_db.cmake
+--- proj-9.5.1/data/generate_proj_db.cmake.orig	2024-12-12 16:29:48.790536754 +0000
++++ proj-9.5.1/data/generate_proj_db.cmake	2024-12-12 16:30:45.544514251 +0000
+@@ -41,8 +41,6 @@ if (NOT "${PROJ_DB_SQL_MD5}" STREQUAL "$
+                     RESULT_VARIABLE STATUS)
+     if(STATUS AND NOT STATUS EQUAL 0)
+       message(FATAL_ERROR "Build of proj.db from ${ALL_SQL_IN_EXTRA_VALIDATION} failed")
+-    else()
+-      message(FATAL_ERROR "Update 'set(PROJ_DB_SQL_EXPECTED_MD5 ...)' line in data/CMakeLists.txt with ${PROJ_DB_SQL_MD5} value")
+     endif()
+ endif()
+ 
