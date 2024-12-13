@@ -10,5 +10,3 @@
 /usr/lib64/libopenjp2.so.2.4.0
 /usr/lib64/libsz.so.2
 /usr/lib64/libsz.so.2.0.1
-/usr/lib64/libtiff.so.5
-/usr/lib64/libtiff.so.5.3.0

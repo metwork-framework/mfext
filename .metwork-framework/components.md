@@ -119,6 +119,7 @@
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.1 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
+| [libtiff](http://www.libtiff.org) | 4.7.0 | scientific_core |
 | [libtirpc](https://sourceforge.net/projects/libtirpc/) | 1.3.3 | core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
@@ -305,4 +306,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(304 components)*
+*(305 components)*
