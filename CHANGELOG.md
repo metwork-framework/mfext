@@ -93,6 +93,9 @@
 - build with gcc 11 with patch for the_silver_searcher (#2000)
 - bump Python 3.12 from 3.12.7 to 3.12.8 (#2002)
 - upgrade packaging from 23.1 to 24.2 (for recent xarray release) (#2006)
+- upgrade proj from 9.5.0 to 9.5.1 with new MF patch
+- add libtiff 4.7.0 (required for gdal 3.9.3) (#2009)
+- upgrade gdal from 3.8.3 to 3.9.3 (#2010)
 
 ### Bug Fixes
 
@@ -105,6 +108,7 @@
 - remove pip conflicts warnings when using override (#1840)
 - upgrade xattrfile to fix mfdata issue 486 (#1935)
 - bump to paramiko 3.4.1 to prevent warning messages with cryptography (#1949)
+- add patches for next 9.5.1 release
 - add patches for next 9.5.1 release (#2007)
 
 
