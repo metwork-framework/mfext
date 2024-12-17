@@ -96,6 +96,7 @@
 - upgrade proj from 9.5.0 to 9.5.1 with new MF patch
 - add libtiff 4.7.0 (required for gdal 3.9.3) (#2009)
 - upgrade gdal from 3.8.3 to 3.9.3 (#2010)
+- bump rich from 13.5.2 to 13.9.4 (compatibility Python 3.13) (#2011)
 
 ### Bug Fixes
 
