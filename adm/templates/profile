@@ -211,6 +211,11 @@ if test -f "${MFEXT_HOME}/opt/python3_scientific/share/salem/salem-sample-data-5
         rm -f "${HOME}/.salem_cache/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip"
         ln -s "${MFEXT_HOME}/opt/python3_scientific/share/salem/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip" "${HOME}/.salem_cache/salem-sample-data-57e6d694aa470b967336f5ca2d4fc743c5c8efd6.zip"
     fi
+    if test -d "${MFEXT_HOME}/opt/core/share/.cargo"; then
+        if test ! -e "${HOME}/.cargo"; then
+            ln -s "${MFEXT_HOME}/opt/core/share/.cargo" "${HOME}/.cargo"
+        fi
+    fi
 fi
 {% endif %}
 

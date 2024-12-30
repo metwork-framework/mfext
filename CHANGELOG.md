@@ -97,6 +97,8 @@
 - add libtiff 4.7.0 (required for gdal 3.9.3) (#2009)
 - upgrade gdal from 3.8.3 to 3.9.3 (#2010)
 - bump rich from 13.5.2 to 13.9.4 (compatibility Python 3.13) (#2011)
+- bump hdf5 from 1.14.3 to 1.14.5 (#2013)
+- add cargo-c in layer core (#2015)
 
 ### Bug Fixes
 
