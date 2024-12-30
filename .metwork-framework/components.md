@@ -89,7 +89,7 @@
 | [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.0 | python3 |
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.3.0 | python3_core |
 | [hatchling](https://hatch.pypa.io/latest/) | 1.18.0 | python3_core |
-| [hdf4](https://www.hdfgroup.org) | 4.2.16-2 | scientific_core |
+| [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.14.5 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
@@ -179,13 +179,13 @@
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3 |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
-| [pgbouncer](https://www.pgbouncer.org/) | 1.21.0 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.23.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pip](https://pip.pypa.io/) | 24.2 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.13.1 | python3_devtools |
 | [platformdirs](https://github.com/platformdirs/platformdirs) | 3.10.0 | python3_core |
-| [pluggy](https://github.com/pytest-dev/pluggy) | 1.3.0 | python3_core |
+| [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.4.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
@@ -212,7 +212,7 @@
 | [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.20.1 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
-| [Pygments](https://pygments.org) | 2.16.1 | python3 |
+| [Pygments](https://pygments.org) | 2.18.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.8 | python3_devtools |
 | [pyinstaller](https://www.pyinstaller.org/) | 6.10.0 | python3_devtools |
@@ -230,7 +230,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 7.4.4 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 8.3.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.13.1 | python3_core |
