@@ -102,7 +102,7 @@
 | [isort](https://pycqa.github.io/isort/) | 5.12.0 | python3_devtools |
 | [jedi](https://github.com/davidhalter/jedi) | 0.19.1 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
-| [Jinja2](https://pypi.org/project/Jinja2) | 3.1.4 | python3 |
+| [Jinja2](https://pypi.org/project/Jinja2) | 3.1.5 | python3 |
 | [jinja2_fnmatch_extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 1.0.2 | python3 |
 | [jinja2_from_json_extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 1.0.0 | python3 |
 | [jinja2_getenv_extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 1.0.2 | python3 |
@@ -193,7 +193,7 @@
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [pre_commit](https://github.com/pre-commit/pre-commit) | 4.0.1 | python3_devtools |
 | [proj](http://trac.osgeo.org/proj/) | 9.5.1 | scientific_core |
-| [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.36 | python3 |
+| [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.48 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 5.9.8 | python3 |

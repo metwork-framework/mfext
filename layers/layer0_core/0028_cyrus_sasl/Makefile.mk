@@ -13,4 +13,4 @@ LICENSE=Carnegie Mellon University
 
 all:: $(PREFIX)/lib/libsasl2.so
 $(PREFIX)/lib/libsasl2.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--disable-static" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRALDFLAGS="-L$(PREFIX)/lib -lssl -lcrypto" OPTIONS="--disable-static --with-openssl=$(PREFIX)" download uncompress configure build install
