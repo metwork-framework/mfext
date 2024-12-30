@@ -89,7 +89,7 @@
 | [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.0 | python3 |
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.3.0 | python3_core |
 | [hatchling](https://hatch.pypa.io/latest/) | 1.18.0 | python3_core |
-| [hdf4](https://www.hdfgroup.org) | 4.2.16-2 | scientific_core |
+| [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.14.5 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
@@ -212,7 +212,7 @@
 | [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.20.1 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
-| [Pygments](https://pygments.org) | 2.16.1 | python3 |
+| [Pygments](https://pygments.org) | 2.18.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.8 | python3_devtools |
 | [pyinstaller](https://www.pyinstaller.org/) | 6.10.0 | python3_devtools |
