@@ -185,7 +185,7 @@
 | [pip](https://pip.pypa.io/) | 24.2 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.13.1 | python3_devtools |
 | [platformdirs](https://github.com/platformdirs/platformdirs) | 3.10.0 | python3_core |
-| [pluggy](https://github.com/pytest-dev/pluggy) | 1.3.0 | python3_core |
+| [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.4.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
@@ -230,7 +230,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
 | [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 7.4.4 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 8.3.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.12.8 | python3_core |
