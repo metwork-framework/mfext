@@ -99,6 +99,16 @@
 - bump rich from 13.5.2 to 13.9.4 (compatibility Python 3.13) (#2011)
 - bump hdf5 from 1.14.3 to 1.14.5 (#2013)
 - add cargo-c in layer core (#2015)
+- upgrade filelock from 3.12.3 to 3.16.1 (#2016)
+- build sasl with openssl support (#2018)
+- bump Jinja2 to 3.1.5 (CVE-2024-56201 and CVE-2024-56326) (#2020)
+- upgrade geojson from 3.1.0 to 3.2.0 (Python 3.13 compatibility) (#2021)
+- bump prompt-toolkit to 3.0.48 (#2022)
+- bump hdf4 from 4.2.16 to 4.3.0 (#2023)
+- bump pgbouncer from 1.21.0 to 1.23.1 (#2025)
+- bump pytest from 7.4.4 to 8.3.4 (and pluggy to 1.5.0) (#2026)
+- bump Pygments from 2.16.1 to 2.18.0 (#2027)
+- bump Pygments from 2.16.1 to 2.18.0
 
 ### Bug Fixes
 

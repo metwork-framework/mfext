@@ -13,6 +13,9 @@ WEBSITE=https://www.hdfgroup.org
 LICENSE=BSD
 export EXPLICIT_NAME=$(NAME)-hdf$(VERSION)
 
-all:: $(PREFIX)/lib/libdf.so
+all:: $(PREFIX)/lib/libdf.so $(PREFIX)/include/hdfi.h
 $(PREFIX)/lib/libdf.so:
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME=$(EXPLICIT_NAME) EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS="--enable-shared --disable-static --disable-netcdf --disable-java --disable-fortran --with-szlib" download uncompress configure build install
+#add hdfi.h for compatibility (pyhdf <= 0.11.4 is using hdfi.h, next release will not do so)
+$(PREFIX)/include/hdfi.h:
+	cd $(PREFIX)/include && ln -s hdf.h hdfi.h
