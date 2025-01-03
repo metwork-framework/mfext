@@ -9,6 +9,7 @@ layers/download_archive
 /layers/layer*/*_extra_packages/tempolayer*
 /layers/layer*/*_extra_python_packages/src
 /layers/layer*/*_extra_python_packages/tempolayer*
+/layers/layer1_python3_core/0032_setuptools/tempolayer*
 layers/layer1_python3_core/*/src/
 /layers/layer2_python3_circus/0500_circus/src
 /layers/layer2_python3_circus/0500_circus/tempolayer*
