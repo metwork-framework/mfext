@@ -94,7 +94,7 @@
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.2 | python3_devtools |
-| [idna](https://pypi.org/project/idna) | 3.7 | python3 |
+| [idna](https://pypi.org/project/idna) | 3.10 | python3 |
 | [importlib_metadata](https://github.com/python/importlib_metadata) | 6.8.0 | python3_core |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.0.0 | python3_devtools |
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
