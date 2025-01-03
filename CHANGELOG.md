@@ -109,6 +109,9 @@
 - bump pytest from 7.4.4 to 8.3.4 (and pluggy to 1.5.0) (#2026)
 - bump Pygments from 2.16.1 to 2.18.0 (#2027)
 - bump Pygments from 2.16.1 to 2.18.0
+- bump cryptography from 43.0.1 to 44.0.0 (#2032)
+- upgrade setuptools from 70.3.0 to 71.1.0 (#2034)
+- upgrade setuptools from 71.1.0 to 72.2.0 (#2035)
 
 ### Bug Fixes
 
