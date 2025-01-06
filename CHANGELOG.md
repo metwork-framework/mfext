@@ -112,6 +112,10 @@
 - bump cryptography from 43.0.1 to 44.0.0 (#2032)
 - upgrade setuptools from 70.3.0 to 71.1.0 (#2034)
 - upgrade setuptools from 71.1.0 to 72.2.0 (#2035)
+- bump idna from 3.7 to 3.10 (#2036)
+- bump setuptools from 72.2.0 to 73.0.1 (#2037)
+- bump setuptools from 73.0.1 to 74.1.3 (#2038)
+- bump setuptools to 75.6.0 and wheel to 0.45.1 (#2039)
 
 ### Bug Fixes
 
