@@ -286,7 +286,7 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.12.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
-| [urllib3](https://pypi.org/project/urllib3) | 2.2.2 | python3 |
+| [urllib3](https://pypi.org/project/urllib3) | 2.3.0 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.24.6 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 3.0.0 | python3_devtools |
