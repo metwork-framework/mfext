@@ -116,6 +116,12 @@
 - bump setuptools from 72.2.0 to 73.0.1 (#2037)
 - bump setuptools from 73.0.1 to 74.1.3 (#2038)
 - bump setuptools to 75.6.0 and wheel to 0.45.1 (#2039)
+- upgrade pip from 24.2 to 24.3.1 (#2042)
+- bump certifi to 2024.12.14 and improve patch python syntax (#2045)
+- bump distlib from 0.3.7 to 0.3.9 (#2046)
+- bump pbr from 5.11.1 to 6.1.0 (#2047)
+- bump urllib3 from 2.2.2 to 2.3.0 (#2048)
+- bump charset-normalizer from 3.2.0 to 3.4.1 (#2049)
 
 ### Bug Fixes
 
