@@ -169,7 +169,6 @@ import pytest_httpserver
 import pytest_jsonreport
 import pytest_metadata
 import pytest_mock
-import ptr #pytest-runner
 import xdist #pytest-xdist
 import pytest
 import ldap #python-ldap
