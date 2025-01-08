@@ -122,6 +122,9 @@
 - bump pbr from 5.11.1 to 6.1.0 (#2047)
 - bump urllib3 from 2.2.2 to 2.3.0 (#2048)
 - bump charset-normalizer from 3.2.0 to 3.4.1 (#2049)
+- bump psutil from 5.9.8 to 6.1.1
+- bump psutil from 5.9.8 to 6.1.1 (#2050)
+- upgrade openssl from 3.3.2 to 3.4.0 (#2052)
 
 ### Bug Fixes
 
