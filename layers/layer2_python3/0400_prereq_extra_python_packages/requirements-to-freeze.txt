@@ -3,6 +3,5 @@ cffi
 fastentrypoints
 pbr
 pyscaffold
-pytest-runner
 setuptools-git
 setuptools-rust

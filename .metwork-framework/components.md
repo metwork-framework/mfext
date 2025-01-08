@@ -228,7 +228,6 @@
 | [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.0.0 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
-| [pytest-runner](https://github.com/pytest-dev/pytest-runner/) | 6.0.0 | python3 |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
@@ -306,4 +305,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(305 components)*
+*(304 components)*
