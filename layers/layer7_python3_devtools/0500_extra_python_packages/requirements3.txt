@@ -1,3 +1,4 @@
+tox==4.23.2
 altgraph==0.17.4
 apipkg==3.0.2
 astroid==3.0.0
@@ -51,6 +52,7 @@ pyinstaller-hooks-contrib==2024.8
 pyinstaller==6.10.0
 pylint==3.0.1
 pymdown-extensions==10.3
+pyproject-api==1.8.0
 pytest==8.3.4
 pytest-asyncio==0.21.1
 pytest-cov==4.1.0

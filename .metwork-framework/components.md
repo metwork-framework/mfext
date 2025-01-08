@@ -29,7 +29,7 @@
 | [bracex](https://github.com/facelessuser/bracex) | 2.4 | python3_devtools |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
-| [cachetools](https://github.com/tkem/cachetools/) | 5.3.1 | python3 |
+| [cachetools](https://github.com/tkem/cachetools/) | 5.5.0 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
 | [certifi](https://certifi.io) | 2024.12.14 | python3_core |
@@ -184,7 +184,7 @@
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pip](https://pip.pypa.io/) | 24.3.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.13.1 | python3_devtools |
-| [platformdirs](https://github.com/platformdirs/platformdirs) | 3.10.0 | python3_core |
+| [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.4.0 | scientific_core |
@@ -220,7 +220,8 @@
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.1.1 | python3_core |
-| [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.5 | python3 |
+| [pyproject-api](https://pyproject-api.readthedocs.io) | 1.8.0 | python3_devtools |
+| [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.21.1 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 4.1.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.1.1 | python3_devtools |
@@ -278,6 +279,7 @@
 | [tomli](https://github.com/hukkin/tomli) | 2.0.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
+| [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2024.10.16 | python3_core |
@@ -287,7 +289,7 @@
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.3.0 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
-| [virtualenv](https://github.com/pypa/virtualenv) | 20.24.6 | python3_core |
+| [virtualenv](https://github.com/pypa/virtualenv) | 20.28.1 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 3.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 8.5 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.8 | python3 |
@@ -305,4 +307,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(304 components)*
+*(306 components)*
