@@ -125,6 +125,9 @@
 - bump psutil from 5.9.8 to 6.1.1
 - bump psutil from 5.9.8 to 6.1.1 (#2050)
 - upgrade openssl from 3.3.2 to 3.4.0 (#2052)
+- remove deprecated pytest-runner (ptr) (#2053)
+- add tox 4.23.2 and upgrade its dependencies (#2054)
+- upgrade gdal from 3.9.3 to 3.10.0 (#2055)
 
 ### Bug Fixes
 
