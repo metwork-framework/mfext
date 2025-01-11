@@ -128,6 +128,8 @@
 - remove deprecated pytest-runner (ptr) (#2053)
 - add tox 4.23.2 and upgrade its dependencies (#2054)
 - upgrade gdal from 3.9.3 to 3.10.0 (#2055)
+- bump postgis from 3.4.0 to 3.5.1 (#2056)
+- bump setuptools from 75.6.0 to 75.8.0 (#2057)
 
 ### Bug Fixes
 
