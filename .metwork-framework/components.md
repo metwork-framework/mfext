@@ -309,4 +309,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(306 components)*
+*(308 components)*
