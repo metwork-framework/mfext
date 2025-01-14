@@ -2,11 +2,12 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=sqlite
-export VERSION=3450000
+export VERSION=3.47.2
+export TAR_VERSION=3470200
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=d6150f5dc837ae94b7d735f1b611b634
-export EXPLICIT_NAME=$(NAME)-autoconf-$(VERSION)
+export CHECKSUM=6bf0697af5b609e186cc223eca9c2cb1
+export EXPLICIT_NAME=$(NAME)-autoconf-$(TAR_VERSION)
 DESCRIPTION=\
 SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine (the database is a file)
 WEBSITE=http://sqlite.org/
