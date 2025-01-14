@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=readline
-export VERSION=8.1.2
+export VERSION=8.2.13
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=12819fa739a78a6172400f399ab34f81
+export CHECKSUM=05080bf3801e6874bb115cd6700b708f
 DESCRIPTION=\
 The GNU Readline library provides a set of functions for use by applications\
 that allow users to edit command lines as they are typed in. Both Emacs and\

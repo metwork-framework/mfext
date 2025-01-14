@@ -238,7 +238,7 @@
 | [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
-| [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
+| [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
 | [redis](http://redis.io) | 5.0.14 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.31.0 | python3 |
