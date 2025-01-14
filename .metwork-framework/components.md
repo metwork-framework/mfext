@@ -122,7 +122,7 @@
 | [libtiff](http://www.libtiff.org) | 4.7.0 | scientific_core |
 | [libtirpc](https://sourceforge.net/projects/libtirpc/) | 1.3.3 | core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
-| [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.1.2 | core |
+| [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.2.1 | core |
 | [livereload](https://github.com/lepture/python-livereload) | 2.6.3 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.7.4 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
