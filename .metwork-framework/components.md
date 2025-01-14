@@ -265,7 +265,7 @@
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.5 | python3 |
-| [sqlite](http://sqlite.org/) | 3450000 | core |
+| [sqlite](http://sqlite.org/) | 3.47.2 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.1.0 | python3_devtools |
