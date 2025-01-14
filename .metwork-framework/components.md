@@ -130,6 +130,7 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://pypi.org/project/lunr) | 0.7.0.post1 | python3_devtools |
+| [lxml](https://lxml.de/) | 5.3.0 | python3 |
 | [Mako](https://www.makotemplates.org/) | 1.2.4 | python3_devtools |
 | [markdown-it-py](https://github.com/executablebooks/markdown-it-py) | 3.0.0 | python3 |
 | [Markdown](https://Python-Markdown.github.io/) | 3.4.4 | python3 |
@@ -182,6 +183,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.24.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
+| [pillow](https://python-pillow.org) | 11.0.0 | python3 |
 | [pip](https://pip.pypa.io/) | 24.3.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.13.1 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
