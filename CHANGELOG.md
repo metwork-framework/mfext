@@ -116,6 +116,26 @@
 - bump setuptools from 72.2.0 to 73.0.1 (#2037)
 - bump setuptools from 73.0.1 to 74.1.3 (#2038)
 - bump setuptools to 75.6.0 and wheel to 0.45.1 (#2039)
+- upgrade pip from 24.2 to 24.3.1 (#2042)
+- bump certifi to 2024.12.14 and improve patch python syntax (#2045)
+- bump distlib from 0.3.7 to 0.3.9 (#2046)
+- bump pbr from 5.11.1 to 6.1.0 (#2047)
+- bump urllib3 from 2.2.2 to 2.3.0 (#2048)
+- bump charset-normalizer from 3.2.0 to 3.4.1 (#2049)
+- bump psutil from 5.9.8 to 6.1.1
+- bump psutil from 5.9.8 to 6.1.1 (#2050)
+- upgrade openssl from 3.3.2 to 3.4.0 (#2052)
+- remove deprecated pytest-runner (ptr) (#2053)
+- add tox 4.23.2 and upgrade its dependencies (#2054)
+- upgrade gdal from 3.9.3 to 3.10.0 (#2055)
+- bump postgis from 3.4.0 to 3.5.1 (#2056)
+- bump setuptools from 75.6.0 to 75.8.0 (#2057)
+- upgrade Pygments from 2.18.0 to 2.19.1 (#2059)
+- bump pgbouncer from 1.23.1 to 1.24.0 (#2060)
+- upgrade postgresql from 16.1 to 17.2 (#2061)
+- upgrade readline from 8.1.2 to 8.2.13 (#2062)
+- upgrade liquidprompt from 2.1.2 to 2.2.1 (#2063)
+- upgrade sqlite from 3.45.0 to 3.47.2 (#2066)
 
 ### Bug Fixes
 

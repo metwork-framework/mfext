@@ -95,6 +95,7 @@ import lazy_object_proxy
 import libcst
 import livereload
 import lunr
+import lxml
 import mako
 import markdown
 import markdown_it #markdown_it_py
@@ -134,6 +135,7 @@ import pdoc
 import pexpect
 import pickleshare
 import pika
+import PIL #Pillow
 import pip
 import platformdirs
 import pluggy
@@ -161,6 +163,7 @@ import pylint
 import pymdownx
 import nacl #PyNaCl
 import pyparsing
+import pyproject_api
 import pyscaffold
 import pytest_asyncio
 import pytest_cov
@@ -169,7 +172,6 @@ import pytest_httpserver
 import pytest_jsonreport
 import pytest_metadata
 import pytest_mock
-import ptr #pytest-runner
 import xdist #pytest-xdist
 import pytest
 import ldap #python-ldap
@@ -208,6 +210,7 @@ import toml
 import tomli
 import tomlkit
 import tornado
+import tox
 import tqdm
 import traitlets
 import trove_classifiers

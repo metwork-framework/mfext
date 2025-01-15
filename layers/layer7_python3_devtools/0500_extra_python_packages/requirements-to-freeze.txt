@@ -43,3 +43,4 @@ GitPython
 pyinstaller
 panoply
 pre-commit
+tox
