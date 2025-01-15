@@ -95,6 +95,7 @@ import lazy_object_proxy
 import libcst
 import livereload
 import lunr
+import lxml
 import mako
 import markdown
 import markdown_it #markdown_it_py
@@ -134,6 +135,7 @@ import pdoc
 import pexpect
 import pickleshare
 import pika
+import PIL #Pillow
 import pip
 import platformdirs
 import pluggy
