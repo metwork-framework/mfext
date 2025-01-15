@@ -133,6 +133,9 @@
 - upgrade Pygments from 2.18.0 to 2.19.1 (#2059)
 - bump pgbouncer from 1.23.1 to 1.24.0 (#2060)
 - upgrade postgresql from 16.1 to 17.2 (#2061)
+- upgrade readline from 8.1.2 to 8.2.13 (#2062)
+- upgrade liquidprompt from 2.1.2 to 2.2.1 (#2063)
+- upgrade sqlite from 3.45.0 to 3.47.2 (#2066)
 
 ### Bug Fixes
 
