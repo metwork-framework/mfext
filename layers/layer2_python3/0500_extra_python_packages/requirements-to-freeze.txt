@@ -78,3 +78,5 @@ pickleshare
 beautifulsoup4
 entrypoints
 soupsieve
+Pillow
+lxml
