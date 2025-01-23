@@ -306,7 +306,7 @@
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl) | 1.12.1 | python3 |
 | [yq](https://github.com/kislyuk/yq) | 3.2.2 | python3 |
-| [zeromq](https://zeromq.org/) | 4.3.4 | core |
+| [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
 *(308 components)*
