@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=jq
-export VERSION=1.6
+export VERSION=1.7.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=e68fbd6a992e36f1ac48c99bbf825d6b
+export CHECKSUM=974a340105ecb43add8c55601525f9fc
 DESCRIPTION=\
 jq is like sed for JSON data
 WEBSITE=https://stedolan.github.io/jq/
