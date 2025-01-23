@@ -109,7 +109,7 @@
 | [jinja2_shell_extension](https://github.com/metwork-framework/jinja2_shell_extension) | 2.1.0 | python3 |
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
 | [joblib](https://joblib.readthedocs.io) | 1.3.2 | python3 |
-| [jq](https://stedolan.github.io/jq/) | 1.6 | core |
+| [jq](https://stedolan.github.io/jq/) | 1.7.1 | core |
 | [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2023.11.1 | python3 |
 | [jsonschema](https://github.com/python-jsonschema/jsonschema) | 4.19.2 | python3 |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
