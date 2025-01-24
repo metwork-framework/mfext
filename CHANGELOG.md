@@ -136,6 +136,9 @@
 - upgrade readline from 8.1.2 to 8.2.13 (#2062)
 - upgrade liquidprompt from 2.1.2 to 2.2.1 (#2063)
 - upgrade sqlite from 3.45.0 to 3.47.2 (#2066)
+- bump openldap from 2.6.8 to 2.6.9 (#2072)
+- bump jq from 1.6 to 1.7.1 (#2073)
+- bump zeromq (libzmq) from 4.3.4 to 4.3.5 (#2074)
 
 ### Bug Fixes
 
