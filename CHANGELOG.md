@@ -139,6 +139,7 @@
 - bump openldap from 2.6.8 to 2.6.9 (#2072)
 - bump jq from 1.6 to 1.7.1 (#2073)
 - bump zeromq (libzmq) from 4.3.4 to 4.3.5 (#2074)
+- bump libtirpc from 1.3.3 to 1.3.6 (#2075)
 
 ### Bug Fixes
 
