@@ -184,7 +184,7 @@
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.org) | 11.0.0 | python3 |
-| [pip](https://pip.pypa.io/) | 24.3.1 | python3_core |
+| [pip](https://pip.pypa.io/) | 25.0 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.13.1 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
@@ -278,7 +278,7 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.2.0 | python3 |
 | [toml](https://github.com/uiri/toml) | 0.10.2 | python3_core |
-| [tomli](https://github.com/hukkin/tomli) | 2.0.1 | python3_core |
+| [tomli](https://github.com/hukkin/tomli) | 2.2.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
