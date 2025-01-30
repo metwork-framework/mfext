@@ -72,7 +72,7 @@
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 6.1.0 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
-| [flit_core](https://pypi.org/project/flit_core) | 3.9.0 | python3_core |
+| [flit_core](https://pypi.org/project/flit_core) | 3.10.1 | python3_core |
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
