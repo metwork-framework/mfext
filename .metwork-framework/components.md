@@ -174,7 +174,7 @@
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.4.1 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3 |
-| [pathspec](https://pypi.org/project/pathspec) | 0.11.2 | python3_core |
+| [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.0 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3 |
@@ -284,7 +284,7 @@
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
-| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2024.10.16 | python3_core |
+| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.1.15.22 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.12.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
