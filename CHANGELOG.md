@@ -141,6 +141,9 @@
 - bump zeromq (libzmq) from 4.3.4 to 4.3.5 (#2074)
 - bump libtirpc from 1.3.3 to 1.3.6 (#2075)
 - upgrade pip from 24.3.1 to 25.0 and tomli to 2.2.1 (#2076)
+- bump flit-core from 3.9.0 to 3.10.1 (#2077)
+- (revert) remove cargo-c from layer core (#2078)
+- upgrade pathspec to 0.12.1 and trove-classifiers to 2025.1.15.22 (#2079)
 
 ### Bug Fixes
 
