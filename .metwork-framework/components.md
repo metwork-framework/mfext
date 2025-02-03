@@ -210,8 +210,8 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.21 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.8.2 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.20.1 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.10.6 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.27.2 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.19.1 | python3 |
