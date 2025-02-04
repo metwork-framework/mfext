@@ -144,6 +144,7 @@
 - bump flit-core from 3.9.0 to 3.10.1 (#2077)
 - (revert) remove cargo-c from layer core (#2078)
 - upgrade pathspec to 0.12.1 and trove-classifiers to 2025.1.15.22 (#2079)
+- upgrade pydantic to 2.10.6 and pydantic-core to 2.27.2 (#2080)
 
 ### Bug Fixes
 
