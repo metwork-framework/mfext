@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=openldap
-export VERSION=2.6.8
+export VERSION=2.6.9
 export EXTENSION=tgz
 export CHECKTYPE=MD5
-export CHECKSUM=a7ca5f245340e478ea18b8f972c89bb1
+export CHECKSUM=608973c35cd4924fca0f07d0ea72c016
 DESCRIPTION=\
 OpenLDAP is an open source implementation of the Lightweight Directory Access Protocol
 WEBSITE=https://www.openldap.org/
