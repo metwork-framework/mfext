@@ -32,7 +32,7 @@
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.0 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
-| [certifi](https://certifi.io) | 2024.12.14 | python3_core |
+| [certifi](https://certifi.io) | 2025.1.31 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
@@ -235,7 +235,7 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
-| [Python](http://python.org/) | 3.12.8 | python3_core |
+| [Python](http://python.org/) | 3.12.9 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
