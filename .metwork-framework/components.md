@@ -277,7 +277,6 @@
 | [terminaltables](https://github.com/matthewdeanmartin/terminaltables) | 3.1.10 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.2.0 | python3 |
-| [tomli](https://github.com/hukkin/tomli) | 2.2.1 | python3_core |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
@@ -308,4 +307,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
 
-*(307 components)*
+*(306 components)*
