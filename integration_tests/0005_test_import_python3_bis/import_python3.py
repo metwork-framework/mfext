@@ -210,7 +210,6 @@ import telegraf_unixsocket_client
 import termcolor
 import terminaltables
 import threadpoolctl
-import tomli
 import tomlkit
 import tornado
 import tox
