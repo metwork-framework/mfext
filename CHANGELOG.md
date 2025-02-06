@@ -145,6 +145,10 @@
 - (revert) remove cargo-c from layer core (#2078)
 - upgrade pathspec to 0.12.1 and trove-classifiers to 2025.1.15.22 (#2079)
 - upgrade pydantic to 2.10.6 and pydantic-core to 2.27.2 (#2080)
+- bump Python 3.12 from 3.12.8 to 3.12.9 (#2082)
+- bump certifi from 2024.12.14 to 2025.1.31 (#2085)
+- remove toml (better use tomli or tomllib in standard library) (#2086)
+- remove tomli (better use tomllib in standard library) (#2087)
 
 ### Bug Fixes
 
