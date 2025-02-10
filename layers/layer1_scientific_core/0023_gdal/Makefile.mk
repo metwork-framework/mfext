@@ -16,4 +16,4 @@ LICENSE=MIT
 
 all:: $(PREFIX)/lib/libgdal.so
 $(PREFIX)/lib/libgdal.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="-DGDAL_USE_INTERNAL_LIBS=WHEN_NO_EXTERNAL -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_BINDINGS:BOOL=OFF" download uncompress configure_cmake build_cmake install_cmake
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="-DGDAL_USE_INTERNAL_LIBS=WHEN_NO_EXTERNAL -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_BINDINGS:BOOL=OFF -DTIFF_LIBRARY=$(PREFIX)/../core/lib/libtiff.so" download uncompress configure_cmake build_cmake install_cmake
