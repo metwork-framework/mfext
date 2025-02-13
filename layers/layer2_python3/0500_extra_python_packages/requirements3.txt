@@ -14,7 +14,7 @@ Babel==2.13.0
 backcall==0.2.0
 bash==0.6
 bcrypt==4.0.1
-beautifulsoup4==4.12.2
+beautifulsoup4==4.13.3
 binaryornot==0.4.4
 bjoern==3.2.2
 cachetools==5.5.0
