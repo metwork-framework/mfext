@@ -90,7 +90,7 @@
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.3.0 | python3_core |
 | [hatchling](https://hatch.pypa.io/latest/) | 1.18.0 | python3_core |
 | [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
-| [hdf5](https://www.hdfgroup.org) | 1.14.5 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.2 | python3_devtools |

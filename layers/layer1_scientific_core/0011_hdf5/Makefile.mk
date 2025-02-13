@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=hdf5
-export VERSION=1.14.5
+export VERSION=1.14.6
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=8a2d6ec803964913c880c8a984f71d61
+export CHECKSUM=73b513b9c40a8ca2913fcb38570ecdbd
 export EXPLICIT_NAME=$(NAME)-$(NAME)_$(VERSION)
 DESCRIPTION=\
 HDF5 is a suite that makes possible the management of extremely large and complex data collections (including file format HDF5)
