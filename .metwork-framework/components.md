@@ -22,7 +22,7 @@
 | [bandit](https://bandit.readthedocs.io/) | 1.7.6 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 4.0.1 | python3 |
-| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.12.2 | python3 |
+| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://github.com/psf/black) | 24.3.0 | python3_devtools |
@@ -175,7 +175,7 @@
 | [paramiko](https://paramiko.org) | 3.4.1 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3 |
 | [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
-| [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.0 | python3 |
+| [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3 |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
