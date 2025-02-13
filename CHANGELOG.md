@@ -149,6 +149,9 @@
 - bump certifi from 2024.12.14 to 2025.1.31 (#2085)
 - remove toml (better use tomli or tomllib in standard library) (#2086)
 - remove tomli (better use tomllib in standard library) (#2087)
+- bump pip to 25.0.1 (#2093)
+- bump openssl to 3.4.1 (fix CVE-2024-12797 and CVE-2024-13176) (#2094)
+- bump cryptography to 44.0.1 (#2095)
 
 ### Bug Fixes
 
