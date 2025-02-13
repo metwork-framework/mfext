@@ -2,7 +2,7 @@ cffi==1.17.1
 ConfigUpdater==3.1.1
 Cython==3.0.11
 fastentrypoints==0.12
-pbr==6.1.0
+pbr==6.1.1
 pycparser==2.21
 PyScaffold==4.6
 semantic-version==2.10.0
