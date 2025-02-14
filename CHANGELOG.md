@@ -152,6 +152,11 @@
 - bump pip to 25.0.1 (#2093)
 - bump openssl to 3.4.1 (fix CVE-2024-12797 and CVE-2024-13176) (#2094)
 - bump cryptography to 44.0.1 (#2095)
+- bump netcdf-c from 4.9.2 to 4.9.3 (#2096)
+- bump hdf5 from 1.14.5 to 1.14.6 (#2097)
+- bump pbr from 6.1.0 to 6.1.1 (#2099)
+- bump beautifulsoup4 from 4.12.2 to 4.13.3 (#2100)
+- bump PostGreSQL from 17.2 to 17.3 (#2101)
 
 ### Bug Fixes
 
