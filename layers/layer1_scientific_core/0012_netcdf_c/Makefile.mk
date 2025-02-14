@@ -15,4 +15,7 @@ all:: $(PREFIX)/lib/libnetcdf.so
 $(PREFIX)/lib/libnetcdf.so:
 	# Since we build cmake in layer core, we could build netcdf-c with cmake
 	# There are no with-hdf5=DIR and with-curl=DIR options, so we keep EXTRALDFLAGS and EXTRACFLAGS
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRALDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/../core/lib" EXTRACFLAGS="-I$(PREFIX)/include -I$(PREFIX)/../core/include" OPTIONS="--disable-static --enable-netcdf4 --enable-hdf4 --enable-logging --with-plugin-dir=$(PREFIX)/hdf5/lib/plugin" download uncompress configure build install
+	# Add NETCDF_ENABLE_LEGACY_MACROS in netcdf.h because it's not done by --enable-legacy-macros
+	cd $(PREFIX)/include && rm -f netcdf.h
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRALDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/../core/lib" EXTRACFLAGS="-I$(PREFIX)/include -I$(PREFIX)/../core/include" OPTIONS="--disable-static --enable-hdf5 --enable-hdf4 --enable-logging --enable-legacy-macros --with-plugin-dir=$(PREFIX)/hdf5/lib/plugin" download uncompress configure build install
+	cd $(PREFIX)/include && sed -i '1i#define NETCDF_ENABLE_LEGACY_MACROS' netcdf.h
