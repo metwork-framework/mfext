@@ -157,6 +157,8 @@
 - bump pbr from 6.1.0 to 6.1.1 (#2099)
 - bump beautifulsoup4 from 4.12.2 to 4.13.3 (#2100)
 - bump PostGreSQL from 17.2 to 17.3 (#2101)
+- bump setuptools from 75.8.0 to 75.8.2 (#2104)
+- bump gdal from 3.10.0 to 3.10.2 (#2105)
 
 ### Bug Fixes
 
