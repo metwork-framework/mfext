@@ -221,7 +221,7 @@
 | [pylint](https://github.com/pylint-dev/pylint) | 3.0.1 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
-| [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.1.1 | python3_core |
+| [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.8.0 | python3_devtools |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.21.1 | python3_devtools |
