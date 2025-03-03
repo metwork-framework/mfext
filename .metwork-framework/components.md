@@ -254,7 +254,7 @@
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://pypi.org/project/setuptools-rust) | 1.7.0 | python3 |
-| [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.1.0 | python3_core |
+| [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
 | [setuptools](https://pypi.org/project/setuptools) | 75.8.2 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
