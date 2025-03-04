@@ -86,7 +86,7 @@
 | [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.41 | python3_devtools |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 24.1.0 | python3 |
 | [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version) | 0.3.2 | python3 |
-| [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.0 | python3 |
+| [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.1 | python3 |
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.4.0 | python3_core |
 | [hatchling](https://hatch.pypa.io/latest/) | 1.27.0 | python3_core |
 | [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
