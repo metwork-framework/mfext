@@ -3,7 +3,7 @@ ConfigUpdater==3.2
 Cython==3.0.12
 fastentrypoints==0.12
 pbr==6.1.1
-pycparser==2.21
+pycparser==2.22
 PyScaffold==4.6
 semantic-version==2.10.0
 setuptools-git==1.2
