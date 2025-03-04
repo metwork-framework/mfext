@@ -1,5 +1,5 @@
 cffi==1.17.1
-ConfigUpdater==3.1.1
+ConfigUpdater==3.2
 Cython==3.0.11
 fastentrypoints==0.12
 pbr==6.1.1
