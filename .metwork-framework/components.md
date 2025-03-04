@@ -79,7 +79,7 @@
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
 | [gdal](http://www.gdal.org) | 3.10.2 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.2.0 | python3 |
-| [geos](http://trac.osgeo.org/geos/) | 3.12.0 | scientific_core |
+| [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.11 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.11 | python3 |
