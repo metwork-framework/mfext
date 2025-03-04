@@ -159,6 +159,16 @@
 - bump PostGreSQL from 17.2 to 17.3 (#2101)
 - bump setuptools from 75.8.0 to 75.8.2 (#2104)
 - bump gdal from 3.10.0 to 3.10.2 (#2105)
+- bump postgresql from 17.3 to 17.4 (#2106)
+- bump sqlite from 3.47.2 to 3.49.1 (#2107)
+- bump flit-core from 3.10.1 to 3.11.0 (#2108)
+- bump setuptools-scm from 8.1.0 to 8.2.0 (#2109)
+- bump trove-classifiers from 2025.1.15.22 to 2025.2.18.16 (#2110)
+- bump hatchling from 1.18.0 to 1.27.0 (#2112)
+- bump pyparsing from 3.1.1 to 3.2.1 (#2113)
+- bump hatch-vcs from 0.3.0 to 0.4.0 (#2114)
+- bump distro from 1.8.0 to 1.9.0 (#2115)
+- bump filelock from 3.16.1 to 3.17.0 (#2116)
 
 ### Bug Fixes
 
@@ -173,5 +183,6 @@
 - bump to paramiko 3.4.1 to prevent warning messages with cryptography (#1949)
 - add patches for next 9.5.1 release
 - add patches for next 9.5.1 release (#2007)
+- explicitely enable rtree extension in sqlite (for gdal) (#2111)
 
 
