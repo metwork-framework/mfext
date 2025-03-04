@@ -260,7 +260,7 @@
 | [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
 | [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.4 | python3_devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.13 | python3 |
-| [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
+| [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
