@@ -95,7 +95,7 @@
 | [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.2 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.10 | python3 |
-| [importlib_metadata](https://github.com/python/importlib_metadata) | 6.8.0 | python3_core |
+| [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.0.0 | python3_devtools |
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
 | [ipython](https://ipython.org) | 8.16.1 | python3 |
@@ -305,6 +305,6 @@
 | [yarl](https://github.com/aio-libs/yarl) | 1.12.1 | python3 |
 | [yq](https://github.com/kislyuk/yq) | 3.2.2 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
-| [zipp](https://github.com/jaraco/zipp) | 3.19.2 | python3_core |
+| [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
 *(306 components)*
