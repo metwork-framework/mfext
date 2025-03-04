@@ -150,7 +150,7 @@
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.0.4 | python3_devtools |
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.2 | python3_devtools |
-| [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) | 9.4.5 | python3_devtools |
+| [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.4.5 | python3_devtools |
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.5.3 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.1.0 | python3_devtools |
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
