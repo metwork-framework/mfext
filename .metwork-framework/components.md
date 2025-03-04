@@ -277,7 +277,7 @@
 | [terminaltables](https://github.com/matthewdeanmartin/terminaltables) | 3.1.10 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.2.0 | python3 |
-| [tomlkit](https://github.com/sdispater/tomlkit) | 0.12.1 | python3 |
+| [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |

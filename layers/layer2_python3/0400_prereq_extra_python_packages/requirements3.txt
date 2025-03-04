@@ -8,4 +8,4 @@ PyScaffold==4.6
 semantic-version==2.10.0
 setuptools-git==1.2
 setuptools-rust==1.10.2
-tomlkit==0.12.1
+tomlkit==0.13.2
