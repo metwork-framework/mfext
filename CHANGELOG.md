@@ -169,6 +169,20 @@
 - bump hatch-vcs from 0.3.0 to 0.4.0 (#2114)
 - bump distro from 1.8.0 to 1.9.0 (#2115)
 - bump filelock from 3.16.1 to 3.17.0 (#2116)
+- bump importlib-metadata to 8.6.1 and zipp to 3.21.0 (#2117)
+- bump six from 1.16.0 to 1.17.0 (#2119)
+- bump virtualenv from 20.28.1 to 20.29.2 (#2120)
+- bump libgeotiff from 1.7.1 to 1.7.4 (#2121)
+- bump geos from 3.12.0 to 3.13.1 (#2122)
+- bump postgis from 3.5.1 to 3.5.2 (#2123)
+- bump ConfigUpdater from 3.1.1 to 3.2 (#2124)
+- bump Cython from 3.0.11 to 3.0.12 (#2125)
+- bump pycparser from 2.21 to 2.22 (#2126)
+- bump setuptools-rust from 1.7.0 to 1.10.2 (#2127)
+- bump tomlkit from 0.12.1 to 0.13.2 (#2128)
+- bump hatch-fancy-pypi-readme from 23.1.0 to 24.1.0 (#2129)
+- bump hatch-requirements-txt from 0.4.0 to 0.4.1 (#2130)
+- bump maturin from 1.3.1 to 1.8.2 (#2131)
 
 ### Bug Fixes
 
