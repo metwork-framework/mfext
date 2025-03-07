@@ -9,7 +9,7 @@
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
-| [argcomplete](https://github.com/kislyuk/argcomplete) | 3.1.1 | python3 |
+| [argcomplete](https://github.com/kislyuk/argcomplete) | 3.6.0 | python3 |
 | [arrow](https://arrow.readthedocs.io) | 1.2.3 | python3 |
 | [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
