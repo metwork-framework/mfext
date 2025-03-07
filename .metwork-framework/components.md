@@ -2,7 +2,7 @@
 | --- | --- | --- |
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.10.11 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.13 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.1 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
@@ -196,6 +196,7 @@
 | [pre_commit](https://github.com/pre-commit/pre-commit) | 4.0.1 | python3_devtools |
 | [proj](http://trac.osgeo.org/proj/) | 9.5.1 | scientific_core |
 | [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.48 | python3 |
+| [propcache](https://github.com/aio-libs/propcache) | 0.3.0 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
 | [psutil](https://github.com/giampaolo/psutil) | 6.1.1 | python3 |
@@ -302,9 +303,9 @@
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 6df2a84 | python3 |
 | [xmltodict](https://github.com/martinblech/xmltodict) | 0.13.0 | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
-| [yarl](https://github.com/aio-libs/yarl) | 1.12.1 | python3 |
+| [yarl](https://github.com/aio-libs/yarl) | 1.18.3 | python3 |
 | [yq](https://github.com/kislyuk/yq) | 3.2.2 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(306 components)*
+*(307 components)*

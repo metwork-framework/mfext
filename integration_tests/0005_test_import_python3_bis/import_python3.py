@@ -144,6 +144,7 @@ import platformdirs
 import pluggy
 import poyo
 import prompt_toolkit
+import propcache
 import psutil
 import psycopg
 import psycopg_c
