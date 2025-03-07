@@ -2,7 +2,7 @@
 aiohappyeyeballs==2.5.0
 aiohttp==3.11.13
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
-aiosignal==1.3.1
+aiosignal==1.3.2
 annotated-types==0.6.0
 argcomplete==3.1.1
 arrow==1.2.3
