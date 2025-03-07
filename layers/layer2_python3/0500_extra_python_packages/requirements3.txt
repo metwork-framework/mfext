@@ -1,6 +1,6 @@
 -e git+https://github.com/metwork-framework/acquisition.git@8205f0c2fcd323d7e36cbeecac05e74935def06c#egg=acquisition
 aiohappyeyeballs==2.5.0
-aiohttp==3.10.11
+aiohttp==3.11.13
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@6ec9424f24b7b89298dfcabde36ad49332cbecc4#egg=aiohttp_metwork_middlewares
 aiosignal==1.3.1
 annotated-types==0.6.0
@@ -78,6 +78,7 @@ pika==1.3.2
 Pillow==11.0.0
 poyo==0.5.0
 prompt-toolkit==3.0.48
+propcache==0.3.0
 psutil==6.1.1
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -121,5 +122,5 @@ whichcraft==0.6.1
 wrapt==1.17.0
 -e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
 xmltodict==0.13.0
-yarl==1.12.1
+yarl==1.18.3
 yq==3.2.2
