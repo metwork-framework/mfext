@@ -13,7 +13,7 @@
 | [arrow](https://pypi.org/project/arrow) | 1.3.0 | python3 |
 | [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
-| [asttokens](https://github.com/gristlabs/asttokens) | 2.4.0 | python3 |
+| [asttokens](https://github.com/gristlabs/asttokens) | 3.0.0 | python3 |
 | [async-timeout](https://github.com/aio-libs/async-timeout) | 4.0.3 | python3 |
 | [attrs](https://pypi.org/project/attrs) | 23.2.0 | python3 |
 | [autopep8](https://github.com/hhatto/autopep8) | 2.0.4 | python3 |
