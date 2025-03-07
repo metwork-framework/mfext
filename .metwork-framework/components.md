@@ -6,7 +6,7 @@
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.2 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
-| [annotated-types](https://pypi.org/project/annotated-types) | 0.6.0 | python3 |
+| [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.1.1 | python3 |
