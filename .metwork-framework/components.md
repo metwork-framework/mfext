@@ -3,7 +3,7 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.13 | python3 |
-| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 6ec9424 | python3 |
+| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | ca47749 | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.2 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
@@ -14,7 +14,6 @@
 | [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 3.0.0 | python3 |
-| [async-timeout](https://github.com/aio-libs/async-timeout) | 4.0.3 | python3 |
 | [attrs](https://pypi.org/project/attrs) | 23.2.0 | python3 |
 | [autopep8](https://github.com/hhatto/autopep8) | 2.0.4 | python3 |
 | [Babel](https://babel.pocoo.org/) | 2.13.0 | python3 |
@@ -309,4 +308,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(308 components)*
+*(307 components)*
