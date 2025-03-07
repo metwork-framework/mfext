@@ -102,7 +102,7 @@
 | [isort](https://pycqa.github.io/isort/) | 5.12.0 | python3_devtools |
 | [jedi](https://github.com/davidhalter/jedi) | 0.19.1 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
-| [Jinja2](https://pypi.org/project/Jinja2) | 3.1.5 | python3 |
+| [Jinja2](https://pypi.org/project/Jinja2) | 3.1.6 | python3 |
 | [jinja2_fnmatch_extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 1.0.2 | python3 |
 | [jinja2_from_json_extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 1.0.0 | python3 |
 | [jinja2_getenv_extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 1.0.2 | python3 |
