@@ -10,7 +10,7 @@
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.6.0 | python3 |
-| [arrow](https://arrow.readthedocs.io) | 1.2.3 | python3 |
+| [arrow](https://pypi.org/project/arrow) | 1.3.0 | python3 |
 | [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 2.4.0 | python3 |
@@ -234,7 +234,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.4 | python3_devtools |
-| [python-dateutil](https://github.com/dateutil/dateutil) | 2.8.2 | python3 |
+| [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
 | [Python](http://python.org/) | 3.12.9 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
@@ -285,6 +285,7 @@
 | [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.2.18.16 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
+| [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.12.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.6 | python3 |
@@ -308,4 +309,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(307 components)*
+*(308 components)*
