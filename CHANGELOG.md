@@ -183,6 +183,15 @@
 - bump hatch-fancy-pypi-readme from 23.1.0 to 24.1.0 (#2129)
 - bump hatch-requirements-txt from 0.4.0 to 0.4.1 (#2130)
 - bump maturin from 1.3.1 to 1.8.2 (#2131)
+- bump Jinja2 from 3.1.5 to 3.1.6 (fix CVE-2025-27516) (#2132)
+- bump aiohappyeyeballs from 2.4.0 to 2.5.0 (#2133)
+- bump aiohttp to 3.11.13 and yarl to 1.18.3 (#2134)
+- bump aiosignal from 1.3.1 to 1.3.2 (#2135)
+- bump annotated-types from 0.6.0 to 0.7.0 (#2136)
+- bump argcomplete from 3.1.1 to 3.6.0 (#2137)
+- bump arrow to 1.3.0 and python-dateutil to 2.9.0.post0 (#2138)
+- bump asttokens from 2.4.0 to 3.0.0 (#2139)
+- remove async_timeout (now included in Python standard library) (#2140)
 
 ### Bug Fixes
 
