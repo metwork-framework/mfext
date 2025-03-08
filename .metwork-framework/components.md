@@ -3,6 +3,7 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.13 | python3 |
+| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 92ddc7e | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.2 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
@@ -307,4 +308,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(306 components)*
+*(307 components)*
