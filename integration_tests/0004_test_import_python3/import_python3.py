@@ -12,7 +12,6 @@ import arrow
 import astral
 import astroid
 import asttokens
-import async_timeout
 import attr #attrs
 import autopep8
 import babel
