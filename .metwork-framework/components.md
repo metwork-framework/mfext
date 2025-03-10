@@ -16,7 +16,7 @@
 | [asttokens](https://github.com/gristlabs/asttokens) | 3.0.0 | python3 |
 | [attrs](https://pypi.org/project/attrs) | 25.1.0 | python3 |
 | [autopep8](https://pypi.org/project/autopep8) | 2.3.2 | python3 |
-| [Babel](https://babel.pocoo.org/) | 2.13.0 | python3 |
+| [babel](https://babel.pocoo.org/) | 2.17.0 | python3 |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3 |
 | [bandit](https://bandit.readthedocs.io/) | 1.7.6 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
