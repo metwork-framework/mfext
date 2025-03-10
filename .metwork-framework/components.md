@@ -50,7 +50,7 @@
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.0.12 | python3 |
-| [decorator](https://github.com/micheles/decorator) | 5.1.1 | python3 |
+| [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/tantale/deprecated) | 1.2.14 | python3 |
 | [dill](https://github.com/uqfoundation/dill) | 0.3.7 | python3 |
