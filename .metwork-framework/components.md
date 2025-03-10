@@ -91,7 +91,7 @@
 | [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
-| [hiredis](https://github.com/redis/hiredis-py) | 2.2.3 | python3 |
+| [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.2 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.10 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
