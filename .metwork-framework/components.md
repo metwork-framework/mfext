@@ -15,7 +15,7 @@
 | [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 3.0.0 | python3 |
 | [attrs](https://pypi.org/project/attrs) | 25.1.0 | python3 |
-| [autopep8](https://github.com/hhatto/autopep8) | 2.0.4 | python3 |
+| [autopep8](https://pypi.org/project/autopep8) | 2.3.2 | python3 |
 | [Babel](https://babel.pocoo.org/) | 2.13.0 | python3 |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3 |
 | [bandit](https://bandit.readthedocs.io/) | 1.7.6 | python3_devtools |
@@ -69,7 +69,7 @@
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.17.0 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
-| [flake8](https://github.com/pycqa/flake8) | 6.1.0 | python3_devtools |
+| [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.11.0 | python3_core |
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
@@ -208,12 +208,12 @@
 | [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3 |
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
-| [pycodestyle](https://pycodestyle.pycqa.org/) | 2.11.0 | python3 |
+| [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.22 | python3 |
 | [pydantic](https://github.com/pydantic/pydantic) | 2.10.6 | python3 |
 | [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.27.2 | python3 |
 | [pydocstyle](https://github.com/PyCQA/pydocstyle/) | 6.1.1 | python3_devtools |
-| [pyflakes](https://github.com/PyCQA/pyflakes) | 3.1.0 | python3_devtools |
+| [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.19.1 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.8 | python3_devtools |
