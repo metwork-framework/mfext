@@ -75,7 +75,7 @@
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
-| [fsspec](https://github.com/fsspec/filesystem_spec) | 2023.9.2 | python3 |
+| [fsspec](https://github.com/fsspec/filesystem_spec) | 2025.3.0 | python3 |
 | [gdal](http://www.gdal.org) | 3.10.2 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.2.0 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
