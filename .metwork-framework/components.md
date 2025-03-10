@@ -64,7 +64,7 @@
 | [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.1.3 | python3_devtools |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
-| [executing](https://github.com/alexmojaki/executing) | 2.0.1 | python3 |
+| [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.17.0 | python3_core |
