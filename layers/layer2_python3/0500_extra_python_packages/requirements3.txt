@@ -20,7 +20,7 @@ cachetools==5.5.2
 Cerberus==1.3.7
 chardet==5.2.0
 charset_normalizer==3.4.1
-Click==8.1.7
+Click==8.1.8
 colorama==0.4.6
 commonmark==0.9.1
 -e git+https://github.com/metwork-framework/cookiecutter.git@6d12c5bc04390cb019d9d01b47cb3d50e6276a9d#egg=cookiecutter

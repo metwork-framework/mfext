@@ -38,7 +38,7 @@
 | [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.4.1 | python3 |
 | [circus](https://pypi.org/project/circus) | 6fdf573 | python3_circus |
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 9d208a1 | python3_circus |
-| [click](https://palletsprojects.com/p/click/) | 8.1.7 | python3 |
+| [click](https://pypi.org/project/click) | 8.1.8 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.2 | python3 |
