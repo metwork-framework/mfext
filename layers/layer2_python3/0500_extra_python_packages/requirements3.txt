@@ -8,7 +8,7 @@ argcomplete==3.6.0
 arrow==1.3.0
 asttokens==3.0.0
 attrs==25.1.0
-autopep8==2.0.4
+autopep8==2.3.2
 Babel==2.13.0
 backcall==0.2.0
 bash==0.6
@@ -84,7 +84,7 @@ pure-eval==0.2.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pyasyncore==1.0.4
-pycodestyle==2.11.0
+pycodestyle==2.12.1
 pydantic==2.10.6
 pydantic-core==2.27.2
 Pygments==2.19.1
