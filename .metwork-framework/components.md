@@ -52,7 +52,7 @@
 | [Cython](https://cython.org/) | 3.0.12 | python3 |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
-| [Deprecated](https://github.com/tantale/deprecated) | 1.2.14 | python3 |
+| [Deprecated](https://github.com/laurent-laporte-pro/deprecated) | 1.2.18 | python3 |
 | [dill](https://github.com/uqfoundation/dill) | 0.3.7 | python3 |
 | [directory_observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.6.3 | python3 |

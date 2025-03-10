@@ -29,7 +29,7 @@ cron-wrapper==0.1.2
 cryptography==44.0.2
 decorator==5.2.1
 -e git+https://github.com/metwork-framework/deploycron.git@27342219bc00ce9c90b18107ec321b722b3c90bb#egg=deploycron
-Deprecated==1.2.14
+Deprecated==1.2.18
 dill==0.3.7
 -e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
 diskcache==5.6.3
