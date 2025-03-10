@@ -30,7 +30,7 @@
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
-| [Cerberus](https://pypi.org/project/Cerberus) | 1.3.5 | python3 |
+| [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2025.1.31 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
