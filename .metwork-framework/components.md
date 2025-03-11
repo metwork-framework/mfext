@@ -143,7 +143,7 @@
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.1.0 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | 5de4636 | python3 |
-| [mfutil](https://github.com/metwork-framework/mfutil) | 0.2.0 | python3 |
+| [mfutil](https://github.com/metwork-framework/mfutil) | 0.3.0 | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.2 | python3_devtools |
@@ -160,7 +160,7 @@
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
-| [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
+| [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
 | [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
