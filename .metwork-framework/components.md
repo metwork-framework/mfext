@@ -110,7 +110,7 @@
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
 | [joblib](https://joblib.readthedocs.io) | 1.4.2 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.7.1 | core |
-| [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2023.11.1 | python3 |
+| [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2024.10.1 | python3 |
 | [jsonschema](https://github.com/python-jsonschema/jsonschema) | 4.23.0 | python3 |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.9.0 | python3_devtools |
