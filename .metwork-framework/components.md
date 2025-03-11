@@ -133,7 +133,7 @@
 | [lxml](https://lxml.de/) | 5.3.1 | python3 |
 | [Mako](https://www.makotemplates.org/) | 1.2.4 | python3_devtools |
 | [markdown-it-py](https://github.com/executablebooks/markdown-it-py) | 3.0.0 | python3 |
-| [Markdown](https://Python-Markdown.github.io/) | 3.4.4 | python3 |
+| [Markdown](https://Python-Markdown.github.io/) | 3.7 | python3 |
 | [MarkupSafe](https://palletsprojects.com/p/markupsafe/) | 2.1.3 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.6 | python3 |
 | [maturin](https://pypi.org/project/maturin) | 1.8.2 | python3 |
