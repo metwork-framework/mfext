@@ -60,7 +60,7 @@ lxml==5.3.1
 Markdown==3.7
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
-matplotlib-inline==0.1.6
+matplotlib-inline==0.1.7
 mdurl==0.1.2
 mflog==0.1.0
 -e git+https://github.com/metwork-framework/mfplugin.git@5de463640d478622309d6949d21075c6810f1344#egg=mfplugin
