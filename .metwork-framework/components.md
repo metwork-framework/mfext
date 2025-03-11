@@ -97,7 +97,8 @@
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.0.0 | python3_devtools |
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
-| [ipython](https://ipython.org) | 8.16.1 | python3 |
+| [ipython](https://ipython.org) | 9.0.2 | python3 |
+| [ipython_pygments_lexers](https://pypi.org/project/ipython_pygments_lexers) | 1.1.1 | python3 |
 | [isort](https://pycqa.github.io/isort/) | 5.12.0 | python3_devtools |
 | [jedi](https://github.com/davidhalter/jedi) | 0.19.1 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
@@ -281,7 +282,7 @@
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
-| [traitlets](https://github.com/ipython/traitlets) | 5.9.0 | python3 |
+| [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.2.18.16 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
@@ -308,4 +309,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(307 components)*
+*(308 components)*
