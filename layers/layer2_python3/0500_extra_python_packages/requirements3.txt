@@ -36,6 +36,7 @@ diskcache==5.6.3
 entrypoints==0.4
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
 executing==2.2.0
+fakeredis==2.27.0
 frozenlist==1.5.0
 fsspec==2025.3.0
 geojson==3.2.0
@@ -65,7 +66,6 @@ mdurl==0.1.2
 mflog==0.1.0
 -e git+https://github.com/metwork-framework/mfplugin.git@5de463640d478622309d6949d21075c6810f1344#egg=mfplugin
 mfutil==0.2.0
-mockredispy==2.9.3
 multidict==6.0.4
 mypy-extensions==1.0.0
 netifaces==0.11.0
@@ -103,6 +103,7 @@ requests-unixsocket2==0.4.0
 rich==13.9.4
 rpds-py==0.12.0
 simpleeval==0.9.13
+sortedcontainers==2.4.0
 soupsieve==2.5
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
 stack-data==0.6.3
@@ -121,7 +122,7 @@ wcwidth==0.2.8
 Werkzeug==3.0.6
 whichcraft==0.6.1
 wrapt==1.17.0
--e git+https://github.com/metwork-framework/xattrfile.git@6df2a841127cc24775961164e9c07095e3f6007b#egg=xattrfile
+-e git+https://github.com/metwork-framework/xattrfile.git@8a763c95c6ca5071db1c1395b1bfc36ad023646e#egg=xattrfile
 xmltodict==0.13.0
 yarl==1.18.3
 yq==3.2.2

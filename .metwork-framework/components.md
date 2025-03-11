@@ -66,6 +66,7 @@
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
+| [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.17.0 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
@@ -153,7 +154,6 @@
 | [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.4.5 | python3_devtools |
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.5.3 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.1.0 | python3_devtools |
-| [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.1.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.0.4 | python3 |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
@@ -265,6 +265,7 @@
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
+| [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.5 | python3 |
 | [sqlite](http://sqlite.org/) | 3.49.1 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
@@ -301,7 +302,7 @@
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.17.0 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
-| [xattrfile](https://github.com/metwork-framework/xattrfile) | 6df2a84 | python3 |
+| [xattrfile](https://github.com/metwork-framework/xattrfile) | 8a763c9 | python3 |
 | [xmltodict](https://github.com/martinblech/xmltodict) | 0.13.0 | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
 | [yarl](https://github.com/aio-libs/yarl) | 1.18.3 | python3 |
@@ -309,4 +310,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(308 components)*
+*(309 components)*
