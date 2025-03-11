@@ -45,7 +45,7 @@ idna==3.10
 inotify-simple==1.3.5
 ipython==9.0.2
 ipython_pygments_lexers==1.1.1
-jedi==0.19.1
+jedi==0.19.2
 Jinja2==3.1.6
 jinja2-from-json-extension==1.0.0
 jinja2-fnmatch-extension==1.0.2
@@ -71,7 +71,7 @@ mypy-extensions==1.0.0
 netifaces==0.11.0
 opinionated-configparser==1.0.1
 paramiko==3.4.1
-parso==0.8.3
+parso==0.8.4
 pexpect==4.8.0
 pickleshare==0.7.5
 pika==1.3.2

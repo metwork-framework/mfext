@@ -100,7 +100,7 @@
 | [ipython](https://ipython.org) | 9.0.2 | python3 |
 | [ipython_pygments_lexers](https://pypi.org/project/ipython_pygments_lexers) | 1.1.1 | python3 |
 | [isort](https://pycqa.github.io/isort/) | 5.12.0 | python3_devtools |
-| [jedi](https://github.com/davidhalter/jedi) | 0.19.1 | python3 |
+| [jedi](https://github.com/davidhalter/jedi) | 0.19.2 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://pypi.org/project/Jinja2) | 3.1.6 | python3 |
 | [jinja2_fnmatch_extension](https://github.com/metwork-framework/jinja2_fnmatch_extension) | 1.0.2 | python3 |
@@ -173,7 +173,7 @@
 | [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.4.1 | python3 |
-| [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3 |
+| [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
 | [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
