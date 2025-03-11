@@ -55,6 +55,7 @@ import envtpl
 import exceptiongroup
 import execnet
 import executing
+import fakeredis
 import fastentrypoints
 import filelock
 import flake8_docstrings
@@ -116,7 +117,6 @@ import materialx #mkdocs-material-extensions
 import material #mkdocs-material
 import mkdocs
 import mock
-import mockredis
 import more_itertools
 import multidict
 import mypy_extensions
@@ -198,6 +198,7 @@ import simpleeval
 import six
 import smmap
 import snowballstemmer
+import sortedcontainers
 import soupsieve
 import stack_data
 import statsd
