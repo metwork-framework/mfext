@@ -81,6 +81,7 @@ import importlib_metadata
 import iniconfig
 import inotify_simple
 import IPython
+import ipython_pygments_lexers
 import isort
 import jedi
 import jinja2_fnmatch_extension
