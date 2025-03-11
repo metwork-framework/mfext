@@ -192,6 +192,21 @@
 - bump arrow to 1.3.0 and python-dateutil to 2.9.0.post0 (#2138)
 - bump asttokens from 2.4.0 to 3.0.0 (#2139)
 - remove async_timeout (now included in Python standard library) (#2140)
+- bump attrs from 23.2.0 to 25.1.0 (#2144)
+- bump setuptools from 75.8.2 to 76.0.0 (#2145)
+- bump autopep8 to 2.3.2 and flake8 to 7.1.2 (#2146)
+- bump Babel from 2.13.0 to 2.17.0 (#2147)
+- bump bcrypt from 4.0.1 to 4.3.0 (#2148)
+- bump cachetools from 5.5.0 to 5.5.2 (#2149)
+- bump Cerberus from 1.3.5 to 1.3.7 (#2150)
+- bump Click from 8.1.7 to 8.1.8 (#2151)
+- bump cryptography from 44.0.1 to 44.0.2 (#2152)
+- bump decorator from 5.1.1 to 5.2.1 (#2153)
+- bump Deprecated from 1.2.14 to 1.2.18 (#2154)
+- bump dill from 0.3.7 to 0.3.9 (#2155)
+- bump executing from 2.0.1 to 2.2.0 (#2156)
+- bump fsspec from 2023.9.2 to 2025.3.0 (#2157)
+- bump hiredis from 2.2.3 to 3.1.0 (#2158)
 
 ### Bug Fixes
 
