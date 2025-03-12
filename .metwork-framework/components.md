@@ -236,7 +236,7 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.4 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.3 | python3 |
-| [Python](http://python.org/) | 3.12.9 | python3_core |
+| [Python](http://python.org/) | 3.13.2 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2023.3.post1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
