@@ -1,9 +1,9 @@
 appdirs==1.4.4
 distlib==0.3.9
-distro==1.8.0
-filelock==3.16.1
-importlib-metadata==6.8.0
+distro==1.9.0
+filelock==3.17.0
+importlib-metadata==8.6.1
 platformdirs==4.3.6
-six==1.16.0
-virtualenv==20.28.1
-zipp==3.19.2
+six==1.17.0
+virtualenv==20.29.2
+zipp==3.21.0

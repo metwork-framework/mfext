@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=zeromq
-export VERSION=4.3.4
+export VERSION=4.3.5
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=c897d4005a3f0b8276b00b7921412379
+export CHECKSUM=ae933b1e98411fd7cb8309f9502d2737
 DESCRIPTION=\
 ZeroMQ is an open-source universal messaging library
 WEBSITE=https://zeromq.org/
