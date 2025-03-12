@@ -207,6 +207,18 @@
 - bump executing from 2.0.1 to 2.2.0 (#2156)
 - bump fsspec from 2023.9.2 to 2025.3.0 (#2157)
 - bump hiredis from 2.2.3 to 3.1.0 (#2158)
+- bump ipython from 8.16.1 to 9.0.2 and traitlets to 5.14.3 (#2159)
+- bump jedi to 0.19.2 and parso to 0.8.4 (#2160)
+- bump joblib from 1.3.2 to 1.4.2 (#2161)
+- bump jsonschema from 4.19.2 to 4.23.0 (#2162)
+- bump jsonschema_specifications from 2023.11.1 to 2024.10.1 (#2163)
+- bump lxml from 5.3.0 to 5.3.1 (#2164)
+- bump Markdown from 3.4.4 to 3.7 (#2165)
+- bump MarkupSafe from 2.1.3 to 3.0.2 (#2166)
+- bump matplotlib-inline from 0.1.6 to 0.1.7 (#2167)
+- mockredispy is replaced by fakeredis in xattrfile (#2168)
+- bump multidict from 6.0.4 to 6.1.0 (#2169)
+- netifaces2 replaces archived netifaces in mfutil 0.3.0 (#2170)
 
 ### Bug Fixes
 
