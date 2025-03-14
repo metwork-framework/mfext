@@ -54,7 +54,7 @@
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/laurent-laporte-pro/deprecated) | 1.2.18 | python3 |
 | [dill](https://github.com/uqfoundation/dill) | 0.3.9 | python3 |
-| [directory_observer](https://github.com/metwork-framework/directory_observer) | 03770b7 | python3 |
+| [directory_observer](https://github.com/metwork-framework/directory_observer) | 403e3b0 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.6.3 | python3 |
 | [distlib](https://github.com/pypa/distlib) | 0.3.9 | python3_core |
 | [distro](https://github.com/python-distro/distro) | 1.9.0 | python3_core |
