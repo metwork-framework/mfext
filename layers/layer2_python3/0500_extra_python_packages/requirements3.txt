@@ -31,7 +31,7 @@ decorator==5.2.1
 -e git+https://github.com/metwork-framework/deploycron.git@27342219bc00ce9c90b18107ec321b722b3c90bb#egg=deploycron
 Deprecated==1.2.18
 dill==0.3.9
--e git+https://github.com/metwork-framework/directory_observer.git@03770b7876990803cc3b271e78b3c0a2364cdf3c#egg=directory_observer
+-e git+https://github.com/metwork-framework/directory_observer.git@403e3b00e8f3f0073acda513529df96405aa6e09#egg=directory_observer
 diskcache==5.6.3
 entrypoints==0.4
 -e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
