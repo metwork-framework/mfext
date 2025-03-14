@@ -172,7 +172,7 @@
 | [packaging](https://pypi.org/project/packaging) | 24.2 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
-| [paramiko](https://paramiko.org) | 3.4.1 | python3 |
+| [paramiko](https://paramiko.org) | 3.5.1 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
 | [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
