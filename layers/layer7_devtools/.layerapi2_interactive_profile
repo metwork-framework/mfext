@@ -1,4 +1,0 @@
-GIT_WRAPPER=`which_or_empty git`
-if test "${GIT_WRAPPER}" != ""; then
-    alias git="${MFEXT_HOME}/opt/devtools/bin/_git"
-fi
