@@ -204,7 +204,7 @@
 | [psycopg](https://psycopg.org/psycopg3/) | 3.1.20 | python3_scientific_core |
 | [psycopg2](https://psycopg.org/) | 2.9.10 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3 |
-| [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.2 | python3 |
+| [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.3 | python3 |
 | [py-spy](https://github.com/benfred/py-spy) | 0.3.14 | python3_devtools |
 | [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3 |
 | [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
