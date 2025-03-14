@@ -82,8 +82,8 @@ propcache==0.3.0
 psutil==7.0.0
 ptyprocess==0.7.0
 pure-eval==0.2.3
-pyasn1==0.4.8
-pyasn1-modules==0.2.8
+pyasn1==0.6.1
+pyasn1-modules==0.4.1
 pyasyncore==1.0.4
 pycodestyle==2.12.1
 pydantic==2.10.6
