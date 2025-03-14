@@ -1,4 +1,0 @@
-N=$(alias git |grep -c "${MFEXT_HOME}/opt/devtools")
-if test "${N}" -gt 0; then
-    unalias git
-fi
