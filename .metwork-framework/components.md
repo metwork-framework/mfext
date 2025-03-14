@@ -206,8 +206,8 @@
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3 |
 | [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.3 | python3 |
 | [py-spy](https://github.com/benfred/py-spy) | 0.3.14 | python3_devtools |
-| [pyasn1-modules](https://github.com/etingof/pyasn1-modules) | 0.2.8 | python3 |
-| [pyasn1](https://github.com/etingof/pyasn1) | 0.4.8 | python3 |
+| [pyasn1](https://github.com/pyasn1/pyasn1) | 0.6.1 | python3 |
+| [pyasn1_modules](https://github.com/pyasn1/pyasn1-modules) | 0.4.1 | python3 |
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.22 | python3 |
