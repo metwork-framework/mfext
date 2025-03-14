@@ -1,6 +1,0 @@
-#!/bin/bash
-
-unset PYTHONPATH
-unset LD_LIBRARY_PATH
-export PATH=/usr/local/bin:/bin:/usr/bin
-exec git "$@"
