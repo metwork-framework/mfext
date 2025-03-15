@@ -219,6 +219,15 @@
 - mockredispy is replaced by fakeredis in xattrfile (#2168)
 - bump multidict from 6.0.4 to 6.1.0 (#2169)
 - netifaces2 replaces archived netifaces in mfutil 0.3.0 (#2170)
+- bump paramiko from 3.4.1 to 3.5.1 (#2174)
+- bump pexpect from 4.8.0 to 4.9.0 (#2177)
+- bump Pillow from 11.0.0 to 11.1.0 (#2178)
+- bump prompt-toolkit from 3.48.0 to 3.0.50 (#2179)
+- bump filelock from 3.17.0 to 3.18.0 (#2180)
+- upgrade psutil from 6.1.1 to 7.0.0 (#2181)
+- bump pure-eval from 0.2.2 to 0.2.3 (#2182)
+- bump pyasn1 to 0.6.1 and pyasn1-modules to 0.4.1 (#2183)
+- update directory_observer (pyasyncore as dependency for pyinotify) (#2184)
 
 ### Bug Fixes
 
@@ -234,5 +243,6 @@
 - add patches for next 9.5.1 release
 - add patches for next 9.5.1 release (#2007)
 - explicitely enable rtree extension in sqlite (for gdal) (#2111)
+- remove useless git alias (#2175)
 
 
