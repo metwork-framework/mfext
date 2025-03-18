@@ -228,6 +228,7 @@
 - bump pure-eval from 0.2.2 to 0.2.3 (#2182)
 - bump pyasn1 to 0.6.1 and pyasn1-modules to 0.4.1 (#2183)
 - update directory_observer (pyasyncore as dependency for pyinotify) (#2184)
+- upgrade proj from 9.5.1 to 9.6.0 and adapt MF patch (#2185)
 
 ### Bug Fixes
 
