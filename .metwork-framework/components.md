@@ -247,7 +247,7 @@
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
-| [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.0 | python3 |
+| [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.32.3 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.12.0 | python3 |
