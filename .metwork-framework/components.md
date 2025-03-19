@@ -250,7 +250,7 @@
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.32.3 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
-| [rpds-py](https://github.com/crate-py/rpds) | 0.12.0 | python3 |
+| [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
