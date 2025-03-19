@@ -244,7 +244,7 @@
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
 | [redis](http://redis.io) | 5.0.14 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
-| [referencing](https://github.com/python-jsonschema/referencing) | 0.31.0 | python3 |
+| [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2023.8.8 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.0 | python3 |
