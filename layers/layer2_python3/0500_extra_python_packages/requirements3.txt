@@ -102,7 +102,7 @@ requests==2.32.3
 requests-unixsocket2==0.4.2
 rich==13.9.4
 rpds-py==0.23.1
-simpleeval==0.9.13
+simpleeval==1.0.3
 sortedcontainers==2.4.0
 soupsieve==2.5
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
