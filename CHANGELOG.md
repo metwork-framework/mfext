@@ -229,6 +229,14 @@
 - bump pyasn1 to 0.6.1 and pyasn1-modules to 0.4.1 (#2183)
 - update directory_observer (pyasyncore as dependency for pyinotify) (#2184)
 - upgrade proj from 9.5.1 to 9.6.0 and adapt MF patch (#2185)
+- bump setuptools from 76.0.0 to 76.1.0 (#2186)
+- bump python-ldap from 3.4.3 to 3.4.4 (#2187)
+- bump pytz from 2023.3.post1 to 2025.1 (#2188)
+- bump referencing from 0.31.0 to 0.36.2 (#2189)
+- bump regex from 2023.8.8 to 2024.11.6 (#2190)
+- bump requests-unixsocket2 from 0.4.0 to 0.4.2 (#2191)
+- bump rpds-py from 0.12.0 to 0.23.1 (#2192)
+- bump simpleeval from 0.9.13 to 1.0.3 (#2193)
 
 ### Bug Fixes
 
