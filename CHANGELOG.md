@@ -8,6 +8,10 @@
 - add PostGreSQL extension pg_uuidv7 (backport #1957) (#1979)
 - bump Python 3.11 from 3.11.10 to 3.11.11 (#2003)
 
+### Bug Fixes
+
+- remove useless git alias (#2175)
+
 ## v2.2.13 (2024-11-04)
 
 - No interesting change
