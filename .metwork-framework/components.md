@@ -12,7 +12,7 @@
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.6.0 | python3 |
 | [arrow](https://pypi.org/project/arrow) | 1.3.0 | python3 |
 | [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
-| [astroid](https://pypi.org/project/astroid) | 3.0.0 | python3_devtools |
+| [astroid](https://pypi.org/project/astroid) | 3.3.9 | python3_devtools |
 | [asttokens](https://github.com/gristlabs/asttokens) | 3.0.0 | python3 |
 | [attrs](https://pypi.org/project/attrs) | 25.1.0 | python3 |
 | [autopep8](https://pypi.org/project/autopep8) | 2.3.2 | python3 |
@@ -219,7 +219,7 @@
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2024.8 | python3_devtools |
 | [pyinstaller](https://www.pyinstaller.org/) | 6.10.0 | python3_devtools |
-| [pylint](https://github.com/pylint-dev/pylint) | 3.0.1 | python3_devtools |
+| [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
