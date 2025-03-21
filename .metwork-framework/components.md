@@ -278,7 +278,7 @@
 | [termcolor](https://github.com/termcolor/termcolor) | 2.5.0 | python3 |
 | [terminaltables3](https://github.com/matthewdeanmartin/terminaltables3) | 4.0.0 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
-| [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.2.0 | python3 |
+| [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.6.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
