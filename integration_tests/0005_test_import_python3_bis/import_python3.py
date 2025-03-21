@@ -210,7 +210,7 @@ import stevedore
 import structlog
 import telegraf_unixsocket_client
 import termcolor
-import terminaltables
+import terminaltables3
 import threadpoolctl
 import tomlkit
 import tornado
