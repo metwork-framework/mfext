@@ -282,7 +282,7 @@
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.23.2 | python3_devtools |
-| [tqdm](https://tqdm.github.io) | 4.66.4 | python3 |
+| [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.2.18.16 | python3_core |
 | [typer](https://github.com/tiangolo/typer) | 0.9.0 | python3_devtools |
