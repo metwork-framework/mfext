@@ -42,7 +42,7 @@
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
 | [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.2 | python3 |
-| [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 6d12c5b | python3 |
+| [cookiecutter](https://github.com/metwork-framework/cookiecutter) | ee21fc8 | python3 |
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.3.2 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
@@ -298,7 +298,6 @@
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.3 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.45.1 | python3_core |
-| [whichcraft](https://github.com/pydanny/whichcraft) | 0.6.1 | python3 |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.17.0 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
@@ -310,4 +309,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(309 components)*
+*(308 components)*

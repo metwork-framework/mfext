@@ -229,7 +229,6 @@ import wcmatch
 import wcwidth
 import werkzeug
 import wheel
-import whichcraft
 import wrapt
 import xattrfile
 import xmltodict
