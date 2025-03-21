@@ -64,7 +64,7 @@ MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 mflog==0.1.0
--e git+https://github.com/metwork-framework/mfplugin.git@5de463640d478622309d6949d21075c6810f1344#egg=mfplugin
+-e git+https://github.com/metwork-framework/mfplugin.git@1d27d8ba383a50f2fb160b262eaf045c02b1816a#egg=mfplugin
 mfutil==0.3.0
 multidict==6.1.0
 mypy-extensions==1.0.0
@@ -110,7 +110,7 @@ stack-data==0.6.3
 structlog==23.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
 termcolor==2.5.0
-terminaltables==3.1.10
+terminaltables3==4.0.0
 threadpoolctl==3.2.0
 tornado==6.4.2
 tqdm==4.66.4

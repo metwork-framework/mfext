@@ -142,7 +142,7 @@
 | [mdurl](https://github.com/executablebooks/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.1.0 | python3 |
-| [mfplugin](https://github.com/metwork-framework/mfplugin) | 5de4636 | python3 |
+| [mfplugin](https://github.com/metwork-framework/mfplugin) | 1d27d8b | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | 0.3.0 | python3 |
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
@@ -276,7 +276,7 @@
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
 | [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
 | [termcolor](https://github.com/termcolor/termcolor) | 2.5.0 | python3 |
-| [terminaltables](https://github.com/matthewdeanmartin/terminaltables) | 3.1.10 | python3 |
+| [terminaltables3](https://github.com/matthewdeanmartin/terminaltables3) | 4.0.0 | python3 |
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.2.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
