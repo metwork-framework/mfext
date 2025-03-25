@@ -2,8 +2,8 @@ altgraph==0.17.4
 apipkg==3.0.2
 astroid==3.3.9
 bandit==1.8.3
-bracex==2.4
 black==24.3.0
+bracex==2.5
 bump-pydantic==0.8.0
 cfgv==3.4.0
 coverage==7.3.2

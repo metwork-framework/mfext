@@ -25,7 +25,7 @@
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://github.com/psf/black) | 24.3.0 | python3_devtools |
-| [bracex](https://github.com/facelessuser/bracex) | 2.4 | python3_devtools |
+| [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
