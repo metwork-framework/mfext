@@ -207,6 +207,36 @@
 - bump executing from 2.0.1 to 2.2.0 (#2156)
 - bump fsspec from 2023.9.2 to 2025.3.0 (#2157)
 - bump hiredis from 2.2.3 to 3.1.0 (#2158)
+- bump ipython from 8.16.1 to 9.0.2 and traitlets to 5.14.3 (#2159)
+- bump jedi to 0.19.2 and parso to 0.8.4 (#2160)
+- bump joblib from 1.3.2 to 1.4.2 (#2161)
+- bump jsonschema from 4.19.2 to 4.23.0 (#2162)
+- bump jsonschema_specifications from 2023.11.1 to 2024.10.1 (#2163)
+- bump lxml from 5.3.0 to 5.3.1 (#2164)
+- bump Markdown from 3.4.4 to 3.7 (#2165)
+- bump MarkupSafe from 2.1.3 to 3.0.2 (#2166)
+- bump matplotlib-inline from 0.1.6 to 0.1.7 (#2167)
+- mockredispy is replaced by fakeredis in xattrfile (#2168)
+- bump multidict from 6.0.4 to 6.1.0 (#2169)
+- netifaces2 replaces archived netifaces in mfutil 0.3.0 (#2170)
+- bump paramiko from 3.4.1 to 3.5.1 (#2174)
+- bump pexpect from 4.8.0 to 4.9.0 (#2177)
+- bump Pillow from 11.0.0 to 11.1.0 (#2178)
+- bump prompt-toolkit from 3.48.0 to 3.0.50 (#2179)
+- bump filelock from 3.17.0 to 3.18.0 (#2180)
+- upgrade psutil from 6.1.1 to 7.0.0 (#2181)
+- bump pure-eval from 0.2.2 to 0.2.3 (#2182)
+- bump pyasn1 to 0.6.1 and pyasn1-modules to 0.4.1 (#2183)
+- update directory_observer (pyasyncore as dependency for pyinotify) (#2184)
+- upgrade proj from 9.5.1 to 9.6.0 and adapt MF patch (#2185)
+- bump setuptools from 76.0.0 to 76.1.0 (#2186)
+- bump python-ldap from 3.4.3 to 3.4.4 (#2187)
+- bump pytz from 2023.3.post1 to 2025.1 (#2188)
+- bump referencing from 0.31.0 to 0.36.2 (#2189)
+- bump regex from 2023.8.8 to 2024.11.6 (#2190)
+- bump requests-unixsocket2 from 0.4.0 to 0.4.2 (#2191)
+- bump rpds-py from 0.12.0 to 0.23.1 (#2192)
+- bump simpleeval from 0.9.13 to 1.0.3 (#2193)
 
 ### Bug Fixes
 
@@ -222,5 +252,6 @@
 - add patches for next 9.5.1 release
 - add patches for next 9.5.1 release (#2007)
 - explicitely enable rtree extension in sqlite (for gdal) (#2111)
+- remove useless git alias (#2175)
 
 

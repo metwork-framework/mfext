@@ -210,7 +210,7 @@ import stevedore
 import structlog
 import telegraf_unixsocket_client
 import termcolor
-import terminaltables
+import terminaltables3
 import threadpoolctl
 import tomlkit
 import tornado
@@ -229,7 +229,6 @@ import wcmatch
 import wcwidth
 import werkzeug
 import wheel
-import whichcraft
 import wrapt
 import xattrfile
 import xmltodict
