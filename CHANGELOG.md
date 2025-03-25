@@ -237,6 +237,22 @@
 - bump requests-unixsocket2 from 0.4.0 to 0.4.2 (#2191)
 - bump rpds-py from 0.12.0 to 0.23.1 (#2192)
 - bump simpleeval from 0.9.13 to 1.0.3 (#2193)
+- bump soupsieve from 2.5 to 2.6 (#2194)
+- bump termcolor from 2.3.0 to 2.5.0 (#2195)
+- replace terminaltables (archived) by terminaltables3 (#2196)
+- bump setuptools from 76.1.0 to 77.0.3 (#2197)
+- bump threadpoolctl from 3.2.0 to 3.6.0 (#2198)
+- bump tqdm from 4.66.4 to 4.67.1 (#2199)
+- bump Unidecode from 1.3.6 to 1.3.8 (#2200)
+- bump wcwidth from 0.2.8 to 0.2.13 (#2201)
+- bump Werkzeug from 3.0.6 to 3.1.3 (#2202)
+- upgrade cookiecutter to remove whichcraft (unmaintained) (#2203)
+- bump wrapt from 1.17.0 to 1.17.2 (#2204)
+- bump xmltodict from 0.13.0 to 0.14.2 (#2205)
+- bump yq from 3.2.2 to 3.4.3 (#2206)
+- upgrade psycopg and psycopg-c from 3.1.20 to 3.2.6 (#2207)
+- bump shellcheck from 0.9.0 to 0.10.0 (#2208)
+- bump pylint to 3.3.6 and astroid to 3.3.9 (#2209)
 
 ### Bug Fixes
 

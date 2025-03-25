@@ -18,14 +18,14 @@
 | [autopep8](https://pypi.org/project/autopep8) | 2.3.2 | python3 |
 | [babel](https://babel.pocoo.org/) | 2.17.0 | python3 |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3 |
-| [bandit](https://bandit.readthedocs.io/) | 1.7.6 | python3_devtools |
+| [bandit](https://bandit.readthedocs.io/) | 1.8.3 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 4.3.0 | python3 |
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.4 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
-| [black](https://github.com/psf/black) | 24.3.0 | python3_devtools |
-| [bracex](https://github.com/facelessuser/bracex) | 2.4 | python3_devtools |
+| [black](https://pypi.org/project/black) | 25.1.0 | python3_devtools |
+| [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
@@ -72,7 +72,7 @@
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
-| [flit_core](https://pypi.org/project/flit_core) | 3.11.0 | python3_core |
+| [flit_core](https://pypi.org/project/flit_core) | 3.12.0 | python3_core |
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
@@ -256,7 +256,7 @@
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.10.2 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
-| [setuptools](https://pypi.org/project/setuptools) | 77.0.3 | python3_core |
+| [setuptools](https://pypi.org/project/setuptools) | 78.0.2 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
 | [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.4 | python3_devtools |
