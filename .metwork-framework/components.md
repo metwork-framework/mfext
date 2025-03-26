@@ -124,7 +124,7 @@
 | [libtirpc](https://sourceforge.net/projects/libtirpc/) | 1.3.6 | core |
 | [libtree](https://github.com/haampie/libtree) | 3.1.1 | devtools |
 | [liquidprompt](https://github.com/nojhan/liquidprompt) | 2.2.1 | core |
-| [livereload](https://github.com/lepture/python-livereload) | 2.6.3 | python3_devtools |
+| [livereload](https://github.com/lepture/python-livereload) | 2.7.1 | python3_devtools |
 | [log_proxy](https://github.com/metwork-framework/log_proxy) | 0.7.4 | core |
 | [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie/) | master-20160630 | openresty |
 | [lua-resty-hmac](https://github.com/jkeys089/lua-resty-hmac) | master20190920 | openresty |
