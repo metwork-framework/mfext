@@ -149,10 +149,11 @@
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.2 | python3_devtools |
 | [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.9.2 | python3_devtools |
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
+| [mkdocs-get-deps](https://pypi.org/project/mkdocs-get-deps) | 0.2.0 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.0.4 | python3_devtools |
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.2 | python3_devtools |
 | [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.4.5 | python3_devtools |
-| [mkdocs](https://pypi.org/project/mkdocs) | 1.5.3 | python3_devtools |
+| [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.1.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.1.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
@@ -309,4 +310,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(308 components)*
+*(309 components)*
