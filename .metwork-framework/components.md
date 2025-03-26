@@ -93,6 +93,7 @@
 | [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
+| [hjson](http://github.com/hjson/hjson-py) | 3.1.0 | python3_devtools |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.10 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
@@ -150,7 +151,7 @@
 | [mkdocs-awesome-nav](https://pypi.org/project/mkdocs-awesome-nav) | 3.0.0 | python3_devtools |
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
 | [mkdocs-get-deps](https://pypi.org/project/mkdocs-get-deps) | 0.2.0 | python3_devtools |
-| [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.0.4 | python3_devtools |
+| [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.3.7 | python3_devtools |
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.2 | python3_devtools |
 | [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.4.5 | python3_devtools |
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
@@ -273,6 +274,7 @@
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.1.0 | python3_devtools |
 | [structlog](https://pypi.org/project/structlog) | 23.1.0 | python3 |
+| [super_collections](https://pypi.org/project/super_collections) | 0.5.3 | python3_devtools |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
 | [telegraf](https://github.com/influxdata/telegraf) | 1.13.3-1 | monitoring |
@@ -310,4 +312,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(309 components)*
+*(311 components)*
