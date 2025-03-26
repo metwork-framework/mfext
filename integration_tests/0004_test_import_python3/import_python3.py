@@ -109,7 +109,7 @@ import mflog
 import mfplugin
 import mfutil
 import mkdocs_add_number_plugin
-import mkdocs_awesome_pages_plugin
+import mkdocs_awesome_nav
 import mkdocs.config.config_options #necessary to succeed to import mkdocs_exclude
 import mkdocs_exclude
 import mkdocs_get_deps
