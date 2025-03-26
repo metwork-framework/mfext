@@ -147,7 +147,7 @@
 | [mfutil_c](https://github.com/metwork-framework/mfutil_c) | 0.0.5 | core |
 | [mfutil_lua](https://github.com/metwork-framework/mfutil_lua) | 0.0.2 | openresty |
 | [mkdocs-add-number-plugin](https://github.com/shihr/mkdocs-add-number-plugin.git) | 1.2.2 | python3_devtools |
-| [mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/) | 2.9.2 | python3_devtools |
+| [mkdocs-awesome-nav](https://pypi.org/project/mkdocs-awesome-nav) | 3.0.0 | python3_devtools |
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
 | [mkdocs-get-deps](https://pypi.org/project/mkdocs-get-deps) | 0.2.0 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.0.4 | python3_devtools |
