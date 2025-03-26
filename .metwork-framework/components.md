@@ -156,7 +156,7 @@
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.3.1 | python3_devtools |
 | [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.6.9 | python3_devtools |
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
-| [mock](http://mock.readthedocs.org/en/latest/) | 5.1.0 | python3_devtools |
+| [mock](http://mock.readthedocs.org/en/latest/) | 5.2.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.1.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
