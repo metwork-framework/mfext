@@ -44,7 +44,7 @@
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | ee21fc8 | python3 |
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
-| [coverage](https://github.com/nedbat/coveragepy) | 7.3.2 | python3_devtools |
+| [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 44.0.2 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
