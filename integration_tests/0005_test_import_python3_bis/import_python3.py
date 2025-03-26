@@ -77,6 +77,7 @@ import hatch_requirements_txt
 import hatch_vcs
 import hatchling
 import hiredis
+import hjson
 import idna
 import importlib_metadata
 import iniconfig
@@ -209,6 +210,7 @@ import stack_data
 import statsd
 import stevedore
 import structlog
+import super_collections
 import telegraf_unixsocket_client
 import termcolor
 import terminaltables3
