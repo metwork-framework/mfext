@@ -62,7 +62,7 @@
 | [editables](https://pypi.org/project/editables) | 0.5 | python3_core |
 | [entrypoints](https://github.com/takluyver/entrypoints) | 0.4 | python3 |
 | [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
-| [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.1.3 | python3_devtools |
+| [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.2.2 | python3_devtools |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |

@@ -7,7 +7,7 @@ bracex==2.5
 bump-pydantic==0.8.0
 cfgv==3.4.0
 coverage==7.7.1
-exceptiongroup==1.1.3
+exceptiongroup==1.2.2
 execnet==2.0.2
 filprofiler==2024.11.2
 flake8==7.1.2
