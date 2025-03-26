@@ -100,7 +100,7 @@
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
 | [ipython](https://ipython.org) | 9.0.2 | python3 |
 | [ipython_pygments_lexers](https://pypi.org/project/ipython_pygments_lexers) | 1.1.1 | python3 |
-| [isort](https://pycqa.github.io/isort/) | 5.12.0 | python3_devtools |
+| [isort](https://pypi.org/project/isort) | 6.0.1 | python3_devtools |
 | [jedi](https://github.com/davidhalter/jedi) | 0.19.2 | python3 |
 | [jinja2-time](https://github.com/hackebrot/jinja2-time) | 0.2.0 | python3 |
 | [Jinja2](https://pypi.org/project/Jinja2) | 3.1.6 | python3 |
