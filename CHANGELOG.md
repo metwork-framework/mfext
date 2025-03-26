@@ -253,6 +253,11 @@
 - upgrade psycopg and psycopg-c from 3.1.20 to 3.2.6 (#2207)
 - bump shellcheck from 0.9.0 to 0.10.0 (#2208)
 - bump pylint to 3.3.6 and astroid to 3.3.9 (#2209)
+- bump bandit from 1.7.3 to 1.8.3 (#2211)
+- bump bracex from 2.4 to 2.5 (#2212)
+- bump black from 24.3.0 to 25.1.0 (#2213)
+- bump flit_core from 3.11.0 to 3.12.0 (#2214)
+- bump setuptools from 77.0.3 to 78.0.2 (#2215)
 
 ### Bug Fixes
 
