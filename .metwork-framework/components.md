@@ -114,7 +114,7 @@
 | [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2024.10.1 | python3 |
 | [jsonschema](https://github.com/python-jsonschema/jsonschema) | 4.23.0 | python3 |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
-| [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.9.0 | python3_devtools |
+| [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.10.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [libcst](https://pypi.org/project/libcst) | 1.5.0 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.12 | core |
