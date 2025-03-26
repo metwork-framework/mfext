@@ -63,7 +63,7 @@
 | [entrypoints](https://github.com/takluyver/entrypoints) | 0.4 | python3 |
 | [envtpl](https://github.com/metwork-framework/envtpl) | 1369721 | python3 |
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.2.2 | python3_devtools |
-| [execnet](https://execnet.readthedocs.io/en/latest/) | 2.0.2 | python3_devtools |
+| [execnet](https://execnet.readthedocs.io/en/latest/) | 2.1.1 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
