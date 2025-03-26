@@ -18,6 +18,7 @@
 | [autopep8](https://pypi.org/project/autopep8) | 2.3.2 | python3 |
 | [babel](https://babel.pocoo.org/) | 2.17.0 | python3 |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3 |
+| [backrefs](https://github.com/facelessuser/backrefs) | 5.8 | python3_devtools |
 | [bandit](https://bandit.readthedocs.io/) | 1.8.3 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.6 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 4.3.0 | python3 |
@@ -152,8 +153,8 @@
 | [mkdocs-exclude](https://github.com/apenwarr/mkdocs-exclude) | 1.0.2 | python3_devtools |
 | [mkdocs-get-deps](https://pypi.org/project/mkdocs-get-deps) | 0.2.0 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.3.7 | python3_devtools |
-| [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.2 | python3_devtools |
-| [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.4.5 | python3_devtools |
+| [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.3.1 | python3_devtools |
+| [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.6.9 | python3_devtools |
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.1.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.1.0 | python3_devtools |
@@ -312,4 +313,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(311 components)*
+*(312 components)*
