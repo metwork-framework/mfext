@@ -4,6 +4,7 @@ isort
 mkdocs-awesome-pages-plugin
 panoply
 py-spy
+pydocstyle
 pytest-httpserver
 pytest-metadata
 rich
