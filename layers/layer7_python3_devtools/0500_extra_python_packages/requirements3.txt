@@ -60,8 +60,8 @@ pytest-asyncio==0.26.0
 pytest-cov==6.0.0
 pytest-html==4.1.1
 pytest-httpserver==1.1.2
-pytest-metadata==3.0.0
 pytest-json-report==1.5.0
+pytest-metadata==3.1.1
 pytest-mock==3.11.1
 pytest-xdist==3.3.1
 pyyaml-env-tag==0.1

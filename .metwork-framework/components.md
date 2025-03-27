@@ -232,7 +232,7 @@
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.1.1 | python3_devtools |
 | [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
-| [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.0.0 | python3_devtools |
+| [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.1.1 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.11.1 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.3.1 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.5 | python3_devtools |
