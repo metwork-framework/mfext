@@ -228,7 +228,7 @@
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
-| [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.21.1 | python3_devtools |
+| [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.26.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 4.1.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.1.1 | python3_devtools |
 | [pytest-httpserver](https://github.com/csernazs/pytest-httpserver) | 1.0.8 | python3_devtools |
