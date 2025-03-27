@@ -196,7 +196,7 @@
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 17.4 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
-| [pre_commit](https://github.com/pre-commit/pre-commit) | 4.0.1 | python3_devtools |
+| [pre_commit](https://github.com/pre-commit/pre-commit) | 4.2.0 | python3_devtools |
 | [proj](http://trac.osgeo.org/proj/) | 9.6.0 | scientific_core |
 | [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.50 | python3 |
 | [propcache](https://github.com/aio-libs/propcache) | 0.3.0 | python3 |
