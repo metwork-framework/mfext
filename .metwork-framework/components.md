@@ -173,7 +173,7 @@
 | [openssl](https://www.openssl.org/) | 3.4.1 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 24.2 | python3_core |
-| [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
+| [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.5.1 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
