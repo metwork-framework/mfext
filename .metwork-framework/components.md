@@ -229,7 +229,7 @@
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.26.0 | python3_devtools |
-| [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 4.1.0 | python3_devtools |
+| [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.1.1 | python3_devtools |
 | [pytest-httpserver](https://github.com/csernazs/pytest-httpserver) | 1.0.8 | python3_devtools |
 | [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
