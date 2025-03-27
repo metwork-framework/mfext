@@ -50,7 +50,7 @@ pre-commit==4.2.0
 py-spy==0.4.0
 pydocstyle==6.3.0
 pyflakes==3.2.0
-pyinstaller-hooks-contrib==2024.8
+pyinstaller-hooks-contrib==2025.2
 pyinstaller==6.10.0
 pylint==3.3.6
 pymdown-extensions==10.3
