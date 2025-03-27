@@ -188,7 +188,7 @@
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.github.io) | 11.1.0 | python3 |
 | [pip](https://pip.pypa.io/) | 25.0.1 | python3_core |
-| [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.13.1 | python3_devtools |
+| [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
