@@ -65,7 +65,6 @@ pytest-metadata==3.1.1
 pytest-mock==3.14.0
 pytest-xdist==3.6.1
 pyyaml-env-tag==0.1
-repackage==0.7.3
 setuptools-git-versioning==1.13.5
 sftp-py==0.2.1
 simple-term-menu==1.6.4
