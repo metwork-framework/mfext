@@ -199,6 +199,7 @@ import setuptools_rust
 import setuptools_scm
 import setuptools
 import sftp_py
+import shellingham
 import simple_term_menu
 import simpleeval
 import six

@@ -66,6 +66,7 @@ pytest-mock==3.14.0
 pytest-xdist==3.6.1
 pyyaml-env-tag==0.1
 setuptools-git-versioning==2.1.0
+shellingham==1.5.4
 sftp-py==0.2.1
 simple-term-menu==1.6.6
 smmap==5.0.2
@@ -73,7 +74,7 @@ snowballstemmer==2.2.0
 stevedore==5.4.1
 super-collections==0.5.3
 tox==4.25.0
-typer==0.9.0
+typer==0.15.2
 typing-inspect==0.9.0
 watchdog==6.0.0
 wcmatch==8.5
