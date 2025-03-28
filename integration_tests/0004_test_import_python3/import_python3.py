@@ -16,6 +16,7 @@ import attr #attrs
 import autopep8
 import babel
 import backcall
+import backrefs
 import bandit
 import bash
 import bcrypt
@@ -76,6 +77,7 @@ import hatch_requirements_txt
 import hatch_vcs
 import hatchling
 import hiredis
+import hjson
 import idna
 import iniconfig
 import inotify_simple
@@ -109,9 +111,10 @@ import mflog
 import mfplugin
 import mfutil
 import mkdocs_add_number_plugin
-import mkdocs_awesome_pages_plugin
+import mkdocs_awesome_nav
 import mkdocs.config.config_options #necessary to succeed to import mkdocs_exclude
 import mkdocs_exclude
+import mkdocs_get_deps
 import mkdocs_macros
 import materialx #mkdocs-material-extensions
 import material #mkdocs-material
@@ -182,7 +185,6 @@ import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag
 import redis
 import regex
-import repackage
 import requests_unixsocket
 import requests
 import rich
@@ -193,6 +195,7 @@ import setuptools_rust
 import setuptools_scm
 import setuptools
 import sftp_py
+import shellingham
 import simple_term_menu
 import simpleeval
 import six
@@ -204,6 +207,7 @@ import stack_data
 import statsd
 import stevedore
 import structlog
+import super_collections
 import telegraf_unixsocket_client
 import termcolor
 import terminaltables3
@@ -217,6 +221,7 @@ import trove_classifiers
 import typer
 import typing_extensions
 import typing_inspect
+import typing_inspection
 import unidecode
 import urllib3
 import virtualenv
