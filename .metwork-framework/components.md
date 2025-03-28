@@ -299,7 +299,7 @@
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
-| [wcmatch](https://github.com/facelessuser/wcmatch) | 8.5 | python3_devtools |
+| [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.3 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.45.1 | python3_core |
@@ -314,4 +314,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(312 components)*
+*(313 components)*

@@ -77,4 +77,4 @@ tox==4.25.0
 typer==0.15.2
 typing-inspect==0.9.0
 watchdog==6.0.0
-wcmatch==8.5
+wcmatch==10.0
