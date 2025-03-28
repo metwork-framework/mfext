@@ -70,7 +70,7 @@ sftp-py==0.2.1
 simple-term-menu==1.6.6
 smmap==5.0.2
 snowballstemmer==2.2.0
-stevedore==5.1.0
+stevedore==5.4.1
 super-collections==0.5.3
 tox==4.23.2
 typer==0.9.0
