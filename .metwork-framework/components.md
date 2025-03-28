@@ -254,7 +254,7 @@
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
-| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
+| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.10.2 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
