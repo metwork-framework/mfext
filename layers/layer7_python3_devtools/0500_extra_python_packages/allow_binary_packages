@@ -9,3 +9,4 @@ pytest-httpserver
 pytest-metadata
 rich
 tomlkit
+typer
