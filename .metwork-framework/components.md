@@ -272,7 +272,7 @@
 | [sqlite](http://sqlite.org/) | 3.49.1 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
-| [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.1.0 | python3_devtools |
+| [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.4.1 | python3_devtools |
 | [structlog](https://pypi.org/project/structlog) | 23.1.0 | python3 |
 | [super_collections](https://pypi.org/project/super_collections) | 0.5.3 | python3_devtools |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
