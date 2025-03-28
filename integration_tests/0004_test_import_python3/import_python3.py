@@ -220,6 +220,7 @@ import trove_classifiers
 import typer
 import typing_extensions
 import typing_inspect
+import typing_inspection
 import unidecode
 import urllib3
 import virtualenv
