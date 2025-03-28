@@ -265,7 +265,7 @@
 | [simpleeval](https://pypi.org/project/simpleeval) | 1.0.3 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
-| [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
+| [smmap](https://github.com/gitpython-developers/smmap) | 5.0.2 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.6 | python3 |
