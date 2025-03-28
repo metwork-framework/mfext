@@ -279,6 +279,23 @@
 - bump mkdocs-material to 9.6.9 and mkdocs-material-extensions to 1.3.1 (#2235)
 - bump mock from 5.1.0 to 5.2.0 (#2236)
 - bump more-itertools from 10.1.0 to 10.6.0 (#2237)
+- bump paginate from 0.5.6 to 0.5.7 (#2238)
+- bump pdoc3 from 0.10.0 to 0.11.6 (#2239)
+- bump pipdeptree from 2.13.1 to 2.26.0 (#2240)
+- bump pre-commit from 4.0.1 to 4.2.0 (#2241)
+- bump py-spy from 0.3.14 to 0.4.0 (#2242)
+- bump pydocstyle from 6.1.1 to 6.3.0 (#2243)
+- bump pyinstaller-hooks-contrib from 2024.8 to 2025.2 (#2244)
+- bump pyinstaller from 6.10.0 to 6.12.0 (#2245)
+- bump pymdown-extensions from 10.3 to 10.14.3 (#2246)
+- bump pyproject-api 1.8.0 to 1.9.0 (#2247)
+- bump pytest from 8.3.4 to 8.3.5 (#2248)
+- bump pytest-asyncio from 0.21.1 to 0.26.0 (#2249)
+- bump pytest-cov from 4.1.0 to 6.0.0 (#2250)
+- bump pytest-httpserver from 1.0.8 to 1.1.2 (#2251)
+- bump pytest-metadata from 3.0.0 to 3.1.1 (#2252)
+- bump pytest-mock from 3.11.1 to 3.14.0 (#2253)
+- bump pytest-xdist from 3.3.1 to 3.6.1 (#2254)
 
 ### Bug Fixes
 
