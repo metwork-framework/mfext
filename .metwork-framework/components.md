@@ -261,7 +261,7 @@
 | [setuptools](https://pypi.org/project/setuptools) | 78.1.0 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
-| [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.4 | python3_devtools |
+| [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.6 | python3_devtools |
 | [simpleeval](https://pypi.org/project/simpleeval) | 1.0.3 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
