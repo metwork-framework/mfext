@@ -296,6 +296,15 @@
 - bump pytest-metadata from 3.0.0 to 3.1.1 (#2252)
 - bump pytest-mock from 3.11.1 to 3.14.0 (#2253)
 - bump pytest-xdist from 3.3.1 to 3.6.1 (#2254)
+- bump setuptools-git-versioning from 1.13.5 to 2.1.0 (#2257)
+- bump simple-term-menu from 1.6.4 to 1.6.6 (#2258)
+- bump smmap from 5.0.1 to 5.0.2 (#2259)
+- bump stevedore from 5.1.0 to 5.4.1 (#2260)
+- bump tox from 4.23.2 to 4.25.0 (#2261)
+- bump pydantic to 2.11.0 and pydantic-core to 2.33.0 (#2263)
+- bump typer from 0.9.0 to 0.15.2 and add shellingham (#2262)
+- bump watchdog from 3.0.0 to 6.0.0 (#2264)
+- bump wcmatch from 8.5 to 10.0 (#2265)
 
 ### Bug Fixes
 
