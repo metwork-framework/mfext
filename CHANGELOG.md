@@ -7,6 +7,8 @@
 - add proj patch from synopsis with skew mercator projection (backport #1965) (#1980)
 - add PostGreSQL extension pg_uuidv7 (backport #1957) (#1979)
 - bump Python 3.11 from 3.11.10 to 3.11.11 (#2003)
+- bump certifi to 2024.7.4 (to fix CVE-2024-39689) (backport #1904) (#2268)
+- bump zipp from 3.16.2 to 3.19.2 (fix CVE-2024-5569) (backport #1906) (#2269)
 
 ### Bug Fixes
 
