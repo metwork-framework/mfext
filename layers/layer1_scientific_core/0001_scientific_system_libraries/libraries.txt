@@ -4,8 +4,6 @@
 /usr/lib64/libgsl.so.23.1.0
 /usr/lib64/libgslcblas.so.0
 /usr/lib64/libgslcblas.so.0.0.0
-/usr/lib64/libjasper.so.4
-/usr/lib64/libjasper.so.4.0.0
 /usr/lib64/libopenjp2.so.7
 /usr/lib64/libopenjp2.so.2.4.0
 /usr/lib64/libsz.so.2
