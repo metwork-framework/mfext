@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=gdal
-export VERSION=3.10.2
+export VERSION=3.10.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=882761659217c593a4a8028111b15a2a
+export CHECKSUM=16da014e47c8db37d3d2fd45409ff0ca
 DESCRIPTION=\
 GDAL is a set of libraries and tools for raster and vector geospatial data formats. \
 As a library, it presents a single raster abstract data model and single vector abstract data model \
