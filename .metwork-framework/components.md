@@ -2,7 +2,7 @@
 | --- | --- | --- |
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.13 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.16 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 92ddc7e | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.2 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
