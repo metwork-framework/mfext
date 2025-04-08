@@ -306,6 +306,11 @@
 - bump watchdog from 3.0.0 to 6.0.0 (#2264)
 - bump wcmatch from 8.5 to 10.0 (#2265)
 - bump pydantic from 2.11.0 to 2.11.1 (#2267)
+- add recent jasper library (required for g2clib) (#2271)
+- bump aiohttp from 3.11.13 (yanked) to 3.11.16 (#2273)
+- bump typing-extensions from 4.13.0 to 4.13.1 (#2274)
+- bump pydantic to 2.11.2 and pydantic-core to 2.33.1 (#2275)
+- bump gdal from 3.10.2 to 3.10.3 (#2276)
 
 ### Bug Fixes
 
