@@ -311,6 +311,7 @@
 - bump typing-extensions from 4.13.0 to 4.13.1 (#2274)
 - bump pydantic to 2.11.2 and pydantic-core to 2.33.1 (#2275)
 - bump gdal from 3.10.2 to 3.10.3 (#2276)
+- fix for requirements using a tar.gz (#2277)
 
 ### Bug Fixes
 

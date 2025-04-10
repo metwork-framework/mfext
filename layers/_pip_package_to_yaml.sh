@@ -26,6 +26,9 @@ if test "${N}" -gt 0; then
     SOURCE=$(echo "${PACKAGE}" |awk -F "#egg=" '{print $1;}' |sed 's/^-e //g')
     PACKAGE=$(echo "${PACKAGE}" |awk -F "#egg=" '{print $2;}')
     GIT_REF=$(echo "${SOURCE}" | awk -F "@" '{print $2;}')
+    if test "${GIT_REF}" = ""; then
+        GIT_REF=$(echo "${SOURCE}" | awk -F ".tar.gz" '{print $1;}' | awk -F "-" '{print $NF;}')
+    fi
     if test "${PACKAGE}" = ""; then
         echo "can't find egg name in $2 => missing #egg=xxxxx part in the url ?"
         exit 1
