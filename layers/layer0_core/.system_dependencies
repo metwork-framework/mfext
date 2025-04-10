@@ -43,3 +43,4 @@ libzstd.so.1()(64bit)@generic
 /usr/bin/file@generic
 /usr/bin/wget@generic
 /usr/bin/which@generic
+/usr/bin/awk@generic
