@@ -165,7 +165,7 @@
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 1.32.0 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 5.4.2 | python3_devtools |
 | [python-dateutil](https://dateutil.readthedocs.io) | 2.8.1 | python3 |
-| [Python](http://python.org/) | 3.9.20 | python3_core |
+| [Python](http://python.org/) | 3.9.22 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
