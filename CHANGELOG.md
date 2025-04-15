@@ -312,6 +312,10 @@
 - bump pydantic to 2.11.2 and pydantic-core to 2.33.1 (#2275)
 - bump gdal from 3.10.2 to 3.10.3 (#2276)
 - fix for requirements using a tar.gz (#2277)
+- bump Python 3.12 from 3.12.9 to 3.12.10 (#2280)
+- bump pydantic from 2.11.2 to 2.11.3 (#2284)
+- bump typing_extensions from 4.13.1 to 4.13.2 (#2285)
+- bump urllib3 from 2.3.0 to 2.4.0 (#2287)
 
 ### Bug Fixes
 
