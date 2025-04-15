@@ -5,6 +5,7 @@
 ### New Features
 
 - upgrade Python 3.10 from 3.10.15 to 3.10.16 (#2005)
+- bump Python 3.10 from 3.10.16 to 3.10.17 (#2282)
 
 ## v2.1.10 (2024-09-14)
 
