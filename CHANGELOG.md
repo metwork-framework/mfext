@@ -316,6 +316,7 @@
 - bump pydantic from 2.11.2 to 2.11.3 (#2284)
 - bump typing_extensions from 4.13.1 to 4.13.2 (#2285)
 - bump urllib3 from 2.3.0 to 2.4.0 (#2287)
+- bump pgbouncer from 1.24.0 to 1.24.1 (fix CVE-2025-2291) (#2288)
 
 ### Bug Fixes
 
