@@ -84,7 +84,7 @@ fi
 
 # FIXME: do not hardcode this
 # FIXME: move to layer root extra_env ?
-echo "export PYTHON3_SHORT_VERSION := 3.12" >>adm/root.mk
+echo "export PYTHON3_SHORT_VERSION := 3.13" >>adm/root.mk
 
 echo "BOOTSTRAP DONE !"
 echo "MFEXT_HOME=${MFEXT_HOME}"
