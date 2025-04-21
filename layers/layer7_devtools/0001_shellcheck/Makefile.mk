@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include $(SRC_DIR)/layers/package.mk
 
 export NAME=shellcheck
-export VERSION=0.9.0
+export VERSION=0.10.0
 export EXTENSION=tar.xz
 export CHECKTYPE=MD5
-export CHECKSUM=206ca97e055fccfe3546369d14a37760
+export CHECKSUM=8a0f1236a7e91c48f724288f482c5d4d
 export EXPLICIT_NAME=$(NAME)-v$(VERSION)
 DESCRIPTION=\
 ShellCheck is a bash linter
