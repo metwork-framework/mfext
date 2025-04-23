@@ -319,6 +319,7 @@
 - bump pgbouncer from 1.24.0 to 1.24.1 (fix CVE-2025-2291) (#2288)
 - bump setuptools from 78.1.0 to 78.1.1 (#2289)
 - revert "bump packaging from 24.2 to 25.0" (because of lightning) (#2294)
+- bump setuptools from 78.1.1 to 79.0.0 (#2296)
 
 ### Bug Fixes
 
