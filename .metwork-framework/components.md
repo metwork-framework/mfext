@@ -54,6 +54,7 @@
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/laurent-laporte-pro/deprecated) | 1.2.18 | python3 |
+| [deprecation](http://deprecation.readthedocs.io/) | 2.1.0 | python3 |
 | [dill](https://github.com/uqfoundation/dill) | 0.3.9 | python3 |
 | [directory_observer](https://github.com/metwork-framework/directory_observer) | 403e3b0 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.6.3 | python3 |
@@ -315,4 +316,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(314 components)*
+*(315 components)*

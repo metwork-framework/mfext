@@ -46,6 +46,7 @@ import Cython
 import decorator
 import deploycron
 import deprecated
+import deprecation
 import directory_observer
 import diskcache
 import distlib
