@@ -10,6 +10,7 @@
 - bump certifi to 2024.7.4 (to fix CVE-2024-39689) (backport #1904) (#2268)
 - bump zipp from 3.16.2 to 3.19.2 (fix CVE-2024-5569) (backport #1906) (#2269)
 - bump Python 3.11 from 3.11.11 to 3.11.12 (#2281)
+- bump certifi from 2025.1.31 to 2025.4.26 (backport #2300) (#2301)
 
 ### Bug Fixes
 
