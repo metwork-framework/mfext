@@ -323,6 +323,7 @@
 - bump setuptools from 79.0.0 to 79.0.1 (#2297)
 - bump pip from 25.0.1 to 25.1 (#2299)
 - bump certifi from 2025.1.31 to 2025.4.26 (#2300)
+- bump dill from 0.3.9 to 0.4.0 (#2303)
 
 ### Bug Fixes
 
