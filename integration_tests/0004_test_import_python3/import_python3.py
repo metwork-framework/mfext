@@ -44,6 +44,7 @@ import cronwrapper
 import cryptography
 import Cython
 import decorator
+import defusedxml
 import deploycron
 import deprecated
 import deprecation

@@ -52,6 +52,7 @@
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.0.12 | python3 |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
+| [defusedxml](https://github.com/tiran/defusedxml) | 0.7.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/laurent-laporte-pro/deprecated) | 1.2.18 | python3 |
 | [deprecation](http://deprecation.readthedocs.io/) | 2.1.0 | python3 |
@@ -316,4 +317,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(315 components)*
+*(316 components)*
