@@ -260,7 +260,7 @@
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.10.2 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
-| [setuptools](https://pypi.org/project/setuptools) | 79.0.1 | python3_core |
+| [setuptools](https://pypi.org/project/setuptools) | 80.3.1 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
 | [shellingham](https://github.com/sarugaku/shellingham) | 1.5.4 | python3_devtools |
