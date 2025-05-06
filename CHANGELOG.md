@@ -324,6 +324,12 @@
 - bump pip from 25.0.1 to 25.1 (#2299)
 - bump certifi from 2025.1.31 to 2025.4.26 (#2300)
 - bump dill from 0.3.9 to 0.4.0 (#2303)
+- bump setuptools from 79.0.1 to 80.3.1 (#2304)
+- bump charset-normalizer from 3.4.1 to 3.4.2 (#2305)
+- bump cryptography from 44.0.2 to 44.0.3 (#2306)
+- bump pydantic to 2.11.4 and pydantic-core to 2.33.2 (#2307)
+- bump pip from 25.1 to 25.1.1 (#2308)
+- add defusedxml (required by python_scientific and extratools) (#2309)
 
 ### Bug Fixes
 
