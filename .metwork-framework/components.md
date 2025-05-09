@@ -170,7 +170,7 @@
 | [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
-| [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
+| [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.15.8.4 | openresty |
 | [openssl](https://www.openssl.org/) | 3.4.1 | core |
