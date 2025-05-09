@@ -330,6 +330,7 @@
 - bump pydantic to 2.11.4 and pydantic-core to 2.33.2 (#2307)
 - bump pip from 25.1 to 25.1.1 (#2308)
 - add defusedxml (required by python_scientific and extratools) (#2309)
+- bump postgresql from 17.4 to 17.5 (#2310)
 
 ### Bug Fixes
 
