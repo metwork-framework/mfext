@@ -32,11 +32,11 @@
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
-| [certifi](https://certifi.io) | 2025.1.31 | python3_core |
+| [certifi](https://certifi.io) | 2025.4.26 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
-| [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.4.1 | python3 |
+| [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.4.2 | python3 |
 | [circus](https://pypi.org/project/circus) | 6fdf573 | python3_circus |
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 9d208a1 | python3_circus |
 | [click](https://pypi.org/project/click) | 8.1.8 | python3 |
@@ -47,14 +47,16 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 44.0.2 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 44.0.3 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.0.12 | python3 |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
+| [defusedxml](https://github.com/tiran/defusedxml) | 0.7.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 2734221 | python3 |
 | [Deprecated](https://github.com/laurent-laporte-pro/deprecated) | 1.2.18 | python3 |
-| [dill](https://github.com/uqfoundation/dill) | 0.3.9 | python3 |
+| [deprecation](http://deprecation.readthedocs.io/) | 2.1.0 | python3 |
+| [dill](https://github.com/uqfoundation/dill) | 0.4.0 | python3 |
 | [directory_observer](https://github.com/metwork-framework/directory_observer) | 403e3b0 | python3 |
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.6.3 | python3 |
 | [distlib](https://github.com/pypa/distlib) | 0.3.9 | python3_core |
@@ -168,7 +170,7 @@
 | [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
-| [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
+| [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.15.8.4 | openresty |
 | [openssl](https://www.openssl.org/) | 3.4.1 | core |
@@ -188,14 +190,14 @@
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.github.io) | 11.1.0 | python3 |
-| [pip](https://pip.pypa.io/) | 25.0.1 | python3_core |
+| [pip](https://pip.pypa.io/) | 25.1.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.5.2 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
-| [postgresql](http://postgresql.org/) | 17.4 | scientific_core |
+| [postgresql](http://postgresql.org/) | 17.5 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [pre_commit](https://github.com/pre-commit/pre-commit) | 4.2.0 | python3_devtools |
 | [proj](http://trac.osgeo.org/proj/) | 9.6.0 | scientific_core |
@@ -215,8 +217,8 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.22 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.11.3 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.33.1 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.11.4 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.33.2 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.19.1 | python3 |
@@ -259,7 +261,7 @@
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.10.2 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
-| [setuptools](https://pypi.org/project/setuptools) | 78.1.1 | python3_core |
+| [setuptools](https://pypi.org/project/setuptools) | 80.3.1 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
 | [shellingham](https://github.com/sarugaku/shellingham) | 1.5.4 | python3_devtools |
@@ -315,4 +317,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(314 components)*
+*(316 components)*
