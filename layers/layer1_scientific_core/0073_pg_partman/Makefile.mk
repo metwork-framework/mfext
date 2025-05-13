@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=pg_partman
-export VERSION=4.5.1
+export VERSION=5.2.4
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=55a1a2f9f9de977803cbff9c910dbbea
+export CHECKSUM=d4e3c605255f6746056d4db0dc63ad65
 DESCRIPTION=\
 PG_PARTMAN is a PostGreSQL extension to create and manage both time-based and serial-based table partition sets
 WEBSITE=https://github.com/pgpartman/pg_partman
