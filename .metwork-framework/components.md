@@ -154,23 +154,13 @@
 | [packaging](https://pypi.org/project/packaging) | 23.1 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
-<<<<<<< HEAD
 | [paramiko](https://paramiko.org) | 3.4.0 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://pypi.org/project/pathspec) | 0.11.2 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.11.1 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.10.0 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.8.0 | python3_devtools |
-| [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
-=======
-| [paramiko](https://paramiko.org) | 3.5.1 | python3 |
-| [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
-| [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
-| [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
-| [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
-| [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
->>>>>>> 5f6a2b6 (feat: bump pg_partman from 4.5.1 to 5.2.4 (#2314))
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.21.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
