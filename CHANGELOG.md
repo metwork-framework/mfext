@@ -11,6 +11,7 @@
 - bump zipp from 3.16.2 to 3.19.2 (fix CVE-2024-5569) (backport #1906) (#2269)
 - bump Python 3.11 from 3.11.11 to 3.11.12 (#2281)
 - bump certifi from 2025.1.31 to 2025.4.26 (backport #2300) (#2301)
+- bump pg_partman from 4.5.1 to 5.2.4 (backport #2314) (#2315)
 
 ### Bug Fixes
 
