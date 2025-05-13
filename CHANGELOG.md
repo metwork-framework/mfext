@@ -4,6 +4,12 @@
 
 ### New Features
 
+- bump pg_partman from 4.5.1 to 5.2.4 (backport #2314) (#2316)
+
+## v2.3.0 (2025-05-13)
+
+### New Features
+
 - bump aiohttp from 3.8.6 to 3.9.1 (for security reason) (#1742)
 - bump cryptography from 41.0.4 to 41.0.7 (security) (#1745)
 - bump gdal from 3.8.0 to 3.8.1 (#1747)
