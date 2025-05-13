@@ -184,7 +184,7 @@
 | [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
-| [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
+| [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.24.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
