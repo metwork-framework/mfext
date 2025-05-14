@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## v2.3.1 (2025-05-13)
+
+### New Features
+
+- bump pg_partman from 4.5.1 to 5.2.4 (backport #2314) (#2316)
+
 ## v2.3.0 (2025-05-13)
 
 ### New Features
