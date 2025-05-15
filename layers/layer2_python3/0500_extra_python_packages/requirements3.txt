@@ -72,6 +72,7 @@ multidict==6.1.0
 mypy-extensions==1.0.0
 netifaces2==0.0.22
 opinionated-configparser==1.0.1
+orjson==3.10.18
 paramiko==3.5.1
 parso==0.8.4
 pexpect==4.9.0
