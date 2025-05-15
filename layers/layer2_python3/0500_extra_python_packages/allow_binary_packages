@@ -1,5 +1,6 @@
 aiohappyeyeballs
 fakeredis
+orjson
 requests-unixsocket2
 rich
 terminaltables3
