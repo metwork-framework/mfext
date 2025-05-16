@@ -80,3 +80,5 @@ entrypoints
 soupsieve
 Pillow
 lxml
+orjson
+scikit-build-core
