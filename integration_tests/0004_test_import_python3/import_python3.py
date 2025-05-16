@@ -129,6 +129,7 @@ import natsort
 import netifaces
 import nltk
 import opinionated_configparser
+import orjson
 import packaging
 import paginate
 import panoply
@@ -190,6 +191,7 @@ import regex
 import requests_unixsocket
 import requests
 import rich
+import scikit_build_core
 import semantic_version
 import setuptools_git
 import setuptools_git_versioning

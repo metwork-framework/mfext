@@ -175,6 +175,7 @@
 | [openresty](http://openresty.org) | 1.15.8.4 | openresty |
 | [openssl](https://www.openssl.org/) | 3.4.1 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
+| [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 24.2 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
@@ -184,7 +185,7 @@
 | [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
-| [pg_partman](https://github.com/pgpartman/pg_partman) | 4.5.1 | scientific_core |
+| [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.24.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
@@ -256,6 +257,7 @@
 | [requests](https://requests.readthedocs.io) | 2.32.3 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
+| [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
@@ -317,4 +319,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(316 components)*
+*(318 components)*
