@@ -257,6 +257,7 @@
 | [requests](https://requests.readthedocs.io) | 2.32.3 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
+| [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
@@ -318,4 +319,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(317 components)*
+*(318 components)*
