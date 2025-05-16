@@ -9,7 +9,8 @@ pull_request_rules:
       - -closed
     actions:
       label:
-        add: ["Type: Backport"]
+        add:
+          - "Type: Backport"
   - name: backport to 0.5
     conditions:
       - base=integration
@@ -111,8 +112,6 @@ pull_request_rules:
     actions:
       merge:
         method: squash
-        #strict: true
-        #commit_message: title+body
         commit_message_template: |-
           {{ title }} (#{{ number }})
 
@@ -127,10 +126,10 @@ pull_request_rules:
       - "#approved-reviews-by>=1"
       - -title~=(WIP|wip)
       - "label!=Status: Blocked"
-      - "title~=^(build|chore|ci|docs|style|refactor|perf|test|fix|feat|fix|feat|feat!|fix!)(\\([a-z]+\\))?: .*$"
+      - "title~=^(build|chore|ci|docs|style|refactor|perf|test|fix|fea\
+        t|fix|feat|feat!|fix!)(\\([a-z]+\\))?: .*$"
 
       - status-success=license/cla
-
 
   - name: change title
     actions:
@@ -154,16 +153,16 @@ pull_request_rules:
       - "#approved-reviews-by>=1"
       - -title~=(WIP|wip)
       - "label!=Status: Blocked"
-      - "-title~=^(build|chore|ci|docs|style|refactor|perf|test|fix|feat|fix|feat|feat!|fix!)(\\([a-z]+\\))?: .*$"
+      - "-title~=^(build|chore|ci|docs|style|refactor|perf|test|fix|fe\
+        at|fix|feat|feat!|fix!)(\\([a-z]+\\))?: .*$"
 
       - status-success=license/cla
-
 
   - name: buildbot auto merges
     actions:
       review:
         type: APPROVE
-        message: "automatic approve because author=metworkbot"
+        message: automatic approve because author=metworkbot
     conditions:
 
       - base!=master
@@ -189,8 +188,17 @@ pull_request_rules:
   - name: wip
     actions:
       label:
-        add: ["Status: In Progress"]
-        remove: ["Status: Revision Needed", "Status: Pending", "Status: Review Needed", "Status: Accepted", "Status: Blocked", "Status: NotReproduced", "Status: Merged", "Status: Merge Now"]
+        add:
+          - "Status: In Progress"
+        remove:
+          - "Status: Revision Needed"
+          - "Status: Pending"
+          - "Status: Review Needed"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: NotReproduced"
+          - "Status: Merged"
+          - "Status: Merge Now"
     conditions:
 
       - base!=master
@@ -202,8 +210,17 @@ pull_request_rules:
   - name: review needed
     actions:
       label:
-        add: ["Status: Review Needed"]
-        remove: ["Status: Revision Needed", "Status: Pending", "Status: In Progress", "Status: Accepted", "Status: Blocked", "Status: NotReproduced", "Status: Merged", "Status: Merge Now"]
+        add:
+          - "Status: Review Needed"
+        remove:
+          - "Status: Revision Needed"
+          - "Status: Pending"
+          - "Status: In Progress"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: NotReproduced"
+          - "Status: Merged"
+          - "Status: Merge Now"
     conditions:
 
       - base!=master
@@ -214,12 +231,21 @@ pull_request_rules:
       - "label!=Status: Blocked"
       - "label!=Status: Merge Now"
       - "#approved-reviews-by=0"
-      - "author!=metworkbot"
+      - author!=metworkbot
   - name: revision needed1
     actions:
       label:
-        add: ["Status: Revision Needed"]
-        remove: ["Status: In Progress", "Status: Pending", "Status: Review Needed", "Status: Accepted", "Status: Blocked", "Status: NotReproduced", "Status: Merged", "Status: Merge Now"]
+        add:
+          - "Status: Revision Needed"
+        remove:
+          - "Status: In Progress"
+          - "Status: Pending"
+          - "Status: Review Needed"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: NotReproduced"
+          - "Status: Merged"
+          - "Status: Merge Now"
     conditions:
 
       - base!=master
@@ -231,8 +257,17 @@ pull_request_rules:
   - name: revision needed2
     actions:
       label:
-        add: ["Status: Revision Needed"]
-        remove: ["Status: In Progress", "Status: Pending", "Status: Review Needed", "Status: Accepted", "Status: Blocked", "Status: NotReproduced", "Status: Merged", "Status: Merge Now"]
+        add:
+          - "Status: Revision Needed"
+        remove:
+          - "Status: In Progress"
+          - "Status: Pending"
+          - "Status: Review Needed"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: NotReproduced"
+          - "Status: Merged"
+          - "Status: Merge Now"
     conditions:
 
       - base!=master
@@ -258,8 +293,17 @@ pull_request_rules:
 
            Many thanks!
       label:
-        add: ["Status: Revision Needed"]
-        remove: ["Status: Pending", "Status: Review Needed", "Status: Accepted", "Status: Blocked", "Status: Closed", "Status: In Progress", "Status: NotReproduced", "Status: Merge Now"]
+        add:
+          - "Status: Revision Needed"
+        remove:
+          - "Status: Pending"
+          - "Status: Review Needed"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: Closed"
+          - "Status: In Progress"
+          - "Status: NotReproduced"
+          - "Status: Merge Now"
     conditions:
       - base=master
       - -closed
@@ -267,15 +311,36 @@ pull_request_rules:
   - name: closed
     actions:
       label:
-        add: ["Status: Closed"]
-        remove: ["Status: Revision Needed", "Status: Pending", "Status: Merged", "Status: Review Needed", "Status: Accepted", "Status: Blocked", "Status: In Progress", "Status: NotReproduced", "Status: Merge Now"]
+        add:
+          - "Status: Closed"
+        remove:
+          - "Status: Revision Needed"
+          - "Status: Pending"
+          - "Status: Merged"
+          - "Status: Review Needed"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: In Progress"
+          - "Status: NotReproduced"
+          - "Status: Merge Now"
     conditions:
       - closed
       - -merged
   - name: merged
     actions:
       label:
-        add: ["Status: Merged"]
-        remove: ["Status: Revision Needed", "Status: Pending", "Status: Closed", "Status: Review Needed", "Status: Accepted", "Status: Blocked", "Status: In Progress", "Status: NotReproduced", "Status: Merge Now"]
+        add:
+          - "Status: Merged"
+        remove:
+          - "Status: Revision Needed"
+          - "Status: Pending"
+          - "Status: Closed"
+          - "Status: Review Needed"
+          - "Status: Accepted"
+          - "Status: Blocked"
+          - "Status: In Progress"
+          - "Status: NotReproduced"
+          - "Status: Merge Now"
     conditions:
       - merged
+queue_rules: []
