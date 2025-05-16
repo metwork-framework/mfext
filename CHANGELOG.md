@@ -1,5 +1,12 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add orjson (required by python3_scientific and python3_extratools) (#2318)
+- add orjson (required by python3_scientific and python3_extratools) (backport #2320) (#2321)
+
 ## v2.3.1 (2025-05-13)
 
 ### New Features
