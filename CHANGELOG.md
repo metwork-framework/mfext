@@ -6,6 +6,7 @@
 
 - add orjson (required by python3_scientific and python3_extratools) (#2318)
 - add orjson (required by python3_scientific and python3_extratools) (backport #2320) (#2321)
+- add scikit-build-core 0.11.3 (#2322)
 
 ## v2.3.1 (2025-05-13)
 
