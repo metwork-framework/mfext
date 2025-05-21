@@ -117,7 +117,7 @@ structlog==23.1.0
 termcolor==2.5.0
 terminaltables3==4.0.0
 threadpoolctl==3.6.0
-tornado==6.4.2
+tornado==6.5
 tqdm==4.67.1
 traitlets==5.14.3
 types-python-dateutil==2.9.0.20241206
