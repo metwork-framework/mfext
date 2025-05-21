@@ -1,5 +1,15 @@
 # release_2.3 CHANGELOG
 
+## v2.3.2 (2025-05-21)
+
+### New Features
+
+- add orjson (required by python3_scientific and python3_extratools) (#2318)
+- add orjson (required by python3_scientific and python3_extratools) (backport #2320) (#2321)
+- add scikit-build-core 0.11.3 (#2322)
+- add pdm-backend (required by layer python3_ia and _extratools) (#2326)
+- bump tornado from 6.4.2 to 6.5 (fix CVE-2025-47287) (backport #2328) (#2329)
+
 ## v2.3.1 (2025-05-13)
 
 ### New Features
