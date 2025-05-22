@@ -183,6 +183,7 @@
 | [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
 | [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
+| [pdm-backend](https://github.com/pdm-project/pdm-backend) | 2.4.4 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
@@ -289,7 +290,7 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.6.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 6.4.2 | python3 |
+| [tornado](http://www.tornadoweb.org/) | 6.5 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.25.0 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
@@ -319,4 +320,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(318 components)*
+*(319 components)*
