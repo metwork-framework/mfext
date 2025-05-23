@@ -290,7 +290,7 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.6.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 6.5 | python3 |
+| [tornado](http://www.tornadoweb.org/) | 6.5.1 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.25.0 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
