@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.xz
+=======
+https://nodejs.org/dist/v22.16.0/node-v22.16.0-linux-x64.tar.xz
+>>>>>>> 51fccbf (feat: bump nodejs from 20.19.2 to 22.16.0 (#2334))
