@@ -1,5 +1,12 @@
 # release_2.3 CHANGELOG
 
+## v2.3.3 (2025-05-23)
+
+### New Features
+
+- bump nodejs from 20.19.2 to 22.16.0 (#2334)
+- bump tornado from 6.5 to 6.5.1 (backport #2336) (#2337)
+
 ## v2.3.2 (2025-05-21)
 
 ### New Features
