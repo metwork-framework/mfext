@@ -4,6 +4,7 @@ include $(MFEXT_HOME)/share/package.mk
 #In comment the changes if we decide to upgrade protobuf to 4.24.3
 #3.20.3 is newer than the version available on rocky9 (3.14.0), so no hurry
 #If we decide to upgrade protobuf, we will need abseil : install rpm abseil-cpp-devel rather than build abseil from sources
+#But it seems that there are problems building protobuf with installed abseil...
 #sources for 4.24.3 : https://github.com/protocolbuffers/protobuf/archive/refs/tags/v4.24.3.tar.gz
 
 export NAME=protobuf
@@ -23,4 +24,4 @@ LICENSE=Google (https://github.com/protocolbuffers/protobuf/blob/master/LICENSE)
 all:: $(PREFIX)/bin/protoc
 $(PREFIX)/bin/protoc:
 	$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX) OPTIONS="--enable-static=no" download uncompress configure build install
-	#$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX) OPTIONS="-Dprotobuf_BUILD_TESTS=OFF" download uncompress configure_cmake build_cmake install_cmake
+	#$(MAKE) --file=$(MFEXT_HOME)/share/Makefile.standard PREFIX=$(PREFIX) OPTIONS="-Dprotobuf_BUILD_TESTS=OFF -Dprotobuf_ABSL_PROVIDER=package -Dabsl_DIR=/usr/lib64/cmake/absl" download uncompress configure_cmake build_cmake install_cmake

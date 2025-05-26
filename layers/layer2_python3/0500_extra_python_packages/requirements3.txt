@@ -1,7 +1,7 @@
--e git+https://github.com/metwork-framework/acquisition.git@8205f0c2fcd323d7e36cbeecac05e74935def06c#egg=acquisition
+-e git+https://github.com/metwork-framework/acquisition.git@78a05cb1dee0eb305751cd08c27b014d7b26c912#egg=acquisition
 aiohappyeyeballs==2.5.0
 aiohttp==3.11.16
--e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@92ddc7e83b46411676368a42768bb54c1f5bd87b#egg=aiohttp_metwork_middlewares
+-e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@3ef444a64f23bdc69bf93d4a5997d2bda11dd02a#egg=aiohttp_metwork_middlewares
 aiosignal==1.3.2
 annotated-types==0.7.0
 argcomplete==3.6.0
@@ -23,20 +23,20 @@ charset_normalizer==3.4.2
 Click==8.1.8
 colorama==0.4.6
 commonmark==0.9.1
--e git+https://github.com/metwork-framework/cookiecutter.git@ee21fc8a58f1252a84858c9c217eb659609a6275#egg=cookiecutter
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@c9124c2b54c1c05cd83eb3d3454cc4214485c45d#egg=cookiecutter_hooks
-cron-wrapper==0.1.2
+-e git+https://github.com/metwork-framework/cookiecutter.git@39a141b88e50d1b927e792dd58dad24aacbbad91#egg=cookiecutter
+-e git+https://github.com/metwork-framework/cookiecutter_hooks.git@22817e1a4051cd8141dc963cde4119f65c2fae04#egg=cookiecutter_hooks
+cron-wrapper==0.1.3
 cryptography==44.0.3
 decorator==5.2.1
 defusedxml==0.7.1
--e git+https://github.com/metwork-framework/deploycron.git@27342219bc00ce9c90b18107ec321b722b3c90bb#egg=deploycron
+-e git+https://github.com/metwork-framework/deploycron.git@3d103a7d0cdaa1f21f6df994f181227e0d43329b#egg=deploycron
 Deprecated==1.2.18
 deprecation==2.1.0
 dill==0.4.0
--e git+https://github.com/metwork-framework/directory_observer.git@403e3b00e8f3f0073acda513529df96405aa6e09#egg=directory_observer
+-e git+https://github.com/metwork-framework/directory_observer.git@2c499bde00de6868cb850e3aa2e10a1c4557f6dc#egg=directory_observer
 diskcache==5.6.3
 entrypoints==0.4
--e git+https://github.com/metwork-framework/envtpl.git@136972101464853a57b61e485608167fe75f5f71#egg=envtpl
+-e git+https://github.com/metwork-framework/envtpl.git@4cd1056dcafc450f05cdfba53144712c65239080#egg=envtpl
 executing==2.2.0
 fakeredis==2.27.0
 frozenlist==1.5.0
@@ -50,10 +50,10 @@ ipython==9.0.2
 ipython_pygments_lexers==1.1.1
 jedi==0.19.2
 Jinja2==3.1.6
-jinja2-from-json-extension==1.0.0
-jinja2-fnmatch-extension==1.0.2
-jinja2-getenv-extension==1.0.2
-jinja2-shell-extension==2.1.0
+jinja2-from-json-extension==1.0.1
+jinja2-fnmatch-extension==1.0.3
+jinja2-getenv-extension==1.0.3
+jinja2-shell-extension==2.1.1
 jinja2-time==0.2.0
 joblib==1.4.2
 jsonschema==4.23.0
@@ -65,9 +65,9 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
 mdurl==0.1.2
-mflog==0.1.0
--e git+https://github.com/metwork-framework/mfplugin.git@1d27d8ba383a50f2fb160b262eaf045c02b1816a#egg=mfplugin
-mfutil==0.3.0
+mflog==0.1.1
+-e git+https://github.com/metwork-framework/mfplugin.git@1a785e18014842c199a6838980b42db80651bc0f#egg=mfplugin
+mfutil==0.3.2
 multidict==6.1.0
 mypy-extensions==1.0.0
 netifaces2==0.0.22
@@ -110,10 +110,10 @@ scikit-build-core==0.11.3
 simpleeval==1.0.3
 sortedcontainers==2.4.0
 soupsieve==2.6
--e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
+-e git+https://github.com/metwork-framework/pystatsd.git@5db419f654100b2c5f371c82cb619a1406fbaf15#egg=statsd
 stack-data==0.6.3
 structlog==23.1.0
--e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
+-e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@fc4b76ceef13c3f6843876785897c660218c0b8c#egg=telegraf_unixsocket_client
 termcolor==2.5.0
 terminaltables3==4.0.0
 threadpoolctl==3.6.0
@@ -127,7 +127,7 @@ urllib3==2.4.0
 wcwidth==0.2.13
 Werkzeug==3.1.3
 wrapt==1.17.2
--e git+https://github.com/metwork-framework/xattrfile.git@8a763c95c6ca5071db1c1395b1bfc36ad023646e#egg=xattrfile
+-e git+https://github.com/metwork-framework/xattrfile.git@857ae661ddf25da7c00964debd5f279d8303c622#egg=xattrfile
 xmltodict==0.14.2
 yarl==1.18.3
 yq==3.4.3
