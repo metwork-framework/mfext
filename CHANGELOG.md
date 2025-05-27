@@ -13,5 +13,6 @@
 - bump nodejs from 20.9.0 to 20.19.2 (#2332)
 - bump nodejs from 20.19.2 to 22.16.0 (#2334)
 - bump tornado from 6.5 to 6.5.1 (#2336)
+- upgrade internal dependencies to versions using pyproject.toml (#2338)
 
 
