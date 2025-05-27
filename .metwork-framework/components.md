@@ -27,6 +27,7 @@
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 25.1.0 | python3_devtools |
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
+| [build](https://build.pypa.io) | 1.2.2.post1 | python3_core |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
@@ -232,6 +233,7 @@
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
+| [pyproject_hooks](https://pypi.org/project/pyproject_hooks) | 1.2.0 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.26.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
@@ -320,4 +322,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(319 components)*
+*(321 components)*
