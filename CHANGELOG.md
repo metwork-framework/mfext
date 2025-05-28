@@ -14,5 +14,7 @@
 - bump nodejs from 20.19.2 to 22.16.0 (#2334)
 - bump tornado from 6.5 to 6.5.1 (#2336)
 - upgrade internal dependencies to versions using pyproject.toml (#2338)
+- build certifi with pyproject.toml (#2339)
+- bump rich from 13.9.4 to 14.0.0 (#2342)
 
 
