@@ -3,3 +3,4 @@ hatch-fancy-pypi-readme
 hatch-nodejs-version
 hatch-requirements-txt
 maturin
+pdm-backend

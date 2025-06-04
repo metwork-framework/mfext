@@ -75,7 +75,6 @@ opinionated-configparser==1.0.1
 orjson==3.10.18
 paramiko==3.5.1
 parso==0.8.4
-pdm-backend==2.4.4
 pexpect==4.9.0
 pickleshare==0.7.5
 pika==1.3.2
