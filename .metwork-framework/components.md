@@ -48,7 +48,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 22817e1 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 44.0.3 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 45.0.3 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.1.1 | python3 |
@@ -143,7 +143,7 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.7 | python3 |
 | [MarkupSafe](https://pypi.org/project/MarkupSafe) | 3.0.2 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.7 | python3 |
-| [maturin](https://pypi.org/project/maturin) | 1.8.2 | python3 |
+| [maturin](https://pypi.org/project/maturin) | 1.8.6 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.7.0 | python3_devtools |
 | [mdurl](https://github.com/executablebooks/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
@@ -264,7 +264,7 @@
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
-| [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.10.2 | python3 |
+| [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.11.1 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
 | [setuptools](https://pypi.org/project/setuptools) | 80.9.0 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
