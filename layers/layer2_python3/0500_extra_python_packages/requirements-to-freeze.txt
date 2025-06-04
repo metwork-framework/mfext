@@ -82,5 +82,4 @@ Pillow
 lxml
 orjson
 scikit-build-core
-pdm-backend
 typer
