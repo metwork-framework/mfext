@@ -16,5 +16,8 @@
 - upgrade internal dependencies to versions using pyproject.toml (#2338)
 - build certifi with pyproject.toml (#2339)
 - bump rich from 13.9.4 to 14.0.0 (#2342)
+- bump gitignore_parser from 0.1.11 to 0.1.12 (#2343)
+- bump Cython from 3.0.12 to 3.1.1 (#2344)
+- bump setuptools from 80.3.1 to 80.9.0 (#2345)
 
 
