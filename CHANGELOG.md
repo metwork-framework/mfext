@@ -19,5 +19,10 @@
 - bump gitignore_parser from 0.1.11 to 0.1.12 (#2343)
 - bump Cython from 3.0.12 to 3.1.1 (#2344)
 - bump setuptools from 80.3.1 to 80.9.0 (#2345)
+- bump gdal from 3.10.3 to 3.11.0 (#2346)
+- bump click from 8.1.8 to 8.2.1 (#2348)
+- bump cryptography from 44.0.3 to 45.0.3 (#2349)
+- bump pydantic from 2.11.4 to 2.11.5 (#2350)
+- bump typer to 0.16.0 and move it in layer python3 (#2351)
 
 
