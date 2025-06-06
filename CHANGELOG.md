@@ -24,5 +24,7 @@
 - bump cryptography from 44.0.3 to 45.0.3 (#2349)
 - bump pydantic from 2.11.4 to 2.11.5 (#2350)
 - bump typer to 0.16.0 and move it in layer python3 (#2351)
+- bump pytest from 8.3.5 to 8.4.0 (#2353)
+- bump typing-extensions from 4.13.2 to 4.14.0 (#2354)
 
 
