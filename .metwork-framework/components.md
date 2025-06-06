@@ -127,7 +127,7 @@
 | [mockredispy](http://www.github.com/locationlabs/mockredis) | 2.9.3 | python3 |
 | [more-itertools](https://pypi.org/project/more-itertools) | 9.0.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.0.2 | python3 |
-| [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
+| [mypy-extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.2.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
@@ -257,4 +257,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.4 | core |
 | [zipp](https://github.com/jaraco/zipp) | 3.8.1 | python3_core |
 
-*(255 components)*
+*(256 components)*
