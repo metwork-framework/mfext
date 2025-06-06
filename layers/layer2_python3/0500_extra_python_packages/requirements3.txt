@@ -49,6 +49,7 @@ mflog==0.1.0
 mfutil==0.2.0
 mockredispy==2.9.3
 multidict==6.0.2
+mypy-extensions==1.0.0
 netifaces==0.11.0
 opinionated-configparser==1.0.1
 paramiko==2.11.0
