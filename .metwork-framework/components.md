@@ -163,7 +163,7 @@
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.2.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
-| [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
+| [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
