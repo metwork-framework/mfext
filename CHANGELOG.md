@@ -6,6 +6,7 @@
 
 - upgrade Python 3.10 from 3.10.15 to 3.10.16 (#2005)
 - bump Python 3.10 from 3.10.16 to 3.10.17 (#2282)
+- bump Python 3.10 from 3.10.17 to 3.10.18 (#2358)
 
 ## v2.1.10 (2024-09-14)
 
