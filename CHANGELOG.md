@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump Python 3.11 from 3.11.12 to 3.11.13 (#2362)
+
 ## v2.2.14 (2025-05-13)
 
 ### New Features
