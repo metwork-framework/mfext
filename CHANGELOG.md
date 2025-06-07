@@ -26,5 +26,8 @@
 - bump typer to 0.16.0 and move it in layer python3 (#2351)
 - bump pytest from 8.3.5 to 8.4.0 (#2353)
 - bump typing-extensions from 4.13.2 to 4.14.0 (#2354)
+- bump proj from 9.6.0 to 9.6.1 (#2355)
+- bump Python 3.12 from 3.12.10 to 3.12.11 (#2360)
+- bump mypy_extensions from 1.0.0 to 1.1.0 (#2365)
 
 
