@@ -6,7 +6,6 @@ import aiosignal
 import altgraph
 import annotated_types
 import apipkg
-import appdirs
 import argcomplete
 import arrow
 import astral
@@ -60,7 +59,6 @@ import exceptiongroup
 import execnet
 import executing
 import fakeredis
-import fastentrypoints
 import filelock
 import flake8_docstrings
 import flake8
