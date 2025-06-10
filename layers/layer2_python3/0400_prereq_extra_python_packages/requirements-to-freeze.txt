@@ -1,6 +1,5 @@
 Cython
 cffi
-fastentrypoints
 pbr
 pyscaffold
 setuptools-git

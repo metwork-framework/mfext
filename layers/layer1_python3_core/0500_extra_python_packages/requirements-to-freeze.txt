@@ -2,7 +2,9 @@
 #but (at least) by something in layer python3_devtools (to investigate)
 #and by matplotlib<=3.6.1 in addon scientific
 six
-appdirs
+#appdirs is deprecated and replaced by platformdirs
+#appdirs
+platformdirs
 virtualenv
 distro
 #importlib-metadata 4.4.0 was used to build importlib.metadata in the first release of the 3.10 standard python library
