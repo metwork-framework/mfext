@@ -8,7 +8,6 @@
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
-| [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.6.0 | python3 |
 | [arrow](https://pypi.org/project/arrow) | 1.3.0 | python3 |
 | [astral](https://github.com/sffjunkie/astral) | 3.2 | python3_scientific_core |
@@ -71,7 +70,6 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
-| [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.18.0 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
@@ -322,4 +320,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(321 components)*
+*(319 components)*
