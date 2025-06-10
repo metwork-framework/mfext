@@ -255,8 +255,13 @@
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
+<<<<<<< HEAD
 | [requests](https://requests.readthedocs.io) | 2.32.3 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
+=======
+| [requests](https://requests.readthedocs.io) | 2.32.4 | python3 |
+| [rich](https://github.com/Textualize/rich) | 14.0.0 | python3 |
+>>>>>>> 3648c2c (feat: bump requests from 2.32.3 to 2.32.4 (fix CVE-2024-47081) (#2367))
 | [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
 | [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
