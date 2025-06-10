@@ -51,7 +51,7 @@
 | [cryptography](https://github.com/pyca/cryptography) | 45.0.3 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
-| [Cython](https://cython.org/) | 3.1.1 | python3 |
+| [Cython](https://cython.org/) | 3.1.2 | python3 |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
 | [defusedxml](https://github.com/tiran/defusedxml) | 0.7.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 3d103a7 | python3 |
