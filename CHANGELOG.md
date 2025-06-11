@@ -29,5 +29,10 @@
 - bump proj from 9.6.0 to 9.6.1 (#2355)
 - bump Python 3.12 from 3.12.10 to 3.12.11 (#2360)
 - bump mypy_extensions from 1.0.0 to 1.1.0 (#2365)
+- bump requests from 2.32.3 to 2.32.4 (fix CVE-2024-47081) (#2367)
+- bump proj from 9.6.1 to 9.6.2 (#2369)
+- bump Cython from 3.1.1 to 3.1.2 (#2370)
+- bump cryptography from 45.0.3 to 45.0.4 (#2371)
+- remove deprecated appdirs and fastentrypoints (#2372)
 
 
