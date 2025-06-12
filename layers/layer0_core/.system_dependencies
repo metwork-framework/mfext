@@ -15,7 +15,6 @@ liblz4.so.1()(64bit)@generic
 libm.so.6()(64bit)@generic
 libnghttp2.so.14()(64bit)@generic
 libonig.so.5()(64bit)@generic
-libpcre.so.1()(64bit)@generic
 libpng16.so.16()(64bit)@generic
 libpthread.so.0()(64bit)@generic
 libresolv.so.2()(64bit)@generic
