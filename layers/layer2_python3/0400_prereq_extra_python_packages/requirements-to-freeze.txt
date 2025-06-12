@@ -2,5 +2,4 @@ Cython
 cffi
 pbr
 pyscaffold
-setuptools-git
 setuptools-rust

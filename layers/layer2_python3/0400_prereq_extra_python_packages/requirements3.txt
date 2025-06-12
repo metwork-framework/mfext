@@ -5,6 +5,5 @@ pbr==6.1.1
 pycparser==2.22
 PyScaffold==4.6
 semantic-version==2.10.0
-setuptools-git==1.2
 setuptools-rust==1.11.1
 tomlkit==0.13.2

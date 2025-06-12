@@ -197,8 +197,6 @@ import requests
 import rich
 import scikit_build_core
 import semantic_version
-import setuptools_git
-import setuptools_git_versioning
 import setuptools_rust
 import setuptools_scm
 import setuptools
