@@ -11,7 +11,7 @@ attrs==25.1.0
 autopep8==2.3.2
 Babel==2.17.0
 backcall==0.2.0
-bash==0.6
+-e git+https://github.com/metwork-framework/bash.git@0.7#egg=bash
 bcrypt==4.3.0
 beautifulsoup4==4.13.3
 binaryornot==0.4.4
