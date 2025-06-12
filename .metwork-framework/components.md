@@ -41,7 +41,6 @@
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 86ff062 | python3_circus |
 | [click](https://pypi.org/project/click) | 8.2.1 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
-| [commonmark](https://github.com/rtfd/commonmark.py) | 0.9.1 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 39a141b | python3 |
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 22817e1 | python3 |
@@ -318,4 +317,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(317 components)*
+*(316 components)*

@@ -35,7 +35,6 @@ import chardet
 import charset_normalizer
 import click
 import colorama
-import commonmark
 import configupdater
 import cookiecutter_hooks
 import cookiecutter
