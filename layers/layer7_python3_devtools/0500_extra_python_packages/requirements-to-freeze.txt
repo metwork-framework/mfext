@@ -32,7 +32,6 @@ jmespath
 #pywget is not Python 3.12 compliant because of the use of imp (deprecated in favor of importlib)
 #pywget
 sftp-py
-setuptools-git-versioning
 pytest-json-report
 bump-pydantic
 pipdeptree
