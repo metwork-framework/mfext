@@ -2,3 +2,5 @@
 /usr/lib64/libjson-c.so.4.0.0
 /usr/lib64/libffi.so.6
 /usr/lib64/libffi.so.6.0.2
+/usr/lib64/libpcre.so.1
+/usr/lib64/libpcre.so.1.2.10
