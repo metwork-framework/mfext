@@ -34,5 +34,7 @@
 - bump Cython from 3.1.1 to 3.1.2 (#2370)
 - bump cryptography from 45.0.3 to 45.0.4 (#2371)
 - remove deprecated appdirs and fastentrypoints (#2372)
+- bump bash from 0.6 to to 0.7 (metwork-framework.org fork) (#2375)
+- bump binaryornot from 0.4.4 to 0.4.5 (metwork-framework.org fork) (#2376)
 
 
