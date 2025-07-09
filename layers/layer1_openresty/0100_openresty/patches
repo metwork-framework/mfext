@@ -5,3 +5,4 @@ github_issue384.patch
 #patch https://github.com/openresty/openresty/blob/4e8b4c395f842a078e429c80dd063b2323999957/patches/ngx_http_lua-0.10.15-fix_location_capture_content_length_chunked.patch
 #(fixing CVE-2020-11724)
 ngx_http_lua-fix_CVE-2020-11724.patch
+version-1.15.8.4.patch
