@@ -135,19 +135,10 @@
 | [nltk](https://www.nltk.org/) | 3.7 | python3_devtools |
 | [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
-<<<<<<< HEAD
-| [openresty](http://openresty.org) | 1.15.8.1 | openresty |
+| [openresty](http://openresty.org) | 1.15.8.4 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://github.com/pypa/packaging) | 21.3 | python3_core |
 | [paramiko](https://paramiko.org) | 2.11.0 | python3 |
-=======
-| [openresty](http://openresty.org) | 1.15.8.4 | openresty |
-| [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
-| [packaging](https://pypi.org/project/packaging) | 23.1 | python3_core |
-| [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
-| [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
-| [paramiko](https://paramiko.org) | 3.4.0 | python3 |
->>>>>>> e281c60 (feat: fix CVE-2020-11724 on openresty 1.15.8  (#1865))
 | [parso](https://github.com/davidhalter/parso) | 0.8.3 | python3_devtools |
 | [pathspec](https://github.com/cpburnz/python-pathspec) | 0.10.1 | python3 |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 5.10.0 | python3 |
