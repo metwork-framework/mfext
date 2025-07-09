@@ -135,7 +135,7 @@
 | [nltk](https://www.nltk.org/) | 3.7 | python3_devtools |
 | [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
-| [openresty](http://openresty.org) | 1.15.8.1 | openresty |
+| [openresty](http://openresty.org) | 1.15.8.4 | openresty |
 | [opinionated-configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://github.com/pypa/packaging) | 21.3 | python3_core |
 | [paramiko](https://paramiko.org) | 2.11.0 | python3 |
