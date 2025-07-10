@@ -4,12 +4,9 @@
 /usr/lib64/libevent-2.1.so.6.0.2
 /usr/lib64/libffi.so.6
 /usr/lib64/libffi.so.6.0.2
-<<<<<<< HEAD
 /usr/lib64/libssl.so.1.1
 /usr/lib64/libssl.so.1.1.1k
 /usr/lib64/libcrypto.so.1.1
 /usr/lib64/libcrypto.so.1.1.1k
-=======
 /usr/lib64/libpcre.so.1
 /usr/lib64/libpcre.so.1.2.10
->>>>>>> 6e74e92 (build: embed libpcre.so.1 for install on rockylinux 10 (#2378))
