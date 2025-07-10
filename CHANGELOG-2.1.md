@@ -1,5 +1,14 @@
 # release_2.1 CHANGELOG
 
+## v2.1.11 (2025-07-09)
+
+### New Features
+
+- upgrade Python 3.10 from 3.10.15 to 3.10.16 (#2005)
+- bump Python 3.10 from 3.10.16 to 3.10.17 (#2282)
+- bump Python 3.10 from 3.10.17 to 3.10.18 (#2358)
+- fix CVE-2020-11724 on openresty 1.15.8  (backport #1865) (#2382)
+
 ## v2.1.10 (2024-09-14)
 
 ### New Features
