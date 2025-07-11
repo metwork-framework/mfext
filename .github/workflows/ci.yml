@@ -36,13 +36,13 @@ jobs:
 
 
 
+    steps:
 
       - name: clean workspace
         run: |
           rm -rf ${{ github.workspace }}
           mkdir ${{ github.workspace }}
 
-    steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
