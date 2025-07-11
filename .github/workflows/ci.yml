@@ -36,6 +36,12 @@ jobs:
 
 
 
+
+      - name: clean workspace
+        run: |
+          rm -rf ${{ github.workspace }}
+          mkdir ${{ github.workspace }}
+
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -213,11 +219,4 @@ jobs:
 
 
 
-
-
-      - name: chown on build outputs
-        if: always()
-        run: |
-          sudo chown -R githubactions:metworkpub .
-          sudo chmod -R 775 .
 
