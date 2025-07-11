@@ -1,5 +1,9 @@
 # release_2.2 CHANGELOG
 
+## v2.2.16 (2025-07-10)
+
+- No interesting change
+
 ## v2.2.15 (2025-07-09)
 
 ### New Features
