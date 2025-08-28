@@ -95,6 +95,8 @@ import jinja2_time
 import jinja2
 import jmespath
 import joblib
+import jschema_to_python
+import jsonpickle
 import lazy_import
 import lazy_object_proxy
 import libcst
@@ -194,6 +196,7 @@ import regex
 import requests_unixsocket
 import requests
 import rich
+import sarif_om
 import scikit_build_core
 import semantic_version
 import setuptools_rust

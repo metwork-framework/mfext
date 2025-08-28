@@ -114,6 +114,8 @@
 | [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
 | [joblib](https://joblib.readthedocs.io) | 1.4.2 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.7.1 | core |
+| [jschema_to_python](https://github.com/microsoft/jschema-to-python) | 1.2.3 | python3_devtools |
+| [jsonpickle](https://jsonpickle.readthedocs.io/) | 4.1.1 | python3_devtools |
 | [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2024.10.1 | python3 |
 | [jsonschema](https://github.com/python-jsonschema/jsonschema) | 4.23.0 | python3 |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
@@ -257,6 +259,7 @@
 | [requests](https://requests.readthedocs.io) | 2.32.4 | python3 |
 | [rich](https://github.com/Textualize/rich) | 14.0.0 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
+| [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.11.1 | python3 |
@@ -317,4 +320,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(316 components)*
+*(319 components)*
