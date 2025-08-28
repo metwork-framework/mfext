@@ -1,11 +1,7 @@
 | Name | Version | Layer |
 | --- | --- | --- |
-<<<<<<< HEAD
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
-=======
-| [acquisition](https://github.com/metwork-framework/acquisition) | 78a05cb | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
->>>>>>> a2c119f (feat: add aiofiles 24.1.0 (GLPI 367855) (#2393))
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.16 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 92ddc7e | python3 |
