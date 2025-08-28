@@ -1,9 +1,9 @@
 -e git+https://github.com/metwork-framework/acquisition.git@78a05cb1dee0eb305751cd08c27b014d7b26c912#egg=acquisition
 aiofiles==24.1.0
 aiohappyeyeballs==2.5.0
-aiohttp==3.11.16
+aiohttp==3.12.15
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@3ef444a64f23bdc69bf93d4a5997d2bda11dd02a#egg=aiohttp_metwork_middlewares
-aiosignal==1.3.2
+aiosignal==1.4.0
 annotated-types==0.7.0
 argcomplete==3.6.0
 arrow==1.3.0
