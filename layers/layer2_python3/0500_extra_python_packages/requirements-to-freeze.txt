@@ -82,9 +82,5 @@ Pillow
 lxml
 orjson
 scikit-build-core
-<<<<<<< HEAD
 pdm-backend
-=======
-typer
 aiofiles
->>>>>>> a2c119f (feat: add aiofiles 24.1.0 (GLPI 367855) (#2393))
