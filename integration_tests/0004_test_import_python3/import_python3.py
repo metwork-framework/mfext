@@ -1,4 +1,5 @@
 import acquisition
+import aiofiles
 import aiohappyeyeballs
 import aiohttp_metwork_middlewares
 import aiohttp
