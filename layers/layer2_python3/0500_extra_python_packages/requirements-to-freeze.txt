@@ -83,3 +83,4 @@ lxml
 orjson
 scikit-build-core
 typer
+aiofiles
