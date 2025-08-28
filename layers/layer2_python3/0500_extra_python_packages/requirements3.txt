@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 -e git+https://github.com/metwork-framework/acquisition.git@8205f0c2fcd323d7e36cbeecac05e74935def06c#egg=acquisition
+=======
+-e git+https://github.com/metwork-framework/acquisition.git@78a05cb1dee0eb305751cd08c27b014d7b26c912#egg=acquisition
+aiofiles==24.1.0
+>>>>>>> a2c119f (feat: add aiofiles 24.1.0 (GLPI 367855) (#2393))
 aiohappyeyeballs==2.5.0
 aiohttp==3.11.16
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@92ddc7e83b46411676368a42768bb54c1f5bd87b#egg=aiohttp_metwork_middlewares
