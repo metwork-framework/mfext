@@ -37,5 +37,9 @@
 - bump bash from 0.6 to to 0.7 (metwork-framework.org fork) (#2375)
 - bump binaryornot from 0.4.4 to 0.4.5 (metwork-framework.org fork) (#2376)
 - bump mfutil_c from 0.0.5 to 0.0.7 (#2379)
+- add sarif_om and dependencies (for bandit extra sarif) (#2392)
+- add aiofiles 24.1.0 (GLPI 367855) (#2393)
+- bump urllib3 from 2.4.0 to 2.5.0 (CVE-2025-50181 and 50182) (#2395)
+- bump aiohttp from 3.11.16 to 3.12.15 (low CVE-2025-53643) (#2396)
 
 
