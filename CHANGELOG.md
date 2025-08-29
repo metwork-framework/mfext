@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add aiofiles 24.1.0 (GLPI 367855) (backport #2393) (#2394)
+
 ## v2.3.5 (2025-07-10)
 
 - No interesting change
