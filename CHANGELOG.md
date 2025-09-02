@@ -41,5 +41,6 @@
 - add aiofiles 24.1.0 (GLPI 367855) (#2393)
 - bump urllib3 from 2.4.0 to 2.5.0 (CVE-2025-50181 and 50182) (#2395)
 - bump aiohttp from 3.11.16 to 3.12.15 (low CVE-2025-53643) (#2396)
+- bump Python from 3.12.11 to 3.13.7 and pip from 25.1.1 to 25.2 (#2397)
 
 
