@@ -115,7 +115,7 @@ def format_config_contents(contents):
     text = '\n'.join(lines)
 
     for pattern, substitute in ((r'\n{3,}', '\n\n\n'), (r'^\n', ''), (r'\n$', '')):
-        text = re.sub(pattern, substitute, text, re.MULTILINE)
+        text = re.sub(pattern, substitute, text, flags=re.MULTILINE)
 
     return text + '\n'
 
