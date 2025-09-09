@@ -20,6 +20,7 @@ libpthread.so.0()(64bit)@generic
 libresolv.so.2()(64bit)@generic
 librt.so.1()(64bit)@generic
 libSM.so.6()(64bit)@generic
+libsnappy.so.1()(64bit)@generic
 libstdc++.so.6()(64bit)@generic
 libtcl8.6.so()(64bit)@generic
 libtinfo.so.6()(64bit)@generic
