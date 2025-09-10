@@ -42,6 +42,9 @@
 - bump urllib3 from 2.4.0 to 2.5.0 (CVE-2025-50181 and 50182) (#2395)
 - bump aiohttp from 3.11.16 to 3.12.15 (low CVE-2025-53643) (#2396)
 - bump Python from 3.12.11 to 3.13.7 and pip from 25.1.1 to 25.2 (#2397)
+- bump openssl from 3.4.1 to 3.5.2 (#2400)
+- bump packaging from 24.2 to 25.0 (#2401)
+- add blosc support in gdal (GLPI 369310) (#2402)
 
 ### Bug Fixes
 
