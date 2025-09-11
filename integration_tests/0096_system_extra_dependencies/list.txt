@@ -20,6 +20,7 @@ libcrypto.so.1.1
 libcrypto.so.3
 libcurl.so.4
 libdatrie.so.1
+libdav1d.so.7
 libdl.so.2
 libdw.so.1
 libelf.so.1
