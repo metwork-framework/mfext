@@ -4,3 +4,5 @@
 /usr/lib64/libffi.so.6.0.2
 /usr/lib64/libpcre.so.1
 /usr/lib64/libpcre.so.1.2.10
+/usr/lib64/libblosc.so.1
+/usr/lib64/libblosc.so.1.17.0
