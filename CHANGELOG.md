@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add blosc support in gdal (GLPI 369310) (#2407)
+
 ## v2.3.6 (2025-08-29)
 
 ### New Features
