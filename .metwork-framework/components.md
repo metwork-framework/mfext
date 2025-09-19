@@ -303,7 +303,7 @@
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.5.0 | python3 |
-| [vector](https://vector.dev/) | 0.13.1 | monitoring |
+| [vector](https://vector.dev/) | 0.49.0 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
