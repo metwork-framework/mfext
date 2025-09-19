@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=vector
-export VERSION=0.13.1
+export VERSION=0.49.0
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=6e103313504dcc2b12feae18339ff56d
+export CHECKSUM=0d59188e204901f356ee997d2be295a1
 export ARCHIVE=$(NAME)-$(VERSION)-x86_64-unknown-linux-musl.tar.gz
 DESCRIPTION=\
 Collect, transform, and route all observability data with one simple tool.
