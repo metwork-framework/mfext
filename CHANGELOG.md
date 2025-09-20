@@ -45,6 +45,7 @@
 - bump openssl from 3.4.1 to 3.5.2 (#2400)
 - bump packaging from 24.2 to 25.0 (#2401)
 - add blosc support in gdal (GLPI 369310) (#2402)
+- bump vector from 0.13.1 to 0.49.0 (elasticsearch 8 compatibility) (#2408)
 
 ### Bug Fixes
 
