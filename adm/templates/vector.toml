@@ -23,34 +23,45 @@ address = "0.0.0.0:{{SYSLOG_PORT_NGINXLOG|getenv}}"
 mode = "udp"
 
 [transforms.json_nginx]
-type = "json_parser"
+type = "remap"
 inputs = ["syslog_nginx"]
-drop_field = true
-drop_invalid = true
-field = "message"
+drop_on_error = false
+source = '''
+. |= object!(parse_json(.message))
+'''
 
 [transforms.add_json_nginx]
-type = "add_fields"
+type = "remap"
 inputs = ["json_nginx"]
-fields.module = "{{MFMODULE}}"
-fields.module_version = "{{MFMODULE_VERSION}}"
-fields.hostname = "{{MFHOSTNAME}}"
+source = '''
+.module = "{{MFMODULE}}"
+.module_version = "{{MFMODULE_VERSION}}"
+.hostname = "{{MFHOSTNAME}}"
+'''
 
 [transforms.remove_json_nginx]
-type = "remove_fields" 
+type = "remap" 
 inputs = ["add_json_nginx"]
-fields = ["appname", "facility", "host", "severity", "source_ip", "source_type"]
+source = '''
+del(.appname)
+del(.facility)
+del(.host)
+del(.severity)
+del(.source_ip)
+del(.source_type)
+'''
 
 {% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOADED"|getenv("0") == "1") or (ADMIN_ELASTICSEARCH_HTTP_PORT|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|getenv("null") != "null") %}
 [sinks.elasticsearch_nginx]
 type = "elasticsearch"
 inputs = ["remove_json_nginx"]
+api_version = "v8"
 {% if MFMODULE == "MFADMIN" %}
 endpoint = "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}"
 {% else %}
 endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}"
 {% endif %}
-index = "nginx-%Y.%m.%d"
+bulk.index = "nginx-%Y.%m.%d"
 {% endif %}
 
 {% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOKI_LOADED"|getenv("0") == "1") or (ADMIN_LOKI_HTTP_PORT|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|getenv("null") != "null") %}
@@ -94,35 +105,46 @@ hooks.process = '''
 '''
 
 [transforms.json_mflog]
-type = "json_parser"
+type = "remap"
 inputs = ["fix_mflog_json"]
-drop_field = true
-drop_invalid = true
-field = "message"
+drop_on_error = false
+source = '''
+. |= object!(parse_json(.message))
+'''
 
 [transforms.add_json_mflog]
-type = "add_fields"
+type = "remap"
 inputs = ["json_mflog"]
-fields.module = "{{MFMODULE}}"
-fields.module_version = "{{MFMODULE_VERSION}}"
-fields.hostname = "{{MFHOSTNAME}}"
+source = '''
+.module = "{{MFMODULE}}"
+.module_version = "{{MFMODULE_VERSION}}"
+.hostname = "{{MFHOSTNAME}}"
+'''
 
 [transforms.remove_json_mflog]
-type = "remove_fields" 
+type = "remap" 
 inputs = ["add_json_mflog"]
-fields = ["appname", "facility", "host", "severity", "source_ip", "source_type"]
+source = '''
+del(.appname)
+del(.facility)
+del(.host)
+del(.severity)
+del(.source_ip)
+del(.source_type)
+'''
 
 {% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOADED"|getenv("0") == "1") or (ADMIN_ELASTICSEARCH_HTTP_PORT|default('')|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|default('')|getenv("null") != "null") %}
 {% set SINK_SET = "1" %}
 [sinks.elasticsearch_mflog]
 type = "elasticsearch"
+api_version = "v8"
 inputs = ["remove_json_mflog"]
 {% if MFMODULE == "MFADMIN" %}
 endpoint = "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}"
 {% else %}
 endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}"
 {% endif %}
-index = "mflog-%Y.%m.%d"
+bulk.index = "mflog-%Y.%m.%d"
 {% endif %}
 
 {% if (MFMODULE == "MFADMIN" and "MFADMIN_LAYER_LOGS_LOKI_LOADED"|getenv("0") == "1") or (ADMIN_LOKI_HTTP_PORT|default('')|getenv('0') != '0' and ADMIN_HOSTNAME_VAR|default('')|getenv("null") != "null") %}
