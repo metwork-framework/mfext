@@ -69,9 +69,9 @@ bulk.index = "nginx-%Y.%m.%d"
 type = "loki"
 inputs = ["remove_json_nginx"]
 {% if MFMODULE == "MFADMIN" %}
-endpoints = [ "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}" ]
+endpoint = "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}"
 {% else %}
-endpoints = [ "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}" ]
+endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}"
 {% endif %}
 encoding.codec = "json" 
 encoding.except_fields = ["method", "status", "hostname", "module", "plugin"]
@@ -153,9 +153,9 @@ bulk.index = "mflog-%Y.%m.%d"
 type = "loki"
 inputs = ["remove_json_mflog"]
 {% if MFMODULE == "MFADMIN" %}
-endpoints = [ "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}" ]
+endpoint = "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}"
 {% else %}
-endpoints = [ "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}" ]
+endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}"
 {% endif %}
 encoding.codec = "json" 
 encoding.except_fields = ["level", "status", "hostname", "name", "module", "plugin"]
