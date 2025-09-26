@@ -27,7 +27,7 @@ type = "remap"
 inputs = ["syslog_nginx"]
 drop_on_error = false
 source = '''
-. |= object!(parse_json(.message))
+. |= object!(parse_json(.message) ?? {})
 '''
 
 [transforms.add_json_nginx]
@@ -57,9 +57,9 @@ type = "elasticsearch"
 inputs = ["remove_json_nginx"]
 api_version = "v8"
 {% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}"
+endpoints = [ "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}" ]
 {% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}"
+endpoints = [ "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}" ]
 {% endif %}
 bulk.index = "nginx-%Y.%m.%d"
 {% endif %}
@@ -69,9 +69,9 @@ bulk.index = "nginx-%Y.%m.%d"
 type = "loki"
 inputs = ["remove_json_nginx"]
 {% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}"
+endpoints = [ "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}" ]
 {% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}"
+endpoints = [ "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}" ]
 {% endif %}
 encoding.codec = "json" 
 encoding.except_fields = ["method", "status", "hostname", "module", "plugin"]
@@ -109,7 +109,7 @@ type = "remap"
 inputs = ["fix_mflog_json"]
 drop_on_error = false
 source = '''
-. |= object!(parse_json(.message))
+. |= object!(parse_json(.message) ?? {})
 '''
 
 [transforms.add_json_mflog]
@@ -140,9 +140,9 @@ type = "elasticsearch"
 api_version = "v8"
 inputs = ["remove_json_mflog"]
 {% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}"
+endpoints = [ "http://127.0.0.1:{{MFADMIN_ELASTICSEARCH_HTTP_PORT}}" ]
 {% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}"
+endpoints = [ "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_ELASTICSEARCH_HTTP_PORT|getenv}}" ]
 {% endif %}
 bulk.index = "mflog-%Y.%m.%d"
 {% endif %}
@@ -153,9 +153,9 @@ bulk.index = "mflog-%Y.%m.%d"
 type = "loki"
 inputs = ["remove_json_mflog"]
 {% if MFMODULE == "MFADMIN" %}
-endpoint = "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}"
+endpoints = [ "http://127.0.0.1:{{MFADMIN_LOKI_HTTP_PORT}}" ]
 {% else %}
-endpoint = "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}"
+endpoints = [ "http://{{ADMIN_HOSTNAME_IP_VAR|getenv}}:{{ADMIN_LOKI_HTTP_PORT|getenv}}" ]
 {% endif %}
 encoding.codec = "json" 
 encoding.except_fields = ["level", "status", "hostname", "name", "module", "plugin"]
