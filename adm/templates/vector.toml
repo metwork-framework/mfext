@@ -86,9 +86,10 @@ labels.plugin = "@@ plugin @@"
 
 {% if SYSLOG_PORT_MFLOG|getenv('0') != '0' %}
 [sources.syslog_mflog]
-type = "syslog"
+type = "socket"
 address = "0.0.0.0:{{SYSLOG_PORT_MFLOG|getenv}}"
 mode = "udp"
+decoding.codec = "bytes"
 
 [transforms.fix_mflog_json]
 type = "lua" 
