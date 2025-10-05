@@ -47,7 +47,6 @@
 - add blosc support in gdal (GLPI 369310) (#2402)
 - bump vector from 0.13.1 to 0.49.0 (elasticsearch 8 compatibility) (#2408)
 - update vector.toml (compatibility with vector 0.49 and ES 8) (#2409)
-- upgrade telegraf from 1.13.3 to 1.36.2 (#2413)
 
 ### Bug Fixes
 
