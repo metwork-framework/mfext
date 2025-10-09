@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 https://openresty.org/download/openresty-1.15.8.1.tar.gz
+=======
+https://openresty.org/download/openresty-1.27.1.2.tar.gz
+>>>>>>> caa6d13 (feat: upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (#2416))
