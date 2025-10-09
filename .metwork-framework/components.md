@@ -173,8 +173,13 @@
 | [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
+<<<<<<< HEAD
 | [openresty](http://openresty.org) | 1.15.8.4 | openresty |
 | [openssl](https://www.openssl.org/) | 3.4.1 | core |
+=======
+| [openresty](http://openresty.org) | 1.27.1.2 | openresty |
+| [openssl](https://www.openssl.org/) | 3.5.2 | core |
+>>>>>>> caa6d13 (feat: upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (#2416))
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 24.2 | python3_core |
