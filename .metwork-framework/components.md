@@ -131,6 +131,7 @@
 | [natsort](https://github.com/SethMMorton/natsort) | 8.2.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
+<<<<<<< HEAD
 | [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
 | [nltk](https://www.nltk.org/) | 3.7 | python3_devtools |
 | [nodejs](http://nodejs.org) | 16.15.1 | nodejs |
@@ -153,6 +154,40 @@
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.0.0 | python3 |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](https://postgis.net) | 3.3.1 | scientific_core |
+=======
+| [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
+| [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
+| [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
+| [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
+| [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
+| [openldap](https://www.openldap.org/) | 2.6.9 | core |
+| [openresty](http://openresty.org) | 1.27.1.2 | openresty |
+| [openssl](https://www.openssl.org/) | 3.5.2 | core |
+| [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
+| [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
+| [packaging](https://pypi.org/project/packaging) | 25.0 | python3_core |
+| [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
+| [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
+| [paramiko](https://paramiko.org) | 3.5.1 | python3 |
+| [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
+| [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
+| [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
+| [pdm-backend](https://github.com/pdm-project/pdm-backend) | 2.4.4 | python3 |
+| [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
+| [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
+| [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
+| [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.24.1 | scientific_core |
+| [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
+| [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
+| [pillow](https://python-pillow.github.io) | 11.1.0 | python3 |
+| [pip](https://pip.pypa.io/) | 25.2 | python3_core |
+| [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
+| [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
+| [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
+| [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
+| [postgis](https://postgis.net) | 3.5.2 | scientific_core |
+>>>>>>> caa6d13 (feat: upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (#2416))
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 14.5 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
