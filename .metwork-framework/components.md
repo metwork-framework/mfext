@@ -220,6 +220,7 @@
 | [PyYAML](https://pyyaml.org/) | 6.0.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
+<<<<<<< HEAD
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 5.0.14 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.1 | python3 |
@@ -228,6 +229,19 @@
 | [requests-unixsocket](https://github.com/metwork-framework/requests-unixsocket) | 0.3.1 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.31.0 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.5.2 | python3 |
+=======
+| [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
+| [redis](http://redis.io) | 7.4.6 | core |
+| [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
+| [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
+| [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
+| [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
+| [requests](https://requests.readthedocs.io) | 2.32.4 | python3 |
+| [rich](https://github.com/Textualize/rich) | 14.0.0 | python3 |
+| [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
+| [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
+| [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
+>>>>>>> d6909c9 (feat: upgrade redis from 5.0.14 to 7.4.6 (#2418))
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 1.13.5 | python3_devtools |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
