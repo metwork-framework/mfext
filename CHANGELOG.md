@@ -48,6 +48,7 @@
 - bump vector from 0.13.1 to 0.49.0 (elasticsearch 8 compatibility) (#2408)
 - update vector.toml (compatibility with vector 0.49 and ES 8) (#2409)
 - upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (#2416)
+- upgrade redis from 5.0.14 to 7.4.6 (#2418)
 
 ### Bug Fixes
 
