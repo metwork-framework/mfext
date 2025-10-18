@@ -50,6 +50,7 @@
 - upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (#2416)
 - upgrade redis from 5.0.14 to 7.4.6 (#2418)
 - bump python-ldap from 3.4.4 to 3.4.5 (#2419)
+- add configurable check_delay in circus arbiter config (default 15) (#2420)
 
 ### Bug Fixes
 
