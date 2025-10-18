@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add configurable check_delay in circus arbiter config (default 15) (backport #2420) (#2421)
+
 ## v2.3.7 (2025-09-17)
 
 ### New Features
