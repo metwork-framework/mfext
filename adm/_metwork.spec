@@ -280,6 +280,7 @@ rm -f mf*_link
 ##### install SECTION #####
 ###########################
 %install
+echo "INFO: install section"
 mkdir -p %{buildroot}/{{MFMODULE_HOME}} 2>/dev/null
 ln -s {{MFMODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
@@ -307,10 +308,20 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 ##### post SECTION (POSTINSTALLATION) FOR MAIN PACKAGE #####
 ############################################################
 %post
+    echo "INFO: postinstall SECTION"
     {% if MFMODULE != "MFEXT" %}
         if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
             #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            echo "INFO : restoring permissions on /home/{{MFMODULE_LOWERCASE}}"
             chmod --reference=/home/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
+        fi
+        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.acl; then
+            #Restore ACLs of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}"
+            if test -f /home/.home_{{MFMODULE_LOWERCASE}}.Racl; then
+                cd /home/{{MFMODULE_LOWERCASE}} && setfacl --restore=/home/.home_{{MFMODULE_LOWERCASE}}.Racl >/dev/null 2>&1
+            fi
+            cd /home/{{MFMODULE_LOWERCASE}} && setfacl --restore=/home/.home_{{MFMODULE_LOWERCASE}}.acl
         fi
     {% endif %}
 {% endif %}
@@ -396,9 +407,21 @@ EOF
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
 %postun {{MODULE_BRANCH}}
+    echo "INFO: postuninstall {{MODULE_BRANCH}} section"
     {% if MODULE_HAS_HOME_DIR == "1" %}
         #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
         crontab -r -u {{MFMODULE_LOWERCASE}} || true
+        if test -d /home/{{MFMODULE_LOWERCASE}}; then
+            #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+            echo "INFO: saving /home/{{MFMODULE_LOWERCASE}} permissions"
+            touch /home/.home_{{MFMODULE_LOWERCASE}}.perm
+            chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+            chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/.home_{{MFMODULE_LOWERCASE}}.perm
+            #Files to keep ACLs on /home/{{MFMODULE_LOWERCASE}} to be able to restore them
+            echo "INFO: saving ACLs on /home/{{MFMODULE_LOWERCASE}}"
+            cd /home/{{MFMODULE_LOWERCASE}} && getfacl -R . > /home/.home_{{MFMODULE_LOWERCASE}}.Racl
+            cd /home/{{MFMODULE_LOWERCASE}} && getfacl . > /home/.home_{{MFMODULE_LOWERCASE}}.acl
+        fi
     {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
