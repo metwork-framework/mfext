@@ -344,24 +344,36 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
             chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
         else
-            echo "INFO: Creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
-            mkdir -p /home/{{MFMODULE_LOWERCASE}}
-            ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
-            ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
-            chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
-            chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
-            {% if MFMODULE == "MFDATA" %}
-                chmod g+rx /home/{{MFMODULE_LOWERCASE}}
-                chmod o+x /home/{{MFMODULE_LOWERCASE}}
-            {% endif %}
+            if test -L /home/{{MFMODULE_LOWERCASE}}; then
+                echo "INFO: /home/{{MFMODULE_LOWERCASE}} is existing as a symbolic link, we don't change any permission"
+                rm -f /home/{{MFMODULE_LOWERCASE}}/.bashrc
+                ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
+                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bashrc
+                rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
+                ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
+                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
+            else
+                echo "INFO: Creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
+                mkdir -p /home/{{MFMODULE_LOWERCASE}}
+                ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
+                ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
+                chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
+                chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
+                {% if MFMODULE == "MFDATA" %}
+                    chmod g+rx /home/{{MFMODULE_LOWERCASE}}
+                    chmod o+x /home/{{MFMODULE_LOWERCASE}}
+                {% endif %}
+            fi
         fi
         {% if MFMODULE == "MFDATA" %}
             if ! test -d /home/{{MFMODULE_LOWERCASE}}/var/in
-                mkdir -p /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
-                chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
-                chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
-                chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
-                chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+               if ! test -L /home/{{MFMODULE_LOWERCASE}}/var/in
+                    mkdir -p /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+                    chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
+                    chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
+                    chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
+                    chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+                fi
             fi
         {% endif %}
     {% endif %}
