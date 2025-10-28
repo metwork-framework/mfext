@@ -51,6 +51,9 @@
 - upgrade redis from 5.0.14 to 7.4.6 (#2418)
 - bump python-ldap from 3.4.4 to 3.4.5 (#2419)
 - add configurable check_delay in circus arbiter config (default 15) (#2420)
+- bump redis python from 5.0.6 to 5.0.8 (#2422)
+- save and restore permissions and ACLs on modules home (#2423)
+- bump redis python from 5.0.8 to 5.1.1 (#2424)
 
 ### Bug Fixes
 
