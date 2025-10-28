@@ -279,7 +279,6 @@ rm -f mf*_link
 ##### install SECTION #####
 ###########################
 %install
-echo "INFO: install section"
 mkdir -p %{buildroot}/{{MFMODULE_HOME}} 2>/dev/null
 ln -s {{MFMODULE_HOME}} %{buildroot}{{TARGET_LINK}}
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MFMODULE_HOME}}/
@@ -366,8 +365,8 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             fi
         fi
         {% if MFMODULE == "MFDATA" %}
-            if ! test -d /home/{{MFMODULE_LOWERCASE}}/var/in
-               if ! test -L /home/{{MFMODULE_LOWERCASE}}/var/in
+            if ! test -d /home/{{MFMODULE_LOWERCASE}}/var/in; then
+               if ! test -L /home/{{MFMODULE_LOWERCASE}}/var/in; then
                     mkdir -p /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
                     chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
                     chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
