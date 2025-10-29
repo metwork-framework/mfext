@@ -281,10 +281,17 @@ rm -f mf*_link
 %install
 mkdir -p %{buildroot}/{{MFMODULE_HOME}} 2>/dev/null
 ln -s {{MFMODULE_HOME}} %{buildroot}{{TARGET_LINK}}
+{% if MODULE_HAS_HOME_DIR == "1" %}
+    mkdir -p %{buildroot}/home/{{MFMODULE_LOWERCASE}} 2>/dev/null
+{% endif %}
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/* %{buildroot}{{MFMODULE_HOME}}/
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.layerapi2* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 mv metwork-{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/{{MFMODULE_LOWERCASE}}-%{version}-{{RELEASE_BUILD}}/.dhash* %{buildroot}{{MFMODULE_HOME}}/ 2>/dev/null || true
 rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
+{% if MODULE_HAS_HOME_DIR == "1" %}
+    ln -s {{MFMODULE_HOME}}/share/bashrc %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bashrc
+    ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
+{% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 
@@ -467,7 +474,11 @@ rm -fr %{buildroot}
 %files
 %defattr(-,root,root,-)
 {{TARGET_LINK}}
-
+{% if MODULE_HAS_HOME_DIR == "1" %}
+%defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
+/home/{{MFMODULE_LOWERCASE}}/.bashrc
+/home/{{MFMODULE_LOWERCASE}}/.bash_profile
+{% endif %}
 
 {% if MFEXT_ADDON == "0" %}
 ##################################################
