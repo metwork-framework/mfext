@@ -282,7 +282,7 @@ rm -f mf*_link
         N=`cat /etc/passwd |grep '^{{MFMODULE_LOWERCASE}}:' |wc -l`
         if test ${N} -eq 0; then
             echo "INFO: creating {{MFMODULE_LOWERCASE}} unix local user"
-            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
+            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -M -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
             chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
         fi
     {% endif %}
