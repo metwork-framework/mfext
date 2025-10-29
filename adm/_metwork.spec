@@ -290,49 +290,10 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 
 
 {% if MFEXT_ADDON == "0" %}
-#####################################################################
-##### post SECTION (POSTINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
-#####################################################################
-%post {{MODULE_BRANCH}}
-    if test -f /etc/metwork.config; then
-        # to flush caches
-        touch /etc/metwork.config >/dev/null 2>&1
-    fi
-    {% if MFMODULE != "MFEXT" %}
-        if ! test -f /etc/metwork.config; then
-            echo GENERIC >/etc/metwork.config
-        fi
-    {% endif %}
-    {% if MFMODULE != "MFEXT" %}
-        if ! test -d /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}; then
-            mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
-            {% if MFMODULE == "MFDATA" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
-            {% elif MFMODULE == "MFSERV" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
-            {% elif MFMODULE == "MFBASE" %}
-                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
-            {% endif %}
-        fi
-    {% endif %}
-    {% if MFMODULE != "MFEXT" %}
-        if ! test -d /etc/rc.d/init.d; then mkdir -p /etc/rc.d/init.d; fi
-        cp -f {{MFEXT_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
-        chmod 0755 /etc/rc.d/init.d/metwork
-        chown root:root /etc/rc.d/init.d/metwork
-        if test -d /usr/lib/systemd/system; then
-            if ! test -f /usr/lib/systemd/system/metwork.service; then
-                echo "INFO: creating metwork systemd service"
-            fi
-            cp -f {{MFEXT_HOME}}/share/metwork.service /usr/lib/systemd/system/metwork.service
-            systemctl daemon-reload >/dev/null 2>&1 || true
-            systemctl enable metwork.service >/dev/null 2>&1 || true
-        else
-            if test `/sbin/chkconfig --list metwork 2>/dev/null |wc -l` -eq 0; then
-                /sbin/chkconfig --add metwork >/dev/null 2>&1
-            fi
-        fi
-    {% endif %}
+############################################################
+##### post SECTION (POSTINSTALLATION) FOR MAIN PACKAGE #####
+############################################################
+%post
     {% if MFMODULE != "MFEXT" %}
         if test -d /home/{{MFMODULE_LOWERCASE}}; then
             echo "INFO: /home/{{MFMODULE_LOWERCASE}} is existing, we don't change any permission"
@@ -386,6 +347,52 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
                 fi
             fi
         {% endif %}
+    {% endif %}
+{% endif %}
+
+{% if MFEXT_ADDON == "0" %}
+#####################################################################
+##### post SECTION (POSTINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
+#####################################################################
+%post {{MODULE_BRANCH}}
+    if test -f /etc/metwork.config; then
+        # to flush caches
+        touch /etc/metwork.config >/dev/null 2>&1
+    fi
+    {% if MFMODULE != "MFEXT" %}
+        if ! test -f /etc/metwork.config; then
+            echo GENERIC >/etc/metwork.config
+        fi
+    {% endif %}
+    {% if MFMODULE != "MFEXT" %}
+        if ! test -d /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}; then
+            mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}
+            {% if MFMODULE == "MFDATA" %}
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
+            {% elif MFMODULE == "MFSERV" %}
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
+            {% elif MFMODULE == "MFBASE" %}
+                mkdir -p /etc/metwork.config.d/{{MFMODULE_LOWERCASE}}/plugins
+            {% endif %}
+        fi
+    {% endif %}
+    {% if MFMODULE != "MFEXT" %}
+        if ! test -d /etc/rc.d/init.d; then mkdir -p /etc/rc.d/init.d; fi
+        cp -f {{MFEXT_HOME}}/bin/metwork /etc/rc.d/init.d/metwork >/dev/null 2>&1
+        chmod 0755 /etc/rc.d/init.d/metwork
+        chown root:root /etc/rc.d/init.d/metwork
+        if test -d /usr/lib/systemd/system; then
+            if ! test -f /usr/lib/systemd/system/metwork.service; then
+                echo "INFO: creating metwork systemd service"
+            fi
+            cp -f {{MFEXT_HOME}}/share/metwork.service /usr/lib/systemd/system/metwork.service
+            systemctl daemon-reload >/dev/null 2>&1 || true
+            systemctl enable metwork.service >/dev/null 2>&1 || true
+        else
+            if test `/sbin/chkconfig --list metwork 2>/dev/null |wc -l` -eq 0; then
+                /sbin/chkconfig --add metwork >/dev/null 2>&1
+            fi
+        fi
     {% endif %}
     {% if MFMODULE != "MFEXT" %}
         if test -d /etc/security/limits.d; then
