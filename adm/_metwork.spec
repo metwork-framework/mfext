@@ -375,8 +375,9 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             else
                 echo "INFO: Creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
                 mkdir -p /home/{{MFMODULE_LOWERCASE}}
-                ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc
-                ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile
+                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}
+                ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
+                ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
                 chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
                 chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
                 {% if MFMODULE == "MFDATA" %}
