@@ -261,7 +261,7 @@ rm -f mf*_link
         N=`cat /etc/passwd |grep '^{{MFMODULE_LOWERCASE}}:' |wc -l`
         if test ${N} -eq 0; then
             echo "INFO: creating {{MFMODULE_LOWERCASE}} unix local user"
-            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
+            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -M -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
             chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
         fi
     {% endif %}
@@ -354,6 +354,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             else
                 echo "INFO: Creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
                 mkdir -p /home/{{MFMODULE_LOWERCASE}}
+                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}
                 ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
                 ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
                 chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
