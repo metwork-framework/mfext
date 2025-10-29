@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- modules' home directory is now outside Metwork rpms (#2430)
+
 ## v2.2.16 (2025-07-10)
 
 - No interesting change
