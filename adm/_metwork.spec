@@ -342,7 +342,8 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
             ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
             chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-            ls -liart /home/{{MFMODULE_LOWERCASE}
+            ls -liart {{MFMODULE_HOME}}/share/
+            ls -liart /home/{{MFMODULE_LOWERCASE}}
         else
             if test -L /home/{{MFMODULE_LOWERCASE}}; then
                 echo "INFO: /home/{{MFMODULE_LOWERCASE}} is existing as a symbolic link, we don't change any permission"
@@ -352,7 +353,8 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
                 rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
                 ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
                 chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-                ls -liart /home/{{MFMODULE_LOWERCASE}
+                ls -liart {{MFMODULE_HOME}}/share/
+                ls -liart /home/{{MFMODULE_LOWERCASE}}
             else
                 echo "INFO: Creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
                 mkdir -p /home/{{MFMODULE_LOWERCASE}}
@@ -363,7 +365,8 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
                 rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
                 ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
                 chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-                ls -liart /home/{{MFMODULE_LOWERCASE}
+                ls -liart {{MFMODULE_HOME}}/share/
+                ls -liart /home/{{MFMODULE_LOWERCASE}}
                 chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
                 chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
                 {% if MFMODULE == "MFDATA" %}
