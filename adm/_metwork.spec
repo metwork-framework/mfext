@@ -293,6 +293,9 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
     ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
     chmod -R go-rwx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
     chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+    {% if MFMODULE == "MFDATA" %}
+        chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+    {% endif %}
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
@@ -380,6 +383,13 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
                 /sbin/chkconfig --add metwork >/dev/null 2>&1
             fi
         fi
+    {% endif %}
+    {% if MFMODULE == "MFDATA" %}
+        mkdir -p /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+        chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
+        chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
+        chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
+        chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
     {% endif %}
     {% if MFMODULE != "MFEXT" %}
         if test -d /etc/security/limits.d; then
