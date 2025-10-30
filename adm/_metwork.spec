@@ -295,7 +295,7 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
     chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
     {% if MFMODULE == "MFDATA" %}
         chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
-    {% endif %}
+    {% endif %
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
@@ -435,10 +435,10 @@ EOF
             echo "INFO: saving ACLs on /home/{{MFMODULE_LOWERCASE}}"
             cd /home/{{MFMODULE_LOWERCASE}} && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
             {% if MFMODULE == "MFDATA" %}
-                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var.acl
-                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl
                 if [ -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming ]; then
-                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in_incoming.acl
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl
                 fi
             {% endif %}
         fi      
