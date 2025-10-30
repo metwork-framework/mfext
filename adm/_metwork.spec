@@ -421,15 +421,17 @@ EOF
             touch /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
             chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
             chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
-            #File to keep ACLs on /home/{{MFMODULE_LOWERCASE}} to be able to restore them
+            #Files to keep ACLs on /home/{{MFMODULE_LOWERCASE}} to be able to restore them
             echo "INFO: saving ACLs on /home/{{MFMODULE_LOWERCASE}}"
             cd /home/{{MFMODULE_LOWERCASE}} && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
-            cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var.acl
-            cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in.acl
-            if [ -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming ]; then
-                cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in_incoming.acl
-            fi
-        fi
+            {% if MFMODULE == "MFDATA" %}
+                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in.acl
+                if [ -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming ]; then
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in_incoming.acl
+                fi
+            {% endif %}
+        fi      
     {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
