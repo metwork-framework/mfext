@@ -304,7 +304,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 ############################################################
 %post
     {% if MFMODULE != "MFEXT" %}
-        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
+        if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm; then
             #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
             echo "INFO : restoring permissions on /home/{{MFMODULE_LOWERCASE}}"
             chmod --reference=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
@@ -329,7 +329,7 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             fi
             if test -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming; then
                 if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl; then
-                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var/in/in coming"
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var/in/incoming"
                     cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl
                 fi
             fi
