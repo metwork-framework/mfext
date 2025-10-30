@@ -291,6 +291,8 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 {% if MODULE_HAS_HOME_DIR == "1" %}
     ln -s {{MFMODULE_HOME}}/share/bashrc %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bashrc
     ln -s {{MFMODULE_HOME}}/share/bash_profile %{buildroot}/home/{{MFMODULE_LOWERCASE}}/.bash_profile
+    chmod -R go-rwx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
+    chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
@@ -302,55 +304,33 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 ############################################################
 %post
     {% if MFMODULE != "MFEXT" %}
-        if test -d /home/{{MFMODULE_LOWERCASE}}; then
-            echo "INFO: /home/{{MFMODULE_LOWERCASE}} is existing, we don't change any permission"
-            rm -f /home/{{MFMODULE_LOWERCASE}}/.bashrc
-            ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
-            chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bashrc
-            rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-            ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
-            chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-            ls -liart {{MFMODULE_HOME}}/share/
-            ls -liart /home/{{MFMODULE_LOWERCASE}}
-        else
-            if test -L /home/{{MFMODULE_LOWERCASE}}; then
-                echo "INFO: /home/{{MFMODULE_LOWERCASE}} is existing as a symbolic link, we don't change any permission"
-                rm -f /home/{{MFMODULE_LOWERCASE}}/.bashrc
-                ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
-                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bashrc
-                rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-                ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
-                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-                ls -liart {{MFMODULE_HOME}}/share/
-                ls -liart /home/{{MFMODULE_LOWERCASE}}
-            else
-                echo "INFO: Creating /home/{{MFMODULE_LOWERCASE}} with default permissions"
-                mkdir -p /home/{{MFMODULE_LOWERCASE}}
-                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}
-                rm -f /home/{{MFMODULE_LOWERCASE}}/.bashrc
-                ln -s {{MFMODULE_HOME}}/share/bashrc /home/{{MFMODULE_LOWERCASE}}/.bashrc 
-                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bashrc
-                rm -f /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-                ln -s {{MFMODULE_HOME}}/share/bash_profile /home/{{MFMODULE_LOWERCASE}}/.bash_profile 
-                chown {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/.bash_profile
-                ls -liart {{MFMODULE_HOME}}/share/
-                ls -liart /home/{{MFMODULE_LOWERCASE}}
-                chmod -R go-rwx /home/{{MFMODULE_LOWERCASE}}
-                chmod -R u+rX /home/{{MFMODULE_LOWERCASE}}
-                {% if MFMODULE == "MFDATA" %}
-                    chmod g+rx /home/{{MFMODULE_LOWERCASE}}
-                    chmod o+x /home/{{MFMODULE_LOWERCASE}}
-                {% endif %}
-            fi
+        if test -f /home/.home_{{MFMODULE_LOWERCASE}}.perm; then
+            #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            echo "INFO : restoring permissions on /home/{{MFMODULE_LOWERCASE}}"
+            chmod --reference=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
+        fi
+        #Restore ACLs of a previous install on /home/{{MFMODULE_LOWERCASE}}
+        if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl; then
+            echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}"
+            cd /home/{{MFMODULE_LOWERCASE}} && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
         fi
         {% if MFMODULE == "MFDATA" %}
-            if ! test -d /home/{{MFMODULE_LOWERCASE}}/var/in; then
-               if ! test -L /home/{{MFMODULE_LOWERCASE}}/var/in; then
-                    mkdir -p /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
-                    chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
-                    chmod g+rX /home/{{MFMODULE_LOWERCASE}} >/dev/null 2>&1
-                    chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var >/dev/null 2>&1
-                    chmod g+rX /home/{{MFMODULE_LOWERCASE}}/var/in >/dev/null 2>&1
+            if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl; then
+                if test -d /home/{{MFMODULE_LOWERCASE}}/var; then
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var"
+                    cd /home/{{MFMODULE_LOWERCASE}}/var && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl
+                fi
+            fi
+            if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl; then
+                if test -d /home/{{MFMODULE_LOWERCASE}}/var/in; then
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var/in"
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl
+                fi
+            fi
+            if test -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming; then
+                if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl; then
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var/in/in coming"
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl
                 fi
             fi
         {% endif %}
@@ -435,6 +415,23 @@ EOF
     {% if MODULE_HAS_HOME_DIR == "1" %}
         #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
         crontab -r -u {{MFMODULE_LOWERCASE}} || true
+        if test -d /home/{{MFMODULE_LOWERCASE}}; then
+            #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+            echo "INFO: saving /home/{{MFMODULE_LOWERCASE}} permissions"
+            touch /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
+            chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
+            chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
+            #Files to keep ACLs on /home/{{MFMODULE_LOWERCASE}} to be able to restore them
+            echo "INFO: saving ACLs on /home/{{MFMODULE_LOWERCASE}}"
+            cd /home/{{MFMODULE_LOWERCASE}} && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
+            {% if MFMODULE == "MFDATA" %}
+                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in.acl
+                if [ -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming ]; then
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in_incoming.acl
+                fi
+            {% endif %}
+        fi      
     {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
@@ -476,8 +473,7 @@ rm -fr %{buildroot}
 {{TARGET_LINK}}
 {% if MODULE_HAS_HOME_DIR == "1" %}
 %defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
-/home/{{MFMODULE_LOWERCASE}}/.bashrc
-/home/{{MFMODULE_LOWERCASE}}/.bash_profile
+/home/{{MFMODULE_LOWERCASE}}
 {% endif %}
 
 {% if MFEXT_ADDON == "0" %}
