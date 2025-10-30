@@ -315,9 +315,6 @@ rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
             cd /home/{{MFMODULE_LOWERCASE}} && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
         fi
         {% if MFMODULE == "MFDATA" %}
-            if test -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming; then
-                chmod o+rx /home/{{MFMODULE_LOWERCASE}}/var/in/incoming
-            fi
             if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl; then
                 if test -d /home/{{MFMODULE_LOWERCASE}}/var; then
                     echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var"
