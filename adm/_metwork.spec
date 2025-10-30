@@ -435,10 +435,10 @@ EOF
             echo "INFO: saving ACLs on /home/{{MFMODULE_LOWERCASE}}"
             cd /home/{{MFMODULE_LOWERCASE}} && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
             {% if MFMODULE == "MFDATA" %}
-                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var.acl
-                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl
                 if [ -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming ]; then
-                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_${MFMODULE_LOWERCASE}_var_in_incoming.acl
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl
                 fi
             {% endif %}
         fi      
