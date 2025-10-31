@@ -57,6 +57,7 @@
 - modules' home directory is now outside Metwork rpms (#2426)
 - bump redis python from 5.1.1 to 5.2.1 (#2433)
 - bump Cython from 3.1.2 to 3.1.6 (#2434)
+- save permissions and acl by admin shell and restore them at update (#2452)
 
 ### Bug Fixes
 
