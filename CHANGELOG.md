@@ -6,6 +6,7 @@
 
 - add configurable check_delay in circus arbiter config (default 15) (backport #2420) (#2421)
 - modules' home directory is now outside Metwork rpms (#2429)
+- save permissions and acl by admin shell and restore them at update (#2458)
 
 ## v2.3.7 (2025-09-17)
 
