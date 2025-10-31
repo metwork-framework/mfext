@@ -1,5 +1,14 @@
 # release_2.0 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- upgrade Python 3.9 from 3.9.19 to 3.9.20 (#2004)
+- bump Python 3.9 from 3.9.20 to 3.9.22 (#2283)
+- bump Python 3.9 from 3.9.22 to 3.9.23 (#2359)
+- modules' home directory is now outside Metwork rpms (#2432)
+
 ## v2.0.12 (2024-09-14)
 
 ### New Features
