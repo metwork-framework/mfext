@@ -1,4 +1,5 @@
-/bin/bash
+#!/bin/bash
+
 #Shell to save permissions and acl in order to automatically restore them at install
 cd ${HOME}
 #File to keep permissions of /home/${MFMODULE_LOWERCASE} to be able to restore it
