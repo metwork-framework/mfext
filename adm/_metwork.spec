@@ -295,7 +295,7 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
     chmod -R u+rX %{buildroot}/home/{{MFMODULE_LOWERCASE}}
     {% if MFMODULE == "MFDATA" %}
         chmod g+rx %{buildroot}/home/{{MFMODULE_LOWERCASE}}
-    {% endif %
+    {% endif %}
 {% endif %}
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
