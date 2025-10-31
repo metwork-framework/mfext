@@ -282,8 +282,7 @@ rm -f mf*_link
         N=`cat /etc/passwd |grep '^{{MFMODULE_LOWERCASE}}:' |wc -l`
         if test ${N} -eq 0; then
             echo "INFO: creating {{MFMODULE_LOWERCASE}} unix local user"
-            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
-            rm -Rf /home/{{MFMODULE_LOWERCASE}}
+            useradd -d /home/{{MFMODULE_LOWERCASE}} -g metwork -M -s /bin/bash {{MFMODULE_LOWERCASE}} >/dev/null 2>&1 || true
             chown -R {{MFMODULE_LOWERCASE}}:metwork /home/{{MFMODULE_LOWERCASE}}.rpmsave* >/dev/null 2>&1 || true
         fi
     {% endif %}
@@ -322,6 +321,45 @@ rm -Rf %{buildroot}{{MFMODULE_HOME}}/html_doc
 chmod -R a+rX %{buildroot}{{MFMODULE_HOME}}
 rm -Rf %{_builddir}/%{name}-%{version}-{{RELEASE_BUILD}} 2>/dev/null
 
+
+{% if MFEXT_ADDON == "0" %}
+############################################################
+##### post SECTION (POSTINSTALLATION) FOR MAIN PACKAGE #####
+############################################################
+%post
+    {% if MFMODULE != "MFEXT" %}
+        if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm; then
+            #Restore permissions of a previous install on /home/{{MFMODULE_LOWERCASE}}
+            echo "INFO : restoring permissions on /home/{{MFMODULE_LOWERCASE}}"
+            chmod --reference=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm /home/{{MFMODULE_LOWERCASE}}
+        fi
+        #Restore ACLs of a previous install on /home/{{MFMODULE_LOWERCASE}}
+        if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl; then
+            echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}"
+            cd /home/{{MFMODULE_LOWERCASE}} && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
+        fi
+        {% if MFMODULE == "MFDATA" %}
+            if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl; then
+                if test -d /home/{{MFMODULE_LOWERCASE}}/var; then
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var"
+                    cd /home/{{MFMODULE_LOWERCASE}}/var && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl
+                fi
+            fi
+            if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl; then
+                if test -d /home/{{MFMODULE_LOWERCASE}}/var/in; then
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var/in"
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl
+                fi
+            fi
+            if test -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming; then
+                if test -f /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl; then
+                    echo "INFO : restoring ACLs on /home/{{MFMODULE_LOWERCASE}}/var/in/incoming"
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && setfacl --restore=/home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl
+                fi
+            fi
+        {% endif %}
+    {% endif %}
+{% endif %}
 
 {% if MFEXT_ADDON == "0" %}
 #####################################################################
@@ -404,9 +442,27 @@ EOF
 ##### postun SECTION (POSTUNINSTALLATION) FOR MAIN SUFFIXED PACKAGE #####
 #########################################################################
 %postun {{MODULE_BRANCH}}
+    echo "INFO: postuninstall {{MODULE_BRANCH}} section"
     {% if MODULE_HAS_HOME_DIR == "1" %}
         #Remove system crontab (it will be rebuilt by module start and it may fix #1557)
         crontab -r -u {{MFMODULE_LOWERCASE}} || true
+        if test -d /home/{{MFMODULE_LOWERCASE}}; then
+            #File to keep permissions of /home/{{MFMODULE_LOWERCASE}} to be able to restore it
+            echo "INFO: saving /home/{{MFMODULE_LOWERCASE}} permissions"
+            touch /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
+            chmod --reference=/home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
+            chown --reference=/home/{{MFMODULE_LOWERCASE}} /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.perm
+            #Files to keep ACLs on /home/{{MFMODULE_LOWERCASE}} to be able to restore them
+            echo "INFO: saving ACLs on /home/{{MFMODULE_LOWERCASE}}"
+            cd /home/{{MFMODULE_LOWERCASE}} && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}.acl
+            {% if MFMODULE == "MFDATA" %}
+                cd /home/{{MFMODULE_LOWERCASE}}/var && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var.acl
+                cd /home/{{MFMODULE_LOWERCASE}}/var/in && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in.acl
+                if [ -d /home/{{MFMODULE_LOWERCASE}}/var/in/incoming ]; then
+                    cd /home/{{MFMODULE_LOWERCASE}}/var/in/incoming && getfacl . > /home/{{MFMODULE_LOWERCASE}}/.home_{{MFMODULE_LOWERCASE}}_var_in_incoming.acl
+                fi
+            {% endif %}
+        fi      
     {% endif %}
     if [ "$1" = "0" ]; then # last uninstall only
         rm -Rf {{MFMODULE_HOME}} 2>/dev/null
@@ -450,7 +506,6 @@ rm -fr %{buildroot}
 %defattr(-,{{MFMODULE_LOWERCASE}},metwork,-)
 /home/{{MFMODULE_LOWERCASE}}
 {% endif %}
-
 
 {% if MFEXT_ADDON == "0" %}
 ##################################################
