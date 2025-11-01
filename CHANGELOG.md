@@ -1,6 +1,6 @@
 # release_2.0 CHANGELOG
 
-## [Unreleased]
+## v2.0.13 (2025-10-31)
 
 ### New Features
 
@@ -8,6 +8,7 @@
 - bump Python 3.9 from 3.9.20 to 3.9.22 (#2283)
 - bump Python 3.9 from 3.9.22 to 3.9.23 (#2359)
 - modules' home directory is now outside Metwork rpms (#2432)
+- save permissions and acl by admin shell and restore them at update (#2462)
 
 ## v2.0.12 (2024-09-14)
 
