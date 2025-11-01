@@ -1,5 +1,12 @@
 # release_2.1 CHANGELOG
 
+## v2.1.12 (2025-10-31)
+
+### New Features
+
+- modules' home directory is now outside Metwork rpms (#2431)
+- save permissions and acl by admin shell and restore them at update (#2461)
+
 ## v2.1.11 (2025-07-09)
 
 ### New Features
