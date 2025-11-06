@@ -145,22 +145,11 @@
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.2 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
-<<<<<<< HEAD
 | [netifaces](https://github.com/al45tair/netifaces) | 0.11.0 | python3 |
 | [nltk](https://www.nltk.org/) | 3.8.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 20.9.0 | nodejs |
 | [openjdk](https://adoptopenjdk.net) | 11.0.5+10 | java |
-| [openresty](http://openresty.org) | 1.15.8.4 | openresty |
-=======
-| [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
-| [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
-| [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
-| [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
-| [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
-| [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.27.1.2 | openresty |
-| [openssl](https://www.openssl.org/) | 3.5.2 | core |
->>>>>>> caa6d13 (feat: upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (#2416))
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 23.1 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.6 | python3_devtools |
