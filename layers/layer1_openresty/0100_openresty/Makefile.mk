@@ -11,6 +11,8 @@ OPENRESTY est une distribution nginx qui ajoute des modules supplémentaires
 WEBSITE=http://openresty.org
 LICENSE=BSD
 
+export EXPLICIT_NAME=$(NAME)-$(VERSION)
+
 all:: $(PREFIX)/bin/resty
 $(PREFIX)/bin/resty:
 	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS="--with-pcre --without-lua_resty_memcached --without-lua_resty_mysql --without-http_scgi_module --without-http_uwsgi_module --http-fastcgi-temp-path=/tmp --without-http_ssi_module --with-http_dav_module --with-http_sub_module --with-http_realip_module --with-http_stub_status_module --with-http_auth_request_module --http-client-body-temp-path=/tmp/nginx_clientbody_temp --http-proxy-temp-path=/tmp/nginx_proxy_temp --with-threads --error-log-path=stderr" download uncompress configure build install
