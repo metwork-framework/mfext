@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## v2.1.13 (2025-11-02)
+
+### New Features
+
+- upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (backport #2416) (#2474)
+
 ## v2.1.12 (2025-10-31)
 
 ### New Features
