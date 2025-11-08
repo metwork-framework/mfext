@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump pip from 23.0.1 to 23.3.2 (#2483)
+
 ## v2.1.13 (2025-11-02)
 
 ### New Features
