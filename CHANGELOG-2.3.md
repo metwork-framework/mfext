@@ -1,5 +1,12 @@
 # release_2.3 CHANGELOG
 
+## v2.3.9 (2025-11-08)
+
+### New Features
+
+- upgrade openresty (nginx) from 1.15.8.4 to 1.27.1.2 (backport #2416) (#2477)
+- upgrade redis from 5.0.14 to 7.4.6 (backport #2418) (#2482)
+
 ## v2.3.8 (2025-10-31)
 
 ### New Features
