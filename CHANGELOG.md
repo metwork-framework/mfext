@@ -5,6 +5,7 @@
 ### New Features
 
 - bump pip from 23.0.1 to 23.3.2 (#2483)
+- bump redis from 5.0.5 to 7.4.6 (#2485)
 
 ## v2.1.13 (2025-11-02)
 
