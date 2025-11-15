@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- upgrade redis from 5.0.14 to 7.4.6 (backport #2418) (#2487)
+
 ## v2.2.18 (2025-11-07)
 
 ### New Features
