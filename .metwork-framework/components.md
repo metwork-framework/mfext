@@ -253,7 +253,7 @@
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
 | [redis](http://redis.io) | 7.4.6 | core |
-| [redis](https://github.com/redis/redis-py) | 5.3.1 | python3 |
+| [redis](https://github.com/redis/redis-py) | 6.0.0 | python3 |
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
