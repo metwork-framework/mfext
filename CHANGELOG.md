@@ -59,6 +59,8 @@
 - bump Cython from 3.1.2 to 3.1.6 (#2434)
 - save permissions and acl by admin shell and restore them at update (#2452)
 - bump pip from 25.2 to 25.3 (fix moderate CVE-2025-8869) (#2488)
+- bump redis python from 5.2.1 to 5.3.1 (#2489)
+- bump redis python from 5.3.1 to 6.0.0 (#2490)
 
 ### Bug Fixes
 
