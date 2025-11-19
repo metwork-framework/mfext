@@ -61,6 +61,10 @@
 - bump pip from 25.2 to 25.3 (fix moderate CVE-2025-8869) (#2488)
 - bump redis python from 5.2.1 to 5.3.1 (#2489)
 - bump redis python from 5.3.1 to 6.0.0 (#2490)
+- bump redis python from 6.0.0 to 6.1.1 (#2491)
+- bump redis python from 6.1.1 to 6.2.0 (#2492)
+- bump redis python from 6.2.0 to 6.3.0
+- bump redis python from 6.3.0 to 6.4.0
 
 ### Bug Fixes
 
