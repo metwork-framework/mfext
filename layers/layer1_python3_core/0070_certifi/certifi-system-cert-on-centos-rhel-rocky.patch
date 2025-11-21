@@ -42,13 +42,3 @@ diff -up certifi-2024.12.14/certifi/core.py.orig certifi-2024.12.14/certifi/core
          # This is slightly terrible, but we want to delay extracting the
          # file in cases where we're inside of a zipimport situation until
          # someone actually calls where(), but we don't want to re-extract
-@@ -106,6 +124,9 @@ else:
-     # If we don't have importlib.resources, then we will just do the old logic
-     # of assuming we're on the filesystem and munge the path directly.
-     def where() -> str:
-+        if is_centos_rhel_rocky():
-+            return "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
-+
-         f = os.path.dirname(__file__)
- 
-         return os.path.join(f, "cacert.pem")

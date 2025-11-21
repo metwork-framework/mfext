@@ -33,7 +33,7 @@
 | [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
-| [certifi](https://certifi.io) | 2025.4.26 | python3_core |
+| [certifi](https://certifi.io) | 2025.11.12 | python3_core |
 | [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
