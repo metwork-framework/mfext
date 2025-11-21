@@ -84,3 +84,4 @@ orjson
 scikit-build-core
 typer
 aiofiles
+msgpack
