@@ -127,6 +127,7 @@ import material #mkdocs-material
 import mkdocs
 import mock
 import more_itertools
+import msgpack
 import multidict
 import mypy_extensions
 import natsort

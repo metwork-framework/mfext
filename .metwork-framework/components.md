@@ -162,6 +162,7 @@
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.2.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
+| [msgpack](https://msgpack.org/) | 1.1.2 | python3 |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
@@ -321,4 +322,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(320 components)*
+*(321 components)*
