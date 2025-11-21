@@ -2,7 +2,7 @@ distlib==0.4.0
 distro==1.9.0
 filelock==3.18.0
 importlib-metadata==8.6.1
-platformdirs==4.3.6
+platformdirs==4.5.0
 six==1.17.0
 virtualenv==20.29.2
 zipp==3.21.0
