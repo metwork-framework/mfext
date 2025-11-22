@@ -65,6 +65,12 @@
 - bump redis python from 6.1.1 to 6.2.0 (#2492)
 - bump redis python from 6.2.0 to 6.3.0
 - bump redis python from 6.3.0 to 6.4.0
+- bump certifi from 2025.4.26 to 2025.11.12 (#2495)
+- bump distlib from 0.3.9 to 0.4.0 (#2496)
+- add msgpack (1.1.2), moved from python3_scientific (#2497)
+- bump platformdirs from 4.3.6 to 4.5.0 (#2498)
+- bump Pygments from 2.19.1 to 2.19.2 (#2499)
+- bump rich from 14.0.0 to 14.2.0 (#2500)
 
 ### Bug Fixes
 
