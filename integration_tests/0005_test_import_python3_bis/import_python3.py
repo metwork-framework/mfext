@@ -60,7 +60,7 @@ import execnet
 import executing
 import fakeredis
 import filelock
-import filprofiler
+#import filprofiler
 import flake8_docstrings
 import flake8
 import flit_core

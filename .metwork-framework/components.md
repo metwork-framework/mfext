@@ -21,7 +21,7 @@
 | [backrefs](https://github.com/facelessuser/backrefs) | 5.8 | python3_devtools |
 | [bandit](https://bandit.readthedocs.io/) | 1.8.3 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.7 | python3 |
-| [bcrypt](https://github.com/pyca/bcrypt/) | 4.3.0 | python3 |
+| [bcrypt](https://github.com/pyca/bcrypt/) | 5.0.0 | python3 |
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.5 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
@@ -71,7 +71,6 @@
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.18.0 | python3_core |
-| [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.12.0 | python3_core |
@@ -122,7 +121,7 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.10.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
-| [libcst](https://pypi.org/project/libcst) | 1.7.0 | python3_devtools |
+| [libcst](https://pypi.org/project/libcst) | 1.8.6 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.4 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
@@ -143,7 +142,7 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.7 | python3 |
 | [MarkupSafe](https://pypi.org/project/MarkupSafe) | 3.0.2 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.7 | python3 |
-| [maturin](https://pypi.org/project/maturin) | 1.8.6 | python3 |
+| [maturin](https://pypi.org/project/maturin) | 1.10.2 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.7.0 | python3_devtools |
 | [mdurl](https://github.com/executablebooks/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
@@ -177,7 +176,7 @@
 | [openresty](http://openresty.org) | 1.27.1.2 | openresty |
 | [openssl](https://www.openssl.org/) | 3.5.2 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
-| [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
+| [orjson](https://pypi.org/project/orjson) | 3.11.4 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 25.0 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
@@ -221,14 +220,14 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.22 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.11.5 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.33.2 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.12.4 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.41.5 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.19.2 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
-| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.2 | python3_devtools |
-| [pyinstaller](https://www.pyinstaller.org/) | 6.12.0 | python3_devtools |
+| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.10 | python3_devtools |
+| [pyinstaller](https://pyinstaller.org) | 6.16.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.14.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
@@ -249,7 +248,7 @@
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
 | [Python](http://python.org/) | 3.14.0 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
-| [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
+| [PyYAML](https://pyyaml.org/) | 6.0.3 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
@@ -260,7 +259,7 @@
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.32.4 | python3 |
 | [rich](https://github.com/Textualize/rich) | 14.2.0 | python3 |
-| [rpds-py](https://github.com/crate-py/rpds) | 0.23.1 | python3 |
+| [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
@@ -296,11 +295,11 @@
 | [tox](http://tox.readthedocs.org) | 4.25.0 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
-| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.2.18.16 | python3_core |
+| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.11.14.15 | python3_core |
 | [typer](https://github.com/fastapi/typer) | 0.16.0 | python3 |
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
-| [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.0 | python3 |
-| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.14.0 | python3_core |
+| [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.2 | python3 |
+| [typing_extensions](https://pypi.org/project/typing_extensions) | 4.15.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.5.0 | python3 |
@@ -322,4 +321,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(321 components)*
+*(320 components)*

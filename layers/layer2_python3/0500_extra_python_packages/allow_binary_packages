@@ -1,5 +1,6 @@
 aiohappyeyeballs
 fakeredis
+geojson
 orjson
 requests-unixsocket2
 rich

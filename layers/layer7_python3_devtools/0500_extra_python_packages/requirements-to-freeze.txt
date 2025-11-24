@@ -36,7 +36,7 @@ pytest-json-report
 bump-pydantic
 pipdeptree
 py-spy
-filprofiler
+#filprofiler is not Python 3.14 compliant
 bandit
 GitPython
 pyinstaller
