@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump Python 3.10 from 3.10.18 to 3.10.19 (#2503)
+
 ## v2.1.14 (2025-11-15)
 
 ### New Features
