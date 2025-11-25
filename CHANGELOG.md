@@ -71,6 +71,8 @@
 - bump platformdirs from 4.3.6 to 4.5.0 (#2498)
 - bump Pygments from 2.19.1 to 2.19.2 (#2499)
 - bump rich from 14.0.0 to 14.2.0 (#2500)
+- bump altgraph to 0.17.5 (fix pkg_resources depreciation) (#2501)
+- bump Python 3.13 from 3.13.7 to 3.13.9 (#2506)
 
 ### Bug Fixes
 
