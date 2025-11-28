@@ -296,7 +296,7 @@
 | [tox](http://tox.readthedocs.org) | 4.25.0 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
-| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.2.18.16 | python3_core |
+| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.11.14.15 | python3_core |
 | [typer](https://github.com/fastapi/typer) | 0.16.0 | python3 |
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
 | [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.0 | python3 |
