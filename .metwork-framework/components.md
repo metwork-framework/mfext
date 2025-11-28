@@ -221,8 +221,8 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.22 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.11.5 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.33.2 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.12.4 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.41.5 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.19.2 | python3 |
@@ -299,7 +299,7 @@
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.11.14.15 | python3_core |
 | [typer](https://github.com/fastapi/typer) | 0.16.0 | python3 |
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
-| [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.0 | python3 |
+| [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.2 | python3 |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.15.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
