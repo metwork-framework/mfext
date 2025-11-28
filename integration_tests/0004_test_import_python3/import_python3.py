@@ -190,6 +190,7 @@ import dateutil #python-dateutil
 import pytz
 import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag
+import yaml_ft #pyaml_ft
 import redis
 import regex
 import requests_unixsocket
