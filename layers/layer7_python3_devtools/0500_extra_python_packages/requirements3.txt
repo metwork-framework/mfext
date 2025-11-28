@@ -66,6 +66,7 @@ pytest-metadata==3.1.1
 pytest-mock==3.14.0
 pytest-xdist==3.6.1
 pyyaml-env-tag==0.1
+pyyaml-ft==8.0.0
 sarif-om==1.0.4
 sftp-py==0.2.1
 simple-term-menu==1.6.6

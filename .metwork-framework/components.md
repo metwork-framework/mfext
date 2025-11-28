@@ -248,6 +248,7 @@
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
 | [Python](http://python.org/) | 3.14.0 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
+| [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0.3 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
@@ -321,4 +322,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(320 components)*
+*(321 components)*
