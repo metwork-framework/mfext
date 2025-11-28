@@ -177,7 +177,7 @@
 | [openresty](http://openresty.org) | 1.27.1.2 | openresty |
 | [openssl](https://www.openssl.org/) | 3.5.2 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
-| [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
+| [orjson](https://pypi.org/project/orjson) | 3.11.4 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 25.0 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
