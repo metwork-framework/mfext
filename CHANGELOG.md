@@ -73,6 +73,16 @@
 - bump rich from 14.0.0 to 14.2.0 (#2500)
 - bump altgraph to 0.17.5 (fix pkg_resources depreciation) (#2501)
 - bump Python 3.13 from 3.13.7 to 3.13.9 (#2506)
+- bump typing_extensions from 4.14.0 to 4.15.0 (compat Python 3.14) (#2507)
+- bump trove-classifiers to 2025.11.14.15 (compatibility Python 3.14) (#2508)
+- bump maturin from 1.8.6 to 1.10.2 (compat Python 3.14) (#2509)
+- bump bcrypt from 4.3.0 to 5.0.0 (#2510)
+- bump orjson from 3.10.18 to 3.11.4 (compat Python 3.14)
+- bump pydantic to 2.12.4 and pydantic-core to 2.41.5 (#2512)
+- bump PyYAML from 6.0.2 to 6.0.3 (compat Python 3.14) (#2513)
+- bump rpds-py from 0.23.1 to py-0.29.0 (compat Python 3.14) (#2514)
+- bump libcst from 1.7.0 to 1.8.6 (compat Python 3.14) (#2515)
+- bump pyinstaller rom 6.12.0 to 6.16.0 (compat Python 3.14) (#2516)
 
 ### Bug Fixes
 
