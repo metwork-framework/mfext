@@ -1,5 +1,5 @@
-altgraph==0.17.5
 apipkg==3.0.2
+altgraph==0.17.5
 astroid==3.3.9
 backrefs==5.8
 bandit==1.8.3
