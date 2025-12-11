@@ -302,8 +302,13 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.13.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
+<<<<<<< HEAD
 | [urllib3](https://pypi.org/project/urllib3) | 2.4.0 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
+=======
+| [urllib3](https://pypi.org/project/urllib3) | 2.6.1 | python3 |
+| [vector](https://vector.dev/) | 0.49.0 | monitoring |
+>>>>>>> fc72a36 (feat: bump urllib3 to 2.6.1 (fix CVE 2025-66471 and 2025-66418) (#2520))
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
