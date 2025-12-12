@@ -6,9 +6,11 @@ libexpat.so.1()(64bit)@generic
 libev.so.4()(64bit)@generic
 libfontconfig.so.1()(64bit)@generic
 libfreetype.so.6()(64bit)@generic
+libfribidi.so.0()(64bit)@generic
 libgcc_s.so.1()(64bit)@generic
 libglib-2.0.so.0()(64bit)@generic
 libICE.so.6()(64bit)@generic
+libjpeg.so.62()(64bit)@generic
 liblzma.so.5()(64bit)@generic
 liblz4.so.1()(64bit)@generic
 libm.so.6()(64bit)@generic
