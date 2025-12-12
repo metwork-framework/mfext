@@ -84,6 +84,7 @@
 - bump libcst from 1.7.0 to 1.8.6 (compat Python 3.14) (#2515)
 - bump pyinstaller rom 6.12.0 to 6.16.0 (compat Python 3.14) (#2516)
 - bump Werkzeug to 3.1.4 (fix Windows moderate CVE-2025-66221) (#2518)
+- bump urllib3 to 2.6.1 (fix CVE 2025-66471 and 2025-66418) (#2520)
 
 ### Bug Fixes
 
