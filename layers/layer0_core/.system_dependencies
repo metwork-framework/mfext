@@ -1,6 +1,5 @@
 libc.so.6()(64bit)@generic
 libcares.so.2()(64bit)@generic
-libcgraph.so.6()(64bit)@generic
 libdl.so.2()(64bit)@generic
 libelf.so.1()(64bit)@generic
 libexpat.so.1()(64bit)@generic
