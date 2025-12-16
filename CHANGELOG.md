@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## v2.3.11 (2025-12-15)
+
+### New Features
+
+- bump urllib3 to 2.6.1 (fix CVE 2025-66471 and 2025-66418) (#2520)
+
 ## v2.3.10 (2025-11-25)
 
 ### New Features
