@@ -6,3 +6,13 @@
 /usr/lib64/libpcre.so.1.2.10
 /usr/lib64/libblosc.so.1
 /usr/lib64/libblosc.so.1.17.0
+/usr/lib64/libcgraph.so.6
+/usr/lib64/libcgraph.so.6.0.0
+/usr/lib64/libcdt.so.5
+/usr/lib64/libcdt.so.5.0.0
+/usr/lib64/libgvc.so.6
+/usr/lib64/libgvc.so.6.0.0
+/usr/lib64/libpathplan.so.4
+/usr/lib64/libpathplan.so.4.0.0
+/usr/lib64/libxdot.so.4
+/usr/lib64/libxdot.so.4.0.0
