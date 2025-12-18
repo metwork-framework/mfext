@@ -230,7 +230,7 @@
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.10 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.16.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
-| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.14.3 | python3_devtools |
+| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.19.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
