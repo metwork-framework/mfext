@@ -86,6 +86,8 @@
 - bump Werkzeug to 3.1.4 (fix Windows moderate CVE-2025-66221) (#2518)
 - bump urllib3 to 2.6.1 (fix CVE 2025-66471 and 2025-66418) (#2520)
 - bump urllib3 from 2.6.1 to 2.6.2 (#2527)
+- bump filelock from 3.18.0 to 3.20.1 (fix moderate CVE-2025-68146) (#2532)
+- upgrade pymdown-extensions to 10.19.1 (fix low CVE-2025-68142) (#2534)
 
 ### Bug Fixes
 
