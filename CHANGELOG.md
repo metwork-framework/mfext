@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump filelock from 3.18.0 to 3.20.1 (fix moderate CVE-2025-68146) (#2532)
+
 ## v2.3.11 (2025-12-15)
 
 ### New Features
