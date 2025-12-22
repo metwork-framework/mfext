@@ -70,7 +70,7 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
-| [filelock](https://github.com/tox-dev/py-filelock) | 3.18.0 | python3_core |
+| [filelock](https://github.com/tox-dev/py-filelock) | 3.20.1 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
@@ -230,7 +230,7 @@
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.10 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.16.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
-| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.14.3 | python3_devtools |
+| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.19.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
