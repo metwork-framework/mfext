@@ -34,7 +34,7 @@
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2025.11.12 | python3_core |
-| [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
+| [cffi](https://pypi.org/project/cffi) | 2.0.0 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.4.2 | python3 |
@@ -47,7 +47,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 22817e1 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 45.0.4 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 46.0.3 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.1.6 | python3 |
