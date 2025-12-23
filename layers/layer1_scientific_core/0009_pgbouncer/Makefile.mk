@@ -14,4 +14,4 @@ LICENSE=ISC
 all:: $(PREFIX)/bin/pgbouncer
 
 $(PREFIX)/bin/pgbouncer:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) OPTIONS="--with-openssl=$(PREFIX)/../core --with-ldap" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS="--with-openssl=$(PREFIX)/../core --with-ldap" download uncompress configure build install
