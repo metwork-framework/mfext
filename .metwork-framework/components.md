@@ -34,7 +34,7 @@
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2025.11.12 | python3_core |
-| [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
+| [cffi](https://pypi.org/project/cffi) | 2.0.0 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.4.2 | python3 |
@@ -47,7 +47,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 22817e1 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 45.0.4 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 46.0.3 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.1.6 | python3 |
@@ -175,7 +175,7 @@
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.27.1.2 | openresty |
-| [openssl](https://www.openssl.org/) | 3.5.2 | core |
+| [openssl](https://www.openssl.org/) | 3.5.4 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.11.4 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 25.0 | python3_core |
@@ -190,7 +190,7 @@
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
-| [pgbouncer](https://www.pgbouncer.org/) | 1.24.1 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.25.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.github.io) | 11.1.0 | python3 |
