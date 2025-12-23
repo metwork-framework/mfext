@@ -88,6 +88,8 @@
 - bump urllib3 from 2.6.1 to 2.6.2 (#2527)
 - bump filelock from 3.18.0 to 3.20.1 (fix moderate CVE-2025-68146) (#2532)
 - upgrade pymdown-extensions to 10.19.1 (fix low CVE-2025-68142) (#2534)
+- bump pytest from 8.4.0 to 8.4.2 (#2535)
+- bump gdal from 3.11.0 to 3.11.5 (#2536)
 
 ### Bug Fixes
 
