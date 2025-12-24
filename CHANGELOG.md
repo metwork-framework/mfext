@@ -90,6 +90,12 @@
 - upgrade pymdown-extensions to 10.19.1 (fix low CVE-2025-68142) (#2534)
 - bump pytest from 8.4.0 to 8.4.2 (#2535)
 - bump gdal from 3.11.0 to 3.11.5 (#2536)
+- bump hdf4 from 4.3.0 to 4.3.1 (#2537)
+- bump openssl from 3.5.2 to 3.5.4 (fix CVE-2025-9230/9231/9232) (#2539)
+- bump cryptography to 46.0.3 and cffi to 2.0.0 (#2540)
+- bump pgbouncer to 1.25.1 (CVE-2025-12819) and add ldap support (#2541)
+- bump hdf4 from 4.3.0 to 4.3.1 (#2538)
+- bump postgresql from 17.5 to 18.1 and add libcurl support (#2542)
 
 ### Bug Fixes
 
