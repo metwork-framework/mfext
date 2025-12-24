@@ -199,7 +199,7 @@
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
-| [postgis](https://postgis.net) | 3.5.2 | scientific_core |
+| [postgis](https://postgis.net) | 3.5.4 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 18.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
