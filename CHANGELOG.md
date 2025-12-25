@@ -96,6 +96,8 @@
 - bump pgbouncer to 1.25.1 (CVE-2025-12819) and add ldap support (#2541)
 - bump hdf4 from 4.3.0 to 4.3.1 (#2538)
 - bump postgresql from 17.5 to 18.1 and add libcurl support (#2542)
+- bump postgis to 3.5.4 to fix build error against PostGreSQL 18 (#2544)
+- bump psycopg[-c] to 3.2.13 (fix build againt postgresql 18.1) (#2545)
 
 ### Bug Fixes
 
