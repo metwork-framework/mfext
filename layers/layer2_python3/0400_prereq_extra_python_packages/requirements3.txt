@@ -2,7 +2,7 @@ cffi==2.0.0
 ConfigUpdater==3.2
 Cython==3.1.6
 pbr==6.1.1
-pycparser==2.22
+pycparser==2.23
 PyScaffold==4.6
 semantic-version==2.10.0
 setuptools-rust==1.12.0
