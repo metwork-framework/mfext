@@ -1,9 +1,15 @@
 -e git+https://github.com/metwork-framework/acquisition.git@8205f0c2fcd323d7e36cbeecac05e74935def06c#egg=acquisition
 aiofiles==24.1.0
 aiohappyeyeballs==2.5.0
+<<<<<<< HEAD
 aiohttp==3.11.16
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@92ddc7e83b46411676368a42768bb54c1f5bd87b#egg=aiohttp_metwork_middlewares
 aiosignal==1.3.2
+=======
+aiohttp==3.13.3
+-e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@3ef444a64f23bdc69bf93d4a5997d2bda11dd02a#egg=aiohttp_metwork_middlewares
+aiosignal==1.4.0
+>>>>>>> 229dd23 (feat: bump aiohttp from 3.12.5 to 3.13.3 (fix high CVE-2025-69223) (#2553))
 annotated-types==0.7.0
 argcomplete==3.6.0
 arrow==1.3.0

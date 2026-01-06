@@ -3,10 +3,17 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
+<<<<<<< HEAD
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.11.16 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 92ddc7e | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.3.2 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
+=======
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.13.3 | python3 |
+| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 3ef444a | python3 |
+| [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
+| [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
+>>>>>>> 229dd23 (feat: bump aiohttp from 3.12.5 to 3.13.3 (fix high CVE-2025-69223) (#2553))
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
 | [appdirs](http://github.com/ActiveState/appdirs) | 1.4.4 | python3_core |
