@@ -98,6 +98,10 @@
 - bump postgresql from 17.5 to 18.1 and add libcurl support (#2542)
 - bump postgis to 3.5.4 to fix build error against PostGreSQL 18 (#2544)
 - bump psycopg[-c] to 3.2.13 (fix build againt postgresql 18.1) (#2545)
+- bump requests from 2.32.4 to 2.32.5 (#2546)
+- bump gitignore-parser from 0.1.12 to 0.1.13 (#2547)
+- bump setuptools-rust from 1.11.1 to 1.12.0 (#2548)
+- bump pycparser from 2.22 to 2.23 (#2549)
 
 ### Bug Fixes
 
