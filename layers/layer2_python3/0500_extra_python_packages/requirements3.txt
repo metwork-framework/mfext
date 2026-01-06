@@ -107,6 +107,7 @@ requests-unixsocket2==0.4.2
 rich==14.2.0
 rpds-py==0.29.0
 scikit-build-core==0.11.3
+setuptools-git-versioning==2.1.0
 shellingham==1.5.4
 simpleeval==1.0.3
 sortedcontainers==2.4.0
