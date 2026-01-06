@@ -265,6 +265,7 @@
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
+| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
 | [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.12.0 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
 | [setuptools](https://pypi.org/project/setuptools) | 80.9.0 | python3_core |
@@ -323,4 +324,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(322 components)*
+*(323 components)*
