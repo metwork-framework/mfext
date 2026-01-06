@@ -97,7 +97,7 @@
 | [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
 | [hjson](http://github.com/hjson/hjson-py) | 3.1.0 | python3_devtools |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
-| [idna](https://pypi.org/project/idna) | 3.10 | python3 |
+| [idna](https://pypi.org/project/idna) | 3.11 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.1.0 | python3_devtools |
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
