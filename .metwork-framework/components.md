@@ -200,7 +200,7 @@
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
-| [redis](http://redis.io) | 7.4.6 | core |
+| [redis](http://redis.io) | 7.4.7 | core |
 | [redis](https://github.com/redis/redis-py) | 4.3.4 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
