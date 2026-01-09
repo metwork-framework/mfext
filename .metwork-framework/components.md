@@ -198,10 +198,9 @@
 | [pywget](https://bitbucket.org/licface/pywget) | 0.31 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
-<<<<<<< HEAD
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
-| [redis](http://redis.io) | 7.4.6 | core |
+| [redis](http://redis.io) | 7.4.7 | core |
 | [redis](https://github.com/redis/redis-py) | 4.3.4 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2022.10.31 | python3 |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
@@ -217,31 +216,6 @@
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.12 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.16.0 | python3_core |
-=======
-| [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
-| [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
-| [redis](http://redis.io) | 7.4.7 | core |
-| [redis](https://github.com/redis/redis-py) | 6.4.0 | python3 |
-| [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
-| [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
-| [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
-| [requests](https://requests.readthedocs.io) | 2.32.5 | python3 |
-| [rich](https://github.com/Textualize/rich) | 14.2.0 | python3 |
-| [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
-| [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
-| [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
-| [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
-| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
-| [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.12.0 | python3 |
-| [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
-| [setuptools](https://pypi.org/project/setuptools) | 80.9.0 | python3_core |
-| [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
-| [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
-| [shellingham](https://github.com/sarugaku/shellingham) | 1.5.4 | python3 |
-| [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.6 | python3_devtools |
-| [simpleeval](https://pypi.org/project/simpleeval) | 1.0.3 | python3 |
-| [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
->>>>>>> cebe937 (feat: bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566))
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [stack-data](http://github.com/alexmojaki/stack_data) | 0.6.0 | python3_devtools |
