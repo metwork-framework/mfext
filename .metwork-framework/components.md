@@ -251,8 +251,13 @@
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
+<<<<<<< HEAD
 | [redis](http://redis.io) | 7.4.6 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
+=======
+| [redis](http://redis.io) | 7.4.7 | core |
+| [redis](https://github.com/redis/redis-py) | 6.4.0 | python3 |
+>>>>>>> cebe937 (feat: bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566))
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
