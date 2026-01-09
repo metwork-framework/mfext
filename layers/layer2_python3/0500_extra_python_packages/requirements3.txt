@@ -128,7 +128,7 @@ typing_inspection==0.4.2
 Unidecode==1.3.8
 urllib3==2.6.2
 wcwidth==0.2.13
-Werkzeug==3.1.4
+Werkzeug==3.1.5
 wrapt==1.17.2
 -e git+https://github.com/metwork-framework/xattrfile.git@857ae661ddf25da7c00964debd5f279d8303c622#egg=xattrfile
 xmltodict==0.14.2
