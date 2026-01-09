@@ -102,6 +102,11 @@
 - bump gitignore-parser from 0.1.12 to 0.1.13 (#2547)
 - bump setuptools-rust from 1.11.1 to 1.12.0 (#2548)
 - bump pycparser from 2.22 to 2.23 (#2549)
+- add setuptools-git-versioning (for esmpy) (#2552)
+- bump aiohttp from 3.12.5 to 3.13.3 (fix high CVE-2025-69223) (#2553)
+- bump nltk from 3.9.1 to 3.9.2 (#2555)
+- bump idna from 3.10 to 3.11 (#2556)
+- bump charset-normalizer from 3.4.2 to 3.4.4 (#2557)
 
 ### Bug Fixes
 
