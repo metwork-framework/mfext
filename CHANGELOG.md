@@ -5,6 +5,9 @@
 ### New Features
 
 - bump filelock from 3.18.0 to 3.20.1 (fix moderate CVE-2025-68146) (#2532)
+- bump aiohttp from 3.12.5 to 3.13.3 (fix high CVE-2025-69223) (#2553)
+- bump aiosignal to 1.4.0 (compatibility with aiohttp 3.13.3) (#2565)
+- bump urllib3 from 2.6.2 to 2.6.3 (fix high CVE-2026-21441) (backport #2562) (#2563)
 
 ## v2.3.11 (2025-12-15)
 
