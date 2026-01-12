@@ -107,6 +107,10 @@
 - bump nltk from 3.9.1 to 3.9.2 (#2555)
 - bump idna from 3.10 to 3.11 (#2556)
 - bump charset-normalizer from 3.4.2 to 3.4.4 (#2557)
+- bump PyNaCl from 1.5.0 to 1.6.2 (fix moderate CVE-2025-69277) (#2561)
+- bump urllib3 from 2.6.2 to 2.6.3 (fix high CVE-2026-21441) (#2562)
+- bump Werkzeug from 3.1.4 to 3.1.5 (fix moderate CVE-2026-21860) (#2564)
+- bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566)
 
 ### Bug Fixes
 

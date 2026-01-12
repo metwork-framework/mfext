@@ -231,7 +231,7 @@
 | [pyinstaller](https://pyinstaller.org) | 6.16.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.19.1 | python3_devtools |
-| [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
+| [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
 | [pyproject_hooks](https://pypi.org/project/pyproject_hooks) | 1.2.0 | python3_core |
@@ -254,7 +254,7 @@
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
-| [redis](http://redis.io) | 7.4.6 | core |
+| [redis](http://redis.io) | 7.4.7 | core |
 | [redis](https://github.com/redis/redis-py) | 6.4.0 | python3 |
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
@@ -305,13 +305,13 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.15.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
-| [urllib3](https://pypi.org/project/urllib3) | 2.6.2 | python3 |
+| [urllib3](https://pypi.org/project/urllib3) | 2.6.3 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
-| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.4 | python3 |
+| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.5 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.45.1 | python3_core |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.17.2 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
