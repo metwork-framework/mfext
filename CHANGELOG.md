@@ -111,6 +111,7 @@
 - bump urllib3 from 2.6.2 to 2.6.3 (fix high CVE-2026-21441) (#2562)
 - bump Werkzeug from 3.1.4 to 3.1.5 (fix moderate CVE-2026-21860) (#2564)
 - bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566)
+- bump pbr from 6.1.1 to 7.0.3 (#2571)
 
 ### Bug Fixes
 
