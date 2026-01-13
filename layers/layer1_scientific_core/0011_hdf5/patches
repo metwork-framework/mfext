@@ -1,0 +1,3 @@
+#patch to find libaec.so in hdf5 2.0.0
+#(waiting for https://github.com/HDFGroup/hdf5/pull/6152 to be introduced in a new release)
+add-Findlibaec.patch
