@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566)
+
 ## v2.2.20 (2025-11-25)
 
 ### New Features
