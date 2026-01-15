@@ -307,7 +307,7 @@
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.6.3 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
-| [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
+| [virtualenv](https://github.com/pypa/virtualenv) | 20.36.1 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
