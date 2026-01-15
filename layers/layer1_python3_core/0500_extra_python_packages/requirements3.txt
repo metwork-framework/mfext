@@ -4,5 +4,5 @@ filelock==3.20.1
 importlib-metadata==8.6.1
 platformdirs==4.5.0
 six==1.17.0
-virtualenv==20.29.2
+virtualenv==20.36.1
 zipp==3.21.0
