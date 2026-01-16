@@ -247,7 +247,7 @@
 | [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.13.9 | python3_core |
+| [Python](http://python.org/) | 3.13.11 | python3_core |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0.3 | python3 |
