@@ -70,7 +70,7 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
-| [filelock](https://github.com/tox-dev/py-filelock) | 3.20.1 | python3_core |
+| [filelock](https://github.com/tox-dev/py-filelock) | 3.20.3 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
@@ -204,7 +204,7 @@
 | [postgresql](http://postgresql.org/) | 18.1 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [pre_commit](https://github.com/pre-commit/pre-commit) | 4.2.0 | python3_devtools |
-| [proj](http://trac.osgeo.org/proj/) | 9.6.2 | scientific_core |
+| [proj](http://trac.osgeo.org/proj/) | 9.7.1 | scientific_core |
 | [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) | 3.0.50 | python3 |
 | [propcache](https://github.com/aio-libs/propcache) | 0.3.0 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
@@ -221,7 +221,7 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 2.23 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.12.4 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.12.5 | python3 |
 | [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.41.5 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
@@ -307,7 +307,7 @@
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.6.3 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
-| [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
+| [virtualenv](https://github.com/pypa/virtualenv) | 20.36.1 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
