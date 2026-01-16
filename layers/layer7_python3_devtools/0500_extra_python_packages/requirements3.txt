@@ -1,5 +1,5 @@
-altgraph==0.17.5
 apipkg==3.0.2
+altgraph==0.17.5
 astroid==3.3.9
 backrefs==5.8
 bandit==1.8.3
@@ -54,7 +54,7 @@ pyflakes==3.2.0
 pyinstaller-hooks-contrib==2025.10
 pyinstaller==6.16.0
 pylint==3.3.6
-pymdown-extensions==10.14.3
+pymdown-extensions==10.19.1
 pyproject-api==1.9.0
 pytest==8.4.0
 pytest-asyncio==0.26.0

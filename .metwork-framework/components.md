@@ -70,7 +70,7 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
-| [filelock](https://github.com/tox-dev/py-filelock) | 3.18.0 | python3_core |
+| [filelock](https://github.com/tox-dev/py-filelock) | 3.20.1 | python3_core |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.12.0 | python3_core |
@@ -229,7 +229,7 @@
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.10 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.16.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
-| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.14.3 | python3_devtools |
+| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.19.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
@@ -303,13 +303,13 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.15.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
-| [urllib3](https://pypi.org/project/urllib3) | 2.5.0 | python3 |
+| [urllib3](https://pypi.org/project/urllib3) | 2.6.2 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 20.29.2 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
-| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.3 | python3 |
+| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.4 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.45.1 | python3_core |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.17.2 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |

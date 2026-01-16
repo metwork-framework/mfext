@@ -9,7 +9,6 @@ pydocstyle<=6.1.1
 pytest-httpserver
 flake8-docstrings
 pytest
-werkzeug
 nose
 black
 mkdocs

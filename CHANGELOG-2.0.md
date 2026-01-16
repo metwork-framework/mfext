@@ -1,5 +1,11 @@
 # release_2.0 CHANGELOG
 
+## v2.0.16 (2025-11-25)
+
+### New Features
+
+- bump Python 3.9 from 3.9.23 to 3.9.25 (#2502)
+
 ## v2.0.15 (2025-11-15)
 
 ### New Features
