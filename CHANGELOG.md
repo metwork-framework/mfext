@@ -118,6 +118,7 @@
 - bump filelock from 3.20.1 to 3.20.3 (fix moderate CVE-2026-22701) (#2577)
 - bump pydantic from 2.12.4 to 2.12.5 (#2578)
 - bump proj from 9.6.2 to 9.7.1 (#2579)
+- bump Python from 3.13.9 to 3.13.11 (#2581)
 
 ### Bug Fixes
 
