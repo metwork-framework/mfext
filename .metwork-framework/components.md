@@ -30,7 +30,7 @@
 | [build](https://build.pypa.io) | 1.2.2.post1 | python3_core |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
-| [cachetools](https://github.com/tkem/cachetools/) | 5.5.2 | python3 |
+| [cachetools](https://github.com/tkem/cachetools/) | 6.1.0 | python3 |
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2025.11.12 | python3_core |
@@ -197,7 +197,7 @@
 | [pip](https://pip.pypa.io/) | 25.3 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
-| [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
+| [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.5.4 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
@@ -233,17 +233,17 @@
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.19.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
-| [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
+| [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
 | [pyproject_hooks](https://pypi.org/project/pyproject_hooks) | 1.2.0 | python3_core |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
-| [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.26.0 | python3_devtools |
+| [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 1.3.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.1.1 | python3_devtools |
 | [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.1.1 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.14.0 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.6.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 8.4.2 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 9.0.2 | python3_devtools |
 | [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
@@ -295,7 +295,7 @@
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.6.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
 | [tornado](http://www.tornadoweb.org/) | 6.5.1 | python3 |
-| [tox](http://tox.readthedocs.org) | 4.25.0 | python3_devtools |
+| [tox](http://tox.readthedocs.org) | 4.28.4 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.11.14.15 | python3_core |
