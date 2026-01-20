@@ -9,6 +9,7 @@
 - bump aiosignal to 1.4.0 (compatibility with aiohttp 3.13.3) (#2565)
 - bump urllib3 from 2.6.2 to 2.6.3 (fix high CVE-2026-21441) (backport #2562) (#2563)
 - bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (backport #2566) (#2570)
+- bump pyasn1 from 0.6.1 to 0.6.2 (fix high CVE-2026-23490) (backport #2583) (#2584)
 
 ## v2.3.11 (2025-12-15)
 
