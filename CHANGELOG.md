@@ -119,6 +119,8 @@
 - bump pydantic from 2.12.4 to 2.12.5 (#2578)
 - bump proj from 9.6.2 to 9.7.1 (#2579)
 - bump Python from 3.13.9 to 3.13.11 (#2581)
+- bump pyasn1 from 0.6.1 to 0.6.2 (fix high CVE-2026-23490) (#2583)
+- bump pytest from 8.4.2 to 9.0.2 and upgrade required dependencies (#2585)
 
 ### Bug Fixes
 
