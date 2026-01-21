@@ -121,6 +121,8 @@
 - bump Python from 3.13.9 to 3.13.11 (#2581)
 - bump pyasn1 from 0.6.1 to 0.6.2 (fix high CVE-2026-23490) (#2583)
 - bump pytest from 8.4.2 to 9.0.2 and upgrade required dependencies (#2585)
+- bump tornado from 6.5.1 to 6.5.4 (fix high CVE-2025-67724/5/6) (#2586)
+- bump gdal from 3.11.5 to 3.12.1 (#2588)
 
 ### Bug Fixes
 
