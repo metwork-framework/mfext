@@ -1,6 +1,6 @@
 cffi==2.0.0
 ConfigUpdater==3.2
-Cython==3.1.6
+Cython==3.1.8
 pbr==7.0.3
 pycparser==2.23
 PyScaffold==4.6
