@@ -209,7 +209,7 @@
 | [propcache](https://github.com/aio-libs/propcache) | 0.3.0 | python3 |
 | [protobuf-c](https://github.com/protobuf-c) | 1.4.1 | scientific_core |
 | [protobuf](https://developers.google.com/protocol-buffers) | 3.20.3 | scientific_core |
-| [psutil](https://github.com/giampaolo/psutil) | 7.0.0 | python3 |
+| [psutil](https://github.com/giampaolo/psutil) | 7.2.1 | python3 |
 | [psycopg-c](https://psycopg.org/psycopg3/) | 3.2.13 | python3_scientific_core |
 | [psycopg](https://psycopg.org/psycopg3/) | 3.2.13 | python3_scientific_core |
 | [psycopg2](https://psycopg.org/) | 2.9.10 | python3_scientific_core |
