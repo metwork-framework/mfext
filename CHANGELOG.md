@@ -123,6 +123,10 @@
 - bump pytest from 8.4.2 to 9.0.2 and upgrade required dependencies (#2585)
 - bump tornado from 6.5.1 to 6.5.4 (fix high CVE-2025-67724/5/6) (#2586)
 - bump gdal from 3.11.5 to 3.12.1 (#2588)
+- bump psutil from 7.0.0 to 7.2.1 (#2589)
+- bump certifi from 2025.11.12 to 2026.1.4 (#2590)
+- bump Cython from 3.1.6 to 3.1.8 (#2591)
+- bump Cython from 3.1.8 to 3.2.4 (#2592)
 
 ### Bug Fixes
 
