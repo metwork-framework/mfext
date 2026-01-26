@@ -309,7 +309,7 @@
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.3 | python3 |
-| [wheel](https://pypi.org/project/wheel) | 0.45.1 | python3_core |
+| [wheel](https://pypi.org/project/wheel) | 0.46.3 | python3_core |
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.17.2 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
