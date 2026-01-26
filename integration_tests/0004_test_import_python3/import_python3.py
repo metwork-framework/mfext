@@ -25,7 +25,6 @@ import binaryornot
 import bjoern
 import black
 import bracex
-import build
 import bump_pydantic
 import cachetools
 import calver
@@ -174,7 +173,6 @@ import pymdownx
 import nacl #PyNaCl
 import pyparsing
 import pyproject_api
-import pyproject_hooks
 import pyscaffold
 import pytest_asyncio
 import pytest_cov
