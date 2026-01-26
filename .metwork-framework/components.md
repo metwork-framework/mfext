@@ -232,7 +232,11 @@
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.14.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.5.0 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
+<<<<<<< HEAD
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.0 | python3_devtools |
+=======
+| [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
+>>>>>>> 9b5f588 (feat: bump wheel from 0.45.1 to 0.46.3 (fix high CVE-2026-24049) (#2594))
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 0.26.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
@@ -308,8 +312,13 @@
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
+<<<<<<< HEAD
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.3 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.45.1 | python3_core |
+=======
+| [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.5 | python3 |
+| [wheel](https://pypi.org/project/wheel) | 0.46.3 | python3_core |
+>>>>>>> 9b5f588 (feat: bump wheel from 0.45.1 to 0.46.3 (fix high CVE-2026-24049) (#2594))
 | [wrapt](https://github.com/GrahamDumpleton/wrapt) | 1.17.2 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
@@ -321,4 +330,8 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
+<<<<<<< HEAD
 *(320 components)*
+=======
+*(321 components)*
+>>>>>>> 9b5f588 (feat: bump wheel from 0.45.1 to 0.46.3 (fix high CVE-2026-24049) (#2594))
