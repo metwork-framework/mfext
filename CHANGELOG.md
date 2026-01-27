@@ -127,6 +127,7 @@
 - bump certifi from 2025.11.12 to 2026.1.4 (#2590)
 - bump Cython from 3.1.6 to 3.1.8 (#2591)
 - bump Cython from 3.1.8 to 3.2.4 (#2592)
+- bump wheel from 0.45.1 to 0.46.3 (fix high CVE-2026-24049) (#2594)
 
 ### Bug Fixes
 
