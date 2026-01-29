@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 https://github.com/openssl/openssl/releases/download/openssl-3.4.1/openssl-3.4.1.tar.gz
+=======
+https://github.com/openssl/openssl/releases/download/openssl-3.5.5/openssl-3.5.5.tar.gz
+>>>>>>> 6a85fd1 (feat: bump openssl from 3.5.4 to 3.5.5 (fix several CVE) (#2599))
