@@ -11,6 +11,7 @@
 - bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (backport #2566) (#2570)
 - bump pyasn1 from 0.6.1 to 0.6.2 (fix high CVE-2026-23490) (backport #2583) (#2584)
 - bump tornado from 6.5.1 to 6.5.4 (fix high CVE-2025-67724/5/6) (#2586)
+- bump openssl from 3.5.4 to 3.5.5 (fix several CVE) (backport #2599) (#2600)
 
 ## v2.3.11 (2025-12-15)
 
