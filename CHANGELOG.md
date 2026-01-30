@@ -128,6 +128,9 @@
 - bump Cython from 3.1.6 to 3.1.8 (#2591)
 - bump Cython from 3.1.8 to 3.2.4 (#2592)
 - bump wheel from 0.45.1 to 0.46.3 (fix high CVE-2026-24049) (#2594)
+- bump openssl from 3.5.4 to 3.5.5 (fix several CVE) (#2599)
+- bump cryptography from 46.0.3 to 46.0.4 (#2602)
+- bump pyinstaller from 6.16.0 to 6.18.0 (#2603)
 
 ### Bug Fixes
 
