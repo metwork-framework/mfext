@@ -131,6 +131,7 @@
 - bump openssl from 3.5.4 to 3.5.5 (fix several CVE) (#2599)
 - bump cryptography from 46.0.3 to 46.0.4 (#2602)
 - bump pyinstaller from 6.16.0 to 6.18.0 (#2603)
+- bump orjson from 3.11.4 to 3.11.6 (fix moderate CVE-2025-67221) (#2605)
 
 ### Bug Fixes
 
