@@ -1,5 +1,19 @@
 # release_2.3 CHANGELOG
 
+## v2.3.12 (2026-01-31)
+
+### New Features
+
+- bump filelock from 3.18.0 to 3.20.1 (fix moderate CVE-2025-68146) (#2532)
+- bump aiohttp from 3.12.5 to 3.13.3 (fix high CVE-2025-69223) (#2553)
+- bump aiosignal to 1.4.0 (compatibility with aiohttp 3.13.3) (#2565)
+- bump urllib3 from 2.6.2 to 2.6.3 (fix high CVE-2026-21441) (backport #2562) (#2563)
+- bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (backport #2566) (#2570)
+- bump pyasn1 from 0.6.1 to 0.6.2 (fix high CVE-2026-23490) (backport #2583) (#2584)
+- bump tornado from 6.5.1 to 6.5.4 (fix high CVE-2025-67724/5/6) (#2586)
+- bump openssl from 3.5.4 to 3.5.5 (fix several CVE) (backport #2599) (#2600)
+- bump wheel from 0.45.1 to 0.46.3 (fix high CVE-2026-24049) (#2606)
+
 ## v2.3.11 (2025-12-15)
 
 ### New Features
