@@ -236,7 +236,7 @@
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 1.3.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
-| [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.1.1 | python3_devtools |
+| [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.2.0 | python3_devtools |
 | [pytest-json-report](https://github.com/numirias/pytest-json-report) | 1.5.0 | python3_devtools |
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.1.1 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.14.0 | python3_devtools |
