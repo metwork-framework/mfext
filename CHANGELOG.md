@@ -132,6 +132,8 @@
 - bump cryptography from 46.0.3 to 46.0.4 (#2602)
 - bump pyinstaller from 6.16.0 to 6.18.0 (#2603)
 - bump orjson from 3.11.4 to 3.11.6 (fix moderate CVE-2025-67221) (#2605)
+- bump pip from 25.3 to 26.0 (fix low CVE-2026-1703) (#2608)
+- bump pytest-html from 4.1.1 to 4.2.0 (#2609)
 
 ### Bug Fixes
 
