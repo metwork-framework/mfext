@@ -134,6 +134,9 @@
 - bump orjson from 3.11.4 to 3.11.6 (fix moderate CVE-2025-67221) (#2605)
 - bump pip from 25.3 to 26.0 (fix low CVE-2026-1703) (#2608)
 - bump pytest-html from 4.1.1 to 4.2.0 (#2609)
+- bump setuptools from 80.9.0 to 80.10.2 (#2610)
+- bump packaging from 25.0 to 26.0 (#2611)
+- bump pycparser from 2.23 to 3.0 (#2612)
 
 ### Bug Fixes
 
