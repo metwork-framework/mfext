@@ -76,6 +76,5 @@ snowballstemmer==2.2.0
 stevedore==5.4.1
 super-collections==0.5.3
 tox==4.28.4
-typing-inspect==0.9.0
 watchdog==6.0.0
 wcmatch==10.0
