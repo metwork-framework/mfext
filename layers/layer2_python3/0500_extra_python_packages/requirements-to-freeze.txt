@@ -85,3 +85,4 @@ scikit-build-core
 typer
 aiofiles
 msgpack
+typing-inspect

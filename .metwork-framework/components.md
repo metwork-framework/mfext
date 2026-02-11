@@ -301,7 +301,7 @@
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
 | [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.2 | python3 |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.15.0 | python3_core |
-| [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3_devtools |
+| [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3 |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.6.3 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
