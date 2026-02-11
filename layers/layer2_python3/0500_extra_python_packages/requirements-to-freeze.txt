@@ -84,3 +84,8 @@ orjson
 scikit-build-core
 pdm-backend
 aiofiles
+<<<<<<< HEAD
+=======
+msgpack
+typing-inspect
+>>>>>>> 5c0fc69 (build: move typing-inspect from python3_devtools to python3 layer (#2614))

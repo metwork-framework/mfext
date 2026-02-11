@@ -122,7 +122,12 @@ tornado==6.5.4
 tqdm==4.67.1
 traitlets==5.14.3
 types-python-dateutil==2.9.0.20241206
+<<<<<<< HEAD
 typing_inspection==0.4.0
+=======
+typing_inspect==0.9.0
+typing_inspection==0.4.2
+>>>>>>> 5c0fc69 (build: move typing-inspect from python3_devtools to python3 layer (#2614))
 Unidecode==1.3.8
 urllib3==2.6.3
 wcwidth==0.2.13
