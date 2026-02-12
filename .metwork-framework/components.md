@@ -192,13 +192,8 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.24.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
-<<<<<<< HEAD
-| [pillow](https://python-pillow.github.io) | 11.1.0 | python3 |
-| [pip](https://pip.pypa.io/) | 25.1.1 | python3_core |
-=======
 | [pillow](https://python-pillow.github.io) | 12.1.1 | python3 |
-| [pip](https://pip.pypa.io/) | 26.0 | python3_core |
->>>>>>> 2658d48 (feat: bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (#2620))
+| [pip](https://pip.pypa.io/) | 25.1.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
@@ -327,8 +322,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-<<<<<<< HEAD
-*(320 components)*
-=======
-*(322 components)*
->>>>>>> 2658d48 (feat: bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (#2620))
+*(321 components)*
