@@ -84,3 +84,4 @@ orjson
 scikit-build-core
 pdm-backend
 aiofiles
+typing-inspect
