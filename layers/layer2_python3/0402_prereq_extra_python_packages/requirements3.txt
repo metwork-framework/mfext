@@ -2,10 +2,5 @@ expandvars==0.12.0
 hatch-fancy-pypi-readme==24.1.0
 hatch-nodejs-version==0.3.2
 hatch-requirements-txt==0.4.1
-<<<<<<< HEAD
 maturin==1.8.2
-=======
-maturin==1.10.2
-pdm-backend==2.4.4
 pybind11==2.13.6
->>>>>>> 2658d48 (feat: bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (#2620))
