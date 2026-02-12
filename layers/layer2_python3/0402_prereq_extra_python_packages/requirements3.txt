@@ -2,5 +2,5 @@ expandvars==0.12.0
 hatch-fancy-pypi-readme==24.1.0
 hatch-nodejs-version==0.3.2
 hatch-requirements-txt==0.4.1
-maturin==1.8.2
+maturin==1.9.6
 pybind11==2.13.6
