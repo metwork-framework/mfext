@@ -162,6 +162,7 @@ import pure_eval
 import pyasn1
 import pyasn1_modules
 import asyncore #pyasyncore
+import pybind11
 import pycodestyle
 import pycparser
 import pydantic

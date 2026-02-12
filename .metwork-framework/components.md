@@ -192,7 +192,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.25.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
-| [pillow](https://python-pillow.github.io) | 11.1.0 | python3 |
+| [pillow](https://python-pillow.github.io) | 12.1.1 | python3 |
 | [pip](https://pip.pypa.io/) | 26.0 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
@@ -218,6 +218,7 @@
 | [pyasn1](https://github.com/pyasn1/pyasn1) | 0.6.2 | python3 |
 | [pyasn1_modules](https://github.com/pyasn1/pyasn1-modules) | 0.4.1 | python3 |
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
+| [pybind11](https://github.com/pybind/pybind11) | 2.13.6 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 3.0 | python3 |
 | [pydantic](https://github.com/pydantic/pydantic) | 2.12.5 | python3 |
@@ -322,4 +323,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(321 components)*
+*(322 components)*
