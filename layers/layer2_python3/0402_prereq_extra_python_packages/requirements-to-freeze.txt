@@ -3,8 +3,4 @@ hatch-fancy-pypi-readme
 hatch-nodejs-version
 hatch-requirements-txt
 maturin
-<<<<<<< HEAD
-=======
-pdm-backend
 pybind11
->>>>>>> 2658d48 (feat: bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (#2620))
