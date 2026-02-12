@@ -34,7 +34,7 @@
 | [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2025.4.26 | python3_core |
-| [cffi](http://cffi.readthedocs.org) | 1.17.1 | python3 |
+| [cffi](https://pypi.org/project/cffi) | 2.0.0 | python3 |
 | [cfgv](https://github.com/asottile/cfgv) | 3.4.0 | python3_devtools |
 | [chardet](https://github.com/chardet/chardet) | 5.2.0 | python3 |
 | [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.4.2 | python3 |
@@ -143,7 +143,7 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.7 | python3 |
 | [MarkupSafe](https://pypi.org/project/MarkupSafe) | 3.0.2 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.7 | python3 |
-| [maturin](https://pypi.org/project/maturin) | 1.8.2 | python3 |
+| [maturin](https://pypi.org/project/maturin) | 1.9.6 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.7.0 | python3_devtools |
 | [mdurl](https://github.com/executablebooks/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
@@ -264,7 +264,7 @@
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
 | [setuptools-git](https://github.com/wichert/setuptools-git) | 1.2 | python3 |
-| [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.10.2 | python3 |
+| [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.11.1 | python3 |
 | [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
 | [setuptools](https://pypi.org/project/setuptools) | 80.3.1 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |

@@ -1,4 +1,4 @@
-cffi==1.17.1
+cffi==2.0.0
 ConfigUpdater==3.2
 Cython==3.0.12
 fastentrypoints==0.12
@@ -7,5 +7,5 @@ pycparser==2.22
 PyScaffold==4.6
 semantic-version==2.10.0
 setuptools-git==1.2
-setuptools-rust==1.10.2
+setuptools-rust==1.11.1
 tomlkit==0.13.2
