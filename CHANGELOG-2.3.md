@@ -1,5 +1,13 @@
 # release_2.3 CHANGELOG
 
+## v2.3.13 (2026-02-13)
+
+### New Features
+
+- bump cryptography to 46.0.5 (fix high CVE-2026-26007) (backport #2618) (#2619)
+- bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (backport #2620) (#2621)
+- bump cffi to 2.0.0 and maturin to 1.9.6 (#2622)
+
 ## v2.3.12 (2026-01-31)
 
 ### New Features
