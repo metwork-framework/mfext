@@ -1,10 +1,6 @@
-/usr/lib64/libaec.so.0
-/usr/lib64/libaec.so.0.0.8
 /usr/lib64/libgsl.so.23
 /usr/lib64/libgsl.so.23.1.0
 /usr/lib64/libgslcblas.so.0
 /usr/lib64/libgslcblas.so.0.0.0
 /usr/lib64/libopenjp2.so.7
 /usr/lib64/libopenjp2.so.2.4.0
-/usr/lib64/libsz.so.2
-/usr/lib64/libsz.so.2.0.1
