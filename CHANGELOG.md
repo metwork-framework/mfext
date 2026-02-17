@@ -139,6 +139,7 @@
 - bump pycparser from 2.23 to 3.0 (#2612)
 - bump cryptography to 46.0.5 (fix high CVE-2026-26007) (#2618)
 - bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (#2620)
+- build libaec in layer core and use it for other builds (#2623)
 
 ### Bug Fixes
 
