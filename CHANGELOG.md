@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+
 ## v2.3.13 (2026-02-13)
 
 ### New Features
