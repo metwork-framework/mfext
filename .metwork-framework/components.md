@@ -168,11 +168,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
-<<<<<<< HEAD
-| [nltk](https://www.nltk.org/) | 3.9.1 | python3_devtools |
-=======
 | [nltk](https://www.nltk.org/) | 3.9.3 | python3_devtools |
->>>>>>> 332f62b (feat: bump nltk from 3.9.2 to 3.9.3 (fix critical CVE-2025-14009) (#2629))
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
