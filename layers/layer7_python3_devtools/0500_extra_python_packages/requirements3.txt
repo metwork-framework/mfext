@@ -40,11 +40,7 @@ mkdocs-material-extensions==1.3.1
 mock==5.2.0
 more-itertools==10.6.0
 natsort==8.4.0
-<<<<<<< HEAD
-nltk==3.9.1
-=======
 nltk==3.9.3
->>>>>>> 332f62b (feat: bump nltk from 3.9.2 to 3.9.3 (fix critical CVE-2025-14009) (#2629))
 nodeenv==1.9.1
 paginate==0.5.7
 panoply==0.1.56
