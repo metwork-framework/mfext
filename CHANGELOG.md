@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### Bug Fixes
+
+- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+
 ## v2.2.21 (2026-01-29)
 
 ### New Features
