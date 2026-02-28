@@ -1,5 +1,15 @@
 # release_2.3 CHANGELOG
 
+## v2.3.14 (2026-02-27)
+
+### New Features
+
+- bump nltk from 3.9.2 to 3.9.3 (fix critical CVE-2025-14009) (#2629)
+
+### Bug Fixes
+
+- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+
 ## v2.3.13 (2026-02-13)
 
 ### New Features
