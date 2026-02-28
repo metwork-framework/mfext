@@ -140,6 +140,7 @@
 - bump cryptography to 46.0.5 (fix high CVE-2026-26007) (#2618)
 - bump pillow from 11.1.0 to 12.1.1 (fix high CVE-2026-25990) (#2620)
 - build libaec in layer core and use it for other builds (#2623)
+- bump nltk from 3.9.2 to 3.9.3 (fix critical CVE-2025-14009) (#2629)
 
 ### Bug Fixes
 
