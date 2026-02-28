@@ -1,6 +1,6 @@
 # release_2.2 CHANGELOG
 
-## [Unreleased]
+## v2.2.22 (2026-02-27)
 
 ### Bug Fixes
 
