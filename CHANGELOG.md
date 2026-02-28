@@ -1,6 +1,6 @@
 # release_2.0 CHANGELOG
 
-## [Unreleased]
+## v2.0.18 (2026-02-27)
 
 ### Bug Fixes
 
