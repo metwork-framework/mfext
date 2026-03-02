@@ -83,7 +83,7 @@ Pillow==12.1.1
 poyo==0.5.0
 prompt-toolkit==3.0.50
 propcache==0.3.0
-psutil==7.2.1
+psutil==7.2.2
 ptyprocess==0.7.0
 pure-eval==0.2.3
 pyasn1==0.6.2
