@@ -166,7 +166,7 @@
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
-| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.3 | scientific_core |
+| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
 | [nltk](https://www.nltk.org/) | 3.9.3 | python3_devtools |
