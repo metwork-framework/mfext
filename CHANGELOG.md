@@ -144,6 +144,7 @@
 - bump Werkzeug from 3.1.5 to 3.1.6 (fix moderate CVE-2026-27199) (#2633)
 - bump psutil from 7.2.1 to 7.2.2
 - bump wrapt from 1.17.2 to 2.1.1 (#2635)
+- bump netcdf-c from 4.9.3 to 4.10.0 (compatibility hdf5 2.0+) (#2636)
 
 ### Bug Fixes
 
