@@ -37,7 +37,7 @@ paramiko
 #Common dependencies (python3_devtools and python3_scientific) below
 attrs
 wrapt
-#mkdocs 1.4.1 or 1.4.2 requires Markdown < 3.4
+#mkdocs 1.4.1 or 1.4.2 requires Markdown < 3.9
 Markdown<3.4
 tqdm
 joblib
