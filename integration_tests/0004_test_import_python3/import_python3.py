@@ -109,6 +109,8 @@ import maturin
 import mccabe
 import mdurl
 import mergedeep
+import mesonbuild
+import mesonpy
 import mflog
 import mfplugin
 import mfutil
@@ -174,6 +176,7 @@ import pymdownx
 import nacl #PyNaCl
 import pyparsing
 import pyproject_api
+import pyproject_metadata
 import pyscaffold
 import pytest_asyncio
 import pytest_cov

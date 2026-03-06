@@ -1,8 +1,10 @@
 cffi==2.0.0
 ConfigUpdater==3.2
 Cython==3.2.4
+meson==1.7.2
 pbr==7.0.3
 pycparser==3.0
+pyproject_metadata==0.9.1
 PyScaffold==4.6
 semantic-version==2.10.0
 setuptools-rust==1.12.0
