@@ -267,6 +267,7 @@
 | [rich](https://github.com/Textualize/rich) | 14.2.0 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
+| [scikit-build](https://github.com/scikit-build/scikit-build) | 0.18.1 | python3 |
 | [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
 | [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
@@ -328,4 +329,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(327 components)*
+*(328 components)*

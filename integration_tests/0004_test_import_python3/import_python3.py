@@ -200,6 +200,7 @@ import requests_unixsocket
 import requests
 import rich
 import sarif_om
+import skbuild #scikit_build
 import scikit_build_core
 import semantic_version
 import setuptools_git_versioning
