@@ -171,6 +171,7 @@
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
+| [ninja](http://ninja-build.org/) | 1.11.1.4 | python3 |
 | [nltk](https://www.nltk.org/) | 3.9.3 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
@@ -327,4 +328,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(326 components)*
+*(327 components)*

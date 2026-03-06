@@ -130,6 +130,7 @@ import multidict
 import mypy_extensions
 import natsort
 import netifaces
+import ninja
 import nltk
 import opinionated_configparser
 import orjson
