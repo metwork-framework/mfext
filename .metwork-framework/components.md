@@ -147,6 +147,8 @@
 | [mccabe](https://github.com/pycqa/mccabe) | 0.7.0 | python3_devtools |
 | [mdurl](https://github.com/executablebooks/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
+| [meson-python](https://github.com/mesonbuild/meson-python) | 0.17.1 | python3 |
+| [meson](https://mesonbuild.com) | 1.7.2 | python3 |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.1.1 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | 1a785e1 | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | 0.3.2 | python3 |
@@ -235,6 +237,7 @@
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
+| [pyproject-metadata](https://github.com/pypa/pyproject-metadata) | 0.9.1 | python3 |
 | [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 1.3.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
@@ -324,4 +327,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(323 components)*
+*(326 components)*
