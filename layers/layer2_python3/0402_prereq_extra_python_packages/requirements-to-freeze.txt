@@ -1,7 +1,1 @@
-expandvars
-hatch-fancy-pypi-readme
-hatch-nodejs-version
-hatch-requirements-txt
-maturin
-pdm-backend
-pybind11
+ninja

@@ -1,5 +1,8 @@
 Cython
 cffi
+hatch-fancy-pypi-readme
+meson
 pbr
+pyproject_metadata
 pyscaffold
 setuptools-rust

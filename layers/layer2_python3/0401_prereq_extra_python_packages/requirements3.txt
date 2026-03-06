@@ -1,1 +1,2 @@
-ninja==1.11.1.4
+scikit-build==0.18.1
+scikit-build-core==0.11.3
