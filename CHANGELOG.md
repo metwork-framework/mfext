@@ -145,6 +145,9 @@
 - bump psutil from 7.2.1 to 7.2.2
 - bump wrapt from 1.17.2 to 2.1.1 (#2635)
 - bump netcdf-c from 4.9.3 to 4.10.0 (compatibility hdf5 2.0+) (#2636)
+- bump orjson from 3.11.6 to 3.11.7 (#2637)
+- bump pip from 26.0 to 26.0.1 (#2639)
+- bump lxml from 5.3.1 to 6.0.2 (#2640)
 
 ### Bug Fixes
 
