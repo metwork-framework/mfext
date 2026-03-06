@@ -140,7 +140,7 @@
 | [lxml](https://lxml.de/) | 6.0.2 | python3 |
 | [Mako](https://www.makotemplates.org/) | 1.3.9 | python3_devtools |
 | [markdown-it-py](https://github.com/executablebooks/markdown-it-py) | 3.0.0 | python3 |
-| [Markdown](https://Python-Markdown.github.io/) | 3.7 | python3 |
+| [Markdown](https://Python-Markdown.github.io/) | 3.10.2 | python3 |
 | [MarkupSafe](https://pypi.org/project/MarkupSafe) | 3.0.2 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.7 | python3 |
 | [maturin](https://pypi.org/project/maturin) | 1.10.2 | python3 |
