@@ -148,6 +148,10 @@
 - bump orjson from 3.11.6 to 3.11.7 (#2637)
 - bump pip from 26.0 to 26.0.1 (#2639)
 - bump lxml from 5.3.1 to 6.0.2 (#2640)
+- add meson and meson-python (previously in layer python3_scientific)
+- add ninja (moved from addon scientific)
+- add scikit-build and reorganise builds in layer python3
+- bump Markdown from 3.10.7 to 3.10.2 (fix CVE-2025-69534) (#2645)
 
 ### Bug Fixes
 
