@@ -152,6 +152,7 @@
 - add ninja (moved from addon scientific)
 - add scikit-build and reorganise builds in layer python3
 - bump Markdown from 3.10.7 to 3.10.2 (fix CVE-2025-69534) (#2645)
+- bump setuptools from 80.10.2 to 81.0.0 (#2646)
 
 ### Bug Fixes
 
