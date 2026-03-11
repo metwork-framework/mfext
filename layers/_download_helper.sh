@@ -44,19 +44,39 @@ if test ${N} -eq 0; then
 fi
 
 SUCCESS=0
-for SOURCE in $(cat "${SOURCES_FILE}"); do
+if test -f ./local_sources; then
     rm -f "${ARCHIVE_FILE}"
-    echo "Trying to download ${SOURCE}..."
-    wget --no-check-certificate --tries=3 --timeout=${TIMEOUT} -O "${ARCHIVE_FILE}" "${SOURCE}"
-    if test $? -eq 0; then
-        "${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
-        N=$?
-        if test ${N} -eq 0; then
-            SUCCESS=1
-            break
+    SOURCE=$(cat "./local_sources")
+    echo "Trying to copy local_sources ${SOURCE}..."
+    if test -f ${SOURCE}; then
+        cp ${SOURCE} ${ARCHIVE_FILE}
+        if test $? -eq 0; then
+            "${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
+            N=$?
+            if test ${N} -eq 0; then
+                SUCCESS=1
+                break
+            fi
         fi
+    else
+	echo "${SOURCE} not found"
     fi
-done
+fi
+if test ${SUCCESS} -eq 0; then
+    for SOURCE in $(cat "${SOURCES_FILE}"); do
+        rm -f "${ARCHIVE_FILE}"
+        echo "Trying to download ${SOURCE}..."
+        wget --no-check-certificate --tries=3 --timeout=${TIMEOUT} -O "${ARCHIVE_FILE}" "${SOURCE}"
+        if test $? -eq 0; then
+            "${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
+            N=$?
+            if test ${N} -eq 0; then
+                SUCCESS=1
+                break
+            fi
+        fi
+    done
+fi
 
 if test ${SUCCESS} -eq 0; then
     echo "ERROR: can't download a valid archive for source file ${SOURCES_FILE} (checksum: ${CHECKSUM_TYPE}/${CHECKSUM_VALUE})"
