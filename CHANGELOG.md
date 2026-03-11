@@ -1,5 +1,23 @@
 # release_2.0 CHANGELOG
 
+## v2.0.18 (2026-02-27)
+
+### Bug Fixes
+
+- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+
+## v2.0.17 (2026-01-13)
+
+### New Features
+
+- bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566)
+
+## v2.0.16 (2025-11-25)
+
+### New Features
+
+- bump Python 3.9 from 3.9.23 to 3.9.25 (#2502)
+
 ## v2.0.15 (2025-11-15)
 
 ### New Features
