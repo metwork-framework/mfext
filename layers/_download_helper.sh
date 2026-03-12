@@ -47,7 +47,7 @@ SUCCESS=0
 for SOURCE in $(cat "${SOURCES_FILE}"); do
     rm -f "${ARCHIVE_FILE}"
     echo "Trying to download ${SOURCE}..."
-    wget --header "PRIVATE-TOKEN: ${ACCESS_TOKEN }" --no-check-certificate --tries=3 --timeout=${TIMEOUT} -O "${ARCHIVE_FILE}" "${SOURCE}"
+    wget --no-check-certificate --tries=3 --timeout=${TIMEOUT} -O "${ARCHIVE_FILE}" "${SOURCE}"
     if test $? -eq 0; then
         "${CURRENT_DIR}/_checksum_helper.sh" "${ARCHIVE_FILE}" "${CHECKSUM_TYPE}" "${CHECKSUM_VALUE}"
         N=$?
