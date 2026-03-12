@@ -71,6 +71,7 @@ jobs:
         if: ${{ steps.SetVariables.outputs.branch != 'null' }}
         id: BuildStep
         run: |
+          ACCESS_TOKEN=${{ secrets.METWORK_ACCESS_TOKEN }}
           TARGET_DIR=${{ steps.SetVariables.outputs.target_dir }}
           BRANCH=${{ steps.SetVariables.outputs.branch }}
           OS_VERSION=${{ steps.SetVariables.outputs.os }}
