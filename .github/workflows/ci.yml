@@ -71,7 +71,6 @@ jobs:
         if: ${{ steps.SetVariables.outputs.branch != 'null' }}
         id: BuildStep
         run: |
-          ACCESS_TOKEN=${{ secrets.METWORK_ACCESS_TOKEN }}
           TARGET_DIR=${{ steps.SetVariables.outputs.target_dir }}
           BRANCH=${{ steps.SetVariables.outputs.branch }}
           OS_VERSION=${{ steps.SetVariables.outputs.os }}
@@ -79,7 +78,7 @@ jobs:
           DEP_BRANCH=${{ steps.SetVariables.outputs.dep_branch }}
           BUILDIMAGE=${{ steps.SetVariables.outputs.buildimage }}
           docker pull ${BUILDIMAGE}
-          docker run ${DOCKER_RUN_OPTIONS} -e TARGET_DIR=${TARGET_DIR} -e BRANCH=${BRANCH} -e DEP_BRANCH=${DEP_BRANCH} -e TAG=${TAG} -e ACCESS_TOKEN=${ACCESS_TOKEN} -e OS_VERSION=${OS_VERSION} --rm ${BUILDIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/build.sh"
+          docker run ${DOCKER_RUN_OPTIONS} -e TARGET_DIR=${TARGET_DIR} -e TOKEN={{ secrets.METWORK_ACCESS_TOKEN }} -e BRANCH=${BRANCH} -e DEP_BRANCH=${DEP_BRANCH} -e TAG=${TAG} -e OS_VERSION=${OS_VERSION} --rm ${BUILDIMAGE} /bin/bash -c "${DOCKER_WORKFLOW_SCRIPTS_DIR}/build.sh"
           cat  ${{ github.workspace }}/github_output >> ${GITHUB_OUTPUT}
 
       - name: publish buildlogs
