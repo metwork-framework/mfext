@@ -323,8 +323,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-<<<<<<< HEAD
-*(321 components)*
-=======
-*(329 components)*
->>>>>>> 24efee4 (feat: add pg_cron (#2670))
+*(322 components)*
