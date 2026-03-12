@@ -187,6 +187,7 @@
 | [pdm-backend](https://github.com/pdm-project/pdm-backend) | 2.4.4 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
+| [pg_cron](https://github.com/citusdata/pg_cron) | 1.6.7 | scientific_core |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.6.0 | scientific_core |
 | [pgbouncer](https://www.pgbouncer.org/) | 1.24.1 | scientific_core |
@@ -322,4 +323,8 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
+<<<<<<< HEAD
 *(321 components)*
+=======
+*(329 components)*
+>>>>>>> 24efee4 (feat: add pg_cron (#2670))
