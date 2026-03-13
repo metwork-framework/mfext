@@ -3,7 +3,7 @@ altgraph==0.17.5
 astroid==3.3.9
 backrefs==5.8
 bandit==1.8.3
-black==25.1.0
+black==26.3.1
 bracex==2.5
 bump-pydantic==0.8.0
 cfgv==3.4.0
@@ -66,6 +66,7 @@ pytest-json-report==1.5.0
 pytest-metadata==3.1.1
 pytest-mock==3.14.0
 pytest-xdist==3.6.1
+pytokens==0.4.1
 pyyaml-env-tag==0.1
 pyyaml-ft==8.0.0
 sarif-om==1.0.4
