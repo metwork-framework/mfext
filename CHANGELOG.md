@@ -155,6 +155,7 @@
 - bump setuptools from 80.10.2 to 81.0.0 (#2646)
 - bump redis python from 6.4.0 to 7.0.1 (#2665)
 - bump gdal from 3.12.1 to 3.12.2 (#2666)
+- add pg_cron (#2670)
 
 ### Bug Fixes
 
