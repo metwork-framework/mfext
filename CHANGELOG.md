@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- add pg_cron (backport #2670) (#2671)
+
 ## v2.3.14 (2026-02-27)
 
 ### New Features
