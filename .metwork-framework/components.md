@@ -293,13 +293,8 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.6.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
-<<<<<<< HEAD
-| [tornado](http://www.tornadoweb.org/) | 6.5.4 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.25.0 | python3_devtools |
-=======
 | [tornado](http://www.tornadoweb.org/) | 6.5.5 | python3 |
-| [tox](http://tox.readthedocs.org) | 4.28.4 | python3_devtools |
->>>>>>> f46d277 (feat: bump tornado from 6.5.4 to 6.5.5 (fix high CVE-2026-31958) (#2686))
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
 | [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.11.14.15 | python3_core |
