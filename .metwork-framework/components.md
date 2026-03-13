@@ -326,8 +326,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-<<<<<<< HEAD
-*(322 components)*
-=======
-*(332 components)*
->>>>>>> ffc1e40 (feat: bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688))
+*(325 components)*
