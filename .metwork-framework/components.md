@@ -25,7 +25,7 @@
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
 | [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.5 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
-| [black](https://pypi.org/project/black) | 25.1.0 | python3_devtools |
+| [black](https://pypi.org/project/black) | 26.3.1 | python3_devtools |
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
@@ -125,6 +125,7 @@
 | [libcst](https://pypi.org/project/libcst) | 1.8.6 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.4 | scientific_core |
+| [librt](https://github.com/mypyc/librt) | 0.8.1 | python3_devtools |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
 | [libtiff](http://www.libtiff.org) | 4.7.0 | core |
 | [libtirpc](https://sourceforge.net/projects/libtirpc/) | 1.3.6 | core |
@@ -166,6 +167,7 @@
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
 | [msgpack](https://msgpack.org/) | 1.1.2 | python3 |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
+| [mypy](https://www.mypy-lang.org/) | 1.19.1 | python3_devtools |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.0 | scientific_core |
@@ -186,7 +188,7 @@
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.5.1 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
-| [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
+| [pathspec](https://pypi.org/project/pathspec) | 1.0.4 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 7.0.3 | python3 |
 | [pdm-backend](https://github.com/pdm-project/pdm-backend) | 2.4.4 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
@@ -253,6 +255,7 @@
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
 | [Python](http://python.org/) | 3.13.11 | python3_core |
+| [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
 | [PyYAML](https://pyyaml.org/) | 6.0.3 | python3 |
@@ -330,4 +333,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(329 components)*
+*(332 components)*
