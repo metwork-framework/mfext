@@ -164,12 +164,8 @@
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.2.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
-<<<<<<< HEAD
-| [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
-=======
 | [mypy](https://www.mypy-lang.org/) | 1.19.1 | python3_devtools |
-| [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
->>>>>>> ffc1e40 (feat: bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688))
+| [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.9.3 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
@@ -188,13 +184,8 @@
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.5.1 | python3 |
 | [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
-<<<<<<< HEAD
-| [pathspec](https://pypi.org/project/pathspec) | 0.12.1 | python3_core |
-| [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
-=======
 | [pathspec](https://pypi.org/project/pathspec) | 1.0.4 | python3_core |
-| [pbr](https://docs.openstack.org/pbr/latest/) | 7.0.3 | python3 |
->>>>>>> ffc1e40 (feat: bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688))
+| [pbr](https://docs.openstack.org/pbr/latest/) | 6.1.1 | python3 |
 | [pdm-backend](https://github.com/pdm-project/pdm-backend) | 2.4.4 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
@@ -257,14 +248,9 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.5 | python3_devtools |
 | [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
-<<<<<<< HEAD
 | [python-ldap](https://www.python-ldap.org/) | 3.4.4 | python3 |
 | [Python](http://python.org/) | 3.12.12 | python3_core |
-=======
-| [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.13.11 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
->>>>>>> ffc1e40 (feat: bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688))
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
