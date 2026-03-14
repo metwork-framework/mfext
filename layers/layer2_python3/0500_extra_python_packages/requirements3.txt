@@ -108,7 +108,7 @@ rich==14.2.0
 rpds-py==0.29.0
 setuptools-git-versioning==2.1.0
 shellingham==1.5.4
-simpleeval==1.0.3
+simpleeval==1.0.5
 sortedcontainers==2.4.0
 soupsieve==2.6
 -e git+https://github.com/metwork-framework/pystatsd.git@5db419f654100b2c5f371c82cb619a1406fbaf15#egg=statsd
