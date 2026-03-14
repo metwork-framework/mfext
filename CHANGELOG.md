@@ -156,6 +156,8 @@
 - bump redis python from 6.4.0 to 7.0.1 (#2665)
 - bump gdal from 3.12.1 to 3.12.2 (#2666)
 - add pg_cron (#2670)
+- bump tornado from 6.5.4 to 6.5.5 (fix high CVE-2026-31958) (#2686)
+- bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688)
 
 ### Bug Fixes
 
