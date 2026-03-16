@@ -111,11 +111,11 @@
 | [jinja2_from_json_extension](https://github.com/metwork-framework/jinja2_from_json_extension) | 1.0.1 | python3 |
 | [jinja2_getenv_extension](https://github.com/metwork-framework/jinja2_getenv_extension) | 1.0.3 | python3 |
 | [jinja2_shell_extension](https://github.com/metwork-framework/jinja2_shell_extension) | 2.1.1 | python3 |
-| [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3_devtools |
+| [jmespath](https://github.com/jmespath/jmespath.py) | 1.0.1 | python3 |
 | [joblib](https://joblib.readthedocs.io) | 1.4.2 | python3 |
 | [jq](https://stedolan.github.io/jq/) | 1.7.1 | core |
 | [jschema_to_python](https://github.com/microsoft/jschema-to-python) | 1.2.3 | python3_devtools |
-| [jsonpickle](https://jsonpickle.readthedocs.io/) | 4.1.1 | python3_devtools |
+| [jsonpickle](https://jsonpickle.readthedocs.io/) | 4.1.1 | python3 |
 | [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2024.10.1 | python3 |
 | [jsonschema](https://github.com/python-jsonschema/jsonschema) | 4.23.0 | python3 |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
