@@ -55,7 +55,9 @@ jinja2-fnmatch-extension==1.0.3
 jinja2-getenv-extension==1.0.3
 jinja2-shell-extension==2.1.1
 jinja2-time==0.2.0
+jmespath==1.0.1
 joblib==1.4.2
+jsonpickle==4.1.1
 jsonschema==4.23.0
 jsonschema_specifications==2024.10.1
 lazy-import==0.2.2
