@@ -282,7 +282,7 @@
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
 | [shellingham](https://github.com/sarugaku/shellingham) | 1.5.4 | python3 |
 | [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.6 | python3_devtools |
-| [simpleeval](https://pypi.org/project/simpleeval) | 1.0.3 | python3 |
+| [simpleeval](https://pypi.org/project/simpleeval) | 1.0.6 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.2 | python3_devtools |
