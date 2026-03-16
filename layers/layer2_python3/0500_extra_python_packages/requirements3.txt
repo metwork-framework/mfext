@@ -109,7 +109,12 @@ rich==13.9.4
 rpds-py==0.23.1
 scikit-build-core==0.11.3
 setuptools-git-versioning==2.1.0
+<<<<<<< HEAD
 simpleeval==1.0.3
+=======
+shellingham==1.5.4
+simpleeval==1.0.6
+>>>>>>> 6704ba6 (feat: bump simpleeval from 1.0.3 to 1.0.6 (fix high CVE-2026-32640) (#2692))
 sortedcontainers==2.4.0
 soupsieve==2.6
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
