@@ -7,6 +7,7 @@
 - add pg_cron (backport #2670) (#2671)
 - bump tornado from 6.5.4 to 6.5.5 (fix high CVE-2026-31958) (backport #2686) (#2687)
 - bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (backport #2688) (#2689)
+- bump simpleeval from 1.0.3 to 1.0.6 (fix high CVE-2026-32640) (backport #2692) (#2693)
 
 ## v2.3.14 (2026-02-27)
 
