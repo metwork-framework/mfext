@@ -158,6 +158,8 @@
 - add pg_cron (#2670)
 - bump tornado from 6.5.4 to 6.5.5 (fix high CVE-2026-31958) (#2686)
 - bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688)
+- bump simpleeval from 1.0.3 to 1.0.6 (fix high CVE-2026-32640) (#2692)
+- bump pg_uuidv7 from 1.6.0 to 1.7.0 (compat. PostGreSQL 18) (#2694)
 
 ### Bug Fixes
 
