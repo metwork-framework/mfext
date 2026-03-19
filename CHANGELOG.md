@@ -160,6 +160,7 @@
 - bump black from 25.1.0 to 26.3.1 (fix high CVE-2026-32274) (#2688)
 - bump simpleeval from 1.0.3 to 1.0.6 (fix high CVE-2026-32640) (#2692)
 - bump pg_uuidv7 from 1.6.0 to 1.7.0 (compat. PostGreSQL 18) (#2694)
+- bump pyasn1 from 0.6.2 to 0.6.3 (fix high CVE-2026-30922) (#2697)
 
 ### Bug Fixes
 
