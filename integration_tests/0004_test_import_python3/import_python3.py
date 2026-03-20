@@ -79,6 +79,7 @@ import hatchling
 import hiredis
 import hjson
 import idna
+import importlib_resources
 import iniconfig
 import inotify_simple
 import IPython

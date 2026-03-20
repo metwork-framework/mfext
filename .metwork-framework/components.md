@@ -98,6 +98,7 @@
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.11 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
+| [importlib_resources](https://pypi.org/project/importlib_resources) | 6.5.2 | python3 |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.1.0 | python3_devtools |
 | [inotify_simple](https://github.com/chrisjbillington/inotify_simple) | 1.3.5 | python3 |
 | [ipython](https://ipython.org) | 9.0.2 | python3 |
@@ -333,4 +334,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(332 components)*
+*(333 components)*
