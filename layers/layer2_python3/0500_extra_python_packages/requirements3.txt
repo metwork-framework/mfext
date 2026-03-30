@@ -95,7 +95,7 @@ pyasyncore==1.0.4
 pycodestyle==2.12.1
 pydantic==2.12.5
 pydantic-core==2.41.5
-Pygments==2.19.2
+Pygments==2.20.0
 pyinotify==0.9.6
 PyNaCl==1.6.2
 python-dateutil==2.9.0.post0
