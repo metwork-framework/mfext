@@ -164,6 +164,10 @@
 - add importlib_resources (previously only in layer python3_ia) (#2699)
 - bump requests from 2.32.5 to 2.33.0 (fix moderate CVE-2026-25645) (#2702)
 - bump nltk from 3.9.3 to 3.9.4 (fix moderate CVE-2026-33230) (#2704)
+- bump Pygments from 2.19.2 to 2.20.0 (fix low CVE-2026-4539) (#2712)
+- bump cryptography from 46.0.5 to 46.0.7 (fix moderate and low CVEs)
+- bump aiohttp from 3.13.3 to 3.13.5 (fix various CVEs) (#2714)
+- upgrade Python 3.13 from 3.13.11 to 3.13.13 (#2715)
 
 ### Bug Fixes
 
