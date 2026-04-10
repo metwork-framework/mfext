@@ -3,7 +3,7 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 78a05cb | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.13.3 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.13.5 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 3ef444a | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
@@ -46,7 +46,7 @@
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | 22817e1 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 46.0.5 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 46.0.7 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.2.4 | python3 |
@@ -233,7 +233,7 @@
 | [pydantic_core](https://github.com/pydantic/pydantic-core) | 2.41.5 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
-| [Pygments](https://pygments.org) | 2.19.2 | python3 |
+| [Pygments](https://pygments.org) | 2.20.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.10 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.18.0 | python3_devtools |
@@ -255,7 +255,7 @@
 | [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.13.11 | python3_core |
+| [Python](http://python.org/) | 3.13.13 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
