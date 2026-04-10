@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- upgrade Python 3.11 from 3.11.14 to 3.11.15 (#2717)
+
 ## v2.2.22 (2026-02-27)
 
 ### Bug Fixes
