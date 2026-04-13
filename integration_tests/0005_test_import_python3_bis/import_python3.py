@@ -6,6 +6,7 @@ import aiohttp
 import aiosignal
 import altgraph
 import annotated_types
+import anyio
 import apipkg
 import argcomplete
 import arrow
@@ -72,6 +73,7 @@ import ghp_import
 import git
 import gitdb
 import gitignore_parser
+import h11
 import hatch_fancy_pypi_readme
 import hatch_nodejs_version
 import hatch_requirements_txt
@@ -79,6 +81,8 @@ import hatch_vcs
 import hatchling
 import hiredis
 import hjson
+import httpcore
+import httpx
 import idna
 import importlib_metadata
 import importlib_resources
@@ -217,6 +221,7 @@ import simple_term_menu
 import simpleeval
 import six
 import smmap
+import sniffio
 import snowballstemmer
 import sortedcontainers
 import soupsieve

@@ -8,6 +8,7 @@
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
+| [anyio](https://pypi.org/project/anyio) | 4.9.0 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.6.0 | python3 |
 | [arrow](https://pypi.org/project/arrow) | 1.3.0 | python3 |
@@ -85,6 +86,7 @@
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
 | [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.44 | python3_devtools |
+| [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 24.1.0 | python3 |
 | [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version) | 0.3.2 | python3 |
 | [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.1 | python3 |
@@ -95,6 +97,8 @@
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
 | [hjson](http://github.com/hjson/hjson-py) | 3.1.0 | python3_devtools |
+| [httpcore](https://www.encode.io/httpcore/) | 1.0.9 | python3 |
+| [httpx](https://github.com/encode/httpx) | 0.28.1 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.11 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
@@ -287,6 +291,7 @@
 | [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.2 | python3_devtools |
+| [sniffio](https://github.com/python-trio/sniffio) | 1.3.1 | python3 |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.6 | python3 |
@@ -334,4 +339,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(333 components)*
+*(338 components)*
