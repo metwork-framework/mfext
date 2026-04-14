@@ -168,6 +168,8 @@
 - bump cryptography from 46.0.5 to 46.0.7 (fix moderate and low CVEs)
 - bump aiohttp from 3.13.3 to 3.13.5 (fix various CVEs) (#2714)
 - upgrade Python 3.13 from 3.13.11 to 3.13.13 (#2715)
+- bump openresty from 1.27.1.2 to 1.29.2.3 (fix nginx CVEs) (#2719)
+- add httpx and dependencies (#2721)
 
 ### Bug Fixes
 
