@@ -31,7 +31,6 @@
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 6.1.0 | python3 |
-| [calver](https://github.com/di/calver) | 2022.6.26 | python3_core |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2026.1.4 | python3_core |
 | [cffi](https://pypi.org/project/cffi) | 2.0.0 | python3 |
@@ -50,7 +49,6 @@
 | [cryptography](https://github.com/pyca/cryptography) | 46.0.7 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
-| [Cython](https://cython.org/) | 3.2.4 | python3 |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
 | [defusedxml](https://github.com/tiran/defusedxml) | 0.7.1 | python3 |
 | [deploycron](https://github.com/metwork-framework/deploycron) | 3d103a7 | python3 |
@@ -62,20 +60,16 @@
 | [distlib](https://github.com/pypa/distlib) | 0.4.0 | python3_core |
 | [distro](https://github.com/python-distro/distro) | 1.9.0 | python3_core |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
-| [editables](https://pypi.org/project/editables) | 0.5 | python3_core |
 | [entrypoints](https://github.com/takluyver/entrypoints) | 0.4 | python3 |
 | [envtpl](https://github.com/metwork-framework/envtpl) | 4cd1056 | python3 |
 | [exceptiongroup](https://pypi.org/project/exceptiongroup) | 1.2.2 | python3_devtools |
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.1.1 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
-| [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.20.3 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
-| [flit_core](https://pypi.org/project/flit_core) | 3.12.0 | python3_core |
-| [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2025.3.0 | python3 |
@@ -87,11 +81,6 @@
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
 | [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.44 | python3_devtools |
 | [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
-| [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 24.1.0 | python3 |
-| [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version) | 0.3.2 | python3 |
-| [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.1 | python3 |
-| [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.4.0 | python3_core |
-| [hatchling](https://hatch.pypa.io/latest/) | 1.27.0 | python3_core |
 | [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
@@ -130,7 +119,6 @@
 | [libcst](https://pypi.org/project/libcst) | 1.8.6 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.12 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.4 | scientific_core |
-| [librt](https://github.com/mypyc/librt) | 0.8.1 | python3_devtools |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
 | [libtiff](http://www.libtiff.org) | 4.7.0 | core |
 | [libtirpc](https://sourceforge.net/projects/libtirpc/) | 1.3.6 | core |
@@ -149,12 +137,9 @@
 | [Markdown](https://Python-Markdown.github.io/) | 3.10.2 | python3 |
 | [MarkupSafe](https://pypi.org/project/MarkupSafe) | 3.0.2 | python3 |
 | [matplotlib-inline](https://github.com/ipython/matplotlib-inline) | 0.1.7 | python3 |
-| [maturin](https://pypi.org/project/maturin) | 1.10.2 | python3 |
 | [mccabe](https://github.com/pycqa/mccabe) | 0.7.0 | python3_devtools |
 | [mdurl](https://github.com/executablebooks/mdurl) | 0.1.2 | python3 |
 | [mergedeep](https://github.com/clarketm/mergedeep) | 1.3.4 | python3_devtools |
-| [meson-python](https://github.com/mesonbuild/meson-python) | 0.17.1 | python3 |
-| [meson](https://mesonbuild.com) | 1.7.2 | python3 |
 | [mflog](https://github.com/metwork-framework/mflog) | 0.1.1 | python3 |
 | [mfplugin](https://github.com/metwork-framework/mfplugin) | 1a785e1 | python3 |
 | [mfutil](https://github.com/metwork-framework/mfutil) | 0.3.2 | python3 |
@@ -172,13 +157,11 @@
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
 | [msgpack](https://msgpack.org/) | 1.1.2 | python3 |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
-| [mypy](https://www.mypy-lang.org/) | 1.19.1 | python3_devtools |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
-| [ninja](http://ninja-build.org/) | 1.11.1.4 | python3 |
 | [nltk](https://www.nltk.org/) | 3.9.4 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
 | [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
@@ -195,7 +178,6 @@
 | [parso](https://github.com/davidhalter/parso) | 0.8.4 | python3 |
 | [pathspec](https://pypi.org/project/pathspec) | 1.0.4 | python3_core |
 | [pbr](https://docs.openstack.org/pbr/latest/) | 7.0.3 | python3 |
-| [pdm-backend](https://github.com/pdm-project/pdm-backend) | 2.4.4 | python3 |
 | [pdoc3](https://pdoc3.github.io/pdoc/) | 0.11.6 | python3_devtools |
 | [pexpect](https://pexpect.readthedocs.io/) | 4.9.0 | python3 |
 | [pg_cron](https://github.com/citusdata/pg_cron) | 1.6.7 | scientific_core |
@@ -205,7 +187,6 @@
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.github.io) | 12.1.1 | python3 |
-| [pip](https://pip.pypa.io/) | 26.0.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
@@ -226,11 +207,10 @@
 | [psycopg2](https://psycopg.org/) | 2.9.10 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3 |
 | [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.3 | python3 |
-| [py-spy](https://github.com/benfred/py-spy) | 0.4.0 | python3_devtools |
+| [py-spy](https://github.com/benfred/py-spy) | 0.4.1 | python3_devtools |
 | [pyasn1](https://github.com/pyasn1/pyasn1) | 0.6.3 | python3 |
 | [pyasn1_modules](https://github.com/pyasn1/pyasn1-modules) | 0.4.1 | python3 |
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
-| [pybind11](https://github.com/pybind/pybind11) | 2.13.6 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 3.0 | python3 |
 | [pydantic](https://github.com/pydantic/pydantic) | 2.12.5 | python3 |
@@ -246,8 +226,6 @@
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
-| [pyproject-metadata](https://github.com/pypa/pyproject-metadata) | 0.9.1 | python3 |
-| [PyScaffold](https://github.com/pyscaffold/pyscaffold/) | 4.6 | python3 |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 1.3.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.2.0 | python3_devtools |
@@ -256,7 +234,7 @@
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.14.0 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.6.1 | python3_devtools |
 | [pytest](https://docs.pytest.org/en/latest/) | 9.0.2 | python3_devtools |
-| [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
+| [pytest_httpserver](https://pypi.org/project/pytest_httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
 | [Python](http://python.org/) | 3.13.13 | python3_core |
@@ -276,12 +254,7 @@
 | [rich](https://github.com/Textualize/rich) | 14.2.0 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
-| [scikit-build](https://github.com/scikit-build/scikit-build) | 0.18.1 | python3 |
-| [scikit_build_core](https://github.com/scikit-build/scikit-build-core) | 0.11.3 | python3 |
-| [semantic_version](https://github.com/rbarrois/python-semanticversion) | 2.10.0 | python3 |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
-| [setuptools-rust](https://github.com/PyO3/setuptools-rust) | 1.12.0 | python3 |
-| [setuptools-scm](https://pypi.org/project/setuptools-scm) | 8.2.0 | python3_core |
 | [setuptools](https://pypi.org/project/setuptools) | 81.0.0 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
@@ -313,7 +286,6 @@
 | [tox](http://tox.readthedocs.org) | 4.28.4 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
-| [trove-classifiers](https://github.com/pypa/trove-classifiers) | 2025.11.14.15 | python3_core |
 | [typer](https://github.com/fastapi/typer) | 0.16.0 | python3 |
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
 | [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.2 | python3 |
@@ -339,4 +311,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(338 components)*
+*(320 components)*
