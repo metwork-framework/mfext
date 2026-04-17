@@ -38,7 +38,11 @@ else
     BINARY="--no-binary :all:"
 fi
 
-     
+BUILD_CONSTRAINT=""
+if test -f "${REALDIRNAME}/build_constraint"; then
+    BUILD_CONSTRAINT="--build-constraint ${REALDIRNAME}/build_constraint"
+fi
+
 TEMPO_LAYER_LABEL="tempolayer$$"
 TEMPO_LAYER_PATH="$(pwd)/${TEMPO_LAYER_LABEL}"
 
@@ -73,7 +77,7 @@ if test ${OVERRIDE} = 1; then
 fi
 
 # shellcheck disable=SC2086
-unsafe_pip wheel --wheel-dir=./src --src=./tmp_src ${BINARY} -r "${REQUIREMENTS}" ${CONSTRAINT} | grep --color=always -E 'Downloading|$' >&2
+unsafe_pip wheel --wheel-dir=./src --src=./tmp_src ${BINARY} -r "${REQUIREMENTS}" ${BUILD_CONSTRAINT} ${CONSTRAINT} | grep --color=always -E 'Downloading|$' >&2
 rm -Rf tmp_src
 
 rm -Rf "${TEMPO_LAYER_PATH}"
