@@ -9,6 +9,10 @@
 - bump openresty from 1.27.1.2 to 1.29.2.3 (fix nginx CVEs) (backport #2719) (#2720)
 - bump pillow from 12.1.1 to 12.2.0 (fix high CVE-2026-40192)
 
+### Bug Fixes
+
+- fix mfbase.start (case of existing database initialized by old PG version)
+
 ## v2.3.15 (2026-03-17)
 
 ### New Features
