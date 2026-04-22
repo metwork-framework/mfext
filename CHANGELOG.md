@@ -170,10 +170,14 @@
 - upgrade Python 3.13 from 3.13.11 to 3.13.13 (#2715)
 - bump openresty from 1.27.1.2 to 1.29.2.3 (fix nginx CVEs) (#2719)
 - add httpx and dependencies (#2721)
+- bump pillow from 12.1.1 to 12.2.0 (fix high CVE-2026-40192)
+- bump pytest from 9.0.2 to 9.0.3 (fix moderate CVE-2025-71176) (#2726)
+- bump Mako from 1.3.9 to 1.3.11 (fix GHSA-v92g-xgxw-vvmm) (#2729)
 
 ### Bug Fixes
 
 - fix depreciation : do not use positional arguments for flags (#2399)
 - patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+- fix mfbase.start (case of existing database initialized by old PG version)
 
 

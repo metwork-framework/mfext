@@ -131,8 +131,8 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://pypi.org/project/lunr) | 0.8.0 | python3_devtools |
-| [lxml](https://lxml.de/) | 6.0.2 | python3 |
-| [Mako](https://www.makotemplates.org/) | 1.3.9 | python3_devtools |
+| [lxml](https://lxml.de/) | 6.1.0 | python3 |
+| [Mako](https://www.makotemplates.org/) | 1.3.11 | python3_devtools |
 | [markdown-it-py](https://github.com/executablebooks/markdown-it-py) | 3.0.0 | python3 |
 | [Markdown](https://Python-Markdown.github.io/) | 3.10.2 | python3 |
 | [MarkupSafe](https://pypi.org/project/MarkupSafe) | 3.0.2 | python3 |
@@ -186,7 +186,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.25.1 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
-| [pillow](https://python-pillow.github.io) | 12.1.1 | python3 |
+| [pillow](https://python-pillow.github.io) | 12.2.0 | python3 |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
@@ -233,8 +233,8 @@
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.1.1 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.14.0 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.6.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 9.0.2 | python3_devtools |
-| [pytest_httpserver](https://pypi.org/project/pytest_httpserver) | 1.1.2 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 9.0.3 | python3_devtools |
+| [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
 | [Python](http://python.org/) | 3.13.13 | python3_core |
