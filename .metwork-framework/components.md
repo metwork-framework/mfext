@@ -143,7 +143,7 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://pypi.org/project/lunr) | 0.8.0 | python3_devtools |
-| [lxml](https://lxml.de/) | 6.0.2 | python3 |
+| [lxml](https://lxml.de/) | 6.1.0 | python3 |
 | [Mako](https://www.makotemplates.org/) | 1.3.11 | python3_devtools |
 | [markdown-it-py](https://github.com/executablebooks/markdown-it-py) | 3.0.0 | python3 |
 | [Markdown](https://Python-Markdown.github.io/) | 3.10.2 | python3 |
