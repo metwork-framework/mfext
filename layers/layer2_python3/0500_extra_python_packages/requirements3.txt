@@ -60,13 +60,8 @@ joblib==1.4.2
 jsonschema==4.23.0
 jsonschema_specifications==2024.10.1
 lazy-import==0.2.2
-<<<<<<< HEAD
-lxml==5.3.1
-Markdown==3.7
-=======
 lxml==6.1.0
-Markdown==3.10.2
->>>>>>> 9f7ed80 (feat: bump lxml to from 6.0.2 to 6.1.0 (fix high CVE-2026-41066) (#2733))
+Markdown==3.7
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
