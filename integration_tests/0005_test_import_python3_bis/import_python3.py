@@ -28,7 +28,6 @@ import black
 import bracex
 import bump_pydantic
 import cachetools
-import calver
 import cerberus
 import certifi
 import cffi
@@ -42,7 +41,6 @@ import cookiecutter
 import coverage
 import cronwrapper
 import cryptography
-import Cython
 import decorator
 import defusedxml
 import deploycron
@@ -52,7 +50,6 @@ import directory_observer
 import diskcache
 import distlib
 import distro
-import editables
 import entrypoints
 import envtpl
 import exceptiongroup
@@ -63,8 +60,6 @@ import filelock
 import filprofiler
 import flake8_docstrings
 import flake8
-import flit_core
-import flit_scm
 import freezegun
 import frozenlist
 import fsspec
@@ -74,11 +69,6 @@ import git
 import gitdb
 import gitignore_parser
 import h11
-import hatch_fancy_pypi_readme
-import hatch_nodejs_version
-import hatch_requirements_txt
-import hatch_vcs
-import hatchling
 import hiredis
 import hjson
 import httpcore
@@ -112,13 +102,10 @@ import mako
 import markdown
 import markdown_it #markdown_it_py
 import markupsafe
-import maturin
 #import matplotlib_inline
 import mccabe
 import mdurl
 import mergedeep
-import mesonbuild
-import mesonpy
 import mflog
 import mfplugin
 import mfutil
@@ -138,7 +125,6 @@ import multidict
 import mypy_extensions
 import natsort
 import netifaces
-import ninja
 import nltk
 import opinionated_configparser
 import orjson
@@ -149,7 +135,6 @@ import paramiko
 import parso
 import pathspec
 import pbr
-import pdm #pdm-backend
 import pdoc
 import pexpect
 import pickleshare
@@ -170,7 +155,6 @@ import pure_eval
 import pyasn1
 import pyasn1_modules
 import asyncore #pyasyncore
-import pybind11
 import pycodestyle
 import pycparser
 import pydantic
@@ -184,8 +168,6 @@ import pylint
 import pymdownx
 import nacl #PyNaCl
 import pyparsing
-import pyproject_metadata
-import pyscaffold
 import pytest_asyncio
 import pytest_cov
 import pytest_html
@@ -208,12 +190,7 @@ import requests_unixsocket
 import requests
 import rich
 import sarif_om
-import skbuild #scikit_build
-import scikit_build_core
-import semantic_version
 import setuptools_git_versioning
-import setuptools_rust
-import setuptools_scm
 import setuptools
 import sftp_py
 import shellingham
@@ -239,7 +216,6 @@ import tornado
 import tox
 import tqdm
 import traitlets
-import trove_classifiers
 import typer
 import typing_extensions
 import typing_inspect

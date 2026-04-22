@@ -1,7 +1,0 @@
-expandvars
-hatch-nodejs-version
-hatch-requirements-txt
-maturin
-meson-python
-pdm-backend
-pybind11
