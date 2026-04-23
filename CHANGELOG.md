@@ -8,6 +8,7 @@
 - upgrade Python 3.12 from 3.12.12 to 3.12.13 (#2716)
 - bump openresty from 1.27.1.2 to 1.29.2.3 (fix nginx CVEs) (backport #2719) (#2720)
 - bump pillow from 12.1.1 to 12.2.0 (fix high CVE-2026-40192)
+- bump lxml from 5.3.1 to 6.1.0 (fix high CVE-2026-41066) (backport #2733) (#2734)
 
 ### Bug Fixes
 
