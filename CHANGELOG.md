@@ -173,6 +173,8 @@
 - bump pillow from 12.1.1 to 12.2.0 (fix high CVE-2026-40192)
 - bump pytest from 9.0.2 to 9.0.3 (fix moderate CVE-2025-71176) (#2726)
 - bump Mako from 1.3.9 to 1.3.11 (fix GHSA-v92g-xgxw-vvmm) (#2729)
+- bump lxml to from 6.0.2 to 6.1.0 (fix high CVE-2026-41066) (#2733)
+- build isolate and remove build packages (#2735)
 
 ### Bug Fixes
 
