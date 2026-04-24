@@ -1,5 +1,15 @@
 # release_2.2 CHANGELOG
 
+## v2.2.23 (2026-04-21)
+
+### New Features
+
+- upgrade Python 3.11 from 3.11.14 to 3.11.15 (#2717)
+
+### Bug Fixes
+
+- fix mfbase.start (case of existing database initialized by old PG version)
+
 ## v2.2.22 (2026-02-27)
 
 ### Bug Fixes
