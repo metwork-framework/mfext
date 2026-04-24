@@ -1,5 +1,19 @@
 # release_2.3 CHANGELOG
 
+## v2.3.16 (2026-04-23)
+
+### New Features
+
+- bump pyasn1 from 0.6.2 to 0.6.3 (fix high CVE-2026-30922) (backport #2697) (#2698)
+- upgrade Python 3.12 from 3.12.12 to 3.12.13 (#2716)
+- bump openresty from 1.27.1.2 to 1.29.2.3 (fix nginx CVEs) (backport #2719) (#2720)
+- bump pillow from 12.1.1 to 12.2.0 (fix high CVE-2026-40192)
+- bump lxml from 5.3.1 to 6.1.0 (fix high CVE-2026-41066) (backport #2733) (#2734)
+
+### Bug Fixes
+
+- fix mfbase.start (case of existing database initialized by old PG version)
+
 ## v2.3.15 (2026-03-17)
 
 ### New Features
