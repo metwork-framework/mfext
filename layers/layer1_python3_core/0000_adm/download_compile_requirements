@@ -27,15 +27,17 @@ fi
 #With pip 23, wheel cache will be used with option --no-binary (it will speed up Metwork build)
 #Option --use-feature=no-binary-enable-wheel-cache reproduce this behavior with pip 22
 #Option --use-feature=no-binary-enable-wheel-cache is now always enabled
+BLIST1=$(cat "${MFEXT_HOME}/share/allow_build_binaries" | xargs | sed -e 's/ /,/g')
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
-    if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
-        BINARY=""
-    else
-        BLIST=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
+    if test -s "${REALDIRNAME}/allow_binary_packages"; then
+        BLIST2=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
+        BLIST=${BLIST1},${BLIST2}
         BINARY="--no-binary :all: --only-binary ${BLIST}"
+    else
+        BINARY="--no-binary :all: --only-binary ${BLIST1}"
     fi
 else
-    BINARY="--no-binary :all:"
+    BINARY="--no-binary :all: --only-binary ${BLIST1}"
 fi
 
 BUILD_CONSTRAINT=""
