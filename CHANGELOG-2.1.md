@@ -1,5 +1,11 @@
 # release_2.1 CHANGELOG
 
+## v2.1.18 (2026-04-10)
+
+### New Features
+
+- upgrade Python 3.10 from 3.10.19 to 3.10.20 (#2718)
+
 ## v2.1.17 (2026-02-27)
 
 ### Bug Fixes
