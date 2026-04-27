@@ -26,7 +26,6 @@ pkgconfig
 ply
 poetry
 py-cpuinfo
-py-spy
 pybind11
 pyproject-metadata
 PyScaffold
