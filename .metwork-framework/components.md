@@ -86,21 +86,14 @@
 | [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
-<<<<<<< HEAD
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.11 | python3 |
-| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.44 | python3_devtools |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.47 | python3_devtools |
 | [hatch-fancy-pypi-readme](https://pypi.org/project/hatch-fancy-pypi-readme) | 24.1.0 | python3 |
 | [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version) | 0.3.2 | python3 |
 | [hatch-requirements-txt](https://github.com/repo-helper/hatch-requirements-txt) | 0.4.1 | python3 |
 | [hatch-vcs](https://pypi.org/project/hatch-vcs) | 0.4.0 | python3_core |
 | [hatchling](https://hatch.pypa.io/latest/) | 1.27.0 | python3_core |
 | [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
-=======
-| [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
-| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.47 | python3_devtools |
-| [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
-| [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
->>>>>>> 431838f (feat: bump GitPython from 3.1.44 to to 3.1.47 (fix 2 high GHSA) (#2741))
 | [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
