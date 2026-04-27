@@ -187,6 +187,7 @@
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.github.io) | 12.2.0 | python3 |
+| [pip](https://pip.pypa.io/) | 26.0.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
@@ -311,4 +312,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(310 components)*
+*(311 components)*
