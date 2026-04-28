@@ -176,6 +176,8 @@
 - bump lxml to from 6.0.2 to 6.1.0 (fix high CVE-2026-41066) (#2733)
 - build isolate and remove build packages (#2735)
 - do not build "build dependencies" from sources (#2737)
+- bump GitPython from 3.1.44 to to 3.1.47 (fix 2 high GHSA) (#2741)
+- bump click from 8.2.1 to 8.3.3 (#2743)
 
 ### Bug Fixes
 
