@@ -67,7 +67,6 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.20.3 | python3_core |
-| [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
@@ -312,4 +311,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(311 components)*
+*(310 components)*
