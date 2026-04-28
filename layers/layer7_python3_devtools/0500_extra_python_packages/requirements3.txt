@@ -10,7 +10,6 @@ cfgv==3.4.0
 coverage==7.7.1
 exceptiongroup==1.2.2
 execnet==2.1.1
-filprofiler==2024.11.2
 flake8==7.1.2
 flake8-docstrings==1.7.0
 freezegun==1.5.1
