@@ -1,5 +1,0 @@
-Cython
-cffi
-pbr
-pyscaffold
-setuptools-rust

@@ -16,4 +16,4 @@ LICENSE=BSD
 
 all:: $(PREFIX)/lib/libhdf5.so
 $(PREFIX)/lib/libhdf5.so:
-	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="--enable-cxx --enable-fortran --disable-static --with-szlib --with-default-plugindir=$(PREFIX)/hdf5/lib/plugin" download uncompress configure build install
+	$(MAKE) --file=../../Makefile.standard PREFIX=$(PREFIX) EXPLICIT_NAME="$(EXPLICIT_NAME)" OPTIONS="--enable-cxx --enable-fortran --disable-static --with-szlib=$(PREFIX)/../core --with-default-plugindir=$(PREFIX)/hdf5/lib/plugin" download uncompress configure build install

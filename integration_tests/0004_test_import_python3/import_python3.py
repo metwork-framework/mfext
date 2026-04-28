@@ -6,6 +6,7 @@ import aiohttp
 import aiosignal
 import altgraph
 import annotated_types
+import anyio
 import apipkg
 import argcomplete
 import arrow
@@ -25,10 +26,8 @@ import binaryornot
 import bjoern
 import black
 import bracex
-import build
 import bump_pydantic
 import cachetools
-import calver
 import cerberus
 import certifi
 import cffi
@@ -42,7 +41,6 @@ import cookiecutter
 import coverage
 import cronwrapper
 import cryptography
-import Cython
 import decorator
 import defusedxml
 import deploycron
@@ -52,7 +50,6 @@ import directory_observer
 import diskcache
 import distlib
 import distro
-import editables
 import entrypoints
 import envtpl
 import exceptiongroup
@@ -62,8 +59,6 @@ import fakeredis
 import filelock
 import flake8_docstrings
 import flake8
-import flit_core
-import flit_scm
 import freezegun
 import frozenlist
 import fsspec
@@ -72,14 +67,13 @@ import ghp_import
 import git
 import gitdb
 import gitignore_parser
-import hatch_fancy_pypi_readme
-import hatch_nodejs_version
-import hatch_requirements_txt
-import hatch_vcs
-import hatchling
+import h11
 import hiredis
 import hjson
+import httpcore
+import httpx
 import idna
+import importlib_resources
 import iniconfig
 import inotify_simple
 import IPython
@@ -106,7 +100,6 @@ import mako
 import markdown
 import markdown_it #markdown_it_py
 import markupsafe
-import maturin
 import mccabe
 import mdurl
 import mergedeep
@@ -139,7 +132,6 @@ import paramiko
 import parso
 import pathspec
 import pbr
-import pdm #pdm-backend
 import pdoc
 import pexpect
 import pickleshare
@@ -174,8 +166,6 @@ import pymdownx
 import nacl #PyNaCl
 import pyparsing
 import pyproject_api
-import pyproject_hooks
-import pyscaffold
 import pytest_asyncio
 import pytest_cov
 import pytest_html
@@ -197,10 +187,7 @@ import requests_unixsocket
 import requests
 import rich
 import sarif_om
-import scikit_build_core
-import semantic_version
-import setuptools_rust
-import setuptools_scm
+import setuptools_git_versioning
 import setuptools
 import sftp_py
 import shellingham
@@ -208,6 +195,7 @@ import simple_term_menu
 import simpleeval
 import six
 import smmap
+import sniffio
 import snowballstemmer
 import sortedcontainers
 import soupsieve
@@ -225,7 +213,6 @@ import tornado
 import tox
 import tqdm
 import traitlets
-import trove_classifiers
 import typer
 import typing_extensions
 import typing_inspect

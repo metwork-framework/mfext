@@ -1,5 +1,27 @@
 # release_2.2 CHANGELOG
 
+## v2.2.23 (2026-04-21)
+
+### New Features
+
+- upgrade Python 3.11 from 3.11.14 to 3.11.15 (#2717)
+
+### Bug Fixes
+
+- fix mfbase.start (case of existing database initialized by old PG version)
+
+## v2.2.22 (2026-02-27)
+
+### Bug Fixes
+
+- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+
+## v2.2.21 (2026-01-29)
+
+### New Features
+
+- bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566)
+
 ## v2.2.20 (2025-11-25)
 
 ### New Features

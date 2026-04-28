@@ -1,2 +1,2 @@
-#pip 25.2 is the built-in version in python 3.13.7
+#pip 26.0.1 is the built-in version in python 3.13.13
 pip

@@ -60,12 +60,22 @@ fi
 if test "${NOINIT}" = "0"; then
     {% if MFMODULE != "MFBASE" %}
     DIR_INIT="plugins"
-    {% else %}
-    DIR_INIT="pgsql"
-    {% endif %}
     if ! test -d ${MFMODULE_RUNTIME_HOME}/var/${DIR_INIT}; then
         {{MFMODULE_LOWERCASE}}.init
     fi
+    {% else %}
+    DIR_INIT="pgsql"
+    if ! test -d ${MFMODULE_RUNTIME_HOME}/var/${DIR_INIT}; then
+        {{MFMODULE_LOWERCASE}}.init
+    else
+	# In case of the presence of var/pgsql initialized by a previous PostGreSQL version
+        OLD_PG_VERSION=`cat ${MFMODULE_RUNTIME_HOME}/var/${DIR_INIT}/PG_VERSION`
+        NEW_PG_VERSION=`psql --version | cut -d" " -f 3 | cut -d"." -f 1`
+        if [[ "$OLD_PG_VERSION" != "$NEW_PG_VERSION" ]]; then
+            {{MFMODULE_LOWERCASE}}.init
+        fi
+    fi
+    {% endif %}
     {% if MFMODULE != "MFBASE" %}
     _install_or_update_configured_plugins.py
     {% endif %}

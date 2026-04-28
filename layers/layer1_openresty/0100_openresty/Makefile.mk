@@ -2,17 +2,15 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=openresty
-export VERSION=1.27.1.2
+export VERSION=1.29.2.3
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=db41e79230e849cf19c075059f4bf62b
+export CHECKSUM=965e11087a9a998b69b7d68d644a5824
 DESCRIPTION=\
 OpenResty - Turning Nginx into a Full-Fledged Scriptable Web Platform
 WEBSITE=http://openresty.org
 LICENSE=BSD
 
-#Version 1.15.8.4 does not exist : it's 1.15.8.3 with patch on CVE-2020-11724
-#export SOURCE_VERSION=1.15.8.3
 export EXPLICIT_NAME=$(NAME)-$(VERSION)
 
 export SSL_CFLAGS=$(shell pkg-config --cflags openssl)

@@ -1,5 +1,23 @@
 # release_2.1 CHANGELOG
 
+## v2.1.18 (2026-04-10)
+
+### New Features
+
+- upgrade Python 3.10 from 3.10.19 to 3.10.20 (#2718)
+
+## v2.1.17 (2026-02-27)
+
+### Bug Fixes
+
+- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
+
+## v2.1.16 (2026-01-13)
+
+### New Features
+
+- bump redis from 7.4.6 to 7.4.7 (fix critical bug on HyperLogLog) (#2566)
+
 ## v2.1.15 (2025-11-25)
 
 ### New Features
