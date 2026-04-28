@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump GitPython from 3.1.44 to to 3.1.47 (fix 2 high GHSA) (backport #2741) (#2742)
+
 ## v2.3.16 (2026-04-23)
 
 ### New Features
