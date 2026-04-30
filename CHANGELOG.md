@@ -178,6 +178,8 @@
 - do not build "build dependencies" from sources (#2737)
 - bump GitPython from 3.1.44 to to 3.1.47 (fix 2 high GHSA) (#2741)
 - bump click from 8.2.1 to 8.3.3 (#2743)
+- bump pip from 26.0.1 to 26.1 (fix moderate CVE-2026-3219) (#2746)
+- bump certifi from 2026.1.4 to 2026.4.22 (#2747)
 
 ### Bug Fixes
 
