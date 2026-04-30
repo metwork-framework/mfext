@@ -29,12 +29,12 @@ fi
 #Option --use-feature=no-binary-enable-wheel-cache is now always enabled
 BLIST1=$(cat "${MFEXT_HOME}/share/build_dependencies" | xargs | sed -e 's/ /,/g')
 if test -f "${REALDIRNAME}/allow_binary_packages"; then
-    if test -s "${REALDIRNAME}/allow_binary_packages"; then
+    if test ! -s "${REALDIRNAME}/allow_binary_packages"; then
+        BINARY=""
+    else
         BLIST2=$(cat "${REALDIRNAME}/allow_binary_packages" | xargs | sed -e 's/ /,/g')
         BLIST=${BLIST1},${BLIST2}
         BINARY="--no-binary :all: --only-binary ${BLIST}"
-    else
-        BINARY="--no-binary :all: --only-binary ${BLIST1}"
     fi
 else
     BINARY="--no-binary :all: --only-binary ${BLIST1}"
