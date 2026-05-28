@@ -89,7 +89,7 @@
 | [httpcore](https://www.encode.io/httpcore/) | 1.0.9 | python3 |
 | [httpx](https://github.com/encode/httpx) | 0.28.1 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
-| [idna](https://pypi.org/project/idna) | 3.11 | python3 |
+| [idna](https://pypi.org/project/idna) | 3.16 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
 | [importlib_resources](https://pypi.org/project/importlib_resources) | 6.5.2 | python3 |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.1.0 | python3_devtools |
