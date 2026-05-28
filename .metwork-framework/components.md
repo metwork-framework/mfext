@@ -79,7 +79,7 @@
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
-| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.47 | python3_devtools |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.50 | python3_devtools |
 | [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
