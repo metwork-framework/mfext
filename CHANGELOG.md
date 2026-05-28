@@ -180,6 +180,8 @@
 - bump click from 8.2.1 to 8.3.3 (#2743)
 - bump pip from 26.0.1 to 26.1 (fix moderate CVE-2026-3219) (#2746)
 - bump certifi from 2026.1.4 to 2026.4.22 (#2747)
+- bump openssl from 3.5.5 to 3.6.2 (fix 8 CVE, moderate or less) (#2756)
+- bump pydantic to 2.13.4 and pydantic-core to 2.46.4 (#2757)
 
 ### Bug Fixes
 
