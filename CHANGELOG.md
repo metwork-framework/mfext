@@ -5,6 +5,9 @@
 ### New Features
 
 - bump GitPython from 3.1.44 to to 3.1.47 (fix 2 high GHSA) (backport #2741) (#2742)
+- bump Mako from 1.3.11 to 1.3.12 (fix high CVE-2026-44307) (backport #2759) (#2760)
+- bump GitPython to 3.1.50 (fix high GHSA-mv93-w799-cj2w) (backport #2761) (#2762)
+- bump urllib3 from 2.6.3 to 2.7.0 (fix high CVE-2026-44431/44432) (backport #2763) (#2764)
 
 ## v2.3.16 (2026-04-23)
 
