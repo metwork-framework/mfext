@@ -182,6 +182,12 @@
 - bump certifi from 2026.1.4 to 2026.4.22 (#2747)
 - bump openssl from 3.5.5 to 3.6.2 (fix 8 CVE, moderate or less) (#2756)
 - bump pydantic to 2.13.4 and pydantic-core to 2.46.4 (#2757)
+- bump Mako from 1.3.11 to 1.3.12 (fix high CVE-2026-44307) (#2759)
+- bump GitPython from 3.1.47 to 3.1.50 (fix high GHSA-mv93-w799-cj2w)
+- bump urllib3 from 2.6.3 to 2.7.0 (fix high CVE-2026-44431/44432) (#2763)
+- bump idna from 3.11 to 3.16 (fix moderate CVE-2026-45409) (#2765)
+- bump pymdown-extensions to 10.21.3 (fix moderate CVE-2026-46338) (#2766)
+- bump gdal from 3.12.2 to 3.13.0
 
 ### Bug Fixes
 
