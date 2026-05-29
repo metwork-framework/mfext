@@ -44,7 +44,7 @@ executing==2.2.0
 fakeredis==2.27.0
 frozenlist==1.5.0
 fsspec==2025.3.0
-geojson==3.2.0
+geojson==3.3.0
 gitignore-parser==0.1.13
 h11==0.16.0
 hiredis==3.1.0
