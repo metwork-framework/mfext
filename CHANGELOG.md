@@ -188,6 +188,7 @@
 - bump idna from 3.11 to 3.16 (fix moderate CVE-2026-45409) (#2765)
 - bump pymdown-extensions to 10.21.3 (fix moderate CVE-2026-46338) (#2766)
 - bump gdal from 3.12.2 to 3.13.0
+- bump geojson from 3.2.0 to 3.3.0 (compatibility Python 3.14) (#2769)
 
 ### Bug Fixes
 
