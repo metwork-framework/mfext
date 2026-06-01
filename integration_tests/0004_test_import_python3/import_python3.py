@@ -5,6 +5,7 @@ import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
 import altgraph
+import annotated_doc
 import annotated_types
 import anyio
 import apipkg
