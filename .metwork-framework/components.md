@@ -257,7 +257,7 @@
 | [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
-| [setuptools](https://pypi.org/project/setuptools) | 81.0.0 | python3_core |
+| [setuptools](https://pypi.org/project/setuptools) | 82.0.1 | python3_core |
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
 | [shellingham](https://github.com/sarugaku/shellingham) | 1.5.4 | python3 |

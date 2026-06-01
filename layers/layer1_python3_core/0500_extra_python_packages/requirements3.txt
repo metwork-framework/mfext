@@ -1,3 +1,4 @@
+setuptools==82.0.1
 distlib==0.4.0
 distro==1.9.0
 filelock==3.20.3
@@ -7,7 +8,6 @@ pathspec==1.0.4
 platformdirs==4.5.0
 pluggy==1.6.0
 pyparsing==3.2.1
-setuptools==81.0.0
 six==1.17.0
 typing-extensions==4.15.0
 virtualenv==20.36.1
