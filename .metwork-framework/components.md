@@ -83,7 +83,7 @@
 | [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.50 | python3_devtools |
 | [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
-| [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
+| [hdf5](https://www.hdfgroup.org) | 2.1.1 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
 | [hjson](http://github.com/hjson/hjson-py) | 3.1.0 | python3_devtools |
