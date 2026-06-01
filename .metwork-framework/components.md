@@ -286,7 +286,7 @@
 | [tox](http://tox.readthedocs.org) | 4.28.4 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
-| [typer](https://github.com/fastapi/typer) | 0.16.0 | python3 |
+| [typer](https://github.com/fastapi/typer) | 0.26.4 | python3 |
 | [types-python-dateutil](https://github.com/python/typeshed) | 2.9.0.20241206 | python3 |
 | [typing-inspection](https://github.com/pydantic/typing-inspection) | 0.4.2 | python3 |
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.15.0 | python3_core |
