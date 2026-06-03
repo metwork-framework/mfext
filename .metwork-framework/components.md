@@ -31,7 +31,7 @@
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
 | [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
-| [cachetools](https://github.com/tkem/cachetools/) | 6.1.0 | python3 |
+| [cachetools](https://github.com/tkem/cachetools/) | 7.1.4 | python3 |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2026.4.22 | python3_core |
 | [cffi](https://pypi.org/project/cffi) | 2.0.0 | python3 |
