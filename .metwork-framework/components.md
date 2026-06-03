@@ -195,7 +195,7 @@
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.5.4 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
-| [postgresql](http://postgresql.org/) | 18.1 | scientific_core |
+| [postgresql](http://postgresql.org/) | 18.4 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
 | [pre_commit](https://github.com/pre-commit/pre-commit) | 4.2.0 | python3_devtools |
 | [proj](http://trac.osgeo.org/proj/) | 9.7.1 | scientific_core |
