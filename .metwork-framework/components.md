@@ -221,8 +221,8 @@
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.20.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
-| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2025.10 | python3_devtools |
-| [pyinstaller](https://pyinstaller.org) | 6.18.0 | python3_devtools |
+| [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2026.5 | python3_devtools |
+| [pyinstaller](https://pyinstaller.org) | 6.20.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.21.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
