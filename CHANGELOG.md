@@ -193,6 +193,9 @@
 - add annotated-doc (typer dependency) (#2772)
 - bump setuptools from 81.0.0 to 82.0.1
 - bump hdf5 from 1.14.6 to 2.1.1 (#2775)
+- bump cachetools from 6.1.0 to 7.1.4 (#2777)
+- bump redis python from 7.0.1 to 7.1.1 (#2778)
+- bump postgresql from 18.1 to 18.4 (#2779)
 
 ### Bug Fixes
 
