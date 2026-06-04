@@ -178,6 +178,7 @@ import xdist #pytest-xdist
 import pytest
 import ldap #python-ldap
 import dateutil #python-dateutil
+import python_discovery
 import pytz
 import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag

@@ -180,6 +180,7 @@ import xdist #pytest-xdist
 import pytest
 import dateutil #python-dateutil
 import ldap #python-ldap
+import python_discovery
 import pytz
 #import pywget
 import yaml #PyYAML
