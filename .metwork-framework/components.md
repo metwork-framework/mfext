@@ -67,7 +67,7 @@
 | [execnet](https://execnet.readthedocs.io/en/latest/) | 2.1.1 | python3_devtools |
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
-| [filelock](https://github.com/tox-dev/py-filelock) | 3.20.3 | python3_core |
+| [filelock](https://github.com/tox-dev/py-filelock) | 3.29.1 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |

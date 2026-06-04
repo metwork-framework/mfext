@@ -1,7 +1,7 @@
 setuptools==82.0.1
 distlib==0.4.0
 distro==1.9.0
-filelock==3.20.3
+filelock==3.29.1
 importlib-metadata==8.6.1
 packaging==26.0
 pathspec==1.0.4
