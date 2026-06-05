@@ -196,6 +196,10 @@
 - bump cachetools from 6.1.0 to 7.1.4 (#2777)
 - bump redis python from 7.0.1 to 7.1.1 (#2778)
 - bump postgresql from 18.1 to 18.4 (#2779)
+- bump aiohttp from 3.13.5 to 3.14.0 (fix moderate CVEs) (#2781)
+- bump filelock from 3.20.3 to 3.29.1 (#2783)
+- bump pyinstaller from 6.18.0 to 6.20.0 (#2784)
+- bump virtualenv from 20.36.1 to 21.4.2 (#2785)
 
 ### Bug Fixes
 
