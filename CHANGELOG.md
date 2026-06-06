@@ -200,6 +200,7 @@
 - bump filelock from 3.20.3 to 3.29.1 (#2783)
 - bump pyinstaller from 6.18.0 to 6.20.0 (#2784)
 - bump virtualenv from 20.36.1 to 21.4.2 (#2785)
+- bump rich from 14.2.0 to 15.0.0 (#2786)
 
 ### Bug Fixes
 
