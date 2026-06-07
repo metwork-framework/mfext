@@ -254,7 +254,7 @@
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://pypi.org/project/requests) | 2.33.0 | python3 |
-| [rich](https://github.com/Textualize/rich) | 15.0.0 | python3 |
+| [rich](https://github.com/Textualize/rich) | 14.3.4 | python3 |
 | [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |

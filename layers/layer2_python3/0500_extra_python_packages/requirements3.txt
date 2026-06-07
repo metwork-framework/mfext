@@ -116,7 +116,7 @@ referencing==0.36.2
 regex==2024.11.6
 requests==2.33.0
 requests-unixsocket2==0.4.2
-rich==15.0.0
+rich==14.3.4
 rpds-py==0.29.0
 setuptools-git-versioning==2.1.0
 shellingham==1.5.4
