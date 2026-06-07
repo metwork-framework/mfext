@@ -207,5 +207,6 @@
 - fix depreciation : do not use positional arguments for flags (#2399)
 - patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
 - fix mfbase.start (case of existing database initialized by old PG version)
+- downgrade rich to 14.3.4 (compatibility lightning 2.6.5) (#2787)
 
 
