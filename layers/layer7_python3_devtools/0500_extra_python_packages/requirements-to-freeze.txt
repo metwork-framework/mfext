@@ -42,3 +42,4 @@ pyinstaller
 panoply
 pre-commit
 tox
+coveralls
