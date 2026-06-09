@@ -25,7 +25,7 @@
 | [bash](https://github.com/alexcouper/bash) | 0.7 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 5.0.0 | python3 |
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
-| [binaryornot](https://github.com/audreyr/binaryornot) | 0.4.5 | python3 |
+| [binaryornot](https://github.com/binaryornot/binaryornot) | 0.6.0 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 26.3.1 | python3_devtools |
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
