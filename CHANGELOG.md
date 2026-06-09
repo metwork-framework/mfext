@@ -201,6 +201,8 @@
 - bump pyinstaller from 6.18.0 to 6.20.0 (#2784)
 - bump virtualenv from 20.36.1 to 21.4.2 (#2785)
 - bump rich from 14.2.0 to 15.0.0 (#2786)
+- bump proj from 9.7.1 to 9.8.1, fixing patch file for skmerc (#2788)
+- add coveralls (4.1.0) in layer python3_devtools (#2789)
 
 ### Bug Fixes
 
