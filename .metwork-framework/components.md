@@ -304,7 +304,7 @@
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.6 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.46.3 | python3_core |
-| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 2.1.1 | python3 |
+| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 2.2.1 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 857ae66 | python3 |
