@@ -203,6 +203,9 @@
 - bump rich from 14.2.0 to 15.0.0 (#2786)
 - bump proj from 9.7.1 to 9.8.1, fixing patch file for skmerc (#2788)
 - add coveralls (4.1.0) in layer python3_devtools (#2789)
+- bump charset-normalizer from 3.4.4 to 3.4.7 (#2790)
+- bump wrapt from 2.1.1 to 2.2.1 (#2791)
+- bump binaryornot from Metwork fork 0.4.5 to 0.6.0 (#2792)
 
 ### Bug Fixes
 
