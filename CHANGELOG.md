@@ -206,6 +206,8 @@
 - bump charset-normalizer from 3.4.4 to 3.4.7 (#2790)
 - bump wrapt from 2.1.1 to 2.2.1 (#2791)
 - bump binaryornot from Metwork fork 0.4.5 to 0.6.0 (#2792)
+- bump redis python from 7.1.1 to 7.2.2 (#2793)
+- downgrade setuptools to 81.0.0 because of torch > 2.10 (#2794)
 
 ### Bug Fixes
 
