@@ -220,6 +220,7 @@
 | [PyYAML](https://pyyaml.org/) | 6.0.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
+<<<<<<< HEAD
 | [readline](https://www.gnu.org/software/readline) | 8.1.2 | core |
 | [redis](http://redis.io) | 7.4.7 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.1 | python3 |
@@ -234,6 +235,20 @@
 | [setuptools-rust](https://pypi.org/project/setuptools-rust) | 1.7.0 | python3 |
 | [setuptools](https://github.com/pypa/setuptools) | 69.0.3 | python3_core |
 | [setuptools_scm](https://github.com/pypa/setuptools_scm/) | 7.1.0 | python3_core |
+=======
+| [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
+| [redis](http://redis.io) | 7.4.9 | core |
+| [redis](https://github.com/redis/redis-py) | 7.2.2 | python3 |
+| [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
+| [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
+| [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
+| [requests](https://pypi.org/project/requests) | 2.33.0 | python3 |
+| [rich](https://github.com/Textualize/rich) | 14.3.4 | python3 |
+| [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
+| [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
+| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
+| [setuptools](https://pypi.org/project/setuptools) | 81.0.0 | python3_core |
+>>>>>>> 3a6c674 (feat: bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (#2798))
 | [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
 | [shellcheck](http://www.shellcheck.net) | 0.9.0 | devtools |
 | [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.4 | python3_devtools |
