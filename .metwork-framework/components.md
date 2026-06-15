@@ -169,10 +169,9 @@
 | [pytz](http://pythonhosted.org/pytz) | 2019.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 5.4.1 | python3 |
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
-<<<<<<< HEAD
 | [pyzmq](https://pyzmq.readthedocs.org) | 22.3.0 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.0 | core |
-| [redis](http://redis.io) | 7.4.7 | core |
+| [redis](http://redis.io) | 7.4.9 | core |
 | [redis](https://github.com/andymccurdy/redis-py) | 3.2.1 | python3 |
 | [regex](https://bitbucket.org/mrabarnett/mrab-regex) | 2021.8.28 | python3_devtools |
 | [repackage](https://www.settlenext.com) | 0.7.3 | python3_devtools |
@@ -185,27 +184,6 @@
 | [shellcheck](http://www.shellcheck.net) | 20170801 | devtools |
 | [simpleeval](https://github.com/danthedeckie/simpleeval) | 0.9.10 | python3 |
 | [six](https://github.com/benjaminp/six) | 1.15.0 | python3_core |
-=======
-| [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
-| [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
-| [redis](http://redis.io) | 7.4.9 | core |
-| [redis](https://github.com/redis/redis-py) | 7.2.2 | python3 |
-| [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
-| [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
-| [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
-| [requests](https://pypi.org/project/requests) | 2.33.0 | python3 |
-| [rich](https://github.com/Textualize/rich) | 14.3.4 | python3 |
-| [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
-| [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
-| [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
-| [setuptools](https://pypi.org/project/setuptools) | 81.0.0 | python3_core |
-| [sftp_py](https://github.com/AlexOrlek/sftp_py) | 0.2.1 | python3_devtools |
-| [shellcheck](http://www.shellcheck.net) | 0.10.0 | devtools |
-| [shellingham](https://github.com/sarugaku/shellingham) | 1.5.4 | python3 |
-| [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu) | 1.6.6 | python3_devtools |
-| [simpleeval](https://pypi.org/project/simpleeval) | 1.0.6 | python3 |
-| [six](https://github.com/benjaminp/six) | 1.17.0 | python3_core |
->>>>>>> 3a6c674 (feat: bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (#2798))
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.0.0 | python3_devtools |
 | [stack-data](http://github.com/alexmojaki/stack_data) | 0.2.0 | python3_devtools |
