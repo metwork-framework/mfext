@@ -208,6 +208,9 @@
 - bump binaryornot from Metwork fork 0.4.5 to 0.6.0 (#2792)
 - bump redis python from 7.1.1 to 7.2.2 (#2793)
 - downgrade setuptools to 81.0.0 because of torch > 2.10 (#2794)
+- bump tornado from 6.5.5 to 6.5.6 (fix high CVE-2026-49855)
+- bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (#2798)
+- bump redis python from 7.2.2 to 7.3.1 (#2803)
 
 ### Bug Fixes
 
