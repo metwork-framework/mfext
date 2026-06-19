@@ -48,7 +48,7 @@
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [coveralls](https://pypi.org/project/coveralls) | 4.1.0 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 46.0.7 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 48.0.1 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
