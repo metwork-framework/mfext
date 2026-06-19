@@ -9,6 +9,7 @@
 - bump GitPython to 3.1.50 (fix high GHSA-mv93-w799-cj2w) (backport #2761) (#2762)
 - bump urllib3 from 2.6.3 to 2.7.0 (fix high CVE-2026-44431/44432) (backport #2763) (#2764)
 - bump tornado from 6.5.5 to 6.5.6 (fix high CVE-2026-49855) (backport #2796) (#2797)
+- bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (backport #2798) (#2802)
 
 ## v2.3.16 (2026-04-23)
 
