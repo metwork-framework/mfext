@@ -1,5 +1,11 @@
 # release_2.2 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (backport #2798) (#2801)
+
 ## v2.2.23 (2026-04-21)
 
 ### New Features
