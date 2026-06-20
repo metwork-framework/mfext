@@ -211,6 +211,10 @@
 - bump tornado from 6.5.5 to 6.5.6 (fix high CVE-2026-49855)
 - bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (#2798)
 - bump redis python from 7.2.2 to 7.3.1 (#2803)
+- bump cryptography from 46.0.7 to 48.0.1 (fix high GHSA-537c-gmf6-5ccf)
+- bump openssl from 3.6.2 to 3.6.3 (fix high CVE-2026-45447) (#2809)
+- bump tornado to 6.5.7 (fix moderate GHSA-pw6j-qg29-8w7f) (#2811)
+- bump aiohttp from 3.14.0 to 3.14.1 (fix several moderate CVEs)
 
 ### Bug Fixes
 
