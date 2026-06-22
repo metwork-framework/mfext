@@ -163,6 +163,10 @@
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.2.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
+<<<<<<< HEAD
+=======
+| [msgpack](https://msgpack.org/) | 1.2.1 | python3 |
+>>>>>>> eaadb72 (feat: bump msgpack from 1.1.2 to 1.2.1 (fix high GHSA-6v7p-g79w-8964) (#2813))
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
 | [mypy](https://www.mypy-lang.org/) | 1.19.1 | python3_devtools |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.0.0 | python3 |
