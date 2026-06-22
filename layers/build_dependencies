@@ -41,4 +41,5 @@ tomli_w
 trove-classifiers
 uv
 uv_build
+vcs-versioning
 versioneer
