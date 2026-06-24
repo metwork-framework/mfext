@@ -114,6 +114,7 @@
 | [jsonpickle](https://jsonpickle.readthedocs.io/) | 4.1.1 | python3 |
 | [jsonschema-specifications](https://github.com/python-jsonschema/jsonschema-specifications) | 2024.10.1 | python3 |
 | [jsonschema](https://github.com/python-jsonschema/jsonschema) | 4.23.0 | python3 |
+| [lark](https://github.com/lark-parser/lark) | 1.1.8 | python3 |
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.10.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
@@ -316,4 +317,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(315 components)*
+*(316 components)*

@@ -68,6 +68,7 @@ joblib==1.4.2
 jsonpickle==4.1.1
 jsonschema==4.23.0
 jsonschema_specifications==2024.10.1
+lark==1.1.8
 lazy-import==0.2.2
 lxml==6.1.0
 Markdown==3.10.2
