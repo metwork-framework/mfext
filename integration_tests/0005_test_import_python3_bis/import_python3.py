@@ -124,6 +124,7 @@ import more_itertools
 import msgpack
 import multidict
 import mypy_extensions
+import narwhals
 import natsort
 import netifaces
 import nltk

@@ -160,6 +160,7 @@
 | [msgpack](https://msgpack.org/) | 1.2.1 | python3 |
 | [multidict](https://github.com/aio-libs/multidict) | 6.1.0 | python3 |
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
+| [narwhals](https://github.com/narwhals-dev/narwhals) | 1.37.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
 | [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.0 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
@@ -315,4 +316,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(314 components)*
+*(315 components)*
