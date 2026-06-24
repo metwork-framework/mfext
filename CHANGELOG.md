@@ -216,6 +216,8 @@
 - bump tornado to 6.5.7 (fix moderate GHSA-pw6j-qg29-8w7f) (#2811)
 - bump aiohttp from 3.14.0 to 3.14.1 (fix several moderate CVEs)
 - bump msgpack from 1.1.2 to 1.2.1 (fix high GHSA-6v7p-g79w-8964) (#2813)
+- bump orjson from 3.11.7 to 3.11.9 (#2817)
+- bump redis python from 7.3.1 to 7.4.1 (#2818)
 
 ### Bug Fixes
 
