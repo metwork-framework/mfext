@@ -1,6 +1,6 @@
 # release_2.3 CHANGELOG
 
-## [Unreleased]
+## v2.3.17 (2026-06-20)
 
 ### New Features
 
