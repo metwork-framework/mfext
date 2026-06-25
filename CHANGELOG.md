@@ -218,6 +218,8 @@
 - bump msgpack from 1.1.2 to 1.2.1 (fix high GHSA-6v7p-g79w-8964) (#2813)
 - bump orjson from 3.11.7 to 3.11.9 (#2817)
 - bump redis python from 7.3.1 to 7.4.1 (#2818)
+- add narwhals (required by layers python3_scientific/extratools) (#2819)
+- add lark (required by layers python3_scientific/mapserverapi) (#2820)
 
 ### Bug Fixes
 
