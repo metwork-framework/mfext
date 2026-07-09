@@ -220,6 +220,8 @@
 - bump redis python from 7.3.1 to 7.4.1 (#2818)
 - add narwhals (required by layers python3_scientific/extratools) (#2819)
 - add lark (required by layers python3_scientific/mapserverapi) (#2820)
+- bump sqlite to 3.53.3 (fix high CVE-2026-11822 and CVE-2025-6965)
+- bump nltk from 3.9.4 to 3.10.0 (fix high CVE-2026-54293)
 
 ### Bug Fixes
 
