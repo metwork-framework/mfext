@@ -1,5 +1,12 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump nltk from 3.9.4 to 3.10.0 (fix high CVE-2026-54293)
+- bump sqlite to 3.53.3 (fix high CVE-2026-11822 and CVE-2025-6965) (backport #2821) (#2823)
+
 ## v2.3.17 (2026-06-20)
 
 ### New Features
