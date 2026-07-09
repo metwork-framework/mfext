@@ -282,7 +282,7 @@
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.6 | python3 |
-| [sqlite](http://sqlite.org/) | 3.49.1 | core |
+| [sqlite](http://sqlite.org/) | 3.53.3 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.4.1 | python3_devtools |
