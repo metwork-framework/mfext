@@ -273,7 +273,7 @@
 | [sniffio](https://github.com/python-trio/sniffio) | 1.3.1 | python3 |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
-| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.6 | python3 |
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.8.4 | python3 |
 | [sqlite](http://sqlite.org/) | 3.53.3 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 5db419f | python3 |
