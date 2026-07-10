@@ -4,9 +4,10 @@ updates:
   - package-ecosystem: pip
     directories:
       - "/layers/layer*/*/"
+    open-pull-requests-limit: 0
     schedule:
       interval: "daily"
-    target-branch: "integration"
+    target-branch: "master"
 
   #Github Actions
   - package-ecosystem: "github-actions"
