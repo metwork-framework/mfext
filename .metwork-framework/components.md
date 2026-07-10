@@ -242,9 +242,18 @@
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.1 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
+<<<<<<< HEAD
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3_devtools |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
 | [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.1.0 | python3_devtools |
+=======
+| [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.8.4 | python3 |
+| [sqlite](http://sqlite.org/) | 3.53.3 | core |
+| [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
+| [statsd](https://github.com/jsocol/pystatsd) | 5db419f | python3 |
+| [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.4.1 | python3_devtools |
+>>>>>>> b1a4f06 (feat: bump soupsieve from 2.6.0 to 2.8.4 (fix high CVE-2026-49476/49477) (#2840))
 | [structlog](https://pypi.org/project/structlog) | 23.1.0 | python3 |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
 | [telegraf-unixsocket-client](https://github.com/metwork-framework/telegraf-unixsocket-python-client) | d41af1a | python3 |
