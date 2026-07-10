@@ -1,5 +1,5 @@
 setuptools==81.0.0
-distlib==0.4.0
+distlib==0.4.3
 distro==1.9.0
 filelock==3.29.1
 importlib-metadata==8.6.1
