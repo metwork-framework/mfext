@@ -125,7 +125,7 @@ shellingham==1.5.4
 simpleeval==1.0.6
 sniffio==1.3.1
 sortedcontainers==2.4.0
-soupsieve==2.6
+soupsieve==2.8.4
 -e git+https://github.com/metwork-framework/pystatsd.git@5db419f654100b2c5f371c82cb619a1406fbaf15#egg=statsd
 stack-data==0.6.3
 structlog==23.1.0
