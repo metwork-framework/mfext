@@ -2,7 +2,8 @@ version: 2
 updates:
   # Python (pip)
   - package-ecosystem: pip
-    directory: "/"
+    directories:
+      - "layers/layer*/*/"
     schedule:
       interval: "daily"
     target-branch: "integration"
