@@ -111,7 +111,7 @@ scikit-build-core==0.11.3
 setuptools-git-versioning==2.1.0
 simpleeval==1.0.6
 sortedcontainers==2.4.0
-soupsieve==2.6
+soupsieve==2.8.4
 -e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
 stack-data==0.6.3
 structlog==23.1.0
