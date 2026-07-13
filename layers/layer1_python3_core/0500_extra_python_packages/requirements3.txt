@@ -3,7 +3,7 @@ distlib==0.4.0
 distro==1.9.0
 filelock==3.29.1
 importlib-metadata==8.6.1
-packaging==26.0
+packaging==26.2
 pathspec==1.0.4
 platformdirs==4.5.0
 pluggy==1.6.0
