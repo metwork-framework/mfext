@@ -225,6 +225,7 @@
 - bump gdal from 3.13.0 to 3.13.1 (fix high CVE-2026-49014) (#2826)
 - bump pip from 26.1 to 26.1.2 (fix moderate CVE-2026-8643) (#2839)
 - bump soupsieve from 2.6.0 to 2.8.4 (fix high CVE-2026-49476/49477) (#2840)
+- bump packaging from 26.0 to 26.2 (#2844)
 
 ### Bug Fixes
 
