@@ -259,7 +259,7 @@
 | [redis](http://redis.io) | 7.4.9 | core |
 | [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
-| [regex](https://github.com/mrabarnett/mrab-regex) | 2024.11.6 | python3 |
+| [regex](https://github.com/mrabarnett/mrab-regex) | 2026.7.10 | python3 |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://requests.readthedocs.io) | 2.32.4 | python3 |
 | [rich](https://github.com/Textualize/rich) | 13.9.4 | python3 |
