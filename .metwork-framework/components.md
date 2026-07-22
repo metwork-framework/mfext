@@ -217,8 +217,13 @@
 | [psycopg2](https://psycopg.org/) | 2.9.10 | python3_scientific_core |
 | [ptyprocess](https://github.com/pexpect/ptyprocess) | 0.7.0 | python3 |
 | [pure_eval](http://github.com/alexmojaki/pure_eval) | 0.2.3 | python3 |
+<<<<<<< HEAD
 | [py-spy](https://github.com/benfred/py-spy) | 0.4.0 | python3_devtools |
 | [pyasn1](https://github.com/pyasn1/pyasn1) | 0.6.3 | python3 |
+=======
+| [py-spy](https://github.com/benfred/py-spy) | 0.4.1 | python3_devtools |
+| [pyasn1](https://github.com/pyasn1/pyasn1) | 0.6.4 | python3 |
+>>>>>>> cab06f2 (feat: bump pyasn1 from 0.6.3 to 0.6.4 (fix 3 high  CVE-2026-59884/5/6) (#2852))
 | [pyasn1_modules](https://github.com/pyasn1/pyasn1-modules) | 0.4.1 | python3 |
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pybind11](https://github.com/pybind/pybind11) | 2.13.6 | python3 |
