@@ -227,6 +227,7 @@
 - bump soupsieve from 2.6.0 to 2.8.4 (fix high CVE-2026-49476/49477) (#2840)
 - bump packaging from 26.0 to 26.2 (#2844)
 - bump regex from 2024.11.6 to 2026.7.10 (#2845)
+- bump pillow from 12.2.0 to 12.3.0 (fix 10 high CVEs) (#2848)
 
 ### Bug Fixes
 
