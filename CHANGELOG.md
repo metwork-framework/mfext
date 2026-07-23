@@ -228,6 +228,9 @@
 - bump packaging from 26.0 to 26.2 (#2844)
 - bump regex from 2024.11.6 to 2026.7.10 (#2845)
 - bump pillow from 12.2.0 to 12.3.0 (fix 10 high CVEs) (#2848)
+- bump pyasn1 from 0.6.3 to 0.6.4 (fix 3 high  CVE-2026-59884/5/6) (#2852)
+- bump GitPython from 3.1.50 to 3.1.54 (fix 4 high GSA) (#2854)
+- bump setuptools from to 83.0.0 (fix moderate CVE-2026-59890) (#2856)
 
 ### Bug Fixes
 
