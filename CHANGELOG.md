@@ -8,6 +8,8 @@
 - bump sqlite to 3.53.3 (fix high CVE-2026-11822 and CVE-2025-6965) (backport #2821) (#2823)
 - bump soupsieve from 2.6.0 to 2.8.4 (fix high CVE-2026-49476/49477) (backport #2840) (#2841)
 - bump regex from 2024.11.6 to 2025.10.23 (#2846)
+- bump pillow from 12.2.0 to 12.3.0 (fix 10 high CVEs) (#2848)
+- bump pyasn1 from 0.6.3 to 0.6.4 (fix 3 high  CVE-2026-59884/5/6) (backport #2852) (#2853)
 
 ## v2.3.17 (2026-06-20)
 
