@@ -10,6 +10,7 @@
 - bump regex from 2024.11.6 to 2025.10.23 (#2846)
 - bump pillow from 12.2.0 to 12.3.0 (fix 10 high CVEs) (#2848)
 - bump pyasn1 from 0.6.3 to 0.6.4 (fix 3 high  CVE-2026-59884/5/6) (backport #2852) (#2853)
+- bump GitPython from 3.1.50 to 3.1.54 (fix 4 high GSA) (#2854)
 
 ## v2.3.17 (2026-06-20)
 
