@@ -154,7 +154,7 @@
 | [mkdocs-get-deps](https://pypi.org/project/mkdocs-get-deps) | 0.2.0 | python3_devtools |
 | [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) | 1.3.7 | python3_devtools |
 | [mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions) | 1.3.1 | python3_devtools |
-| [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.6.9 | python3_devtools |
+| [mkdocs-material](https://pypi.org/project/mkdocs-material) | 9.7.7 | python3_devtools |
 | [mkdocs](https://pypi.org/project/mkdocs) | 1.6.1 | python3_devtools |
 | [mock](http://mock.readthedocs.org/en/latest/) | 5.2.0 | python3_devtools |
 | [more-itertools](https://github.com/more-itertools/more-itertools) | 10.6.0 | python3_devtools |
@@ -227,7 +227,7 @@
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2026.5 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.20.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
-| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 10.21.3 | python3_devtools |
+| [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 11.0.1 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
