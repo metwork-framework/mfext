@@ -232,6 +232,7 @@
 - bump GitPython from 3.1.50 to 3.1.54 (fix 4 high GSA) (#2854)
 - bump setuptools from to 83.0.0 (fix moderate CVE-2026-59890) (#2856)
 - bump wheel from 0.46.3 to 0.47.0 (#2857)
+- bump pymdown-extensions to 11.0.1 (fix moderate CVE-2026-61632) (#2859)
 
 ### Bug Fixes
 
