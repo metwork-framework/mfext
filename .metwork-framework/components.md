@@ -228,6 +228,7 @@
 | [pyinstaller](https://pyinstaller.org) | 6.20.0 | python3_devtools |
 | [pylint](https://github.com/pylint-dev/pylint) | 3.3.6 | python3_devtools |
 | [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) | 11.0.1 | python3_devtools |
+| [pymemtrace](https://github.com/paulross/pymemtrace) | 0.6.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
 | [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
@@ -317,4 +318,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(316 components)*
+*(317 components)*
