@@ -169,6 +169,7 @@ import pyinotify
 import _pyinstaller_hooks_contrib
 import pylint
 import pymdownx
+import pymemtrace
 import nacl #PyNaCl
 import pyparsing
 import pytest_asyncio

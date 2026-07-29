@@ -166,6 +166,7 @@ import _pyinstaller_hooks_contrib
 import pyinotify
 import pylint
 import pymdownx
+import pymemtrace
 import nacl #PyNaCl
 import pyparsing
 import pyproject_api
