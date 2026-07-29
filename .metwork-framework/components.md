@@ -187,7 +187,7 @@
 | [pg_cron](https://github.com/citusdata/pg_cron) | 1.6.7 | scientific_core |
 | [pg_partman](https://github.com/pgpartman/pg_partman) | 5.2.4 | scientific_core |
 | [pg_uuidv7](https://pgxn.org/dist/pg_uuidv7/) | 1.7.0 | scientific_core |
-| [pgbouncer](https://www.pgbouncer.org/) | 1.25.1 | scientific_core |
+| [pgbouncer](https://www.pgbouncer.org/) | 1.25.2 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
 | [pillow](https://python-pillow.github.io) | 12.3.0 | python3 |
