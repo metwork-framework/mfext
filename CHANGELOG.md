@@ -233,6 +233,9 @@
 - bump setuptools from to 83.0.0 (fix moderate CVE-2026-59890) (#2856)
 - bump wheel from 0.46.3 to 0.47.0 (#2857)
 - bump pymdown-extensions to 11.0.1 (fix moderate CVE-2026-61632) (#2859)
+- add pymemtrace in layer python3_devtools (#2860)
+- bump pgbouncer to 1.25.2 (fix high CVE-2026-6664 & CVE-2026-6665) (#2862)
+- bump requests from 2.33.0 to 2.34.2 (#2864)
 
 ### Bug Fixes
 
