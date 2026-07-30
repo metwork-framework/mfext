@@ -231,7 +231,7 @@
 | [pymemtrace](https://github.com/paulross/pymemtrace) | 0.6.3 | python3_devtools |
 | [PyNaCl](https://github.com/pyca/pynacl/) | 1.6.2 | python3 |
 | [pyparsing](https://github.com/pyparsing/pyparsing/) | 3.2.1 | python3_core |
-| [pyproject-api](https://pyproject-api.readthedocs.io) | 1.9.1 | python3_devtools |
+| [pyproject-api](https://pyproject-api.readthedocs.io) | 1.11.0 | python3_devtools |
 | [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio) | 1.3.0 | python3_devtools |
 | [pytest-cov](https://github.com/pytest-dev/pytest-cov) | 6.0.0 | python3_devtools |
 | [pytest-html](https://github.com/pytest-dev/pytest-html) | 4.2.0 | python3_devtools |
