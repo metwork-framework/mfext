@@ -236,6 +236,10 @@
 - add pymemtrace in layer python3_devtools (#2860)
 - bump pgbouncer to 1.25.2 (fix high CVE-2026-6664 & CVE-2026-6665) (#2862)
 - bump requests from 2.33.0 to 2.34.2 (#2864)
+- bump click from 8.3.3 to 8.4.2 (#2865)
+- bump certifi from 2026.4.22 to 2026.7.22 (#2866)
+- bump idna from 3.16 to 3.18 (#2867)
+- bump pyproject-api from 1.9.1 to 1.11.0 (#2868)
 
 ### Bug Fixes
 
