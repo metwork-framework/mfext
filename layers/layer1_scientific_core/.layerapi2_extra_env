@@ -1,1 +1,2 @@
 PROJ_DATA={MFEXT_HOME}/opt/scientific_core/share/proj
+HDF5_PLUGIN_PATH={MFEXT_HOME}/opt/scientific_core/hdf5/lib/plugin
