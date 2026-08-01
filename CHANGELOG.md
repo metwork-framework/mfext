@@ -240,6 +240,7 @@
 - bump certifi from 2026.4.22 to 2026.7.22 (#2866)
 - bump idna from 3.16 to 3.18 (#2867)
 - bump pyproject-api from 1.9.1 to 1.11.0 (#2868)
+- add netcdf-fortran (4.6.4), previously in layer scientific (#2869)
 
 ### Bug Fixes
 
