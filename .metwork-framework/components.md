@@ -47,14 +47,8 @@
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | ee21fc8 | python3 |
 | [cookiecutter_hooks](https://github.com/metwork-framework/cookiecutter_hooks) | c9124c2 | python3 |
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
-<<<<<<< HEAD
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.2 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 48.0.1 | python3 |
-=======
-| [coveralls](https://pypi.org/project/coveralls) | 4.1.0 | python3_devtools |
-| [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
 | [cryptography](https://github.com/pyca/cryptography) | 50.0.0 | python3 |
->>>>>>> 0f245b2 (feat: bump cryptography from 48.0.1 to 50.0.0 (fix high CVE-2026-69247))
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [Cython](https://cython.org/) | 3.0.12 | python3 |
