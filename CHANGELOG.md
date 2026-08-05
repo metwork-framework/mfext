@@ -242,6 +242,7 @@
 - bump pyproject-api from 1.9.1 to 1.11.0 (#2868)
 - add netcdf-fortran (4.6.4), previously in layer scientific (#2869)
 - bump filelock from 3.29.1 to 3.32.2
+- bump aiohttp from 3.14.1 to 3.14.3 (fix high CVE-2026-69244)
 
 ### Bug Fixes
 
