@@ -3,7 +3,7 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 78a05cb | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.1 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.3 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 3ef444a | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
@@ -48,7 +48,7 @@
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [coveralls](https://pypi.org/project/coveralls) | 4.1.0 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 48.0.1 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 50.0.0 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
