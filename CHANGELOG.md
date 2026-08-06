@@ -243,6 +243,8 @@
 - add netcdf-fortran (4.6.4), previously in layer scientific (#2869)
 - bump filelock from 3.29.1 to 3.32.2
 - bump aiohttp from 3.14.1 to 3.14.3 (fix high CVE-2026-69244)
+- bump cryptography from 48.0.1 to 50.0.0 (fix high CVE-2026-69247)
+- bump GitPython to 3.1.58 (fix high GHSA-3f7w-8rr8-f37f) (#2879)
 
 ### Bug Fixes
 
