@@ -240,7 +240,7 @@
 | [pytest-metadata](https://github.com/pytest-dev/pytest-metadata) | 3.1.1 | python3_devtools |
 | [pytest-mock](https://github.com/pytest-dev/pytest-mock/) | 3.14.0 | python3_devtools |
 | [pytest-xdist](https://github.com/pytest-dev/pytest-xdist) | 3.6.1 | python3_devtools |
-| [pytest](https://docs.pytest.org/en/latest/) | 9.0.3 | python3_devtools |
+| [pytest](https://docs.pytest.org/en/latest/) | 9.1.1 | python3_devtools |
 | [pytest_httpserver](https://pypi.org/project/pytest_httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-discovery](https://github.com/tox-dev/python-discovery) | 1.4.0 | python3_core |
