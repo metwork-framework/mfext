@@ -246,6 +246,8 @@
 - bump cryptography from 48.0.1 to 50.0.0 (fix high CVE-2026-69247)
 - bump GitPython to 3.1.58 (fix high GHSA-3f7w-8rr8-f37f) (#2879)
 - bump pytest from 9.0.3 to 9.1.1 (#2881)
+- bump pyinstaller from 6.20.0 to 6.21.0 (#2882)
+- bump virtualenv from 21.4.2 to 21.5.2 (#2883)
 
 ### Bug Fixes
 
