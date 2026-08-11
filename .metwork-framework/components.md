@@ -123,7 +123,7 @@
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.10.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [libcst](https://pypi.org/project/libcst) | 1.7.0 | python3_devtools |
-| [libevent](https://libevent.org/) | 2.1.12 | core |
+| [libevent](https://libevent.org/) | 2.1.13 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.4 | scientific_core |
 | [librt](https://github.com/mypyc/librt) | 0.8.1 | python3_devtools |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
