@@ -248,6 +248,8 @@
 - bump pytest from 9.0.3 to 9.1.1 (#2881)
 - bump pyinstaller from 6.20.0 to 6.21.0 (#2882)
 - bump virtualenv from 21.4.2 to 21.5.2 (#2883)
+- bump typing_extensions from 4.15.0 to 4.16.0 (#2884)
+- bump libevent from 2.1.12 to 2.1.13 (fix several high CVE) (#2885)
 
 ### Bug Fixes
 
