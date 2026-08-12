@@ -19,7 +19,7 @@ if test -x "${MFEXT_HOME:-}/opt/python3/bin/envtpl"; then
             # probably during a module bootstrap
             export LAYERAPI2_LAYERS_PATH="${MFEXT_HOME}/opt:${MFEXT_HOME}"
             # FIXME: do not hardcode this
-            export PYTHON3_SHORT_VERSION=3.13
+            export PYTHON3_SHORT_VERSION=3.14
         fi
         ENVTPL="${MFEXT_HOME:-}/opt/python3/bin/envtpl"
         exec "${MFEXT_HOME}/opt/core/bin/layer_wrapper" --layers=python3@mfext -- "${ENVTPL}" "$@"
