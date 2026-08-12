@@ -15,6 +15,7 @@
 - bump aiohttp from 3.14.1 to 3.14.3 (fix high CVE-2026-69244)
 - bump cryptography from 48.0.1 to 50.0.0 (fix high CVE-2026-69247)
 - bump GitPython to 3.1.58 (fix high GHSA-3f7w-8rr8-f37f) (#2879)
+- bump libevent from 2.1.12 to 2.1.13 (fix several high CVE) (#2885)
 
 ## v2.3.17 (2026-06-20)
 
