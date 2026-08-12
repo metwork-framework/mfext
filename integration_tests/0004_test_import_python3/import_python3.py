@@ -5,6 +5,7 @@ import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
 import altgraph
+import annotated_doc
 import annotated_types
 import anyio
 import apipkg
@@ -90,6 +91,7 @@ import jmespath
 import joblib
 import jschema_to_python
 import jsonpickle
+import lark
 import lazy_import
 import lazy_object_proxy
 import libcst
@@ -120,6 +122,7 @@ import more_itertools
 import msgpack
 import multidict
 import mypy_extensions
+import narwhals
 import natsort
 import netifaces
 import nltk
@@ -163,6 +166,7 @@ import _pyinstaller_hooks_contrib
 import pyinotify
 import pylint
 import pymdownx
+import pymemtrace
 import nacl #PyNaCl
 import pyparsing
 import pyproject_api
@@ -177,6 +181,7 @@ import xdist #pytest-xdist
 import pytest
 import ldap #python-ldap
 import dateutil #python-dateutil
+import python_discovery
 import pytz
 import yaml #PyYAML
 import yaml_env_tag #pyaml_env_tag
