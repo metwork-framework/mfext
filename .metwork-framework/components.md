@@ -163,7 +163,7 @@
 | [mypy_extensions](https://github.com/python/mypy_extensions) | 1.1.0 | python3 |
 | [narwhals](https://github.com/narwhals-dev/narwhals) | 1.37.0 | python3 |
 | [natsort](https://github.com/SethMMorton/natsort) | 8.4.0 | python3_devtools |
-| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.0 | scientific_core |
+| [netcdf-c](http://www.unidata.ucar.edu/software/netcdf/) | 4.10.1 | scientific_core |
 | [netcdf-cxx4](http://www.unidata.ucar.edu/software/netcdf/) | 4.3.1 | scientific_core |
 | [netcdf-fortran](http://www.unidata.ucar.edu/software/netcdf/) | 4.6.4 | scientific_core |
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
