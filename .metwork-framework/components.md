@@ -256,13 +256,8 @@
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
-<<<<<<< HEAD
-| [redis](http://redis.io) | 7.4.9 | core |
-| [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
-=======
 | [redis](http://redis.io) | 7.4.10 | core |
-| [redis](https://github.com/redis/redis-py) | 7.4.1 | python3 |
->>>>>>> 9b8f8d7 (feat: bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893))
+| [redis](https://github.com/redis/redis-py) | 5.0.6 | python3 |
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2025.10.23 | python3 |
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
