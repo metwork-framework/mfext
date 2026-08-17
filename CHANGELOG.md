@@ -252,6 +252,8 @@
 - bump libevent from 2.1.12 to 2.1.13 (fix several high CVE) (#2885)
 - bump charset-normalizer from 3.4.7 to 3.5.0 (#2890)
 - bump netcdf-c from 4.10.0 to 4.10.1 (#2891)
+- bump gdal from 3.13.1 to 3.13.2 (#2892)
+- bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893)
 
 ### Bug Fixes
 
