@@ -194,7 +194,7 @@
 | [pillow](https://python-pillow.github.io) | 12.3.0 | python3 |
 | [pip](https://pip.pypa.io/) | 26.1.2 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
-| [platformdirs](https://github.com/tox-dev/platformdirs) | 4.5.0 | python3_core |
+| [platformdirs](https://github.com/tox-dev/platformdirs) | 4.11.3 | python3_core |
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.5.4 | scientific_core |
