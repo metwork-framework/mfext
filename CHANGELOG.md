@@ -256,6 +256,11 @@
 - bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893)
 - bump wrapt from 2.2.1 to 2.3.0 (#2895)
 - bump hdf5 from 2.1.1 to 2.2.0
+- bump platformdirs from 4.5.0 to 4.11.3 (#2897)
+- bump distlib from 0.4.0 to 0.4.3 (#2898)
+- bump pip from 26.1.2 to 26.2.1 (#2899)
+- bump setuptools from 83.0.0 to 84.0.0 (#2900)
+- bump virtualenv from 21.5.2 to 21.7.4 (#2901)
 
 ### Bug Fixes
 
