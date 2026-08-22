@@ -261,6 +261,10 @@
 - bump pip from 26.1.2 to 26.2.1 (#2899)
 - bump setuptools from 83.0.0 to 84.0.0 (#2900)
 - bump virtualenv from 21.5.2 to 21.7.4 (#2901)
+- bump nltk from 3.10.0 to 3.10.3 (#2902)
+- bump cachetools from 7.1.4 to 7.1.7 (#2903)
+- bump packaging from 26.2 to 26.3 (#2904)
+- bump tornado from 6.5.7 to 6.5.8 (#2905)
 
 ### Bug Fixes
 
