@@ -265,6 +265,7 @@
 - bump cachetools from 7.1.4 to 7.1.7 (#2903)
 - bump packaging from 26.2 to 26.3 (#2904)
 - bump tornado from 6.5.7 to 6.5.8 (#2905)
+- bump postgresql from 18.4 to 18.6 (fix 18 high CVE) (#2906)
 
 ### Bug Fixes
 
