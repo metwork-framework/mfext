@@ -126,7 +126,7 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.16.0 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3_devtools |
 | [pika](https://pika.readthedocs.io) | 1.1.0 | python3 |
-| [pip](https://pip.pypa.io/) | 21.2.3 | python3_core |
+| [pip](https://pip.pypa.io/) | 23.3.2 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 0.13.1 | python3_devtools |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.2.0 | scientific_core |
 | [postgis](https://postgis.net) | 3.1.4 | scientific_core |
