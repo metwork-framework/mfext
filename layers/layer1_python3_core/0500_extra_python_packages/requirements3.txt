@@ -12,5 +12,5 @@ setuptools==84.0.0
 six==1.17.0
 typing-extensions==4.16.0
 virtualenv==21.7.4
-wheel==0.47.0
+wheel==0.48.0
 zipp==3.21.0
