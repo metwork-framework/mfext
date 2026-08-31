@@ -266,6 +266,8 @@
 - bump packaging from 26.2 to 26.3 (#2904)
 - bump tornado from 6.5.7 to 6.5.8 (#2905)
 - bump postgresql from 18.4 to 18.6 (fix 18 high CVE) (#2906)
+- bump pyinstaller from 6.21.0 to 6.22.0 (#2907)
+- bump wheel from 0.47.0 to 0.48.0 (fix GHSA-vgq5-9859-3mmw) (#2908)
 
 ### Bug Fixes
 
