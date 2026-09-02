@@ -268,6 +268,7 @@
 - bump postgresql from 18.4 to 18.6 (fix 18 high CVE) (#2906)
 - bump pyinstaller from 6.21.0 to 6.22.0 (#2907)
 - bump wheel from 0.47.0 to 0.48.0 (fix GHSA-vgq5-9859-3mmw) (#2908)
+- bump filelock from 3.32.2 to 3.32.5 (#2909)
 
 ### Bug Fixes
 
