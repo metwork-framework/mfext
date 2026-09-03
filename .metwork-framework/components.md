@@ -74,7 +74,7 @@
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2025.3.0 | python3 |
-| [gdal](http://www.gdal.org) | 3.13.2 | scientific_core |
+| [gdal](http://www.gdal.org) | 3.13.3 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.3.0 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
@@ -90,7 +90,7 @@
 | [httpcore](https://www.encode.io/httpcore/) | 1.0.9 | python3 |
 | [httpx](https://github.com/encode/httpx) | 0.28.1 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
-| [idna](https://pypi.org/project/idna) | 3.18 | python3 |
+| [idna](https://pypi.org/project/idna) | 3.19 | python3 |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
 | [importlib_resources](https://pypi.org/project/importlib_resources) | 6.5.2 | python3 |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.1.0 | python3_devtools |
@@ -222,7 +222,7 @@
 | [pydantic_core](https://github.com/pydantic/pydantic) | 2.46.4 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
-| [Pygments](https://pygments.org) | 2.20.0 | python3 |
+| [Pygments](https://pygments.org) | 2.21.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2026.6 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.22.2 | python3_devtools |
