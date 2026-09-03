@@ -69,7 +69,6 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.32.5 | python3_core |
-| [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
@@ -245,7 +244,7 @@
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-discovery](https://github.com/tox-dev/python-discovery) | 1.4.4 | python3_core |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.13.13 | python3_core |
+| [Python](http://python.org/) | 3.14.2 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
@@ -319,4 +318,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(318 components)*
+*(317 components)*
