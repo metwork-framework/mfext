@@ -269,6 +269,8 @@
 - bump pyinstaller from 6.21.0 to 6.22.0 (#2907)
 - bump wheel from 0.47.0 to 0.48.0 (fix GHSA-vgq5-9859-3mmw) (#2908)
 - bump filelock from 3.32.2 to 3.32.5 (#2909)
+- bump charset-normalizer from 3.5.0 to 3.5.1
+- bump orjson from 3.11.9 to 3.12.0
 
 ### Bug Fixes
 
