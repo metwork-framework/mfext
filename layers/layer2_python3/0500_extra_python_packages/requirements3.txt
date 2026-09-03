@@ -19,11 +19,11 @@ bcrypt==5.0.0
 beautifulsoup4==4.13.3
 binaryornot==0.6.0
 bjoern==3.2.2
-cachetools==7.1.4
+cachetools==7.1.7
 Cerberus==1.3.7
 cffi==2.0.0
 chardet==5.2.0
-charset_normalizer==3.4.7
+charset_normalizer==3.5.1
 Click==8.4.2
 colorama==0.4.6
 ConfigUpdater==3.2
@@ -86,7 +86,7 @@ mypy-extensions==1.1.0
 narwhals==1.37.0
 netifaces2==0.0.22
 opinionated-configparser==1.0.1
-orjson==3.11.9
+orjson==3.12.0
 paramiko==3.5.1
 parso==0.8.4
 pbr==7.0.3
@@ -135,7 +135,7 @@ termcolor==2.5.0
 terminaltables3==4.0.0
 threadpoolctl==3.6.0
 tomlkit==0.13.2
-tornado==6.5.7
+tornado==6.5.8
 tqdm==4.67.1
 traitlets==5.14.3
 typer==0.26.4
@@ -146,7 +146,7 @@ Unidecode==1.3.8
 urllib3==2.7.0
 wcwidth==0.2.13
 Werkzeug==3.1.6
-wrapt==2.2.1
+wrapt==2.3.0
 -e git+https://github.com/metwork-framework/xattrfile.git@857ae661ddf25da7c00964debd5f279d8303c622#egg=xattrfile
 xmltodict==0.14.2
 yarl==1.18.3

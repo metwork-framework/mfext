@@ -250,6 +250,27 @@
 - bump virtualenv from 21.4.2 to 21.5.2 (#2883)
 - bump typing_extensions from 4.15.0 to 4.16.0 (#2884)
 - bump libevent from 2.1.12 to 2.1.13 (fix several high CVE) (#2885)
+- bump charset-normalizer from 3.4.7 to 3.5.0 (#2890)
+- bump netcdf-c from 4.10.0 to 4.10.1 (#2891)
+- bump gdal from 3.13.1 to 3.13.2 (#2892)
+- bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893)
+- bump wrapt from 2.2.1 to 2.3.0 (#2895)
+- bump hdf5 from 2.1.1 to 2.2.0
+- bump platformdirs from 4.5.0 to 4.11.3 (#2897)
+- bump distlib from 0.4.0 to 0.4.3 (#2898)
+- bump pip from 26.1.2 to 26.2.1 (#2899)
+- bump setuptools from 83.0.0 to 84.0.0 (#2900)
+- bump virtualenv from 21.5.2 to 21.7.4 (#2901)
+- bump nltk from 3.10.0 to 3.10.3 (#2902)
+- bump cachetools from 7.1.4 to 7.1.7 (#2903)
+- bump packaging from 26.2 to 26.3 (#2904)
+- bump tornado from 6.5.7 to 6.5.8 (#2905)
+- bump postgresql from 18.4 to 18.6 (fix 18 high CVE) (#2906)
+- bump pyinstaller from 6.21.0 to 6.22.0 (#2907)
+- bump wheel from 0.47.0 to 0.48.0 (fix GHSA-vgq5-9859-3mmw) (#2908)
+- bump filelock from 3.32.2 to 3.32.5 (#2909)
+- bump charset-normalizer from 3.5.0 to 3.5.1
+- bump orjson from 3.11.9 to 3.12.0
 
 ### Bug Fixes
 
