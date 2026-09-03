@@ -51,7 +51,7 @@ py-spy==0.4.1
 pydocstyle==6.3.0
 pyflakes==3.2.0
 pyinstaller-hooks-contrib==2026.6
-pyinstaller==6.22.0
+pyinstaller==6.22.2
 pylint==3.3.6
 pymdown-extensions==11.0.1
 pymemtrace==0.6.3
