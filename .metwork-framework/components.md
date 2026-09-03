@@ -223,7 +223,7 @@
 | [pydantic_core](https://github.com/pydantic/pydantic) | 2.46.4 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
-| [Pygments](https://pygments.org) | 2.20.0 | python3 |
+| [Pygments](https://pygments.org) | 2.21.0 | python3 |
 | [pyinotify](http://github.com/seb-m/pyinotify) | 0.9.6 | python3 |
 | [pyinstaller-hooks-contrib](https://github.com/pyinstaller/pyinstaller-hooks-contrib) | 2026.6 | python3_devtools |
 | [pyinstaller](https://pyinstaller.org) | 6.22.2 | python3_devtools |
