@@ -271,6 +271,10 @@
 - bump filelock from 3.32.2 to 3.32.5 (#2909)
 - bump charset-normalizer from 3.5.0 to 3.5.1
 - bump orjson from 3.11.9 to 3.12.0
+- bump pyinstaller from 6.22.0 to 6.22.2 (#2912)
+- bump Pygments from 2.20.0 to 2.21.0 (#2914)
+- bump gdal from 3.1.2 to 3.13.3 (#2915)
+- bump idna from 3.18 to 3.19 (#2916)
 
 ### Bug Fixes
 
