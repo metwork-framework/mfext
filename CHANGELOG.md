@@ -275,6 +275,7 @@
 - bump Pygments from 2.20.0 to 2.21.0 (#2914)
 - bump gdal from 3.1.2 to 3.13.3 (#2915)
 - bump idna from 3.18 to 3.19 (#2916)
+- bump redis from 7.4.10 to 7.4.11 (fix high CVE-2026-62356) (#2918)
 
 ### Bug Fixes
 
