@@ -17,6 +17,7 @@
 - bump GitPython to 3.1.58 (fix high GHSA-3f7w-8rr8-f37f) (#2879)
 - bump libevent from 2.1.12 to 2.1.13 (fix several high CVE) (#2885)
 - bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893)
+- bump redis from 7.4.10 to 7.4.11 (fix high CVE-2026-62356) (#2918)
 
 ## v2.3.17 (2026-06-20)
 
