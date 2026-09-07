@@ -173,7 +173,7 @@
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.29.2.3 | openresty |
-| [openssl](https://www.openssl.org/) | 3.6.3 | core |
+| [openssl](https://www.openssl.org/) | 3.6.4 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.12.0 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 26.3 | python3_core |
