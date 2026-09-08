@@ -271,6 +271,15 @@
 - bump filelock from 3.32.2 to 3.32.5 (#2909)
 - bump charset-normalizer from 3.5.0 to 3.5.1
 - bump orjson from 3.11.9 to 3.12.0
+- bump pyinstaller from 6.22.0 to 6.22.2 (#2912)
+- bump Pygments from 2.20.0 to 2.21.0 (#2914)
+- bump gdal from 3.1.2 to 3.13.3 (#2915)
+- bump idna from 3.18 to 3.19 (#2916)
+- bump redis from 7.4.10 to 7.4.11 (fix high CVE-2026-62356) (#2918)
+- bump virtualenv from 21.7.4 to 21.7.8 (#2920)
+- bump cryptography from 50.0.0 to 50.0.1 (#2921)
+- bump openssl from 3.6.3 to 3.6.4 (fix moderate CVEs) (#2922)
+- bump click from 8.4.2 to 8.5.0 (#2923)
 
 ### Bug Fixes
 

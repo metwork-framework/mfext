@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=openssl
-export VERSION=3.6.3
+export VERSION=3.6.4
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=f388d6144fe20b9b2c6bf208280d6ec3
+export CHECKSUM=f771f53e0ce36d806d64e15f4d3a36d3
 DESCRIPTION=\
 OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC protocols
 WEBSITE=https://www.openssl.org/

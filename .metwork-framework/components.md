@@ -40,7 +40,7 @@
 | [charset-normalizer](https://pypi.org/project/charset-normalizer) | 3.5.1 | python3 |
 | [circus](https://pypi.org/project/circus) | 6fdf573 | python3_circus |
 | [circus_autorestart_plugin](https://github.com/metwork-framework/circus_autorestart_plugin) | 86ff062 | python3_circus |
-| [click](https://pypi.org/project/click) | 8.4.2 | python3 |
+| [click](https://pypi.org/project/click) | 8.5.0 | python3 |
 | [colorama](https://github.com/tartley/colorama) | 0.4.6 | python3 |
 | [ConfigUpdater](https://github.com/pyscaffold/configupdater) | 3.2 | python3 |
 | [cookiecutter](https://github.com/metwork-framework/cookiecutter) | 39a141b | python3 |
@@ -48,7 +48,7 @@
 | [coverage](https://github.com/nedbat/coveragepy) | 7.7.1 | python3_devtools |
 | [coveralls](https://pypi.org/project/coveralls) | 4.1.0 | python3_devtools |
 | [cron-wrapper](https://github.com/metwork-framework/cron-wrapper) | 0.1.3 | python3 |
-| [cryptography](https://github.com/pyca/cryptography) | 50.0.0 | python3 |
+| [cryptography](https://github.com/pyca/cryptography) | 50.0.1 | python3 |
 | [curl](https://curl.haxx.se/) | 7.88.1 | core |
 | [cyrus-sasl](https://www.cyrusimap.org/sasl/) | 2.1.28 | core |
 | [decorator](https://pypi.org/project/decorator) | 5.2.1 | python3 |
@@ -172,7 +172,7 @@
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.29.2.3 | openresty |
-| [openssl](https://www.openssl.org/) | 3.6.3 | core |
+| [openssl](https://www.openssl.org/) | 3.6.4 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.12.0 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 26.3 | python3_core |
@@ -242,7 +242,7 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 9.1.1 | python3_devtools |
 | [pytest_httpserver](https://pypi.org/project/pytest_httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
-| [python-discovery](https://github.com/tox-dev/python-discovery) | 1.4.4 | python3_core |
+| [python-discovery](https://github.com/tox-dev/python-discovery) | 1.6.0 | python3_core |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
 | [Python](http://python.org/) | 3.14.2 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
@@ -252,7 +252,7 @@
 | [pyyaml_env_tag](https://github.com/waylan/pyyaml-env-tag) | 0.1 | python3_devtools |
 | [pyzmq](https://pyzmq.readthedocs.org) | 25.1.1 | python3_circus |
 | [readline](https://www.gnu.org/software/readline) | 8.2.13 | core |
-| [redis](http://redis.io) | 7.4.10 | core |
+| [redis](http://redis.io) | 7.4.11 | core |
 | [redis](https://github.com/redis/redis-py) | 7.4.1 | python3 |
 | [referencing](https://github.com/python-jsonschema/referencing) | 0.36.2 | python3 |
 | [regex](https://github.com/mrabarnett/mrab-regex) | 2026.7.10 | python3 |
@@ -301,7 +301,7 @@
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
 | [urllib3](https://pypi.org/project/urllib3) | 2.7.0 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
-| [virtualenv](https://github.com/pypa/virtualenv) | 21.7.4 | python3_core |
+| [virtualenv](https://github.com/pypa/virtualenv) | 21.7.8 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
