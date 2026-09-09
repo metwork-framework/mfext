@@ -1,4 +1,4 @@
-# CHANGELOG
+# release_2.4 CHANGELOG
 
 ## [Unreleased]
 
@@ -280,6 +280,7 @@
 - bump cryptography from 50.0.0 to 50.0.1 (#2921)
 - bump openssl from 3.6.3 to 3.6.4 (fix moderate CVEs) (#2922)
 - bump click from 8.4.2 to 8.5.0 (#2923)
+- upgrade Python from Python 3.13(.13) to Python 3.14(.2) (#2889)
 
 ### Bug Fixes
 
