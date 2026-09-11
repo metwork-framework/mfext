@@ -17,6 +17,12 @@ rm -rf html_doc rpms .build_hash
 
     if test "${OS_VERSION}" = "centos8"; then export METWORK_BUILD_OS=generic; else export METWORK_BUILD_OS=${OS_VERSION}; fi
 
+case "${BRANCH}" in
+    ci* | pci*)
+	export DEP_BRANCH=integration
+    *)
+	export DEP_BRANCH=${BRANCH}
+esac;;
 
 
 
@@ -47,7 +53,7 @@ fi
 MODULEHASH=`/opt/metwork-mfext-${TARGET_DIR}/bin/mfext_wrapper module_hash 2>module_hash.debug`
 if test -f /opt/metwork-mfext-${TARGET_DIR}/.dhash; then cat /opt/metwork-mfext-${TARGET_DIR}/.dhash; fi
 cat module_hash.debug |sort |uniq ; rm -f module_hash.debug
-echo "${MODULEHASH}${DRONE_TAG}${DRONE_BRANCH}" |md5sum |cut -d ' ' -f1 >.build_hash
+echo "${MODULEHASH}${DRONE_TAG}${BRANCH}" |md5sum |cut -d ' ' -f1 >.build_hash
 if test -f "${BUILDCACHE}/build_hash_mfext_${BRANCH}_`cat .build_hash`"; then
     echo "bypass=true" >> github_output
     echo "buildcache=null" >> github_output
