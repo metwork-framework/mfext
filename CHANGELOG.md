@@ -6,6 +6,10 @@
 
 - bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (backport #2798) (#2801)
 
+### Bug Fixes
+
+- do not exclude packages from pip freeze (such as packaging) (#2928)
+
 ## v2.2.23 (2026-04-21)
 
 ### New Features
