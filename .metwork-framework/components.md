@@ -85,7 +85,7 @@
 | [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 2.2.0 | scientific_core |
 | [hiredis](https://redis.com/lp/hiredis/) | 1.4.1 | core |
-| [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
+| [hiredis](https://github.com/redis/hiredis-py) | 3.4.1 | python3 |
 | [hjson](http://github.com/hjson/hjson-py) | 3.1.0 | python3_devtools |
 | [httpcore](https://www.encode.io/httpcore/) | 1.0.9 | python3 |
 | [httpx](https://github.com/encode/httpx) | 0.28.1 | python3 |
