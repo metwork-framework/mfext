@@ -85,7 +85,6 @@ mypy-extensions==1.1.0
 narwhals==1.37.0
 netifaces2==0.0.22
 opinionated-configparser==1.0.1
-orjson==3.12.0
 paramiko==3.5.1
 parso==0.8.4
 pbr==7.0.3
@@ -119,7 +118,7 @@ regex==2026.7.10
 requests==2.34.2
 requests-unixsocket2==0.4.2
 rich==14.3.4
-rpds-py==0.29.0
+rpds-py==2026.6.3
 setuptools-git-versioning==2.1.0
 shellingham==1.5.4
 simpleeval==1.0.6

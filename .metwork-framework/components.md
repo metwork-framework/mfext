@@ -173,7 +173,6 @@
 | [openresty](http://openresty.org) | 1.29.2.3 | openresty |
 | [openssl](https://www.openssl.org/) | 3.6.4 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
-| [orjson](https://pypi.org/project/orjson) | 3.12.0 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 26.3 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
@@ -258,7 +257,7 @@
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://pypi.org/project/requests) | 2.34.2 | python3 |
 | [rich](https://github.com/Textualize/rich) | 14.3.4 | python3 |
-| [rpds-py](https://github.com/crate-py/rpds) | 0.29.0 | python3 |
+| [rpds-py](https://github.com/crate-py/rpds) | 2026.6.3 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
 | [setuptools](https://pypi.org/project/setuptools) | 84.0.0 | python3_core |
@@ -317,4 +316,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(317 components)*
+*(315 components)*
