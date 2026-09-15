@@ -120,7 +120,7 @@ regex==2026.7.10
 requests==2.34.2
 requests-unixsocket2==0.4.2
 rich==14.3.4
-rpds-py==0.29.0
+rpds-py==2026.6.3
 setuptools-git-versioning==2.1.0
 shellingham==1.5.4
 simpleeval==1.0.6
