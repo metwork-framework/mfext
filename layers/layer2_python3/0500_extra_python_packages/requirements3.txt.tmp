@@ -1,8 +1,8 @@
--e git+https://github.com/metwork-framework/acquisition.git@78a05cb1dee0eb305751cd08c27b014d7b26c912#egg=acquisition
+acquisition
 aiofiles==24.1.0
 aiohappyeyeballs==2.5.0
 aiohttp==3.14.3
--e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@3ef444a64f23bdc69bf93d4a5997d2bda11dd02a#egg=aiohttp_metwork_middlewares
+aiohttp_metwork_middlewares
 aiosignal==1.4.0
 annotated-doc==0.0.4
 annotated-types==0.7.0
@@ -14,7 +14,7 @@ attrs==25.1.0
 autopep8==2.3.2
 Babel==2.17.0
 backcall==0.2.0
--e git+https://github.com/metwork-framework/bash.git@0.7#egg=bash
+bash
 bcrypt==5.0.0
 beautifulsoup4==4.13.3
 binaryornot==0.6.0
@@ -27,20 +27,20 @@ charset_normalizer==3.5.1
 Click==8.5.0
 colorama==0.4.6
 ConfigUpdater==3.2
--e git+https://github.com/metwork-framework/cookiecutter.git@39a141b88e50d1b927e792dd58dad24aacbbad91#egg=cookiecutter
--e git+https://github.com/metwork-framework/cookiecutter_hooks.git@22817e1a4051cd8141dc963cde4119f65c2fae04#egg=cookiecutter_hooks
+cookiecutter
+cookiecutter_hooks
 cron-wrapper==0.1.3
 cryptography==50.0.1
 decorator==5.2.1
 defusedxml==0.7.1
--e git+https://github.com/metwork-framework/deploycron.git@3d103a7d0cdaa1f21f6df994f181227e0d43329b#egg=deploycron
+deploycron
 Deprecated==1.3.1
 deprecation==2.1.0
 dill==0.4.0
--e git+https://github.com/metwork-framework/directory_observer.git@2c499bde00de6868cb850e3aa2e10a1c4557f6dc#egg=directory_observer
+directory_observer
 diskcache==5.6.3
 entrypoints==0.4
--e git+https://github.com/metwork-framework/envtpl.git@4cd1056dcafc450f05cdfba53144712c65239080#egg=envtpl
+envtpl
 executing==2.2.0
 fakeredis==2.27.0
 frozenlist==1.5.0
@@ -77,7 +77,7 @@ MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 mflog==0.1.1
--e git+https://github.com/metwork-framework/mfplugin.git@1a785e18014842c199a6838980b42db80651bc0f#egg=mfplugin
+mfplugin
 mfutil==0.3.2
 msgpack==1.2.1
 multidict==6.1.0
@@ -126,10 +126,10 @@ simpleeval==1.0.6
 sniffio==1.3.1
 sortedcontainers==2.4.0
 soupsieve==2.8.4
--e git+https://github.com/metwork-framework/pystatsd.git@5db419f654100b2c5f371c82cb619a1406fbaf15#egg=statsd
+statsd
 stack-data==0.6.3
 structlog==23.1.0
--e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@fc4b76ceef13c3f6843876785897c660218c0b8c#egg=telegraf_unixsocket_client
+telegraf_unixsocket_client
 termcolor==2.5.0
 terminaltables3==4.0.0
 threadpoolctl==3.6.0
@@ -146,7 +146,7 @@ urllib3==2.7.0
 wcwidth==0.2.13
 Werkzeug==3.1.6
 wrapt==2.3.0
--e git+https://github.com/metwork-framework/xattrfile.git@857ae661ddf25da7c00964debd5f279d8303c622#egg=xattrfile
+xattrfile
 xmltodict==0.14.2
 yarl==1.18.3
 yq==3.4.3

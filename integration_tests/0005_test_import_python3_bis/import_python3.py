@@ -64,7 +64,6 @@ import flake8
 import freezegun
 import frozenlist
 import fsspec
-import geojson
 import ghp_import
 import git
 import gitdb
