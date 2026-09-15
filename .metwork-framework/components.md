@@ -95,7 +95,7 @@
 | [hatchling](https://hatch.pypa.io/latest/) | 1.27.0 | python3_core |
 | [hdf4](https://www.hdfgroup.org) | 4.3.0 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 1.14.6 | scientific_core |
-| [hiredis](https://redis.com/lp/hiredis/) | 1.2.0 | core |
+| [hiredis](https://redis.com/lp/hiredis/) | 1.2.1 | core |
 | [hiredis](https://github.com/redis/hiredis-py) | 3.1.0 | python3 |
 | [hjson](http://github.com/hjson/hjson-py) | 3.1.0 | python3_devtools |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |

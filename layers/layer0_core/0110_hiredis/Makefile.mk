@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=hiredis
-export VERSION=1.2.0
+export VERSION=1.2.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=119767d178cfa79718a80c83e0d0e849
+export CHECKSUM=5272d9dd4447d4bc6f0cc506a6a0c06a
 DESCRIPTION=\
 Hiredis is a minimalistic C client library for the Redis database.
 WEBSITE=https://redis.com/lp/hiredis/
