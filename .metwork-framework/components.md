@@ -80,7 +80,7 @@
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
-| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.58 | python3_devtools |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.62 | python3_devtools |
 | [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 2.2.0 | scientific_core |
@@ -218,8 +218,8 @@
 | [pyasyncore](https://github.com/simonrob/pyasyncore) | 1.0.4 | python3 |
 | [pycodestyle](https://pycodestyle.pycqa.org/) | 2.12.1 | python3 |
 | [pycparser](https://github.com/eliben/pycparser) | 3.0 | python3 |
-| [pydantic](https://github.com/pydantic/pydantic) | 2.13.4 | python3 |
-| [pydantic_core](https://github.com/pydantic/pydantic) | 2.46.4 | python3 |
+| [pydantic](https://github.com/pydantic/pydantic) | 2.13.5 | python3 |
+| [pydantic_core](https://github.com/pydantic/pydantic) | 2.46.5 | python3 |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.21.0 | python3 |
@@ -307,7 +307,7 @@
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.6 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.48.0 | python3_core |
-| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 2.3.0 | python3 |
+| [wrapt](https://github.com/GrahamDumpleton/wrapt) | 2.4.1 | python3 |
 | [wrk](https://github.com/wg/wrk) | 4.2.0 | devtools |
 | [wrk2](https://github.com/giltene/wrk2) | master20191107 | devtools |
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 857ae66 | python3 |

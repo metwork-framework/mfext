@@ -4,6 +4,8 @@
 
 ### New Features
 
+- bump GitPython from 3.1.58 to 3.1.62 (fix critical and high CVE)
+- bump pydantic from 2.13.4 to 2.13.5
 - bump pg_partman from 4.5.1 to 5.2.4 (#2314)
 - add orjson (required by python3_scientific and python3_extratools) (#2318)
 - add orjson (required by python3_scientific and python3_extratools) (#2320)
@@ -284,9 +286,6 @@
 
 ### Bug Fixes
 
-- fix depreciation : do not use positional arguments for flags (#2399)
-- patch ngx_lua_upstream as with nginx 1.15.8.4 (#2624)
-- fix mfbase.start (case of existing database initialized by old PG version)
-- downgrade rich to 14.3.4 (compatibility lightning 2.6.5) (#2787)
+- do not exclude packages from pip freeze (such as packaging) (#2928)
 
 
