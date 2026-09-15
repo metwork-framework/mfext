@@ -11,8 +11,8 @@ Hiredis is a minimalistic C client library for the Redis database.
 WEBSITE=https://redis.com/lp/hiredis/
 LICENSE=BSD
 
-all:: $(PREFIX)/lib/libhiredis.so.1.1.0
-$(PREFIX)/lib/libhiredis.so.1.1.0:
+all:: $(PREFIX)/lib/libhiredis.so
+$(PREFIX)/lib/libhiredis.so:
 	$(MAKE) --file=../../Makefile.standard download uncompress
 	cd build/$(NAME)-$(VERSION) && make USE_SSL=1 OPENSSL_PREFIX=$(PREFIX) install
 	rm -f $(PREFIX)/lib/libhiredis*.a
