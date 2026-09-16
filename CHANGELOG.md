@@ -19,6 +19,7 @@
 - bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893)
 - bump redis from 7.4.10 to 7.4.11 (fix high CVE-2026-62356) (#2918)
 - bump GitPython from 3.1.58 to 3.1.62 (fix critical and high CVE) (backport #2926) (#2927)
+- bump hiredis from 1.2.0 to 1.2.1 (security fix)
 
 ### Bug Fixes
 
