@@ -117,7 +117,7 @@
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.10.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
 | [libaec](https://github.com/MathisRosenhauer/libaec) | 1.1.5 | core |
-| [libcst](https://pypi.org/project/libcst) | 1.8.6 | python3_devtools |
+| [libcst](https://pypi.org/project/libcst) | 1.9.0 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.13 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.4 | scientific_core |
 | [libspatialite](https://www.gaia-gis.it/fossil/libspatialite) | 5.1.0 | scientific_core |
@@ -242,7 +242,7 @@
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-discovery](https://github.com/tox-dev/python-discovery) | 1.6.0 | python3_core |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.14.2 | python3_core |
+| [Python](http://python.org/) | 3.15.0rc2 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
