@@ -27,7 +27,6 @@ import binaryornot
 import bjoern
 import black
 import bracex
-import bump_pydantic
 import cachetools
 import cerberus
 import certifi
