@@ -29,9 +29,8 @@
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 26.3.1 | python3_devtools |
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
-| [bump-pydantic](https://pypi.org/project/bump-pydantic) | 0.8.0 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
-| [cachetools](https://github.com/tkem/cachetools/) | 7.1.7 | python3 |
+| [cachetools](https://github.com/tkem/cachetools/) | 7.1.8 | python3 |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
 | [certifi](https://certifi.io) | 2026.7.22 | python3_core |
 | [cffi](https://pypi.org/project/cffi) | 2.0.0 | python3 |
@@ -272,7 +271,7 @@
 | [sniffio](https://github.com/python-trio/sniffio) | 1.3.1 | python3 |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
-| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.8.4 | python3 |
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.9.2 | python3 |
 | [sqlite](http://sqlite.org/) | 3.53.3 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 5db419f | python3 |
@@ -316,4 +315,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(315 components)*
+*(314 components)*

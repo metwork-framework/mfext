@@ -23,8 +23,8 @@ $(LAYER_SITE_REQUIREMENTS): requirementsPYTHONMAJORVERSION.txt src
 	mkdir -p $(PREFIX)/share/metwork_packages
 	for REQ in requirementsPYTHONMAJORVERSION.txt; do if test -s $${REQ}; then install_requirements $(LAYER_HOME) $${REQ} ./src || { echo "ERROR WITH install_requirements $${REQ} $(LAYER_HOME) $${REQ} ./src"; exit 1; }; fi; done
 	if ! test -d $(LAYER_SITE_PACKAGES); then mkdir -p $(LAYER_SITE_PACKAGES); fi
-	if test -f $@; then cat $@ requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@.tmp; mv $@.tmp $@; else cat requirementsPYTHONMAJORVERSION.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@ ;fi
-	IFS=$$'\n' ; for REQ in `cat requirementsPYTHONMAJORVERSION.txt |sort |uniq| grep -v "\["`; do _pip_package_to_yaml.sh "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
+	if test -f $@; then cat $@ requirementsPYTHONMAJORVERSION.txt |sort |uniq | sed '/^#/d' | sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@.tmp; mv $@.tmp $@; else cat requirementsPYTHONMAJORVERSION.txt |sort |uniq | sed '/^#/d' | sed 's/^-e git.*egg=\(.*\)$$/\1/g' >$@ ;fi
+	IFS=$$'\n' ; for REQ in `cat requirementsPYTHONMAJORVERSION.txt |sort |uniq| sed '/^#/d' | grep -v "\["`; do _pip_package_to_yaml.sh "$${REQ}" "$(PREFIX)/share/metwork_packages" || { echo "ERROR WITH _pip_package_to_yaml.sh $${REQ} $(PREFIX)/share/metwork_packages"; exit 1; } done
 
 clean::
 	rm -Rf src venv.* tmp_src tempolayer* requirementsPYTHONMAJORVERSION.txt.tmp freezed_requirements.*
