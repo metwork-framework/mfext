@@ -74,7 +74,6 @@
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2025.3.0 | python3 |
 | [gdal](http://www.gdal.org) | 3.13.3 | scientific_core |
-| [geojson](https://github.com/jazzband/geojson) | 3.3.0 | python3 |
 | [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
@@ -173,7 +172,6 @@
 | [openresty](http://openresty.org) | 1.29.2.3 | openresty |
 | [openssl](https://www.openssl.org/) | 3.6.4 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
-| [orjson](https://pypi.org/project/orjson) | 3.12.0 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 26.3 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
@@ -243,7 +241,7 @@
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-discovery](https://github.com/tox-dev/python-discovery) | 1.6.0 | python3_core |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.14.2 | python3_core |
+| [Python](http://python.org/) | 3.15.0rc2 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
@@ -317,4 +315,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(316 components)*
+*(314 components)*

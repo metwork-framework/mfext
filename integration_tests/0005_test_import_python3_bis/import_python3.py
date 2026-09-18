@@ -63,7 +63,7 @@ import flake8
 import freezegun
 import frozenlist
 import fsspec
-import geojson
+#import geojson
 import ghp_import
 import git
 import gitdb
@@ -129,7 +129,7 @@ import natsort
 import netifaces
 import nltk
 import opinionated_configparser
-import orjson
+#import orjson
 import packaging
 import paginate
 import panoply
