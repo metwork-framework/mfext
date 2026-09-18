@@ -13,6 +13,7 @@
 - bump libcst from 1.8.6 to 1.9.0 (compat. Python 3.15) (#2942)
 - remove bump-pydantic (archived and not useful anymore) (#2943)
 - bump cachetools from 7.1.7 to 7.1.8 (#2944)
+- bump soupsieve from 2.8.4 to 2.9.2 (fix 2 moderate CVEs) (#2948)
 
 ### Bug Fixes
 
