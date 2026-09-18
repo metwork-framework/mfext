@@ -45,6 +45,7 @@ executing==2.2.0
 fakeredis==2.27.0
 frozenlist==1.5.0
 fsspec==2025.3.0
+#geojson==3.3.0 not Python 3.15 compliant
 gitignore-parser==0.1.13
 h11==0.16.0
 hiredis==3.4.1
@@ -85,6 +86,7 @@ mypy-extensions==1.1.0
 narwhals==1.37.0
 netifaces2==0.0.22
 opinionated-configparser==1.0.1
+#orjson==3.3.0 no rocky8/Python 3.15 wheel available, build from source requires rust 1.95 not available on rocky 8
 paramiko==3.5.1
 parso==0.8.4
 pbr==7.0.3
