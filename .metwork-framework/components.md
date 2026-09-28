@@ -9,7 +9,7 @@
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
 | [annotated-doc](https://github.com/fastapi/annotated-doc) | 0.0.4 | python3 |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
-| [anyio](https://pypi.org/project/anyio) | 4.9.0 | python3 |
+| [anyio](https://pypi.org/project/anyio) | 4.15.1 | python3 |
 | [apipkg](https://github.com/pytest-dev/apipkg) | 3.0.2 | python3_devtools |
 | [argcomplete](https://github.com/kislyuk/argcomplete) | 3.6.0 | python3 |
 | [arrow](https://pypi.org/project/arrow) | 1.3.0 | python3 |
