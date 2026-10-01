@@ -176,11 +176,7 @@
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.29.2.3 | openresty |
-<<<<<<< HEAD
-| [openssl](https://www.openssl.org/) | 3.4.6 | core |
-=======
-| [openssl](https://www.openssl.org/) | 3.6.5 | core |
->>>>>>> 6e9de77 (feat: bump openssl from 3.6.4 to 3.6.5 (fix high CVE-2026-84782) (#2956))
+| [openssl](https://www.openssl.org/) | 3.4.8 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 24.2 | python3_core |
