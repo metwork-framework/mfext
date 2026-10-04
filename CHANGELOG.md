@@ -18,6 +18,7 @@
 - bump curl from 7.88.1 to 8.22.0 (fix critical CVE-2026-19931) (#2953)
 - bump anyio from 4.9.0 to 4.15.1 (fix critical CVE-2026-63374) (#2955)
 - bump openssl from 3.6.4 to 3.6.5 (fix high CVE-2026-84782) (#2956)
+- revert "bump hdf4 from 4.3.1 to 4.4.0" (#2959)
 
 ### Bug Fixes
 
