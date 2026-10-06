@@ -298,7 +298,7 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.16.0 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3 |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
-| [urllib3](https://pypi.org/project/urllib3) | 2.7.0 | python3 |
+| [urllib3](https://pypi.org/project/urllib3) | 2.8.0 | python3 |
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 21.7.8 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
