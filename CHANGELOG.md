@@ -19,6 +19,9 @@
 - bump anyio from 4.9.0 to 4.15.1 (fix critical CVE-2026-63374) (#2955)
 - bump openssl from 3.6.4 to 3.6.5 (fix high CVE-2026-84782) (#2956)
 - revert "bump hdf4 from 4.3.1 to 4.4.0" (#2959)
+- bump urllib3 from 2.7.0 to 2.8.0 (fix moderate CVE-2026-97688) (#2961)
+- bump Werkzeug from 3.1.6 to 3.1.9 (fix moderate CVE-2026-102598) (#2962)
+- bump tornado from 6.5.8 to 6.5.10 (fix high GHSA-c2m8-h5v5-343r) (#2963)
 
 ### Bug Fixes
 
