@@ -5,11 +5,5 @@ filelock==3.20.1
 importlib-metadata==8.6.1
 platformdirs==4.3.6
 six==1.17.0
-<<<<<<< HEAD
-virtualenv==20.29.2
-=======
-typing-extensions==4.16.0
 virtualenv==21.7.16
-wheel==0.48.0
->>>>>>> 4f080c5 (feat: bump virtualenv from 21.7.8 to 21.7.16 (fix 3 high CVE) (#2970))
 zipp==3.21.0
