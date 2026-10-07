@@ -80,9 +80,15 @@
 | [flit_scm](https://gitlab.com/WillDaSilva/flit_scm) | 1.7.0 | python3_devtools |
 | [freezegun](https://github.com/spulec/freezegun) | 1.5.1 | python3_devtools |
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.5.0 | python3 |
+<<<<<<< HEAD
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2025.3.0 | python3 |
 | [gdal](http://www.gdal.org) | 3.10.3 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.2.0 | python3 |
+=======
+| [fsspec](https://github.com/fsspec/filesystem_spec) | 2026.9.0 | python3 |
+| [gdal](http://www.gdal.org) | 3.13.3 | scientific_core |
+| [geojson](https://github.com/jazzband/geojson) | 3.3.0 | python3 |
+>>>>>>> 9a62c13 (feat: bump fsspec from 2025.3.0 to 2026.9.0 (fix high CVE-2026-104851) (#2968))
 | [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
