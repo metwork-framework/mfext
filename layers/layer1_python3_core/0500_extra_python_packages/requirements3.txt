@@ -11,6 +11,6 @@ python_discovery==1.6.0
 setuptools==84.0.0
 six==1.17.0
 typing-extensions==4.16.0
-virtualenv==21.7.16
+virtualenv==21.14.5
 wheel==0.48.0
 zipp==3.21.0
