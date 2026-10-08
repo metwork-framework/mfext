@@ -22,6 +22,10 @@
 - bump urllib3 from 2.7.0 to 2.8.0 (fix moderate CVE-2026-97688) (#2961)
 - bump Werkzeug from 3.1.6 to 3.1.9 (fix moderate CVE-2026-102598) (#2962)
 - bump tornado from 6.5.8 to 6.5.10 (fix high GHSA-c2m8-h5v5-343r) (#2963)
+- bump fsspec from 2025.3.0 to 2026.9.0 (fix high CVE-2026-104851) (#2968)
+- bump virtualenv from 21.7.8 to 21.7.16 (fix 3 high CVE) (#2970)
+- bump virtualenv from 21.7.16 to 21.14.5 (#2972)
+- bump Mako from 1.3.12 to 1.4.3 (fix moderate CVE-2026-102991) (#2973)
 
 ### Bug Fixes
 
