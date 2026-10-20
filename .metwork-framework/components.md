@@ -3,13 +3,8 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 8205f0c | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
-<<<<<<< HEAD
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.3 | python3 |
-| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 92ddc7e | python3 |
-=======
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.4 | python3 |
-| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 3ef444a | python3 |
->>>>>>> 04566ce (feat: bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities))
+| [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 92ddc7e | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.4 | python3_devtools |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
