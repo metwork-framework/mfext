@@ -1,7 +1,7 @@
 -e git+https://github.com/metwork-framework/acquisition.git@78a05cb1dee0eb305751cd08c27b014d7b26c912#egg=acquisition
 aiofiles==24.1.0
 aiohappyeyeballs==2.5.0
-aiohttp==3.14.3
+aiohttp==3.14.4
 -e git+https://github.com/metwork-framework/aiohttp_metwork_middlewares.git@3ef444a64f23bdc69bf93d4a5997d2bda11dd02a#egg=aiohttp_metwork_middlewares
 aiosignal==1.4.0
 annotated-doc==0.0.4
@@ -149,5 +149,5 @@ Werkzeug==3.1.9
 wrapt==2.4.1
 -e git+https://github.com/metwork-framework/xattrfile.git@857ae661ddf25da7c00964debd5f279d8303c622#egg=xattrfile
 xmltodict==0.14.2
-yarl==1.18.3
+yarl==1.25.1
 yq==3.4.3
