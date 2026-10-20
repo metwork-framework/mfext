@@ -116,7 +116,7 @@
 | [layerapi2](https://github.com/metwork-framework/layerapi2) | 0.0.4 | core |
 | [lazy-object-proxy](https://github.com/ionelmc/python-lazy-object-proxy) | 1.10.0 | python3_devtools |
 | [lazy_import](https://github.com/mnmelo/lazy_import) | 0.2.2 | python3 |
-| [libaec](https://github.com/MathisRosenhauer/libaec) | 1.1.5 | core |
+| [libaec](https://github.com/MathisRosenhauer/libaec) | 1.1.7 | core |
 | [libcst](https://pypi.org/project/libcst) | 1.9.0 | python3_devtools |
 | [libevent](https://libevent.org/) | 2.1.13 | core |
 | [libgeotiff](https://github.com/OSGeo/libgeotiff) | 1.7.4 | scientific_core |
