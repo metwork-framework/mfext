@@ -3,7 +3,7 @@
 | [acquisition](https://github.com/metwork-framework/acquisition) | 78a05cb | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.3 | python3 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.4 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 3ef444a | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
@@ -312,7 +312,7 @@
 | [xattrfile](https://github.com/metwork-framework/xattrfile) | 857ae66 | python3 |
 | [xmltodict](https://github.com/martinblech/xmltodict) | 0.14.2 | python3 |
 | [yajl](https://lloyd.github.io/yajl/) | 2.1.0 | core |
-| [yarl](https://github.com/aio-libs/yarl) | 1.18.3 | python3 |
+| [yarl](https://github.com/aio-libs/yarl) | 1.25.1 | python3 |
 | [yq](https://github.com/kislyuk/yq) | 3.4.3 | python3 |
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
