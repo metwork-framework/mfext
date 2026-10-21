@@ -195,13 +195,8 @@
 | [pgbouncer](https://www.pgbouncer.org/) | 1.25.2 | scientific_core |
 | [pickleshare](https://github.com/pickleshare/pickleshare) | 0.7.5 | python3 |
 | [pika](https://pika.readthedocs.io) | 1.3.2 | python3 |
-<<<<<<< HEAD
-| [pillow](https://python-pillow.github.io) | 12.3.0 | python3 |
+| [pillow](https://python-pillow.github.io) | 13.0.0 | python3 |
 | [pip](https://pip.pypa.io/) | 25.1.1 | python3_core |
-=======
-| [pillow](https://python-pillow.org) | 13.0.0 | python3 |
-| [pip](https://pip.pypa.io/) | 26.2.1 | python3_core |
->>>>>>> b22dced (feat: bump pillow from 12.3.0 to 13.0.0 (fix critical CVE-2026-112403) (#2981))
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
