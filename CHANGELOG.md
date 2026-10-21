@@ -25,6 +25,7 @@
 - bump fsspec from 2025.3.0 to 2026.9.0 (fix high CVE-2026-104851) (#2968)
 - bump virtualenv from 21.7.8 to 21.7.16 (fix 3 high CVE) (#2970)
 - bump filelock from 3.20.1 to 3.24.3 (compat. virtualenv 21.7.16) (#2974)
+- bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities) (backport #2976) (#2977)
 
 ### Bug Fixes
 
