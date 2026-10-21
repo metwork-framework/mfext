@@ -26,6 +26,8 @@
 - bump virtualenv from 21.7.8 to 21.7.16 (fix 3 high CVE) (#2970)
 - bump virtualenv from 21.7.16 to 21.14.5 (#2972)
 - bump Mako from 1.3.12 to 1.4.3 (fix moderate CVE-2026-102991) (#2973)
+- bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities)
+- bump libaec from 1.1.5 to 1.1.7
 
 ### Bug Fixes
 
