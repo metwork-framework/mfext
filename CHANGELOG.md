@@ -28,6 +28,7 @@
 - bump Mako from 1.3.12 to 1.4.3 (fix moderate CVE-2026-102991) (#2973)
 - bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities)
 - bump libaec from 1.1.5 to 1.1.7
+- bump pillow from 12.3.0 to 13.0.0 (fix critical CVE-2026-112403) (#2981)
 
 ### Bug Fixes
 
