@@ -71,9 +71,13 @@
 | [executing](https://github.com/alexmojaki/executing) | 2.2.0 | python3 |
 | [expandvars](https://github.com/sayanarijit/expandvars) | 0.12.0 | python3 |
 | [fakeredis](https://github.com/cunla/fakeredis-py) | 2.27.0 | python3 |
+<<<<<<< HEAD
 | [fastentrypoints](https://github.com/ninjaaron/fast-entry_points) | 0.12 | python3 |
 | [filelock](https://github.com/tox-dev/py-filelock) | 3.24.3 | python3_core |
 | [filprofiler](https://pythonspeed.com/fil/) | 2024.11.2 | python3_devtools |
+=======
+| [filelock](https://github.com/tox-dev/py-filelock) | 4.2.4 | python3_core |
+>>>>>>> 8ab2a21 (feat: bump filelock from 3.32.5 to 4.2.4 (fix high CVE-2026-112940))
 | [flake8](https://github.com/pycqa/flake8) | 7.1.2 | python3_devtools |
 | [flake8_docstrings](https://github.com/pycqa/flake8-docstrings) | 1.7.0 | python3_devtools |
 | [flit_core](https://pypi.org/project/flit_core) | 3.12.0 | python3_core |
