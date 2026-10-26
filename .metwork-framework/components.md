@@ -248,14 +248,9 @@
 | [pytest](https://docs.pytest.org/en/latest/) | 8.3.5 | python3_devtools |
 | [pytest_httpserver](https://github.com/csernazs/pytest-httpserver) | 1.1.2 | python3_devtools |
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
-<<<<<<< HEAD
 | [python-ldap](https://www.python-ldap.org/) | 3.4.4 | python3 |
 | [Python](http://python.org/) | 3.12.13 | python3_core |
-=======
-| [python-discovery](https://github.com/tox-dev/python-discovery) | 1.6.4 | python3_core |
-| [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.14.2 | python3_core |
->>>>>>> 3eefaad (feat: bump virtualenv from 21.14.5 to 21.14.13 (fix 2 high CVEs) (#2985))
+| [python-discovery](https://github.com/tox-dev/python-discovery) | 1.6.1 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML](https://pyyaml.org/) | 6.0.2 | python3 |
@@ -313,15 +308,9 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions) | 4.13.2 | python3_core |
 | [typing_inspect](https://github.com/ilevkivskyi/typing_inspect) | 0.9.0 | python3 |
 | [Unidecode](https://pypi.org/project/Unidecode) | 1.3.8 | python3 |
-<<<<<<< HEAD
 | [urllib3](https://pypi.org/project/urllib3) | 2.7.0 | python3 |
 | [vector](https://vector.dev/) | 0.13.1 | monitoring |
-| [virtualenv](https://github.com/pypa/virtualenv) | 21.7.16 | python3_core |
-=======
-| [urllib3](https://pypi.org/project/urllib3) | 2.8.0 | python3 |
-| [vector](https://vector.dev/) | 0.49.0 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 21.14.13 | python3_core |
->>>>>>> 3eefaad (feat: bump virtualenv from 21.14.5 to 21.14.13 (fix 2 high CVEs) (#2985))
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
 | [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
@@ -338,4 +327,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(325 components)*
+*(326 components)*
