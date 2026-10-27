@@ -29,6 +29,11 @@
 - bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities)
 - bump libaec from 1.1.5 to 1.1.7
 - bump pillow from 12.3.0 to 13.0.0 (fix critical CVE-2026-112403) (#2981)
+- bump setuptools from 84.0.0 to 84.2.1 (#2984)
+- bump virtualenv from 21.14.5 to 21.14.13 (fix 2 high CVEs) (#2985)
+- bump pip from 26.2.1 to 26.2.2 (#2987)
+- bump certifi from 2926.7.22 to 2026.10.23
+- bump filelock from 3.32.5 to 4.2.4 (fix high CVE-2026-112940)
 
 ### Bug Fixes
 
