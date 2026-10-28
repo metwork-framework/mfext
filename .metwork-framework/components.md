@@ -179,7 +179,7 @@
 | [openssl](https://www.openssl.org/) | 3.4.8 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
-| [packaging](https://pypi.org/project/packaging) | 24.2 | python3_core |
+| [packaging](https://pypi.org/project/packaging) | 26.3 | python3_core |
 | [paginate](https://github.com/Signum/paginate) | 0.5.7 | python3_devtools |
 | [panoply](https://github.com/jeremynac/panoply) | 0.1.56 | python3_devtools |
 | [paramiko](https://paramiko.org) | 3.5.1 | python3 |
@@ -198,7 +198,7 @@
 | [pillow](https://python-pillow.org) | 13.0.0 | python3 |
 | [pip](https://pip.pypa.io/) | 25.1.1 | python3_core |
 | [pipdeptree](https://github.com/tox-dev/pipdeptree) | 2.26.0 | python3_devtools |
-| [platformdirs](https://github.com/tox-dev/platformdirs) | 4.3.6 | python3_core |
+| [platformdirs](https://github.com/tox-dev/platformdirs) | 4.4.0 | python3_core |
 | [pluggy](https://github.com/pytest-dev/pluggy) | 1.5.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.5.2 | scientific_core |
