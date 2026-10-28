@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=openresty
-export VERSION=1.29.2.3
+export VERSION=1.31.8.1
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=965e11087a9a998b69b7d68d644a5824
+export CHECKSUM=b66b666cc3e2b3d135d423c11604f366
 DESCRIPTION=\
 OpenResty - Turning Nginx into a Full-Fledged Scriptable Web Platform
 WEBSITE=http://openresty.org
