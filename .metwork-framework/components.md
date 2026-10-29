@@ -27,7 +27,7 @@
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
 | [binaryornot](https://github.com/binaryornot/binaryornot) | 0.6.0 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
-| [black](https://pypi.org/project/black) | 26.3.1 | python3_devtools |
+| [black](https://pypi.org/project/black) | 26.10.1 | python3_devtools |
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 7.1.8 | python3 |
