@@ -27,10 +27,17 @@
 - bump filelock from 3.20.1 to 3.24.3 (compat. virtualenv 21.7.16) (#2974)
 - bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities) (backport #2976) (#2977)
 - bump pillow from 12.3.0 to 13.0.0 (fix critical CVE-2026-112403) (#2981)
+- bump virtualenv from 21.14.5 to 21.14.13 (fix 2 high CVEs) (#2985)
+- bump certifi from 2926.7.22 to 2026.10.23
+- bump filelock from 3.32.5 to 4.2.4 (fix high CVE-2026-112940)
+- bump openresty from 1.29.2.3 to 1.31.8.1 (fix CVE-2026-42533) (#2997)
+- bump distlib from 0.3.9 to 0.4.3 (compat. virtualenv) (#3000)
+- bump packaging to 26.3 and platformdirs to 4.4.0 (compat.) (#3003)
 
 ### Bug Fixes
 
 - do not exclude packages from pip freeze (such as packaging) (#2928)
+- fix Makefile.standard to build certifi with pyproject.toml
 
 ## v2.3.17 (2026-06-20)
 
