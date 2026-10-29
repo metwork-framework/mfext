@@ -311,6 +311,7 @@
 - bump pip from 26.2.1 to 26.2.2 (#2987)
 - bump certifi from 2926.7.22 to 2026.10.23
 - bump filelock from 3.32.5 to 4.2.4 (fix high CVE-2026-112940)
+- bump openresty from 1.29.2.3 to 1.31.8.1 (fix CVE-2026-42533) (#2997)
 
 ### Bug Fixes
 
