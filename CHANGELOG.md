@@ -312,6 +312,8 @@
 - bump certifi from 2926.7.22 to 2026.10.23
 - bump filelock from 3.32.5 to 4.2.4 (fix high CVE-2026-112940)
 - bump openresty from 1.29.2.3 to 1.31.8.1 (fix CVE-2026-42533) (#2997)
+- bump GitPython from 3.1.62 to 3.2.1 (fix high CVE-2026-114145) (backport #3005) (#3007)
+- bump black from 26.3.1 to 26.10.1 (fix high CVE-2026-114134) (backport #3008) (#3010)
 
 ### Bug Fixes
 
