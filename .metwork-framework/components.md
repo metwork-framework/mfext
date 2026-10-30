@@ -27,7 +27,7 @@
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
 | [binaryornot](https://github.com/binaryornot/binaryornot) | 0.6.0 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
-| [black](https://pypi.org/project/black) | 26.3.1 | python3_devtools |
+| [black](https://pypi.org/project/black) | 26.10.1 | python3_devtools |
 | [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 7.1.8 | python3 |
@@ -79,7 +79,7 @@
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
-| [GitPython](https://github.com/gitpython-developers/GitPython) | 3.1.62 | python3_devtools |
+| [GitPython](https://pypi.org/project/GitPython) | 3.2.1 | python3_devtools |
 | [h11](https://github.com/python-hyper/h11) | 0.16.0 | python3 |
 | [hdf4](https://www.hdfgroup.org) | 4.3.1 | scientific_core |
 | [hdf5](https://www.hdfgroup.org) | 2.2.0 | scientific_core |
@@ -170,7 +170,7 @@
 | [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
-| [openresty](http://openresty.org) | 1.29.2.3 | openresty |
+| [openresty](http://openresty.org) | 1.31.8.1 | openresty |
 | [openssl](https://www.openssl.org/) | 3.6.5 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.12.0 | python3 |
