@@ -80,7 +80,7 @@ mdurl==0.1.2
 mflog==0.1.1
 -e git+https://github.com/metwork-framework/mfplugin.git@1a785e18014842c199a6838980b42db80651bc0f#egg=mfplugin
 mfutil==0.3.2
-msgpack==1.2.1
+msgpack==1.2.3
 multidict==6.1.0
 mypy-extensions==1.1.0
 narwhals==1.37.0
