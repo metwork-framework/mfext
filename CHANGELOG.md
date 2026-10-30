@@ -33,6 +33,8 @@
 - bump openresty from 1.29.2.3 to 1.31.8.1 (fix CVE-2026-42533) (#2997)
 - bump distlib from 0.3.9 to 0.4.3 (compat. virtualenv) (#3000)
 - bump packaging to 26.3 and platformdirs to 4.4.0 (compat.) (#3003)
+- bump GitPython from 3.1.62 to 3.2.1 (fix high CVE-2026-114145) (backport #3005) (#3006)
+- bump black from 26.3.1 to 26.10.1 (fix high CVE-2026-114134) (backport #3008) (#3009)
 
 ### Bug Fixes
 
