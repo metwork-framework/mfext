@@ -10,5 +10,6 @@
 - bump nltk from 3.10.3 to 3.10.4 (fix 2 high vulnerabilities)
 - bump tornado from 6.5.10 to 6.6 (fix 2 moderate CVE) (#3020)
 - bump pylint from 3.3.6 to 4.1.3 (fix moderate CVE-2026-114608)
+- bump pyasn1 from 0.6.4 to 0.6.5 (fix 4 high CVE) (#3025)
 
 
