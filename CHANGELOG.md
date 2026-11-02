@@ -36,6 +36,7 @@
 - bump GitPython from 3.1.62 to 3.2.1 (fix high CVE-2026-114145) (backport #3005) (#3006)
 - bump black from 26.3.1 to 26.10.1 (fix high CVE-2026-114134) (backport #3008) (#3009)
 - bump nltk from 3.10.0 to 3.10.4 (fix 2 high vulnerabilities) (#3018)
+- bump pyasn1 from 0.6.4 to 0.6.5 (fix 4 high CVE) (backport #3025) (#3026)
 
 ### Bug Fixes
 
