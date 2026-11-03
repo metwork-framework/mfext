@@ -1,5 +1,48 @@
 # release_2.3 CHANGELOG
 
+## v2.3.18 (2026-11-02)
+
+### New Features
+
+- bump nltk from 3.9.4 to 3.10.0 (fix high CVE-2026-54293)
+- bump sqlite to 3.53.3 (fix high CVE-2026-11822 and CVE-2025-6965) (backport #2821) (#2823)
+- bump soupsieve from 2.6.0 to 2.8.4 (fix high CVE-2026-49476/49477) (backport #2840) (#2841)
+- bump regex from 2024.11.6 to 2025.10.23 (#2846)
+- bump pillow from 12.2.0 to 12.3.0 (fix 10 high CVEs) (#2848)
+- bump pyasn1 from 0.6.3 to 0.6.4 (fix 3 high  CVE-2026-59884/5/6) (backport #2852) (#2853)
+- bump GitPython from 3.1.50 to 3.1.54 (fix 4 high GSA) (#2854)
+- bump pgbouncer to 1.25.2 (fix high CVE-2026-6664 & CVE-2026-6665) (#2862)
+- bump aiohttp from 3.14.1 to 3.14.3 (fix high CVE-2026-69244)
+- bump cryptography from 48.0.1 to 50.0.0 (fix high CVE-2026-69247)
+- bump GitPython to 3.1.58 (fix high GHSA-3f7w-8rr8-f37f) (#2879)
+- bump libevent from 2.1.12 to 2.1.13 (fix several high CVE) (#2885)
+- bump redis from 7.4.9 to 7.4.10 (fix high CVE-2026-66373) (#2893)
+- bump redis from 7.4.10 to 7.4.11 (fix high CVE-2026-62356) (#2918)
+- bump GitPython from 3.1.58 to 3.1.62 (fix critical and high CVE) (backport #2926) (#2927)
+- bump hiredis from 1.2.0 to 1.2.1 (security fix)
+- bump openssl from 3.6.4 to 3.6.5 (fix high CVE-2026-84782) (#2956)
+- bump tornado from 6.5.8 to 6.5.10 (fix high GHSA-c2m8-h5v5-343r) (#2963)
+- bump fsspec from 2025.3.0 to 2026.9.0 (fix high CVE-2026-104851) (#2968)
+- bump virtualenv from 21.7.8 to 21.7.16 (fix 3 high CVE) (#2970)
+- bump filelock from 3.20.1 to 3.24.3 (compat. virtualenv 21.7.16) (#2974)
+- bump aiohttp to 3.14.3 3.14.4 (fix 2 high vulnerabilities) (backport #2976) (#2977)
+- bump pillow from 12.3.0 to 13.0.0 (fix critical CVE-2026-112403) (#2981)
+- bump virtualenv from 21.14.5 to 21.14.13 (fix 2 high CVEs) (#2985)
+- bump certifi from 2926.7.22 to 2026.10.23
+- bump filelock from 3.32.5 to 4.2.4 (fix high CVE-2026-112940)
+- bump openresty from 1.29.2.3 to 1.31.8.1 (fix CVE-2026-42533) (#2997)
+- bump distlib from 0.3.9 to 0.4.3 (compat. virtualenv) (#3000)
+- bump packaging to 26.3 and platformdirs to 4.4.0 (compat.) (#3003)
+- bump GitPython from 3.1.62 to 3.2.1 (fix high CVE-2026-114145) (backport #3005) (#3006)
+- bump black from 26.3.1 to 26.10.1 (fix high CVE-2026-114134) (backport #3008) (#3009)
+- bump nltk from 3.10.0 to 3.10.4 (fix 2 high vulnerabilities) (#3018)
+- bump pyasn1 from 0.6.4 to 0.6.5 (fix 4 high CVE) (backport #3025) (#3026)
+
+### Bug Fixes
+
+- do not exclude packages from pip freeze (such as packaging) (#2928)
+- fix Makefile.standard to build certifi with pyproject.toml
+
 ## v2.3.17 (2026-06-20)
 
 ### New Features
