@@ -167,7 +167,7 @@
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
 | [nltk](https://www.nltk.org/) | 3.10.4 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
-| [nodejs](http://nodejs.org) | 22.16.0 | nodejs |
+| [nodejs](http://nodejs.org) | 22.23.4 | nodejs |
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
 | [openresty](http://openresty.org) | 1.31.8.1 | openresty |
