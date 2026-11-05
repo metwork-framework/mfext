@@ -11,5 +11,7 @@
 - bump tornado from 6.5.10 to 6.6 (fix 2 moderate CVE) (#3020)
 - bump pylint from 3.3.6 to 4.1.3 (fix moderate CVE-2026-114608)
 - bump pyasn1 from 0.6.4 to 0.6.5 (fix 4 high CVE) (#3025)
+- bump nodejs from 22.16.0 to 22.23.4 (fix critical CVE-2026-111497)
+- bump nodejs from 22.23.4 to 26.13.0
 
 
