@@ -318,6 +318,8 @@
 - bump nltk from 3.10.3 to 3.10.4 (fix 2 high vulnerabilities) (backport #3017) (#3019)
 - bump pylint from 3.3.6 to 4.1.3 (fix moderate CVE-2026-114608) (backport #3022) (#3023)
 - bump pyasn1 from 0.6.4 to 0.6.5 (fix 4 high CVE) (backport #3025) (#3027)
+- bump nodejs from 22.16.0 to 22.23.4 (fix critical CVE-2026-111497) (backport #3028) (#3030)
+- bump nodejs from 22.23.4 to 26.13.0
 
 ### Bug Fixes
 
