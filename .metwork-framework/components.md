@@ -21,7 +21,7 @@
 | [babel](https://babel.pocoo.org/) | 2.17.0 | python3 |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3 |
 | [backrefs](https://github.com/facelessuser/backrefs) | 5.8 | python3_devtools |
-| [bandit](https://bandit.readthedocs.io/) | 1.8.3 | python3_devtools |
+| [bandit](https://bandit.readthedocs.io/) | 1.9.4 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.7 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 5.0.0 | python3 |
 | [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
@@ -277,7 +277,7 @@
 | [sqlite](http://sqlite.org/) | 3.53.3 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 5db419f | python3 |
-| [stevedore](https://docs.openstack.org/stevedore/latest/) | 5.4.1 | python3_devtools |
+| [stevedore](https://docs.openstack.org/stevedore) | 5.9.1 | python3_devtools |
 | [structlog](https://pypi.org/project/structlog) | 23.1.0 | python3 |
 | [super_collections](https://pypi.org/project/super_collections) | 0.5.3 | python3_devtools |
 | [tcping](http://linuxco.de) | 1.3.5 | core |
