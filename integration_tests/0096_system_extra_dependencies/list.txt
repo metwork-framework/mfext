@@ -1,6 +1,5 @@
 ld-linux-x86-64.so.2
 libacl.so.1
-libatomic.so.1
 libasound.so.2
 libatomic.so.1
 libattr.so.1
