@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump nodejs from 22.16.0 to 22.23.4 (fix critical CVE-2026-111497)
+
 ## v2.3.18 (2026-11-02)
 
 ### New Features
