@@ -320,6 +320,7 @@
 - bump pyasn1 from 0.6.4 to 0.6.5 (fix 4 high CVE) (backport #3025) (#3027)
 - bump nodejs from 22.16.0 to 22.23.4 (fix critical CVE-2026-111497) (backport #3028) (#3030)
 - bump nodejs from 22.23.4 to 26.13.0
+- bump bandit to 1.9.4 and stevedore to 5.9.1 (backport #3042) (#3043)
 
 ### Bug Fixes
 
