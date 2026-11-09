@@ -1,3 +1,4 @@
+alabaster==1.0.0
 apipkg==3.0.2
 altgraph==0.17.5
 astroid==4.3.4
@@ -8,6 +9,7 @@ bracex==2.5
 cfgv==3.4.0
 coverage==7.7.1
 coveralls==4.1.0
+docutils==0.23
 exceptiongroup==1.2.2
 execnet==2.1.1
 #filprofiler==2024.11.2 not Python 3.14 compliant
@@ -19,6 +21,7 @@ gitdb==4.0.12
 GitPython==3.2.1
 hjson==3.1.0
 identify==2.6.9
+imagesize==2.0.1
 iniconfig==2.1.0
 isort==6.0.1
 jschema-to-python==1.2.3
@@ -67,11 +70,19 @@ pytest-xdist==3.6.1
 pytokens==0.4.1
 pyyaml-env-tag==0.1
 pyyaml-ft==8.0.0
+roman-numerals==4.1.0
 sarif-om==1.0.4
 sftp-py==0.2.1
 simple-term-menu==1.6.6
 smmap==5.0.2
-snowballstemmer==2.2.0
+snowballstemmer==3.1.1
+sphinx==9.2.0
+sphinxcontrib-applehelp==2.0.0
+sphinxcontrib-devhelp==2.0.0
+sphinxcontrib-htmlhelp==2.1.0
+sphinxcontrib-jsmath==2.0.0
+sphinxcontrib-qthelp==2.0.0
+sphinxcontrib-serializinghtml==2.0.0
 stevedore==5.9.1
 super-collections==0.5.3
 tox==4.28.4
