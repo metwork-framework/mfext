@@ -1,5 +1,6 @@
 | Name | Version | Layer |
 | --- | --- | --- |
+| [accessible-pygments](https://github.com/Quansight-Labs/accessible-pygments) | 0.0.5 | python3_devtools |
 | [acquisition](https://github.com/metwork-framework/acquisition) | 78a05cb | python3 |
 | [aiofiles](https://pypi.org/project/aiofiles) | 24.1.0 | python3 |
 | [aiohappyeyeballs](https://pypi.org/project/aiohappyeyeballs) | 2.5.0 | python3 |
@@ -222,6 +223,7 @@
 | [pycparser](https://github.com/eliben/pycparser) | 3.0 | python3 |
 | [pydantic](https://github.com/pydantic/pydantic) | 2.13.5 | python3 |
 | [pydantic_core](https://github.com/pydantic/pydantic) | 2.46.5 | python3 |
+| [pydata-sphinx-theme](https://pypi.org/project/pydata-sphinx-theme) | 0.24.0 | python3_devtools |
 | [pydocstyle](https://www.pydocstyle.org/en/stable/) | 6.3.0 | python3_devtools |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | 3.2.0 | python3_devtools |
 | [Pygments](https://pygments.org) | 2.21.0 | python3 |
@@ -328,4 +330,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(327 components)*
+*(329 components)*
