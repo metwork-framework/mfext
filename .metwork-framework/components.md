@@ -6,6 +6,7 @@
 | [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.4 | python3 |
 | [aiohttp_metwork_middlewares](https://github.com/metwork-framework/aiohttp_metwork_middlewares) | 3ef444a | python3 |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | python3 |
+| [alabaster](https://alabaster.readthedocs.io/) | 1.0.0 | python3_devtools |
 | [altgraph](https://altgraph.readthedocs.io) | 0.17.5 | python3_devtools |
 | [annotated-doc](https://github.com/fastapi/annotated-doc) | 0.0.4 | python3 |
 | [annotated-types](https://github.com/annotated-types/annotated-types) | 0.7.0 | python3 |
@@ -18,7 +19,7 @@
 | [asttokens](https://github.com/gristlabs/asttokens) | 3.0.0 | python3 |
 | [attrs](https://pypi.org/project/attrs) | 25.1.0 | python3 |
 | [autopep8](https://pypi.org/project/autopep8) | 2.3.2 | python3 |
-| [babel](https://babel.pocoo.org/) | 2.17.0 | python3 |
+| [babel](https://babel.pocoo.org/) | 2.18.0 | python3 |
 | [backcall](https://github.com/takluyver/backcall) | 0.2.0 | python3 |
 | [backrefs](https://github.com/facelessuser/backrefs) | 5.8 | python3_devtools |
 | [bandit](https://bandit.readthedocs.io/) | 1.9.4 | python3_devtools |
@@ -60,6 +61,7 @@
 | [diskcache](http://www.grantjenks.com/docs/diskcache/) | 5.6.3 | python3 |
 | [distlib](https://github.com/pypa/distlib) | 0.4.3 | python3_core |
 | [distro](https://github.com/python-distro/distro) | 1.9.0 | python3_core |
+| [docutils](https://docutils.sourceforge.io) | 0.23 | python3_devtools |
 | [dtreetrawl](https://github.com/raamsri/dtreetrawl) | master20190715 | core |
 | [entrypoints](https://github.com/takluyver/entrypoints) | 0.4 | python3 |
 | [envtpl](https://github.com/metwork-framework/envtpl) | 4cd1056 | python3 |
@@ -90,6 +92,7 @@
 | [httpx](https://github.com/encode/httpx) | 0.28.1 | python3 |
 | [identify](https://github.com/pre-commit/identify) | 2.6.9 | python3_devtools |
 | [idna](https://pypi.org/project/idna) | 3.19 | python3 |
+| [imagesize](https://pypi.org/project/imagesize) | 2.0.1 | python3_devtools |
 | [importlib_metadata](https://pypi.org/project/importlib_metadata) | 8.6.1 | python3_core |
 | [importlib_resources](https://pypi.org/project/importlib_resources) | 6.5.2 | python3 |
 | [iniconfig](https://github.com/pytest-dev/iniconfig) | 2.1.0 | python3_devtools |
@@ -258,6 +261,7 @@
 | [requests-unixsocket2](https://gitlab.com/thelabnyc/requests-unixsocket2) | 0.4.2 | python3 |
 | [requests](https://pypi.org/project/requests) | 2.34.2 | python3 |
 | [rich](https://github.com/Textualize/rich) | 14.3.4 | python3 |
+| [roman-numerals](https://pypi.org/project/roman-numerals) | 4.1.0 | python3_devtools |
 | [rpds-py](https://github.com/crate-py/rpds) | 2026.6.3 | python3 |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
@@ -271,9 +275,16 @@
 | [sloccount](https://www.dwheeler.com/sloccount/) | 2.26 | devtools |
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.2 | python3_devtools |
 | [sniffio](https://github.com/python-trio/sniffio) | 1.3.1 | python3 |
-| [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
+| [snowballstemmer](https://github.com/snowballstem/snowball) | 3.1.1 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.9.2 | python3 |
+| [Sphinx](https://www.sphinx-doc.org/) | 9.2.0 | python3_devtools |
+| [sphinxcontrib-applehelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-devhelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-htmlhelp](https://www.sphinx-doc.org/) | 2.1.0 | python3_devtools |
+| [sphinxcontrib-jsmath](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-qthelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-serializinghtml](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
 | [sqlite](http://sqlite.org/) | 3.53.3 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 5db419f | python3 |
@@ -317,4 +328,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(316 components)*
+*(327 components)*
