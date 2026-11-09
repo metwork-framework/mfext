@@ -265,6 +265,7 @@
 | [rich](https://github.com/Textualize/rich) | 14.3.4 | python3 |
 | [roman-numerals](https://pypi.org/project/roman-numerals) | 4.1.0 | python3_devtools |
 | [rpds-py](https://github.com/crate-py/rpds) | 2026.6.3 | python3 |
+| [ruff](https://docs.astral.sh/ruff) | 0.17.4 | python3_devtools |
 | [sarif_om](https://github.com/microsoft/sarif-python-om) | 1.0.4 | python3_devtools |
 | [setuptools-git-versioning](https://setuptools-git-versioning.readthedocs.io) | 2.1.0 | python3 |
 | [setuptools](https://pypi.org/project/setuptools) | 84.2.1 | python3_core |
@@ -330,4 +331,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(329 components)*
+*(330 components)*
