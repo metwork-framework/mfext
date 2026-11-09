@@ -1,6 +1,7 @@
+accessible-pygments==0.0.5
 alabaster==1.0.0
-apipkg==3.0.2
 altgraph==0.17.5
+apipkg==3.0.2
 astroid==4.3.4
 backrefs==5.8
 bandit==1.9.4
@@ -50,6 +51,7 @@ pdoc3==0.11.6
 pipdeptree==2.26.0
 pre-commit==4.2.0
 py-spy==0.4.1
+pydata-sphinx-theme==0.24.0
 pydocstyle==6.3.0
 pyflakes==3.2.0
 pyinstaller-hooks-contrib==2026.6

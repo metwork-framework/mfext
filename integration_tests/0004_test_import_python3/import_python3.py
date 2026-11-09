@@ -1,3 +1,4 @@
+import a11y_pygments #accessible_pygments
 import acquisition
 import aiofiles
 import aiohappyeyeballs
@@ -161,6 +162,7 @@ import pycodestyle
 import pycparser
 import pydantic
 import pydantic_core
+import pydata_sphinx_theme
 import pydocstyle
 import pyflakes
 import pygments
