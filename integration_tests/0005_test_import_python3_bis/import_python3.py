@@ -199,6 +199,7 @@ import requests_unixsocket
 import requests
 import rich
 import roman_numerals
+import ruff
 import sarif_om
 import setuptools_git_versioning
 import setuptools
