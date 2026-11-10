@@ -321,6 +321,10 @@
 - bump nodejs from 22.16.0 to 22.23.4 (fix critical CVE-2026-111497) (backport #3028) (#3030)
 - bump nodejs from 22.23.4 to 26.13.0
 - bump bandit to 1.9.4 and stevedore to 5.9.1 (backport #3042) (#3043)
+- add sphinx and dependencies (user request)
+- add pydata-sphinx-theme (user request) (backport #3047) (#3048)
+- add ruff (binary because of insufficient available rust version) (backport #3049) (#3050)
+- build python with optimizations (option --enable-optimizations) (backport #3051) (#3052)
 
 ### Bug Fixes
 
