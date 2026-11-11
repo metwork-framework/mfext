@@ -18,5 +18,6 @@
 - add pydata-sphinx-theme (user request) (#3047)
 - add ruff (binary because of insufficient available rust version)
 - build python with optimizations (option --enable-optimizations) (#3051)
+- bump Python from 3.14.2 to 3.14.10 (fix various CVE) (#3053)
 
 
