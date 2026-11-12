@@ -5,6 +5,7 @@
 ### New Features
 
 - bump redis from 7.4.7 to 7.4.9 (fix 3 high CVEs) (backport #2798) (#2800)
+- bump Python 3.10 from 3.10.20 to 3.10.22
 
 ## v2.1.18 (2026-04-10)
 
