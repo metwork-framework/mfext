@@ -111,13 +111,8 @@ scikit-build-core==0.11.3
 setuptools-git-versioning==2.1.0
 simpleeval==1.0.6
 sortedcontainers==2.4.0
-<<<<<<< HEAD
-soupsieve==2.8.4
--e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
-=======
 soupsieve==4.1.0
--e git+https://github.com/metwork-framework/pystatsd.git@5db419f654100b2c5f371c82cb619a1406fbaf15#egg=statsd
->>>>>>> 621b371 (feat: bump soupsieve from 2.9.2 to 4.1 (fix 2 high CVE) (#3062))
+-e git+https://github.com/thefab/pystatsd.git@075001fef55d1caefdd74a55c40db84d829e7edd#egg=statsd
 stack-data==0.6.3
 structlog==23.1.0
 -e git+https://github.com/metwork-framework/telegraf-unixsocket-python-client@d41af1a6af7c796cd835c1a98c773989cdb0897e#egg=telegraf_unixsocket_client
