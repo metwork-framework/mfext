@@ -16,7 +16,7 @@ Babel==2.18.0
 backcall==0.2.0
 -e git+https://github.com/metwork-framework/bash.git@0.7#egg=bash
 bcrypt==5.0.0
-beautifulsoup4==4.13.3
+beautifulsoup4==4.15.0
 binaryornot==0.6.0
 bjoern==3.2.2
 cachetools==7.1.8
