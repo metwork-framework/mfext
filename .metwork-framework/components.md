@@ -26,7 +26,7 @@
 | [bandit](https://bandit.readthedocs.io/) | 1.9.4 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.7 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 5.0.0 | python3 |
-| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
+| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.15.0 | python3 |
 | [binaryornot](https://github.com/binaryornot/binaryornot) | 0.6.0 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 26.10.1 | python3_devtools |
