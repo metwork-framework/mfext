@@ -280,7 +280,7 @@
 | [sniffio](https://github.com/python-trio/sniffio) | 1.3.1 | python3 |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 3.1.1 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
-| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.9.2 | python3 |
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 4.1 | python3 |
 | [Sphinx](https://www.sphinx-doc.org/) | 9.2.0 | python3_devtools |
 | [sphinxcontrib-applehelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
 | [sphinxcontrib-devhelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
