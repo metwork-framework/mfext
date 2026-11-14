@@ -326,6 +326,7 @@
 - add ruff (binary because of insufficient available rust version) (backport #3049) (#3050)
 - build python with optimizations (option --enable-optimizations) (backport #3051) (#3052)
 - bump Python from 3.14.2 to 3.14.10 (fix various CVE) (#3053)
+- bump postgresql from 18.6 to 18.7 (various security fixes) (#3058)
 
 ### Bug Fixes
 
