@@ -282,7 +282,18 @@
 | [smmap](https://github.com/gitpython-developers/smmap) | 5.0.2 | python3_devtools |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 2.2.0 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
+<<<<<<< HEAD
 | [soupsieve](https://github.com/facelessuser/soupsieve) | 2.8.4 | python3 |
+=======
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 4.1 | python3 |
+| [Sphinx](https://www.sphinx-doc.org/) | 9.2.0 | python3_devtools |
+| [sphinxcontrib-applehelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-devhelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-htmlhelp](https://www.sphinx-doc.org/) | 2.1.0 | python3_devtools |
+| [sphinxcontrib-jsmath](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-qthelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+| [sphinxcontrib-serializinghtml](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
+>>>>>>> 621b371 (feat: bump soupsieve from 2.9.2 to 4.1 (fix 2 high CVE) (#3062))
 | [sqlite](http://sqlite.org/) | 3.53.3 | core |
 | [stack_data](http://github.com/alexmojaki/stack_data) | 0.6.3 | python3 |
 | [statsd](https://github.com/jsocol/pystatsd) | 075001f | python3 |
