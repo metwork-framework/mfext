@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=curl
-export VERSION=7.88.1
+export VERSION=8.22.0
 export EXTENSION=tar.bz2
 export CHECKTYPE=MD5
-export CHECKSUM=e90619abb4d275f767e6bfceab5ddabb
+export CHECKSUM=3f6862e123fa4203667d1253ceb2d89c
 DESCRIPTION=\
 CURL is command line tool and library for transferring data with URLs
 WEBSITE=https://curl.haxx.se/

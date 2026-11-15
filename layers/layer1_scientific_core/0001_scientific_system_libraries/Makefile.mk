@@ -4,7 +4,7 @@ include ../../simple_layer.mk
 ifeq ($(shell cat /etc/redhat-release | grep -c "release 8"), 1)
 
 LIB_LIST = $(shell cat libraries.txt)
-$(shell mkdir $(PREFIX)/lib)
+$(shell mkdir -p $(PREFIX)/lib)
 
 all:: $(PREFIX)/lib/libsz.so.2
 $(PREFIX)/lib/libsz.so.2:

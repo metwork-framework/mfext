@@ -1,9 +1,9 @@
+ast-serialize
 beniget
 build
 calver
 cppy
 Cython
-docutils
 editables
 expandvars
 extension-helpers
@@ -40,4 +40,5 @@ tomli_w
 trove-classifiers
 uv
 uv_build
+vcs-versioning
 versioneer

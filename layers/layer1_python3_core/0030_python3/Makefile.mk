@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=Python
-export VERSION=3.13.13
+export VERSION=3.14.10
 export EXTENSION=tar.xz
 export CHECKTYPE=MD5
-export CHECKSUM=3a19dd420883dd599728c9dd07c141e7
+export CHECKSUM=9016607a3bf13104f3777aafc1215d41
 DESCRIPTION=\
 Python is an interpreted, object-oriented, high-level programming language.
 WEBSITE=http://python.org/
@@ -13,7 +13,7 @@ LICENSE=Python
 
 all:: $(PREFIX)/bin/python $(PREFIX)/share/python3_version $(PREFIX)/share/python3_short_version $(PREFIX)/bin/pip
 $(PREFIX)/bin/python:
-	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS='--enable-shared --enable-loadable-sqlite-extensions --without-ensurepip' download uncompress configure build install
+	make --file=../../Makefile.standard EXTRACFLAGS="-I$(PREFIX)/../core/include" EXTRALDFLAGS="-L$(PREFIX)/../core/lib" OPTIONS='--enable-optimizations --enable-shared --enable-loadable-sqlite-extensions --without-ensurepip' download uncompress configure build install
 	cd $(PREFIX)/bin && ln -s python3 python
 	rm -Rf $(PREFIX)/lib/python$(PYTHON3_SHORT_VERSION)/test
 

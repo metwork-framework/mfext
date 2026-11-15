@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=libevent
-export VERSION=2.1.12
+export VERSION=2.1.13
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=b5333f021f880fe76490d8a799cd79f4
+export CHECKSUM=eaa0bd3472b5d6a52ac6b9e0b7418b03
 DESCRIPTION=\
 LIBVENT is an event notification library
 WEBSITE=https://libevent.org/

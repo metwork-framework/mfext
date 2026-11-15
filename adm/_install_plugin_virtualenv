@@ -48,7 +48,7 @@ if test -d "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources"; th
     N=$(find "${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources" -maxdepth 1 -type f -name "*requirements${PYTHON_MAJOR_VERSION}.txt" |wc -l)
     if test "${N}" -gt 0; then
         # shellcheck disable=2086
-        cat ${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/requirements${PYTHON_MAJOR_VERSION}.txt |sort |uniq |sed 's/^-e git.*egg=\(.*\)$/\1/g' >"${PLUGIN_HOME}/local/lib/python${SHORT_VERSION}/site-packages/requirements${PYTHON_MAJOR_VERSION}.txt"
+        cat ${PLUGIN_HOME}/python${PYTHON_MAJOR_VERSION}_virtualenv_sources/requirements${PYTHON_MAJOR_VERSION}.txt | sort | uniq | sed '/^#/d' | sed 's/^-e git.*egg=\(.*\)$/\1/g' >"${PLUGIN_HOME}/local/lib/python${SHORT_VERSION}/site-packages/requirements${PYTHON_MAJOR_VERSION}.txt"
     fi
 fi
 rm -f "${PLUGIN_HOME}/local/.layerapi2*"

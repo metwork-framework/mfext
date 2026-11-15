@@ -9,8 +9,6 @@ downloaded from https://github.com/1connect/nginx-config-formatter
 """
 
 import argparse
-import codecs
-
 import re
 
 __author__ = "Michal Slomkowski"
@@ -134,7 +132,7 @@ def format_config_file(file_path, original_backup_file_path=None, verbose=True):
 
     for enc in encodings:
         try:
-            with codecs.open(file_path, 'r', encoding=enc) as rfp:
+            with open(file_path, 'r', encoding=enc) as rfp:
                 original_file_content = rfp.read()
             chosen_encoding = enc
             break
@@ -147,14 +145,14 @@ def format_config_file(file_path, original_backup_file_path=None, verbose=True):
 
     assert original_file_content is not None
 
-    with codecs.open(file_path, 'w', encoding=chosen_encoding) as wfp:
+    with open(file_path, 'w', encoding=chosen_encoding) as wfp:
         wfp.write(format_config_contents(original_file_content))
 
     if verbose:
         print("Formatted file '%s' (detected encoding %s)." % (file_path, chosen_encoding))
 
     if original_backup_file_path:
-        with codecs.open(original_backup_file_path, 'w', encoding=chosen_encoding) as wfp:
+        with open(original_backup_file_path, 'w', encoding=chosen_encoding) as wfp:
             wfp.write(original_file_content)
         if verbose:
             print("Original saved to '%s'." % original_backup_file_path)

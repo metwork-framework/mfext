@@ -2,10 +2,10 @@ include ../../../adm/root.mk
 include ../../package.mk
 
 export NAME=redis
-export VERSION=7.4.7
+export VERSION=7.4.11
 export EXTENSION=tar.gz
 export CHECKTYPE=MD5
-export CHECKSUM=0a22d4a6d906a4588603d188b642e85d
+export CHECKSUM=6d538d9ce2e8c91f0a875886ad550b3c
 DESCRIPTION=\
 REDIS is an in-memory data structure store, used as a database, cache \
 and message broker
