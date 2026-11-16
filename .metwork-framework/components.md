@@ -26,7 +26,7 @@
 | [bandit](https://bandit.readthedocs.io/) | 1.9.4 | python3_devtools |
 | [bash](https://github.com/alexcouper/bash) | 0.7 | python3 |
 | [bcrypt](https://github.com/pyca/bcrypt/) | 5.0.0 | python3 |
-| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.13.3 | python3 |
+| [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/) | 4.15.0 | python3 |
 | [binaryornot](https://github.com/binaryornot/binaryornot) | 0.6.0 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 26.10.1 | python3_devtools |
@@ -280,7 +280,7 @@
 | [sniffio](https://github.com/python-trio/sniffio) | 1.3.1 | python3 |
 | [snowballstemmer](https://github.com/snowballstem/snowball) | 3.1.1 | python3_devtools |
 | [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) | 2.4.0 | python3 |
-| [soupsieve](https://github.com/facelessuser/soupsieve) | 2.9.2 | python3 |
+| [soupsieve](https://github.com/facelessuser/soupsieve) | 4.1 | python3 |
 | [Sphinx](https://www.sphinx-doc.org/) | 9.2.0 | python3_devtools |
 | [sphinxcontrib-applehelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
 | [sphinxcontrib-devhelp](https://www.sphinx-doc.org/) | 2.0.0 | python3_devtools |
@@ -302,7 +302,7 @@
 | [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | 2.2.0 | devtools |
 | [threadpoolctl](https://github.com/joblib/threadpoolctl) | 3.6.0 | python3 |
 | [tomlkit](https://github.com/sdispater/tomlkit) | 0.13.2 | python3 |
-| [tornado](http://www.tornadoweb.org/) | 6.6 | python3 |
+| [tornado](http://www.tornadoweb.org/) | 6.6.1 | python3 |
 | [tox](http://tox.readthedocs.org) | 4.28.4 | python3_devtools |
 | [tqdm](https://tqdm.github.io) | 4.67.1 | python3 |
 | [traitlets](https://github.com/ipython/traitlets) | 5.14.3 | python3 |
