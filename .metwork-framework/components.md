@@ -78,7 +78,7 @@
 | [fsspec](https://github.com/fsspec/filesystem_spec) | 2026.9.0 | python3 |
 | [gdal](http://www.gdal.org) | 3.13.3 | scientific_core |
 | [geojson](https://github.com/jazzband/geojson) | 3.3.0 | python3 |
-| [geos](http://trac.osgeo.org/geos/) | 3.13.1 | scientific_core |
+| [geos](http://trac.osgeo.org/geos/) | 3.15.0 | scientific_core |
 | [ghp-import](https://github.com/c-w/ghp-import) | 2.1.0 | python3_devtools |
 | [gitdb](https://github.com/gitpython-developers/gitdb) | 4.0.12 | python3_devtools |
 | [gitignore_parser](https://github.com/mherrmann/gitignore_parser) | 0.1.13 | python3 |
@@ -199,7 +199,7 @@
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.11.3 | python3_core |
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
-| [postgis](https://postgis.net) | 3.5.7 | scientific_core |
+| [postgis](https://postgis.net) | 3.7.0 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 18.7 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
