@@ -199,7 +199,12 @@
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.11.3 | python3_core |
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
+<<<<<<< HEAD
 | [postgis](https://postgis.net) | 3.5.4 | scientific_core |
+=======
+| [postgis](https://postgis.net) | 3.7.0 | scientific_core |
+| [postgis_tiger_geocoder](https://gitea.osgeo.org/postgis/postgis_tiger_geocoder) | 2025.2 | scientific_core |
+>>>>>>> b6bdc82 (feat: add extension postgis_tiger_geocoder (no more included in postgis) (#3079))
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 18.7 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
@@ -331,4 +336,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(330 components)*
+*(331 components)*
