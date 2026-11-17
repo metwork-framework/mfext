@@ -23,5 +23,7 @@
 - bump soupsieve from 2.9.2 to 4.1 (fix 2 high CVE) (#3062)
 - bump tornado from 6.6.0 to 6.6.1 (fix low CVE-2026-126347)
 - bump beautifulsoup4 from 4.13.3 to 4.15.0
+- bump geos from 3.13.1 to 3.15.0
+- bump postgis from 3.5.4 to 3.7.0
 
 
