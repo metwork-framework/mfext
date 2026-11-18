@@ -25,5 +25,6 @@
 - bump beautifulsoup4 from 4.13.3 to 4.15.0
 - bump geos from 3.13.1 to 3.15.0
 - bump postgis from 3.5.4 to 3.7.0
+- add extension postgis_tiger_geocoder (no more included in postgis) (#3079)
 
 
