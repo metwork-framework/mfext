@@ -90,4 +90,4 @@ stevedore==5.9.1
 super-collections==0.5.3
 tox==4.28.4
 watchdog==6.0.0
-wcmatch==10.0
+wcmatch==11.2
