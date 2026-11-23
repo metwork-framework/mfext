@@ -334,6 +334,7 @@
 - bump geos from 3.13.1 to 3.15.0 (backport #3071) (#3072)
 - add extension postgis_tiger_geocoder (no more included in postgis) (backport #3079) (#3080)
 - bump nodejs from 26.13.0 to 26.13.1 (fix 7 high CVE)
+- bump wcmatch from 10.0 to 12.0.4 (fix moderate CVE-2026-132276) (backport #3087) (#3088)
 
 ### Bug Fixes
 
