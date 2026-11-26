@@ -1,5 +1,15 @@
 # release_2.3 CHANGELOG
 
+## v2.3.19 (2026-11-21)
+
+### New Features
+
+- bump nodejs from 22.16.0 to 22.23.4 (fix critical CVE-2026-111497)
+- bump Python 3.13 from 3.12.13 to 3.12.16 (fix various CVE) (#3055)
+- bump soupsieve from 2.9.2 to 4.1 (fix 2 high CVE) (#3062)
+- bump nodejs from 26.13.0 to 26.13.1 (fix 7 high CVE) (backport #3082) (#3083)
+- wrong commit text : nodejs was updated from 22.23.4 to 22.23.5
+
 ## v2.3.18 (2026-11-02)
 
 ### New Features
