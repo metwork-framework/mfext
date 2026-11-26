@@ -175,13 +175,8 @@
 | [nodejs](http://nodejs.org) | 22.23.5 | nodejs |
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
-<<<<<<< HEAD
-| [openresty](http://openresty.org) | 1.31.8.1 | openresty |
-| [openssl](https://www.openssl.org/) | 3.4.8 | core |
-=======
 | [openresty](http://openresty.org) | 1.31.9.1 | openresty |
-| [openssl](https://www.openssl.org/) | 3.6.5 | core |
->>>>>>> f440818 (feat: bump openresty from 1.31.8.1 to 1.31.9.1 (fix 4 critical CVE) (#3092))
+| [openssl](https://www.openssl.org/) | 3.4.8 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.10.18 | python3 |
 | [packaging](https://pypi.org/project/packaging) | 26.3 | python3_core |
