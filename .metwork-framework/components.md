@@ -135,7 +135,7 @@
 | [lua-resty-http](https://github.com/pintsized/lua-resty-http) | master-20160530 | openresty |
 | [lua-resty-statsd](https://github.com/metwork-framework/lua-resty-statsd) | 0.0.3 | openresty |
 | [lunr](https://pypi.org/project/lunr) | 0.8.0 | python3_devtools |
-| [lxml](https://lxml.de/) | 6.1.0 | python3 |
+| [lxml](https://lxml.de/) | 6.1.3 | python3 |
 | [Mako](https://www.makotemplates.org/) | 1.4.3 | python3 |
 | [markdown-it-py](https://github.com/executablebooks/markdown-it-py) | 3.0.0 | python3 |
 | [Markdown](https://Python-Markdown.github.io/) | 3.10.2 | python3 |
@@ -248,7 +248,7 @@
 | [python-dateutil](https://github.com/dateutil/dateutil) | 2.9.0.post0 | python3 |
 | [python-discovery](https://github.com/tox-dev/python-discovery) | 1.6.4 | python3_core |
 | [python-ldap](https://www.python-ldap.org/) | 3.4.5 | python3 |
-| [Python](http://python.org/) | 3.15.0rc2 | python3_core |
+| [Python](http://python.org/) | 3.15.2 | python3_core |
 | [pytokens](https://github.com/tusharsadhwani/pytokens) | 0.4.1 | python3_devtools |
 | [pytz](http://pythonhosted.org/pytz) | 2025.1 | python3 |
 | [PyYAML-ft](https://github.com/Quansight-Labs/pyyaml-ft/) | 8.0.0 | python3_devtools |
