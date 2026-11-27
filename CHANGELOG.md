@@ -1,5 +1,11 @@
 # release_2.3 CHANGELOG
 
+## [Unreleased]
+
+### New Features
+
+- bump openresty from 1.31.8.1 to 1.31.9.1 (fix 4 critical CVE) (#3092)
+
 ## v2.3.19 (2026-11-21)
 
 ### New Features
