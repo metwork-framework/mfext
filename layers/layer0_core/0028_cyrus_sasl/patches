@@ -1,0 +1,2 @@
+#Patch to build on gcc 14. See https://github.com/cyrusimap/cyrus-sasl/pull/886
+gcc14.patch

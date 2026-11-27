@@ -30,7 +30,7 @@
 | [binaryornot](https://github.com/binaryornot/binaryornot) | 0.6.0 | python3 |
 | [bjoern](https://github.com/jonashaag/bjoern) | 3.2.2 | python3 |
 | [black](https://pypi.org/project/black) | 26.10.1 | python3_devtools |
-| [bracex](https://github.com/facelessuser/bracex) | 2.5 | python3_devtools |
+| [bracex](https://github.com/facelessuser/bracex) | 3.2.4 | python3_devtools |
 | [cached-property](https://github.com/pydanny/cached-property) | 1.5.2 | python3_circus |
 | [cachetools](https://github.com/tkem/cachetools/) | 7.1.8 | python3 |
 | [Cerberus](https://pypi.org/project/Cerberus) | 1.3.7 | python3 |
@@ -170,10 +170,10 @@
 | [netifaces2](https://github.com/SamuelYvon/netifaces-2) | 0.0.22 | python3 |
 | [nltk](https://www.nltk.org/) | 3.10.4 | python3_devtools |
 | [nodeenv](https://github.com/ekalinin/nodeenv) | 1.9.1 | python3_devtools |
-| [nodejs](http://nodejs.org) | 26.13.0 | nodejs |
+| [nodejs](http://nodejs.org) | 26.13.1 | nodejs |
 | [openjdk](https://adoptium.net/fr/) | 21.0.7+6 | java |
 | [openldap](https://www.openldap.org/) | 2.6.9 | core |
-| [openresty](http://openresty.org) | 1.31.8.1 | openresty |
+| [openresty](http://openresty.org) | 1.31.9.1 | openresty |
 | [openssl](https://www.openssl.org/) | 3.6.5 | core |
 | [opinionated_configparser](https://github.com/metwork-framework/opinionated_configparser) | 1.0.1 | python3 |
 | [orjson](https://pypi.org/project/orjson) | 3.12.0 | python3 |
@@ -199,6 +199,7 @@
 | [pluggy](https://pypi.org/project/pluggy) | 1.6.0 | python3_core |
 | [postgis-geohash](https://github.com/adelplanque/postgis-geohash) | 0.1.2 | scientific_core |
 | [postgis](https://postgis.net) | 3.7.0 | scientific_core |
+| [postgis_tiger_geocoder](https://gitea.osgeo.org/postgis/postgis_tiger_geocoder) | 2025.2 | scientific_core |
 | [postgresql-airtide](https://angeo.copernicus.org/articles/21/1897/2003/) | 1.0.0 | scientific_core |
 | [postgresql](http://postgresql.org/) | 18.7 | scientific_core |
 | [poyo](https://github.com/hackebrot/poyo) | 0.5.0 | python3 |
@@ -315,7 +316,7 @@
 | [vector](https://vector.dev/) | 0.49.0 | monitoring |
 | [virtualenv](https://github.com/pypa/virtualenv) | 21.14.13 | python3_core |
 | [watchdog](https://github.com/gorakhargosh/watchdog) | 6.0.0 | python3_devtools |
-| [wcmatch](https://github.com/facelessuser/wcmatch) | 10.0 | python3_devtools |
+| [wcmatch](https://github.com/facelessuser/wcmatch) | 12.0.4 | python3_devtools |
 | [wcwidth](https://github.com/jquast/wcwidth) | 0.2.13 | python3 |
 | [Werkzeug](https://pypi.org/project/Werkzeug) | 3.1.9 | python3 |
 | [wheel](https://pypi.org/project/wheel) | 0.48.0 | python3_core |
@@ -330,4 +331,4 @@
 | [zeromq](https://zeromq.org/) | 4.3.5 | core |
 | [zipp](https://pypi.org/project/zipp) | 3.21.0 | python3_core |
 
-*(329 components)*
+*(330 components)*
