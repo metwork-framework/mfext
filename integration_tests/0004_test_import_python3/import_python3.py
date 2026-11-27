@@ -1,9 +1,11 @@
+import a11y_pygments #accessible_pygments
 import acquisition
 import aiofiles
 import aiohappyeyeballs
 import aiohttp_metwork_middlewares
 import aiohttp
 import aiosignal
+import alabaster
 import altgraph
 import annotated_doc
 import annotated_types
@@ -50,6 +52,7 @@ import directory_observer
 import diskcache
 import distlib
 import distro
+import docutils
 import entrypoints
 import envtpl
 import exceptiongroup
@@ -73,6 +76,7 @@ import hjson
 import httpcore
 import httpx
 import idna
+import imagesize
 import importlib_resources
 import iniconfig
 import inotify_simple
@@ -126,7 +130,7 @@ import natsort
 import netifaces
 import nltk
 import opinionated_configparser
-#import orjson
+import orjson
 import packaging
 import paginate
 import panoply
@@ -158,6 +162,7 @@ import pycodestyle
 import pycparser
 import pydantic
 import pydantic_core
+import pydata_sphinx_theme
 import pydocstyle
 import pyflakes
 import pygments
@@ -190,6 +195,8 @@ import regex
 import requests_unixsocket
 import requests
 import rich
+import roman_numerals
+import ruff
 import sarif_om
 import setuptools_git_versioning
 import setuptools
@@ -203,6 +210,7 @@ import sniffio
 import snowballstemmer
 import sortedcontainers
 import soupsieve
+import sphinx
 import stack_data
 import statsd
 import stevedore
