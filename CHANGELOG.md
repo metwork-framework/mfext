@@ -362,6 +362,9 @@
 - bump nodejs from 26.13.0 to 26.13.1 (fix 7 high CVE)
 - bump wcmatch from 10.0 to 12.0.4 (fix moderate CVE-2026-132276)
 - bump wcmatch from 10.0 to 12.0.4 (fix moderate CVE-2026-132276) (backport #3087) (#3088)
+- bump openresty from 1.31.8.1 to 1.31.9.1 (fix 4 critical CVE) (#3092)
+- build orjson from sources with rust 1.97.1 now available (#3097)
+- bump lxml from 6.1.0 to 6.1.3 (compat. Python 3.15) (#3099)
 
 ### Bug Fixes
 
